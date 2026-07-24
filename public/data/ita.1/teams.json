@@ -1,0 +1,609 @@
+{
+  "source": "sports.core.api.espn.com",
+  "updateTime": "2026-07-24T07:21:40.136Z",
+  "league": "ita.1",
+  "season": "2025",
+  "count": 20,
+  "teams": [
+    {
+      "id": 103,
+      "uid": "s:600~t:103",
+      "location": "AC Milan",
+      "name": "AC Milan",
+      "displayName": "AC Milan",
+      "shortDisplayName": "Milan",
+      "abbreviation": "MIL",
+      "color": "#e4002b",
+      "alternateColor": "#ffffff",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/103.png",
+      "venue": {
+        "name": "Municipal Stadium Wroclaw",
+        "city": "Wroclaw",
+        "country": "Poland"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 20,
+        "draws": 10,
+        "losses": 8,
+        "played": 38,
+        "points": 70,
+        "goalDiff": 18,
+        "goalsFor": 53,
+        "goalsAgainst": 35,
+        "summary": "20-10-8"
+      }
+    },
+    {
+      "id": 104,
+      "uid": "s:600~t:104",
+      "location": "AS Roma",
+      "name": "AS Roma",
+      "displayName": "AS Roma",
+      "shortDisplayName": "AS Roma",
+      "abbreviation": "ROMA",
+      "color": "#990a2c",
+      "alternateColor": "#eae9e7",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/104.png",
+      "venue": {
+        "name": "Stade Pierre de Coubertin, Cannes",
+        "city": "Cannes",
+        "country": "France"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 23,
+        "draws": 4,
+        "losses": 11,
+        "played": 38,
+        "points": 73,
+        "goalDiff": 28,
+        "goalsFor": 59,
+        "goalsAgainst": 31,
+        "summary": "23-4-11"
+      }
+    },
+    {
+      "id": 105,
+      "uid": "s:600~t:105",
+      "location": "Atalanta",
+      "name": "Atalanta",
+      "displayName": "Atalanta",
+      "shortDisplayName": "Atalanta",
+      "abbreviation": "ATA",
+      "color": "#1157bf",
+      "alternateColor": "#ffffff",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/105.png",
+      "venue": {
+        "name": "New Balance Arena",
+        "city": "Bergamo",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 15,
+        "draws": 14,
+        "losses": 9,
+        "played": 38,
+        "points": 59,
+        "goalDiff": 15,
+        "goalsFor": 51,
+        "goalsAgainst": 36,
+        "summary": "15-14-9"
+      }
+    },
+    {
+      "id": 107,
+      "uid": "s:600~t:107",
+      "location": "Bologna",
+      "name": "Bologna",
+      "displayName": "Bologna",
+      "shortDisplayName": "Bologna",
+      "abbreviation": "BOL",
+      "color": "#04043d",
+      "alternateColor": "#ffffff",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/107.png",
+      "venue": {
+        "name": "Renato Dall'Ara",
+        "city": "Bologna",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 16,
+        "draws": 8,
+        "losses": 14,
+        "played": 38,
+        "points": 56,
+        "goalDiff": 3,
+        "goalsFor": 49,
+        "goalsAgainst": 46,
+        "summary": "16-8-14"
+      }
+    },
+    {
+      "id": 2925,
+      "uid": "s:600~t:2925",
+      "location": "Cagliari",
+      "name": "Cagliari",
+      "displayName": "Cagliari",
+      "shortDisplayName": "Cagliari",
+      "abbreviation": "CAG",
+      "color": "#282846",
+      "alternateColor": "#ffffff",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/2925.png",
+      "venue": {
+        "name": "Unipol Domus",
+        "city": "Cagliari",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 11,
+        "draws": 10,
+        "losses": 17,
+        "played": 38,
+        "points": 43,
+        "goalDiff": -13,
+        "goalsFor": 40,
+        "goalsAgainst": 53,
+        "summary": "11-10-17"
+      }
+    },
+    {
+      "id": 2572,
+      "uid": "s:600~t:2572",
+      "location": "Como",
+      "name": "Como",
+      "displayName": "Como",
+      "shortDisplayName": "Como",
+      "abbreviation": "COMO",
+      "color": "#3933FF",
+      "alternateColor": "#FFFFFF",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/2572.png",
+      "venue": {
+        "name": "Giuseppe Sinigaglia",
+        "city": "Como",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 20,
+        "draws": 11,
+        "losses": 7,
+        "played": 38,
+        "points": 71,
+        "goalDiff": 36,
+        "goalsFor": 65,
+        "goalsAgainst": 29,
+        "summary": "20-11-7"
+      }
+    },
+    {
+      "id": 4050,
+      "uid": "s:600~t:4050",
+      "location": "Cremonese",
+      "name": "Cremonese",
+      "displayName": "Cremonese",
+      "shortDisplayName": "Cremonese",
+      "abbreviation": "CRE",
+      "color": "#FF0000",
+      "alternateColor": "#ffffff",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4050.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/4050.png",
+      "venue": {
+        "name": "Stadio Giovanni Zini",
+        "city": "Cremona",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 8,
+        "draws": 10,
+        "losses": 20,
+        "played": 38,
+        "points": 34,
+        "goalDiff": -25,
+        "goalsFor": 32,
+        "goalsAgainst": 57,
+        "summary": "8-10-20"
+      }
+    },
+    {
+      "id": 109,
+      "uid": "s:600~t:109",
+      "location": "Fiorentina",
+      "name": "Fiorentina",
+      "displayName": "Fiorentina",
+      "shortDisplayName": "Fiorentina",
+      "abbreviation": "FIO",
+      "color": "#4c1d84",
+      "alternateColor": "#ffffff",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/109.png",
+      "venue": {
+        "name": "Stadio Artemio Franchi",
+        "city": "Firenze",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 9,
+        "draws": 15,
+        "losses": 14,
+        "played": 38,
+        "points": 42,
+        "goalDiff": -9,
+        "goalsFor": 41,
+        "goalsAgainst": 50,
+        "summary": "9-15-14"
+      }
+    },
+    {
+      "id": 3263,
+      "uid": "s:600~t:3263",
+      "location": "Genoa",
+      "name": "Genoa",
+      "displayName": "Genoa",
+      "shortDisplayName": "Genoa",
+      "abbreviation": "GEN",
+      "color": "#08305d",
+      "alternateColor": "#ffffff",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/3263.png",
+      "venue": {
+        "name": "Stadio Luigi Ferraris",
+        "city": "Genova",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 10,
+        "draws": 11,
+        "losses": 17,
+        "played": 38,
+        "points": 41,
+        "goalDiff": -10,
+        "goalsFor": 41,
+        "goalsAgainst": 51,
+        "summary": "10-11-17"
+      }
+    },
+    {
+      "id": 119,
+      "uid": "s:600~t:119",
+      "location": "Hellas Verona",
+      "name": "Hellas Verona",
+      "displayName": "Hellas Verona",
+      "shortDisplayName": "Verona",
+      "abbreviation": "VER",
+      "color": "#00239c",
+      "alternateColor": "#ffffff",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/119.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/119.png",
+      "venue": {
+        "name": "Stadio Marcantonio Bentegodi",
+        "city": "Verona",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 3,
+        "draws": 12,
+        "losses": 23,
+        "played": 38,
+        "points": 21,
+        "goalDiff": -36,
+        "goalsFor": 25,
+        "goalsAgainst": 61,
+        "summary": "3-12-23"
+      }
+    },
+    {
+      "id": 110,
+      "uid": "s:600~t:110",
+      "location": "Internazionale",
+      "name": "Internazionale",
+      "displayName": "Internazionale",
+      "shortDisplayName": "Inter Milan",
+      "abbreviation": "INT",
+      "color": "#00239c",
+      "alternateColor": "#ffffff",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/110.png",
+      "venue": {
+        "name": "San Siro",
+        "city": "Milano",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 27,
+        "draws": 6,
+        "losses": 5,
+        "played": 38,
+        "points": 87,
+        "goalDiff": 54,
+        "goalsFor": 89,
+        "goalsAgainst": 35,
+        "summary": "27-6-5"
+      }
+    },
+    {
+      "id": 111,
+      "uid": "s:600~t:111",
+      "location": "Juventus",
+      "name": "Juventus",
+      "displayName": "Juventus",
+      "shortDisplayName": "Juventus",
+      "abbreviation": "JUV",
+      "color": "#000000",
+      "alternateColor": "#ffef32",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/111.png",
+      "venue": {
+        "name": "Optus Stadium",
+        "city": "Perth",
+        "country": "Australia"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 19,
+        "draws": 12,
+        "losses": 7,
+        "played": 38,
+        "points": 69,
+        "goalDiff": 27,
+        "goalsFor": 61,
+        "goalsAgainst": 34,
+        "summary": "19-12-7"
+      }
+    },
+    {
+      "id": 112,
+      "uid": "s:600~t:112",
+      "location": "Lazio",
+      "name": "Lazio",
+      "displayName": "Lazio",
+      "shortDisplayName": "Lazio",
+      "abbreviation": "LAZ",
+      "color": "#74bde7",
+      "alternateColor": "#ffef32",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/112.png",
+      "venue": {
+        "name": "Olimpico",
+        "city": "Roma",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 14,
+        "draws": 12,
+        "losses": 12,
+        "played": 38,
+        "points": 54,
+        "goalDiff": 1,
+        "goalsFor": 41,
+        "goalsAgainst": 40,
+        "summary": "14-12-12"
+      }
+    },
+    {
+      "id": 113,
+      "uid": "s:600~t:113",
+      "location": "Lecce",
+      "name": "Lecce",
+      "displayName": "Lecce",
+      "shortDisplayName": "Lecce",
+      "abbreviation": "LEC",
+      "color": "#e4002b",
+      "alternateColor": "#08305d",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/113.png",
+      "venue": {
+        "name": "Via Del Mare",
+        "city": "Lecce",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 10,
+        "draws": 8,
+        "losses": 20,
+        "played": 38,
+        "points": 38,
+        "goalDiff": -22,
+        "goalsFor": 28,
+        "goalsAgainst": 50,
+        "summary": "10-8-20"
+      }
+    },
+    {
+      "id": 114,
+      "uid": "s:600~t:114",
+      "location": "Napoli",
+      "name": "Napoli",
+      "displayName": "Napoli",
+      "shortDisplayName": "Napoli",
+      "abbreviation": "NAP",
+      "color": "#0677d2",
+      "alternateColor": "#ffffff",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/114.png",
+      "venue": {
+        "name": "Stadio Diego Armando Maradona",
+        "city": "Napoli",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 23,
+        "draws": 7,
+        "losses": 8,
+        "played": 38,
+        "points": 76,
+        "goalDiff": 22,
+        "goalsFor": 58,
+        "goalsAgainst": 36,
+        "summary": "23-7-8"
+      }
+    },
+    {
+      "id": 115,
+      "uid": "s:600~t:115",
+      "location": "Parma",
+      "name": "Parma",
+      "displayName": "Parma",
+      "shortDisplayName": "Parma",
+      "abbreviation": "PAR",
+      "color": "#19161D",
+      "alternateColor": "#ffdd30",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/115.png",
+      "venue": {
+        "name": "Ennio Tardini",
+        "city": "Parma",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 11,
+        "draws": 12,
+        "losses": 15,
+        "played": 38,
+        "points": 45,
+        "goalDiff": -18,
+        "goalsFor": 28,
+        "goalsAgainst": 46,
+        "summary": "11-12-15"
+      }
+    },
+    {
+      "id": 3956,
+      "uid": "s:600~t:3956",
+      "location": "Pisa",
+      "name": "Pisa",
+      "displayName": "Pisa",
+      "shortDisplayName": "Pisa",
+      "abbreviation": "PIS",
+      "color": "#1a1a1a",
+      "alternateColor": "#1a1a1a",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3956.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/3956.png",
+      "venue": {
+        "name": "Arena Garibaldi - Stadio Romeo Anconetani",
+        "city": "Pisa",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 2,
+        "draws": 12,
+        "losses": 24,
+        "played": 38,
+        "points": 18,
+        "goalDiff": -45,
+        "goalsFor": 26,
+        "goalsAgainst": 71,
+        "summary": "2-12-24"
+      }
+    },
+    {
+      "id": 3997,
+      "uid": "s:600~t:3997",
+      "location": "Sassuolo",
+      "name": "Sassuolo",
+      "displayName": "Sassuolo",
+      "shortDisplayName": "Sassuolo",
+      "abbreviation": "SAS",
+      "color": "#0fa653",
+      "alternateColor": "#000000",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/3997.png",
+      "venue": {
+        "name": "Mapei Stadium",
+        "city": "Reggio Emilia",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 14,
+        "draws": 7,
+        "losses": 17,
+        "played": 38,
+        "points": 49,
+        "goalDiff": -4,
+        "goalsFor": 46,
+        "goalsAgainst": 50,
+        "summary": "14-7-17"
+      }
+    },
+    {
+      "id": 239,
+      "uid": "s:600~t:239",
+      "location": "Torino",
+      "name": "Torino",
+      "displayName": "Torino",
+      "shortDisplayName": "Torino",
+      "abbreviation": "TOR",
+      "color": "#9f0000",
+      "alternateColor": "#ffffff",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/239.png",
+      "venue": {
+        "name": "Stadio Olimpico Grande Torino",
+        "city": "Torino",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 12,
+        "draws": 9,
+        "losses": 17,
+        "played": 38,
+        "points": 45,
+        "goalDiff": -19,
+        "goalsFor": 44,
+        "goalsAgainst": 63,
+        "summary": "12-9-17"
+      }
+    },
+    {
+      "id": 118,
+      "uid": "s:600~t:118",
+      "location": "Udinese",
+      "name": "Udinese",
+      "displayName": "Udinese",
+      "shortDisplayName": "Udinese",
+      "abbreviation": "UDI",
+      "color": "#19161D",
+      "alternateColor": "#ffef32",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/118.png",
+      "venue": {
+        "name": "Stadio Friuli",
+        "city": "Udine",
+        "country": "Italy"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 14,
+        "draws": 8,
+        "losses": 16,
+        "played": 38,
+        "points": 50,
+        "goalDiff": -3,
+        "goalsFor": 45,
+        "goalsAgainst": 48,
+        "summary": "14-8-16"
+      }
+    }
+  ]
+}

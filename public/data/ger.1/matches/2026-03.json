@@ -1,0 +1,815 @@
+{
+  "source": "site.api.espn.com",
+  "updateTime": "2026-07-24T07:05:51.097Z",
+  "league": "ger.1",
+  "month": "2026-03",
+  "count": 31,
+  "matches": [
+    {
+      "eventId": "746933",
+      "date": "2026-03-01T14:30Z",
+      "name": "VfL Wolfsburg at VfB Stuttgart",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "MHPArena",
+      "home": {
+        "id": 134,
+        "name": "VfB Stuttgart",
+        "abbreviation": "VFB",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+        "score": 4,
+        "winner": true
+      },
+      "away": {
+        "id": 138,
+        "name": "VfL Wolfsburg",
+        "abbreviation": "WOB",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/138.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746928",
+      "date": "2026-03-01T16:30Z",
+      "name": "SC Freiburg at Eintracht Frankfurt",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
+      "venue": "Deutsche Bank Park",
+      "home": {
+        "id": 125,
+        "name": "Eintracht Frankfurt",
+        "abbreviation": "SGE",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
+        "score": 2,
+        "winner": true
+      },
+      "away": {
+        "id": 126,
+        "name": "SC Freiburg",
+        "abbreviation": "SCF",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746930",
+      "date": "2026-03-01T18:30Z",
+      "name": "RB Leipzig at Hamburg SV",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "Volksparkstadion",
+      "home": {
+        "id": 127,
+        "name": "Hamburg SV",
+        "abbreviation": "HSV",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 11420,
+        "name": "RB Leipzig",
+        "abbreviation": "RBL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "746866",
+      "date": "2026-03-04T19:30Z",
+      "name": "Bayer Leverkusen at Hamburg SV",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
+      "venue": "Volksparkstadion",
+      "home": {
+        "id": 127,
+        "name": "Hamburg SV",
+        "abbreviation": "HSV",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 131,
+        "name": "Bayer Leverkusen",
+        "abbreviation": "B04",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+        "score": 1,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "746935",
+      "date": "2026-03-06T19:30Z",
+      "name": "Borussia Mönchengladbach at Bayern Munich",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "Allianz Arena",
+      "home": {
+        "id": 132,
+        "name": "Bayern Munich",
+        "abbreviation": "MUN",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+        "score": 4,
+        "winner": true
+      },
+      "away": {
+        "id": 268,
+        "name": "Borussia Mönchengladbach",
+        "abbreviation": "BMG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746939",
+      "date": "2026-03-07T14:30Z",
+      "name": "TSG Hoffenheim at 1. FC Heidenheim 1846",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
+      "venue": "Voith-Arena",
+      "home": {
+        "id": 6418,
+        "name": "1. FC Heidenheim 1846",
+        "abbreviation": "HDH",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6418.png",
+        "score": 2,
+        "winner": null
+      },
+      "away": {
+        "id": 7911,
+        "name": "TSG Hoffenheim",
+        "abbreviation": "TSG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+        "score": 4,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "746936",
+      "date": "2026-03-07T14:30Z",
+      "name": "VfB Stuttgart at Mainz",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "MEWA ARENA",
+      "home": {
+        "id": 2950,
+        "name": "Mainz",
+        "abbreviation": "M05",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png",
+        "score": 2,
+        "winner": null
+      },
+      "away": {
+        "id": 134,
+        "name": "VfB Stuttgart",
+        "abbreviation": "VFB",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+        "score": 2,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746942",
+      "date": "2026-03-07T14:30Z",
+      "name": "FC Augsburg at RB Leipzig",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "Red Bull Arena",
+      "home": {
+        "id": 11420,
+        "name": "RB Leipzig",
+        "abbreviation": "RBL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+        "score": 2,
+        "winner": true
+      },
+      "away": {
+        "id": 3841,
+        "name": "FC Augsburg",
+        "abbreviation": "FCA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746934",
+      "date": "2026-03-07T14:30Z",
+      "name": "Bayer Leverkusen at SC Freiburg",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "Europa-Park Stadion",
+      "home": {
+        "id": 126,
+        "name": "SC Freiburg",
+        "abbreviation": "SCF",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
+        "score": 3,
+        "winner": null
+      },
+      "away": {
+        "id": 131,
+        "name": "Bayer Leverkusen",
+        "abbreviation": "B04",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+        "score": 3,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746940",
+      "date": "2026-03-07T14:30Z",
+      "name": "Hamburg SV at VfL Wolfsburg",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
+      "venue": "Volkswagen Arena",
+      "home": {
+        "id": 138,
+        "name": "VfL Wolfsburg",
+        "abbreviation": "WOB",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/138.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 127,
+        "name": "Hamburg SV",
+        "abbreviation": "HSV",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "746938",
+      "date": "2026-03-07T17:30Z",
+      "name": "Borussia Dortmund at FC Cologne",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
+      "venue": "RheinEnergieStadion",
+      "home": {
+        "id": 122,
+        "name": "FC Cologne",
+        "abbreviation": "KOE",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 124,
+        "name": "Borussia Dortmund",
+        "abbreviation": "DOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "746941",
+      "date": "2026-03-08T14:30Z",
+      "name": "Eintracht Frankfurt at St. Pauli",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
+      "venue": "Millerntor-Stadion",
+      "home": {
+        "id": 270,
+        "name": "St. Pauli",
+        "abbreviation": "STP",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/270.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 125,
+        "name": "Eintracht Frankfurt",
+        "abbreviation": "SGE",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746937",
+      "date": "2026-03-08T16:30Z",
+      "name": "Werder Bremen at 1. FC Union Berlin",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
+      "venue": "Stadion An der Alten Försterei",
+      "home": {
+        "id": 598,
+        "name": "1. FC Union Berlin",
+        "abbreviation": "FCU",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 137,
+        "name": "Werder Bremen",
+        "abbreviation": "SVW",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
+        "score": 4,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "746944",
+      "date": "2026-03-13T19:30Z",
+      "name": "St. Pauli at Borussia Mönchengladbach",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "BORUSSIA-PARK",
+      "home": {
+        "id": 268,
+        "name": "Borussia Mönchengladbach",
+        "abbreviation": "BMG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
+        "score": 2,
+        "winner": true
+      },
+      "away": {
+        "id": 270,
+        "name": "St. Pauli",
+        "abbreviation": "STP",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/270.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746950",
+      "date": "2026-03-14T14:30Z",
+      "name": "Bayern Munich at Bayer Leverkusen",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+10'",
+      "period": 2,
+      "venue": "BayArena",
+      "home": {
+        "id": 131,
+        "name": "Bayer Leverkusen",
+        "abbreviation": "B04",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 132,
+        "name": "Bayern Munich",
+        "abbreviation": "MUN",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746951",
+      "date": "2026-03-14T14:30Z",
+      "name": "FC Augsburg at Borussia Dortmund",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
+      "venue": "Signal Iduna Park",
+      "home": {
+        "id": 124,
+        "name": "Borussia Dortmund",
+        "abbreviation": "DOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+        "score": 2,
+        "winner": true
+      },
+      "away": {
+        "id": 3841,
+        "name": "FC Augsburg",
+        "abbreviation": "FCA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746943",
+      "date": "2026-03-14T14:30Z",
+      "name": "1. FC Heidenheim 1846 at Eintracht Frankfurt",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "Deutsche Bank Park",
+      "home": {
+        "id": 125,
+        "name": "Eintracht Frankfurt",
+        "abbreviation": "SGE",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
+        "score": 1,
+        "winner": true
+      },
+      "away": {
+        "id": 6418,
+        "name": "1. FC Heidenheim 1846",
+        "abbreviation": "HDH",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6418.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746947",
+      "date": "2026-03-14T14:30Z",
+      "name": "VfL Wolfsburg at TSG Hoffenheim",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
+      "venue": "PreZero Arena",
+      "home": {
+        "id": 7911,
+        "name": "TSG Hoffenheim",
+        "abbreviation": "TSG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 138,
+        "name": "VfL Wolfsburg",
+        "abbreviation": "WOB",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/138.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746949",
+      "date": "2026-03-14T17:30Z",
+      "name": "FC Cologne at Hamburg SV",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
+      "venue": "Volksparkstadion",
+      "home": {
+        "id": 127,
+        "name": "Hamburg SV",
+        "abbreviation": "HSV",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 122,
+        "name": "FC Cologne",
+        "abbreviation": "KOE",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746946",
+      "date": "2026-03-15T14:30Z",
+      "name": "Mainz at Werder Bremen",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
+      "venue": "Weserstadion",
+      "home": {
+        "id": 137,
+        "name": "Werder Bremen",
+        "abbreviation": "SVW",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 2950,
+        "name": "Mainz",
+        "abbreviation": "M05",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "746945",
+      "date": "2026-03-15T16:30Z",
+      "name": "1. FC Union Berlin at SC Freiburg",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+16'",
+      "period": 2,
+      "venue": "Europa-Park Stadion",
+      "home": {
+        "id": 126,
+        "name": "SC Freiburg",
+        "abbreviation": "SCF",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 598,
+        "name": "1. FC Union Berlin",
+        "abbreviation": "FCU",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
+        "score": 1,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "746948",
+      "date": "2026-03-15T18:30Z",
+      "name": "RB Leipzig at VfB Stuttgart",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "MHPArena",
+      "home": {
+        "id": 134,
+        "name": "VfB Stuttgart",
+        "abbreviation": "VFB",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+        "score": 1,
+        "winner": true
+      },
+      "away": {
+        "id": 11420,
+        "name": "RB Leipzig",
+        "abbreviation": "RBL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746956",
+      "date": "2026-03-20T19:30Z",
+      "name": "TSG Hoffenheim at RB Leipzig",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
+      "venue": "Red Bull Arena",
+      "home": {
+        "id": 11420,
+        "name": "RB Leipzig",
+        "abbreviation": "RBL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+        "score": 5,
+        "winner": true
+      },
+      "away": {
+        "id": 7911,
+        "name": "TSG Hoffenheim",
+        "abbreviation": "TSG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746952",
+      "date": "2026-03-21T14:30Z",
+      "name": "Bayer Leverkusen at 1. FC Heidenheim 1846",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
+      "venue": "Voith-Arena",
+      "home": {
+        "id": 6418,
+        "name": "1. FC Heidenheim 1846",
+        "abbreviation": "HDH",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6418.png",
+        "score": 3,
+        "winner": null
+      },
+      "away": {
+        "id": 131,
+        "name": "Bayer Leverkusen",
+        "abbreviation": "B04",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+        "score": 3,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746954",
+      "date": "2026-03-21T14:30Z",
+      "name": "1. FC Union Berlin at Bayern Munich",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+3'",
+      "period": 2,
+      "venue": "Allianz Arena",
+      "home": {
+        "id": 132,
+        "name": "Bayern Munich",
+        "abbreviation": "MUN",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+        "score": 4,
+        "winner": true
+      },
+      "away": {
+        "id": 598,
+        "name": "1. FC Union Berlin",
+        "abbreviation": "FCU",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746959",
+      "date": "2026-03-21T14:30Z",
+      "name": "Borussia Mönchengladbach at FC Cologne",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
+      "venue": "RheinEnergieStadion",
+      "home": {
+        "id": 122,
+        "name": "FC Cologne",
+        "abbreviation": "KOE",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
+        "score": 3,
+        "winner": null
+      },
+      "away": {
+        "id": 268,
+        "name": "Borussia Mönchengladbach",
+        "abbreviation": "BMG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
+        "score": 3,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746960",
+      "date": "2026-03-21T14:30Z",
+      "name": "Werder Bremen at VfL Wolfsburg",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "Volkswagen Arena",
+      "home": {
+        "id": 138,
+        "name": "VfL Wolfsburg",
+        "abbreviation": "WOB",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/138.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 137,
+        "name": "Werder Bremen",
+        "abbreviation": "SVW",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
+        "score": 1,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "746957",
+      "date": "2026-03-21T17:30Z",
+      "name": "Hamburg SV at Borussia Dortmund",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "Signal Iduna Park",
+      "home": {
+        "id": 124,
+        "name": "Borussia Dortmund",
+        "abbreviation": "DOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+        "score": 3,
+        "winner": true
+      },
+      "away": {
+        "id": 127,
+        "name": "Hamburg SV",
+        "abbreviation": "HSV",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+        "score": 2,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746958",
+      "date": "2026-03-22T14:30Z",
+      "name": "Eintracht Frankfurt at Mainz",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
+      "venue": "MEWA ARENA",
+      "home": {
+        "id": 2950,
+        "name": "Mainz",
+        "abbreviation": "M05",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png",
+        "score": 2,
+        "winner": true
+      },
+      "away": {
+        "id": 125,
+        "name": "Eintracht Frankfurt",
+        "abbreviation": "SGE",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "746955",
+      "date": "2026-03-22T16:30Z",
+      "name": "SC Freiburg at St. Pauli",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
+      "venue": "Millerntor-Stadion",
+      "home": {
+        "id": 270,
+        "name": "St. Pauli",
+        "abbreviation": "STP",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/270.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 126,
+        "name": "SC Freiburg",
+        "abbreviation": "SCF",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "746953",
+      "date": "2026-03-22T18:30Z",
+      "name": "VfB Stuttgart at FC Augsburg",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "WWK Arena",
+      "home": {
+        "id": 3841,
+        "name": "FC Augsburg",
+        "abbreviation": "FCA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
+        "score": 2,
+        "winner": null
+      },
+      "away": {
+        "id": 134,
+        "name": "VfB Stuttgart",
+        "abbreviation": "VFB",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+        "score": 5,
+        "winner": true
+      }
+    }
+  ]
+}

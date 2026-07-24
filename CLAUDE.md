@@ -52,18 +52,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## 现有脚本（零依赖，仅 Node.js 内置模块）
 
 ```bash
-# Understat xG 数据（可用，免费无 Key）
-node scripts/fetch-understat.js                    # 默认 EPL 2025，输出到 data/
-node scripts/fetch-understat.js La_liga 2025 out/  # 指定联赛 / 赛季 / 输出目录
+# ESPN core 全量抓取（球队/球员/排行榜，5 联赛 ~6500 请求，约 40 分钟，常态由 Actions 跑）
+node scripts/fetch-espn-core.js                    # 全 5 联赛 → public/data/{league}/
+node scripts/fetch-espn-core.js eng.1              # 单联赛；PLAYERS_LIMIT=10 可冒烟测试
+
+# Understat xG 数据（免费无 Key；CORS 实测不通，只能服务端/Actions 抓取）
+node scripts/fetch-understat.js                    # 全 5 联赛 → public/data/{league}/xg/
+node scripts/fetch-understat.js EPL 2025           # 单联赛（Understat/ESPN slug 均可）+ 赛季
+
+# ESPN site.api 赛程 + 本地算积分榜（standings 端点返回空的已知坑，从比分本地计算）
+node scripts/fetch-espn-scores.js                  # → public/data/{league}/matches/{YYYY-MM}.json + standings.json
+
+# Understat ↔ ESPN 队名映射（依赖上面两个脚本的产物）
+node scripts/build-team-map.js                     # → public/data/mappings/team-name-map.json
 
 # FBref HTML 解析原型（URL 模式被 Cloudflare JS 挑战拦截，只能用浏览器手动保存的本地 HTML）
 node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 ```
 
 - Understat 联赛参数：`EPL` / `La_liga` / `Serie_A` / `Bundesliga` / `Ligue_1`；`2025` 表示 2025–26 赛季
-- Understat 输出：`understat-{league}-{season}-standings.json`（积分榜 + 每队逐场历史）、`understat-{league}-{season}-players.json`（全量球员 xG 统计）
+- Understat 输出：`xg/standings.json`（积分榜 + xG/xGA/xpts + 每队逐场历史）、`xg/players.json`（全量球员 xG 统计）
+- 抓取脚本公共库：`scripts/lib/http.js`（UA/gzip/重试/比较写入）、`scripts/lib/espn-endpoints.js`（端点常量 + 联赛配置）
+- 定时抓取：`.github/workflows/fetch-data.yml`（每天 UTC 06:00，数据无变化不 commit）
 - FBref 路径已被 Understat 取代（数据更干净、无反爬），脚本仅保留 HTML 解析逻辑备用
-- 新写抓取脚本沿用同一约定：纯 Node 内置模块（https/zlib/fs）、UA 伪装、gzip 解压、请求间隔（≥200ms）、数据无变化不 commit
+- 新写抓取脚本沿用同一约定：纯 Node 内置模块（https/zlib/fs）、UA 伪装、gzip 解压、请求间隔（≥200ms）、数据无变化不 commit；脚本为 CommonJS（由 `scripts/package.json` 的 `type: commonjs` 隔离，不受根 package.json `type: module` 影响）
 
 ## 架构核心（需综合多份文档才能拼出的大图）
 
@@ -103,6 +115,6 @@ node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 
 - 文档与日志语言：中文为主，技术名词保留英文
 - 复用来源：本项目沿用世界杯数据项目的模式（`ESPN_TEAM_MAP` 队名映射、本地算积分榜、足球场阵容可视化、时区转换）；旧项目代码不在本仓库，复用清单见 implementation-plan.md §11
-- **ESPN core API CORS 验证（待执行，不阻塞）**：浏览器控制台测 CORS——通则可部分数据直连简化架构，不通则全走 Actions（图纸默认按不通设计）。Phase 0 未执行此验证，不影响后续阶段，建议 Phase 1 开工前补测
+- **ESPN core API CORS 已验证（2026-07-24）**：浏览器可直连（200 OK），site.api 复核通过，Understat 不通实锤。架构定为方案 A：core 数据仍全走 Actions（批量直连转移限流风险 + CORS 非 ESPN 承诺），CORS 通道仅作 Phase 6 历史赛季按需直连 + 调试备用
 - GitHub Pages 部署：Vue Router 用 hash mode；`vite.config.ts` 的 `base` 已定为 `/MatchLab/`（= 实际仓库名，2026-07-24 落地）。**前端 fetch 静态 JSON 一律走 `import.meta.env.BASE_URL` 前缀，禁用 `/data/...` 绝对路径**（base 子路径下会 404）
-- Actions 额度：低频数据每天 1 次全量抓取约 10 min/天（5 联赛 ~6500 请求 + 200ms 间隔 ≈ 22 min 墙钟），远低于 2000 min/月 免费额度；不要把比分抓取放进 Actions
+- Actions 额度：低频数据每天 1 次全量抓取约 55 min/天（实测 6339 请求 ≈ 55 min 墙钟），月耗 ~1650 min，在 2000 min/月 免费额度内但余量不大——不要再往 Actions 加高频任务，比分实时数据走浏览器直连

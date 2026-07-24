@@ -283,6 +283,7 @@ football-data/
 - **合计 ~1315 请求/联赛，5 联赛 ~6500 请求**
 - ESPN core 无明确限流，但加 200ms 间隔 → 5 联赛 ~22 分钟
 - 每天跑 1 次完全可接受
+- **实测（2026-07-24 全量）**：6339 请求 / 墙钟 ~55 分钟（球员分页优化 limit=50；22 分钟是纯间隔理论值，含响应耗时约 2.5 倍）；0 失败；各联赛 ESPN 球员数 681/165/843/158/764（西甲/德甲 ESPN 注册稀疏，见调研记录）
 
 ### 4.3 fetch-understat.js（已有原型）
 
@@ -724,7 +725,7 @@ interface MatchTeam {
 8. 手动跑一次全量抓取，验证输出
 
 **验收**：
-- [ ] `public/data/eng.1/` 下有 meta/teams/standings/leaders/players/index.json + 646 个球员文件
+- [x] `public/data/eng.1/` 下有 meta/teams/standings/leaders/players/index.json + 球员文件（646 为调研旧值，2025-26 实测 681）
 - [ ] `public/data/eng.1/xg/` 下有 standings + players
 - [ ] `public/data/eng.1/matches/` 下有按月拆分的赛程文件
 - [ ] 5 个联赛目录结构完整
@@ -911,12 +912,12 @@ interface MatchTeam {
 
 | 风险 | 影响 | 应对 |
 |---|---|---|
-| ESPN core API CORS 未实测 | 如果浏览器可直连，部分数据可不用 Actions | Phase 0 第一天验证；不通则全走 Actions（已设计） |
+| ~~ESPN core API CORS 未实测~~ 已验证（2026-07-24 实测可直连） | 架构仍全走 Actions（方案 A 已决） | CORS 通道不接生产（批量直连转移限流风险 + ESPN 无承诺）；留作 Phase 6 历史赛季直连 + 调试备用；Understat CORS 实测不通，钉死 Actions |
 | ESPN core 限流（6500 请求/天） | 抓取失败 | 200ms 间隔 + 重试 + 失败告警 |
 | Understat 端点未文档化 | 随时可能变动 | 降级方案：去掉 xG 列，其余功能不受影响 |
 | 球员姓名 7.5% 不匹配 | xG 数据缺失 | 人工维护 `player-name-map.json`，逐步补全 |
 | GitHub Pages 部署路径 | base path 配置错误导致白屏 | `vite.config.ts` 的 `base` 必须匹配仓库名 |
-| 数据体积增长（历史赛季） | 仓库膨胀 | 只保留当前 + 近 3 赛季，历史按需拉 ESPN core |
+| 数据体积增长（历史赛季） | 仓库膨胀 | 只保留当前 + 近 3 赛季；历史赛季可浏览器按需直连 ESPN core（CORS 已验证通，Phase 6） |
 | 赛季初球队变动（升降级） | teams.json 过期 | 赛季初手动触发全量刷新 |
 
 ---

@@ -1,0 +1,53 @@
+# 数据抓取工作流（图纸 §4）
+# 低频静态数据每天 1 次全量抓取（~30 min，远低于 2000 min/月免费额度）
+# 实时比分不进 Actions——前端浏览器直连 ESPN site.api（CORS 已验证）
+name: Fetch Data
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # 每天 UTC 06:00（北京时间 14:00）
+  workflow_dispatch: # 支持手动触发
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-data
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 与本地 .nvmrc 20.19.6 对齐（环境钉版三处一致）
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch ESPN core (teams/players/leaders)
+        run: node scripts/fetch-espn-core.js
+
+      - name: Fetch Understat (xG)
+        run: node scripts/fetch-understat.js
+
+      - name: Fetch ESPN scores + compute standings
+        run: node scripts/fetch-espn-scores.js
+
+      - name: Rebuild team-name map
+        run: node scripts/build-team-map.js
+
+      # 条件提交：脚本层 writeJsonIfChanged 已保证数据无变化时文件不动，
+      # 这里 git diff 为空则跳过 commit（抓取间隔内数据不变是常态）
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data
+          if git diff --cached --quiet; then
+            echo "数据无变化，跳过提交"
+          else
+            git commit -m "data: 每日抓取更新 $(date -u +%F)"
+            git push
+          fi

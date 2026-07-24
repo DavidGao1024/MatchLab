@@ -1,121 +1,68 @@
 /**
- * Understat EPL 数据抓取脚本
+ * Understat xG 数据抓取（零依赖，Phase 1 重构版）
  *
- * 数据源：Understat 的非官方 JSON 端点（免费、无需 API Key）
+ * 数据源：Understat 非官方 JSON 端点（免费、无 Key；CORS 实测不通，只能服务端/Actions 抓取）
  *   - GET  https://understat.com/getLeagueData/{league}/{season}
  *   - POST https://understat.com/main/getPlayersStats/
  *
- * 数据覆盖：
- *   - 联赛积分榜（含 xG/xGA/xpts/npxG/npxGA/ppda/deep）
- *   - 每场比赛历史（每队的 history[] 数组，按日期排列）
- *   - 球员统计（含 xG/xA/xGChain/xGBuildup/npxG/npg/shots/key_passes/黄红牌）
+ * 输出（Phase 1 起改为站内静态目录，git 跟踪）：
+ *   public/data/{league-slug}/xg/standings.json   积分榜 + xG/xGA/xpts + 每队逐场历史
+ *   public/data/{league-slug}/xg/players.json     全量球员 xG 统计
  *
  * 用法：
- *   node scripts/fetch-understat.js                       # 默认 EPL 2025
- *   node scripts/fetch-understat.js EPL 2025              # 指定联赛+赛季
- *   node scripts/fetch-understat.js EPL 2025 data/        # 指定输出目录
+ *   node scripts/fetch-understat.js                  # 全 5 联赛（默认赛季见 lib/espn-endpoints.js）
+ *   node scripts/fetch-understat.js EPL              # 单联赛（Understat slug 或 ESPN slug 均可）
+ *   node scripts/fetch-understat.js EPL 2025         # 单联赛 + 指定赛季
  *
- * 输出：
- *   data/understat-epl-standings.json  — 积分榜 + 每队历史
- *   data/understat-epl-players.json    — 全部球员统计（按位置分组）
- *
- * 支持联赛（league 参数）：
- *   EPL(英超)、La_liga(西甲)、Serie_A(意甲)、Bundesliga(德甲)、Ligue_1(法甲)
- *   其它：RFPL(俄超)、Ligue_1(法甲)、Serie_A(意甲) 等见 Understat 网站 URL slug
- *
- * 零依赖：纯 Node.js 内置模块
- *
- * 已知限制：
- *   - Understat 未提供官方文档，端点可能随时变动
- *   - POST 端点返回 gzip 压缩 JSON，已用 zlib 处理
- *   - 无 fixtures 端点，upcoming matches 需从 ESPN 或其它源补充
+ * 已知坑（勿重复踩）：
+ *   - getPlayersStats 的 position 参数不过滤 → 单次调用取全量即可
+ *   - history 里的 wins/draws/loses/pts 是单场值（0/1），累计必须 reduce 求和
+ *   - Understat 只覆盖五大联赛，杯赛 404
+ *   - 请求间隔 1200ms（Understat 对频率敏感，比 ESPN 保守）
  */
+'use strict';
 
-const https = require('https');
-const zlib = require('zlib');
-const fs = require('fs');
 const path = require('path');
-
-const argv = process.argv.slice(2);
-const LEAGUE = argv[0] || 'EPL';
-const SEASON = argv[1] || '2025';
-const OUTPUT_DIR = argv[2] || path.join(__dirname, '..', 'data');
+const { sleep, httpRequest, writeJsonIfChanged } = require('./lib/http');
+const { SEASON, LEAGUES } = require('./lib/espn-endpoints');
 
 const BASE = 'https://understat.com';
-const REQUEST_TIMEOUT = 20000;
-const REQUEST_DELAY_MS = 1200;
-const PLAYER_POSITIONS = ['']; // 空字符串 = 全部球员；实测 position 过滤参数无效，单次调用即可
+const DELAY_MS = 1200;
+const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 
-// ========== 通用 HTTP ==========
+const argv = process.argv.slice(2);
+const requested = argv[0];
+const season = argv[1] || SEASON;
 
-function httpRequest(method, urlPath, formData) {
-  return new Promise((resolve, reject) => {
-    const body = formData
-      ? Object.entries(formData)
-          .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v == null ? '' : v)}`)
-          .join('&')
-      : null;
-
-    const options = {
-      hostname: 'understat.com',
-      path: urlPath,
-      method,
-      timeout: REQUEST_TIMEOUT,
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
-        'Accept': 'application/json, text/javascript, */*; q=0.01',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Accept-Encoding': 'gzip, deflate',
-        'Referer': `${BASE}/league/${LEAGUE}/${SEASON}`,
-        'X-Requested-With': 'XMLHttpRequest'
-      }
-    };
-    if (body) {
-      options.headers['Content-Type'] = 'application/x-www-form-urlencoded';
-      options.headers['Content-Length'] = Buffer.byteLength(body);
-    }
-
-    const req = https.request(options, (res) => {
-      if (res.statusCode >= 400) {
-        reject(new Error(`HTTP ${res.statusCode} for ${method} ${urlPath}`));
-        res.resume();
-        return;
-      }
-      const chunks = [];
-      let stream = res;
-      const enc = res.headers['content-encoding'];
-      if (enc === 'gzip') stream = res.pipe(zlib.createGunzip());
-      else if (enc === 'deflate') stream = res.pipe(zlib.createInflate());
-      else if (enc === 'br') stream = res.pipe(zlib.createBrotliDecompress());
-      stream.on('data', (c) => chunks.push(c));
-      stream.on('end', () => {
-        const buf = Buffer.concat(chunks);
-        const text = buf.toString('utf8');
-        resolve(text);
-      });
-      stream.on('error', reject);
-    });
-    req.on('timeout', () => { req.destroy(); reject(new Error('请求超时')); });
-    req.on('error', reject);
-    if (body) req.write(body);
-    req.end();
-  });
+const targets = requested
+  ? LEAGUES.filter((l) => l.understatSlug === requested || l.slug === requested)
+  : LEAGUES;
+if (requested && targets.length === 0) {
+  console.error(`[understat] 未知联赛: ${requested}（可选 ${LEAGUES.map((l) => l.understatSlug).join(' / ')}）`);
+  process.exit(1);
 }
 
-async function fetchJson(method, urlPath, formData) {
-  const text = await httpRequest(method, urlPath, formData);
+function formEncode(obj) {
+  return Object.entries(obj)
+    .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v == null ? '' : v)}`)
+    .join('&');
+}
+
+async function understatJson(league, method, urlPath, formData) {
+  await sleep(DELAY_MS);
+  const text = await httpRequest(BASE + urlPath, {
+    method,
+    body: formData ? formEncode(formData) : null,
+    headers: {
+      Referer: `${BASE}/league/${league.understatSlug}/${season}`,
+      'X-Requested-With': 'XMLHttpRequest',
+    },
+  });
   try {
     return JSON.parse(text);
   } catch (e) {
-    throw new Error(`JSON 解析失败 (${method} ${urlPath}): ${text.slice(0, 200)}`);
+    throw new Error(`JSON 解析失败 (${urlPath}): ${text.slice(0, 200)}`);
   }
-}
-
-function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-
-function writeJson(filePath, data) {
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
-  console.log(`✓ 写入 ${filePath} (${JSON.stringify(data).length} 字节)`);
 }
 
 function toNum(v) {
@@ -124,20 +71,20 @@ function toNum(v) {
   return Number.isFinite(n) ? n : null;
 }
 
-// ========== 1. 联赛数据（积分榜 + 每队历史） ==========
+// ========== 1. 联赛数据（积分榜 + 每队逐场历史） ==========
 
-async function fetchLeagueData() {
-  console.log(`[Understat] GET /getLeagueData/${LEAGUE}/${SEASON}`);
-  const data = await fetchJson('GET', `/getLeagueData/${LEAGUE}/${SEASON}`);
+async function fetchLeagueData(league) {
+  console.log(`[understat] [${league.slug}] GET /getLeagueData/${league.understatSlug}/${season}`);
+  const data = await understatJson(league, 'GET', `/getLeagueData/${league.understatSlug}/${season}`);
 
   const teams = data.teams || {};
-  const standings = [];
+  const rows = [];
 
   for (const [teamId, team] of Object.entries(teams)) {
     const history = (team.history || []).map((h) => ({
       date: h.date,
-      homeAway: h.h_a,                // 'h' = 主场, 'a' = 客场
-      result: h.result,                // 'w'/'d'/'l'
+      homeAway: h.h_a, // 'h' = 主场, 'a' = 客场
+      result: h.result, // 'w'/'d'/'l'
       scored: toNum(h.scored),
       missed: toNum(h.missed),
       xG: toNum(h.xG),
@@ -146,22 +93,21 @@ async function fetchLeagueData() {
       npxGA: toNum(h.npxGA),
       xpts: toNum(h.xpts),
       npxGD: toNum(h.npxGD),
-      ppda: h.ppda,                    // 防守压力强度 {att, def}
+      ppda: h.ppda, // 防守压力强度 {att, def}
       ppdaAllowed: h.ppda_allowed,
-      deep: h.deep,                    // 禁区触球次数
+      deep: h.deep, // 禁区触球次数
       deepAllowed: h.deep_allowed,
       pts: toNum(h.pts),
       wins: toNum(h.wins),
       draws: toNum(h.draws),
-      loses: toNum(h.loses)
+      loses: toNum(h.loses),
     }));
 
     // 累计统计：每条 history 的 wins/draws/loses/pts 是单场值（1 或 0），需 sum
     const sum = (f) => history.reduce((s, m) => s + (Number(m[f]) || 0), 0);
-    standings.push({
+    rows.push({
       teamId,
       team: team.title,
-      history,
       summary: {
         matches: history.length,
         wins: sum('wins'),
@@ -174,132 +120,109 @@ async function fetchLeagueData() {
         xGA: sum('xGA'),
         npxG: sum('npxG'),
         npxGA: sum('npxGA'),
+        xpts: sum('xpts'), // 期望积分（图纸 §9 积分榜 xPts 叠加列）
         deep: sum('deep'),
-        deepAllowed: sum('deepAllowed')
-      }
+        deepAllowed: sum('deepAllowed'),
+      },
+      history,
     });
   }
 
-  // 按 PTS → xpts → xG 排序
-  standings.sort((a, b) => {
+  rows.sort((a, b) => {
     if (b.summary.pts !== a.summary.pts) return b.summary.pts - a.summary.pts;
     return (b.summary.xG - b.summary.xGA) - (a.summary.xG - a.summary.xGA);
   });
 
   return {
     source: 'understat.com',
-    league: LEAGUE,
-    season: SEASON,
+    league: league.slug,
+    understatLeague: league.understatSlug,
+    season,
     updateTime: new Date().toISOString(),
-    standings: standings.map((s, i) => ({
+    standings: rows.map((s, i) => ({
       rank: i + 1,
       teamId: s.teamId,
       team: s.team,
       ...s.summary,
       xGD: Number((s.summary.xG - s.summary.xGA).toFixed(2)),
-      npxGD: Number((s.summary.npxG - s.summary.npxGA).toFixed(2))
+      npxGD: Number((s.summary.npxG - s.summary.npxGA).toFixed(2)),
     })),
-    teamHistory: standings.map(s => ({
-      teamId: s.teamId,
-      team: s.team,
-      history: s.history
-    }))
+    teamHistory: rows.map((s) => ({ teamId: s.teamId, team: s.team, history: s.history })),
   };
 }
 
-// ========== 2. 球员统计（按位置分组） ==========
+// ========== 2. 球员统计（position 参数无效，单次取全量） ==========
 
-async function fetchPlayersByPosition(position) {
-  const params = {
-    league: LEAGUE,
-    season: SEASON,
-    position,
+async function fetchAllPlayers(league) {
+  console.log(`[understat] [${league.slug}] POST /main/getPlayersStats/`);
+  const data = await understatJson(league, 'POST', '/main/getPlayersStats/', {
+    league: league.understatSlug,
+    season,
+    position: '',
     team: '',
     mins_min: '',
-    mins_max: ''
-  };
-  console.log(`[Understat] POST /main/getPlayersStats/ position=${position || 'ALL'}`);
-  const data = await fetchJson('POST', '/main/getPlayersStats/', params);
+    mins_max: '',
+  });
   if (!data.success) {
     throw new Error(`API 返回 success=false: ${JSON.stringify(data).slice(0, 200)}`);
   }
-  return data.players || [];
-}
-
-function mapPlayer(p) {
-  return {
+  return (data.players || []).map((p) => ({
     id: p.id,
     name: p.player_name,
     team: p.team_title,
-    position: p.position,           // 'GK' / 'D' / 'M S' / 'F S'
+    position: p.position, // 'GK' / 'D' / 'M S' / 'F S'（细位置码，阵容可视化需要）
     games: toNum(p.games),
     minutes: toNum(p.time),
     goals: toNum(p.goals),
-    npg: toNum(p.npg),             // 非点球进球
+    npg: toNum(p.npg), // 非点球进球
     assists: toNum(p.assists),
     xG: toNum(p.xG),
     xA: toNum(p.xA),
     npxG: toNum(p.npxG),
-    xGChain: toNum(p.xGChain),     // xG Chain — 球员参与的所有射门 xG 总和
-    xGBuildup: toNum(p.xGBuildup), // xG Buildup — 不含最后两传的 Chain
+    xGChain: toNum(p.xGChain), // 球员参与的所有射门 xG 总和
+    xGBuildup: toNum(p.xGBuildup), // 不含最后两传的 Chain
     shots: toNum(p.shots),
     keyPasses: toNum(p.key_passes),
     yellowCards: toNum(p.yellow_cards),
-    redCards: toNum(p.red_cards)
-  };
-}
-
-async function fetchAllPlayers() {
-  const allPlayers = [];
-  const seenIds = new Set();
-  for (const pos of PLAYER_POSITIONS) {
-    const label = pos || 'ALL';
-    try {
-      const list = await fetchPlayersByPosition(pos);
-      for (const p of list) {
-        if (seenIds.has(p.id)) continue; // ALL 与分位置查询会有重复
-        seenIds.add(p.id);
-        allPlayers.push(mapPlayer(p));
-      }
-      console.log(`  - position=${label}: ${list.length} 条（去重后新增 ${list.length}）`);
-    } catch (e) {
-      console.warn(`  ! position=${label} 失败: ${e.message}`);
-    }
-    await sleep(REQUEST_DELAY_MS);
-  }
-  return allPlayers;
+    redCards: toNum(p.red_cards),
+  }));
 }
 
 // ========== 主流程 ==========
 
-async function main() {
-  console.log(`[Understat] 联赛=${LEAGUE}  赛季=${SEASON}  输出=${OUTPUT_DIR}`);
-  if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+async function processLeague(league) {
+  const xgDir = path.join(DATA_ROOT, league.slug, 'xg');
 
-  // 1. 联赛数据
-  const league = await fetchLeagueData();
-  const leaguePath = path.join(OUTPUT_DIR, `understat-${LEAGUE.toLowerCase()}-${SEASON}-standings.json`);
-  writeJson(leaguePath, league);
+  const standings = await fetchLeagueData(league);
+  const sChanged = writeJsonIfChanged(path.join(xgDir, 'standings.json'), standings);
+  console.log(`  · [${league.slug}] xg/standings.json ${sChanged ? '已更新' : '无变化'}（${standings.standings.length} 队）`);
 
-  // 2. 球员统计
-  const players = await fetchAllPlayers();
-  const playersOut = {
+  const players = await fetchAllPlayers(league);
+  const pChanged = writeJsonIfChanged(path.join(xgDir, 'players.json'), {
     source: 'understat.com',
-    league: LEAGUE,
-    season: SEASON,
+    league: league.slug,
+    understatLeague: league.understatSlug,
+    season,
     updateTime: new Date().toISOString(),
     count: players.length,
-    players
-  };
-  const playersPath = path.join(OUTPUT_DIR, `understat-${LEAGUE.toLowerCase()}-${SEASON}-players.json`);
-  writeJson(playersPath, playersOut);
-
-  console.log(`\n[Understat] 积分榜 ${league.standings.length} 行`);
-  console.log(`[Understat] 球员 ${players.length} 名`);
-  console.log('[Understat] 完成');
+    players,
+  });
+  console.log(`  · [${league.slug}] xg/players.json ${pChanged ? '已更新' : '无变化'}（${players.length} 人）`);
 }
 
-main().catch(e => {
-  console.error(`[Understat] 致命错误: ${e.stack || e.message}`);
+async function main() {
+  console.log(`[understat] 联赛: ${targets.map((t) => t.understatSlug).join(', ')}  赛季: ${season}`);
+  for (const league of targets) {
+    try {
+      await processLeague(league);
+    } catch (e) {
+      console.error(`[understat] [${league.slug}] 致命错误: ${e.stack || e.message}`);
+    }
+  }
+  console.log('[understat] 完成');
+}
+
+main().catch((e) => {
+  console.error(`[understat] 致命错误: ${e.stack || e.message}`);
   process.exit(1);
 });

@@ -1,0 +1,1049 @@
+{
+  "source": "site.api.espn.com",
+  "updateTime": "2026-07-24T07:05:40.070Z",
+  "league": "ita.1",
+  "month": "2026-02",
+  "count": 40,
+  "matches": [
+    {
+      "eventId": "737004",
+      "date": "2026-02-01T11:30Z",
+      "name": "Lecce at Torino",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "Stadio Olimpico Grande Torino",
+      "home": {
+        "id": 239,
+        "name": "Torino",
+        "abbreviation": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+        "score": 1,
+        "winner": true
+      },
+      "away": {
+        "id": 113,
+        "name": "Lecce",
+        "abbreviation": "LEC",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737010",
+      "date": "2026-02-01T14:00Z",
+      "name": "Atalanta at Como",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
+      "venue": "Giuseppe Sinigaglia",
+      "home": {
+        "id": 2572,
+        "name": "Como",
+        "abbreviation": "COMO",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 105,
+        "name": "Atalanta",
+        "abbreviation": "ATA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737009",
+      "date": "2026-02-01T17:00Z",
+      "name": "Internazionale at Cremonese",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "Stadio Giovanni Zini",
+      "home": {
+        "id": 4050,
+        "name": "Cremonese",
+        "abbreviation": "CRE",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4050.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 110,
+        "name": "Internazionale",
+        "abbreviation": "INT",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737006",
+      "date": "2026-02-01T19:45Z",
+      "name": "Juventus at Parma",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
+      "venue": "Ennio Tardini",
+      "home": {
+        "id": 115,
+        "name": "Parma",
+        "abbreviation": "PAR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 111,
+        "name": "Juventus",
+        "abbreviation": "JUV",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+        "score": 4,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737008",
+      "date": "2026-02-02T19:45Z",
+      "name": "AS Roma at Udinese",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
+      "venue": "Stadio Friuli",
+      "home": {
+        "id": 118,
+        "name": "Udinese",
+        "abbreviation": "UDI",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+        "score": 1,
+        "winner": true
+      },
+      "away": {
+        "id": 104,
+        "name": "AS Roma",
+        "abbreviation": "ROMA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737012",
+      "date": "2026-02-03T19:45Z",
+      "name": "AC Milan at Bologna",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
+      "venue": "Renato Dall'Ara",
+      "home": {
+        "id": 107,
+        "name": "Bologna",
+        "abbreviation": "BOL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 103,
+        "name": "AC Milan",
+        "abbreviation": "MIL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+        "score": 3,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737018",
+      "date": "2026-02-06T19:45Z",
+      "name": "Pisa at Hellas Verona",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
+      "venue": "Stadio Marcantonio Bentegodi",
+      "home": {
+        "id": 119,
+        "name": "Hellas Verona",
+        "abbreviation": "VER",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/119.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 3956,
+        "name": "Pisa",
+        "abbreviation": "PIS",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3956.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737019",
+      "date": "2026-02-07T17:00Z",
+      "name": "Napoli at Genoa",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
+      "venue": "Stadio Luigi Ferraris",
+      "home": {
+        "id": 3263,
+        "name": "Genoa",
+        "abbreviation": "GEN",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
+        "score": 2,
+        "winner": null
+      },
+      "away": {
+        "id": 114,
+        "name": "Napoli",
+        "abbreviation": "NAP",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+        "score": 3,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737020",
+      "date": "2026-02-07T19:45Z",
+      "name": "Torino at Fiorentina",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
+      "venue": "Stadio Artemio Franchi",
+      "home": {
+        "id": 109,
+        "name": "Fiorentina",
+        "abbreviation": "FIO",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
+        "score": 2,
+        "winner": null
+      },
+      "away": {
+        "id": 239,
+        "name": "Torino",
+        "abbreviation": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+        "score": 2,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737021",
+      "date": "2026-02-08T11:30Z",
+      "name": "Parma at Bologna",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
+      "venue": "Renato Dall'Ara",
+      "home": {
+        "id": 107,
+        "name": "Bologna",
+        "abbreviation": "BOL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 115,
+        "name": "Parma",
+        "abbreviation": "PAR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+        "score": 1,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737016",
+      "date": "2026-02-08T14:00Z",
+      "name": "Udinese at Lecce",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "Via Del Mare",
+      "home": {
+        "id": 113,
+        "name": "Lecce",
+        "abbreviation": "LEC",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
+        "score": 2,
+        "winner": true
+      },
+      "away": {
+        "id": 118,
+        "name": "Udinese",
+        "abbreviation": "UDI",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737023",
+      "date": "2026-02-08T17:00Z",
+      "name": "Internazionale at Sassuolo",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+2'",
+      "period": 2,
+      "venue": "Mapei Stadium",
+      "home": {
+        "id": 3997,
+        "name": "Sassuolo",
+        "abbreviation": "SAS",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 110,
+        "name": "Internazionale",
+        "abbreviation": "INT",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+        "score": 5,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737017",
+      "date": "2026-02-08T19:45Z",
+      "name": "Lazio at Juventus",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
+      "venue": "Allianz Stadium",
+      "home": {
+        "id": 111,
+        "name": "Juventus",
+        "abbreviation": "JUV",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+        "score": 2,
+        "winner": null
+      },
+      "away": {
+        "id": 112,
+        "name": "Lazio",
+        "abbreviation": "LAZ",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
+        "score": 2,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737022",
+      "date": "2026-02-09T17:30Z",
+      "name": "Cremonese at Atalanta",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "New Balance Arena",
+      "home": {
+        "id": 105,
+        "name": "Atalanta",
+        "abbreviation": "ATA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+        "score": 2,
+        "winner": true
+      },
+      "away": {
+        "id": 4050,
+        "name": "Cremonese",
+        "abbreviation": "CRE",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4050.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737014",
+      "date": "2026-02-09T19:45Z",
+      "name": "Cagliari at AS Roma",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
+      "venue": "Olimpico",
+      "home": {
+        "id": 104,
+        "name": "AS Roma",
+        "abbreviation": "ROMA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+        "score": 2,
+        "winner": true
+      },
+      "away": {
+        "id": 2925,
+        "name": "Cagliari",
+        "abbreviation": "CAG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737028",
+      "date": "2026-02-13T19:45Z",
+      "name": "AC Milan at Pisa",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
+      "venue": "Arena Garibaldi - Stadio Romeo Anconetani",
+      "home": {
+        "id": 3956,
+        "name": "Pisa",
+        "abbreviation": "PIS",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3956.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 103,
+        "name": "AC Milan",
+        "abbreviation": "MIL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737025",
+      "date": "2026-02-14T14:00Z",
+      "name": "Fiorentina at Como",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "Giuseppe Sinigaglia",
+      "home": {
+        "id": 2572,
+        "name": "Como",
+        "abbreviation": "COMO",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 109,
+        "name": "Fiorentina",
+        "abbreviation": "FIO",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737031",
+      "date": "2026-02-14T17:00Z",
+      "name": "Atalanta at Lazio",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "Olimpico",
+      "home": {
+        "id": 112,
+        "name": "Lazio",
+        "abbreviation": "LAZ",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 105,
+        "name": "Atalanta",
+        "abbreviation": "ATA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737032",
+      "date": "2026-02-14T19:45Z",
+      "name": "Juventus at Internazionale",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "San Siro",
+      "home": {
+        "id": 110,
+        "name": "Internazionale",
+        "abbreviation": "INT",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+        "score": 3,
+        "winner": true
+      },
+      "away": {
+        "id": 111,
+        "name": "Juventus",
+        "abbreviation": "JUV",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+        "score": 2,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737026",
+      "date": "2026-02-15T11:30Z",
+      "name": "Sassuolo at Udinese",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "Stadio Friuli",
+      "home": {
+        "id": 118,
+        "name": "Udinese",
+        "abbreviation": "UDI",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 3997,
+        "name": "Sassuolo",
+        "abbreviation": "SAS",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737033",
+      "date": "2026-02-15T14:00Z",
+      "name": "Genoa at Cremonese",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
+      "venue": "Stadio Giovanni Zini",
+      "home": {
+        "id": 4050,
+        "name": "Cremonese",
+        "abbreviation": "CRE",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4050.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 3263,
+        "name": "Genoa",
+        "abbreviation": "GEN",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737029",
+      "date": "2026-02-15T14:00Z",
+      "name": "Hellas Verona at Parma",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "Ennio Tardini",
+      "home": {
+        "id": 115,
+        "name": "Parma",
+        "abbreviation": "PAR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+        "score": 2,
+        "winner": true
+      },
+      "away": {
+        "id": 119,
+        "name": "Hellas Verona",
+        "abbreviation": "VER",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/119.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737027",
+      "date": "2026-02-15T17:00Z",
+      "name": "Bologna at Torino",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "Stadio Olimpico Grande Torino",
+      "home": {
+        "id": 239,
+        "name": "Torino",
+        "abbreviation": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 107,
+        "name": "Bologna",
+        "abbreviation": "BOL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737030",
+      "date": "2026-02-15T19:45Z",
+      "name": "AS Roma at Napoli",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
+      "venue": "Stadio Diego Armando Maradona",
+      "home": {
+        "id": 114,
+        "name": "Napoli",
+        "abbreviation": "NAP",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+        "score": 2,
+        "winner": null
+      },
+      "away": {
+        "id": 104,
+        "name": "AS Roma",
+        "abbreviation": "ROMA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+        "score": 2,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737024",
+      "date": "2026-02-16T19:45Z",
+      "name": "Lecce at Cagliari",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "Unipol Domus",
+      "home": {
+        "id": 2925,
+        "name": "Cagliari",
+        "abbreviation": "CAG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 113,
+        "name": "Lecce",
+        "abbreviation": "LEC",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737015",
+      "date": "2026-02-18T19:45Z",
+      "name": "Como at AC Milan",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "San Siro",
+      "home": {
+        "id": 103,
+        "name": "AC Milan",
+        "abbreviation": "MIL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 2572,
+        "name": "Como",
+        "abbreviation": "COMO",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737038",
+      "date": "2026-02-20T19:45Z",
+      "name": "Hellas Verona at Sassuolo",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
+      "venue": "Mapei Stadium",
+      "home": {
+        "id": 3997,
+        "name": "Sassuolo",
+        "abbreviation": "SAS",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+        "score": 3,
+        "winner": true
+      },
+      "away": {
+        "id": 119,
+        "name": "Hellas Verona",
+        "abbreviation": "VER",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/119.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737043",
+      "date": "2026-02-21T14:00Z",
+      "name": "Como at Juventus",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "Allianz Stadium",
+      "home": {
+        "id": 111,
+        "name": "Juventus",
+        "abbreviation": "JUV",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 2572,
+        "name": "Como",
+        "abbreviation": "COMO",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737037",
+      "date": "2026-02-21T17:00Z",
+      "name": "Internazionale at Lecce",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
+      "venue": "Via Del Mare",
+      "home": {
+        "id": 113,
+        "name": "Lecce",
+        "abbreviation": "LEC",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 110,
+        "name": "Internazionale",
+        "abbreviation": "INT",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737041",
+      "date": "2026-02-21T19:45Z",
+      "name": "Lazio at Cagliari",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
+      "venue": "Unipol Domus",
+      "home": {
+        "id": 2925,
+        "name": "Cagliari",
+        "abbreviation": "CAG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 112,
+        "name": "Lazio",
+        "abbreviation": "LAZ",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737039",
+      "date": "2026-02-22T11:30Z",
+      "name": "Torino at Genoa",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+3'",
+      "period": 2,
+      "venue": "Stadio Luigi Ferraris",
+      "home": {
+        "id": 3263,
+        "name": "Genoa",
+        "abbreviation": "GEN",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
+        "score": 3,
+        "winner": true
+      },
+      "away": {
+        "id": 239,
+        "name": "Torino",
+        "abbreviation": "TOR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737034",
+      "date": "2026-02-22T14:00Z",
+      "name": "Napoli at Atalanta",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
+      "venue": "New Balance Arena",
+      "home": {
+        "id": 105,
+        "name": "Atalanta",
+        "abbreviation": "ATA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+        "score": 2,
+        "winner": true
+      },
+      "away": {
+        "id": 114,
+        "name": "Napoli",
+        "abbreviation": "NAP",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737036",
+      "date": "2026-02-22T17:00Z",
+      "name": "Parma at AC Milan",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
+      "venue": "San Siro",
+      "home": {
+        "id": 103,
+        "name": "AC Milan",
+        "abbreviation": "MIL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 115,
+        "name": "Parma",
+        "abbreviation": "PAR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+        "score": 1,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737035",
+      "date": "2026-02-22T19:45Z",
+      "name": "Cremonese at AS Roma",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
+      "venue": "Olimpico",
+      "home": {
+        "id": 104,
+        "name": "AS Roma",
+        "abbreviation": "ROMA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+        "score": 3,
+        "winner": true
+      },
+      "away": {
+        "id": 4050,
+        "name": "Cremonese",
+        "abbreviation": "CRE",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4050.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737040",
+      "date": "2026-02-23T17:30Z",
+      "name": "Pisa at Fiorentina",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "Stadio Artemio Franchi",
+      "home": {
+        "id": 109,
+        "name": "Fiorentina",
+        "abbreviation": "FIO",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
+        "score": 1,
+        "winner": true
+      },
+      "away": {
+        "id": 3956,
+        "name": "Pisa",
+        "abbreviation": "PIS",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3956.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737042",
+      "date": "2026-02-23T19:45Z",
+      "name": "Udinese at Bologna",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
+      "venue": "Renato Dall'Ara",
+      "home": {
+        "id": 107,
+        "name": "Bologna",
+        "abbreviation": "BOL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+        "score": 1,
+        "winner": true
+      },
+      "away": {
+        "id": 118,
+        "name": "Udinese",
+        "abbreviation": "UDI",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737053",
+      "date": "2026-02-27T19:45Z",
+      "name": "Cagliari at Parma",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "Ennio Tardini",
+      "home": {
+        "id": 115,
+        "name": "Parma",
+        "abbreviation": "PAR",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 2925,
+        "name": "Cagliari",
+        "abbreviation": "CAG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737052",
+      "date": "2026-02-28T14:00Z",
+      "name": "Lecce at Como",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
+      "venue": "Giuseppe Sinigaglia",
+      "home": {
+        "id": 2572,
+        "name": "Como",
+        "abbreviation": "COMO",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
+        "score": 3,
+        "winner": true
+      },
+      "away": {
+        "id": 113,
+        "name": "Lecce",
+        "abbreviation": "LEC",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
+        "score": 1,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "737050",
+      "date": "2026-02-28T17:00Z",
+      "name": "Napoli at Hellas Verona",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
+      "venue": "Stadio Marcantonio Bentegodi",
+      "home": {
+        "id": 119,
+        "name": "Hellas Verona",
+        "abbreviation": "VER",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/119.png",
+        "score": 1,
+        "winner": null
+      },
+      "away": {
+        "id": 114,
+        "name": "Napoli",
+        "abbreviation": "NAP",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+        "score": 2,
+        "winner": true
+      }
+    },
+    {
+      "eventId": "737049",
+      "date": "2026-02-28T19:45Z",
+      "name": "Genoa at Internazionale",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
+      "venue": "San Siro",
+      "home": {
+        "id": 110,
+        "name": "Internazionale",
+        "abbreviation": "INT",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+        "score": 2,
+        "winner": true
+      },
+      "away": {
+        "id": 3263,
+        "name": "Genoa",
+        "abbreviation": "GEN",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
+        "score": 0,
+        "winner": null
+      }
+    }
+  ]
+}

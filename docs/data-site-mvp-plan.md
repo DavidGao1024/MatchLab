@@ -176,6 +176,54 @@
 
 > 按日期倒序记录每次调研进展，格式：`### YYYY-MM-DD`
 
+### 2026-07-24 — ESPN core 球员注册覆盖不均（Phase 1 全量抓取发现）
+
+**调研内容**：Phase 1 全量抓取实测 ESPN core 联赛级球员列表（`/leagues/{slug}/athletes`）的实际 count。
+
+**发现**（ESPN count vs Understat 实际出场球员数）：
+
+| 联赛 | ESPN core | Understat | 差距 |
+|---|---|---|---|
+| eng.1 | 681 | 537 | ESPN 更全 |
+| esp.1 | **165** | 600 | **ESPN 严重缺失**（仅为实际 27%） |
+| ita.1 | 843 | 586 | ESPN 更全 |
+| ger.1 | **158** | 499 | **ESPN 严重缺失**（仅为实际 32%） |
+| fra.1 | 764 | 553 | ESPN 更全 |
+
+**结论**：
+
+- ESPN 对西甲的球员档案注册严重不全（非脚本 bug，API 本身 count=165，已 curl 验证）
+- **Phase 4 合并策略必须调整**：球员列表不能只以 ESPN 为骨架——对 ESPN 稀疏的联赛（至少西甲），应以 Understat 球员为主体，ESPN 档案作为叠加层；`players/index.json` 需支持「Understat-only 球员」（无 ESPN id，用 understat id 占位或独立命名空间）
+- 球队级数据不受影响（ESPN 球队注册 20/20 齐全）
+
+---
+
+### 2026-07-24 — CORS 实测：ESPN core 意外可直连，Understat 不通实锤
+
+**调研内容**：线上站点真实 origin（davidgao1024.github.io）浏览器 fetch 实测三数据源 CORS（图纸 §13 待验证项销账）。
+
+**发现**：
+
+1. **ESPN core API（sports.core.api.espn.com）：浏览器可直连** ✅
+   - `GET /v2/sports/soccer/leagues/eng.1` → 200，返回 `"English Premier League"`，uid `s:600~l:700`
+   - ESPN 未文档化 CORS 承诺，当前行为为开放
+
+2. **ESPN site.api：复核通过** ✅
+   - `GET .../eng.1/scoreboard?dates=20250801-20250831&limit=10` → 200，10 场比赛
+   - 与世界杯项目结论一致，比分浏览器直连设计安全
+
+3. **Understat：拦截** ❌
+   - `GET https://understat.com/getLeagueData/EPL/2025` → `TypeError: Failed to fetch`，CORS 拦截实锤
+   - xG 数据必须走 Actions（与设计预期一致）
+
+**结论**：
+
+- 架构维持两段式（方案 A，已决策）：ESPN core 数据仍由 Actions 预生成。理由：批量数据（球员全量 650+ 分页请求）浏览器逐用户直连会把限流风险转移到访客侧；CORS 非 ESPN 承诺、随时可能关闭；静态 JSON 懒加载首屏与切换体验更优
+- **意外红利**：CORS 通 → Phase 6 历史赛季（26 赛季 × 5 联赛）可浏览器按需直连，无需预生成
+- 图纸 §12 风险条「ESPN core CORS 未实测」已销账
+
+---
+
 ### 2026-07-21 — 球员 per-season 生涯统计端点
 
 **调研内容**：验证 ESPN core 是否提供球员单赛季历史统计（用于生涯曲线页）。
@@ -828,6 +876,14 @@ Understat:
 **选择**：A——钉 Vite 6
 **理由**：6→7 是清理已废弃功能（sass 旧 API、CJS 构建等），7→8 是内核换 Rolldown/Oxc——本项目纯 vue-ts + Tailwind 官方插件、无 SSR/sass/CJS/自定义插件，全部沾不上；Vite 8 的构建提速对小 SPA 无感；区别不影响本项目，就没有理由偏离刚批准的图纸
 **后续影响**：Vite 6 处维护线（仅安全修复）；官方有兼容层，将来可随时升 7/8。**开工当日（2026-07-24）实测印证**：`vue-router@latest` 已是 5.2.0，peerOptional 要求 Vite `^7.3.0 || ^8.0.0`，与 Vite 6 直接 ERESOLVE 冲突——必须钉 `vue-router@4`（实际装得 4.6.4）。生态在向 Vite 7/8 迁移，Vite 6 项目的依赖安装一律注意带版本号
+
+#### 决策：CORS 实测结果与架构走向（方案 A）
+**日期**：2026-07-24
+**背景**：图纸 §13 待验证项——ESPN core API 浏览器 CORS；图纸默认按「不通」设计，实测意外通过
+**选项**：A) 架构不变，core 数据全走 Actions B) 混合简化，部分 core 数据改浏览器直连
+**选择**：A——架构不变（实测：core 通 / site.api 通 / Understat 不通）
+**理由**：批量数据（球员全量 650+ 分页）浏览器逐用户直连把限流风险转移到访客侧；CORS 非 ESPN 承诺，生产功能不能架在 undocumented 行为上；两段式 + 静态懒加载的首屏/切换体验更优
+**后续影响**：CORS 通道留作备用 + 调试；Phase 6 历史赛季可改浏览器按需直连（图纸 §12「历史按需拉」可行化）；Understat 钉死 Actions
 
 #### 决策：项目根 = 仓库根 MatchLab，base 为 '/MatchLab/'
 **日期**：2026-07-24
