@@ -12,8 +12,8 @@ dist
 dist-ssr
 *.local
 
-# Claude Code 本地工具配置
-.claude/
+# Claude Code：共享配置 settings.json 入库（换机器可同步），个人覆盖保持本地
+.claude/settings.local.json
 
 # Editor directories and files
 .vscode/*
