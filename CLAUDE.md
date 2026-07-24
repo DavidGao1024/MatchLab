@@ -7,7 +7,7 @@
 ## 一、项目画像
 
 - **代号**：MatchLab — 五大联赛（英超/西甲/意甲/德甲/法甲）数据查询网站
-- **当前阶段**：规划中，未开工（施工图纸见 `docs/implementation-plan.md`）
+- **当前阶段**：Phase 0 完成（Vite 6 脚手架 + 部署工作流已入库），待令开 Phase 1；施工图纸见 `docs/implementation-plan.md`
 - **协作模式**：总司令下令 → 营长执行；全局铁律（未经指令不改码、先汇报后更新、不擅自持久化）全程有效
 
 ## 二、军衔记录（本项目独立计算）
@@ -19,7 +19,8 @@
 ## 三、技术栈与架构偏好
 
 - Vite 6 + Vue 3（`<script setup>`）+ Pinia + Vue Router 4（hash mode）+ TypeScript strict + Tailwind 4 + MiniSearch
-- GitHub Pages 静态部署；数据管线 = GitHub Actions + 零依赖 Node 脚本 → 静态 JSON
+- 环境钉版（2026-07-24 定）：Node ≥20.19（本地 20.19.6），`.nvmrc` / package.json engines / Actions setup-node 三处一致；Vite 钉 6（脚手架用 `npm create vite@6`，不用 latest）；vue-router 钉 `@4`（latest 已是 v5，要求 Vite 7/8，不兼容）
+- GitHub Pages 静态部署（base `/MatchLab/` = 仓库名）；数据管线 = GitHub Actions + 零依赖 Node 脚本 → 静态 JSON
 - 数据源定调：ESPN site.api 浏览器直连；ESPN core API 与 Understat 一律走 Actions；FBref / Transfermarkt 弃用
 
 ## 四、项目工作流
@@ -27,7 +28,7 @@
 - 计划文档统一放 `projectDoc/plan/`，一个任务一个文件
 - 数据结构与 API 接口不能变，UI 可大改
 - 抓取脚本永远零依赖（仅 Node 内置模块）
-- 开工须先获总司令明确指令，当前状态：⬜ 待命
+- 开工须先获总司令明确指令，当前状态：🟡 施工中（Phase 0 ✅，待令开 Phase 1）
 
 ---
 
@@ -37,7 +38,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概况
 
-五大联赛（英超/西甲/意甲/德甲/法甲）足球数据查询网站，**当前处于规划阶段**：仓库里还没有应用代码（无 package.json、无构建配置、无 GitHub Actions），只有调研文档和两个抓取脚本原型。
+五大联赛（英超/西甲/意甲/德甲/法甲）足球数据查询网站，**Phase 0 已完成**：Vite 6 + Vue 3 + TS strict + Tailwind 4 脚手架、hash 路由 + Pinia、GitHub Pages 部署工作流均已入库，另有调研文档与两个抓取脚本原型，按 Phase 1–6 推进。
 
 动手写任何功能代码前，先读 `docs/implementation-plan.md`（施工图纸）——技术栈、目录结构、数据管线、Phase 0–6 分步计划与验收标准都在里面，按阶段执行，不要另起架构。
 
@@ -102,6 +103,6 @@ node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 
 - 文档与日志语言：中文为主，技术名词保留英文
 - 复用来源：本项目沿用世界杯数据项目的模式（`ESPN_TEAM_MAP` 队名映射、本地算积分榜、足球场阵容可视化、时区转换）；旧项目代码不在本仓库，复用清单见 implementation-plan.md §11
-- **Phase 0 第一天的关键验证**：浏览器控制台测 ESPN core API 的 CORS——通则可部分数据直连简化架构，不通则全走 Actions（当前图纸默认按不通设计）
-- GitHub Pages 部署：Vue Router 用 hash mode；`vite.config.ts` 的 `base` 必须匹配实际部署仓库名——图纸里写的是 `/football-data/`，但本仓库目录是 `MatchLab`，部署前确认
+- **ESPN core API CORS 验证（待执行，不阻塞）**：浏览器控制台测 CORS——通则可部分数据直连简化架构，不通则全走 Actions（图纸默认按不通设计）。Phase 0 未执行此验证，不影响后续阶段，建议 Phase 1 开工前补测
+- GitHub Pages 部署：Vue Router 用 hash mode；`vite.config.ts` 的 `base` 已定为 `/MatchLab/`（= 实际仓库名，2026-07-24 落地）。**前端 fetch 静态 JSON 一律走 `import.meta.env.BASE_URL` 前缀，禁用 `/data/...` 绝对路径**（base 子路径下会 404）
 - Actions 额度：低频数据每天 1 次全量抓取约 10 min/天（5 联赛 ~6500 请求 + 200ms 间隔 ≈ 22 min 墙钟），远低于 2000 min/月 免费额度；不要把比分抓取放进 Actions
