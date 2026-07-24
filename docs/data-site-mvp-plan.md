@@ -24,7 +24,7 @@
 ### 球员统计
 - [x] 进球/助攻/出场/黄红牌 — **FBref** 可用性与反爬策略 ❌ Cloudflare 403，须服务端抓取 2026-07-17
 - [x] **Understat** 的 xG / xA 数据端点 ✅ 2026-07-21 — `/getLeagueData/{lg}/{season}` 和 `POST /main/getPlayersStats/` 可用，无需 API Key，返回 gzip JSON，完整 xG/xA/xGChain/xGBuildup 覆盖
-- [ ] 两者的 CORS 表现与更新频率
+- [x] 两者的 CORS 表现与更新频率 ✅ 2026-07-24 线上 origin 实测：ESPN core/site 通，Understat 拦；低频数据 Actions 每日抓取（条件 commit），实时比分浏览器直连
 
 ### 身价 / 转会
 - [ ] **Transfermarkt** 是否有非官方 JSON 端点 ❌ 直接 API 不可用 2026-07-17

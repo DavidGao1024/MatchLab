@@ -696,10 +696,10 @@ interface MatchTeam {
 8. 环境钉版：`.nvmrc` 写 `20.19.6`，`package.json` 加 `"engines": { "node": ">=20.19.0" }`，deploy.yml 的 setup-node 钉 `node-version: 20`——三处一致
 
 **验收**：
-- [ ] `npm run dev` 本地跑通
-- [ ] `npm run build` 产物包含 `data/` 目录
-- [ ] push 后 GitHub Pages 可访问
-- [ ] 能 fetch 到 `public/data/` 下的测试 JSON
+- [x] `npm run dev` 本地跑通
+- [x] `npm run build` 产物包含 `data/` 目录
+- [x] push 后 GitHub Pages 可访问（2026-07-24 线上实测）
+- [x] 能 fetch 到 `public/data/` 下的测试 JSON（本地 + 线上双验）
 
 ---
 
@@ -726,11 +726,11 @@ interface MatchTeam {
 
 **验收**：
 - [x] `public/data/eng.1/` 下有 meta/teams/standings/leaders/players/index.json + 球员文件（646 为调研旧值，2025-26 实测 681）
-- [ ] `public/data/eng.1/xg/` 下有 standings + players
-- [ ] `public/data/eng.1/matches/` 下有按月拆分的赛程文件
-- [ ] 5 个联赛目录结构完整
-- [ ] `data/mappings/team-name-map.json` 26 条映射
-- [ ] GitHub Action 手动触发成功
+- [x] `public/data/eng.1/xg/` 下有 standings + players（含 xpts 汇总）
+- [x] `public/data/eng.1/matches/` 下有按月拆分的赛程文件（10 个月）
+- [x] 5 个联赛目录结构完整（七件套 ×5，2026-07-24 实测）
+- [x] `data/mappings/team-name-map.json` 26 条映射（3 自动 + 23 人工，0 未匹配）
+- [ ] GitHub Action 手动触发成功（2026-07-24 已触发，运行中）
 
 **请求量与耗时预估**：
 - 5 联赛全量 ~6500 请求（ESPN core）+ 10 请求（Understat）
