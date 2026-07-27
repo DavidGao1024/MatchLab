@@ -26,10 +26,11 @@
 
 ## 四、项目工作流
 
+- **交流语言：永远使用中文交流**——汇报、提问、设计讨论、复盘全程中文，技术名词可保留英文但要克制能少则少，不许整句夹洋文（2026-07-27 总司令立规）
 - 计划文档统一放 `projectDoc/plan/`，一个任务一个文件
 - 数据结构与 API 接口不能变，UI 可大改
 - 抓取脚本永远零依赖（仅 Node 内置模块）
-- 开工须先获总司令明确指令，当前状态：🟡 施工中（Phase 0–1 ✅，待令开 Phase 2）
+- 开工须先获总司令明确指令，当前状态：🟡 施工中（Phase 0–1 ✅，Phase 2 已奉令开工、设计评审中）
 
 ---
 
@@ -114,7 +115,7 @@ node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 
 ## 约定与待办
 
-- 文档与日志语言：中文为主，技术名词保留英文
+- 交流语言：永远使用中文交流（2026-07-27 立规）；文档与日志中文为主，技术名词保留英文
 - 复用来源：本项目沿用世界杯数据项目的模式（`ESPN_TEAM_MAP` 队名映射、本地算积分榜、足球场阵容可视化、时区转换）；旧项目代码不在本仓库，复用清单见 implementation-plan.md §11
 - **ESPN core API CORS 已验证（2026-07-24）**：浏览器可直连（200 OK），site.api 复核通过，Understat 不通实锤。架构定为方案 A：core 数据仍全走 Actions（批量直连转移限流风险 + CORS 非 ESPN 承诺），CORS 通道仅作 Phase 6 历史赛季按需直连 + 调试备用
 - GitHub Pages 部署：Vue Router 用 hash mode；`vite.config.ts` 的 `base` 已定为 `/MatchLab/`（= 实际仓库名，2026-07-24 落地）。**前端 fetch 静态 JSON 一律走 `import.meta.env.BASE_URL` 前缀，禁用 `/data/...` 绝对路径**（base 子路径下会 404）

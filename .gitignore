@@ -15,6 +15,9 @@ dist-ssr
 # Claude Code：共享配置 settings.json 入库（换机器可同步），个人覆盖保持本地
 .claude/settings.local.json
 
+# 可视化头脑风暴会话文件（mockup 草稿，不入库）
+.superpowers/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
