@@ -1,10 +1,20 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-07-24T07:58:42.553Z",
+  "updateTime": "2026-07-26T09:03:12.909Z",
   "league": "fra.1",
   "season": "2025",
-  "count": 764,
+  "count": 889,
   "players": [
+    {
+      "id": 323850,
+      "name": "Esteban Lepaul",
+      "teamId": 169,
+      "position": "F",
+      "age": 26,
+      "goals": 21,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
     {
       "id": 350961,
       "name": "Joaquín Panichelli",
@@ -16,6 +26,26 @@
       "team": "Strasbourg"
     },
     {
+      "id": 271137,
+      "name": "Lassine Sinayoko",
+      "teamId": 6851,
+      "position": "F",
+      "age": 26,
+      "goals": 12,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
+      "id": 222180,
+      "name": "Odsonne Édouard",
+      "teamId": 175,
+      "position": "F",
+      "age": 28,
+      "goals": 12,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 192060,
       "name": "Corentin Tolisso",
       "teamId": 167,
@@ -24,6 +54,16 @@
       "goals": 11,
       "assists": null,
       "team": "Lyon"
+    },
+    {
+      "id": 156898,
+      "name": "Florian Thauvin",
+      "teamId": 175,
+      "position": "F",
+      "age": 33,
+      "goals": 11,
+      "assists": null,
+      "team": "Lens"
     },
     {
       "id": 305545,
@@ -46,6 +86,26 @@
       "team": "Strasbourg"
     },
     {
+      "id": 334359,
+      "name": "Pablo Pagis",
+      "teamId": 6851,
+      "position": "F",
+      "age": 23,
+      "goals": 10,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
+      "id": 304918,
+      "name": "Ilan Kebbal",
+      "teamId": 6851,
+      "position": "M",
+      "age": 28,
+      "goals": 9,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
       "id": 230896,
       "name": "Romain Del Castillo",
       "teamId": 6997,
@@ -56,6 +116,16 @@
       "team": "Brest"
     },
     {
+      "id": 202099,
+      "name": "Breel Embolo",
+      "teamId": 169,
+      "position": "F",
+      "age": 29,
+      "goals": 8,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 239905,
       "name": "Gauthier Hein",
       "teamId": 177,
@@ -64,6 +134,16 @@
       "goals": 8,
       "assists": null,
       "team": "Metz"
+    },
+    {
+      "id": 297743,
+      "name": "Issa Soumaré",
+      "teamId": 169,
+      "position": "F",
+      "age": 25,
+      "goals": 8,
+      "assists": null,
+      "team": "Stade Rennais"
     },
     {
       "id": 192015,
@@ -84,6 +164,16 @@
       "goals": 8,
       "assists": null,
       "team": "Nice"
+    },
+    {
+      "id": 277383,
+      "name": "Yann Gboho",
+      "teamId": 179,
+      "position": "F",
+      "age": 25,
+      "goals": 8,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 303787,
@@ -116,6 +206,26 @@
       "team": "Nantes"
     },
     {
+      "id": 257489,
+      "name": "Mousa Al-Tamari",
+      "teamId": 169,
+      "position": "F",
+      "age": 29,
+      "goals": 6,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
+      "id": 238392,
+      "name": "Alimani Gory",
+      "teamId": 6851,
+      "position": "F",
+      "age": 29,
+      "goals": 5,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
       "id": 330412,
       "name": "Kamory Doumbia",
       "teamId": 6997,
@@ -124,6 +234,16 @@
       "goals": 5,
       "assists": null,
       "team": "Brest"
+    },
+    {
+      "id": 223120,
+      "name": "Ludovic Blas",
+      "teamId": 169,
+      "position": "F",
+      "age": 28,
+      "goals": 5,
+      "assists": null,
+      "team": "Stade Rennais"
     },
     {
       "id": 403232,
@@ -136,6 +256,36 @@
       "team": "Angers"
     },
     {
+      "id": 401045,
+      "name": "Rayan Fofana",
+      "teamId": 175,
+      "position": "F",
+      "age": 20,
+      "goals": 5,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
+      "id": 349185,
+      "name": "Remy Labeau Lascary",
+      "teamId": 6997,
+      "position": "F",
+      "age": 23,
+      "goals": 5,
+      "assists": null,
+      "team": "Brest"
+    },
+    {
+      "id": 259744,
+      "name": "Willem Geubbels",
+      "teamId": 6851,
+      "position": "F",
+      "age": 24,
+      "goals": 5,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
       "id": 361258,
       "name": "Afonso Moreira",
       "teamId": 167,
@@ -144,6 +294,16 @@
       "goals": 4,
       "assists": null,
       "team": "Lyon"
+    },
+    {
+      "id": 252740,
+      "name": "Aron Donnum",
+      "teamId": 179,
+      "position": "M",
+      "age": 28,
+      "goals": 4,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 340678,
@@ -196,6 +356,16 @@
       "team": "Nantes"
     },
     {
+      "id": 338873,
+      "name": "Santiago Hidalgo",
+      "teamId": 179,
+      "position": "F",
+      "age": 21,
+      "goals": 4,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 366817,
       "name": "Sidiki Cherif",
       "teamId": 7868,
@@ -214,6 +384,16 @@
       "goals": 3,
       "assists": null,
       "team": "Lyon"
+    },
+    {
+      "id": 173266,
+      "name": "Adrien Thomasson",
+      "teamId": 175,
+      "position": "M",
+      "age": 32,
+      "goals": 3,
+      "assists": null,
+      "team": "Lens"
     },
     {
       "id": 265234,
@@ -246,6 +426,16 @@
       "team": "AJ Auxerre"
     },
     {
+      "id": 307713,
+      "name": "Charlie Cresswell",
+      "teamId": 179,
+      "position": "D",
+      "age": 23,
+      "goals": 3,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 243748,
       "name": "Danny Namaso",
       "teamId": 172,
@@ -276,6 +466,16 @@
       "team": "Nantes"
     },
     {
+      "id": 225559,
+      "name": "Jonathan Ikoné",
+      "teamId": 6851,
+      "position": "F",
+      "age": 28,
+      "goals": 3,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
       "id": 20975,
       "name": "Julio Enciso",
       "teamId": 180,
@@ -294,6 +494,46 @@
       "goals": 3,
       "assists": null,
       "team": "AJ Auxerre"
+    },
+    {
+      "id": 268966,
+      "name": "Mahdi Camara",
+      "teamId": 169,
+      "position": "M",
+      "age": 28,
+      "goals": 3,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
+      "id": 228547,
+      "name": "Mamadou Sangare",
+      "teamId": 175,
+      "position": "M",
+      "age": 24,
+      "goals": 3,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
+      "id": 187647,
+      "name": "Moses Simon",
+      "teamId": 6851,
+      "position": "F",
+      "age": 31,
+      "goals": 3,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
+      "id": 350577,
+      "name": "Pierre Ganiou",
+      "teamId": 175,
+      "position": "D",
+      "age": 21,
+      "goals": 3,
+      "assists": null,
+      "team": "Lens"
     },
     {
       "id": 362061,
@@ -316,6 +556,26 @@
       "team": "Nantes"
     },
     {
+      "id": 308246,
+      "name": "Abdallah Sima",
+      "teamId": 175,
+      "position": "F",
+      "age": 25,
+      "goals": 2,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
+      "id": 376339,
+      "name": "Abdelhamid Aït Boudlal",
+      "teamId": 169,
+      "position": "D",
+      "age": 20,
+      "goals": 2,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 336794,
       "name": "Abdoul Ouattara",
       "teamId": 180,
@@ -334,6 +594,36 @@
       "goals": 2,
       "assists": null,
       "team": "Nantes"
+    },
+    {
+      "id": 130123,
+      "name": "Ciro Immobile",
+      "teamId": 6851,
+      "position": "F",
+      "age": 36,
+      "goals": 2,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
+      "id": 271244,
+      "name": "Cristian Cásseres Jr.",
+      "teamId": 179,
+      "position": "M",
+      "age": 26,
+      "goals": 2,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
+      "id": 388070,
+      "name": "Dayann Methalie",
+      "teamId": 179,
+      "position": "D",
+      "age": 20,
+      "goals": 2,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 221131,
@@ -366,6 +656,16 @@
       "team": "Angers"
     },
     {
+      "id": 257126,
+      "name": "Jean-Phillipe Krasso",
+      "teamId": 6851,
+      "position": "F",
+      "age": 29,
+      "goals": 2,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
       "id": 265200,
       "name": "Jessy Deminguet",
       "teamId": 177,
@@ -384,6 +684,16 @@
       "goals": 2,
       "assists": null,
       "team": "Brest"
+    },
+    {
+      "id": 380400,
+      "name": "Julián Vignolo",
+      "teamId": 179,
+      "position": "F",
+      "age": 19,
+      "goals": 2,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 257052,
@@ -466,14 +776,34 @@
       "team": "Lyon"
     },
     {
-      "id": 362288,
-      "name": "Sadibou Sané",
-      "teamId": 177,
+      "id": 181946,
+      "name": "Ruben Aguilar",
+      "teamId": 175,
+      "position": "D",
+      "age": 33,
+      "goals": 2,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
+      "id": 402888,
+      "name": "Rudy Matondo",
+      "teamId": 6851,
+      "position": "M",
+      "age": 18,
+      "goals": 2,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
+      "id": 329484,
+      "name": "Samson Baidoo",
+      "teamId": 175,
       "position": "D",
       "age": 22,
       "goals": 2,
       "assists": null,
-      "team": "Metz"
+      "team": "Lens"
     },
     {
       "id": 350501,
@@ -484,6 +814,16 @@
       "goals": 2,
       "assists": null,
       "team": "Strasbourg"
+    },
+    {
+      "id": 286011,
+      "name": "Saud Abdulhamid",
+      "teamId": 175,
+      "position": "D",
+      "age": 27,
+      "goals": 2,
+      "assists": null,
+      "team": "Lens"
     },
     {
       "id": 302862,
@@ -526,6 +866,26 @@
       "team": "Strasbourg"
     },
     {
+      "id": 207136,
+      "name": "Valentin Rongier",
+      "teamId": 169,
+      "position": "M",
+      "age": 31,
+      "goals": 2,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
+      "id": 219153,
+      "name": "Vincent Marchetti",
+      "teamId": 6851,
+      "position": "M",
+      "age": 29,
+      "goals": 2,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
       "id": 338006,
       "name": "Yassin Belkhdim",
       "teamId": 7868,
@@ -534,6 +894,16 @@
       "goals": 2,
       "assists": null,
       "team": "Angers"
+    },
+    {
+      "id": 364746,
+      "name": "Adama Camara",
+      "teamId": 6851,
+      "position": "M",
+      "age": 29,
+      "goals": 1,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 214402,
@@ -546,6 +916,26 @@
       "team": "Lyon"
     },
     {
+      "id": 408251,
+      "name": "Alexis Vossah",
+      "teamId": 179,
+      "position": "M",
+      "age": 18,
+      "goals": 1,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
+      "id": 228557,
+      "name": "Amadou Haidara",
+      "teamId": 175,
+      "position": "M",
+      "age": 28,
+      "goals": 1,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 290101,
       "name": "Andrew Omobamidele",
       "teamId": 180,
@@ -556,6 +946,16 @@
       "team": "Strasbourg"
     },
     {
+      "id": 291614,
+      "name": "Anthony Rouault",
+      "teamId": 169,
+      "position": "D",
+      "age": 25,
+      "goals": 1,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 319161,
       "name": "Antoine Mendy",
       "teamId": 2502,
@@ -564,6 +964,16 @@
       "goals": 1,
       "assists": null,
       "team": "Nice"
+    },
+    {
+      "id": 242738,
+      "name": "Arnaud Nordin",
+      "teamId": 169,
+      "position": "F",
+      "age": 28,
+      "goals": 1,
+      "assists": null,
+      "team": "Stade Rennais"
     },
     {
       "id": 304213,
@@ -616,6 +1026,16 @@
       "team": "Nantes"
     },
     {
+      "id": 215687,
+      "name": "Florian Sotoca",
+      "teamId": 175,
+      "position": "F",
+      "age": 35,
+      "goals": 1,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 218620,
       "name": "Francisco Sierralta",
       "teamId": 172,
@@ -664,6 +1084,16 @@
       "goals": 1,
       "assists": null,
       "team": "Nice"
+    },
+    {
+      "id": 297121,
+      "name": "Jacen Russell-Rowe",
+      "teamId": 179,
+      "position": "F",
+      "age": 23,
+      "goals": 1,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 420467,
@@ -806,6 +1236,16 @@
       "team": "Brest"
     },
     {
+      "id": 322205,
+      "name": "Mario Sauer",
+      "teamId": 179,
+      "position": "M",
+      "age": 22,
+      "goals": 1,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 309638,
       "name": "Marvin Senaya",
       "teamId": 172,
@@ -816,6 +1256,16 @@
       "team": "AJ Auxerre"
     },
     {
+      "id": 233199,
+      "name": "Matthieu Udol",
+      "teamId": 175,
+      "position": "D",
+      "age": 30,
+      "goals": 1,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 347919,
       "name": "Maximillian Oyedele",
       "teamId": 180,
@@ -824,6 +1274,26 @@
       "goals": 1,
       "assists": null,
       "team": "Strasbourg"
+    },
+    {
+      "id": 409660,
+      "name": "Nordan Mukiele",
+      "teamId": 169,
+      "position": "F",
+      "age": 20,
+      "goals": 1,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
+      "id": 308195,
+      "name": "Otavio",
+      "teamId": 6851,
+      "position": "D",
+      "age": 24,
+      "goals": 1,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 412232,
@@ -846,6 +1316,46 @@
       "team": "Brest"
     },
     {
+      "id": 221527,
+      "name": "Pierre Lees-Melou",
+      "teamId": 6851,
+      "position": "M",
+      "age": 33,
+      "goals": 1,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
+      "id": 190806,
+      "name": "Przemyslaw Frankowski",
+      "teamId": 169,
+      "position": "M",
+      "age": 31,
+      "goals": 1,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
+      "id": 313890,
+      "name": "Quentin Merlin",
+      "teamId": 169,
+      "position": "D",
+      "age": 24,
+      "goals": 1,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
+      "id": 238213,
+      "name": "Rasmus Nicolaisen",
+      "teamId": 179,
+      "position": "D",
+      "age": 29,
+      "goals": 1,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 403842,
       "name": "Rémi Himbert",
       "teamId": 167,
@@ -866,6 +1376,16 @@
       "team": "Lyon"
     },
     {
+      "id": 287572,
+      "name": "Samir Chergui",
+      "teamId": 6851,
+      "position": "D",
+      "age": 27,
+      "goals": 1,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
       "id": 378491,
       "name": "Samir El Mourabet",
       "teamId": 180,
@@ -874,6 +1394,36 @@
       "goals": 1,
       "assists": null,
       "team": "Strasbourg"
+    },
+    {
+      "id": 243844,
+      "name": "Sebastian Szymanski",
+      "teamId": 169,
+      "position": "M",
+      "age": 27,
+      "goals": 1,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
+      "id": 184118,
+      "name": "Seko Fofana",
+      "teamId": 169,
+      "position": "M",
+      "age": 31,
+      "goals": 1,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
+      "id": 408252,
+      "name": "Seny Koumbassa",
+      "teamId": 179,
+      "position": "D",
+      "age": 19,
+      "goals": 1,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 303308,
@@ -894,6 +1444,16 @@
       "goals": 1,
       "assists": null,
       "team": "Lille"
+    },
+    {
+      "id": 290030,
+      "name": "Abu Francis",
+      "teamId": 179,
+      "position": "M",
+      "age": 25,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 402949,
@@ -926,6 +1486,16 @@
       "team": "Nantes"
     },
     {
+      "id": 305669,
+      "name": "Alidu Seidu",
+      "teamId": 169,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 376483,
       "name": "Alpha Touré",
       "teamId": 177,
@@ -934,6 +1504,16 @@
       "goals": 0,
       "assists": null,
       "team": "Metz"
+    },
+    {
+      "id": 387061,
+      "name": "Andrija Bulatovic",
+      "teamId": 175,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Lens"
     },
     {
       "id": 379227,
@@ -1056,6 +1636,26 @@
       "team": "Brest"
     },
     {
+      "id": 196234,
+      "name": "Branco van den Boomen",
+      "teamId": 7868,
+      "position": "M",
+      "age": 31,
+      "goals": 0,
+      "assists": null,
+      "team": "Angers"
+    },
+    {
+      "id": 164126,
+      "name": "Brice Samba",
+      "teamId": 169,
+      "position": "G",
+      "age": 32,
+      "goals": 0,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 218703,
       "name": "Carlens Arcus",
       "teamId": 7868,
@@ -1126,6 +1726,26 @@
       "team": "Nantes"
     },
     {
+      "id": 332549,
+      "name": "Diego Coppola",
+      "teamId": 6851,
+      "position": "D",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
+      "id": 355982,
+      "name": "Djaoui Cissé",
+      "teamId": 169,
+      "position": "M",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 357425,
       "name": "Djibril Coulibaly",
       "teamId": 2502,
@@ -1166,6 +1786,16 @@
       "team": "Nantes"
     },
     {
+      "id": 415193,
+      "name": "Elias Legendre",
+      "teamId": 169,
+      "position": "F",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 404532,
       "name": "Elikya Legros",
       "teamId": 172,
@@ -1196,6 +1826,16 @@
       "team": "Angers"
     },
     {
+      "id": 408253,
+      "name": "Enzo Faty",
+      "teamId": 179,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 388571,
       "name": "Enzo Molébé",
       "teamId": 167,
@@ -1214,6 +1854,16 @@
       "goals": 0,
       "assists": null,
       "team": "Nantes"
+    },
+    {
+      "id": 417648,
+      "name": "Erawan Garnier",
+      "teamId": 175,
+      "position": "F",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Lens"
     },
     {
       "id": 333310,
@@ -1266,6 +1916,16 @@
       "team": "Nantes"
     },
     {
+      "id": 408254,
+      "name": "Frédéric Efuele Ngoyala",
+      "teamId": 179,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 215709,
       "name": "Frédéric Guilbert",
       "teamId": 165,
@@ -1296,6 +1956,16 @@
       "team": "Nice"
     },
     {
+      "id": 408255,
+      "name": "Gaetan Bakhouche",
+      "teamId": 179,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 379012,
       "name": "Gessime Yassine",
       "teamId": 180,
@@ -1306,6 +1976,16 @@
       "team": "Strasbourg"
     },
     {
+      "id": 175064,
+      "name": "Glen Kamara",
+      "teamId": 169,
+      "position": "M",
+      "age": 30,
+      "goals": 0,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 260239,
       "name": "Grégoire Coudert",
       "teamId": 6997,
@@ -1314,6 +1994,26 @@
       "goals": 0,
       "assists": null,
       "team": "Brest"
+    },
+    {
+      "id": 324289,
+      "name": "Guillaume Restes",
+      "teamId": 179,
+      "position": "G",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
+      "id": 196729,
+      "name": "Hamari Traoré",
+      "teamId": 6851,
+      "position": "D",
+      "age": 34,
+      "goals": 0,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 376352,
@@ -1336,11 +2036,31 @@
       "team": "Nice"
     },
     {
+      "id": 193448,
+      "name": "Hans Hateboer",
+      "teamId": 167,
+      "position": "D",
+      "age": 32,
+      "goals": 0,
+      "assists": null,
+      "team": "Lyon"
+    },
+    {
       "id": 206993,
       "name": "Haris Belkebla",
       "teamId": 7868,
       "position": "M",
       "age": 32,
+      "goals": 0,
+      "assists": null,
+      "team": "Angers"
+    },
+    {
+      "id": 247940,
+      "name": "Hervé Koffi",
+      "teamId": 7868,
+      "position": "G",
+      "age": 29,
       "goals": 0,
       "assists": null,
       "team": "Angers"
@@ -1376,6 +2096,26 @@
       "team": "Nantes"
     },
     {
+      "id": 403417,
+      "name": "Ilan Jourdren",
+      "teamId": 175,
+      "position": "G",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
+      "id": 403310,
+      "name": "Ilyas Azizi",
+      "teamId": 179,
+      "position": "F",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 305935,
       "name": "Ismael Doukoure",
       "teamId": 180,
@@ -1406,6 +2146,16 @@
       "team": "Angers"
     },
     {
+      "id": 297385,
+      "name": "Jhoanner Chavez",
+      "teamId": 175,
+      "position": "D",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 297166,
       "name": "Johann Lepenant",
       "teamId": 165,
@@ -1424,6 +2174,26 @@
       "goals": 0,
       "assists": null,
       "team": "Metz"
+    },
+    {
+      "id": 197187,
+      "name": "Jonathan Gradit",
+      "teamId": 175,
+      "position": "D",
+      "age": 33,
+      "goals": 0,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
+      "id": 97867,
+      "name": "Jordan James",
+      "teamId": 169,
+      "position": "M",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "Stade Rennais"
     },
     {
       "id": 191712,
@@ -1506,6 +2276,16 @@
       "team": "Nice"
     },
     {
+      "id": 122280,
+      "name": "Kevin Trapp",
+      "teamId": 6851,
+      "position": "G",
+      "age": 36,
+      "goals": 0,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
       "id": 408345,
       "name": "Khalis Merah",
       "teamId": 167,
@@ -1524,6 +2304,16 @@
       "goals": 0,
       "assists": null,
       "team": "AS Monaco"
+    },
+    {
+      "id": 393432,
+      "name": "Kyllian Antonio",
+      "teamId": 175,
+      "position": "D",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Lens"
     },
     {
       "id": 301265,
@@ -1566,6 +2356,16 @@
       "team": "AJ Auxerre"
     },
     {
+      "id": 290141,
+      "name": "Lilian Brassier",
+      "teamId": 169,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 409261,
       "name": "Louis Mezerette",
       "teamId": 172,
@@ -1606,6 +2406,16 @@
       "team": "Strasbourg"
     },
     {
+      "id": 372260,
+      "name": "Mahamadou Nagida",
+      "teamId": 169,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 240438,
       "name": "Malang Sarr",
       "teamId": 175,
@@ -1636,6 +2446,16 @@
       "team": "Angers"
     },
     {
+      "id": 77072,
+      "name": "Mark McKenzie",
+      "teamId": 179,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 415149,
       "name": "Martin James",
       "teamId": 160,
@@ -1656,6 +2476,16 @@
       "team": "Nantes"
     },
     {
+      "id": 131742,
+      "name": "Mathieu Gorgelin",
+      "teamId": 175,
+      "position": "G",
+      "age": 35,
+      "goals": 0,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 364764,
       "name": "Mathis Amougou",
       "teamId": 180,
@@ -1674,6 +2504,16 @@
       "goals": 0,
       "assists": null,
       "team": "Paris Saint-Germain"
+    },
+    {
+      "id": 386251,
+      "name": "Mathis Saka",
+      "teamId": 179,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 402948,
@@ -1714,6 +2554,16 @@
       "goals": 0,
       "assists": null,
       "team": "Nice"
+    },
+    {
+      "id": 223122,
+      "name": "Maxime López",
+      "teamId": 6851,
+      "position": "M",
+      "age": 28,
+      "goals": 0,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 297161,
@@ -1786,6 +2636,26 @@
       "team": "Metz"
     },
     {
+      "id": 287474,
+      "name": "Moustapha Mbow",
+      "teamId": 6851,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
+      "id": 396620,
+      "name": "Naime Said Mchindra",
+      "teamId": 179,
+      "position": "G",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 297775,
       "name": "Naouirou Ahamada",
       "teamId": 172,
@@ -1794,6 +2664,16 @@
       "goals": 0,
       "assists": null,
       "team": "AJ Auxerre"
+    },
+    {
+      "id": 371471,
+      "name": "Nhoa Sangui",
+      "teamId": 6851,
+      "position": "D",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 145190,
@@ -1806,6 +2686,26 @@
       "team": "Lyon"
     },
     {
+      "id": 387044,
+      "name": "Nidal Celik",
+      "teamId": 175,
+      "position": "D",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
+      "id": 225565,
+      "name": "Niklas Schmidt",
+      "teamId": 179,
+      "position": "M",
+      "age": 28,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 388886,
       "name": "Noah Jauny",
       "teamId": 6997,
@@ -1814,6 +2714,16 @@
       "goals": 0,
       "assists": null,
       "team": "Brest"
+    },
+    {
+      "id": 355975,
+      "name": "Noah Lahmadi",
+      "teamId": 179,
+      "position": "M",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 403110,
@@ -1834,6 +2744,16 @@
       "goals": 0,
       "assists": null,
       "team": "Marseille"
+    },
+    {
+      "id": 301770,
+      "name": "Obed Nkambadio",
+      "teamId": 6851,
+      "position": "G",
+      "age": 23,
+      "goals": 0,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 228424,
@@ -1906,6 +2826,26 @@
       "team": "Lyon"
     },
     {
+      "id": 238952,
+      "name": "Radoslaw Majecki",
+      "teamId": 6997,
+      "position": "G",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "Brest"
+    },
+    {
+      "id": 384162,
+      "name": "Rafik Messali",
+      "teamId": 179,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 397594,
       "name": "Raphaël Le Guen",
       "teamId": 6997,
@@ -1916,6 +2856,16 @@
       "team": "Brest"
     },
     {
+      "id": 101451,
+      "name": "Régis Gurtner",
+      "teamId": 175,
+      "position": "G",
+      "age": 39,
+      "goals": 0,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 222175,
       "name": "Rémy Descamps",
       "teamId": 167,
@@ -1924,6 +2874,26 @@
       "goals": 0,
       "assists": null,
       "team": "Lyon"
+    },
+    {
+      "id": 379089,
+      "name": "Renato Marin",
+      "teamId": 160,
+      "position": "G",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Paris Saint-Germain"
+    },
+    {
+      "id": 344517,
+      "name": "Robin Risser",
+      "teamId": 175,
+      "position": "G",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Lens"
     },
     {
       "id": 268591,
@@ -2056,6 +3026,16 @@
       "team": "AJ Auxerre"
     },
     {
+      "id": 246805,
+      "name": "Thibault De Smet",
+      "teamId": 6851,
+      "position": "D",
+      "age": 28,
+      "goals": 0,
+      "assists": null,
+      "team": "Paris FC"
+    },
+    {
       "id": 409262,
       "name": "Tidiane Devernois",
       "teamId": 172,
@@ -2074,6 +3054,16 @@
       "goals": 0,
       "assists": null,
       "team": "AJ Auxerre"
+    },
+    {
+      "id": 354865,
+      "name": "Tuomas Ollila",
+      "teamId": 6851,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 408886,
@@ -2126,6 +3116,16 @@
       "team": "Metz"
     },
     {
+      "id": 390389,
+      "name": "Yassir Zabiri",
+      "teamId": 169,
+      "position": "F",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 241029,
       "name": "Yehvann Diouf",
       "teamId": 2502,
@@ -2134,6 +3134,16 @@
       "goals": 0,
       "assists": null,
       "team": "Nice"
+    },
+    {
+      "id": 324325,
+      "name": "Yoan Koré",
+      "teamId": 6851,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 255192,
@@ -2310,7 +3320,7 @@
       "name": "Adriel D'Avila Ba Loua",
       "teamId": 2927,
       "position": "F",
-      "age": 29,
+      "age": 30,
       "goals": null,
       "assists": null,
       "team": null
@@ -2566,6 +3576,16 @@
       "team": null
     },
     {
+      "id": 378981,
+      "name": "Alpha Diallo",
+      "teamId": 175,
+      "position": "M",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 302262,
       "name": "Alpha Kubotasawane",
       "teamId": 168,
@@ -2644,6 +3664,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 301262,
+      "name": "Amine El Ouazzani",
+      "teamId": 7868,
+      "position": "F",
+      "age": 25,
+      "goals": null,
+      "assists": null,
+      "team": "Angers"
     },
     {
       "id": 332894,
@@ -2916,6 +3946,16 @@
       "team": null
     },
     {
+      "id": 366814,
+      "name": "Ayanda Sishuba",
+      "teamId": 169,
+      "position": "M",
+      "age": 21,
+      "goals": null,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 346564,
       "name": "Ayman Aiki",
       "teamId": 173,
@@ -3069,8 +4109,8 @@
       "id": 24020,
       "name": "Boubacar Diallo",
       "teamId": 3170,
-      "position": "D",
-      "age": 21,
+      "position": "M",
+      "age": 23,
       "goals": null,
       "assists": null,
       "team": null
@@ -3164,6 +4204,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 250758,
+      "name": "Bryan Reynolds",
+      "teamId": 169,
+      "position": "D",
+      "age": 25,
+      "goals": null,
+      "assists": null,
+      "team": "Stade Rennais"
     },
     {
       "id": 362574,
@@ -3264,6 +4314,16 @@
       "goals": null,
       "assists": null,
       "team": "AJ Auxerre"
+    },
+    {
+      "id": 385000,
+      "name": "Christ Tapé",
+      "teamId": 179,
+      "position": "D",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 290178,
@@ -3394,6 +4454,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 409214,
+      "name": "Darris Zema",
+      "teamId": 179,
+      "position": "M",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 416282,
@@ -3580,7 +4650,7 @@
       "name": "Eden Gassama",
       "teamId": 171,
       "position": "M",
-      "age": 20,
+      "age": 21,
       "goals": null,
       "assists": null,
       "team": null
@@ -3616,6 +4686,16 @@
       "team": null
     },
     {
+      "id": 332862,
+      "name": "Eliezer Mayenda",
+      "teamId": 169,
+      "position": "F",
+      "age": 21,
+      "goals": null,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 378253,
       "name": "Elson Mendes Da Silva",
       "teamId": 272,
@@ -3634,6 +4714,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 403843,
+      "name": "Emmanuel Mbemba",
+      "teamId": 6851,
+      "position": "D",
+      "age": 18,
+      "goals": null,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 173375,
@@ -3916,6 +5006,16 @@
       "team": null
     },
     {
+      "id": 398444,
+      "name": "Gabin Capuano",
+      "teamId": 175,
+      "position": "F",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 396005,
       "name": "Gabin Tomé",
       "teamId": 2927,
@@ -3924,6 +5024,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 351291,
+      "name": "Gabriel Oualengbe",
+      "teamId": 6851,
+      "position": "M",
+      "age": 22,
+      "goals": null,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 415908,
@@ -4006,6 +5116,16 @@
       "team": null
     },
     {
+      "id": 401410,
+      "name": "Gonçalo Oliveira",
+      "teamId": 169,
+      "position": "D",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 262502,
       "name": "Gregoire Pineau",
       "teamId": 7707,
@@ -4049,7 +5169,7 @@
       "id": 363014,
       "name": "Hamza Sbai",
       "teamId": 7730,
-      "position": "M",
+      "position": "D",
       "age": 26,
       "goals": null,
       "assists": null,
@@ -4136,31 +5256,31 @@
       "team": null
     },
     {
-      "id": 409009,
-      "name": "Ibrahima Diakité",
-      "teamId": 171,
-      "position": "F",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
       "id": 313464,
-      "name": "Ibrahima Fofana",
+      "name": "Ibrahim Fofana",
       "teamId": 3335,
-      "position": "D",
-      "age": 23,
+      "position": "M",
+      "age": 22,
       "goals": null,
       "assists": null,
       "team": null
     },
     {
       "id": 41549,
-      "name": "Ibrahima Koné",
+      "name": "Ibrahim Kone",
       "teamId": 7869,
+      "position": "M",
+      "age": 24,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
+      "id": 409009,
+      "name": "Ibrahima Diakité",
+      "teamId": 171,
       "position": "F",
-      "age": 27,
+      "age": 29,
       "goals": null,
       "assists": null,
       "team": null
@@ -4274,6 +5394,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 397384,
+      "name": "Ismail Diallo",
+      "teamId": 179,
+      "position": "D",
+      "age": 22,
+      "goals": null,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 416257,
@@ -5406,6 +6536,16 @@
       "team": null
     },
     {
+      "id": 288487,
+      "name": "Maik Nawrocki",
+      "teamId": 175,
+      "position": "D",
+      "age": 25,
+      "goals": null,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 284483,
       "name": "Malick Lopy",
       "teamId": 7707,
@@ -5636,14 +6776,24 @@
       "team": null
     },
     {
-      "id": 397994,
-      "name": "Mathys Detourbet",
-      "teamId": 170,
-      "position": "F",
+      "id": 371559,
+      "name": "Mathys Niflore",
+      "teamId": 179,
+      "position": "G",
       "age": 19,
       "goals": null,
       "assists": null,
-      "team": null
+      "team": "Toulouse"
+    },
+    {
+      "id": 358732,
+      "name": "Mathys Tourraine",
+      "teamId": 6851,
+      "position": "D",
+      "age": 25,
+      "goals": null,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 303794,
@@ -5770,7 +6920,7 @@
       "name": "Maxime Blé",
       "teamId": 173,
       "position": "F",
-      "age": 23,
+      "age": 24,
       "goals": null,
       "assists": null,
       "team": null
@@ -5856,6 +7006,26 @@
       "team": null
     },
     {
+      "id": 258871,
+      "name": "Michaël Cuisance",
+      "teamId": 175,
+      "position": "M",
+      "age": 26,
+      "goals": null,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
+      "id": 288481,
+      "name": "Michal Skoras",
+      "teamId": 175,
+      "position": "F",
+      "age": 26,
+      "goals": null,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 147092,
       "name": "Mickaël Le Bihan",
       "teamId": 2927,
@@ -5927,10 +7097,10 @@
     },
     {
       "id": 417803,
-      "name": "Mohamed Touré",
+      "name": "Mohamed Toure",
       "teamId": 272,
       "position": "D",
-      "age": 24,
+      "age": 20,
       "goals": null,
       "assists": null,
       "team": null
@@ -6146,6 +7316,16 @@
       "team": null
     },
     {
+      "id": 217668,
+      "name": "Nicolas Lemaitre",
+      "teamId": 169,
+      "position": "G",
+      "age": 29,
+      "goals": null,
+      "assists": null,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 224486,
       "name": "Nicolas Parravicini",
       "teamId": 173,
@@ -6174,6 +7354,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 344521,
+      "name": "Nicolas Wasbauer",
+      "teamId": 179,
+      "position": "D",
+      "age": 22,
+      "goals": null,
+      "assists": null,
+      "team": "Toulouse"
     },
     {
       "id": 315629,
@@ -6294,6 +7484,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 368334,
+      "name": "Omar Sissoko",
+      "teamId": 6851,
+      "position": "F",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 397851,
@@ -6534,6 +7734,16 @@
       "goals": null,
       "assists": null,
       "team": "Nice"
+    },
+    {
+      "id": 382872,
+      "name": "Rayan Bamba",
+      "teamId": 169,
+      "position": "D",
+      "age": 22,
+      "goals": null,
+      "assists": null,
+      "team": "Stade Rennais"
     },
     {
       "id": 356967,
@@ -6846,6 +8056,16 @@
       "team": null
     },
     {
+      "id": 401306,
+      "name": "Souleymane Sagnan",
+      "teamId": 175,
+      "position": "D",
+      "age": 21,
+      "goals": null,
+      "assists": null,
+      "team": "Lens"
+    },
+    {
       "id": 358348,
       "name": "Soumaïla Sylla",
       "teamId": 3243,
@@ -7094,6 +8314,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 158066,
+      "name": "Thorgan Hazard",
+      "teamId": 175,
+      "position": "M",
+      "age": 33,
+      "goals": null,
+      "assists": null,
+      "team": "Lens"
     },
     {
       "id": 413856,
@@ -7486,6 +8716,16 @@
       "team": null
     },
     {
+      "id": 355979,
+      "name": "Ylies Aradj",
+      "teamId": 179,
+      "position": "D",
+      "age": 21,
+      "goals": null,
+      "assists": null,
+      "team": "Toulouse"
+    },
+    {
       "id": 214458,
       "name": "Yoann Salmier",
       "teamId": 3171,
@@ -7554,6 +8794,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 398780,
+      "name": "Zabi Gueu",
+      "teamId": 6851,
+      "position": "M",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "team": "Paris FC"
     },
     {
       "id": 388794,
