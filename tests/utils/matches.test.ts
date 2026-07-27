@@ -68,4 +68,16 @@ describe('selectStripMatches（战报带选场，规格 v1.4 确定性规则）'
   it('不足 4 场全取', () => {
     expect(selectStripMatches(day.slice(0, 2), standings)).toHaveLength(2)
   })
+  it('榜首榜二直接对话只占一个名额', () => {
+    const day2 = [
+      mk('x', '2026-05-24T15:00Z', 100, 1, 200, 0), // 榜首 vs 榜二
+      mk('y', '2026-05-24T15:00Z', 300, 2, 400, 2),
+    ]
+    const picked = selectStripMatches(day2, standings)
+    expect(picked.map((m) => m.eventId)).toEqual(['x', 'y'])
+  })
+  it('ranked 缺榜首时优雅跳过', () => {
+    const picked = selectStripMatches(day, [{ rank: 2, teamId: 200 }, { rank: 3, teamId: 300 }])
+    expect(picked.map((m) => m.eventId)).toEqual(['c', 'a', 'b', 'd'])
+  })
 })

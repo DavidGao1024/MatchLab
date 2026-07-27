@@ -37,6 +37,14 @@ describe('mergeStandings', () => {
     expect(rows[16].zone).toBe('rel')
     expect(rows[17].zone).toBe('rel')
   })
+  it('xG 重复映射同一队名时保留先出现的行', () => {
+    const dup: RawXgStanding[] = [
+      { rank: 1, teamId: '83', team: 'Arsenal', xG: 11.1, xGA: 1.1, xpts: 10.0, history: [] },
+      { rank: 1, teamId: '83b', team: 'Arsenal', xG: 99.9, xGA: 9.9, xpts: 90.0, history: [] },
+    ]
+    const rows = mergeStandings(raw, 'eng.1', dup, map)
+    expect(rows[0].xG).toBeCloseTo(11.1)
+  })
 })
 
 describe('applyForm', () => {

@@ -16,7 +16,10 @@ export function mergeStandings(
   const xgByEpsnName = new Map<string, XgRow>()
   if (xg) {
     for (const r of xg) {
-      xgByEpsnName.set(teamNameMap[r.team] ?? r.team, { team: r.team, xG: r.xG, xGA: r.xGA, xpts: r.xpts })
+      const key = teamNameMap[r.team] ?? r.team
+      if (!xgByEpsnName.has(key)) {
+        xgByEpsnName.set(key, { team: r.team, xG: r.xG, xGA: r.xGA, xpts: r.xpts })
+      }
     }
   }
   return raw.map((s) => {
