@@ -25,7 +25,7 @@ export function formatKickoff(iso: string, lang: Lang): string {
 /** UTC 日期组头标签："8月16日 · 周六" / "Aug 16 · Sat"（星期按 UTC 推，全球一致） */
 export function formatUtcDateLabel(utcDate: string, lang: Lang): string {
   const d = new Date(`${utcDate}T00:00:00Z`)
-  const [y, m, day] = utcDate.split('-').map(Number)
+  const [, m, day] = utcDate.split('-').map(Number)
   const wd = d.getUTCDay()
   if (lang === 'zh') return `${m}月${day}日 · ${WEEKDAYS_ZH[wd]}`
   return `${MONTHS_EN[m - 1]} ${day} · ${WEEKDAYS_EN[wd]}`
