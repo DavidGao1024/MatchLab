@@ -7,6 +7,8 @@ import { currentMonth, type LeagueSlug } from '../utils/constants'
 
 const STATIC_TTL = 60 * 60 * 1000
 const POLL_MS = 60 * 1000 // 有进行中比赛时每 60s 刷新（规格规则 1）
+// 代际计数：连续切月时丢弃过期请求的后续状态写入（规格 v1.5 过期响应防护的 store 层）
+let loadGen = 0
 
 export const useMatchesStore = defineStore('matches', {
   state: () => ({
@@ -28,6 +30,7 @@ export const useMatchesStore = defineStore('matches', {
      * 当月 → ESPN 直连（内存态，不落缓存）；断线 → 同月静态快照；快照也缺 → 空场态（规格规则 4）
      */
     async loadMonth(league: LeagueSlug, month: string, season: string) {
+      const gen = ++loadGen
       this.stopPolling()
       this.live = false
       this.fallback = false
@@ -35,20 +38,25 @@ export const useMatchesStore = defineStore('matches', {
       const k = this.key(league, month)
       if (month === currentMonth()) {
         try {
-          this.months[k] = await fetchLiveScores(league, month)
+          const liveMatches = await fetchLiveScores(league, month)
+          if (gen !== loadGen) return // 过期请求：状态已被新调用接管，直接退场
+          this.months[k] = liveMatches
           this.live = true
-          this.empty = this.months[k].length === 0
+          this.empty = liveMatches.length === 0
           if (this.hasInProgress(league, month)) this.startPolling(league, month)
           return
         } catch {
+          if (gen !== loadGen) return
           this.fallback = true // 直连失败 → 掉到下面的静态快照
         }
       }
       try {
         const f = await fetchJsonCached<MatchesFile>(`data/${league}/matches/${month}.json`, STATIC_TTL, season)
+        if (gen !== loadGen) return
         this.months[k] = f.matches
         this.empty = f.matches.length === 0
       } catch {
+        if (gen !== loadGen) return
         this.months[k] = []
         this.empty = true // 文件不存在（如休赛期当月）→ 空场提示 + 引导跳月
       }
