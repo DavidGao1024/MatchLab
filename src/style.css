@@ -1,1 +1,107 @@
 @import "tailwindcss";
+
+:root {
+  /* 联赛主题色：App.vue 切联赛时写入（默认英超紫） */
+  --league-color: #3D195B;
+  --base: #0c101b;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--base);
+  color: #e8ecf5;
+  font-family: 'IBM Plex Sans', 'Microsoft YaHei', 'PingFang SC', system-ui, sans-serif;
+}
+
+/* 字体两副面孔：记分牌数字体 + 压缩标题体（中文走系统粗体兜底，规格 §六） */
+.font-score { font-family: 'Bebas Neue', 'Oswald', 'Microsoft YaHei', sans-serif; }
+.font-cond { font-family: 'Oswald', 'Microsoft YaHei', 'PingFang SC', sans-serif; }
+.font-mono-d { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* 背景三层之二：极淡球场标线纹理（中圈 + 中线） */
+.pitch-texture {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cpath d='M130 0v260M0 130h260' stroke='%23ffffff' stroke-width='1'/%3E%3Ccircle cx='130' cy='130' r='82' fill='none' stroke='%23ffffff'/%3E%3Ccircle cx='130' cy='130' r='4' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+/* 背景三层之三：顶部联赛光晕。用 background-color + 静态 mask，
+   切联赛时颜色能真正 transition 平滑过渡（gradient 本身不可过渡） */
+.league-glow {
+  position: fixed;
+  top: -25vh;
+  left: 50%;
+  translate: -50% 0;
+  width: 140vw;
+  height: 60vh;
+  z-index: 0;
+  pointer-events: none;
+  background-color: var(--league-color);
+  opacity: 0.22;
+  filter: blur(70px);
+  mask-image: radial-gradient(closest-side, black, transparent);
+  transition: background-color 0.8s ease;
+}
+
+/* 无障碍基线：焦点环走联赛色（规格 §七） */
+:focus-visible {
+  outline: 2px solid var(--league-color);
+  outline-offset: 2px;
+}
+
+/* LIVE 心跳点 */
+@keyframes live-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, #ef4444 55%, transparent); }
+  60% { box-shadow: 0 0 0 6px transparent; }
+}
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: #ef4444;
+  animation: live-pulse 1.6s infinite;
+}
+
+/* 管线心跳灯（页脚，绿色慢脉冲） */
+@keyframes pipe-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, #4ade80 50%, transparent); }
+  60% { box-shadow: 0 0 0 5px transparent; }
+}
+.pipe-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: #4ade80;
+  animation: pipe-pulse 2.2s infinite;
+}
+
+/* 比分刷新弹跳（直播进球时给 score 元素加 .score-pop） */
+@keyframes score-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.25); color: #c4b5fd; }
+  100% { transform: scale(1); }
+}
+.score-pop { animation: score-pop 0.6s ease; }
+
+/* 卡片滚动错落浮现（赛程卡用 .rise-in + 少量 JS 观察器，见 MatchList） */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise-in { animation: rise-in 0.45s ease both; }
+
+/* 尊重系统"减少动态效果"（规格 §六） */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
