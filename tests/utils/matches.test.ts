@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { computeForm, lastCompletedMatchday, selectStripMatches } from '../../src/utils/matches'
+import { computeForm, formDetails, lastCompletedMatchday, selectStripMatches } from '../../src/utils/matches'
 import type { Match } from '../../src/types/models'
 
 /** 构造一场已完赛比赛：homeId a - b awayId */
@@ -79,5 +79,36 @@ describe('selectStripMatches（战报带选场，规格 v1.4 确定性规则）'
   it('ranked 缺榜首时优雅跳过', () => {
     const picked = selectStripMatches(day, [{ rank: 2, teamId: 200 }, { rank: 3, teamId: 300 }])
     expect(picked.map((m) => m.eventId)).toEqual(['c', 'a', 'b', 'd'])
+  })
+})
+
+describe('formDetails', () => {
+  it('带对手 ID 与比分，时间序输出', () => {
+    const ms = [
+      mk('1', '2026-05-01T14:00Z', 10, 2, 11, 0),
+      mk('2', '2026-05-08T14:00Z', 12, 1, 10, 1),
+    ]
+    expect(formDetails(ms, 10)).toEqual([
+      { result: 'W', opponentId: 11, gf: 2, ga: 0 },
+      { result: 'D', opponentId: 12, gf: 1, ga: 1 },
+    ])
+  })
+  it('客场视角：gf/ga 翻转', () => {
+    const ms = [mk('1', '2026-05-01T14:00Z', 11, 0, 10, 2)] // T10 客场 2-0 胜
+    expect(formDetails(ms, 10)).toEqual([{ result: 'W', opponentId: 11, gf: 2, ga: 0 }])
+  })
+  it('比分为 null（脏数据）按 0 处理', () => {
+    const ms = [{ ...mk('1', '2026-05-01T14:00Z', 10, 0, 11, 0), home: { ...mk('1', '2026-05-01T14:00Z', 10, 0, 11, 0).home, score: null } }]
+    expect(formDetails(ms, 10)).toEqual([{ result: 'D', opponentId: 11, gf: 0, ga: 0 }])
+  })
+  it('limit 截断只取最近 N 场', () => {
+    const ms = [
+      mk('1', '2026-05-01T14:00Z', 10, 1, 11, 0),
+      mk('2', '2026-05-02T14:00Z', 10, 1, 12, 0),
+      mk('3', '2026-05-03T14:00Z', 10, 1, 13, 0),
+    ]
+    expect(formDetails(ms, 10, 2)).toHaveLength(2)
+    // 最近两场是 5-03 与 5-02，对手 13/12
+    expect(formDetails(ms, 10, 2).map((d) => d.opponentId)).toEqual([12, 13])
   })
 })

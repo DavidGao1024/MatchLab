@@ -1,16 +1,28 @@
 import type { FormResult, Match } from '../types/models'
 
-/** 某队近 limit 场形势：时间序，最近一场在最右（规格 FormDots） */
-export function computeForm(matches: Match[], teamId: number, limit = 5): FormResult[] {
+export interface FormDetail {
+  result: FormResult
+  opponentId: number
+  gf: number
+  ga: number
+}
+
+/** 近 limit 场形势带对手与比分（时间序，最近一场在最右）——FormDots 悬停提示用 */
+export function formDetails(matches: Match[], teamId: number, limit = 5): FormDetail[] {
   const involved = matches.filter((m) => m.completed && (m.home.id === teamId || m.away.id === teamId))
   involved.sort((a, b) => b.date.localeCompare(a.date))
-  const latest = involved.slice(0, limit).map((m): FormResult => {
+  const latest = involved.slice(0, limit).map((m): FormDetail => {
     const isHome = m.home.id === teamId
     const gf = (isHome ? m.home.score : m.away.score) ?? 0
     const ga = (isHome ? m.away.score : m.home.score) ?? 0
-    return gf > ga ? 'W' : gf < ga ? 'L' : 'D'
+    return { result: gf > ga ? 'W' : gf < ga ? 'L' : 'D', opponentId: isHome ? m.away.id : m.home.id, gf, ga }
   })
   return latest.reverse()
+}
+
+/** 某队近 limit 场形势：时间序，最近一场在最右（规格 FormDots） */
+export function computeForm(matches: Match[], teamId: number, limit = 5): FormResult[] {
+  return formDetails(matches, teamId, limit).map((d) => d.result)
 }
 
 /** 最近一个有完赛的比赛日（UTC 日期）；没有则 null（战报带回扫用） */
