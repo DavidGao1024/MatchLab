@@ -20,7 +20,10 @@ const tz = useTimezone()
 
 const league = computed(() => route.params.league as LeagueSlug)
 const season = computed(() => app.leagueInfo(league.value)?.season ?? '2025')
-const seasonLabel = computed(() => `${season.value}-${String(Number(season.value) + 1).slice(2)}`)
+const seasonType = computed(() => app.leagueInfo(league.value)?.seasonType ?? 'european')
+const seasonLabel = computed(() =>
+  seasonType.value === 'calendar' ? season.value : `${season.value}-${String(Number(season.value) + 1).slice(2)}`,
+)
 
 const seq = ref(0) // 过期响应防护（规格 v1.5）
 const error = ref('')
@@ -32,7 +35,7 @@ async function load() {
   xgNotice.value = false
   try {
     await ensureLeague(league.value) // 加载顺序契约：队徽/主色先就位
-    await store.load(league.value, season.value)
+    await store.load(league.value, season.value, { seasonType: seasonType.value })
     if (seq.value !== my) return // 过期响应防护（规格 v1.5）：返回时视图已切换则放弃后续处理（store 按联赛命名空间隔离，数据本身不串）
   } catch (e) {
     if (seq.value !== my) return

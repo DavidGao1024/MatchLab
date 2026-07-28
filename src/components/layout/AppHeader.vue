@@ -7,7 +7,7 @@ const app = useAppStore()
 
 <template>
   <header class="sticky top-0 z-40 bg-[#0c101b]/80 backdrop-blur border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
+    <div class="max-w-[1600px] mx-auto px-4 py-3 flex items-center gap-4">
       <router-link
         to="/"
         class="font-score text-2xl tracking-[0.14em] text-white flex items-center gap-2 shrink-0"

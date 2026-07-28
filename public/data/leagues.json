@@ -1,7 +1,6 @@
 {
-  "updateTime": "2026-07-27T10:33:39.121Z",
-  "season": "2025",
-  "count": 5,
+  "updateTime": "2026-07-28T07:17:47.235Z",
+  "count": 6,
   "leagues": [
     {
       "slug": "eng.1",
@@ -11,8 +10,9 @@
       "color": "#3D195B",
       "understatSlug": "EPL",
       "season": "2025",
+      "seasonType": "european",
       "teams": 20,
-      "players": 724
+      "players": null
     },
     {
       "slug": "esp.1",
@@ -22,8 +22,9 @@
       "color": "#EE8707",
       "understatSlug": "La_liga",
       "season": "2025",
+      "seasonType": "european",
       "teams": 20,
-      "players": 519
+      "players": null
     },
     {
       "slug": "ita.1",
@@ -33,8 +34,9 @@
       "color": "#008FD7",
       "understatSlug": "Serie_A",
       "season": "2025",
+      "seasonType": "european",
       "teams": 20,
-      "players": 870
+      "players": null
     },
     {
       "slug": "ger.1",
@@ -44,8 +46,9 @@
       "color": "#D20100",
       "understatSlug": "Bundesliga",
       "season": "2025",
+      "seasonType": "european",
       "teams": 18,
-      "players": 494
+      "players": null
     },
     {
       "slug": "fra.1",
@@ -55,8 +58,21 @@
       "color": "#DAE1E6",
       "understatSlug": "Ligue_1",
       "season": "2025",
+      "seasonType": "european",
       "teams": 18,
-      "players": 942
+      "players": null
+    },
+    {
+      "slug": "chn.1",
+      "name": "Chinese Super League",
+      "nameZh": "中超",
+      "country": "China",
+      "color": "#C8102E",
+      "understatSlug": null,
+      "season": "2026",
+      "seasonType": "calendar",
+      "teams": 16,
+      "players": 1
     }
   ]
 }

@@ -36,15 +36,22 @@ async function load() {
   loading.value = true
   try {
     await app.loadLeagues()
-    const season = app.leagueInfo(focus)?.season ?? '2025'
-    // 并行：焦点联赛档案 + 五联赛正榜（首页不带形势列，守 53KB 首访账本）
+    const focusInfo = app.leagueInfo(focus)
+    const season = focusInfo?.season ?? '2025'
+    const sType = focusInfo?.seasonType ?? 'european'
+    // 并行：焦点联赛档案 + 各联赛正榜（每联赛用自己赛季号，守 53KB 首访账本）
     await Promise.all([
       ensureLeague(focus),
-      ...LEAGUE_SLUGS.map((l) => standings.load(l, season, { withForm: false }).catch(() => null)),
+      ...LEAGUE_SLUGS.map((l) => {
+        const li = app.leagueInfo(l)
+        const ls = li?.season ?? season
+        const lt = li?.seasonType ?? 'european'
+        return standings.load(l, ls, { withForm: false, seasonType: lt }).catch(() => null)
+      }),
     ])
     // "上轮" = 最近一个有完赛的比赛日，从默认月份往前最多回看 2 个月份文件（规格 v1.2）
-    const months = seasonMonths(season)
-    const from = months.indexOf(defaultMonth(season))
+    const months = seasonMonths(season, sType)
+    const from = months.indexOf(defaultMonth(season, sType))
     const scan = months.slice(Math.max(0, from - 1), from + 1).reverse()
     let found: Strip | null = null
     for (const m of scan) {
@@ -86,7 +93,7 @@ const featuredId = computed(() => {
 </script>
 
 <template>
-  <div class="py-6">
+  <div class="py-6 flex flex-col flex-1">
     <DataError v-if="error" :message="error" @retry="load" />
     <DataLoading v-else-if="loading && !standings.rows[focus]" kind="cards" />
     <template v-else>
@@ -100,10 +107,10 @@ const featuredId = computed(() => {
         :featured-id="featuredId"
       />
 
-      <!-- ② 联赛板块：焦点大卡 + 2×2 小卡（不对称布局，规格 §四） -->
-      <div class="mt-6 grid gap-4 lg:grid-cols-12">
-        <LeagueCard :league="focus" featured class="lg:col-span-7" />
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-5">
+      <!-- ② 联赛板块：焦点大卡 + 小卡网格（6 联赛：1+5） -->
+      <div class="mt-6 grid gap-4 lg:grid-cols-12 flex-1">
+        <LeagueCard :league="focus" featured class="lg:col-span-7 xl:col-span-5 2xl:col-span-4" />
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 lg:col-span-5 xl:col-span-7 2xl:col-span-8">
           <LeagueCard v-for="l in others" :key="l" :league="l" />
         </div>
       </div>

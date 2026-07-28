@@ -7,7 +7,7 @@
 ## 一、项目画像
 
 - **代号**：MatchLab — 五大联赛（英超/西甲/意甲/德甲/法甲）数据查询网站
-- **当前阶段**：Phase 2 完成（积分榜 + 赛程 + 首页前端上线：转播图形风视觉、混合数据供给、中英双语、48 项单测全绿，2026-07-27），待令开 Phase 3（比赛详情弹窗）；施工图纸见 `docs/implementation-plan.md`
+- **当前阶段**：Phase 2 完成并已部署上线（积分榜 + 赛程 + 首页前端：转播图形风视觉、混合数据供给、中英双语、48 项单测全绿，2026-07-27 验收，2026-07-28 线上实测可访问 https://davidgao1024.github.io/MatchLab/），待令开 Phase 3（比赛详情弹窗）；施工图纸见 `docs/implementation-plan.md`
 - **协作模式**：总司令下令 → 营长执行；全局铁律（未经指令不改码、先汇报后更新、不擅自持久化）全程有效
 
 ## 二、军衔记录（本项目独立计算）
@@ -30,7 +30,7 @@
 - 计划文档统一放 `projectDoc/plan/`，一个任务一个文件
 - 数据结构与 API 接口不能变，UI 可大改
 - 抓取脚本永远零依赖（仅 Node 内置模块）
-- 开工须先获总司令明确指令，当前状态：🟡 施工中（Phase 0–2 ✅，待令开 Phase 3）
+- 开工须先获总司令明确指令，当前状态：🟡 施工中（Phase 0–2 ✅ 已部署上线，待令开 Phase 3）
 
 ---
 
@@ -40,7 +40,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概况
 
-五大联赛（英超/西甲/意甲/德甲/法甲）足球数据查询网站，**Phase 0–1 已完成并部署**（https://davidgao1024.github.io/MatchLab/）：Vite 6 + Vue 3 + TS strict + Tailwind 4 脚手架、hash 路由 + Pinia、部署工作流、数据管线（fetch-espn-core / fetch-understat / fetch-espn-scores / build-team-map 四个零依赖脚本 + 每日定时工作流）均已入库，`public/data/` 含五联赛静态数据 10.4MB（球队 96 / 球员 2611 / 队名映射 26 条），按 Phase 2–6 推进。
+五大联赛（英超/西甲/意甲/德甲/法甲）足球数据查询网站，**Phase 0–2 已完成并部署**（https://davidgao1024.github.io/MatchLab/，2026-07-28 线上实测可访问）：Vite 6 + Vue 3 + TS strict + Tailwind 4 脚手架、hash 路由 + Pinia、部署工作流、数据管线（fetch-espn-core / fetch-understat / fetch-espn-scores / build-team-map 四个零依赖脚本 + 每日定时工作流）均已入库，`public/data/` 含五联赛静态数据 10.4MB（球队 96 / 球员 2611 / 队名映射 26 条）；前端积分榜 + 赛程 + 首页（转播图形风视觉、中英双语、48 项单测全绿）已上线，按 Phase 3–6 推进。
 
 动手写任何功能代码前，先读 `docs/implementation-plan.md`（施工图纸）——技术栈、目录结构、数据管线、Phase 0–6 分步计划与验收标准都在里面，按阶段执行，不要另起架构。
 

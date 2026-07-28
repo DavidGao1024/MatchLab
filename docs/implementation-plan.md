@@ -730,7 +730,7 @@ interface MatchTeam {
 - [x] `public/data/eng.1/matches/` 下有按月拆分的赛程文件（10 个月）
 - [x] 5 个联赛目录结构完整（七件套 ×5，2026-07-24 实测）
 - [x] `data/mappings/team-name-map.json` 26 条映射（3 自动 + 23 人工，0 未匹配）
-- [ ] GitHub Action 手动触发成功（2026-07-24 已触发，运行中）
+- [x] GitHub Action 抓取工作流跑通（2026-07-24 起每日 UTC 06:00 定时运行，2026-07-24~27 连续四天产出 `data: 每日抓取更新` 提交，条件 commit 正常）
 
 **请求量与耗时预估**：
 - 5 联赛全量 ~6500 请求（ESPN core）+ 10 请求（Understat）
@@ -761,7 +761,7 @@ interface MatchTeam {
 10. 实现 `ScheduleView.vue`（按月切换）
 11. 路由注册：`/:league/standings`、`/:league/schedule`
 
-**验收**（2026-07-27 浏览器实测通过，细则见 `projectDoc/plan/phase2-积分榜与赛程-设计.md` 13 条验收标准）：
+**验收**（2026-07-27 浏览器实测通过，2026-07-28 部署上线并线上复核 https://davidgao1024.github.io/MatchLab/；细则见 `projectDoc/plan/phase2-积分榜与赛程-设计.md` 13 条验收标准）：
 - [x] 首页选联赛 → 跳转积分榜
 - [x] 积分榜 20 队正确排列，含队徽
 - [x] 切换联赛 → 积分榜切换（缓存命中 <100ms）

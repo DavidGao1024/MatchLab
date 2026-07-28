@@ -6,8 +6,9 @@ export interface LeagueInfo {
   nameZh: string
   country: string
   color: string
-  understatSlug: string
+  understatSlug: string | null
   season: string
+  seasonType?: 'european' | 'calendar'
   teams: number
   players: number
 }
@@ -37,6 +38,7 @@ export interface StandingRow {
   goalsAgainst: number
   goalDiff: number
   points: number
+  deduction?: number
   zone: Zone | null
   /** 近 5 场，时间序，最近一场在最右（规格 FormDots） */
   form: FormResult[]

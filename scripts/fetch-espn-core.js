@@ -27,7 +27,7 @@
 
 const path = require('path');
 const { sleep, fetchJson, writeJsonIfChanged } = require('./lib/http');
-const { SEASON, LEAGUES, core } = require('./lib/espn-endpoints');
+const { SEASON, LEAGUES, core, TEAM_OVERRIDES } = require('./lib/espn-endpoints');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 const REQUEST_DELAY_MS = 200;
@@ -76,6 +76,7 @@ const idFromRef = (ref) => {
 // ========== 1. meta.json ==========
 
 async function fetchMeta(league) {
+  const season = league.season || SEASON;
   const raw = await getJson(core.league(league.slug));
   return {
     source: 'sports.core.api.espn.com',
@@ -91,7 +92,7 @@ async function fetchMeta(league) {
     color: league.color,
     nameZh: league.nameZh,
     country: raw.country ? { name: raw.country.name, flag: raw.country.flag && raw.country.flag.href } : { name: league.country },
-    season: raw.season ? { year: raw.season.year, startDate: raw.season.startDate, endDate: raw.season.endDate, displayName: raw.season.displayName } : { year: Number(SEASON) },
+    season: raw.season ? { year: raw.season.year, startDate: raw.season.startDate, endDate: raw.season.endDate, displayName: raw.season.displayName } : { year: Number(season) },
   };
 }
 
@@ -155,25 +156,39 @@ function mapTeamDetail(raw) {
 }
 
 async function fetchTeams(league) {
-  const { items } = await collectList(core.teams(league.slug));
+  const season = league.season || SEASON;
+  const { items } = await collectList(core.teams(league.slug, season));
   const teams = [];
   const rosterMap = new Map(); // athleteId → teamId（花名册端点建立归属）
 
   for (const item of items) {
     const id = idFromRef(item.$ref);
     if (!id) continue;
-    const detail = await getJson(core.team(league.slug, id));
+    const detail = await getJson(core.team(league.slug, id, season));
     const team = mapTeamDetail(detail);
 
+    // 应用队级覆盖（ESPN 缺失/过时的 logo 和颜色）
+    const ov = TEAM_OVERRIDES[id];
+    if (ov) {
+      if (ov.color) team.color = ov.color;
+      if (ov.logo) {
+        const localFile = path.join(__dirname, '..', 'public', ov.logo);
+        if (require('fs').existsSync(localFile)) {
+          team.logo = ov.logo;
+          team.logoDark = null;
+        }
+      }
+    }
+
     try {
-      team.record = parseRecord(await getJson(core.teamRecord(league.slug, id)));
+      team.record = parseRecord(await getJson(core.teamRecord(league.slug, id, season)));
     } catch (e) {
       console.warn(`  ! [${league.slug}] team ${id} record 失败: ${e.message}`);
       team.record = null;
     }
 
     try {
-      const roster = await getJson(`${core.team(league.slug, id)}/athletes`);
+      const roster = await getJson(`${core.team(league.slug, id, season)}/athletes`);
       for (const a of roster.items || []) {
         const aid = idFromRef(a.$ref);
         if (aid) rosterMap.set(aid, id);
@@ -237,6 +252,7 @@ function pickStat(stats, names) {
 }
 
 async function fetchPlayers(league, rosterMap) {
+  const season = league.season || SEASON;
   const { count, items } = await collectList(core.athletes(league.slug, PAGE_SIZE, 1));
   const ids = items.map((i) => idFromRef(i.$ref)).filter(Boolean);
   const wanted = ids.slice(0, PLAYERS_LIMIT);
@@ -253,7 +269,7 @@ async function fetchPlayers(league, rosterMap) {
       // 本季无出场的球员，统计端点返回 404 —— 视为 stats=null，不算失败
       let statsRaw = null;
       try {
-        statsRaw = await getJson(core.athleteSeasonStats(league.slug, id));
+        statsRaw = await getJson(core.athleteSeasonStats(league.slug, id, season));
       } catch (e) {
         if (e.statusCode !== 404) throw e;
       }
@@ -272,7 +288,7 @@ async function fetchPlayers(league, rosterMap) {
         source: 'sports.core.api.espn.com',
         updateTime: new Date().toISOString(),
         league: league.slug,
-        season: SEASON,
+        season,
         id: Number(profile.id ?? id),
         firstName: profile.firstName,
         lastName: profile.lastName,
@@ -321,8 +337,9 @@ async function fetchPlayers(league, rosterMap) {
 
 /** leaders 响应实测结构（2026-07-24 验证）：顶层 categories[]，每类内层 leaders[]，team/athlete 只有 $ref 无名字 */
 async function fetchLeaders(league, index, teamsById) {
+  const season = league.season || SEASON;
   const nameById = new Map(index.map((p) => [Number(p.id), p]));
-  const raw = await getJson(core.leaders(league.slug));
+  const raw = await getJson(core.leaders(league.slug, season));
   const categories = [];
 
   for (const cat of raw.categories || []) {
@@ -368,7 +385,7 @@ async function fetchLeaders(league, index, teamsById) {
     source: 'sports.core.api.espn.com',
     updateTime: new Date().toISOString(),
     league: league.slug,
-    season: SEASON,
+    season,
     categories,
   };
 }
@@ -376,7 +393,8 @@ async function fetchLeaders(league, index, teamsById) {
 // ========== 主流程 ==========
 
 async function processLeague(league) {
-  console.log(`\n===== [${league.slug}] ${league.name}（赛季 ${SEASON}） =====`);
+  const season = league.season || SEASON;
+  console.log(`\n===== [${league.slug}] ${league.name}（赛季 ${season}） =====`);
   const leagueDir = path.join(DATA_ROOT, league.slug);
 
   const meta = await fetchMeta(league);
@@ -389,7 +407,7 @@ async function processLeague(league) {
     source: 'sports.core.api.espn.com',
     updateTime: new Date().toISOString(),
     league: league.slug,
-    season: SEASON,
+    season,
     count: teams.length,
     teams,
   });
@@ -402,7 +420,7 @@ async function processLeague(league) {
     source: 'sports.core.api.espn.com',
     updateTime: new Date().toISOString(),
     league: league.slug,
-    season: SEASON,
+    season,
     count: indexWithName.length,
     players: indexWithName,
   });
@@ -416,7 +434,7 @@ async function processLeague(league) {
 }
 
 async function main() {
-  console.log(`[espn-core] 联赛: ${targets.map((t) => t.slug).join(', ')}  赛季: ${SEASON}${Number.isFinite(PLAYERS_LIMIT) ? `  PLAYERS_LIMIT=${PLAYERS_LIMIT}` : ''}`);
+  console.log(`[espn-core] 联赛: ${targets.map((t) => t.slug).join(', ')}  赛季: ${targets.map((t) => t.season || SEASON).join('/')}${Number.isFinite(PLAYERS_LIMIT) ? `  PLAYERS_LIMIT=${PLAYERS_LIMIT}` : ''}`);
   const summary = [];
   for (const league of targets) {
     try {
@@ -437,14 +455,14 @@ async function main() {
       country: l.country,
       color: l.color,
       understatSlug: l.understatSlug,
-      season: SEASON,
+      season: l.season || SEASON,
+      seasonType: l.seasonType || 'european',
       teams: done && done.teams != null ? done.teams : l.teams,
       players: done ? done.players ?? null : null,
     };
   });
   writeJsonIfChanged(path.join(DATA_ROOT, 'leagues.json'), {
     updateTime: new Date().toISOString(),
-    season: SEASON,
     count: leagues.length,
     leagues,
   });

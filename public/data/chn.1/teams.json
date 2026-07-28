@@ -1,0 +1,492 @@
+{
+  "source": "sports.core.api.espn.com",
+  "updateTime": "2026-07-28T08:58:03.642Z",
+  "league": "chn.1",
+  "season": "2026",
+  "count": 16,
+  "teams": [
+    {
+      "id": 2052,
+      "uid": "s:600~t:2052",
+      "location": "Beijing Guoan",
+      "name": "Beijing Guoan",
+      "displayName": "Beijing Guoan",
+      "shortDisplayName": "Beijing",
+      "abbreviation": "BG",
+      "color": "#02a300",
+      "alternateColor": "#FFF212",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2052.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/2052.png",
+      "venue": {
+        "name": "Workers' Stadium",
+        "city": "Beijing",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 7,
+        "draws": 7,
+        "losses": 5,
+        "played": 19,
+        "points": 23,
+        "goalDiff": 6,
+        "goalsFor": 32,
+        "goalsAgainst": 26,
+        "summary": "7-7-5"
+      }
+    },
+    {
+      "id": 21355,
+      "uid": "s:600~t:21355",
+      "location": "Chengdu Rongcheng",
+      "name": "Chengdu Rongcheng",
+      "displayName": "Chengdu Rongcheng",
+      "shortDisplayName": "Chengdu",
+      "abbreviation": "CHE",
+      "color": "#000000",
+      "alternateColor": "#C60000",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21355.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/21355.png",
+      "venue": {
+        "name": "Chengdu Phoenix Mountain Sports Park",
+        "city": "Chengdu",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 13,
+        "draws": 5,
+        "losses": 2,
+        "played": 20,
+        "points": 44,
+        "goalDiff": 21,
+        "goalsFor": 41,
+        "goalsAgainst": 20,
+        "summary": "13-5-2"
+      }
+    },
+    {
+      "id": 131704,
+      "uid": "s:600~t:131704",
+      "location": "Chongqing Tonglianglong",
+      "name": "Chongqing Tonglianglong",
+      "nickname": "CHONGQING",
+      "displayName": "Chongqing Tonglianglong",
+      "shortDisplayName": "Chongqing",
+      "abbreviation": "CHO",
+      "color": "#C8102E",
+      "alternateColor": "#C60000",
+      "logo": "logos/chn.1/131704.png",
+      "logoDark": null,
+      "venue": {
+        "name": "Chongqing Longxing Football Stadium",
+        "city": "Chongqing",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 7,
+        "draws": 8,
+        "losses": 5,
+        "played": 20,
+        "points": 29,
+        "goalDiff": 1,
+        "goalsFor": 23,
+        "goalsAgainst": 22,
+        "summary": "7-8-5"
+      }
+    },
+    {
+      "id": 22537,
+      "uid": "s:600~t:22537",
+      "location": "Dalian Yingbo",
+      "name": "Dalian Yingbo",
+      "displayName": "Dalian Yingbo",
+      "shortDisplayName": "Yingbo",
+      "abbreviation": "DYI",
+      "color": "#000000",
+      "alternateColor": "#C60000",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/22537.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/22537.png",
+      "venue": {
+        "name": "Dalian Suoyuwan Football Stadium",
+        "city": "Dalian",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 9,
+        "draws": 1,
+        "losses": 9,
+        "played": 19,
+        "points": 28,
+        "goalDiff": -5,
+        "goalsFor": 30,
+        "goalsAgainst": 35,
+        "summary": "9-1-9"
+      }
+    },
+    {
+      "id": 8240,
+      "uid": "s:600~t:8240",
+      "location": "Henan",
+      "name": "Henan",
+      "displayName": "Henan",
+      "shortDisplayName": "Henan",
+      "abbreviation": "HEN",
+      "color": "#C60000",
+      "alternateColor": "#C60000",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8240.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/8240.png",
+      "venue": {
+        "name": "Zhengzhou Hanghai Stadium",
+        "city": "Zhengzhou",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 8,
+        "draws": 3,
+        "losses": 8,
+        "played": 19,
+        "points": 21,
+        "goalDiff": 1,
+        "goalsFor": 25,
+        "goalsAgainst": 24,
+        "summary": "8-3-8"
+      }
+    },
+    {
+      "id": 131705,
+      "uid": "s:600~t:131705",
+      "location": "Liaoning Tieren",
+      "name": "Liaoning Tieren",
+      "nickname": "LIAONING",
+      "displayName": "Liaoning Tieren",
+      "shortDisplayName": "Liaoning",
+      "abbreviation": "LIA",
+      "color": "#C8102E",
+      "alternateColor": "#C60000",
+      "logo": "logos/chn.1/131705.png",
+      "logoDark": null,
+      "venue": {
+        "name": "Tiexi New District Sports Centre",
+        "city": "Liaoning",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 6,
+        "draws": 3,
+        "losses": 10,
+        "played": 19,
+        "points": 21,
+        "goalDiff": -6,
+        "goalsFor": 25,
+        "goalsAgainst": 31,
+        "summary": "6-3-10"
+      }
+    },
+    {
+      "id": 21910,
+      "uid": "s:600~t:21910",
+      "location": "Qingdao Hainiu",
+      "name": "Qingdao Hainiu",
+      "displayName": "Qingdao Hainiu",
+      "shortDisplayName": "Qingdao Hainiu",
+      "abbreviation": "QIN",
+      "color": "#000000",
+      "alternateColor": "#C60000",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21910.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/21910.png",
+      "venue": {
+        "name": "Qingdao Youth Football Stadium",
+        "city": "Qingdao",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 6,
+        "draws": 3,
+        "losses": 11,
+        "played": 20,
+        "points": 14,
+        "goalDiff": -8,
+        "goalsFor": 30,
+        "goalsAgainst": 38,
+        "summary": "6-3-11"
+      }
+    },
+    {
+      "id": 22198,
+      "uid": "s:600~t:22198",
+      "location": "Qingdao West Coast",
+      "name": "Qingdao West Coast",
+      "displayName": "Qingdao West Coast",
+      "shortDisplayName": "Qingdao WC",
+      "abbreviation": "QWC",
+      "color": "#000000",
+      "alternateColor": "#fafafc",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/22198.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/22198.png",
+      "venue": {
+        "name": "Qingdao West Coast University City Stadium",
+        "city": "Qingdao",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 6,
+        "draws": 10,
+        "losses": 4,
+        "played": 20,
+        "points": 28,
+        "goalDiff": -5,
+        "goalsFor": 24,
+        "goalsAgainst": 29,
+        "summary": "6-10-4"
+      }
+    },
+    {
+      "id": 7521,
+      "uid": "s:600~t:7521",
+      "location": "Shandong Taishan",
+      "name": "Shandong Taishan",
+      "displayName": "Shandong Taishan",
+      "shortDisplayName": "Shandong",
+      "abbreviation": "SHT",
+      "color": "#C60000",
+      "alternateColor": "#C60000",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7521.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/7521.png",
+      "venue": {
+        "name": "Jinan Olympic Sports Center Stadium",
+        "city": "Jinan",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 9,
+        "draws": 3,
+        "losses": 8,
+        "played": 20,
+        "points": 24,
+        "goalDiff": 0,
+        "goalsFor": 36,
+        "goalsAgainst": 36,
+        "summary": "9-3-8"
+      }
+    },
+    {
+      "id": 15515,
+      "uid": "s:600~t:15515",
+      "location": "Shanghai Port",
+      "name": "Shanghai Port",
+      "displayName": "Shanghai Port",
+      "shortDisplayName": "Shanghai Port",
+      "abbreviation": "SIPG",
+      "color": "#C60000",
+      "alternateColor": "#fcfcfc",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/15515.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/15515.png",
+      "venue": {
+        "name": "SAIC Motor Pudong Arena",
+        "city": "Shanghai",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 6,
+        "draws": 6,
+        "losses": 7,
+        "played": 19,
+        "points": 19,
+        "goalDiff": 4,
+        "goalsFor": 30,
+        "goalsAgainst": 26,
+        "summary": "6-6-7"
+      }
+    },
+    {
+      "id": 977,
+      "uid": "s:600~t:977",
+      "location": "Shanghai Shenhua",
+      "name": "Shanghai Shenhua",
+      "displayName": "Shanghai Shenhua",
+      "shortDisplayName": "Shanghai Sh.",
+      "abbreviation": "SHE",
+      "color": "#C60000",
+      "alternateColor": "#C60000",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/977.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/977.png",
+      "venue": {
+        "name": "Shanghai Stadium",
+        "city": "Shanghai",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 8,
+        "draws": 5,
+        "losses": 6,
+        "played": 19,
+        "points": 19,
+        "goalDiff": 5,
+        "goalsFor": 36,
+        "goalsAgainst": 31,
+        "summary": "8-5-6"
+      }
+    },
+    {
+      "id": 22199,
+      "uid": "s:600~t:22199",
+      "location": "Shenzhen Xinpengcheng",
+      "name": "Shenzhen Xinpengcheng",
+      "displayName": "Shenzhen Xinpengcheng",
+      "shortDisplayName": "Shenzhen",
+      "abbreviation": "SHX",
+      "color": "#000000",
+      "alternateColor": "#fafafc",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/22199.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/22199.png",
+      "venue": {
+        "name": "Shenzhen Stadium",
+        "city": "Shenzhen",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 6,
+        "draws": 2,
+        "losses": 12,
+        "played": 20,
+        "points": 20,
+        "goalDiff": -9,
+        "goalsFor": 28,
+        "goalsAgainst": 37,
+        "summary": "6-2-12"
+      }
+    },
+    {
+      "id": 8239,
+      "uid": "s:600~t:8239",
+      "location": "Tianjin Jinmen Tiger",
+      "name": "Tianjin Jinmen Tiger",
+      "displayName": "Tianjin Jinmen Tiger",
+      "shortDisplayName": "Tianjin",
+      "abbreviation": "TIG",
+      "color": "#C60000",
+      "alternateColor": "#C60000",
+      "logo": "logos/chn.1/8239.png",
+      "logoDark": null,
+      "venue": {
+        "name": "TEDA Football Stadium",
+        "city": "Tianjin",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 6,
+        "draws": 6,
+        "losses": 7,
+        "played": 19,
+        "points": 14,
+        "goalDiff": 4,
+        "goalsFor": 26,
+        "goalsAgainst": 22,
+        "summary": "6-6-7"
+      }
+    },
+    {
+      "id": 21506,
+      "uid": "s:600~t:21506",
+      "location": "Wuhan Three Towns",
+      "name": "Wuhan Three Towns",
+      "nickname": "Wuhan Three To",
+      "displayName": "Wuhan Three Towns",
+      "shortDisplayName": "Wuhan TT",
+      "abbreviation": "WTT",
+      "color": "#000000",
+      "alternateColor": "#C60000",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21506.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/21506.png",
+      "venue": {
+        "name": "Wuhan Sports Center Stadium",
+        "city": "Wuhan",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 4,
+        "draws": 7,
+        "losses": 8,
+        "played": 19,
+        "points": 14,
+        "goalDiff": -7,
+        "goalsFor": 27,
+        "goalsAgainst": 34,
+        "summary": "4-7-8"
+      }
+    },
+    {
+      "id": 22536,
+      "uid": "s:600~t:22536",
+      "location": "Yunnan Yukun",
+      "name": "Yunnan Yukun",
+      "displayName": "Yunnan Yukun",
+      "shortDisplayName": "Yunnan",
+      "abbreviation": "YUN",
+      "color": "#000000",
+      "alternateColor": "#C60000",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/22536.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/22536.png",
+      "venue": {
+        "name": "Yuxi Plateau Sports Center Stadium",
+        "city": "Yuxi",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 8,
+        "draws": 4,
+        "losses": 8,
+        "played": 20,
+        "points": 28,
+        "goalDiff": 2,
+        "goalsFor": 40,
+        "goalsAgainst": 38,
+        "summary": "8-4-8"
+      }
+    },
+    {
+      "id": 18203,
+      "uid": "s:600~t:18203",
+      "location": "Zhejiang Professional FC",
+      "name": "Zhejiang Professional FC",
+      "displayName": "Zhejiang Professional FC",
+      "shortDisplayName": "Zhejiang",
+      "abbreviation": "ZHE",
+      "color": "#000000",
+      "alternateColor": "#C60000",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18203.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/18203.png",
+      "venue": {
+        "name": "Yellow Dragon Sports Center Stadium",
+        "city": "Hangzhou",
+        "country": "China PR"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 8,
+        "draws": 5,
+        "losses": 7,
+        "played": 20,
+        "points": 24,
+        "goalDiff": -4,
+        "goalsFor": 30,
+        "goalsAgainst": 34,
+        "summary": "8-5-7"
+      }
+    }
+  ]
+}

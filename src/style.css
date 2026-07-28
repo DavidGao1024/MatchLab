@@ -8,7 +8,14 @@
 
 html {
   color-scheme: dark;
+  scrollbar-color: #2a3040 #0c101b;
+  scrollbar-width: thin;
 }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a3040; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3d4558; }
 
 body {
   background-color: var(--base);

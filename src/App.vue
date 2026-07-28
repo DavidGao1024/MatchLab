@@ -28,8 +28,8 @@ watchEffect(() => {
     <div class="pitch-texture" aria-hidden="true"></div>
     <div class="league-glow" aria-hidden="true"></div>
     <AppHeader />
-    <main class="relative z-10 flex-1 w-full max-w-6xl mx-auto px-4">
-      <router-view />
+    <main class="relative z-10 flex-1 flex flex-col w-full max-w-[1600px] mx-auto px-4">
+      <router-view class="flex flex-col flex-1" />
     </main>
     <AppFooter />
   </div>

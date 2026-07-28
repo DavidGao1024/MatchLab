@@ -1,4 +1,4 @@
-export const LEAGUE_SLUGS = ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1'] as const
+export const LEAGUE_SLUGS = ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1', 'chn.1'] as const
 export type LeagueSlug = (typeof LEAGUE_SLUGS)[number]
 
 export function isLeagueSlug(v: string): v is LeagueSlug {
@@ -26,6 +26,7 @@ export const ZONE_CONFIG: Record<LeagueSlug, ZoneConfig> = {
   'ita.1': { ucl: 4, uel: 1, rel: 3 },
   'ger.1': { ucl: 4, uel: 1, playoff: 16, rel: 2 },
   'fra.1': { ucl: 4, uel: 1, rel: 2 },
+  'chn.1': { ucl: 2, uel: 0, rel: 2 },
 }
 
 export type Zone = 'ucl' | 'uel' | 'playoff' | 'rel'
@@ -40,9 +41,12 @@ export function zoneOf(rank: number, total: number, league: LeagueSlug): Zone | 
   return null
 }
 
-/** 赛季号 → 月份清单：'2025' → ['2025-08', …, '2026-05']（规格规则 2） */
-export function seasonMonths(season: string): string[] {
+/** 赛季号 → 月份清单。欧洲制 '2025' → ['2025-08', …, '2026-05']；自然年制 → ['2026-01', …, '2026-12'] */
+export function seasonMonths(season: string, seasonType: 'european' | 'calendar' = 'european'): string[] {
   const start = Number(season)
+  if (seasonType === 'calendar') {
+    return Array.from({ length: 12 }, (_, i) => `${start}-${String(i + 1).padStart(2, '0')}`)
+  }
   const months: string[] = []
   for (let i = 0; i < 10; i++) {
     const y = i < 5 ? start : start + 1
@@ -57,9 +61,9 @@ export function currentMonth(now: Date = new Date()): string {
   return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}`
 }
 
-/** 默认月份：赛季内当月，休赛期落 5 月（规格规则 3） */
-export function defaultMonth(season: string, now: Date = new Date()): string {
+/** 默认月份：赛季内当月，休赛期落末月（规格规则 3） */
+export function defaultMonth(season: string, seasonType: 'european' | 'calendar' = 'european', now: Date = new Date()): string {
   const cur = currentMonth(now)
-  const months = seasonMonths(season)
+  const months = seasonMonths(season, seasonType)
   return months.includes(cur) ? cur : months[months.length - 1]
 }

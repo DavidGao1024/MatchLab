@@ -68,6 +68,7 @@ const stat = 'tabular px-1 py-2.5 text-center text-xs text-slate-300'
     >{{ row.goalDiff > 0 ? `+${row.goalDiff}` : row.goalDiff }}</td>
     <td class="px-2 py-2.5 text-center">
       <span class="font-score text-lg text-white">{{ row.points }}</span>
+      <span v-if="row.deduction" class="ml-0.5 text-[9px] font-mono-d text-red-400/80" :title="`扣 ${row.deduction} 分`">-{{ row.deduction }}</span>
     </td>
     <td class="px-2 py-2.5 text-center"><FormDots :details="dots" /></td>
     <template v-if="showXg">

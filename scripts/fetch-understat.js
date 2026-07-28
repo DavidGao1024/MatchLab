@@ -36,7 +36,7 @@ const season = argv[1] || SEASON;
 
 const targets = requested
   ? LEAGUES.filter((l) => l.understatSlug === requested || l.slug === requested)
-  : LEAGUES;
+  : LEAGUES.filter((l) => l.understatSlug);
 if (requested && targets.length === 0) {
   console.error(`[understat] 未知联赛: ${requested}（可选 ${LEAGUES.map((l) => l.understatSlug).join(' / ')}）`);
   process.exit(1);

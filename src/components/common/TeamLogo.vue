@@ -6,17 +6,22 @@ const props = withDefaults(defineProps<{ team?: Team; size?: number }>(), { size
 
 const failedDark = ref(false)
 const failedAll = ref(false)
-// 球队变更时复位失败态，防旧 @error 污染复用实例（v-for 场景）
 watch(() => props.team, () => {
   failedDark.value = false
   failedAll.value = false
 })
 
-// 深底优先深色版队徽（规格 v1.5）；深色版失败再试普通版；都失败 → 空串触发首字母圆牌
+const BASE = import.meta.env.BASE_URL
+
+function resolveLogo(url: string): string {
+  if (!url) return ''
+  return url.startsWith('http') ? url : BASE + url
+}
+
 const src = computed(() => {
   if (!props.team || failedAll.value) return ''
-  if (failedDark.value) return props.team.logo || ''
-  return props.team.logoDark || props.team.logo || ''
+  if (failedDark.value) return resolveLogo(props.team.logo || '')
+  return resolveLogo(props.team.logoDark || props.team.logo || '')
 })
 
 function onError() {

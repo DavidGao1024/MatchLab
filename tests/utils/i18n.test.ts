@@ -22,8 +22,8 @@ describe('teamName()', () => {
   })
 })
 
-describe('TEAM_ZH 覆盖 96 队', () => {
-  it('五联赛队数 = 20+20+20+18+18', () => {
-    expect(Object.keys(TEAM_ZH)).toHaveLength(96)
+describe('TEAM_ZH 覆盖 112 队', () => {
+  it('六联赛队数 = 20+20+20+18+18+16', () => {
+    expect(Object.keys(TEAM_ZH)).toHaveLength(112)
   })
 })

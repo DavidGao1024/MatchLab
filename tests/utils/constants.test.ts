@@ -8,8 +8,8 @@ import {
 } from '../../src/utils/constants'
 
 describe('isLeagueSlug', () => {
-  it('五大联赛通过', () => {
-    for (const s of ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1']) expect(isLeagueSlug(s)).toBe(true)
+  it('六联赛通过', () => {
+    for (const s of ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1', 'chn.1']) expect(isLeagueSlug(s)).toBe(true)
   })
   it('其他一律拒绝', () => {
     for (const s of ['fifa.world', 'ENG.1', '', 'eng1']) expect(isLeagueSlug(s)).toBe(false)
@@ -27,11 +27,14 @@ describe('seasonMonths', () => {
 
 describe('defaultMonth', () => {
   it('赛季内取当月', () => {
-    expect(defaultMonth('2025', new Date('2026-01-15T12:00:00Z'))).toBe('2026-01')
+    expect(defaultMonth('2025', 'european', new Date('2026-01-15T12:00:00Z'))).toBe('2026-01')
   })
   it('休赛期（6/7 月）落 5 月收官月', () => {
-    expect(defaultMonth('2025', new Date('2026-07-27T12:00:00Z'))).toBe('2026-05')
-    expect(defaultMonth('2025', new Date('2026-06-10T12:00:00Z'))).toBe('2026-05')
+    expect(defaultMonth('2025', 'european', new Date('2026-07-27T12:00:00Z'))).toBe('2026-05')
+    expect(defaultMonth('2025', 'european', new Date('2026-06-10T12:00:00Z'))).toBe('2026-05')
+  })
+  it('自然年制赛季内取当月', () => {
+    expect(defaultMonth('2026', 'calendar', new Date('2026-07-15T12:00:00Z'))).toBe('2026-07')
   })
 })
 

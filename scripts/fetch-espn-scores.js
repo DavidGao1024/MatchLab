@@ -23,7 +23,6 @@ const { SEASON, LEAGUES, site } = require('./lib/espn-endpoints');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 const DELAY_MS = 200;
-const SEASON_START = Number(process.env.SEASON_START || SEASON); // 2025 → 2025-07 .. 2026-06
 
 const requested = process.argv.slice(2);
 const targets = requested.length ? LEAGUES.filter((l) => requested.includes(l.slug)) : LEAGUES;
@@ -39,12 +38,24 @@ function monthRange(year, month) {
   return { key: `${year}-${mm}`, dates: `${year}${mm}01-${year}${mm}${String(lastDay).padStart(2, '0')}` };
 }
 
-/** 赛季月窗口：startYear 年 7 月 → 次年 6 月 */
-function seasonMonths(startYear) {
+/** 赛季月窗口：欧洲制 startYear 年 7 月 → 次年 6 月 */
+function seasonMonthsEuropean(startYear) {
   const months = [];
   for (let m = 7; m <= 12; m += 1) months.push(monthRange(startYear, m));
   for (let m = 1; m <= 6; m += 1) months.push(monthRange(startYear + 1, m));
   return months;
+}
+
+/** 赛季月窗口：自然年制 1 月 → 12 月 */
+function seasonMonthsCalendar(year) {
+  const months = [];
+  for (let m = 1; m <= 12; m += 1) months.push(monthRange(year, m));
+  return months;
+}
+
+function seasonMonthsFor(league) {
+  const year = Number(process.env.SEASON_START || league.season || SEASON);
+  return league.seasonType === 'calendar' ? seasonMonthsCalendar(year) : seasonMonthsEuropean(year);
 }
 
 function mapCompetitor(c) {
@@ -80,7 +91,7 @@ function mapEvent(ev) {
 }
 
 /** 从已完赛比分本地计算积分榜（沿用世界杯项目 computeStandings 模式） */
-function computeStandings(matches) {
+function computeStandings(matches, deductions = {}) {
   const byTeam = new Map();
   const get = (id, name) => {
     if (!byTeam.has(id)) {
@@ -111,11 +122,15 @@ function computeStandings(matches) {
     }
   }
 
-  const rows = [...byTeam.values()].map((r) => ({
-    ...r,
-    goalDiff: r.goalsFor - r.goalsAgainst,
-    points: r.won * 3 + r.drawn,
-  }));
+  const rows = [...byTeam.values()].map((r) => {
+    const deduction = deductions[r.teamId] || 0;
+    return {
+      ...r,
+      goalDiff: r.goalsFor - r.goalsAgainst,
+      points: r.won * 3 + r.drawn - deduction,
+      deduction: deduction || undefined,
+    };
+  });
   rows.sort(
     (x, y) =>
       y.points - x.points ||
@@ -127,11 +142,16 @@ function computeStandings(matches) {
 }
 
 async function processLeague(league) {
-  console.log(`\n===== [${league.slug}] ${league.name} 赛程（${SEASON_START}-07 → ${SEASON_START + 1}-06） =====`);
+  const leagueSeason = league.season || SEASON;
+  const months = seasonMonthsFor(league);
+  const rangeLabel = league.seasonType === 'calendar'
+    ? `${leagueSeason}-01 → ${leagueSeason}-12`
+    : `${leagueSeason}-07 → ${Number(leagueSeason) + 1}-06`;
+  console.log(`\n===== [${league.slug}] ${league.name} 赛程（${rangeLabel}） =====`);
   const leagueDir = path.join(DATA_ROOT, league.slug);
   const allMatches = [];
 
-  for (const { key, dates } of seasonMonths(SEASON_START)) {
+  for (const { key, dates } of months) {
     await sleep(DELAY_MS);
     try {
       const resp = await fetchJson(site.scoreboard(league.slug, dates, 200));
@@ -157,12 +177,12 @@ async function processLeague(league) {
     }
   }
 
-  const standings = computeStandings(allMatches);
+  const standings = computeStandings(allMatches, league.pointDeductions || {});
   writeJsonIfChanged(path.join(leagueDir, 'standings.json'), {
     source: '本地从 ESPN site.api 比分计算（computeStandings）',
     updateTime: new Date().toISOString(),
     league: league.slug,
-    season: SEASON,
+    season: leagueSeason,
     matchesCounted: allMatches.filter((m) => m.completed).length,
     count: standings.length,
     standings,

@@ -75,7 +75,7 @@ function main() {
   const known = [];
   const unmatched = [];
 
-  for (const league of LEAGUES) {
+  for (const league of LEAGUES.filter((l) => l.understatSlug)) {
     const xg = readJson(path.join(DATA_ROOT, league.slug, 'xg', 'standings.json'));
     const teams = readJson(path.join(DATA_ROOT, league.slug, 'teams.json'));
     if (!xg || !teams) {

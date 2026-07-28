@@ -26,7 +26,7 @@ function enter() {
   <article
     role="link"
     tabindex="0"
-    class="group cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-[#111726] transition-all hover:-translate-y-0.5 hover:border-white/20 hover:shadow-[0_14px_30px_-14px_rgba(0,0,0,0.9)]"
+    class="group cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-[#111726] transition-all hover:-translate-y-0.5 hover:border-white/20 hover:shadow-[0_14px_30px_-14px_rgba(0,0,0,0.9)] h-full flex flex-col"
     @click="enter"
     @keydown.enter="enter"
   >
@@ -35,7 +35,7 @@ function enter() {
       class="h-1 transition-colors duration-700"
       :style="{ background: featured ? `linear-gradient(90deg, ${color}, color-mix(in srgb, ${color} 35%, white))` : color }"
     ></div>
-    <div class="p-4">
+    <div class="p-4 flex flex-col flex-1">
       <p v-if="featured" class="font-mono-d text-[9px] tracking-[0.24em]" :style="{ color }">
         {{ t('home.featured', app.lang).toUpperCase() }}
       </p>
@@ -45,7 +45,7 @@ function enter() {
       </div>
       <p class="font-mono-d text-[9px] uppercase tracking-[0.18em] text-slate-500">{{ info?.name }}</p>
 
-      <MiniStandings :rows="rows" :league="league" :limit="featured ? 5 : 2" :header="featured" class="mt-3" />
+      <MiniStandings :rows="rows" :league="league" :limit="featured ? 8 : 4" :header="featured" class="mt-3 flex-1" />
 
       <p class="mt-3 font-mono-d text-[9px] text-slate-600">
         {{ info?.teams }} {{ t('home.teamsUnit', app.lang) }} · {{ info?.players }} {{ t('home.playersUnit', app.lang) }}

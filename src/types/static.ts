@@ -53,6 +53,7 @@ export interface RawStanding {
   goalsAgainst: number
   goalDiff: number
   points: number
+  deduction?: number
 }
 
 export interface StandingsFile {

@@ -103,6 +103,23 @@ export const TEAM_ZH: Record<string, string> = {
   'Stade Rennais': '雷恩',
   'Strasbourg': '斯特拉斯堡',
   'Toulouse': '图卢兹',
+  // 中超 chn.1（16）
+  'Shanghai Shenhua': '上海申花',
+  'Beijing Guoan': '北京国安',
+  'Shandong Taishan': '山东泰山',
+  'Tianjin Jinmen Tiger': '天津津门虎',
+  'Henan': '河南',
+  'Shanghai Port': '上海海港',
+  'Zhejiang Professional FC': '浙江',
+  'Chengdu Rongcheng': '成都蓉城',
+  'Wuhan Three Towns': '武汉三镇',
+  'Qingdao Hainiu': '青岛海牛',
+  'Qingdao West Coast': '青岛西海岸',
+  'Shenzhen Xinpengcheng': '深圳新鹏城',
+  'Yunnan Yukun': '云南玉昆',
+  'Dalian Yingbo': '大连英博',
+  'Chongqing Tonglianglong': '重庆铜梁龙',
+  'Liaoning Tieren': '辽宁铁人',
 }
 
 const UI: Record<string, { zh: string; en: string }> = {
@@ -146,7 +163,7 @@ const UI: Record<string, { zh: string; en: string }> = {
   'footer.pipeline': { zh: '自动管线每日刷新', en: 'Auto pipeline · refreshed daily' },
   'footer.snapshot': { zh: '数据快照', en: 'Data snapshot' },
   'footer.source': { zh: '来源', en: 'Source' },
-  'footer.tagline': { zh: '五大联赛数据查询', en: 'Top-five leagues data hub' },
+  'footer.tagline': { zh: '足球联赛数据查询', en: 'Football leagues data hub' },
   'match.vs': { zh: 'VS', en: 'VS' },
   'form.win': { zh: '胜', en: 'Win' },
   'form.draw': { zh: '平', en: 'Draw' },

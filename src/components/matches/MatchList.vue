@@ -30,7 +30,7 @@ const weekday = (utcDate: string) => {
       >{{ g.utcDate }} · {{ weekday(g.utcDate) }}</span>
       <span class="text-[11px] text-slate-500">{{ g.matches.length }} {{ t('schedule.matchesUnit', app.lang) }}</span>
     </div>
-    <div class="space-y-2">
+    <div class="grid grid-cols-1 gap-2 xl:grid-cols-2">
       <MatchCard
         v-for="(m, mi) in g.matches"
         :key="m.eventId"
