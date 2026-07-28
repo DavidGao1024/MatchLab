@@ -136,6 +136,8 @@ const UI: Record<string, { zh: string; en: string }> = {
   'schedule.noMatches': { zh: '本月暂无联赛比赛', en: 'No league matches this month' },
   'schedule.offseason': { zh: '赛季已收官，展示最终数据', en: 'Season concluded — final data' },
   'schedule.goLatest': { zh: '跳到最近有数据的月份', en: 'Go to latest month with data' },
+  'schedule.refresh': { zh: '刷新', en: 'Refresh' },
+  'schedule.matchesUnit': { zh: '场', en: 'matches' },
   'state.loading': { zh: '数据加载中', en: 'Loading' },
   'state.error': { zh: '数据加载失败', en: 'Failed to load' },
   'state.retry': { zh: '重试', en: 'Retry' },
