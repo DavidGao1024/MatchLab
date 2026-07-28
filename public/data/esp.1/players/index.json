@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-07-26T08:44:42.859Z",
+  "updateTime": "2026-07-27T10:13:41.058Z",
   "league": "esp.1",
   "season": "2025",
-  "count": 421,
+  "count": 519,
   "players": [
     {
       "id": 231388,
@@ -56,14 +56,24 @@
       "team": "Real Madrid"
     },
     {
-      "id": 181757,
-      "name": "Toni Martínez",
-      "teamId": 96,
+      "id": 229018,
+      "name": "Mikel Oyarzabal",
+      "teamId": 89,
       "position": "F",
       "age": 29,
+      "goals": 15,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
+      "id": 214995,
+      "name": "Borja Iglesias",
+      "teamId": 85,
+      "position": "F",
+      "age": 33,
       "goals": 14,
       "assists": null,
-      "team": "Alavés"
+      "team": "Celta Vigo"
     },
     {
       "id": 188230,
@@ -74,6 +84,16 @@
       "goals": 13,
       "assists": null,
       "team": "Atlético Madrid"
+    },
+    {
+      "id": 300002,
+      "name": "Georges Mikautadze",
+      "teamId": 102,
+      "position": "F",
+      "age": 25,
+      "goals": 13,
+      "assists": null,
+      "team": "Villarreal"
     },
     {
       "id": 231050,
@@ -96,14 +116,24 @@
       "team": "Levante"
     },
     {
-      "id": 207236,
-      "name": "Lucas Boyé",
-      "teamId": 96,
-      "position": "F",
-      "age": 30,
-      "goals": 11,
+      "id": 307390,
+      "name": "Alberto Moleiro",
+      "teamId": 102,
+      "position": "M",
+      "age": 22,
+      "goals": 10,
       "assists": null,
-      "team": "Alavés"
+      "team": "Villarreal"
+    },
+    {
+      "id": 156172,
+      "name": "Gerard Moreno",
+      "teamId": 102,
+      "position": "G",
+      "age": 21,
+      "goals": 10,
+      "assists": null,
+      "team": "Villarreal"
     },
     {
       "id": 231905,
@@ -136,6 +166,46 @@
       "team": "Rayo Vallecano"
     },
     {
+      "id": 279904,
+      "name": "Ferran Jutglà",
+      "teamId": 85,
+      "position": "F",
+      "age": 27,
+      "goals": 9,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
+      "id": 341367,
+      "name": "Orri Óskarsson",
+      "teamId": 89,
+      "position": "F",
+      "age": 21,
+      "goals": 9,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
+      "id": 135422,
+      "name": "Enrique García",
+      "teamId": 88,
+      "position": "F",
+      "age": 36,
+      "goals": 8,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
+      "id": 213141,
+      "name": "Gonçalo Guedes",
+      "teamId": 89,
+      "position": "F",
+      "age": 29,
+      "goals": 8,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
       "id": 277206,
       "name": "Julián Álvarez",
       "teamId": 1068,
@@ -144,6 +214,16 @@
       "goals": 8,
       "assists": null,
       "team": "Atlético Madrid"
+    },
+    {
+      "id": 210397,
+      "name": "Nicolas Pépé",
+      "teamId": 102,
+      "position": "F",
+      "age": 31,
+      "goals": 8,
+      "assists": null,
+      "team": "Villarreal"
     },
     {
       "id": 230974,
@@ -196,6 +276,16 @@
       "team": "Levante"
     },
     {
+      "id": 196914,
+      "name": "Pere Milla",
+      "teamId": 88,
+      "position": "M",
+      "age": 33,
+      "goals": 7,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
       "id": 296163,
       "name": "Raúl García",
       "teamId": 97,
@@ -204,6 +294,36 @@
       "goals": 7,
       "assists": null,
       "team": "Osasuna"
+    },
+    {
+      "id": 318773,
+      "name": "Roberto Fernández",
+      "teamId": 88,
+      "position": "F",
+      "age": 24,
+      "goals": 7,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
+      "id": 284769,
+      "name": "Tajon Buchanan",
+      "teamId": 102,
+      "position": "F",
+      "age": 27,
+      "goals": 7,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
+      "id": 271904,
+      "name": "Carlos Romero",
+      "teamId": 88,
+      "position": "D",
+      "age": 24,
+      "goals": 6,
+      "assists": null,
+      "team": "Espanyol"
     },
     {
       "id": 354334,
@@ -276,6 +396,16 @@
       "team": "Athletic Club"
     },
     {
+      "id": 192133,
+      "name": "Ayoze Pérez",
+      "teamId": 102,
+      "position": "F",
+      "age": 32,
+      "goals": 5,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
       "id": 222446,
       "name": "Djibril Sow",
       "teamId": 243,
@@ -296,6 +426,26 @@
       "team": "Real Madrid"
     },
     {
+      "id": 92800,
+      "name": "Iago Aspas",
+      "teamId": 85,
+      "position": "F",
+      "age": 38,
+      "goals": 5,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
+      "id": 255889,
+      "name": "Pape Gueye",
+      "teamId": 102,
+      "position": "M",
+      "age": 27,
+      "goals": 5,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
       "id": 276652,
       "name": "Sergio Camello",
       "teamId": 101,
@@ -304,6 +454,16 @@
       "goals": 5,
       "assists": null,
       "team": "Rayo Vallecano"
+    },
+    {
+      "id": 322652,
+      "name": "Williot Swedberg",
+      "teamId": 85,
+      "position": "M",
+      "age": 22,
+      "goals": 5,
+      "assists": null,
+      "team": "Celta Vigo"
     },
     {
       "id": 229645,
@@ -366,6 +526,16 @@
       "team": "Getafe"
     },
     {
+      "id": 235072,
+      "name": "Carlos Soler",
+      "teamId": 89,
+      "position": "M",
+      "age": 29,
+      "goals": 4,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
       "id": 324504,
       "name": "Diego López",
       "teamId": 94,
@@ -404,6 +574,16 @@
       "goals": 4,
       "assists": null,
       "team": "Valencia"
+    },
+    {
+      "id": 188391,
+      "name": "Hugo Álvarez",
+      "teamId": 85,
+      "position": "M",
+      "age": 23,
+      "goals": 4,
+      "assists": null,
+      "team": "Celta Vigo"
     },
     {
       "id": 365821,
@@ -466,6 +646,16 @@
       "team": "Osasuna"
     },
     {
+      "id": 283941,
+      "name": "Ander Barrenetxea",
+      "teamId": 89,
+      "position": "F",
+      "age": 24,
+      "goals": 3,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
       "id": 231618,
       "name": "Arnaut Danjuma",
       "teamId": 94,
@@ -516,6 +706,16 @@
       "team": "Levante"
     },
     {
+      "id": 133259,
+      "name": "Leandro Cabrera",
+      "teamId": 88,
+      "position": "D",
+      "age": 35,
+      "goals": 3,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
       "id": 264177,
       "name": "Luis Rioja",
       "teamId": 94,
@@ -524,6 +724,16 @@
       "goals": 3,
       "assists": null,
       "team": "Valencia"
+    },
+    {
+      "id": 306263,
+      "name": "Luka Sucic",
+      "teamId": 89,
+      "position": "M",
+      "age": 23,
+      "goals": 3,
+      "assists": null,
+      "team": "Real Sociedad"
     },
     {
       "id": 276847,
@@ -556,6 +766,16 @@
       "team": "Sevilla"
     },
     {
+      "id": 240623,
+      "name": "Santi Comesaña",
+      "teamId": 102,
+      "position": "M",
+      "age": 29,
+      "goals": 3,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
       "id": 277208,
       "name": "Thiago Almada",
       "teamId": 1068,
@@ -584,6 +804,16 @@
       "goals": 2,
       "assists": null,
       "team": "Athletic Club"
+    },
+    {
+      "id": 240235,
+      "name": "Aleix Febas",
+      "teamId": 3751,
+      "position": "M",
+      "age": 30,
+      "goals": 2,
+      "assists": null,
+      "team": "Elche"
     },
     {
       "id": 297373,
@@ -624,16 +854,6 @@
       "goals": 2,
       "assists": null,
       "team": "Real Madrid"
-    },
-    {
-      "id": 265997,
-      "name": "Antonio Blanco",
-      "teamId": 96,
-      "position": "M",
-      "age": 26,
-      "goals": 2,
-      "assists": null,
-      "team": "Alavés"
     },
     {
       "id": 356000,
@@ -706,6 +926,56 @@
       "team": "Elche"
     },
     {
+      "id": 297829,
+      "name": "Ilaix Moriba",
+      "teamId": 85,
+      "position": "M",
+      "age": 23,
+      "goals": 2,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
+      "id": 331586,
+      "name": "Javi Rueda",
+      "teamId": 85,
+      "position": "D",
+      "age": 24,
+      "goals": 2,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
+      "id": 260243,
+      "name": "Javier Puado",
+      "teamId": 88,
+      "position": "F",
+      "age": 28,
+      "goals": 2,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
+      "id": 366885,
+      "name": "Jon Martín",
+      "teamId": 89,
+      "position": "D",
+      "age": 20,
+      "goals": 2,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
+      "id": 334111,
+      "name": "Jones El-Abdellaoui",
+      "teamId": 85,
+      "position": "F",
+      "age": 20,
+      "goals": 2,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
       "id": 140791,
       "name": "Koke",
       "teamId": 1068,
@@ -766,16 +1036,6 @@
       "team": "Atlético Madrid"
     },
     {
-      "id": 262491,
-      "name": "Nahuel Tenaglia",
-      "teamId": 96,
-      "position": "D",
-      "age": 30,
-      "goals": 2,
-      "assists": null,
-      "team": "Alavés"
-    },
-    {
       "id": 356212,
       "name": "Nobel Mendy",
       "teamId": 101,
@@ -794,6 +1054,16 @@
       "goals": 2,
       "assists": null,
       "team": "Sevilla"
+    },
+    {
+      "id": 138448,
+      "name": "Pablo Durán",
+      "teamId": 85,
+      "position": "F",
+      "age": 25,
+      "goals": 2,
+      "assists": null,
+      "team": "Celta Vigo"
     },
     {
       "id": 199790,
@@ -846,6 +1116,16 @@
       "team": "Sevilla"
     },
     {
+      "id": 260242,
+      "name": "Pol Lozano",
+      "teamId": 88,
+      "position": "M",
+      "age": 26,
+      "goals": 2,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
       "id": 388338,
       "name": "Raúl Asencio",
       "teamId": 86,
@@ -866,6 +1146,46 @@
       "team": "Osasuna"
     },
     {
+      "id": 298343,
+      "name": "Sergio Carreira",
+      "teamId": 85,
+      "position": "D",
+      "age": 25,
+      "goals": 2,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
+      "id": 256587,
+      "name": "Takefusa Kubo",
+      "teamId": 89,
+      "position": "F",
+      "age": 25,
+      "goals": 2,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
+      "id": 294039,
+      "name": "Tani Oluwaseyi",
+      "teamId": 102,
+      "position": "F",
+      "age": 26,
+      "goals": 2,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
+      "id": 306520,
+      "name": "Tyrhys Dolan",
+      "teamId": 88,
+      "position": "F",
+      "age": 24,
+      "goals": 2,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
       "id": 203680,
       "name": "Víctor García",
       "teamId": 1538,
@@ -874,16 +1194,6 @@
       "goals": 2,
       "assists": null,
       "team": "Levante"
-    },
-    {
-      "id": 345991,
-      "name": "Abde Rebbach",
-      "teamId": 96,
-      "position": "F",
-      "age": 27,
-      "goals": 1,
-      "assists": null,
-      "team": "Alavés"
     },
     {
       "id": 300284,
@@ -906,6 +1216,16 @@
       "team": "Elche"
     },
     {
+      "id": 283891,
+      "name": "Aihen Muñoz",
+      "teamId": 89,
+      "position": "D",
+      "age": 28,
+      "goals": 1,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
       "id": 403371,
       "name": "Alejandro Rego",
       "teamId": 93,
@@ -916,14 +1236,14 @@
       "team": "Athletic Club"
     },
     {
-      "id": 260256,
-      "name": "Ander Guevara",
-      "teamId": 96,
-      "position": "M",
-      "age": 29,
+      "id": 236156,
+      "name": "Álvaro Odriozola",
+      "teamId": 89,
+      "position": "D",
+      "age": 30,
       "goals": 1,
       "assists": null,
-      "team": "Alavés"
+      "team": "Real Sociedad"
     },
     {
       "id": 332246,
@@ -934,16 +1254,6 @@
       "goals": 1,
       "assists": null,
       "team": "Sevilla"
-    },
-    {
-      "id": 374621,
-      "name": "Ángel Pérez",
-      "teamId": 96,
-      "position": "D",
-      "age": 23,
-      "goals": 1,
-      "assists": null,
-      "team": "Alavés"
     },
     {
       "id": 169438,
@@ -1026,14 +1336,14 @@
       "team": "Elche"
     },
     {
-      "id": 163068,
-      "name": "Denis Suárez",
-      "teamId": 96,
+      "id": 255272,
+      "name": "Edu Expósito",
+      "teamId": 88,
       "position": "M",
-      "age": 32,
+      "age": 29,
       "goals": 1,
       "assists": null,
-      "team": "Alavés"
+      "team": "Espanyol"
     },
     {
       "id": 285150,
@@ -1146,6 +1456,16 @@
       "team": "Levante"
     },
     {
+      "id": 307270,
+      "name": "Jofre Carreras",
+      "teamId": 88,
+      "position": "F",
+      "age": 25,
+      "goals": 1,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
       "id": 317784,
       "name": "Jon Ander Olasagasti",
       "teamId": 1538,
@@ -1154,6 +1474,26 @@
       "goals": 1,
       "assists": null,
       "team": "Levante"
+    },
+    {
+      "id": 318063,
+      "name": "Jon Aramburu",
+      "teamId": 89,
+      "position": "D",
+      "age": 24,
+      "goals": 1,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
+      "id": 388601,
+      "name": "Jon Gorrotxategi",
+      "teamId": 89,
+      "position": "M",
+      "age": 23,
+      "goals": 1,
+      "assists": null,
+      "team": "Real Sociedad"
     },
     {
       "id": 250508,
@@ -1246,6 +1586,16 @@
       "team": "Sevilla"
     },
     {
+      "id": 300985,
+      "name": "Manu Sánchez",
+      "teamId": 1538,
+      "position": "D",
+      "age": 25,
+      "goals": 1,
+      "assists": null,
+      "team": "Levante"
+    },
+    {
       "id": 301406,
       "name": "Marc Aguado",
       "teamId": 3751,
@@ -1266,6 +1616,16 @@
       "team": "Atlético Madrid"
     },
     {
+      "id": 146127,
+      "name": "Marcos Alonso",
+      "teamId": 85,
+      "position": "D",
+      "age": 35,
+      "goals": 1,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
       "id": 393762,
       "name": "Maroan Sannadi",
       "teamId": 93,
@@ -1274,6 +1634,26 @@
       "goals": 1,
       "assists": null,
       "team": "Athletic Club"
+    },
+    {
+      "id": 353736,
+      "name": "Miguel Román",
+      "teamId": 85,
+      "position": "M",
+      "age": 23,
+      "goals": 1,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
+      "id": 273291,
+      "name": "Miguel Rubio",
+      "teamId": 88,
+      "position": "D",
+      "age": 28,
+      "goals": 1,
+      "assists": null,
+      "team": "Espanyol"
     },
     {
       "id": 241117,
@@ -1314,16 +1694,6 @@
       "goals": 1,
       "assists": null,
       "team": "Atlético Madrid"
-    },
-    {
-      "id": 106326,
-      "name": "Pablo Ibáñez",
-      "teamId": 96,
-      "position": "M",
-      "age": 27,
-      "goals": 1,
-      "assists": null,
-      "team": "Alavés"
     },
     {
       "id": 368992,
@@ -1414,6 +1784,26 @@
       "goals": 1,
       "assists": null,
       "team": "Barcelona"
+    },
+    {
+      "id": 318098,
+      "name": "Santiago Mouriño",
+      "teamId": 102,
+      "position": "D",
+      "age": 24,
+      "goals": 1,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
+      "id": 289072,
+      "name": "Sergi Cardona",
+      "teamId": 102,
+      "position": "D",
+      "age": 27,
+      "goals": 1,
+      "assists": null,
+      "team": "Villarreal"
     },
     {
       "id": 231214,
@@ -1546,14 +1936,14 @@
       "team": "Osasuna"
     },
     {
-      "id": 379231,
-      "name": "Aitor Mañas",
-      "teamId": 96,
-      "position": "F",
-      "age": 23,
+      "id": 396751,
+      "name": "Alassane Diatta",
+      "teamId": 102,
+      "position": "M",
+      "age": 21,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Villarreal"
     },
     {
       "id": 185100,
@@ -1616,6 +2006,26 @@
       "team": "Levante"
     },
     {
+      "id": 343629,
+      "name": "Alex Fores",
+      "teamId": 102,
+      "position": "F",
+      "age": 25,
+      "goals": 0,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
+      "id": 248276,
+      "name": "Alex Freeman",
+      "teamId": 102,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
       "id": 347411,
       "name": "Álex Padilla",
       "teamId": 93,
@@ -1624,6 +2034,16 @@
       "goals": 0,
       "assists": null,
       "team": "Athletic Club"
+    },
+    {
+      "id": 217319,
+      "name": "Álex Remiro",
+      "teamId": 89,
+      "position": "G",
+      "age": 31,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Sociedad"
     },
     {
       "id": 354342,
@@ -1666,6 +2086,16 @@
       "team": null
     },
     {
+      "id": 367430,
+      "name": "Álvaro Núñez",
+      "teamId": 85,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
       "id": 245839,
       "name": "Andoni Gorosabel",
       "teamId": 93,
@@ -1696,6 +2126,16 @@
       "team": "Barcelona"
     },
     {
+      "id": 144720,
+      "name": "Andrei Radu",
+      "teamId": 85,
+      "position": "G",
+      "age": 29,
+      "goals": 0,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
       "id": 287224,
       "name": "Andrei Ratiu",
       "teamId": 101,
@@ -1704,6 +2144,16 @@
       "goals": 0,
       "assists": null,
       "team": "Rayo Vallecano"
+    },
+    {
+      "id": 414292,
+      "name": "Andrés Antañón",
+      "teamId": 85,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Celta Vigo"
     },
     {
       "id": 257237,
@@ -1716,14 +2166,14 @@
       "team": "Real Madrid"
     },
     {
-      "id": 200910,
-      "name": "Antonio Sivera",
-      "teamId": 96,
+      "id": 307419,
+      "name": "Ángel Fortuño",
+      "teamId": 88,
       "position": "G",
-      "age": 29,
+      "age": 24,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Espanyol"
     },
     {
       "id": 290043,
@@ -1734,6 +2184,16 @@
       "goals": 0,
       "assists": null,
       "team": "Villarreal"
+    },
+    {
+      "id": 307487,
+      "name": "Arsen Zakharyan",
+      "teamId": 89,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Sociedad"
     },
     {
       "id": 414464,
@@ -1786,6 +2246,16 @@
       "team": "Athletic Club"
     },
     {
+      "id": 297371,
+      "name": "Beñat Turrientes",
+      "teamId": 89,
+      "position": "M",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
       "id": 371608,
       "name": "Buba Sangaré",
       "teamId": 3751,
@@ -1796,24 +2266,34 @@
       "team": "Elche"
     },
     {
-      "id": 233802,
-      "name": "Carles Aleñá",
-      "teamId": 96,
-      "position": "M",
-      "age": 28,
+      "id": 195790,
+      "name": "Carl Starfelt",
+      "teamId": 85,
+      "position": "D",
+      "age": 31,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Celta Vigo"
     },
     {
-      "id": 376070,
-      "name": "Carlos Ballestero",
-      "teamId": 96,
+      "id": 312376,
+      "name": "Carlos Domínguez",
+      "teamId": 85,
       "position": "D",
-      "age": 22,
+      "age": 25,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Celta Vigo"
+    },
+    {
+      "id": 415438,
+      "name": "Carlos Macià",
+      "teamId": 102,
+      "position": "M",
+      "age": 17,
+      "goals": 0,
+      "assists": null,
+      "team": "Villarreal"
     },
     {
       "id": 324192,
@@ -1826,16 +2306,6 @@
       "team": "Atlético Madrid"
     },
     {
-      "id": 253754,
-      "name": "Carlos Protesoni",
-      "teamId": 96,
-      "position": "M",
-      "age": 28,
-      "goals": 0,
-      "assists": null,
-      "team": "Alavés"
-    },
-    {
       "id": 330552,
       "name": "César Tárrega",
       "teamId": 94,
@@ -1844,6 +2314,16 @@
       "goals": 0,
       "assists": null,
       "team": "Valencia"
+    },
+    {
+      "id": 323737,
+      "name": "Clemens Riedel",
+      "teamId": 88,
+      "position": "D",
+      "age": 23,
+      "goals": 0,
+      "assists": null,
+      "team": "Espanyol"
     },
     {
       "id": 193917,
@@ -1884,6 +2364,16 @@
       "goals": 0,
       "assists": null,
       "team": "Valencia"
+    },
+    {
+      "id": 341269,
+      "name": "Damián Rodríguez",
+      "teamId": 85,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": null,
+      "team": "Celta Vigo"
     },
     {
       "id": 253763,
@@ -2046,16 +2536,6 @@
       "team": "Sevilla"
     },
     {
-      "id": 255931,
-      "name": "Facundo Garcés",
-      "teamId": 96,
-      "position": "D",
-      "age": 26,
-      "goals": 0,
-      "assists": null,
-      "team": "Alavés"
-    },
-    {
       "id": 276026,
       "name": "Federico Gattoni",
       "teamId": 243,
@@ -2136,14 +2616,14 @@
       "team": "Barcelona"
     },
     {
-      "id": 346534,
-      "name": "Grégoire Swiderski",
-      "teamId": 96,
-      "position": "G",
-      "age": 20,
+      "id": 414293,
+      "name": "Hugo Burcio",
+      "teamId": 85,
+      "position": "M",
+      "age": 19,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Celta Vigo"
     },
     {
       "id": 324811,
@@ -2176,6 +2656,16 @@
       "team": "Athletic Club"
     },
     {
+      "id": 235693,
+      "name": "Igor Zubeldia",
+      "teamId": 89,
+      "position": "D",
+      "age": 29,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
       "id": 411235,
       "name": "Iker Monreal",
       "teamId": 93,
@@ -2194,6 +2684,26 @@
       "goals": 0,
       "assists": null,
       "team": "Osasuna"
+    },
+    {
+      "id": 331047,
+      "name": "Ilias Akhomach",
+      "teamId": 102,
+      "position": "F",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
+      "id": 379457,
+      "name": "Iñaki Rupérez",
+      "teamId": 89,
+      "position": "D",
+      "age": 23,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Sociedad"
     },
     {
       "id": 380918,
@@ -2226,6 +2736,16 @@
       "team": "Rayo Vallecano"
     },
     {
+      "id": 242580,
+      "name": "Iván Villar",
+      "teamId": 85,
+      "position": "G",
+      "age": 29,
+      "goals": 0,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
       "id": 415206,
       "name": "Izei Hernandez",
       "teamId": 96,
@@ -2246,6 +2766,36 @@
       "team": "Atlético Madrid"
     },
     {
+      "id": 231838,
+      "name": "Javi Galán",
+      "teamId": 97,
+      "position": "D",
+      "age": 31,
+      "goals": 0,
+      "assists": null,
+      "team": "Osasuna"
+    },
+    {
+      "id": 367946,
+      "name": "Javi Hernandez",
+      "teamId": 88,
+      "position": "M",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
+      "id": 297354,
+      "name": "Javi López",
+      "teamId": 92,
+      "position": "D",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Oviedo"
+    },
+    {
       "id": 214275,
       "name": "Javi Muñoz",
       "teamId": 2922,
@@ -2254,6 +2804,16 @@
       "goals": 0,
       "assists": null,
       "team": "Getafe"
+    },
+    {
+      "id": 376147,
+      "name": "Javi Rodríguez",
+      "teamId": 85,
+      "position": "D",
+      "age": 23,
+      "goals": 0,
+      "assists": null,
+      "team": "Celta Vigo"
     },
     {
       "id": 395479,
@@ -2366,6 +2926,16 @@
       "team": "Alavés"
     },
     {
+      "id": 324350,
+      "name": "Jon Karrikaburu",
+      "teamId": 89,
+      "position": "F",
+      "age": 23,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
       "id": 286176,
       "name": "Jon Moncayola",
       "teamId": 97,
@@ -2376,11 +2946,11 @@
       "team": "Osasuna"
     },
     {
-      "id": 176312,
-      "name": "Jonny",
+      "id": 297359,
+      "name": "Jon Pacheco",
       "teamId": 96,
       "position": "D",
-      "age": 32,
+      "age": 25,
       "goals": 0,
       "assists": null,
       "team": "Alavés"
@@ -2400,7 +2970,7 @@
       "name": "Jorge Cabello",
       "teamId": 1538,
       "position": "D",
-      "age": 22,
+      "age": 23,
       "goals": 0,
       "assists": null,
       "team": "Levante"
@@ -2446,6 +3016,16 @@
       "team": "Atlético Madrid"
     },
     {
+      "id": 184488,
+      "name": "José Salinas",
+      "teamId": 88,
+      "position": "D",
+      "age": 25,
+      "goals": 0,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
       "id": 376208,
       "name": "Joselu Pérez",
       "teamId": 2922,
@@ -2464,6 +3044,16 @@
       "goals": 0,
       "assists": null,
       "team": "Rayo Vallecano"
+    },
+    {
+      "id": 242710,
+      "name": "Juan Foyth",
+      "teamId": 102,
+      "position": "D",
+      "age": 28,
+      "goals": 0,
+      "assists": null,
+      "team": "Villarreal"
     },
     {
       "id": 177927,
@@ -2506,14 +3096,14 @@
       "team": "Levante"
     },
     {
-      "id": 403705,
-      "name": "Lander Pinillos",
-      "teamId": 96,
-      "position": "M",
-      "age": 22,
+      "id": 360178,
+      "name": "Kazunari Kita",
+      "teamId": 89,
+      "position": "D",
+      "age": 20,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Real Sociedad"
     },
     {
       "id": 231780,
@@ -2546,6 +3136,16 @@
       "team": "Espanyol"
     },
     {
+      "id": 271129,
+      "name": "Logan Costa",
+      "teamId": 102,
+      "position": "D",
+      "age": 25,
+      "goals": 0,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
       "id": 324947,
       "name": "Lucas Laso",
       "teamId": 2922,
@@ -2576,14 +3176,34 @@
       "team": "Rayo Vallecano"
     },
     {
+      "id": 307648,
+      "name": "Luiz Júnior",
+      "teamId": 102,
+      "position": "G",
+      "age": 25,
+      "goals": 0,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
       "id": 356228,
       "name": "Manu Bueno",
       "teamId": 243,
       "position": "M",
-      "age": 21,
+      "age": 22,
       "goals": 0,
       "assists": null,
       "team": "Sevilla"
+    },
+    {
+      "id": 409477,
+      "name": "Manuel Fernández",
+      "teamId": 85,
+      "position": "D",
+      "age": 25,
+      "goals": 0,
+      "assists": null,
+      "team": "Celta Vigo"
     },
     {
       "id": 345489,
@@ -2636,14 +3256,14 @@
       "team": "Atlético Madrid"
     },
     {
-      "id": 198832,
-      "name": "Mariano",
-      "teamId": 96,
-      "position": "F",
-      "age": 32,
+      "id": 179211,
+      "name": "Marko Dmitrovic",
+      "teamId": 88,
+      "position": "G",
+      "age": 34,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Espanyol"
     },
     {
       "id": 141438,
@@ -2666,6 +3286,16 @@
       "team": "Elche"
     },
     {
+      "id": 145600,
+      "name": "Matías Vecino",
+      "teamId": 85,
+      "position": "M",
+      "age": 34,
+      "goals": 0,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
       "id": 297229,
       "name": "Matteo Ruggeri",
       "teamId": 1068,
@@ -2674,6 +3304,16 @@
       "goals": 0,
       "assists": null,
       "team": "Atlético Madrid"
+    },
+    {
+      "id": 396611,
+      "name": "Mikel Goti",
+      "teamId": 89,
+      "position": "M",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Sociedad"
     },
     {
       "id": 287410,
@@ -2706,16 +3346,6 @@
       "team": "Osasuna"
     },
     {
-      "id": 213535,
-      "name": "Moussa Diarra",
-      "teamId": 96,
-      "position": "D",
-      "age": 36,
-      "goals": 0,
-      "assists": null,
-      "team": "Alavés"
-    },
-    {
       "id": 411279,
       "name": "Mykyta Aleksandrov",
       "teamId": 2922,
@@ -2734,16 +3364,6 @@
       "goals": 0,
       "assists": null,
       "team": "Levante"
-    },
-    {
-      "id": 235307,
-      "name": "Nikola Maras",
-      "teamId": 96,
-      "position": "D",
-      "age": 30,
-      "goals": 0,
-      "assists": null,
-      "team": "Alavés"
     },
     {
       "id": 318554,
@@ -2766,6 +3386,16 @@
       "team": "Sevilla"
     },
     {
+      "id": 310682,
+      "name": "Omar El Hilali",
+      "teamId": 88,
+      "position": "D",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
       "id": 269339,
       "name": "Orio Rey",
       "teamId": 1538,
@@ -2786,6 +3416,26 @@
       "team": "Levante"
     },
     {
+      "id": 326900,
+      "name": "Pablo Marín",
+      "teamId": 89,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
+      "id": 282672,
+      "name": "Pablo Ramon",
+      "teamId": 88,
+      "position": "D",
+      "age": 25,
+      "goals": 0,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
       "id": 384985,
       "name": "Paco Cortés",
       "teamId": 1538,
@@ -2796,14 +3446,24 @@
       "team": "Levante"
     },
     {
-      "id": 373789,
-      "name": "Paco Sanz",
-      "teamId": 96,
+      "id": 384544,
+      "name": "Pau Cabanes",
+      "teamId": 102,
+      "position": "F",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
+      "id": 368878,
+      "name": "Pau Navarro",
+      "teamId": 102,
       "position": "D",
       "age": 21,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Villarreal"
     },
     {
       "id": 264078,
@@ -2836,6 +3496,26 @@
       "team": "Getafe"
     },
     {
+      "id": 331757,
+      "name": "Pol Tristan",
+      "teamId": 88,
+      "position": "G",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
+      "id": 383900,
+      "name": "Rafael Bauza",
+      "teamId": 88,
+      "position": "M",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
       "id": 303906,
       "name": "Raúl Moro",
       "teamId": 97,
@@ -2846,14 +3526,44 @@
       "team": "Osasuna"
     },
     {
-      "id": 373796,
-      "name": "Rúben Montero",
-      "teamId": 96,
-      "position": "G",
-      "age": 20,
+      "id": 337011,
+      "name": "Renato Veiga",
+      "teamId": 102,
+      "position": "D",
+      "age": 22,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Villarreal"
+    },
+    {
+      "id": 401377,
+      "name": "Roger Hinojo",
+      "teamId": 88,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
+      "id": 343640,
+      "name": "Rubén Gómez",
+      "teamId": 102,
+      "position": "G",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
+      "id": 319781,
+      "name": "Rubén Sánchez",
+      "teamId": 88,
+      "position": "D",
+      "age": 25,
+      "goals": 0,
+      "assists": null,
+      "team": "Espanyol"
     },
     {
       "id": 422919,
@@ -2886,6 +3596,16 @@
       "team": "Athletic Club"
     },
     {
+      "id": 265993,
+      "name": "Sergio Gómez",
+      "teamId": 89,
+      "position": "F",
+      "age": 25,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
       "id": 191360,
       "name": "Sergio Herrera",
       "teamId": 97,
@@ -2914,6 +3634,16 @@
       "goals": 0,
       "assists": null,
       "team": "Levante"
+    },
+    {
+      "id": 339195,
+      "name": "Thiago Fernández",
+      "teamId": 102,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Villarreal"
     },
     {
       "id": 134283,
@@ -2966,6 +3696,26 @@
       "team": "Rayo Vallecano"
     },
     {
+      "id": 312011,
+      "name": "Unai Marrero",
+      "teamId": 89,
+      "position": "G",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Sociedad"
+    },
+    {
+      "id": 260902,
+      "name": "Unai Núñez",
+      "teamId": 94,
+      "position": "D",
+      "age": 29,
+      "goals": 0,
+      "assists": null,
+      "team": "Valencia"
+    },
+    {
       "id": 222375,
       "name": "Unai Simón",
       "teamId": 93,
@@ -2986,24 +3736,24 @@
       "team": "Levante"
     },
     {
-      "id": 354373,
-      "name": "Victor Parada",
-      "teamId": 96,
-      "position": "D",
-      "age": 24,
+      "id": 307915,
+      "name": "Urko Gonzalez",
+      "teamId": 88,
+      "position": "M",
+      "age": 25,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Espanyol"
     },
     {
-      "id": 149306,
-      "name": "Ville Koski",
-      "teamId": 96,
+      "id": 325553,
+      "name": "Willy Kambwala",
+      "teamId": 102,
       "position": "D",
-      "age": 24,
+      "age": 21,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Villarreal"
     },
     {
       "id": 131634,
@@ -3016,16 +3766,6 @@
       "team": "Barcelona"
     },
     {
-      "id": 415276,
-      "name": "Xanet Oláiz",
-      "teamId": 96,
-      "position": "D",
-      "age": 21,
-      "goals": 0,
-      "assists": null,
-      "team": "Alavés"
-    },
-    {
       "id": 326234,
       "name": "Yago Alonso",
       "teamId": 3751,
@@ -3034,6 +3774,16 @@
       "goals": 0,
       "assists": null,
       "team": "Elche"
+    },
+    {
+      "id": 236185,
+      "name": "Yangel Herrera",
+      "teamId": 89,
+      "position": "M",
+      "age": 28,
+      "goals": 0,
+      "assists": null,
+      "team": "Real Sociedad"
     },
     {
       "id": 384057,
@@ -3056,14 +3806,14 @@
       "team": "Athletic Club"
     },
     {
-      "id": 382532,
-      "name": "Youssef Lekhedim",
-      "teamId": 96,
+      "id": 384643,
+      "name": "Yoel Lago",
+      "teamId": 85,
       "position": "D",
-      "age": 20,
+      "age": 22,
       "goals": 0,
       "assists": null,
-      "team": "Alavés"
+      "team": "Celta Vigo"
     },
     {
       "id": 133768,
@@ -3106,16 +3856,6 @@
       "team": "Elche"
     },
     {
-      "id": 311927,
-      "name": "Adrián",
-      "teamId": 96,
-      "position": "D",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": "Alavés"
-    },
-    {
       "id": 274405,
       "name": "Adrián Guerrero",
       "teamId": 90,
@@ -3144,16 +3884,6 @@
       "goals": null,
       "assists": null,
       "team": "Athletic Club"
-    },
-    {
-      "id": 150374,
-      "name": "Adrián Rodríguez",
-      "teamId": 96,
-      "position": "G",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": "Alavés"
     },
     {
       "id": 388802,
@@ -3246,14 +3976,14 @@
       "team": "Athletic Club"
     },
     {
-      "id": 384145,
-      "name": "Álvaro García",
-      "teamId": 96,
+      "id": 300471,
+      "name": "Alvaro Mantilla",
+      "teamId": 87,
       "position": "D",
-      "age": 20,
+      "age": 26,
       "goals": null,
       "assists": null,
-      "team": "Alavés"
+      "team": null
     },
     {
       "id": 401735,
@@ -3284,6 +4014,16 @@
       "goals": null,
       "assists": null,
       "team": "Getafe"
+    },
+    {
+      "id": 3141,
+      "name": "Andrés Martín",
+      "teamId": 87,
+      "position": "F",
+      "age": 27,
+      "goals": null,
+      "assists": null,
+      "team": null
     },
     {
       "id": 319783,
@@ -3326,6 +4066,16 @@
       "team": "Sevilla"
     },
     {
+      "id": 222365,
+      "name": "Asier Villalibre",
+      "teamId": 87,
+      "position": "F",
+      "age": 28,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
       "id": 199833,
       "name": "Bernardo Silva",
       "teamId": 86,
@@ -3344,6 +4094,26 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 355902,
+      "name": "Cala",
+      "teamId": 88,
+      "position": "F",
+      "age": 26,
+      "goals": null,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
+      "id": 261468,
+      "name": "Carles Pérez",
+      "teamId": 85,
+      "position": "F",
+      "age": 28,
+      "goals": null,
+      "assists": null,
+      "team": "Celta Vigo"
     },
     {
       "id": 324098,
@@ -3376,6 +4146,16 @@
       "team": null
     },
     {
+      "id": 3101339,
+      "name": "César Bonafé Ceita",
+      "teamId": 102,
+      "position": "D",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
       "id": 327167,
       "name": "Charlie Patino",
       "teamId": 90,
@@ -3384,6 +4164,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 3101325,
+      "name": "Cheikh Ahmad Tidiane Thiam",
+      "teamId": 102,
+      "position": "M",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "team": "Villarreal"
     },
     {
       "id": 388602,
@@ -3424,6 +4214,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 381110,
+      "name": "Daniel Budesca",
+      "teamId": 102,
+      "position": "D",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": "Villarreal"
     },
     {
       "id": 331533,
@@ -3586,6 +4386,26 @@
       "team": null
     },
     {
+      "id": 367499,
+      "name": "Facundo González",
+      "teamId": 87,
+      "position": "D",
+      "age": 23,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
+      "id": 361468,
+      "name": "Gabriel Moscardo",
+      "teamId": 88,
+      "position": "M",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
       "id": 181288,
       "name": "Germán Parreño",
       "teamId": 90,
@@ -3606,6 +4426,26 @@
       "team": null
     },
     {
+      "id": 289439,
+      "name": "Giorgi Guliashvili",
+      "teamId": 87,
+      "position": "F",
+      "age": 24,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
+      "id": 341736,
+      "name": "Gustavo Puerta",
+      "teamId": 87,
+      "position": "M",
+      "age": 23,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
       "id": 312338,
       "name": "Haitam Abaida",
       "teamId": 99,
@@ -3614,16 +4454,6 @@
       "goals": null,
       "assists": null,
       "team": null
-    },
-    {
-      "id": 305608,
-      "name": "Hugo Novoa",
-      "teamId": 96,
-      "position": "F",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": "Alavés"
     },
     {
       "id": 82074,
@@ -3656,6 +4486,26 @@
       "team": "Valencia"
     },
     {
+      "id": 279699,
+      "name": "Íñigo Sainz",
+      "teamId": 87,
+      "position": "M",
+      "age": 28,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
+      "id": 284699,
+      "name": "Iñigo Vicente",
+      "teamId": 87,
+      "position": "F",
+      "age": 28,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
       "id": 371564,
       "name": "Izan Merino",
       "teamId": 99,
@@ -3676,16 +4526,6 @@
       "team": null
     },
     {
-      "id": 287165,
-      "name": "Jesús Owono",
-      "teamId": 96,
-      "position": "G",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": "Alavés"
-    },
-    {
       "id": 180444,
       "name": "Joaquín Muñoz",
       "teamId": 99,
@@ -3701,6 +4541,16 @@
       "teamId": 90,
       "position": "M",
       "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
+      "id": 178237,
+      "name": "Jorge Salinas",
+      "teamId": 87,
+      "position": "D",
+      "age": 19,
       "goals": null,
       "assists": null,
       "team": null
@@ -3754,6 +4604,16 @@
       "goals": null,
       "assists": null,
       "team": "Getafe"
+    },
+    {
+      "id": 334268,
+      "name": "Juan Carlos Arana",
+      "teamId": 87,
+      "position": "F",
+      "age": 26,
+      "goals": null,
+      "assists": null,
+      "team": null
     },
     {
       "id": 145565,
@@ -3816,6 +4676,16 @@
       "team": null
     },
     {
+      "id": 354532,
+      "name": "Lautaro Spatz",
+      "teamId": 102,
+      "position": "D",
+      "age": 24,
+      "goals": null,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
       "id": 274197,
       "name": "Lee Kang-In",
       "teamId": 1068,
@@ -3866,6 +4736,26 @@
       "team": null
     },
     {
+      "id": 342654,
+      "name": "Maguette Gueye",
+      "teamId": 87,
+      "position": "M",
+      "age": 23,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
+      "id": 259839,
+      "name": "Manu",
+      "teamId": 87,
+      "position": "D",
+      "age": 28,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
       "id": 259910,
       "name": "Marc Cucurella",
       "teamId": 86,
@@ -3874,6 +4764,26 @@
       "goals": null,
       "assists": null,
       "team": "Real Madrid"
+    },
+    {
+      "id": 354621,
+      "name": "Marcos Fernández",
+      "teamId": 88,
+      "position": "F",
+      "age": 23,
+      "goals": null,
+      "assists": null,
+      "team": "Espanyol"
+    },
+    {
+      "id": 376424,
+      "name": "Marcos González",
+      "teamId": 85,
+      "position": "G",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": "Celta Vigo"
     },
     {
       "id": 402351,
@@ -3966,6 +4876,26 @@
       "team": "Atlético Madrid"
     },
     {
+      "id": 240484,
+      "name": "Moussa Diallo",
+      "teamId": 102,
+      "position": "D",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
+      "id": 3101324,
+      "name": "Nizar El Jmili Ben Hamou",
+      "teamId": 102,
+      "position": "F",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "team": "Villarreal"
+    },
+    {
       "id": 368877,
       "name": "Nordin Al Lal",
       "teamId": 3751,
@@ -3986,6 +4916,16 @@
       "team": null
     },
     {
+      "id": 405521,
+      "name": "Óscar Marcos",
+      "teamId": 85,
+      "position": "F",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": "Celta Vigo"
+    },
+    {
       "id": 351294,
       "name": "Pablo Arriaza",
       "teamId": 99,
@@ -4004,6 +4944,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 414291,
+      "name": "Pablo Meixús",
+      "teamId": 85,
+      "position": "D",
+      "age": 23,
+      "goals": null,
+      "assists": null,
+      "team": "Celta Vigo"
     },
     {
       "id": 414294,
@@ -4034,6 +4984,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 346210,
+      "name": "Quilindschy Hartman",
+      "teamId": 88,
+      "position": "D",
+      "age": 24,
+      "goals": null,
+      "assists": null,
+      "team": "Espanyol"
     },
     {
       "id": 376166,
@@ -4116,16 +5076,6 @@
       "team": "Valencia"
     },
     {
-      "id": 367996,
-      "name": "Selu Diallo",
-      "teamId": 96,
-      "position": "M",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": "Alavés"
-    },
-    {
       "id": 226140,
       "name": "Sergi Canós",
       "teamId": 94,
@@ -4134,6 +5084,46 @@
       "goals": null,
       "assists": null,
       "team": "Valencia"
+    },
+    {
+      "id": 125383,
+      "name": "Sergio Canales",
+      "teamId": 87,
+      "position": "M",
+      "age": 35,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
+      "id": 409318,
+      "name": "Sergio Martínez",
+      "teamId": 87,
+      "position": "M",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
+      "id": 400222,
+      "name": "Simon Eriksson",
+      "teamId": 87,
+      "position": "G",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": null
+    },
+    {
+      "id": 310419,
+      "name": "Suleiman Camara",
+      "teamId": 87,
+      "position": "F",
+      "age": 24,
+      "goals": null,
+      "assists": null,
+      "team": null
     },
     {
       "id": 362123,
@@ -4156,26 +5146,6 @@
       "team": "Getafe"
     },
     {
-      "id": 332008,
-      "name": "Tomás Mendes",
-      "teamId": 96,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Alavés"
-    },
-    {
-      "id": 341334,
-      "name": "Unai Ropero",
-      "teamId": 96,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": "Alavés"
-    },
-    {
       "id": 367655,
       "name": "Xavi Grande",
       "teamId": 1538,
@@ -4194,6 +5164,16 @@
       "goals": null,
       "assists": null,
       "team": null
+    },
+    {
+      "id": 347568,
+      "name": "Yakiv Kinareykin",
+      "teamId": 102,
+      "position": "G",
+      "age": 22,
+      "goals": null,
+      "assists": null,
+      "team": "Villarreal"
     },
     {
       "id": 312392,
