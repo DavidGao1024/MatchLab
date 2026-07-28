@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-07-27T10:03:26.087Z",
+  "updateTime": "2026-07-28T08:46:00.079Z",
   "league": "eng.1",
   "season": "2025",
   "count": 20,
@@ -50,9 +50,8 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/359.png",
       "venue": {
-        "name": "Emirates Stadium",
-        "city": "London",
-        "country": "England"
+        "name": "Aviva Stadium",
+        "city": "Dublin"
       },
       "isActive": true,
       "record": {
@@ -328,11 +327,7 @@
       "alternateColor": "#0000FF",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/357.png",
-      "venue": {
-        "name": "Elland Road",
-        "city": "Leeds",
-        "country": "England"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 11,
@@ -359,7 +354,11 @@
       "alternateColor": "#FFFFFF",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/364.png",
-      "venue": null,
+      "venue": {
+        "name": "Anfield",
+        "city": "Liverpool",
+        "country": "England"
+      },
       "isActive": true,
       "record": {
         "wins": 17,
@@ -387,9 +386,9 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/382.png",
       "venue": {
-        "name": "Etihad Stadium",
-        "city": "Manchester",
-        "country": "England"
+        "name": "Seoul World Cup Stadium",
+        "city": "Seoul",
+        "country": "South Korea"
       },
       "isActive": true,
       "record": {
@@ -418,9 +417,9 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/360.png",
       "venue": {
-        "name": "Old Trafford",
-        "city": "Manchester",
-        "country": "England"
+        "name": "Friends Arena",
+        "city": "Stockholm",
+        "country": "Sweden"
       },
       "isActive": true,
       "record": {
@@ -541,7 +540,11 @@
       "alternateColor": "#000000",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/367.png",
-      "venue": null,
+      "venue": {
+        "name": "Tottenham Hotspur Stadium",
+        "city": "London",
+        "country": "England"
+      },
       "isActive": true,
       "record": {
         "wins": 10,
