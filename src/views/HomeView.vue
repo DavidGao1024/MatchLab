@@ -1,33 +1,112 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
+import DataError from '../components/common/DataError.vue'
+import DataLoading from '../components/common/DataLoading.vue'
+import LeagueCard from '../components/home/LeagueCard.vue'
+import MatchdayStrip from '../components/home/MatchdayStrip.vue'
+import { fetchJsonCached } from '../composables/useJsonFetch'
+import { ensureLeague } from '../composables/useLeague'
+import { useAppStore } from '../stores/app'
+import { useStandingsStore } from '../stores/standings'
+import type { Match } from '../types/models'
+import type { MatchesFile } from '../types/static'
+import { FOCUS_LEAGUE, LEAGUE_SLUGS, defaultMonth, seasonMonths } from '../utils/constants'
+import { lastCompletedMatchday, selectStripMatches } from '../utils/matches'
 
-// 图纸决策：静态 JSON fetch 一律走 BASE_URL 前缀（base '/MatchLab/'，禁用 '/data/...' 绝对路径）
-const ping = ref<Record<string, unknown> | null>(null)
+const app = useAppStore()
+const standings = useStandingsStore()
+
+const focus = FOCUS_LEAGUE
+const others = LEAGUE_SLUGS.filter((l) => l !== focus)
+
+const seq = ref(0)
 const error = ref('')
+const loading = ref(true)
 
-onMounted(async () => {
+interface Strip {
+  matches: Match[] // 该比赛日全部比赛（未筛选）
+  utcDate: string
+  month: string
+}
+const strip = ref<Strip | null>(null)
+
+async function load() {
+  const my = ++seq.value
+  error.value = ''
+  loading.value = true
   try {
-    const res = await fetch(`${import.meta.env.BASE_URL}data/ping.json`)
-    if (!res.ok) throw new Error(`HTTP ${res.status}`)
-    ping.value = await res.json()
+    await app.loadLeagues()
+    const season = app.leagueInfo(focus)?.season ?? '2025'
+    // 并行：焦点联赛档案 + 五联赛正榜（首页不带形势列，守 53KB 首访账本）
+    await Promise.all([
+      ensureLeague(focus),
+      ...LEAGUE_SLUGS.map((l) => standings.load(l, season, { withForm: false }).catch(() => null)),
+    ])
+    // "上轮" = 最近一个有完赛的比赛日，从默认月份往前最多回看 2 个月份文件（规格 v1.2）
+    const months = seasonMonths(season)
+    const from = months.indexOf(defaultMonth(season))
+    const scan = months.slice(Math.max(0, from - 1), from + 1).reverse()
+    let found: Strip | null = null
+    for (const m of scan) {
+      if (seq.value !== my) return // 过期响应防护：扫描途中视图已切换则立即放弃
+      let matches: Match[]
+      try {
+        matches = (await fetchJsonCached<MatchesFile>(`data/${focus}/matches/${m}.json`, 60 * 60 * 1000, season)).matches
+      } catch {
+        continue // 该月文件缺失 → 继续回看
+      }
+      const d = lastCompletedMatchday(matches)
+      if (d) {
+        found = { matches: matches.filter((x) => x.date.slice(0, 10) === d), utcDate: d, month: m }
+        break
+      }
+    }
+    if (seq.value !== my) return
+    strip.value = found
   } catch (e) {
+    if (seq.value !== my) return
     error.value = e instanceof Error ? e.message : String(e)
+  } finally {
+    if (seq.value === my) loading.value = false
   }
+}
+
+onMounted(load)
+
+// 选场：榜首/榜二优先 + 开球时间补足 4 场（规格 v1.4 确定性规则）
+const stripMatches = computed(() =>
+  strip.value ? selectStripMatches(strip.value.matches, standings.rows[focus] ?? []) : [],
+)
+const topTeamId = computed(() => (standings.rows[focus] ?? []).find((r) => r.rank === 1)?.teamId)
+const featuredId = computed(() => {
+  const id = topTeamId.value
+  if (id === undefined) return ''
+  return stripMatches.value.find((m) => m.home.id === id || m.away.id === id)?.eventId ?? ''
 })
 </script>
 
 <template>
-  <main class="min-h-screen bg-slate-950 text-slate-100 flex flex-col items-center justify-center gap-4">
-    <h1 class="text-4xl font-bold tracking-tight">MatchLab</h1>
-    <p class="text-slate-400">五大联赛数据查询 · Phase 0 脚手架</p>
-    <div v-if="error" class="text-red-400">
-      测试 JSON 获取失败：{{ error }}
-    </div>
-    <div v-else-if="ping" class="text-emerald-400">
-      public/data/ 读取成功 → <code>{{ JSON.stringify(ping) }}</code>
-    </div>
-    <div v-else class="text-slate-500">
-      正在获取 public/data/ping.json …
-    </div>
-  </main>
+  <div class="py-6">
+    <DataError v-if="error" :message="error" @retry="load" />
+    <DataLoading v-else-if="loading && !standings.rows[focus]" kind="cards" />
+    <template v-else>
+      <!-- ① 上轮战报转播带（查不到完赛比赛日则不出，规格 v1.2） -->
+      <MatchdayStrip
+        v-if="strip && stripMatches.length"
+        :league="focus"
+        :utc-date="strip.utcDate"
+        :month="strip.month"
+        :matches="stripMatches"
+        :featured-id="featuredId"
+      />
+
+      <!-- ② 联赛板块：焦点大卡 + 2×2 小卡（不对称布局，规格 §四） -->
+      <div class="mt-6 grid gap-4 lg:grid-cols-12">
+        <LeagueCard :league="focus" featured class="lg:col-span-7" />
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-5">
+          <LeagueCard v-for="l in others" :key="l" :league="l" />
+        </div>
+      </div>
+    </template>
+  </div>
 </template>

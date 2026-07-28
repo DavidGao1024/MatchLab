@@ -9,7 +9,7 @@ import { t, teamName } from '../../utils/i18n'
 import type { Team } from '../../types/models'
 import TeamLogo from '../common/TeamLogo.vue'
 
-const props = defineProps<{ match: Match; league: LeagueSlug }>()
+const props = withDefaults(defineProps<{ match: Match; league: LeagueSlug; featured?: boolean }>(), { featured: false })
 const app = useAppStore()
 const tz = useTimezone()
 const teams = useTeamsStore()
@@ -40,8 +40,13 @@ const scoreCls = computed(() => (tone.value.home === 'draw' && props.match.statu
 <template>
   <article
     class="group rounded-lg border px-4 py-2.5 transition-all hover:translate-x-1"
-    :class="'border-white/10 bg-[#131a2b] hover:border-[var(--league-color)] hover:bg-[#171f33]'"
+    :class="featured ? 'border-[var(--league-color)] bg-[#191036]' : 'border-white/10 bg-[#131a2b] hover:border-[var(--league-color)] hover:bg-[#171f33]'"
   >
+    <span
+      v-if="featured"
+      class="mb-1.5 inline-block rounded px-1.5 py-0.5 font-cond text-[9px] font-semibold tracking-[0.14em] text-[#0b0f1a]"
+      style="background: var(--league-color)"
+    >{{ t('home.focus', app.lang) }}</span>
     <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
       <!-- 主队（右对齐） -->
       <div class="flex min-w-0 items-center justify-end gap-2.5">

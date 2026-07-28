@@ -41,19 +41,23 @@ export const useStandingsStore = defineStore('standings', {
       const merged = mergeStandings(raw, league, xg?.standings ?? null, this.teamNameMap)
       this.rows[league] = applyForm(merged, this.formMatches[league] ?? [])
     },
-    async load(league: LeagueSlug, season: string) {
+    async load(league: LeagueSlug, season: string, opts: { withForm?: boolean } = {}) {
+      const withForm = opts.withForm ?? true
       this.loading[league] = true
       try {
         const sf = await fetchJsonCached<StandingsFile>(`data/${league}/standings.json`, STANDINGS_TTL, season)
-        const months = formMonths(season)
-        // 两个月份文件并行拉，单个失败容错（该窗口缺一月仍算得出形势）
-        const files = await Promise.all(
-          months.map((m) =>
-            fetchJsonCached<MatchesFile>(`data/${league}/matches/${m}.json`, STANDINGS_TTL, season).catch(() => null),
-          ),
-        )
         this.raw[league] = sf.standings
-        this.formMatches[league] = files.flatMap((f) => f?.matches ?? [])
+        if (withForm) {
+          const months = formMonths(season)
+          const files = await Promise.all(
+            months.map((m) =>
+              fetchJsonCached<MatchesFile>(`data/${league}/matches/${m}.json`, STANDINGS_TTL, season).catch(() => null),
+            ),
+          )
+          this.formMatches[league] = files.flatMap((f) => f?.matches ?? [])
+        } else {
+          this.formMatches[league] = []
+        }
         this.updateTime[league] = sf.updateTime
         this.rebuild(league, null)
         if (this.xgOn[league]) {

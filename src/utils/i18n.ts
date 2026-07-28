@@ -115,6 +115,7 @@ const UI: Record<string, { zh: string; en: string }> = {
   'home.teamsUnit': { zh: '队', en: 'teams' },
   'home.playersUnit': { zh: '名球员', en: 'players' },
   'home.playedUnit': { zh: '场已战罢', en: 'matches played' },
+  'home.focus': { zh: '焦点', en: 'Focus' },
   'col.team': { zh: '球队', en: 'Team' },
   'col.played': { zh: '赛', en: 'P' },
   'col.won': { zh: '胜', en: 'W' },
