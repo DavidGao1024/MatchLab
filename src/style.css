@@ -23,6 +23,7 @@ body {
 .tabular { font-variant-numeric: tabular-nums; }
 
 /* 背景三层之二：极淡球场标线纹理（中圈 + 中线） */
+/* 装饰层约定：背景两层 z-index: 0 + pointer-events: none；页面内容须 relative z-10 以上（App.vue main 已处理） */
 .pitch-texture {
   position: fixed;
   inset: 0;
@@ -46,8 +47,12 @@ body {
   background-color: var(--league-color);
   opacity: 0.22;
   filter: blur(70px);
+  -webkit-mask-image: radial-gradient(closest-side, black, transparent);
   mask-image: radial-gradient(closest-side, black, transparent);
   transition: background-color 0.8s ease;
+  /* 提升为独立合成层，避免整页滚动反复光栅化大模糊（规格 §六性能预算） */
+  will-change: background-color;
+  transform: translateZ(0);
 }
 
 /* 无障碍基线：焦点环走联赛色（规格 §七） */
