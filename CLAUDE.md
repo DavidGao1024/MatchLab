@@ -7,7 +7,7 @@
 ## 一、项目画像
 
 - **代号**：MatchLab — 五大联赛（英超/西甲/意甲/德甲/法甲）数据查询网站
-- **当前阶段**：Phase 2 完成并已部署上线 + 中超联赛全链接入（六联赛：积分榜+赛程+首页+扣分+队徽覆盖，49 项单测全绿，2026-07-28 验收），待令开 Phase 3（比赛详情弹窗）；施工图纸见 `docs/implementation-plan.md`
+- **当前阶段**：Phase 3 比赛详情弹窗主体完工 + 球员中文译名表抓取上线（六联赛弹窗：阵容可视化/事件时间线/技术统计/H2H，懂球帝译名表 7486 个变体覆盖英超中超，2026-07-29 验收）；待令继续抓其他 4 联赛译名 + Phase 4–6；施工图纸见 `docs/implementation-plan.md`
 - **协作模式**：总司令下令 → 营长执行；全局铁律（未经指令不改码、先汇报后更新、不擅自持久化）全程有效
 
 ## 二、军衔记录（本项目独立计算）
@@ -17,13 +17,14 @@
 | 2026-07-23 | 新兵 | 项目建档入伍；完成数据源调研交接、CLAUDE.md 建档 |
 | 2026-07-24 | 班长 | 总司令亲批越级晋升（原拟列兵）：同日连克 Phase 0 + Phase 1——脚手架 → 数据管线上线（6339 请求 / 0 失败 / 26 条映射与调研完全吻合）；CORS 实测、Vite 钉版、三源交叉验证数战皆捷 |
 | 2026-07-28 | **排长** | 总司令亲批晋升：Phase 2 全链部署上线（积分榜+赛程+首页，48 单测全绿）；同日连克 UI 自适应（flex 撑满+卡片拉伸+宽屏多列）、深色滚动条、中超全链接入（ESPN chn.1 实测→数据管线→前端六联赛→16 队队名→队徽覆盖机制→赛季前扣分计算），49 单测全绿 |
+| 2026-07-29 | **连长** | 总司令亲批晋升：Phase 3 比赛详情弹窗主体完工——单页滚动世界杯风（金比分/绿色足球场/球员金边圆牌），阵容按 position 缩写 posOrder/midDepthRank 排序（修复 getFieldXY 副作用 mutate cats 数组导致 for...of 跳项重复迭代 bug），事件时间线 participants 字段对齐 ESPN 实际结构（进球 [射手, 助攻者] / 换人 [入局, 出局]），技术统计精简到 10 项核心；连克两潜伏 bug：① stat 字段 `displayValue` 非 `value` 导致全 0 ② stat name 是 camelCase（possessionPct/wonCorners）非 kebab-case 导致 label 英文回退；球员中文译名表抓取上线（懂球帝 API 链路：roster→详情页 vm 沙箱 NUXT eval，59 单测全绿） |
 
 ## 三、技术栈与架构偏好
 
 - Vite 6 + Vue 3（`<script setup>`）+ Pinia + Vue Router 4（hash mode）+ TypeScript strict + Tailwind 4 + MiniSearch
 - 环境钉版（2026-07-24 定）：Node ≥20.19（本地 20.19.6），`.nvmrc` / package.json engines / Actions setup-node 三处一致；Vite 钉 6（脚手架用 `npm create vite@6`，不用 latest）；vue-router 钉 `@4`（latest 已是 v5，要求 Vite 7/8，不兼容）
 - GitHub Pages 静态部署（base `/MatchLab/` = 仓库名）；数据管线 = GitHub Actions + 零依赖 Node 脚本 → 静态 JSON
-- 数据源定调：ESPN site.api 浏览器直连；ESPN core API 与 Understat 一律走 Actions；FBref / Transfermarkt 弃用
+- 数据源定调：ESPN site.api 浏览器直连；ESPN core API 与 Understat 一律走 Actions；FBref / Transfermarkt 弃用；懂球帝用于球员中文译名表抓取（Actions 跑）
 
 ## 四、项目工作流
 
@@ -31,7 +32,7 @@
 - 计划文档统一放 `projectDoc/plan/`，一个任务一个文件
 - 数据结构与 API 接口不能变，UI 可大改
 - 抓取脚本永远零依赖（仅 Node 内置模块）
-- 开工须先获总司令明确指令，当前状态：🟡 施工中（Phase 0–2 ✅ 已部署上线，待令开 Phase 3）
+- 开工须先获总司令明确指令，当前状态：🟡 施工中（Phase 0–3 ✅ 弹窗主体完工 + 中英译名表抓取上线，待令继续抓其他 4 联赛译名 + Phase 4–6）
 
 ---
 
@@ -69,6 +70,12 @@ node scripts/fetch-espn-scores.js                  # → public/data/{league}/ma
 # Understat ↔ ESPN 队名映射（依赖上面两个脚本的产物）
 node scripts/build-team-map.js                     # → public/data/mappings/team-name-map.json
 
+# 懂球帝球员中英文译名抓取（Phase 3 弹窗中文化，Actions 跑）
+node scripts/fetch-dqd-players.js                  # 默认抓英超全 20 队 → 合并到 players-zh.json
+node scripts/fetch-dqd-players.js --csl           # 中超全 16 队
+node scripts/fetch-dqd-players.js 50000513         # 单队测试（阿森纳）
+# 其他联赛需先探查 season_id（dongqiudi 主页 sidebar 切换 + network 监听），加 --epl/--csl 之外参数需改脚本 LEAGUES 配置
+
 # FBref HTML 解析原型（URL 模式被 Cloudflare JS 挑战拦截，只能用浏览器手动保存的本地 HTML）
 node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 ```
@@ -94,9 +101,10 @@ node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 
 | 源 | 覆盖 | 状态 |
 |---|---|---|
-| ESPN site.api | 赛程/比分/阵容/事件/28 项技术统计/H2H/伤病；联赛 slug：`eng.1` / `esp.1` / `ita.1` / `ger.1` / `fra.1` | ✅ 浏览器可直连 |
+| ESPN site.api | 赛程/比分/阵容/事件/28 项技术统计/H2H/伤病；联赛 slug：`eng.1` / `esp.1` / `ita.1` / `ger.1` / `fra.1` / `chn.1` | ✅ 浏览器可直连 |
 | ESPN core API | 球队（颜色/队徽/场馆）、球员档案 + 70+ 字段统计、12 项联赛排行榜、26 个历史赛季、220 个联赛元数据 | ✅ 走 Actions |
 | Understat | 五大联赛 xG/xA/npxG/xGChain/xGBuildup、球员逐场时间线、单场阵容细位置 | ✅ 免费无 Key，走 Actions |
+| 懂球帝 | 球员中英文译名对照表（roster API + 球员详情页 NUXT vm 沙箱提取）；英超 season_id=24646、中超=26322，其他联赛待探查 | ✅ Actions 跑 `scripts/fetch-dqd-players.js` |
 | FBref | 射门坐标地图等 | ❌ Cloudflare JS 挑战，curl/Node/CF Worker 反代都过不了 |
 | Transfermarkt | 身价/转会 | ❌ API 全封，MVP 不做 |
 
@@ -107,6 +115,7 @@ node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 - ESPN standings 端点返回空 → 积分榜本地从比分计算（`computeStandings()` 模式，沿用世界杯项目）
 - 球员**单赛季**统计用 `/seasons/{year}/types/1/athletes/{id}/statistics/0`；不带 seasons 路径的 `.../athletes/{id}/statistics/0` 是生涯累计，两者别混用
 - 端点完整清单在 data-site-mvp-plan.md 的 2026-07-21 几篇调研记录里，写抓取脚本前先查
+- 球员中文译名：`public/data/mappings/players-zh.json`（7486 个变体），App.vue 启动时 `loadPlayerNames()` 异步加载合并到 PLAYER_ZH；`playerName(name, lang)` 函数带去重音 + 大小写不敏感 + 分词回退；中文模式命中显示译名，未命中显示 ESPN shortName
 
 ## 跨源 Join（ESPN ↔ Understat）
 

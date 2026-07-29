@@ -3,16 +3,23 @@ import { watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import AppFooter from './components/layout/AppFooter.vue'
 import AppHeader from './components/layout/AppHeader.vue'
+import MatchModal from './components/matches/MatchModal.vue'
 import { useAppStore } from './stores/app'
+import { useMatchesStore } from './stores/matches'
+import { loadPlayerNames } from './utils/i18n'
 import { isLeagueSlug } from './utils/constants'
 
 const app = useAppStore()
 const route = useRoute()
+const matches = useMatchesStore()
 
 // 启动即拉联赛列表（1.4KB，首页板块与页脚都靠它）
 app.loadLeagues().catch(() => {
   /* 失败不阻塞壳渲染，首页会各自挂错误态 */
 })
+
+// 异步加载球员中文译名表（130KB，世界杯项目同款源；不阻塞首屏）
+loadPlayerNames()
 
 // 联赛光晕：路由 league 优先，否则用当前焦点联赛；颜色写根节点 CSS 变量
 watchEffect(() => {
@@ -32,5 +39,12 @@ watchEffect(() => {
       <router-view class="flex flex-col flex-1" />
     </main>
     <AppFooter />
+    <!-- Phase 3：全局比赛详情弹窗 -->
+    <MatchModal
+      v-if="matches.activeMatch"
+      :match="matches.activeMatch.match"
+      :league="matches.activeMatch.league"
+      @close="matches.closeMatch()"
+    />
   </div>
 </template>

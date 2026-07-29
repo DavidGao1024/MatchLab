@@ -82,3 +82,85 @@ export interface DayGroup {
   utcDate: string
   matches: Match[]
 }
+
+// ===== Match Summary（Phase 3 弹窗归一化模型）=====
+
+export type MatchEventType =
+  | 'goal'
+  | 'ownGoal'
+  | 'yellow'
+  | 'red'
+  | 'secondYellow'
+  | 'substitution'
+  | 'penalty'
+  | 'penaltyMissed'
+
+export interface MatchEvent {
+  id: string
+  type: MatchEventType
+  /** 主客归属：按 ESPN team.id 归到得分方（乌龙球同理，已确认） */
+  side: 'home' | 'away'
+  minute: number
+  /** 进球/黄红牌球员名；换人：出局球员名 */
+  primaryName: string
+  /** 换入球员名（仅 substitution）/ 进球助攻者（可选） */
+  secondaryName?: string
+  /** 进球比分快照，如 "1-0" */
+  scoreSnapshot?: string
+}
+
+export interface LineupPlayer {
+  id: number
+  jersey?: string
+  name: string
+  shortName: string
+  position: string // GK / D / M / F / 未知 fallback
+  /** ESPN 原始位置缩写（LB / CD-L / AM-R 等），用于同排左右排序 */
+  positionAbbr?: string
+  /** ESPN 原始位置全名（Left Midfielder 等），用于兜底识别 midfielder/defender/forward */
+  positionName?: string
+  starter: boolean
+  /** 阵型分层索引：0=后卫线 1=中场线 2=前锋线（GK 不在此体系） */
+  lineIndex?: number
+  /** 同一行内的横向位置序号（0 起） */
+  rowIndex?: number
+  /** 同一行内总位置数（用于 x 均分） */
+  lineTotal?: number
+  /** 在足球场上的 X 坐标百分比（0-100），由 useEspanFetch 算好 */
+  x?: number
+  /** 在足球场上的 Y 坐标百分比（0-100），GK 在底部约 88%，前锋在顶部约 16% */
+  y?: number
+}
+
+export interface MatchLineup {
+  teamId: number
+  formation?: string
+  starters: LineupPlayer[]
+  bench: LineupPlayer[]
+  coachName?: string
+}
+
+export interface StatRow {
+  label: string
+  home: string | number
+  away: string | number
+  /** 占比类（如控球率）true 时按主客比例画条 */
+  isPercent?: boolean
+}
+
+export interface H2HEntry {
+  date: string
+  homeName: string
+  homeScore: number | null
+  awayName: string
+  awayScore: number | null
+  venue?: string
+}
+
+export interface MatchSummary {
+  /** 主客 lineup */
+  lineups: { home: MatchLineup | null; away: MatchLineup | null }
+  events: MatchEvent[]
+  stats: StatRow[]
+  h2h: H2HEntry[]
+}

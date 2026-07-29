@@ -17,6 +17,8 @@ export const useMatchesStore = defineStore('matches', {
     fallback: false,   // 直播断线已退回快照（挂提示用）
     empty: false,      // 当月/该月无联赛比赛（空场/休赛期状态用）
     timer: null as ReturnType<typeof setInterval> | null,
+    // Phase 3：全局比赛详情弹窗
+    activeMatch: null as { match: Match; league: LeagueSlug } | null,
   }),
   actions: {
     key(league: LeagueSlug, month: string) {
@@ -88,6 +90,13 @@ export const useMatchesStore = defineStore('matches', {
         clearInterval(this.timer)
         this.timer = null
       }
+    },
+    // Phase 3：弹窗开关
+    openMatch(match: Match, league: LeagueSlug) {
+      this.activeMatch = { match, league }
+    },
+    closeMatch() {
+      this.activeMatch = null
     },
   },
 })

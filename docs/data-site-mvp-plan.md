@@ -176,6 +176,57 @@
 
 > 按日期倒序记录每次调研进展，格式：`### YYYY-MM-DD`
 
+### 2026-07-29 — 懂球帝中英文球员译名表抓取（Phase 3 弹窗球员名中文化）
+
+**调研内容**：ESPN site.api summary 返回的 roster 只有英文 displayName / shortName，没有中文译名 API。Phase 3 比赛详情弹窗在中文模式下球员名仍是英文，需要外部源补中英对照表。
+
+**调研路径**：
+1. 复用世界杯项目 `data/players-zh.json`（3737 球员，源：2026fifa.tw）——只覆盖世界杯 48 队参赛球员，五大联赛中下游球员（利兹联/伯恩利等）几乎全缺
+2. ESPN core athlete 端点验证——无 `translations` 字段，中超数据也是英文，无中文 API
+3. 试懂球帝——成功。完整 API 链路如下：
+
+**懂球帝 API 链路（实测可用，2026-07-29）**：
+- **roster**：`GET https://www.dongqiudi.com/sport-data/soccer/biz/dqd/v1/team/member_v2/{team_id}?app=dqd`
+  - 返回 `{ code:0, data:{ list:[ { type:'goalkeeper'|'defender'|'midfielder'|'attacker'|'coach', data:[ { person_id, person_name(中文), person_logo, nationality_name, ... } ] } ] }, seasons:[...] }`
+  - 必须带 `Referer: https://www.dongqiudi.com/team/{team_id}` 否则返回 HTML 反爬页
+- **球员英文名**：roster API **不含**英文名，需拉球员详情页 HTML
+  - `GET https://www.dongqiudi.com/player/{person_id}`
+  - HTML 含 `window.__NUXT__=(function(a,b,...){return {data:[{detail:{base_info:{person_name:var, person_en_name:var, ...}}]}}})("v1","v2",...)`
+  - **关键坑**：base_info 里 `person_en_name` 是变量引用（如 `dH`）而非字面量，HTML 里出现的字面量 `person_en_name:"Mikel Arteta"` 是"相关球员"推荐列表不是当前球员
+  - 解决：用 Node `vm.createContext + runInContext` 沙箱执行整个 NUXT IIFE，取 `sandbox.window.__NUXT__.data[0].detail.base_info.person_en_name`
+- **联赛球队列表**（找 team_id）：
+  - `GET https://www.dongqiudi.com/sport-data/soccer/biz/data/standing?season_id={X}&app=dqd&version=850&platform=ios&language=zh-cn`
+  - 必须带 `Referer` 否则反爬
+  - 返回 `{ content:{ rounds:[{ content:{ data:[{ team_id, team_name }] }] }] }`
+- **联赛 season_id 探查**（dongqiudi 的 league 页是 SPA，HTML NUXT 空，HTML title 是默认值）：
+  - 直接试 URL 参数无效；正确方法——用浏览器打开 `https://www.dongqiudi.com/` 主页，点击右侧 sidebar 联赛切换按钮（"中超"/"英超"等），监听 network 看实际 standing API 的 season_id
+  - 实测：**英超=24646**、**中超=26322**（其他联赛待探查）
+
+**输出格式**：
+- 译名表每个球员展开为 3 种 key 格式，对应 ESPN 的 displayName 和 shortName：
+  - 完整名 `"Mikel Arteta"`
+  - 短名带点 `"M. Arteta"`（ESPN shortName 常见格式）
+  - 短名无点 `"M Arteta"`（备选格式）
+- 合并策略：手填表 > 已有译名表 > 本次抓取（避免覆盖人工维护的高质量译名）
+
+**抓取脚本**：`scripts/fetch-dqd-players.js`（零依赖，CommonJS）
+- 默认：`node scripts/fetch-dqd-players.js` → 抓英超全 20 队
+- `--csl`：抓中超全 16 队
+- 单队测试：`node scripts/fetch-dqd-players.js 50000513`
+- 200ms 间隔防限流；输出 `public/data/mappings/players-zh.json`，自动合并已有
+
+**实测覆盖**（2026-07-29）：
+- 英超 20 队 × ~30 球员 = 新增 1791 个译名变体（约 600 球员）
+- 中超 16 队 × ~35 球员 = 新增 1863 个变体
+- 加 WC 表 3737 + 手填 45，去重后总量 **7486 个译名变体**
+- 浏览器实测：利兹联 11 首发全中文化（达洛/比约尔/斯特鲁伊克/...），中超云南玉昆 11 首发 9 中文化
+
+**剩余工作**（其他 4 联赛 + 后续优化）：
+- 西甲/意甲/德甲/法甲：需用同样方法（dongqiudi 主页 sidebar 切换 + network 监听）找各联赛 season_id，再跑脚本
+- 边缘球员未中文化：ESPN shortName 与 dongqiudi 完整名格式不一致（如 ESPN `Y. Bao` vs dongqiudi `Yang Bo`），可补展开变体（如 `"Y Bao"` 无点格式已展开，但 `"Y. Bao"` vs `"Y. Bo"` 末字母差异需补）
+
+---
+
 ### 2026-07-24 — ESPN core 球员注册覆盖不均（Phase 1 全量抓取发现）
 
 **调研内容**：Phase 1 全量抓取实测 ESPN core 联赛级球员列表（`/leagues/{slug}/athletes`）的实际 count。

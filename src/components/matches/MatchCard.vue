@@ -5,6 +5,7 @@ import type { LeagueSlug } from '../../utils/constants'
 import { useAppStore } from '../../stores/app'
 import { useTimezone } from '../../composables/useTimezone'
 import { useTeamsStore } from '../../stores/teams'
+import { useMatchesStore } from '../../stores/matches'
 import { t, teamName } from '../../utils/i18n'
 import type { Team } from '../../types/models'
 import TeamLogo from '../common/TeamLogo.vue'
@@ -13,6 +14,11 @@ const props = withDefaults(defineProps<{ match: Match; league: LeagueSlug; featu
 const app = useAppStore()
 const tz = useTimezone()
 const teams = useTeamsStore()
+const matches = useMatchesStore()
+
+function open() {
+  matches.openMatch(props.match, props.league)
+}
 
 // 比赛自带 logo URL；档案里有就用档案（含 logoDark/主色），没有就现场拼一个
 const homeTeam = computed<Team | undefined>(() =>
@@ -39,8 +45,9 @@ const scoreCls = computed(() => (tone.value.home === 'draw' && props.match.statu
 
 <template>
   <article
-    class="group rounded-lg border px-4 py-2.5 transition-all hover:translate-x-1"
+    class="group cursor-pointer rounded-lg border px-4 py-2.5 transition-all hover:translate-x-1"
     :class="featured ? 'border-[var(--league-color)] bg-[#191036]' : 'border-white/10 bg-[#131a2b] hover:border-[var(--league-color)] hover:bg-[#171f33]'"
+    @click="open"
   >
     <span
       v-if="featured"

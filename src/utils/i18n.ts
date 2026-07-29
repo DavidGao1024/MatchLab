@@ -168,6 +168,30 @@ const UI: Record<string, { zh: string; en: string }> = {
   'form.win': { zh: '胜', en: 'Win' },
   'form.draw': { zh: '平', en: 'Draw' },
   'form.loss': { zh: '负', en: 'Loss' },
+  // Phase 3 弹窗
+  'modal.close': { zh: '关闭', en: 'Close' },
+  'modal.loading': { zh: '加载中', en: 'Loading' },
+  'modal.error': { zh: '比赛详情加载失败', en: 'Failed to load match' },
+  'modal.lineup': { zh: '阵容', en: 'Lineup' },
+  'modal.timeline': { zh: '时间线', en: 'Timeline' },
+  'modal.stats': { zh: '统计', en: 'Stats' },
+  'modal.h2h': { zh: '历史交锋', en: 'Head to Head' },
+  'lineup.formation': { zh: '阵型', en: 'Formation' },
+  'lineup.bench': { zh: '替补', en: 'Bench' },
+  'lineup.coach': { zh: '主教练', en: 'Coach' },
+  'lineup.notAnnounced': { zh: '阵容尚未公布', en: 'Lineup not announced yet' },
+  'events.goal': { zh: '进球', en: 'Goal' },
+  'events.ownGoal': { zh: '乌龙', en: 'Own Goal' },
+  'events.yellow': { zh: '黄牌', en: 'Yellow' },
+  'events.red': { zh: '红牌', en: 'Red' },
+  'events.secondYellow': { zh: '两黄变红', en: '2nd Yellow' },
+  'events.substitution': { zh: '换人', en: 'Sub' },
+  'events.penalty': { zh: '点球', en: 'Penalty' },
+  'events.penaltyMissed': { zh: '点球未中', en: 'Penalty Missed' },
+  'h2h.expand': { zh: '展开历史交锋', en: 'Expand H2H' },
+  'h2h.collapse': { zh: '收起', en: 'Collapse' },
+  'h2h.noMatches': { zh: '暂无历史交锋数据', en: 'No previous meetings' },
+  'h2h.vs': { zh: '对阵', en: 'vs' },
 }
 
 /** 界面文案唯一出口；未定义的键原样返回 */
@@ -178,4 +202,114 @@ export function t(key: string, lang: Lang): string {
 /** 队名：中文查译名表，英文/未收录直接用数据原始 displayName */
 export function teamName(name: string, lang: Lang): string {
   return lang === 'zh' ? (TEAM_ZH[name] ?? name) : name
+}
+
+// ===== 球员中文名映射 =====
+// 高频球员手填（覆盖五大联赛明星）；启动时异步加载 players-zh.json 合并扩充
+// 未收录 fallback：去重音 + 大小写不敏感 + 分词回退（沿用世界杯项目 trPlayer 策略）
+let PLAYER_ZH: Record<string, string> = {
+  // 英超
+  'Mohamed Salah': '萨拉赫',
+  'Erling Haaland': '哈兰德',
+  'Kevin De Bruyne': '德布劳内',
+  'Bukayo Saka': '萨卡',
+  'Martin Ødegaard': '厄德高',
+  'Heung-Min Son': '孙兴慜',
+  'James Maddison': '麦迪逊',
+  'Cole Palmer': '帕尔默',
+  'Alexander Isak': '伊萨克',
+  'Ollie Watkins': '沃特金斯',
+  'Bruno Fernandes': 'B·费尔南德斯',
+  'Marcus Rashford': '拉什福德',
+  'Phil Foden': '福登',
+  'Virgil van Dijk': '范迪克',
+  'Alisson Becker': '阿利松',
+  'Trent Alexander-Arnold': '阿诺德',
+  // 西甲
+  'Jude Bellingham': '贝林厄姆',
+  'Vinícius Júnior': '维尼修斯',
+  'Kylian Mbappé': '姆巴佩',
+  'Lamine Yamal': '亚马尔',
+  'Robert Lewandowski': '莱万多夫斯基',
+  'Pedri': '佩德里',
+  'Gavi': '加维',
+  'Federico Valverde': '巴尔韦德',
+  // 意甲
+  'Lautaro Martínez': '劳塔罗',
+  'Paulo Dybala': '迪巴拉',
+  'Rafael Leão': '莱奥',
+  'Khvicha Kvaratskhelia': '克瓦拉茨赫利亚',
+  'Theo Hernández': '特奥',
+  'Mike Maignan': '迈尼昂',
+  // 德甲
+  'Harry Kane': '凯恩',
+  'Jamal Musiala': '穆西亚拉',
+  'Florian Wirtz': '维尔茨',
+  'Joshua Kimmich': '基米希',
+  'Serge Gnabry': '格纳布里',
+  'Leroy Sané': '萨内',
+  // 法甲
+  'Ousmane Dembélé': '登贝莱',
+  'Bradley Barcola': '巴尔科拉',
+  'Achraf Hakimi': '阿什拉夫',
+  'Gianluigi Donnarumma': '多纳鲁马',
+}
+
+/** 异步加载 players-zh.json 合并到 PLAYER_ZH（应用启动调用一次） */
+export async function loadPlayerNames(): Promise<void> {
+  try {
+    const base = import.meta.env.BASE_URL
+    const res = await fetch(`${base}data/mappings/players-zh.json`)
+    if (!res.ok) return
+    const data = await res.json()
+    if (data?.players && typeof data.players === 'object') {
+      PLAYER_ZH = { ...data.players, ...PLAYER_ZH }
+    }
+  } catch {
+    // 静默失败，不影响应用启动
+  }
+}
+
+// 去重音：Vinícius → Vinicius，便于大小写不敏感匹配
+function normalizeAccents(s: string): string {
+  return s
+    .replace(/[áàâãäå]/g, 'a').replace(/[ÁÀÂÃÄÅ]/g, 'A')
+    .replace(/[éèêë]/g, 'e').replace(/[ÉÈÊË]/g, 'E')
+    .replace(/[íìîï]/g, 'i').replace(/[ÍÌÎÏ]/g, 'I')
+    .replace(/[óòôõöø]/g, 'o').replace(/[ÓÒÔÕÖØ]/g, 'O')
+    .replace(/[úùûü]/g, 'u').replace(/[ÚÙÛÜ]/g, 'U')
+    .replace(/[ýÿ]/g, 'y').replace(/[ÝŸ]/g, 'Y')
+    .replace(/ç/g, 'c').replace(/Ç/g, 'C')
+    .replace(/ñ/g, 'n').replace(/Ñ/g, 'N')
+    .replace(/š/g, 's').replace(/Š/g, 'S')
+    .replace(/ž/g, 'z').replace(/Ž/g, 'Z')
+    .replace(/ð/g, 'd').replace(/Ð/g, 'D')
+    .replace(/ø/g, 'o').replace(/Ø/g, 'O')
+    .replace(/æ/g, 'ae').replace(/Æ/g, 'AE')
+    .replace(/å/g, 'a').replace(/Å/g, 'A')
+    .replace(/œ/g, 'oe').replace(/Œ/g, 'OE')
+    .replace(/ß/g, 'ss')
+    .replace(/đ/g, 'd').replace(/Đ/g, 'D')
+    .replace(/ł/g, 'l').replace(/Ł/g, 'L')
+}
+
+/** 球员名：中文查译名表 + 去重音/大小写不敏感/分词回退；英文/未收录直接用原名 */
+export function playerName(name: string, lang: Lang): string {
+  if (!name || lang !== 'zh') return name
+  if (PLAYER_ZH[name]) return PLAYER_ZH[name]
+  const lower = name.toLowerCase()
+  for (const k of Object.keys(PLAYER_ZH)) {
+    if (k.toLowerCase() === lower) return PLAYER_ZH[k]
+  }
+  const norm = normalizeAccents(name)
+  if (norm !== name && PLAYER_ZH[norm]) return PLAYER_ZH[norm]
+  const parts = name.split(/\s+/)
+  if (parts.length > 1) {
+    for (const p of parts) {
+      if (PLAYER_ZH[p]) return PLAYER_ZH[p]
+      const np = normalizeAccents(p)
+      if (PLAYER_ZH[np]) return PLAYER_ZH[np]
+    }
+  }
+  return name
 }
