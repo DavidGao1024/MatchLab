@@ -253,6 +253,85 @@ let PLAYER_ZH: Record<string, string> = {
   'Bradley Barcola': '巴尔科拉',
   'Achraf Hakimi': '阿什拉夫',
   'Gianluigi Donnarumma': '多纳鲁马',
+  // 中超外援/归化球员补丁（dongqiudi en_name 用中文拼音或常用简称，与 ESPN displayName 不一致）
+  'Serginho': '塞尔吉尼奥',
+  'Guilherme Ramos': '吉列尔梅-拉莫斯',
+  'Fábio Abreu': '法比奥-阿布雷乌',
+  'Fabio Abreu': '法比奥-阿布雷乌',
+  'Dawhan': '达万',
+  'Boubacar Konté': '孔特',
+  'Aboubacar Konte': '孔特',
+  'Chadrac Akolo': '沙德拉克',
+  'Jeremy Dudziak': '杜齐亚克',
+  'Uroš Spajić': '斯帕伊奇',
+  'Uros Spajic': '斯帕伊奇',
+  'Saulo Mineiro': '绍洛-米内罗',
+  'Saulo': '绍洛',
+  'Wilson Manafá': '马纳法',
+  'Rafael Ratão': '拉斐尔-拉唐',
+  'Prince Ampem': '安佩姆',
+  'Mateus Vital': '马特乌斯-维塔尔',
+  'Óscar Melendo': '梅伦多',
+  'Oscar Melendo': '梅伦多',
+  'Jaume Grau': '豪梅-格劳',
+  'Miguel Campos': '米格尔-坎波斯',
+  'Alberto Quiles Piosa': '基莱斯',
+  'Alberto Quiles': '基莱斯',
+  'Guilherme Schettine': '吉列尔梅-谢蒂内',
+  'Xadas': '哈达斯',
+  'Cristian Salvador': '克里斯蒂安-萨尔瓦多',
+  'Aitor Córdoba': '艾托尔-科尔多瓦',
+  'Aitor Cordoba': '艾托尔-科尔多瓦',
+  'Jhonder Cádiz': '卡迪斯',
+  'Jhonder Cadiz': '卡迪斯',
+  'Kilian Bevis': '贝维斯',
+  'Antoine Leautey': '洛泰',
+  'Léo Souza': '莱昂纳多',
+  'Davidson': '戴维森',
+  'Aziz Yakubu': '阿齐兹',
+  'Cryzan': '克雷桑',
+  'Zeca': '泽卡',
+  'Valeri Qazaishvili': '卡扎伊什维利',
+  'Felippe Cardoso': '费利佩-卡多索',
+  'Marko Tolic': '托利奇',
+  'Alexandru Mitriță': '米特里策',
+  'Jin-seob Park': '朴镇燮',
+  'Lucas Possignolo': '卢卡斯-波西诺洛',
+  'Wellington Silva': '韦林顿-席尔瓦',
+  'Issa Kallon': '伊萨-卡隆',
+  'Rômulo': '罗慕洛',
+  'Romulo': '罗慕洛',
+  'Matheus Jussa': '马特乌斯-茹萨',
+  'Egor Sorokin': '索罗金',
+  'Landry Dimata': '迪马塔',
+  'Ibrahim Amadou': '易卜拉欣-阿马杜',
+  'Lucão': '卢康',
+  'Michael Ngadeu': '恩加德乌',
+  'Oscar Taty Maritu': '奥斯卡',
+  'Cléber': '克莱伯',
+  'Cleber': '克莱伯',
+  'Caio Vinicius': '卡约',
+  'Alexandru Ioniță': '亚历山德鲁-约尼查',
+  'Andrei Burcă': '布尔克',
+  'Cephas Malele': '马莱莱',
+  'Frank Acheampong': '阿奇姆彭',
+  'Nicolae Stanciu': '斯坦丘',
+  'Isnik Alimi': '阿利米',
+  'Mamadou Traoré': '马马杜-特拉奥雷',
+  'Mamadou Traore': '马马杜-特拉奥雷',
+  'Nelson Coquenao da Luz': '内尔松-卢斯',
+  'Samir Memisevic': '梅米舍维奇',
+  'Bruno Viana': '布鲁诺-维亚纳',
+  'Guy Mbenza': '居伊-姆本扎',
+  'Jeffinho': '热菲尼奥',
+  'Takahiro Kunimoto': '邦本宜裕',
+  'Felipe': '费利佩',
+  'Pavle Vagic': '瓦吉奇',
+  'Wesley Moraes': '韦斯利',
+  'Deabeas Owusu-Sekyere': '迪比斯-奥乌苏',
+  'Albion Ademi': '阿尔比恩-阿代米',
+  'Eden Karzev': '卡尔采夫',
+  'Gabriel Xavier': '加布里埃尔-沙维尔',
 }
 
 /** 异步加载 players-zh.json 合并到 PLAYER_ZH（应用启动调用一次） */
@@ -293,7 +372,7 @@ function normalizeAccents(s: string): string {
     .replace(/ł/g, 'l').replace(/Ł/g, 'L')
 }
 
-/** 球员名：中文查译名表 + 去重音/大小写不敏感/分词回退；英文/未收录直接用原名 */
+/** 球员名：中文查译名表 + 去重音/大小写不敏感/撇号兜底/分词回退；英文/未收录直接用原名 */
 export function playerName(name: string, lang: Lang): string {
   if (!name || lang !== 'zh') return name
   if (PLAYER_ZH[name]) return PLAYER_ZH[name]
@@ -303,6 +382,14 @@ export function playerName(name: string, lang: Lang): string {
   }
   const norm = normalizeAccents(name)
   if (norm !== name && PLAYER_ZH[norm]) return PLAYER_ZH[norm]
+  // 撇号兜底：外援名 N'Kololo / N'Guessan 等，dongqiudi 存 "Nkololo"，ESPN 存 "N'Kololo"
+  const noApos = name.replace(/['\u2019]/g, '')
+  if (noApos !== name) {
+    const noAposLower = noApos.toLowerCase()
+    for (const k of Object.keys(PLAYER_ZH)) {
+      if (k.replace(/['\u2019]/g, '').toLowerCase() === noAposLower) return PLAYER_ZH[k]
+    }
+  }
   const parts = name.split(/\s+/)
   if (parts.length > 1) {
     for (const p of parts) {
@@ -310,6 +397,27 @@ export function playerName(name: string, lang: Lang): string {
       const np = normalizeAccents(p)
       if (PLAYER_ZH[np]) return PLAYER_ZH[np]
     }
+  }
+  // 单名兜底：输入为单词时（如 ESPN "Djené" / "Manafá" / "Leonardo"），搜 key 中含该词的唯一译名
+  // 多个不同译名冲突则跳过（如 "Leonardo" 命中 Balerdi/Spinazzola 等多个不同球员）
+  if (parts.length === 1) {
+    const inputLower = lower
+    const inputDeAcc = normalizeAccents(name).toLowerCase()
+    let uniqueCn: string | null = null
+    let conflict = false
+    for (const k of Object.keys(PLAYER_ZH)) {
+      const kParts = k.split(/[\s.\-]+/).filter(p => p.length >= 2)
+      if (kParts.length < 2) continue
+      if (kParts.some(p => {
+        const lp = p.toLowerCase()
+        return lp === inputLower || lp === inputDeAcc
+      })) {
+        const cn = PLAYER_ZH[k]
+        if (uniqueCn && uniqueCn !== cn) { conflict = true; break }
+        uniqueCn = cn
+      }
+    }
+    if (!conflict && uniqueCn) return uniqueCn
   }
   return name
 }

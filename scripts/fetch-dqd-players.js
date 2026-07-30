@@ -7,7 +7,10 @@
  *   3. 输出 { "Mikel Arteta": "阿尔特塔", "E. Haaland": "哈兰德", ... }
  *
  * 用法：
- *   node scripts/fetch-dqd-players.js                          # 全 5 联赛 + 中超
+ *   node scripts/fetch-dqd-players.js                          # 默认：英超全 20 队
+ *   node scripts/fetch-dqd-players.js --laliga                 # 西甲全 20 队
+ *   node scripts/fetch-dqd-players.js --epl --laliga --seriea --bundesliga --ligue1  # 多联赛批量
+ *   node scripts/fetch-dqd-players.js --csl                    # 中超全 16 队
  *   node scripts/fetch-dqd-players.js 50000513                 # 单队测试
  *
  * 输出：public/data/mappings/players-zh.json （合并已有）
@@ -25,15 +28,15 @@ const ROOT = path.resolve(__dirname, '..')
 const OUT_PATH = path.join(ROOT, 'public/data/mappings/players-zh.json')
 const TEAMS_PATH = path.join(ROOT, 'public/data/eng.1/teams.json')
 
-// 五大联赛 + 中超的 dongqiudi season_id 映射
-// 实测（2026-07-29）：5=英超 2=西甲 16=德甲 13=意甲 11=法甲 等
+// 五大联赛 + 中超的 dongqiudi season_id（2026-25 赛季，实测 2026-07-30）
+// 用 standing API 批量探查 season_id 候选范围（24590–24670 / 26300–26340）锁定
 const LEAGUE_SEASON = {
-  eng: 5,
-  esp: 4, // 实测 4=瓦伦西亚冠军(西甲)，2=阿贾克斯(荷甲)
-  ita: 13,
-  ger: 16,
-  fra: 11,
-  chn: 0, // 中超 season_id 待测
+  eng: 24646, // 英超（阿森纳/曼城/曼联）
+  esp: 24651, // 西甲（巴萨/皇马/比利亚雷亚尔）
+  ita: 24596, // 意甲（国米/那不勒斯/罗马）
+  ger: 24648, // 德甲（拜仁/多特/RB莱比锡）
+  fra: 24652, // 法甲（巴黎/朗斯/里尔）
+  chn: 26322, // 中超（成都蓉城/重庆铜梁龙/云南玉昆）
 }
 
 /** 通用 GET，返回字符串（自动 gzip 解压） */
@@ -122,35 +125,57 @@ async function fetchPlayerDetail(personId) {
   }
 }
 
-/** 把英文名扩展成 3 种格式：完整 + shortName (X. Last) + 无点 (X Last) */
+/** 把英文名扩展成多种格式：完整 + 原序短名 (X. Last / X Last) + 反序 (名 姓) + 反序短名 + 去重音版
+ *  反序用于兜底 ESPN 西方序"名 姓"与 dongqiudi 中国序"姓 名"的差异（中国/韩国球员常见）
+ *  去重音版用于兜底 ESPN 简化音标写法（如 dongqiudi "Kinský" ↔ ESPN "Kinsky"） */
 function expandNameVariants(enName, cnName, out) {
   if (!enName || !cnName) return
   out[enName] = cnName
-  // 短名 "Mikel Arteta" → "M. Arteta"
+  const deAccName = enName.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  if (deAccName !== enName) out[deAccName] = cnName
   const parts = enName.split(/\s+/)
   if (parts.length >= 2) {
-    const short = `${parts[0].charAt(0)}. ${parts.slice(1).join(' ')}`
-    out[short] = cnName
-    const noDot = `${parts[0].charAt(0)} ${parts.slice(1).join(' ')}`
-    out[noDot] = cnName
+    const first = parts[0]
+    const rest = parts.slice(1).join(' ')
+    // 原序短名 "Mikel Arteta" → "M. Arteta" + "M Arteta"
+    out[`${first.charAt(0)}. ${rest}`] = cnName
+    out[`${first.charAt(0)} ${rest}`] = cnName
+    // 反序：dongqiudi 中国序"姓 名" ↔ ESPN 西方序"名 姓"
+    // 例如 "Fu Huan" → "Huan Fu"、"H. Fu"、"H Fu"，匹配 ESPN displayName/shortName
+    const reversed = `${rest} ${first}`
+    out[reversed] = cnName
+    out[`${rest.charAt(0)}. ${first}`] = cnName
+    out[`${rest.charAt(0)} ${first}`] = cnName
+    // 去重音版短名 + 反序短名（兜底 ESPN 不带音标写法）
+    if (deAccName !== enName) {
+      const dFirst = first.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      const dRest = rest.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      out[`${dFirst.charAt(0)}. ${dRest}`] = cnName
+      out[`${dRest} ${dFirst}`] = cnName
+      out[`${dRest.charAt(0)}. ${dFirst}`] = cnName
+    }
   }
 }
 
 /** 主入口
  *  用法：
- *    node scripts/fetch-dqd-players.js                  # 默认：英超全 20 队
- *    node scripts/fetch-dqd-players.js --csl            # 中超全 16 队
- *    node scripts/fetch-dqd-players.js --epl --csl      # 多联赛批量
- *    node scripts/fetch-dqd-players.js 50000513         # 单队测试
+ *    node scripts/fetch-dqd-players.js                          # 默认：英超全 20 队
+ *    node scripts/fetch-dqd-players.js --laliga                  # 西甲全 20 队
+ *    node scripts/fetch-dqd-players.js --epl --laliga --seriea --bundesliga --ligue1 --csl  # 全 6 联赛
+ *    node scripts/fetch-dqd-players.js 50000513                  # 单队测试
  */
 async function main() {
   const args = process.argv.slice(2)
   let teamIds = []
 
-  // 各联赛 season_id（实测 2026-07-29）
+  // 各联赛 season_id（实测 2026-07-30，standing API 探查锁定）
   const LEAGUES = {
-    epl: { name: '英超', seasonId: 24646, ref: 'https://www.dongqiudi.com/league/1' },
-    csl: { name: '中超', seasonId: 26322, ref: 'https://www.dongqiudi.com/' },
+    epl:      { name: '英超', seasonId: 24646, ref: 'https://www.dongqiudi.com/' },
+    laliga:   { name: '西甲', seasonId: 24651, ref: 'https://www.dongqiudi.com/' },
+    seriea:   { name: '意甲', seasonId: 24596, ref: 'https://www.dongqiudi.com/' },
+    bundesliga: { name: '德甲', seasonId: 24648, ref: 'https://www.dongqiudi.com/' },
+    ligue1:   { name: '法甲', seasonId: 24652, ref: 'https://www.dongqiudi.com/' },
+    csl:      { name: '中超', seasonId: 26322, ref: 'https://www.dongqiudi.com/' },
   }
 
   if (args.length && !args[0].startsWith('--')) {

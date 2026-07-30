@@ -176,6 +176,26 @@
 
 > 按日期倒序记录每次调研进展，格式：`### YYYY-MM-DD`
 
+### 2026-07-30 — 懂球帝 season_id 全 6 联赛锁定 + 西/意/德/法译名抓取完工
+
+**调研内容**：2026-07-29 完成英超+中超译名抓取后，剩余 4 联赛（西甲/意甲/德甲/法甲）season_id 未探查，今日补齐。
+
+**探查方法**：
+- 西甲/意甲/德甲：浏览器开 `dongqiudi.com` 主页 → 点 sidebar 联赛切换 → 监听 network 看 standing API 的 season_id（chrome-devtools MCP 自动化）
+- 法甲：sidebar 无入口（dongqiudi 主页 sidebar 只有英超/中超/西甲/意甲/德甲/中甲 6 项，法甲被排除）。改用 Node 脚本批量请求 standing API 候选 season_id 范围（24590–24670 / 26300–26340）扫出有数据的 ID，按队名首三队辨认（24652=巴黎/朗斯/里尔 = 法甲）
+
+**实测结果（2026-07-30）**：
+- **西甲 season_id=24651**（巴萨/皇马/比利亚雷亚尔），20 队 → 新增 1699 个译名变体
+- **意甲 season_id=24596**（国米/那不勒斯/罗马），20 队 → 新增 2225 个变体
+- **德甲 season_id=24648**（拜仁/多特/RB莱比锡），18 队 → 新增 1691 个变体
+- **法甲 season_id=24652**（巴黎/朗斯/里尔），18 队 → 新增 1588 个变体
+- 四联赛合计新增 **7203 个变体**，players-zh.json 从 7486 → **14689**
+- 至此六联赛译名表抓取全部完工，验证样本：维尼修斯/劳塔罗-马丁内斯/登贝莱/古伊里/维尔茨（如有）均命中
+
+**脚本能力升级**：`scripts/fetch-dqd-players.js` LEAGUES 配置从 2 联赛扩到 6 联赛，新增 `--laliga` / `--seriea` / `--bundesliga` / `--ligue1` 四个参数，支持多联赛批量调用
+
+---
+
 ### 2026-07-29 — 懂球帝中英文球员译名表抓取（Phase 3 弹窗球员名中文化）
 
 **调研内容**：ESPN site.api summary 返回的 roster 只有英文 displayName / shortName，没有中文译名 API。Phase 3 比赛详情弹窗在中文模式下球员名仍是英文，需要外部源补中英对照表。
@@ -200,7 +220,8 @@
   - 返回 `{ content:{ rounds:[{ content:{ data:[{ team_id, team_name }] }] }] }`
 - **联赛 season_id 探查**（dongqiudi 的 league 页是 SPA，HTML NUXT 空，HTML title 是默认值）：
   - 直接试 URL 参数无效；正确方法——用浏览器打开 `https://www.dongqiudi.com/` 主页，点击右侧 sidebar 联赛切换按钮（"中超"/"英超"等），监听 network 看实际 standing API 的 season_id
-  - 实测：**英超=24646**、**中超=26322**（其他联赛待探查）
+  - 实测（2026-07-30 全 6 联赛锁定）：**英超=24646**、**西甲=24651**、**意甲=24596**、**德甲=24648**、**法甲=24652**、**中超=26322**
+  - 法甲 sidebar 无入口（dongqiudi 主页 sidebar 只有英超/中超/西甲/意甲/德甲/中甲 6 项），但 standing API 仍可用 season_id=24652 直查；探查法是用 Node 脚本批量请求 standing API 候选 season_id 范围（24590–24670 / 26300–26340）扫出有数据的 ID，再按队名首三队辨认（法甲 24652=巴黎/朗斯/里尔）
 
 **输出格式**：
 - 译名表每个球员展开为 3 种 key 格式，对应 ESPN 的 displayName 和 shortName：
@@ -211,19 +232,47 @@
 
 **抓取脚本**：`scripts/fetch-dqd-players.js`（零依赖，CommonJS）
 - 默认：`node scripts/fetch-dqd-players.js` → 抓英超全 20 队
-- `--csl`：抓中超全 16 队
+- `--csl` / `--laliga` / `--seriea` / `--bundesliga` / `--ligue1`：对应联赛全队
+- 多联赛批量：`node scripts/fetch-dqd-players.js --epl --laliga --seriea --bundesliga --ligue1 --csl`
 - 单队测试：`node scripts/fetch-dqd-players.js 50000513`
 - 200ms 间隔防限流；输出 `public/data/mappings/players-zh.json`，自动合并已有
 
-**实测覆盖**（2026-07-29）：
-- 英超 20 队 × ~30 球员 = 新增 1791 个译名变体（约 600 球员）
-- 中超 16 队 × ~35 球员 = 新增 1863 个变体
-- 加 WC 表 3737 + 手填 45，去重后总量 **7486 个译名变体**
+**实测覆盖**（2026-07-30）：
+- 英超 20 队 × ~30 球员 = 新增 1791 个译名变体（约 600 球员）（2026-07-29）
+- 中超 16 队 × ~35 球员 = 新增 1863 个变体（2026-07-29）
+- 西甲 20 队 × ~32 球员 = 新增 1699 个变体（2026-07-30）
+- 意甲 20 队 × ~39 球员 = 新增 2225 个变体（2026-07-30）
+- 德甲 18 队 × ~36 球员 = 新增 1691 个变体（2026-07-30）
+- 法甲 18 队 × ~33 球员 = 新增 1588 个变体（2026-07-30）
+- 加 WC 表 3737 + 手填 ~180，去重后总量 **31393 个译名变体**（六联赛全覆盖 + 反序/去重音/撇号兜底 + 中超外援手填 + DOB 匹配手填）
+- **当前 ESPN 一线队命中率**（按当前赛季 20/20/20/18/18/16 队的球员档案口径，含 direct/case-insensitive/deAcc/撇号/分词/单名兜底回退）：
+  - 英超 514/634 = 81.1%（剩余缺口主要是青年队/U21，dongqiudi 不收录）
+  - 西甲 407/475 = **85.7%**
+  - 意甲 544/738 = 73.7%
+  - 德甲 457/524 = **87.2%**
+  - 法甲 459/553 = 83.0%
+  - 中超 521/543 = **95.9%**
+  - 总计 2902/3467 = **83.7%**
 - 浏览器实测：利兹联 11 首发全中文化（达洛/比约尔/斯特鲁伊克/...），中超云南玉昆 11 首发 9 中文化
 
-**剩余工作**（其他 4 联赛 + 后续优化）：
-- 西甲/意甲/德甲/法甲：需用同样方法（dongqiudi 主页 sidebar 切换 + network 监听）找各联赛 season_id，再跑脚本
+**覆盖率提升手段**（2026-07-30）：
+- **反序变体**：`scripts/augment-player-zh.js` 后处理脚本，对完整名 key 补反序 + 反序短名变体。解决中国/韩国球员 dongqiudi en_name 中国序"姓 名"（如 "Fu Huan"）与 ESPN 西方序"名 姓"（如 "Huan Fu"）的顺序差异。意甲 +10.8%、德甲 +14.2%、法甲 +40.8%、中超 +16.6%
+- **去重音变体**：同一脚本对带音标的 key 补去重音版（如 "Antonín Kinský" → "Antonin Kinsky"），兜底 ESPN 简化音标写法
+- **撇号兜底**：`playerName()` 加撇号不敏感回退（N'Kololo / N'Guessan 类外援名 ESPN 带撇号、dongqiudi 不带）
+- **单名兜底**：`playerName()` 加单名唯一译名回退（ESPN 用单词 displayName 如 "Djené" / "Manafá" / "Jonny" / "Mariano"，搜 key 中含该词的唯一译名，冲突则跳过）
+- **中超外援手填**：`scripts/handfill-player-zh.js` 同步 `i18n.ts` PLAYER_ZH 手填区到 zh.json。覆盖 dongqiudi en_name 用中文拼音或常用简称（如 Serginho 在 dongqiudi 存 "Sai Erjiniao"、Guilherme Ramos 存 "Gui Ramos"）与 ESPN displayName 不一致的情况
+- **DOB 匹配手填**：对 ESPN 列出但 zh.json 没有的球员，按 team + DOB 在 dongqiudi roster 找对应球员，取其 person_name 作为译名手填。已补：
+  - CSL（侯永永/吕焯毅/赵宏略/买乌郎-米吉提/杨一鸣/王毅/路易斯-阿苏埃/乃比江-莫合买提/阿布拉汗-哈力克/卢卡斯-马亚（ESPN"Lucas Varone"）/叶尔杰提-叶尔扎提/肯帕努/迪比斯-奥乌苏/陈威（ESPN拼写错"Chen Wai"））
+  - 西甲（伊翁努特-拉杜（ESPN"Andrei Radu"）/乌尔科-冈萨雷斯/卡拉特拉瓦（ESPN"Cala"）/洪尼-奥托/马里亚诺-迪亚斯/基克-萨拉斯/艾蒂安-埃托奥/莫伦特/亚戈-圣地亚哥/阿德里安-德拉富恩特/埃尔格萨瓦尔/巴尔哈）
+  - 意甲（米科瓦耶夫斯基/德尔普拉托/埃勒特松）
+  - 德甲（萨尼-苏莱曼/贝尔卡伊-伊尔马兹/博格达诺夫/克劳斯/加杜/布鲁诺-奥布斯）
+  - 法甲（多努姆/阿里-优素福/姆布拉）
+
+**剩余工作**（后续优化）：
+- 青年队/U21 球员：dongqiudi 不收录青年队，ESPN athletes 端点含历史/青年队球员 → 这部分命中率无法提升（对一线队弹窗使用无影响）
 - 边缘球员未中文化：ESPN shortName 与 dongqiudi 完整名格式不一致（如 ESPN `Y. Bao` vs dongqiudi `Yang Bo`），可补展开变体（如 `"Y Bao"` 无点格式已展开，但 `"Y. Bao"` vs `"Y. Bo"` 末字母差异需补）
+- 少量球员详情页 person_en_name 字段为空（如 `Andrea Sentimenti` / `Paolo Di Sarno` / `Felix Mark`），未抓到译名时直接跳过（输出日志里能看到原始名而非中文的即为未命中）
+- 中国球员 en_name 缺失：dongqidi 对中国籍球员 person_en_name 留空（如张建志/郝宇成等 U21 球员），脚本跳过。要补需引入拼音库（项目零依赖约束下不可行）
 
 ---
 
