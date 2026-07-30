@@ -16,6 +16,7 @@ const teams = useTeamsStore()
 const store = useStandingsStore()
 
 const team = computed(() => teams.teamById(props.league, props.row.teamId))
+const teamLink = computed(() => `/${props.league}/team/${props.row.teamId}`)
 
 const dots = computed(() =>
   formDetails(store.formMatches[props.league] ?? [], props.row.teamId).map((d) => {
@@ -48,13 +49,13 @@ const stat = 'tabular px-1 py-2.5 text-center text-xs text-slate-300'
     :style="{ boxShadow: `inset 3px 0 0 ${zoneBar}` }"
   >
     <th scope="row" class="sticky left-0 z-[1] bg-[#0e1424] px-2 py-2.5 text-left font-normal transition-colors group-hover:bg-[#161d31]">
-      <span class="inline-flex min-w-44 items-center gap-2.5">
+      <router-link :to="teamLink" class="inline-flex min-w-44 items-center gap-2.5 hover:text-white">
         <span class="font-score w-5 text-right text-base" :class="row.rank === 1 ? 'text-white' : 'text-slate-400'">{{ row.rank }}</span>
         <TeamLogo :team="team" :size="20" />
-        <span class="truncate font-cond text-[13px]" :class="row.zone === 'ucl' ? 'text-slate-100' : 'text-slate-300'">
+        <span class="truncate font-cond text-[13px] hover:underline" :class="row.zone === 'ucl' ? 'text-slate-100' : 'text-slate-300'">
           {{ teamName(row.team, app.lang) }}
         </span>
-      </span>
+      </router-link>
     </th>
     <td :class="stat">{{ row.played }}</td>
     <td :class="stat">{{ row.won }}</td>

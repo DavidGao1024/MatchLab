@@ -84,13 +84,17 @@ const scoreDisplay = computed(() =>
           <header class="match-header">
             <div class="match-score">
               <div class="match-team">
-                <TeamLogo :team="homeTeam" :size="40" />
-                <span class="match-team-name">{{ teamName(match.home.name, app.lang) }}</span>
+                <router-link :to="`/${league}/team/${homeTeam.id}`" class="hover:underline" @click.stop="emit('close')">
+                  <TeamLogo :team="homeTeam" :size="40" />
+                  <span class="match-team-name">{{ teamName(match.home.name, app.lang) }}</span>
+                </router-link>
               </div>
               <div class="match-score-num font-score">{{ scoreDisplay }}</div>
               <div class="match-team">
-                <TeamLogo :team="awayTeam" :size="40" />
-                <span class="match-team-name">{{ teamName(match.away.name, app.lang) }}</span>
+                <router-link :to="`/${league}/team/${awayTeam.id}`" class="hover:underline" @click.stop="emit('close')">
+                  <TeamLogo :team="awayTeam" :size="40" />
+                  <span class="match-team-name">{{ teamName(match.away.name, app.lang) }}</span>
+                </router-link>
               </div>
             </div>
             <div class="match-meta">
@@ -196,6 +200,14 @@ const scoreDisplay = computed(() =>
   gap: 8px;
   min-width: 120px;
 }
+.match-team a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.match-team a:hover .match-team-name { text-decoration: underline; }
 .match-team-name {
   font-size: 1.05rem;
   font-weight: 700;

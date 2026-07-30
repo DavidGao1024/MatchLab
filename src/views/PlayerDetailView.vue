@@ -95,7 +95,9 @@ function back() {
         <div class="flex-1 min-w-0">
           <h1 class="font-cond text-3xl font-semibold text-white truncate">{{ displayName }}</h1>
           <p class="text-sm text-slate-400 mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>{{ teamDisplay }}</span>
+            <router-link v-if="team" :to="`/${league}/team/${team.id}`" class="hover:text-white hover:underline">
+              {{ teamDisplay }}
+            </router-link>
             <span v-if="profile.jersey" class="text-slate-500">#{{ profile.jersey }}</span>
             <span class="text-slate-500">·</span>
             <span>{{ posLabel(profile.position) }}</span>
