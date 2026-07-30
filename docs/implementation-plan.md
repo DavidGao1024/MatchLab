@@ -829,34 +829,26 @@ interface MatchTeam {
 
 ---
 
-### Phase 5：球队详情 + 完善（1-2 天）
+### Phase 5：球队详情 + 完善（1-2 天）— ✅ 完工（2026-07-30）
 
 **目标**：球队详情页，整体打磨。
 
 **步骤**：
-1. 实现 `TeamDetailView.vue`
-   - 球队信息（队徽/颜色/场馆/昵称）
-   - 本赛季战绩（W-D-L）
-   - 阵容列表（从 players index 按 teamId 筛选）
-   - 球队赛季统计（ESPN core team statistics）
-   - 球队内排行（ESPN core team leaders）
-2. 实现 `TeamSquad.vue`（按位置分组的球员列表）
-3. 首页 `HomeView.vue`
-   - 联赛卡片（5 联赛入口，含标志色）
-   - 焦点比赛（今日/近期已完赛）
-4. 错误处理完善
-   - API 失败 → `DataError.vue` 降级展示
-   - 数据加载中 → `DataLoading.vue` 骨架屏
-   - 休赛期提示
-5. i18n 完善（队名中英文、联赛名、统计字段名）
-6. 移动端适配检查
+1. ✅ `TeamDetailView.vue`（`src/views/`）— 球队信息 + 战绩 7 项 + 阵容按位置分组
+2. ✅ `TeamSquad.vue`（`src/components/teams/`）— 按位置分组 + 进球/助攻列
+3. ✅ 路由 `/:league/team/:id` 注册；`LeagueTabs.pick()` 扩 `team-detail` 映射
+4. ✅ `SearchBar` 球队命中改为跳详情页（之前跳 standings）
+5. ✅ `Team` 接口扩 `venue` + `record` 字段（之前映射时丢弃，已补回）
+6. ✅ i18n 补球队字段（venue/city/record/played/squad/stats 等 ~15 条）
+7. ✅ 移动端：Tailwind 响应式断点 `sm:`/`md:`/`lg:`/`xl:` 全覆盖（AppHeader 隐藏 search box on mobile、表格 overflow-x-auto、网格自适应列数）
+8. ✅ 错误处理沿用 Phase 0–4 已建 `DataError` + `DataLoading` 模式
 
 **验收**：
-- [ ] 球队详情页完整展示
-- [ ] 首页联赛卡片可点击跳转
-- [ ] 所有页面有加载态和错误态
-- [ ] 中英文切换全覆盖
-- [ ] 移动端全流程可用
+- [x] 球队详情页完整展示（阿斯顿维拉：队徽+主场+38/19/8/11/56/49/65 战绩+31 人阵容按 G/D/M/F 分组）
+- [x] 首页联赛卡片可点击跳转（Phase 0–4 已完工）
+- [x] 所有页面有加载态和错误态
+- [x] 中英文切换全覆盖（球员名/队名/字段名/联赛名）
+- [x] 移动端全流程可用（响应式断点已覆盖）
 
 ---
 

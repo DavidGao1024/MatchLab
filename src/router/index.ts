@@ -14,6 +14,7 @@ const router = createRouter({
     { path: '/:league/players', name: 'players', component: () => import('../views/PlayersView.vue') },
     { path: '/:league/player/:id', name: 'player-detail', component: () => import('../views/PlayerDetailView.vue') },
     { path: '/:league/leaders', name: 'leaders', component: () => import('../views/LeadersView.vue') },
+    { path: '/:league/team/:id', name: 'team-detail', component: () => import('../views/TeamDetailView.vue') },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
 })

@@ -33,6 +33,8 @@ export const useTeamsStore = defineStore('teams', {
         alternateColor: t.alternateColor,
         logo: t.logo,
         logoDark: t.logoDark,
+        venue: t.venue,
+        record: t.record,
       }))
       const bundle: LeagueBundle = { meta: metaF, teams, byId: new Map(teams.map((t) => [t.id, t])) }
       this.bundles[league] = bundle

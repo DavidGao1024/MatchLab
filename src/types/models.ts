@@ -22,6 +22,18 @@ export interface Team {
   alternateColor: string
   logo: string
   logoDark: string
+  venue?: { name: string; city: string; country: string }
+  record?: {
+    wins: number
+    draws: number
+    losses: number
+    played: number
+    points: number
+    goalDiff: number
+    goalsFor: number
+    goalsAgainst: number
+    summary?: string
+  }
 }
 
 export type FormResult = 'W' | 'D' | 'L'

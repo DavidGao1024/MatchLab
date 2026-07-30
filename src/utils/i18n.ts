@@ -232,6 +232,20 @@ const UI: Record<string, { zh: string; en: string }> = {
   'leaders.title': { zh: '排行榜', en: 'Leaders' },
   'leaders.rank': { zh: '排名', en: 'Rank' },
   'leaders.value': { zh: '数值', en: 'Value' },
+  // ===== Phase 5：球队详情 =====
+  'team.venue': { zh: '主场', en: 'Venue' },
+  'team.city': { zh: '城市', en: 'City' },
+  'team.record': { zh: '战绩', en: 'Record' },
+  'team.played': { zh: '已赛', en: 'Played' },
+  'team.squad': { zh: '阵容', en: 'Squad' },
+  'team.stats': { zh: '球队统计', en: 'Team Stats' },
+  'team.col.gf': { zh: '进球', en: 'GF' },
+  'team.col.ga': { zh: '失球', en: 'GA' },
+  'team.col.gd': { zh: '净胜球', en: 'GD' },
+  'team.col.pts': { zh: '积分', en: 'Pts' },
+  'team.col.w': { zh: '胜', en: 'W' },
+  'team.col.d': { zh: '平', en: 'D' },
+  'team.col.l': { zh: '负', en: 'L' },
 }
 
 /** 界面文案唯一出口；未定义的键原样返回 */

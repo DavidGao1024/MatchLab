@@ -67,7 +67,7 @@ function goPlayer(id: number) {
 
 function goTeam(id: number) {
   if (!league.value) return
-  router.push(`/${league.value}/standings`)
+  router.push(`/${league.value}/team/${id}`)
   q.value = ''
   open.value = false
   inputRef.value?.blur()
