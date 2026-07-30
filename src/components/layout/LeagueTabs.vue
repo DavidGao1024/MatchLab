@@ -24,6 +24,8 @@ function label(slug: LeagueSlug): string {
 function pick(slug: LeagueSlug) {
   const n = String(route.name ?? '')
   if (n === 'schedule' || n === 'schedule-month') router.push(`/${slug}/schedule`)
+  else if (n === 'players' || n === 'player-detail') router.push(`/${slug}/players`)
+  else if (n === 'leaders') router.push(`/${slug}/leaders`)
   else router.push(`/${slug}/standings`)
 }
 </script>

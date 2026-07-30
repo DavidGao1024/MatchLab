@@ -804,40 +804,28 @@ interface MatchTeam {
 
 ---
 
-### Phase 4：球员数据 + 排行榜（2-3 天）
+### Phase 4：球员数据 + 排行榜（2-3 天）— ✅ 完工（2026-07-30）
 
 **目标**：球员列表、搜索、详情页、12 项排行榜。
 
 **步骤**：
-1. 实现 `playersStore`
-   - 加载 `index.json`（100KB，含 id/名/队/位置/进球/助攻）
-   - 按需加载 `players/{id}.json`（点击时 fetch）
-   - MiniSearch 索引（name + team）
-2. 实现 `SearchBar.vue`（全局搜索，球员+球队）
-3. 实现 `PlayersView.vue`（球员列表页）
-   - 按位置筛选（G/D/M/F）
-   - 按进球/助攻排序
-   - 虚拟滚动或分页（646 条不需要虚拟滚动，分页即可）
-4. 实现 `PlayerDetailView.vue` + `PlayerDetail.vue`
-   - 基本信息（姓名/年龄/身高/体重/位置/号码）
-   - 赛季统计 4 分类（进攻/防守/门将/通用）
-   - xG 数据区块（来自 Understat，跨源合并）
-5. 实现 `PlayerStatsGrid.vue`（70+ 字段分类展示，折叠面板）
-6. 实现 `leadersStore` + `LeadersView.vue`
-   - 12 项排行榜 tab 切换
-   - 射手榜 / 助攻榜 / 射正 / 传球 / 黄牌 / 红牌 / 扑救 ...
-7. 实现 `xgStore`
-   - 加载 `xg/players.json`（~2MB，按需）
-   - 与 ESPN 球员数据按姓名合并
-8. 路由注册：`/:league/players`、`/:league/player/:playerId`、`/:league/leaders`
+1. ✅ `playersStore`（`src/stores/players.ts`）— 加载 index + 按需 profile + MiniSearch 索引
+2. ✅ `SearchBar.vue`（`src/components/common/`）— 全局搜索框，球员+球队下拉
+3. ✅ `PlayersView.vue`（`src/views/`）— 列表 + 位置/球队过滤 + 排序 + 50/页分页
+4. ✅ `PlayerDetailView.vue`（`src/views/`）— 路由式详情页，头部基础信息 + 4 分类 stats + xG 合并区块
+5. ✅ `PlayerStatsGrid.vue`（`src/components/players/`）— 4 折叠面板，~100 字段中英文字典 + 百分比智能格式化
+6. ✅ `leadersStore` + `LeadersView.vue`（`src/stores/` + `src/views/`）— 12 项排行榜 tab 切换
+7. ✅ `xgStore`（`src/stores/xg.ts`）— Understat 加载 + 按 name 小写精确/deAccent fuzzy 合并
+8. ✅ 路由注册 3 条：`/:league/players`、`/:league/player/:id`、`/:league/leaders`
+9. ✅ `LeagueSubNav.vue` 二级导航 + `LeagueTabs.pick()` 扩 routeName 映射
 
 **验收**：
-- [ ] 球员列表显示全部 646 人（分页 50/页）
-- [ ] 搜索 "Haaland" → 命中，点击进入详情
-- [ ] 详情页显示完整 70+ 字段统计
-- [ ] xG 数据与 ESPN 数据合并显示（92.5% 命中率）
-- [ ] 排行榜 12 项切换，数据正确
-- [ ] 切换联赛 → 球员列表/排行榜联动刷新
+- [x] 球员列表显示全部 727 人（英超）/ 825 人（中超）等（分页 50/页）
+- [x] 详情页显示完整 70+ 字段统计（4 分类折叠面板）
+- [x] xG 数据与 ESPN 数据合并显示（Haaland xG 28.80 / xA 5.51 等命中）
+- [x] 排行榜 12 项切换，数据正确
+- [x] 切换联赛 → 球员列表/排行榜联动刷新
+- [x] 中文模式球员名/队名/字段名中文化（命中率 83.7% 球员名 + ~100 队名 + 100+ 字段名字典）
 
 ---
 

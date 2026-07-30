@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useAppStore } from '../../stores/app'
 import LeagueTabs from './LeagueTabs.vue'
+import LeagueSubNav from './LeagueSubNav.vue'
+import SearchBar from '../common/SearchBar.vue'
 
 const app = useAppStore()
 </script>
@@ -18,7 +20,8 @@ const app = useAppStore()
         ></span>
         MATCHLAB
       </router-link>
-      <LeagueTabs class="ml-auto" />
+      <LeagueTabs class="ml-2" />
+      <SearchBar class="ml-auto w-full max-w-xs hidden md:block" />
       <button
         type="button"
         @click="app.toggleLang()"
@@ -27,5 +30,6 @@ const app = useAppStore()
         {{ app.lang === 'zh' ? '中 / EN' : 'EN / 中' }}
       </button>
     </div>
+    <LeagueSubNav />
   </header>
 </template>

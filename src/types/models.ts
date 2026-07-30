@@ -77,6 +77,56 @@ export interface XgRow {
   xpts: number
 }
 
+// ===== Phase 4：球员 / 排行榜 / xG 球员 =====
+
+import type {
+  PlayerFile,
+  PlayerIndexEntry,
+  LeaderCategory,
+  XgPlayerEntry,
+} from './static'
+
+/** 球员列表项（业务模型，由 PlayerIndexEntry 加 i18n 友好的 team 名） */
+export interface PlayerSummary {
+  id: number
+  name: string
+  teamId: number
+  team: string
+  position: string
+  age: number | null
+  goals: number | null
+  assists: number | null
+}
+
+/** 球员档案（业务模型，含 i18n 友好的姓名/队名） */
+export interface PlayerProfile {
+  id: number
+  displayName: string
+  shortName: string
+  firstName: string
+  lastName: string
+  age: number | null
+  height: number | null
+  weight: number | null
+  dateOfBirth?: string
+  jersey: number | null
+  position: string
+  positionLabel: string
+  teamId: number
+  stats: PlayerFile['stats']
+}
+
+/** 排行榜分类（业务模型） */
+export interface LeaderBoard extends LeaderCategory {}
+
+/** xG 球员（业务模型） */
+export type XgPlayer = XgPlayerEntry
+
+/** 球员列表项 + 球队信息（SearchBar/PlayersView 用） */
+export interface PlayerSearchHit extends PlayerIndexEntry {
+  score?: number
+}
+
 /** 按 UTC 日期分组的比赛日（规格：分组用数据日期，全球一致） */
 export interface DayGroup {
   utcDate: string

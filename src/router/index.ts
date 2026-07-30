@@ -11,6 +11,9 @@ const router = createRouter({
     { path: '/:league/standings', name: 'standings', component: () => import('../views/StandingsView.vue') },
     { path: '/:league/schedule', name: 'schedule', component: () => import('../views/ScheduleView.vue') },
     { path: '/:league/schedule/:month', name: 'schedule-month', component: () => import('../views/ScheduleView.vue') },
+    { path: '/:league/players', name: 'players', component: () => import('../views/PlayersView.vue') },
+    { path: '/:league/player/:id', name: 'player-detail', component: () => import('../views/PlayerDetailView.vue') },
+    { path: '/:league/leaders', name: 'leaders', component: () => import('../views/LeadersView.vue') },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
 })

@@ -102,3 +102,111 @@ export interface TeamNameMapFile {
   /** Understat 队名 → ESPN 队名，26 条 */
   map: Record<string, string>
 }
+
+// ===== Phase 4：球员 / 排行榜 / xG 球员 =====
+
+/** players/index.json 列表项（轻量，~100KB/联赛） */
+export interface PlayerIndexEntry {
+  id: number
+  name: string
+  teamId: number
+  position: string // GK / D / M / F
+  age: number | null
+  goals: number | null
+  assists: number | null
+  team: string
+}
+
+export interface PlayersIndexFile {
+  source: string
+  updateTime: string
+  league: string
+  season: string
+  count: number
+  players: PlayerIndexEntry[]
+}
+
+/** players/{id}.json 球员档案 stats 4 分类 */
+export interface PlayerStats {
+  offensive?: Record<string, number | null>
+  defensive?: Record<string, number | null>
+  general?: Record<string, number | null>
+  goalKeeping?: Record<string, number | null>
+}
+
+export interface PlayerFile {
+  source: string
+  updateTime: string
+  league: string
+  season: string
+  id: number
+  firstName?: string
+  lastName?: string
+  displayName: string
+  shortName?: string
+  age: number | null
+  height: number | null
+  weight: number | null
+  dateOfBirth?: string
+  jersey: number | null
+  position: string
+  positionLabel?: string
+  teamId: number
+  stats: PlayerStats
+}
+
+/** leaders.json 12 项排行榜 */
+export interface LeaderEntry {
+  rank: number
+  value: number
+  displayValue: string
+  athleteId: number
+  athleteName: string
+  teamId: number
+  teamName: string
+}
+
+export interface LeaderCategory {
+  name: string
+  displayName: string
+  abbreviation: string
+  entries: LeaderEntry[]
+}
+
+export interface LeadersFile {
+  source: string
+  updateTime: string
+  league: string
+  season: string
+  categories: LeaderCategory[]
+}
+
+/** xg/players.json Understat 球员逐季汇总（不含 history） */
+export interface XgPlayerEntry {
+  id: string
+  name: string
+  team: string
+  position: string
+  games: number
+  minutes: number
+  goals: number
+  npg: number
+  assists: number
+  xG: number
+  xA: number
+  npxG: number
+  xGChain: number
+  xGBuildup: number
+  shots: number
+  keyPasses: number
+}
+
+export interface XgPlayersFile {
+  source: string
+  league: string
+  understatLeague: string
+  season: string
+  updateTime: string
+  count: number
+  players: XgPlayerEntry[]
+}
