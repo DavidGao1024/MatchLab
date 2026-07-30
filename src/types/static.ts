@@ -221,3 +221,52 @@ export interface XgPlayersFile {
   count: number
   players: XgPlayerEntry[]
 }
+
+/** Understat 球员逐场 history（Phase 6 xG 趋势图） */
+export interface XgPlayerMatch {
+  date: string
+  homeAway: string // 'h' / 'a'
+  result: string // 'w' / 'd' / 'l'
+  scored: number | null
+  missed: number | null
+  xG: number | null
+  xA: number | null
+  npxG: number | null
+  xGChain: number | null
+  xGBuildup: number | null
+  ppda?: { att: number; def: number }
+  ppdaAllowed?: { att: number; def: number }
+  deep?: number
+  deepAllowed?: number
+  kp?: number // key passes
+  shots?: number
+  position?: string
+  team?: string
+  opponent?: string
+}
+
+export interface XgPlayerHistoryFile {
+  source: string
+  league: string
+  understatLeague: string
+  season: string
+  understatPlayerId: string
+  updateTime: string
+  history: XgPlayerMatch[]
+}
+
+/** ESPN core 联赛赛季清单 */
+export interface SeasonEntry {
+  year: number
+  displayName: string
+  startDate?: string
+  endDate?: string
+}
+
+export interface SeasonsFile {
+  source: string
+  league: string
+  updateTime: string
+  count: number
+  seasons: SeasonEntry[]
+}

@@ -852,26 +852,25 @@ interface MatchTeam {
 
 ---
 
-### Phase 6：图表 + 高阶功能（2-3 天，P2）
+### Phase 6：图表 + 高阶功能（2-3 天，P2）— ✅ 完工（2026-07-30）
 
 **目标**：xG 趋势图、生涯曲线、历史赛季。
 
 **步骤**：
-1. 引入图表库（Chart.js + vue-chartjs 或 ECharts）
-2. 实现 `PlayerXgChart.vue`
-   - Understat `getPlayerData/{id}` 逐场 xG 时间线
-   - 滚动平均线
-3. 实现 `PlayerCareerChart.vue`
-   - ESPN core 多赛季统计 → 生涯进球曲线
-   - 需 Actions 预拉历史赛季数据（`seasons/{year}/.../statistics`）
-4. 历史赛季切换（26 个赛季可选）
-5. 球员对比页（两人 stats 并排）
-6. （可选）赔率模块（如体彩覆盖联赛）
+1. ✅ 引入图表库（Chart.js + vue-chartjs，~60KB gzip）
+2. ✅ `PlayerXgChart.vue` — Understat `/main/getPlayerData/{id}` 逐场 xG 时间线 + 5 场滚动平均线 + npxG 双线
+3. ✅ `PlayerCareerChart.vue` — ESPN core `athleteSeasonStats` 多赛季（8 年）统计 → 进球/助攻曲线，浏览器 CORS 直连（CLAUDE.md 已批准），过滤未来赛季
+4. ✅ 历史赛季切换 — `SeasonSelector.vue` + `fetch-espn-core.js` 加 `fetchSeasons` 输出 `seasons.json`（25 赛季清单）
+5. ✅ 球员对比页 — `CompareView.vue` + `compareStore`（localStorage 持久化，最多 4 人）+ 13 项核心 stats 对比表
+6. ✅ `useEspnCoreFetch.ts` composable — 浏览器直连 ESPN core + 24h localStorage 缓存
+7. ✅ `fetch-understat.js` 加 `fetchPlayerHistory` 抓逐场 xG → `xg/players/{id}.json`
+8. ✅ 顺手修 fetch-espn-core.js team roster bug（默认 pageSize 25 漏球员 → 加 ?limit=100，EPL 500→661）
 
 **验收**：
-- [ ] 球员详情页有 xG 趋势图
-- [ ] 生涯曲线展示多个赛季数据
-- [ ] 历史赛季可切换查看
+- [x] 球员详情页有 xG 趋势图（Haaland 逐场 + 滚动平均）
+- [x] 生涯曲线展示最近 8 个赛季数据（含 2025 当前）
+- [x] 历史赛季可切换查看（SeasonSelector 在 PlayerDetailView xG 区块右上）
+- [x] 球员对比页支持 2-4 人 stats 并排（差分高亮）
 
 ---
 

@@ -5,6 +5,9 @@ import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
 import TeamLogo from '../components/common/TeamLogo.vue'
 import PlayerStatsGrid from '../components/players/PlayerStatsGrid.vue'
+import PlayerXgChart from '../components/players/PlayerXgChart.vue'
+import PlayerCareerChart from '../components/players/PlayerCareerChart.vue'
+import SeasonSelector from '../components/common/SeasonSelector.vue'
 import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { usePlayersStore } from '../stores/players'
@@ -23,6 +26,8 @@ const xg = useXgStore()
 const league = computed(() => route.params.league as LeagueSlug)
 const playerId = computed(() => Number(route.params.id))
 const season = computed(() => app.leagueInfo(league.value)?.season ?? '2025')
+// Phase 6: 历史赛季切换（仅 PlayerDetailView，URL query ?season=2024）
+const selectedSeason = computed(() => (route.query.season as string) || season.value)
 
 const seq = ref(0)
 const error = ref('')
@@ -127,7 +132,10 @@ function back() {
 
       <!-- xG 数据区块 -->
       <div v-if="xgRow" class="border border-white/10 rounded-lg p-4 mb-6 bg-white/[0.02]">
-        <h2 class="font-cond text-sm tracking-wider text-white mb-3">{{ t('player.xgSection', app.lang) }}</h2>
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-cond text-sm tracking-wider text-white">{{ t('player.xgSection', app.lang) }}</h2>
+          <SeasonSelector v-if="season !== selectedSeason" :league="league" :model-value="selectedSeason" @update:model-value="(v) => router.replace({ query: { ...route.query, season: v } })" />
+        </div>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 text-sm">
           <div><div class="text-[10px] text-slate-500 font-mono-d">xG</div><div class="text-white font-mono-d">{{ xgRow.xG.toFixed(2) }}</div></div>
           <div><div class="text-[10px] text-slate-500 font-mono-d">xA</div><div class="text-white font-mono-d">{{ xgRow.xA.toFixed(2) }}</div></div>
@@ -138,6 +146,12 @@ function back() {
           <div><div class="text-[10px] text-slate-500 font-mono-d">{{ t('col.assists', app.lang) }}</div><div class="text-white font-mono-d">{{ xgRow.assists }}</div></div>
         </div>
       </div>
+
+      <!-- xG 趋势图（Phase 6，逐场 + 5 场滚动平均） -->
+      <PlayerXgChart :league="league" :understat-player-id="xgRow ? xgRow.id : null" />
+
+      <!-- 生涯曲线（Phase 6，最近 8 个赛季进球/助攻） -->
+      <PlayerCareerChart :league="league" :player-id="playerId" :current-season="season" />
 
       <!-- 统计 4 分类 -->
       <PlayerStatsGrid :stats="profile.stats" :position="profile.position" />

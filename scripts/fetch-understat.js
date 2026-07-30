@@ -188,10 +188,66 @@ async function fetchAllPlayers(league) {
   }));
 }
 
+// ========== 3. 球员逐场 history（Phase 6 xG 趋势图） ==========
+
+/**
+ * 抓 Understat 球员逐场数据，输出 xg/players/{id}.json
+ * 数据源：/main/getPlayerData/{id}（gzip JSON，含 player/matches/groups/shots 等字段）
+ * matches 数组每项含 date/goals/shots/xG/time/position/h_team/a_team/h_goals/a_goals/season 等
+ *
+ * 限制：仅抓当前赛季 matches（按 season 字段过滤），避免档案过大
+ */
+async function fetchPlayerHistory(league, playerId, playerName) {
+  await sleep(DELAY_MS);
+  const text = await httpRequest(`${BASE}/main/getPlayerData/${playerId}`, {
+    method: 'GET',
+    headers: {
+      Referer: `${BASE}/player/${playerId}`,
+      'X-Requested-With': 'XMLHttpRequest',
+      'Accept-Encoding': 'gzip, deflate',
+    },
+  });
+  const data = JSON.parse(text);
+  const matches = (data.matches || []).filter((m) => String(m.season) === String(season));
+  const history = matches.map((m) => ({
+    date: m.date,
+    homeAway: m.h_team === (data.player && data.player.team_name) ? 'h' : 'a',
+    position: m.position,
+    result: m.h_goals === m.a_goals ? 'd' : (m.h_goals > m.a_goals ? (m.h_team === (data.player && data.player.team_name) ? 'w' : 'l') : (m.h_team === (data.player && data.player.team_name) ? 'l' : 'w')),
+    scored: m.h_team === (data.player && data.player.team_name) ? toNum(m.h_goals) : toNum(m.a_goals),
+    missed: m.h_team === (data.player && data.player.team_name) ? toNum(m.a_goals) : toNum(m.h_goals),
+    team: m.h_team === (data.player && data.player.team_name) ? m.h_team : m.a_team,
+    opponent: m.h_team === (data.player && data.player.team_name) ? m.a_team : m.h_team,
+    goals: toNum(m.goals),
+    assists: toNum(m.assists),
+    shots: toNum(m.shots),
+    xG: toNum(m.xG),
+    xA: toNum(m.xA),
+    npxG: toNum(m.npxG),
+    xGChain: toNum(m.xGChain),
+    xGBuildup: toNum(m.xGBuildup),
+    keyPasses: toNum(m.key_passes),
+    time: toNum(m.time),
+  }));
+  return {
+    source: 'understat.com',
+    league: league.slug,
+    understatLeague: league.understatSlug,
+    season,
+    understatPlayerId: String(playerId),
+    playerName: playerName || (data.player && data.player.name) || null,
+    updateTime: new Date().toISOString(),
+    history,
+  };
+}
+
 // ========== 主流程 ==========
 
 async function processLeague(league) {
   const xgDir = path.join(DATA_ROOT, league.slug, 'xg');
+  const playersDir = path.join(xgDir, 'players');
+  const fs = require('fs');
+  if (!fs.existsSync(playersDir)) fs.mkdirSync(playersDir, { recursive: true });
 
   const standings = await fetchLeagueData(league);
   const sChanged = writeJsonIfChanged(path.join(xgDir, 'standings.json'), standings);
@@ -208,6 +264,38 @@ async function processLeague(league) {
     players,
   });
   console.log(`  · [${league.slug}] xg/players.json ${pChanged ? '已更新' : '无变化'}（${players.length} 人）`);
+
+  // Phase 6: 球员逐场 history（输出 xg/players/{id}.json）
+  // 每球员 1 请求 + 1.2s 间隔 → 500 人 ≈ 10 分钟/联赛，5 联赛 50 分钟（Actions 月配额内）
+  // 失败静默（不阻塞主流程，单球员失败不影响其他）
+  const WITH_HISTORY = process.env.WITH_PLAYER_HISTORY !== '0';
+  if (WITH_HISTORY) {
+    console.log(`  · [${league.slug}] 抓球员逐场 xG（${players.length} 人，预计 ${Math.round(players.length * 1.2 / 60)} 分钟）...`);
+    let okN = 0, failN = 0;
+    for (let i = 0; i < players.length; i++) {
+      const p = players[i];
+      try {
+        const hist = await fetchPlayerHistory(league, p.id, p.name);
+        writeJsonIfChanged(path.join(playersDir, `${p.id}.json`), hist);
+        okN++;
+        if ((i + 1) % 50 === 0) console.log(`    进度 ${i + 1}/${players.length}`);
+      } catch (e) {
+        failN++;
+      }
+    }
+    // 清理 stale：删除 players/ 下不再在 players.json 里的旧 .json
+    const curIds = new Set(players.map((p) => String(p.id)));
+    let removed = 0;
+    for (const f of fs.readdirSync(playersDir)) {
+      if (!f.endsWith('.json')) continue;
+      if (!curIds.has(f.replace(/\.json$/, ''))) {
+        try { fs.unlinkSync(path.join(playersDir, f)); removed++; } catch {}
+      }
+    }
+    console.log(`  · [${league.slug}] 球员逐场 xG 完成 ${okN} 成功 / ${failN} 失败${removed ? `，清理 ${removed} 个 stale` : ''}`);
+  } else {
+    console.log(`  · [${league.slug}] 跳过球员逐场 xG（WITH_PLAYER_HISTORY=0）`);
+  }
 }
 
 async function main() {

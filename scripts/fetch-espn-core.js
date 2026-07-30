@@ -189,7 +189,8 @@ async function fetchTeams(league) {
     }
 
     try {
-      const roster = await getJson(`${core.team(league.slug, id, season)}/athletes`);
+      // 加 ?limit=100 避免默认 pageSize 25 漏球员（Man City 34 人会被截到 25）
+      const roster = await getJson(`${core.team(league.slug, id, season)}/athletes?limit=100`);
       for (const a of roster.items || []) {
         const aid = idFromRef(a.$ref);
         if (aid) rosterMap.set(aid, id);
@@ -416,6 +417,34 @@ async function fetchLeaders(league, index, teamsById) {
 
 // ========== 主流程 ==========
 
+async function fetchSeasons(league) {
+  // Phase 6: 联赛赛季清单（26 个历史赛季），用于历史赛季切换
+  console.log(`  · [${league.slug}] 抓取赛季清单...`);
+  const list = await getJson(core.seasons(league.slug));
+  const items = list.items || [];
+  const seasons = [];
+  for (const item of items) {
+    const ref = (item.$ref || item.href || '').replace(/^http:/, 'https:');
+    if (!ref) continue;
+    try {
+      const s = await getJson(ref);
+      if (s && s.year != null) {
+        seasons.push({
+          year: s.year,
+          displayName: s.displayName || String(s.year),
+          startDate: s.startDate || null,
+          endDate: s.endDate || null,
+        });
+      }
+    } catch (e) {
+      // 单个赛季详情失败不阻塞主流程
+    }
+  }
+  // 按年份倒序（最新在前）
+  seasons.sort((a, b) => b.year - a.year);
+  return seasons;
+}
+
 async function processLeague(league) {
   const season = league.season || SEASON;
   console.log(`\n===== [${league.slug}] ${league.name}（赛季 ${season}） =====`);
@@ -424,6 +453,21 @@ async function processLeague(league) {
   const meta = await fetchMeta(league);
   writeJsonIfChanged(path.join(leagueDir, 'meta.json'), meta);
   console.log(`  · meta 完成`);
+
+  // Phase 6: 抓赛季清单（失败不阻塞主流程）
+  try {
+    const seasons = await fetchSeasons(league);
+    writeJsonIfChanged(path.join(leagueDir, 'seasons.json'), {
+      source: 'sports.core.api.espn.com',
+      updateTime: new Date().toISOString(),
+      league: league.slug,
+      count: seasons.length,
+      seasons,
+    });
+    console.log(`  · seasons 完成（${seasons.length} 个赛季）`);
+  } catch (e) {
+    console.warn(`  ! [${league.slug}] seasons 抓取失败: ${e.message}`);
+  }
 
   const { teams, rosterMap } = await fetchTeams(league);
   const teamsById = new Map(teams.map((t) => [Number(t.id), t]));

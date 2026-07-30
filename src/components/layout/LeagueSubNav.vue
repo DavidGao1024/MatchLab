@@ -24,6 +24,7 @@ const TABS: SubTab[] = [
   { routeName: 'schedule', path: (s) => `/${s}/schedule`, labelZh: '赛程', labelEn: 'Fixtures' },
   { routeName: 'players', path: (s) => `/${s}/players`, labelZh: '球员', labelEn: 'Players' },
   { routeName: 'leaders', path: (s) => `/${s}/leaders`, labelZh: '排行榜', labelEn: 'Leaders' },
+  { routeName: 'compare', path: (s) => `/${s}/compare`, labelZh: '对比', labelEn: 'Compare' },
 ]
 
 function isActive(name: string): boolean {

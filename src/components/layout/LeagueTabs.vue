@@ -26,6 +26,7 @@ function pick(slug: LeagueSlug) {
   if (n === 'schedule' || n === 'schedule-month') router.push(`/${slug}/schedule`)
   else if (n === 'players' || n === 'player-detail') router.push(`/${slug}/players`)
   else if (n === 'leaders') router.push(`/${slug}/leaders`)
+  else if (n === 'compare') router.push(`/${slug}/compare`)
   else if (n === 'team-detail') router.push(`/${slug}/standings`)
   else router.push(`/${slug}/standings`)
 }
