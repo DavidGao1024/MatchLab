@@ -772,29 +772,35 @@ interface MatchTeam {
 
 ---
 
-### Phase 3：比赛详情（1-2 天）
+### Phase 3：比赛详情（1-2 天）— ✅ 完工（2026-07-29 弹窗主体 + 2026-07-30 六联赛译名表全覆盖）
 
 **目标**：点击比赛卡片，弹窗显示阵容、事件、统计。
 
 **步骤**：
-1. 实现 `MatchModal.vue`（弹窗容器）
-2. 浏览器直连 `ESPN summary API` 获取阵容+事件+统计
-3. 实现 `LineupPitch.vue`（**从世界杯项目移植**）
+1. ✅ 实现 `MatchModal.vue`（弹窗容器，单页滚动世界杯风）
+2. ✅ 浏览器直连 `ESPN summary API` 获取阵容+事件+统计
+3. ✅ 实现 `LineupPitch.vue`（**从世界杯项目移植**）
    - 移植 `categorizePlayers` / `getFieldXY` / `getFormationYRows`
    - 改为 Vue 组件 + TypeScript
    - 足球场 SVG/CSS 背景 + 球员按阵型分层
-4. 实现 `MatchEvents.vue`（进球⚽ / 🟨 / 🟥 / 🔄换人 时间线）
-5. 实现 `MatchStats.vue`（控球率、射门等对比条）
-6. 实现 H2H 历史交锋区块（来自 summary API）
+4. ✅ 实现 `MatchEvents.vue`（进球⚽ / 🟨 / 🟥 / 🔄换人 时间线，participants 对齐 ESPN 结构）
+5. ✅ 实现 `MatchStats.vue`（控球率、射门等对比条，精简到 10 项核心）
+6. ✅ 实现 H2H 历史交锋区块（来自 summary API）
+7. ✅ 球员中文译名表抓取（六联赛全覆盖 31393 变体，命中率 83.7%）
+   - `scripts/fetch-dqd-players.js` 抓取 + `expandNameVariants` 生成 6 种变体
+   - `scripts/augment-player-zh.js` 后处理补反序 + 去重音变体
+   - `scripts/handfill-player-zh.js` 中超外援 + DOB 匹配手填
+   - `playerName()` 加撇号 + 单名兜底回退
 
 **验收**：
-- [ ] 点击已完赛比赛 → 弹窗显示完整信息
-- [ ] 阵容足球场可视化正确（阵型分层、左右分布）
-- [ ] 事件时间线按时间排序
-- [ ] 技术统计对比条显示
-- [ ] 未开赛比赛显示 "阵容尚未公布"
-- [ ] ESC / 点击遮罩关闭弹窗
-- [ ] 移动端弹窗全屏
+- [x] 点击已完赛比赛 → 弹窗显示完整信息
+- [x] 阵容足球场可视化正确（阵型分层、左右分布）
+- [x] 事件时间线按时间排序
+- [x] 技术统计对比条显示
+- [x] 未开赛比赛显示 "阵容尚未公布"
+- [x] ESC / 点击遮罩关闭弹窗
+- [x] 移动端弹窗全屏
+- [x] 中文模式球员名中文化（命中率 83.7%，主力/常用替补基本全覆盖）
 
 ---
 
