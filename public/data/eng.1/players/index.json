@@ -1,60 +1,10 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-07-29T08:55:59.982Z",
+  "updateTime": "2026-07-30T06:03:49.233Z",
   "league": "eng.1",
   "season": "2025",
-  "count": 727,
+  "count": 500,
   "players": [
-    {
-      "id": 253989,
-      "name": "Erling Haaland",
-      "teamId": 382,
-      "position": "F",
-      "age": 26,
-      "goals": 27,
-      "assists": null,
-      "team": "Manchester City"
-    },
-    {
-      "id": 301894,
-      "name": "Igor Thiago",
-      "teamId": 337,
-      "position": "F",
-      "age": 25,
-      "goals": 22,
-      "assists": null,
-      "team": "Brentford"
-    },
-    {
-      "id": 273292,
-      "name": "Antoine Semenyo",
-      "teamId": 382,
-      "position": "F",
-      "age": 26,
-      "goals": 17,
-      "assists": null,
-      "team": "Manchester City"
-    },
-    {
-      "id": 198825,
-      "name": "Ollie Watkins",
-      "teamId": 362,
-      "position": "F",
-      "age": 30,
-      "goals": 16,
-      "assists": null,
-      "team": "Aston Villa"
-    },
-    {
-      "id": 284960,
-      "name": "João Pedro",
-      "teamId": 363,
-      "position": "F",
-      "age": 24,
-      "goals": 15,
-      "assists": null,
-      "team": "Chelsea"
-    },
     {
       "id": 243396,
       "name": "Morgan Gibbs-White",
@@ -64,96 +14,6 @@
       "goals": 15,
       "assists": null,
       "team": "Nottingham Forest"
-    },
-    {
-      "id": 197717,
-      "name": "Dominic Calvert-Lewin",
-      "teamId": 357,
-      "position": "F",
-      "age": 29,
-      "goals": 14,
-      "assists": null,
-      "team": "Leeds United"
-    },
-    {
-      "id": 258906,
-      "name": "Viktor Gyökeres",
-      "teamId": 359,
-      "position": "F",
-      "age": 28,
-      "goals": 14,
-      "assists": null,
-      "team": "Arsenal"
-    },
-    {
-      "id": 115271,
-      "name": "Danny Welbeck",
-      "teamId": 331,
-      "position": "F",
-      "age": 35,
-      "goals": 13,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 361809,
-      "name": "Junior Kroupi",
-      "teamId": 349,
-      "position": "F",
-      "age": 20,
-      "goals": 13,
-      "assists": null,
-      "team": "AFC Bournemouth"
-    },
-    {
-      "id": 241187,
-      "name": "Jean-Philippe Mateta",
-      "teamId": 384,
-      "position": "F",
-      "age": 29,
-      "goals": 12,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 289155,
-      "name": "Benjamin Sesko",
-      "teamId": 360,
-      "position": "F",
-      "age": 23,
-      "goals": 11,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 271170,
-      "name": "Bryan Mbeumo",
-      "teamId": 360,
-      "position": "F",
-      "age": 26,
-      "goals": 11,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 304901,
-      "name": "Hugo Ekitike",
-      "teamId": 364,
-      "position": "F",
-      "age": 24,
-      "goals": 11,
-      "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 156799,
-      "name": "Richarlison",
-      "teamId": 367,
-      "position": "F",
-      "age": 29,
-      "goals": 11,
-      "assists": null,
-      "team": "Tottenham Hotspur"
     },
     {
       "id": 296395,
@@ -186,36 +46,6 @@
       "team": "Fulham"
     },
     {
-      "id": 259902,
-      "name": "Matheus Cunha",
-      "teamId": 360,
-      "position": "F",
-      "age": 27,
-      "goals": 10,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 265653,
-      "name": "Morgan Rogers",
-      "teamId": 363,
-      "position": "M",
-      "age": 24,
-      "goals": 10,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 289511,
-      "name": "Beto",
-      "teamId": 368,
-      "position": "F",
-      "age": 28,
-      "goals": 9,
-      "assists": null,
-      "team": "Everton"
-    },
-    {
       "id": 124091,
       "name": "Bruno Fernandes",
       "teamId": 360,
@@ -236,14 +66,34 @@
       "team": "Newcastle United"
     },
     {
-      "id": 241012,
-      "name": "Ismaïla Sarr",
-      "teamId": 384,
-      "position": "F",
-      "age": 28,
+      "id": 173666,
+      "name": "Casemiro",
+      "teamId": 360,
+      "position": "M",
+      "age": 34,
       "goals": 9,
       "assists": null,
-      "team": "Crystal Palace"
+      "team": "Manchester United"
+    },
+    {
+      "id": 201089,
+      "name": "Jarrod Bowen",
+      "teamId": 371,
+      "position": "F",
+      "age": 29,
+      "goals": 9,
+      "assists": null,
+      "team": "West Ham United"
+    },
+    {
+      "id": 167060,
+      "name": "Raúl Jiménez",
+      "teamId": 370,
+      "position": "F",
+      "age": 35,
+      "goals": 9,
+      "assists": null,
+      "team": "Fulham"
     },
     {
       "id": 307657,
@@ -286,46 +136,6 @@
       "team": "Newcastle United"
     },
     {
-      "id": 270641,
-      "name": "Noah Okafor",
-      "teamId": 357,
-      "position": "F",
-      "age": 26,
-      "goals": 8,
-      "assists": null,
-      "team": "Leeds United"
-    },
-    {
-      "id": 301166,
-      "name": "Thierno Barry",
-      "teamId": 368,
-      "position": "F",
-      "age": 23,
-      "goals": 8,
-      "assists": null,
-      "team": "Everton"
-    },
-    {
-      "id": 282229,
-      "name": "Brian Brobbey",
-      "teamId": 366,
-      "position": "F",
-      "age": 24,
-      "goals": 7,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 280555,
-      "name": "Bukayo Saka",
-      "teamId": 359,
-      "position": "F",
-      "age": 24,
-      "goals": 7,
-      "assists": null,
-      "team": "Arsenal"
-    },
-    {
       "id": 138924,
       "name": "Callum Wilson",
       "teamId": 371,
@@ -334,16 +144,6 @@
       "goals": 7,
       "assists": null,
       "team": "West Ham United"
-    },
-    {
-      "id": 249524,
-      "name": "Cody Gakpo",
-      "teamId": 364,
-      "position": "F",
-      "age": 27,
-      "goals": 7,
-      "assists": null,
-      "team": "Liverpool"
     },
     {
       "id": 315530,
@@ -396,16 +196,6 @@
       "team": "Manchester City"
     },
     {
-      "id": 319431,
-      "name": "William Osula",
-      "teamId": 361,
-      "position": "F",
-      "age": 22,
-      "goals": 7,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
       "id": 257206,
       "name": "Dominik Szoboszlai",
       "teamId": 364,
@@ -436,16 +226,6 @@
       "team": "AFC Bournemouth"
     },
     {
-      "id": 287869,
-      "name": "Igor Jesus",
-      "teamId": 393,
-      "position": "F",
-      "age": 25,
-      "goals": 6,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
       "id": 268641,
       "name": "Iliman Ndiaye",
       "teamId": 368,
@@ -456,24 +236,14 @@
       "team": "Everton"
     },
     {
-      "id": 174980,
-      "name": "Leandro Trossard",
-      "teamId": 359,
-      "position": "F",
-      "age": 31,
-      "goals": 6,
-      "assists": null,
-      "team": "Arsenal"
-    },
-    {
-      "id": 258956,
-      "name": "Lukas Nmecha",
-      "teamId": 357,
+      "id": 252933,
+      "name": "Valentín Castellanos",
+      "teamId": 371,
       "position": "F",
       "age": 27,
       "goals": 6,
       "assists": null,
-      "team": "Leeds United"
+      "team": "West Ham United"
     },
     {
       "id": 157892,
@@ -526,24 +296,14 @@
       "team": "Sunderland"
     },
     {
-      "id": 303748,
-      "name": "Florian Wirtz",
-      "teamId": 364,
+      "id": 224144,
+      "name": "João Palhinha",
+      "teamId": 367,
       "position": "M",
-      "age": 23,
+      "age": 31,
       "goals": 5,
       "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 283672,
-      "name": "Jérémy Doku",
-      "teamId": 382,
-      "position": "F",
-      "age": 24,
-      "goals": 5,
-      "assists": null,
-      "team": "Manchester City"
+      "team": "Tottenham Hotspur"
     },
     {
       "id": 162843,
@@ -586,16 +346,6 @@
       "team": "Chelsea"
     },
     {
-      "id": 357719,
-      "name": "Rayan",
-      "teamId": 349,
-      "position": "F",
-      "age": 19,
-      "goals": 5,
-      "assists": null,
-      "team": "AFC Bournemouth"
-    },
-    {
       "id": 274632,
       "name": "Ryan Gravenberch",
       "teamId": 364,
@@ -616,6 +366,16 @@
       "team": "Manchester City"
     },
     {
+      "id": 230666,
+      "name": "Tomás Soucek",
+      "teamId": 371,
+      "position": "M",
+      "age": 31,
+      "goals": 5,
+      "assists": null,
+      "team": "West Ham United"
+    },
+    {
       "id": 175063,
       "name": "Alex Iwobi",
       "teamId": 370,
@@ -634,16 +394,6 @@
       "goals": 4,
       "assists": null,
       "team": "Leeds United"
-    },
-    {
-      "id": 360062,
-      "name": "Chemsdine Talbi",
-      "teamId": 366,
-      "position": "F",
-      "age": 21,
-      "goals": 4,
-      "assists": null,
-      "team": "Sunderland"
     },
     {
       "id": 96970,
@@ -696,16 +446,6 @@
       "team": "Brighton & Hove Albion"
     },
     {
-      "id": 252747,
-      "name": "Jørgen Strand Larsen",
-      "teamId": 384,
-      "position": "F",
-      "age": 26,
-      "goals": 4,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
       "id": 303444,
       "name": "Malick Thiaw",
       "teamId": 361,
@@ -714,16 +454,6 @@
       "goals": 4,
       "assists": null,
       "team": "Newcastle United"
-    },
-    {
-      "id": 325042,
-      "name": "Mathys Tel",
-      "teamId": 367,
-      "position": "F",
-      "age": 21,
-      "goals": 4,
-      "assists": null,
-      "team": "Tottenham Hotspur"
     },
     {
       "id": 296512,
@@ -776,16 +506,6 @@
       "team": "Manchester City"
     },
     {
-      "id": 194686,
-      "name": "Taiwo Awoniyi",
-      "teamId": 393,
-      "position": "F",
-      "age": 28,
-      "goals": 4,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
       "id": 314790,
       "name": "Alex Scott",
       "teamId": 349,
@@ -794,56 +514,6 @@
       "goals": 3,
       "assists": null,
       "team": "AFC Bournemouth"
-    },
-    {
-      "id": 235662,
-      "name": "Alexander Isak",
-      "teamId": 364,
-      "position": "F",
-      "age": 26,
-      "goals": 3,
-      "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 291613,
-      "name": "Amine Adli",
-      "teamId": 349,
-      "position": "F",
-      "age": 26,
-      "goals": 3,
-      "assists": null,
-      "team": "AFC Bournemouth"
-    },
-    {
-      "id": 261419,
-      "name": "Callum Hudson-Odoi",
-      "teamId": 393,
-      "position": "F",
-      "age": 25,
-      "goals": 3,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
-      "id": 134190,
-      "name": "Chris Wood",
-      "teamId": 393,
-      "position": "F",
-      "age": 34,
-      "goals": 3,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
-      "id": 194115,
-      "name": "Dominic Solanke",
-      "teamId": 367,
-      "position": "F",
-      "age": 28,
-      "goals": 3,
-      "assists": null,
-      "team": "Tottenham Hotspur"
     },
     {
       "id": 266697,
@@ -856,16 +526,6 @@
       "team": "Fulham"
     },
     {
-      "id": 217289,
-      "name": "Gabriel Jesus",
-      "teamId": 359,
-      "position": "F",
-      "age": 29,
-      "goals": 3,
-      "assists": null,
-      "team": "Arsenal"
-    },
-    {
       "id": 236322,
       "name": "Gabriel Magalhães",
       "teamId": 359,
@@ -874,16 +534,6 @@
       "goals": 3,
       "assists": null,
       "team": "Arsenal"
-    },
-    {
-      "id": 278061,
-      "name": "Georginio Rutter",
-      "teamId": 331,
-      "position": "F",
-      "age": 24,
-      "goals": 3,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
     },
     {
       "id": 172836,
@@ -934,6 +584,26 @@
       "goals": 3,
       "assists": null,
       "team": "Brentford"
+    },
+    {
+      "id": 242705,
+      "name": "Konstantinos Mavropanos",
+      "teamId": 371,
+      "position": "D",
+      "age": 28,
+      "goals": 3,
+      "assists": null,
+      "team": "West Ham United"
+    },
+    {
+      "id": 309563,
+      "name": "Lesley Ugochukwu",
+      "teamId": 379,
+      "position": "M",
+      "age": 22,
+      "goals": 3,
+      "assists": null,
+      "team": "Burnley"
     },
     {
       "id": 265907,
@@ -1006,16 +676,6 @@
       "team": "Chelsea"
     },
     {
-      "id": 293236,
-      "name": "Noni Madueke",
-      "teamId": 359,
-      "position": "F",
-      "age": 24,
-      "goals": 3,
-      "assists": null,
-      "team": "Arsenal"
-    },
-    {
       "id": 214188,
       "name": "Nordi Mukiele",
       "teamId": 366,
@@ -1026,14 +686,14 @@
       "team": "Sunderland"
     },
     {
-      "id": 303745,
-      "name": "Omar Marmoush",
-      "teamId": 382,
-      "position": "F",
-      "age": 27,
+      "id": 308456,
+      "name": "Rodrigo Gomes",
+      "teamId": 380,
+      "position": "D",
+      "age": 23,
       "goals": 3,
       "assists": null,
-      "team": "Manchester City"
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 152469,
@@ -1056,6 +716,26 @@
       "team": "Fulham"
     },
     {
+      "id": 228298,
+      "name": "Samuel Chukwueze",
+      "teamId": 370,
+      "position": "F",
+      "age": 27,
+      "goals": 3,
+      "assists": null,
+      "team": "Fulham"
+    },
+    {
+      "id": 241225,
+      "name": "Santiago Bueno",
+      "teamId": 380,
+      "position": "D",
+      "age": 27,
+      "goals": 3,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
+    },
+    {
       "id": 227784,
       "name": "Trevoh Chalobah",
       "teamId": 363,
@@ -1064,16 +744,6 @@
       "goals": 3,
       "assists": null,
       "team": "Chelsea"
-    },
-    {
-      "id": 348787,
-      "name": "Yankuba Minteh",
-      "teamId": 331,
-      "position": "F",
-      "age": 22,
-      "goals": 3,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
     },
     {
       "id": 304242,
@@ -1086,6 +756,16 @@
       "team": "Brighton & Hove Albion"
     },
     {
+      "id": 194116,
+      "name": "Adam Armstrong",
+      "teamId": 380,
+      "position": "F",
+      "age": 29,
+      "goals": 2,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
+    },
+    {
       "id": 249299,
       "name": "Alexis Mac Allister",
       "teamId": 364,
@@ -1094,16 +774,6 @@
       "goals": 2,
       "assists": null,
       "team": "Liverpool"
-    },
-    {
-      "id": 291630,
-      "name": "Amad Diallo",
-      "teamId": 360,
-      "position": "F",
-      "age": 24,
-      "goals": 2,
-      "assists": null,
-      "team": "Manchester United"
     },
     {
       "id": 304799,
@@ -1136,24 +806,14 @@
       "team": "Tottenham Hotspur"
     },
     {
-      "id": 291307,
-      "name": "Brennan Johnson",
-      "teamId": 384,
-      "position": "F",
-      "age": 25,
+      "id": 199833,
+      "name": "Bernardo Silva",
+      "teamId": 382,
+      "position": "M",
+      "age": 31,
       "goals": 2,
       "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 387655,
-      "name": "Charalambos Kostoulas",
-      "teamId": 331,
-      "position": "F",
-      "age": 19,
-      "goals": 2,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
+      "team": "Manchester City"
     },
     {
       "id": 282645,
@@ -1166,46 +826,6 @@
       "team": "Sunderland"
     },
     {
-      "id": 259486,
-      "name": "Eddie Nketiah",
-      "teamId": 384,
-      "position": "F",
-      "age": 27,
-      "goals": 2,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 332862,
-      "name": "Eliezer Mayenda",
-      "teamId": 366,
-      "position": "F",
-      "age": 21,
-      "goals": 2,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 376481,
-      "name": "Estêvão",
-      "teamId": 363,
-      "position": "F",
-      "age": 19,
-      "goals": 2,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 234306,
-      "name": "Federico Chiesa",
-      "teamId": 364,
-      "position": "F",
-      "age": 28,
-      "goals": 2,
-      "assists": null,
-      "team": "Liverpool"
-    },
-    {
       "id": 324991,
       "name": "Habib Diarra",
       "teamId": 366,
@@ -1214,6 +834,16 @@
       "goals": 2,
       "assists": null,
       "team": "Sunderland"
+    },
+    {
+      "id": 237224,
+      "name": "Hwang Hee-Chan",
+      "teamId": 380,
+      "position": "F",
+      "age": 30,
+      "goals": 2,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 213718,
@@ -1306,14 +936,14 @@
       "team": "Newcastle United"
     },
     {
-      "id": 276327,
-      "name": "Joshua Zirkzee",
-      "teamId": 360,
-      "position": "F",
-      "age": 25,
+      "id": 207146,
+      "name": "Josh Cullen",
+      "teamId": 379,
+      "position": "M",
+      "age": 30,
       "goals": 2,
       "assists": null,
-      "team": "Manchester United"
+      "team": "Burnley"
     },
     {
       "id": 299910,
@@ -1336,14 +966,14 @@
       "team": "AFC Bournemouth"
     },
     {
-      "id": 231182,
-      "name": "Kai Havertz",
-      "teamId": 359,
-      "position": "F",
+      "id": 151714,
+      "name": "Ladislav Krejcí",
+      "teamId": 380,
+      "position": "D",
       "age": 27,
       "goals": 2,
       "assists": null,
-      "team": "Arsenal"
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 324541,
@@ -1446,16 +1076,6 @@
       "team": "Chelsea"
     },
     {
-      "id": 379588,
-      "name": "Rio Ngumoha",
-      "teamId": 364,
-      "position": "F",
-      "age": 17,
-      "goals": 2,
-      "assists": null,
-      "team": "Liverpool"
-    },
-    {
       "id": 234878,
       "name": "Rúben Dias",
       "teamId": 382,
@@ -1484,16 +1104,6 @@
       "goals": 2,
       "assists": null,
       "team": "Leeds United"
-    },
-    {
-      "id": 236209,
-      "name": "Tammy Abraham",
-      "teamId": 362,
-      "position": "F",
-      "age": 28,
-      "goals": 2,
-      "assists": null,
-      "team": "Aston Villa"
     },
     {
       "id": 140033,
@@ -1526,16 +1136,6 @@
       "team": "AFC Bournemouth"
     },
     {
-      "id": 332962,
-      "name": "Xavi Simons",
-      "teamId": 367,
-      "position": "M",
-      "age": 23,
-      "goals": 2,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
       "id": 297370,
       "name": "Yéremy Pino",
       "teamId": 384,
@@ -1566,16 +1166,6 @@
       "team": "AFC Bournemouth"
     },
     {
-      "id": 325555,
-      "name": "Alejandro Garnacho",
-      "teamId": 362,
-      "position": "F",
-      "age": 22,
-      "goals": 1,
-      "assists": null,
-      "team": "Aston Villa"
-    },
-    {
       "id": 367861,
       "name": "Álex Jiménez",
       "teamId": 349,
@@ -1584,6 +1174,16 @@
       "goals": 1,
       "assists": null,
       "team": "AFC Bournemouth"
+    },
+    {
+      "id": 304216,
+      "name": "André",
+      "teamId": 380,
+      "position": "M",
+      "age": 25,
+      "goals": 1,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 314858,
@@ -1616,6 +1216,16 @@
       "team": "Fulham"
     },
     {
+      "id": 229524,
+      "name": "Axel Tuanzebe",
+      "teamId": 379,
+      "position": "D",
+      "age": 28,
+      "goals": 1,
+      "assists": null,
+      "team": "Burnley"
+    },
+    {
       "id": 6327,
       "name": "Ben Davies",
       "teamId": 367,
@@ -1626,6 +1236,16 @@
       "team": "Tottenham Hotspur"
     },
     {
+      "id": 169661,
+      "name": "Bertrand Traoré",
+      "teamId": 366,
+      "position": "F",
+      "age": 30,
+      "goals": 1,
+      "assists": null,
+      "team": "Sunderland"
+    },
+    {
       "id": 250936,
       "name": "Boubacar Kamara",
       "teamId": 362,
@@ -1634,16 +1254,6 @@
       "goals": 1,
       "assists": null,
       "team": "Aston Villa"
-    },
-    {
-      "id": 357683,
-      "name": "Brajan Gruda",
-      "teamId": 331,
-      "position": "F",
-      "age": 22,
-      "goals": 1,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
     },
     {
       "id": 263110,
@@ -1706,16 +1316,6 @@
       "team": "Newcastle United"
     },
     {
-      "id": 275842,
-      "name": "Dan Ndoye",
-      "teamId": 393,
-      "position": "F",
-      "age": 25,
-      "goals": 1,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
       "id": 72487,
       "name": "David Brooks",
       "teamId": 349,
@@ -1734,6 +1334,16 @@
       "goals": 1,
       "assists": null,
       "team": "Manchester United"
+    },
+    {
+      "id": 320074,
+      "name": "Douglas Luiz",
+      "teamId": 362,
+      "position": "M",
+      "age": 28,
+      "goals": 1,
+      "assists": null,
+      "team": "Aston Villa"
     },
     {
       "id": 218122,
@@ -1756,16 +1366,6 @@
       "team": "Leeds United"
     },
     {
-      "id": 288924,
-      "name": "Evann Guessand",
-      "teamId": 362,
-      "position": "F",
-      "age": 25,
-      "goals": 1,
-      "assists": null,
-      "team": "Aston Villa"
-    },
-    {
       "id": 231049,
       "name": "Fábio Carvalho",
       "teamId": 337,
@@ -1786,16 +1386,6 @@
       "team": "Brighton & Hove Albion"
     },
     {
-      "id": 269844,
-      "name": "Gabriel Martinelli",
-      "teamId": 359,
-      "position": "F",
-      "age": 25,
-      "goals": 1,
-      "assists": null,
-      "team": "Arsenal"
-    },
-    {
       "id": 149981,
       "name": "Granit Xhaka",
       "teamId": 366,
@@ -1804,6 +1394,16 @@
       "goals": 1,
       "assists": null,
       "team": "Sunderland"
+    },
+    {
+      "id": 300007,
+      "name": "Hannibal Mejbri",
+      "teamId": 379,
+      "position": "M",
+      "age": 23,
+      "goals": 1,
+      "assists": null,
+      "team": "Burnley"
     },
     {
       "id": 193246,
@@ -1824,6 +1424,26 @@
       "goals": 1,
       "assists": null,
       "team": "Manchester United"
+    },
+    {
+      "id": 189777,
+      "name": "Hugo Bueno",
+      "teamId": 380,
+      "position": "D",
+      "age": 23,
+      "goals": 1,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
+    },
+    {
+      "id": 251634,
+      "name": "Ibrahima Konaté",
+      "teamId": 364,
+      "position": "D",
+      "age": 27,
+      "goals": 1,
+      "assists": null,
+      "team": "Liverpool"
     },
     {
       "id": 230963,
@@ -1856,6 +1476,16 @@
       "team": "Everton"
     },
     {
+      "id": 26843,
+      "name": "James Milner",
+      "teamId": 331,
+      "position": "M",
+      "age": 40,
+      "goals": 1,
+      "assists": null,
+      "team": "Brighton & Hove Albion"
+    },
+    {
       "id": 286965,
       "name": "Jarrad Branthwaite",
       "teamId": 368,
@@ -1874,6 +1504,16 @@
       "goals": 1,
       "assists": null,
       "team": "Leeds United"
+    },
+    {
+      "id": 240369,
+      "name": "Jean-Ricner Bellegarde",
+      "teamId": 380,
+      "position": "M",
+      "age": 28,
+      "goals": 1,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 301524,
@@ -1926,6 +1566,16 @@
       "team": "Fulham"
     },
     {
+      "id": 190936,
+      "name": "Josh Laurent",
+      "teamId": 379,
+      "position": "M",
+      "age": 31,
+      "goals": 1,
+      "assists": null,
+      "team": "Burnley"
+    },
+    {
       "id": 291468,
       "name": "Justin Devenny",
       "teamId": 384,
@@ -1966,6 +1616,16 @@
       "team": "Manchester United"
     },
     {
+      "id": 235129,
+      "name": "Kyle Walker-Peters",
+      "teamId": 371,
+      "position": "D",
+      "age": 29,
+      "goals": 1,
+      "assists": null,
+      "team": "West Ham United"
+    },
+    {
       "id": 147106,
       "name": "Lewis Dunk",
       "teamId": 331,
@@ -1996,26 +1656,6 @@
       "team": "Newcastle United"
     },
     {
-      "id": 307114,
-      "name": "Liam Delap",
-      "teamId": 363,
-      "position": "F",
-      "age": 23,
-      "goals": 1,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 356379,
-      "name": "Lucas Bergvall",
-      "teamId": 367,
-      "position": "M",
-      "age": 20,
-      "goals": 1,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
       "id": 167127,
       "name": "Luke Shaw",
       "teamId": 360,
@@ -2024,6 +1664,16 @@
       "goals": 1,
       "assists": null,
       "team": "Manchester United"
+    },
+    {
+      "id": 259910,
+      "name": "Marc Cucurella",
+      "teamId": 363,
+      "position": "D",
+      "age": 28,
+      "goals": 1,
+      "assists": null,
+      "team": "Chelsea"
     },
     {
       "id": 203669,
@@ -2064,6 +1714,16 @@
       "goals": 1,
       "assists": null,
       "team": "Manchester United"
+    },
+    {
+      "id": 397263,
+      "name": "Max Dowman",
+      "teamId": 359,
+      "position": "M",
+      "age": 16,
+      "goals": 1,
+      "assists": null,
+      "team": "Arsenal"
     },
     {
       "id": 265918,
@@ -2156,16 +1816,6 @@
       "team": "Sunderland"
     },
     {
-      "id": 322771,
-      "name": "Omari Hutchinson",
-      "teamId": 393,
-      "position": "F",
-      "age": 22,
-      "goals": 1,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
       "id": 132659,
       "name": "Pascal Gross",
       "teamId": 331,
@@ -2226,16 +1876,6 @@
       "team": "Tottenham Hotspur"
     },
     {
-      "id": 301525,
-      "name": "Rodrigo Muniz",
-      "teamId": 370,
-      "position": "F",
-      "age": 25,
-      "goals": 1,
-      "assists": null,
-      "team": "Fulham"
-    },
-    {
       "id": 222300,
       "name": "Sasa Lukic",
       "teamId": 370,
@@ -2246,34 +1886,14 @@
       "team": "Fulham"
     },
     {
-      "id": 304470,
-      "name": "Savinho",
-      "teamId": 382,
-      "position": "F",
+      "id": 333240,
+      "name": "Soungoutou Magassa",
+      "teamId": 371,
+      "position": "M",
       "age": 22,
       "goals": 1,
       "assists": null,
-      "team": "Manchester City"
-    },
-    {
-      "id": 317404,
-      "name": "Simon Adingra",
-      "teamId": 366,
-      "position": "F",
-      "age": 24,
-      "goals": 1,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 357165,
-      "name": "Stefanos Tzimas",
-      "teamId": 331,
-      "position": "F",
-      "age": 20,
-      "goals": 1,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
+      "team": "West Ham United"
     },
     {
       "id": 274633,
@@ -2326,16 +1946,6 @@
       "team": "Brentford"
     },
     {
-      "id": 224077,
-      "name": "Yoane Wissa",
-      "teamId": 361,
-      "position": "F",
-      "age": 29,
-      "goals": 1,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
       "id": 283940,
       "name": "Aaron Hickey",
       "teamId": 337,
@@ -2344,6 +1954,26 @@
       "goals": 0,
       "assists": null,
       "team": "Brentford"
+    },
+    {
+      "id": 236015,
+      "name": "Aaron Ramsdale",
+      "teamId": 361,
+      "position": "G",
+      "age": 28,
+      "goals": 0,
+      "assists": null,
+      "team": "Newcastle United"
+    },
+    {
+      "id": 250945,
+      "name": "Aaron Wan-Bissaka",
+      "teamId": 371,
+      "position": "D",
+      "age": 28,
+      "goals": 0,
+      "assists": null,
+      "team": "West Ham United"
     },
     {
       "id": 362211,
@@ -2376,14 +2006,24 @@
       "team": "AFC Bournemouth"
     },
     {
-      "id": 412170,
-      "name": "Adedamola Alabi",
-      "teamId": 361,
-      "position": "M",
-      "age": 17,
+      "id": 220626,
+      "name": "Adama Traoré",
+      "teamId": 371,
+      "position": "F",
+      "age": 30,
       "goals": 0,
       "assists": null,
-      "team": "Newcastle United"
+      "team": "West Ham United"
+    },
+    {
+      "id": 386204,
+      "name": "Airidas Golambeckis",
+      "teamId": 371,
+      "position": "D",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "West Ham United"
     },
     {
       "id": 346874,
@@ -2406,6 +2046,36 @@
       "team": "AFC Bournemouth"
     },
     {
+      "id": 367668,
+      "name": "Alfie Brooks",
+      "teamId": 380,
+      "position": "G",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
+    },
+    {
+      "id": 408489,
+      "name": "Alfie Cresswell",
+      "teamId": 357,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Leeds United"
+    },
+    {
+      "id": 365334,
+      "name": "Alfie Mcnally",
+      "teamId": 370,
+      "position": "G",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Fulham"
+    },
+    {
       "id": 196876,
       "name": "Alisson Becker",
       "teamId": 364,
@@ -2414,6 +2084,16 @@
       "goals": 0,
       "assists": null,
       "team": "Liverpool"
+    },
+    {
+      "id": 148987,
+      "name": "Alphonse Areola",
+      "teamId": 371,
+      "position": "G",
+      "age": 33,
+      "goals": 0,
+      "assists": null,
+      "team": "West Ham United"
     },
     {
       "id": 274272,
@@ -2426,24 +2106,14 @@
       "team": "Manchester United"
     },
     {
-      "id": 382839,
-      "name": "Alysson",
-      "teamId": 362,
-      "position": "F",
-      "age": 20,
+      "id": 373758,
+      "name": "Amara Nallo",
+      "teamId": 364,
+      "position": "D",
+      "age": 19,
       "goals": 0,
       "assists": null,
-      "team": "Aston Villa"
-    },
-    {
-      "id": 215340,
-      "name": "André Onana",
-      "teamId": 360,
-      "position": "G",
-      "age": 30,
-      "goals": 0,
-      "assists": null,
-      "team": "Manchester United"
+      "team": "Liverpool"
     },
     {
       "id": 356080,
@@ -2456,24 +2126,24 @@
       "team": "Aston Villa"
     },
     {
-      "id": 296622,
-      "name": "Anthony Elanga",
-      "teamId": 361,
-      "position": "F",
-      "age": 24,
+      "id": 256773,
+      "name": "Angel Gomes",
+      "teamId": 380,
+      "position": "M",
+      "age": 25,
       "goals": 0,
       "assists": null,
-      "team": "Newcastle United"
+      "team": "Wolverhampton Wanderers"
     },
     {
-      "id": 281705,
-      "name": "Anthony Patterson",
-      "teamId": 366,
+      "id": 181299,
+      "name": "Angus Gunn",
+      "teamId": 393,
       "position": "G",
-      "age": 26,
+      "age": 30,
       "goals": 0,
       "assists": null,
-      "team": "Sunderland"
+      "team": "Nottingham Forest"
     },
     {
       "id": 321081,
@@ -2496,16 +2166,6 @@
       "team": "Tottenham Hotspur"
     },
     {
-      "id": 374133,
-      "name": "Archie Whitehall",
-      "teamId": 393,
-      "position": "M",
-      "age": 20,
-      "goals": 0,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
       "id": 345673,
       "name": "Ármin Pécsi",
       "teamId": 364,
@@ -2514,26 +2174,6 @@
       "goals": 0,
       "assists": null,
       "team": "Liverpool"
-    },
-    {
-      "id": 296321,
-      "name": "Arnaud Kalimuendo",
-      "teamId": 393,
-      "position": "F",
-      "age": 24,
-      "goals": 0,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
-      "id": 165892,
-      "name": "Arthur Masuaku",
-      "teamId": 366,
-      "position": "D",
-      "age": 32,
-      "goals": 0,
-      "assists": null,
-      "team": "Sunderland"
     },
     {
       "id": 231718,
@@ -2576,14 +2216,14 @@
       "team": "Brighton & Hove Albion"
     },
     {
-      "id": 332948,
-      "name": "Ben Gannon-Doak",
-      "teamId": 349,
-      "position": "F",
-      "age": 20,
+      "id": 325541,
+      "name": "Bashir Humphreys",
+      "teamId": 379,
+      "position": "D",
+      "age": 23,
       "goals": 0,
       "assists": null,
-      "team": "AFC Bournemouth"
+      "team": "Burnley"
     },
     {
       "id": 241077,
@@ -2594,26 +2234,6 @@
       "goals": 0,
       "assists": null,
       "team": "Arsenal"
-    },
-    {
-      "id": 397213,
-      "name": "Ben Winterburn",
-      "teamId": 349,
-      "position": "M",
-      "age": 21,
-      "goals": 0,
-      "assists": null,
-      "team": "AFC Bournemouth"
-    },
-    {
-      "id": 367447,
-      "name": "Benjamin Arthur",
-      "teamId": 337,
-      "position": "D",
-      "age": 20,
-      "goals": 0,
-      "assists": null,
-      "team": "Brentford"
     },
     {
       "id": 149517,
@@ -2666,6 +2286,16 @@
       "team": "Tottenham Hotspur"
     },
     {
+      "id": 355149,
+      "name": "Callum Bates",
+      "teamId": 368,
+      "position": "M",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Everton"
+    },
+    {
       "id": 291353,
       "name": "Calvin Ramsay",
       "teamId": 364,
@@ -2706,14 +2336,54 @@
       "team": "Brighton & Hove Albion"
     },
     {
-      "id": 375738,
-      "name": "Chido Obi",
-      "teamId": 360,
-      "position": "F",
-      "age": 18,
+      "id": 307870,
+      "name": "Chadi Riad",
+      "teamId": 384,
+      "position": "D",
+      "age": 23,
       "goals": 0,
       "assists": null,
-      "team": "Manchester United"
+      "team": "Crystal Palace"
+    },
+    {
+      "id": 137623,
+      "name": "Charlie Gray",
+      "teamId": 382,
+      "position": "M",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Manchester City"
+    },
+    {
+      "id": 417995,
+      "name": "Charlie Stevens",
+      "teamId": 349,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "AFC Bournemouth"
+    },
+    {
+      "id": 371698,
+      "name": "Charlie Tasker",
+      "teamId": 331,
+      "position": "D",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Brighton & Hove Albion"
+    },
+    {
+      "id": 386256,
+      "name": "Christantus Uche",
+      "teamId": 384,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": null,
+      "team": "Crystal Palace"
     },
     {
       "id": 178077,
@@ -2724,6 +2394,26 @@
       "goals": 0,
       "assists": null,
       "team": "Arsenal"
+    },
+    {
+      "id": 265140,
+      "name": "Christos Mandas",
+      "teamId": 349,
+      "position": "G",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "AFC Bournemouth"
+    },
+    {
+      "id": 177110,
+      "name": "Connor Roberts",
+      "teamId": 379,
+      "position": "D",
+      "age": 30,
+      "goals": 0,
+      "assists": null,
+      "team": "Burnley"
     },
     {
       "id": 250183,
@@ -2737,10 +2427,10 @@
     },
     {
       "id": 221694,
-      "name": "Conor McManus",
+      "name": "Conor Mcmanus",
       "teamId": 337,
-      "position": "M",
-      "age": 30,
+      "position": "D",
+      "age": 22,
       "goals": 0,
       "assists": null,
       "team": "Brentford"
@@ -2766,14 +2456,14 @@
       "team": "Crystal Palace"
     },
     {
-      "id": 306012,
-      "name": "Dane Scarlett",
-      "teamId": 367,
-      "position": "F",
-      "age": 22,
+      "id": 143007,
+      "name": "Daniel Bentley",
+      "teamId": 380,
+      "position": "G",
+      "age": 33,
       "goals": 0,
       "assists": null,
-      "team": "Tottenham Hotspur"
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 203072,
@@ -2786,26 +2476,6 @@
       "team": "Leeds United"
     },
     {
-      "id": 283179,
-      "name": "Daniel Neil",
-      "teamId": 373,
-      "position": "M",
-      "age": 24,
-      "goals": 0,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 326250,
-      "name": "Danny Imray",
-      "teamId": 384,
-      "position": "D",
-      "age": 23,
-      "goals": 0,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
       "id": 316560,
       "name": "Dário Essugo",
       "teamId": 363,
@@ -2814,6 +2484,16 @@
       "goals": 0,
       "assists": null,
       "team": "Chelsea"
+    },
+    {
+      "id": 313361,
+      "name": "David Møller Wolfe",
+      "teamId": 380,
+      "position": "D",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 196176,
@@ -2846,6 +2526,16 @@
       "team": "Crystal Palace"
     },
     {
+      "id": 301487,
+      "name": "Dennis Cirkin",
+      "teamId": 366,
+      "position": "D",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Sunderland"
+    },
+    {
       "id": 290076,
       "name": "Destiny Udogie",
       "teamId": 367,
@@ -2856,16 +2546,6 @@
       "team": "Tottenham Hotspur"
     },
     {
-      "id": 332549,
-      "name": "Diego Coppola",
-      "teamId": 331,
-      "position": "D",
-      "age": 22,
-      "goals": 0,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
       "id": 387634,
       "name": "Diego León",
       "teamId": 360,
@@ -2874,16 +2554,6 @@
       "goals": 0,
       "assists": null,
       "team": "Manchester United"
-    },
-    {
-      "id": 297157,
-      "name": "Dilane Bakwa",
-      "teamId": 393,
-      "position": "F",
-      "age": 23,
-      "goals": 0,
-      "assists": null,
-      "team": "Nottingham Forest"
     },
     {
       "id": 267711,
@@ -2916,6 +2586,16 @@
       "team": "Everton"
     },
     {
+      "id": 359796,
+      "name": "El Hadji Malick Diouf",
+      "teamId": 371,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "West Ham United"
+    },
+    {
       "id": 249527,
       "name": "Ellery Balcombe",
       "teamId": 337,
@@ -2924,6 +2604,16 @@
       "goals": 0,
       "assists": null,
       "team": "Brentford"
+    },
+    {
+      "id": 172922,
+      "name": "Emil Krafth",
+      "teamId": 361,
+      "position": "D",
+      "age": 31,
+      "goals": 0,
+      "assists": null,
+      "team": "Newcastle United"
     },
     {
       "id": 158626,
@@ -2936,26 +2626,6 @@
       "team": "Aston Villa"
     },
     {
-      "id": 372025,
-      "name": "Eric Da Silva Moreira",
-      "teamId": 393,
-      "position": "F",
-      "age": 20,
-      "goals": 0,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
-      "id": 349733,
-      "name": "Ethan Nwaneri",
-      "teamId": 359,
-      "position": "M",
-      "age": 19,
-      "goals": 0,
-      "assists": null,
-      "team": "Arsenal"
-    },
-    {
       "id": 241093,
       "name": "Ethan Pinnock",
       "teamId": 337,
@@ -2964,6 +2634,26 @@
       "goals": 0,
       "assists": null,
       "team": "Brentford"
+    },
+    {
+      "id": 345845,
+      "name": "Ethan Sutherland",
+      "teamId": 380,
+      "position": "M",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
+    },
+    {
+      "id": 380182,
+      "name": "Ezra Mayers",
+      "teamId": 371,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "West Ham United"
     },
     {
       "id": 231859,
@@ -3006,14 +2696,24 @@
       "team": "Chelsea"
     },
     {
-      "id": 258491,
-      "name": "Frank Onyeka",
-      "teamId": 388,
-      "position": "M",
-      "age": 28,
+      "id": 361263,
+      "name": "Finlay Herrick",
+      "teamId": 371,
+      "position": "G",
+      "age": 20,
       "goals": 0,
       "assists": null,
-      "team": null
+      "team": "West Ham United"
+    },
+    {
+      "id": 256607,
+      "name": "Florentino",
+      "teamId": 379,
+      "position": "M",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "Burnley"
     },
     {
       "id": 93193,
@@ -3024,6 +2724,26 @@
       "goals": 0,
       "assists": null,
       "team": "AFC Bournemouth"
+    },
+    {
+      "id": 310325,
+      "name": "Freddie Potts",
+      "teamId": 371,
+      "position": "M",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "West Ham United"
+    },
+    {
+      "id": 372020,
+      "name": "Freddie Simmonds",
+      "teamId": 331,
+      "position": "D",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Brighton & Hove Albion"
     },
     {
       "id": 194121,
@@ -3054,6 +2774,16 @@
       "goals": 0,
       "assists": null,
       "team": "Chelsea"
+    },
+    {
+      "id": 411241,
+      "name": "George Brierley",
+      "teamId": 379,
+      "position": "M",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Burnley"
     },
     {
       "id": 400110,
@@ -3096,6 +2826,16 @@
       "team": "Liverpool"
     },
     {
+      "id": 393747,
+      "name": "Godwill Kukonki",
+      "teamId": 360,
+      "position": "D",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Manchester United"
+    },
+    {
       "id": 204082,
       "name": "Guglielmo Vicario",
       "teamId": 367,
@@ -3104,16 +2844,6 @@
       "goals": 0,
       "assists": null,
       "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 366004,
-      "name": "Gustavo Nunes",
-      "teamId": 337,
-      "position": "F",
-      "age": 20,
-      "goals": 0,
-      "assists": null,
-      "team": "Brentford"
     },
     {
       "id": 311527,
@@ -3136,6 +2866,26 @@
       "team": "Everton"
     },
     {
+      "id": 381475,
+      "name": "Harrison Jones",
+      "teamId": 366,
+      "position": "M",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Sunderland"
+    },
+    {
+      "id": 378530,
+      "name": "Harry Howell",
+      "teamId": 331,
+      "position": "M",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Brighton & Hove Albion"
+    },
+    {
       "id": 280806,
       "name": "Harvey Elliott",
       "teamId": 362,
@@ -3144,6 +2894,16 @@
       "goals": 0,
       "assists": null,
       "team": "Aston Villa"
+    },
+    {
+      "id": 290413,
+      "name": "Hjalmar Ekdal",
+      "teamId": 379,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": null,
+      "team": "Burnley"
     },
     {
       "id": 281125,
@@ -3196,14 +2956,14 @@
       "team": "Manchester United"
     },
     {
-      "id": 199850,
-      "name": "Jack Harrison",
-      "teamId": 357,
-      "position": "F",
-      "age": 29,
+      "id": 369884,
+      "name": "Jack Moorhouse",
+      "teamId": 360,
+      "position": "M",
+      "age": 20,
       "goals": 0,
       "assists": null,
-      "team": "Leeds United"
+      "team": "Manchester United"
     },
     {
       "id": 236211,
@@ -3214,6 +2974,16 @@
       "goals": 0,
       "assists": null,
       "team": "Sunderland"
+    },
+    {
+      "id": 312186,
+      "name": "Jackson Tchatchoua",
+      "teamId": 380,
+      "position": "D",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 338876,
@@ -3256,14 +3026,14 @@
       "team": "Nottingham Forest"
     },
     {
-      "id": 326230,
-      "name": "James McConnell",
-      "teamId": 364,
-      "position": "M",
-      "age": 21,
+      "id": 387932,
+      "name": "James Rowswell",
+      "teamId": 367,
+      "position": "D",
+      "age": 20,
       "goals": 0,
       "assists": null,
-      "team": "Liverpool"
+      "team": "Tottenham Hotspur"
     },
     {
       "id": 307118,
@@ -3276,14 +3046,24 @@
       "team": "Manchester City"
     },
     {
-      "id": 339879,
-      "name": "Jamie Gittens",
-      "teamId": 363,
-      "position": "F",
+      "id": 163111,
+      "name": "James Ward-Prowse",
+      "teamId": 379,
+      "position": "M",
+      "age": 31,
+      "goals": 0,
+      "assists": null,
+      "team": "Burnley"
+    },
+    {
+      "id": 235319,
+      "name": "James Wright",
+      "teamId": 362,
+      "position": "G",
       "age": 21,
       "goals": 0,
       "assists": null,
-      "team": "Chelsea"
+      "team": "Aston Villa"
     },
     {
       "id": 111114,
@@ -3316,6 +3096,26 @@
       "team": "Sunderland"
     },
     {
+      "id": 408959,
+      "name": "Jayden Lienou",
+      "teamId": 357,
+      "position": "D",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Leeds United"
+    },
+    {
+      "id": 277327,
+      "name": "Jean-Clair Todibo",
+      "teamId": 371,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "West Ham United"
+    },
+    {
       "id": 197399,
       "name": "Jefferson Lerma",
       "teamId": 384,
@@ -3336,16 +3136,6 @@
       "team": "Sunderland"
     },
     {
-      "id": 310132,
-      "name": "Jenson Seelt",
-      "teamId": 366,
-      "position": "D",
-      "age": 23,
-      "goals": 0,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
       "id": 281119,
       "name": "Jeremie Frimpong",
       "teamId": 364,
@@ -3356,14 +3146,14 @@
       "team": "Liverpool"
     },
     {
-      "id": 317718,
-      "name": "Jesurun Rak-Sakyi",
-      "teamId": 384,
-      "position": "F",
-      "age": 23,
+      "id": 410685,
+      "name": "Jerome Abbey",
+      "teamId": 380,
+      "position": "M",
+      "age": 16,
       "goals": 0,
       "assists": null,
-      "team": "Crystal Palace"
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 381057,
@@ -3396,16 +3186,6 @@
       "team": "Fulham"
     },
     {
-      "id": 417825,
-      "name": "Jocelin Ta Bi",
-      "teamId": 366,
-      "position": "F",
-      "age": 21,
-      "goals": 0,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
       "id": 102053,
       "name": "Joe Gomez",
       "teamId": 364,
@@ -3426,24 +3206,34 @@
       "team": "Newcastle United"
     },
     {
-      "id": 408511,
-      "name": "Joél Drakes-Thomas",
-      "teamId": 384,
-      "position": "F",
-      "age": 17,
+      "id": 232291,
+      "name": "Joe Worrall",
+      "teamId": 379,
+      "position": "D",
+      "age": 29,
       "goals": 0,
       "assists": null,
-      "team": "Crystal Palace"
+      "team": "Burnley"
     },
     {
-      "id": 245562,
-      "name": "Joël Piroe",
-      "teamId": 357,
-      "position": "F",
-      "age": 26,
+      "id": 42359,
+      "name": "John Ruddy",
+      "teamId": 361,
+      "position": "G",
+      "age": 39,
       "goals": 0,
       "assists": null,
-      "team": "Leeds United"
+      "team": "Newcastle United"
+    },
+    {
+      "id": 157974,
+      "name": "John Stones",
+      "teamId": 382,
+      "position": "D",
+      "age": 32,
+      "goals": 0,
+      "assists": null,
+      "team": "Manchester City"
     },
     {
       "id": 233241,
@@ -3454,16 +3244,6 @@
       "goals": 0,
       "assists": null,
       "team": "Nottingham Forest"
-    },
-    {
-      "id": 369363,
-      "name": "Jonah Kusi-Asare",
-      "teamId": 370,
-      "position": "F",
-      "age": 19,
-      "goals": 0,
-      "assists": null,
-      "team": "Fulham"
     },
     {
       "id": 159443,
@@ -3496,6 +3276,16 @@
       "team": "Chelsea"
     },
     {
+      "id": 181278,
+      "name": "José Sá",
+      "teamId": 380,
+      "position": "G",
+      "age": 33,
+      "goals": 0,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
+    },
+    {
       "id": 246309,
       "name": "Josh Dasilva",
       "teamId": 337,
@@ -3504,6 +3294,16 @@
       "goals": 0,
       "assists": null,
       "team": "Brentford"
+    },
+    {
+      "id": 396100,
+      "name": "Josh Gracey",
+      "teamId": 380,
+      "position": "G",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 408469,
@@ -3516,26 +3316,6 @@
       "team": "Brentford"
     },
     {
-      "id": 344692,
-      "name": "Jota Silva",
-      "teamId": 393,
-      "position": "F",
-      "age": 26,
-      "goals": 0,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
-      "id": 280764,
-      "name": "Julián Araujo",
-      "teamId": 349,
-      "position": "D",
-      "age": 24,
-      "goals": 0,
-      "assists": null,
-      "team": "AFC Bournemouth"
-    },
-    {
       "id": 339797,
       "name": "Julio Soler",
       "teamId": 349,
@@ -3544,6 +3324,26 @@
       "goals": 0,
       "assists": null,
       "team": "AFC Bournemouth"
+    },
+    {
+      "id": 403835,
+      "name": "Jun'Ai Byfield",
+      "teamId": 367,
+      "position": "D",
+      "age": 17,
+      "goals": 0,
+      "assists": null,
+      "team": "Tottenham Hotspur"
+    },
+    {
+      "id": 345213,
+      "name": "Kaden Rodney",
+      "teamId": 384,
+      "position": "M",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Crystal Palace"
     },
     {
       "id": 130877,
@@ -3556,14 +3356,14 @@
       "team": "Leeds United"
     },
     {
-      "id": 394418,
-      "name": "Kaye Furo",
-      "teamId": 337,
-      "position": "F",
-      "age": 19,
+      "id": 336864,
+      "name": "Keiber Lamadrid",
+      "teamId": 371,
+      "position": "M",
+      "age": 22,
       "goals": 0,
       "assists": null,
-      "team": "Brentford"
+      "team": "West Ham United"
     },
     {
       "id": 169532,
@@ -3586,24 +3386,14 @@
       "team": "Tottenham Hotspur"
     },
     {
-      "id": 357162,
-      "name": "Kieran Morrison",
-      "teamId": 364,
-      "position": "M",
-      "age": 19,
-      "goals": 0,
-      "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 328492,
-      "name": "Kota Takai",
-      "teamId": 367,
+      "id": 143637,
+      "name": "Kieran Trippier",
+      "teamId": 361,
       "position": "D",
-      "age": 21,
+      "age": 35,
       "goals": 0,
       "assists": null,
-      "team": "Tottenham Hotspur"
+      "team": "Newcastle United"
     },
     {
       "id": 206173,
@@ -3614,6 +3404,16 @@
       "goals": 0,
       "assists": null,
       "team": "Brentford"
+    },
+    {
+      "id": 129358,
+      "name": "Kyle Walker",
+      "teamId": 379,
+      "position": "D",
+      "age": 36,
+      "goals": 0,
+      "assists": null,
+      "team": "Burnley"
     },
     {
       "id": 310607,
@@ -3636,26 +3436,6 @@
       "team": "Nottingham Forest"
     },
     {
-      "id": 379702,
-      "name": "Landon Emenalo",
-      "teamId": 363,
-      "position": "D",
-      "age": 18,
-      "goals": 0,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 291435,
-      "name": "Largie Ramazani",
-      "teamId": 357,
-      "position": "F",
-      "age": 25,
-      "goals": 0,
-      "assists": null,
-      "team": "Leeds United"
-    },
-    {
       "id": 340206,
       "name": "Leny Yoro",
       "teamId": 360,
@@ -3664,16 +3444,6 @@
       "goals": 0,
       "assists": null,
       "team": "Manchester United"
-    },
-    {
-      "id": 312592,
-      "name": "Leo Hjelde",
-      "teamId": 366,
-      "position": "D",
-      "age": 22,
-      "goals": 0,
-      "assists": null,
-      "team": "Sunderland"
     },
     {
       "id": 374219,
@@ -3686,11 +3456,11 @@
       "team": "Newcastle United"
     },
     {
-      "id": 224809,
-      "name": "Leon Bailey",
+      "id": 393671,
+      "name": "Leon Routh",
       "teamId": 362,
-      "position": "F",
-      "age": 28,
+      "position": "D",
+      "age": 18,
       "goals": 0,
       "assists": null,
       "team": "Aston Villa"
@@ -3736,16 +3506,6 @@
       "team": "Nottingham Forest"
     },
     {
-      "id": 395939,
-      "name": "Luca Williams-Barnett",
-      "teamId": 367,
-      "position": "M",
-      "age": 17,
-      "goals": 0,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
       "id": 160115,
       "name": "Lucas Digne",
       "teamId": 362,
@@ -3766,24 +3526,24 @@
       "team": "Leeds United"
     },
     {
-      "id": 418500,
-      "name": "Luka Bentt",
-      "teamId": 337,
-      "position": "M",
-      "age": 18,
+      "id": 285790,
+      "name": "Lucas Pires",
+      "teamId": 379,
+      "position": "D",
+      "age": 25,
       "goals": 0,
       "assists": null,
-      "team": "Brentford"
+      "team": "Burnley"
     },
     {
-      "id": 364962,
-      "name": "Luka Vuskovic",
-      "teamId": 331,
-      "position": "D",
-      "age": 19,
+      "id": 77403,
+      "name": "Lukasz Fabianski",
+      "teamId": 371,
+      "position": "G",
+      "age": 41,
       "goals": 0,
       "assists": null,
-      "team": "Brighton & Hove Albion"
+      "team": "West Ham United"
     },
     {
       "id": 191574,
@@ -3796,34 +3556,54 @@
       "team": "Sunderland"
     },
     {
+      "id": 381539,
+      "name": "Luke Rawlings",
+      "teamId": 380,
+      "position": "M",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
+    },
+    {
+      "id": 264828,
+      "name": "Lutsharel Geertruida",
+      "teamId": 366,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "Sunderland"
+    },
+    {
+      "id": 281564,
+      "name": "Mads Hermansen",
+      "teamId": 371,
+      "position": "G",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "West Ham United"
+    },
+    {
+      "id": 415281,
+      "name": "Malcom Dacosta",
+      "teamId": 349,
+      "position": "M",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "AFC Bournemouth"
+    },
+    {
       "id": 355433,
       "name": "Mamadou Sarr",
       "teamId": 363,
-      "position": "D",
+      "position": "F",
       "age": 20,
       "goals": 0,
       "assists": null,
       "team": "Chelsea"
-    },
-    {
-      "id": 257256,
-      "name": "Manor Solomon",
-      "teamId": 367,
-      "position": "F",
-      "age": 27,
-      "goals": 0,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 214562,
-      "name": "Manuel Akanji",
-      "teamId": 382,
-      "position": "D",
-      "age": 31,
-      "goals": 0,
-      "assists": null,
-      "team": "Manchester City"
     },
     {
       "id": 241468,
@@ -3834,16 +3614,6 @@
       "goals": 0,
       "assists": null,
       "team": "Manchester United"
-    },
-    {
-      "id": 363038,
-      "name": "Marc Guiu",
-      "teamId": 363,
-      "position": "F",
-      "age": 20,
-      "goals": 0,
-      "assists": null,
-      "team": "Chelsea"
     },
     {
       "id": 132233,
@@ -3886,6 +3656,16 @@
       "team": "Everton"
     },
     {
+      "id": 400284,
+      "name": "Marli Salmon",
+      "teamId": 359,
+      "position": "D",
+      "age": 16,
+      "goals": 0,
+      "assists": null,
+      "team": "Arsenal"
+    },
+    {
       "id": 126703,
       "name": "Martin Dúbravka",
       "teamId": 379,
@@ -3904,6 +3684,16 @@
       "goals": 0,
       "assists": null,
       "team": "Manchester City"
+    },
+    {
+      "id": 43575,
+      "name": "Matt Doherty",
+      "teamId": 380,
+      "position": "D",
+      "age": 34,
+      "goals": 0,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 179497,
@@ -3926,6 +3716,46 @@
       "team": "Manchester City"
     },
     {
+      "id": 229967,
+      "name": "Max Kilman",
+      "teamId": 371,
+      "position": "D",
+      "age": 29,
+      "goals": 0,
+      "assists": null,
+      "team": "West Ham United"
+    },
+    {
+      "id": 351335,
+      "name": "Max Merrick",
+      "teamId": 363,
+      "position": "G",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Chelsea"
+    },
+    {
+      "id": 329987,
+      "name": "Max Weiß",
+      "teamId": 379,
+      "position": "G",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "Burnley"
+    },
+    {
+      "id": 318316,
+      "name": "Maxime Estève",
+      "teamId": 379,
+      "position": "D",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Burnley"
+    },
+    {
       "id": 307800,
       "name": "Melker Ellborg",
       "teamId": 366,
@@ -3934,6 +3764,26 @@
       "goals": 0,
       "assists": null,
       "team": "Sunderland"
+    },
+    {
+      "id": 366474,
+      "name": "Milan Aleksic",
+      "teamId": 366,
+      "position": "F",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Sunderland"
+    },
+    {
+      "id": 368333,
+      "name": "Mohamadou Kanté",
+      "teamId": 371,
+      "position": "M",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "West Ham United"
     },
     {
       "id": 352758,
@@ -4036,6 +3886,26 @@
       "team": "Nottingham Forest"
     },
     {
+      "id": 409739,
+      "name": "Oliver Pimlott",
+      "teamId": 379,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Burnley"
+    },
+    {
+      "id": 350502,
+      "name": "Oliver Scarles",
+      "teamId": 371,
+      "position": "D",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "West Ham United"
+    },
+    {
       "id": 216017,
       "name": "Olivier Boscagli",
       "teamId": 331,
@@ -4066,16 +3936,6 @@
       "team": "Fulham"
     },
     {
-      "id": 371584,
-      "name": "Park Seung-Soo",
-      "teamId": 361,
-      "position": "F",
-      "age": 19,
-      "goals": 0,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
       "id": 246771,
       "name": "Pascal Struijk",
       "teamId": 357,
@@ -4094,6 +3954,26 @@
       "goals": 0,
       "assists": null,
       "team": "Aston Villa"
+    },
+    {
+      "id": 376489,
+      "name": "Pedro Lima",
+      "teamId": 380,
+      "position": "D",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
+    },
+    {
+      "id": 346210,
+      "name": "Quilindschy Hartman",
+      "teamId": 379,
+      "position": "D",
+      "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Burnley"
     },
     {
       "id": 310216,
@@ -4116,6 +3996,16 @@
       "team": "Manchester City"
     },
     {
+      "id": 317858,
+      "name": "Reece Welch",
+      "teamId": 368,
+      "position": "D",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "Everton"
+    },
+    {
       "id": 230081,
       "name": "Reinildo Mandava",
       "teamId": 366,
@@ -4124,16 +4014,6 @@
       "goals": 0,
       "assists": null,
       "team": "Sunderland"
-    },
-    {
-      "id": 227794,
-      "name": "Reiss Nelson",
-      "teamId": 359,
-      "position": "F",
-      "age": 26,
-      "goals": 0,
-      "assists": null,
-      "team": "Arsenal"
     },
     {
       "id": 205981,
@@ -4146,14 +4026,14 @@
       "team": "Crystal Palace"
     },
     {
-      "id": 398123,
-      "name": "Remy Rees-Dottin",
-      "teamId": 349,
-      "position": "F",
-      "age": 20,
+      "id": 407584,
+      "name": "Rhys Chadwick",
+      "teamId": 357,
+      "position": "M",
+      "age": 19,
       "goals": 0,
       "assists": null,
-      "team": "AFC Bournemouth"
+      "team": "Leeds United"
     },
     {
       "id": 206761,
@@ -4186,16 +4066,6 @@
       "team": "Crystal Palace"
     },
     {
-      "id": 367520,
-      "name": "Rio Kyerematen",
-      "teamId": 367,
-      "position": "M",
-      "age": 21,
-      "goals": 0,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
       "id": 108662,
       "name": "Robert Sánchez",
       "teamId": 363,
@@ -4214,46 +4084,6 @@
       "goals": 0,
       "assists": null,
       "team": "Sunderland"
-    },
-    {
-      "id": 356208,
-      "name": "Romain Esse",
-      "teamId": 384,
-      "position": "M",
-      "age": 21,
-      "goals": 0,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 268591,
-      "name": "Romain Faivre",
-      "teamId": 349,
-      "position": "M",
-      "age": 28,
-      "goals": 0,
-      "assists": null,
-      "team": "AFC Bournemouth"
-    },
-    {
-      "id": 323084,
-      "name": "Romaine Mundle",
-      "teamId": 366,
-      "position": "F",
-      "age": 23,
-      "goals": 0,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 357477,
-      "name": "Romelle Donovan",
-      "teamId": 337,
-      "position": "M",
-      "age": 19,
-      "goals": 0,
-      "assists": null,
-      "team": "Brentford"
     },
     {
       "id": 308217,
@@ -4276,16 +4106,6 @@
       "team": "Aston Villa"
     },
     {
-      "id": 399895,
-      "name": "Ryan Kavuma-Mcqueen",
-      "teamId": 363,
-      "position": "F",
-      "age": 17,
-      "goals": 0,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
       "id": 241253,
       "name": "Ryan Yates",
       "teamId": 393,
@@ -4294,6 +4114,16 @@
       "goals": 0,
       "assists": null,
       "team": "Nottingham Forest"
+    },
+    {
+      "id": 379587,
+      "name": "Saheed Olagunju",
+      "teamId": 380,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 223454,
@@ -4316,14 +4146,34 @@
       "team": "Leeds United"
     },
     {
-      "id": 341273,
-      "name": "Samuel Iling-Junior",
+      "id": 162338,
+      "name": "Sam Johnstone",
+      "teamId": 380,
+      "position": "G",
+      "age": 33,
+      "goals": 0,
+      "assists": null,
+      "team": "Wolverhampton Wanderers"
+    },
+    {
+      "id": 368316,
+      "name": "Sam Proctor",
       "teamId": 362,
-      "position": "F",
-      "age": 22,
+      "position": "G",
+      "age": 19,
       "goals": 0,
       "assists": null,
       "team": "Aston Villa"
+    },
+    {
+      "id": 365953,
+      "name": "Samuel Amissah",
+      "teamId": 370,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Fulham"
     },
     {
       "id": 218998,
@@ -4346,14 +4196,14 @@
       "team": "Newcastle United"
     },
     {
-      "id": 358245,
-      "name": "Sean Neave",
-      "teamId": 361,
-      "position": "F",
-      "age": 19,
+      "id": 131639,
+      "name": "Seamus Coleman",
+      "teamId": 368,
+      "position": "D",
+      "age": 37,
       "goals": 0,
       "assists": null,
-      "team": "Newcastle United"
+      "team": "Everton"
     },
     {
       "id": 271130,
@@ -4386,14 +4236,14 @@
       "team": "Brentford"
     },
     {
-      "id": 358180,
-      "name": "Shea Lacey",
-      "teamId": 360,
-      "position": "F",
-      "age": 19,
+      "id": 400112,
+      "name": "Seth Ridgeon",
+      "teamId": 370,
+      "position": "M",
+      "age": 17,
       "goals": 0,
       "assists": null,
-      "team": "Manchester United"
+      "team": "Fulham"
     },
     {
       "id": 138481,
@@ -4406,6 +4256,16 @@
       "team": "Sunderland"
     },
     {
+      "id": 223445,
+      "name": "Solly March",
+      "teamId": 331,
+      "position": "M",
+      "age": 32,
+      "goals": 0,
+      "assists": null,
+      "team": "Brighton & Hove Albion"
+    },
+    {
       "id": 371532,
       "name": "Souza",
       "teamId": 367,
@@ -4414,6 +4274,16 @@
       "goals": 0,
       "assists": null,
       "team": "Tottenham Hotspur"
+    },
+    {
+      "id": 151855,
+      "name": "Stefan Ortega",
+      "teamId": 393,
+      "position": "G",
+      "age": 33,
+      "goals": 0,
+      "assists": null,
+      "team": "Nottingham Forest"
     },
     {
       "id": 414255,
@@ -4466,6 +4336,16 @@
       "team": "Newcastle United"
     },
     {
+      "id": 379703,
+      "name": "TJ Carroll",
+      "teamId": 362,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Aston Villa"
+    },
+    {
       "id": 42250,
       "name": "Tom Heaton",
       "teamId": 360,
@@ -4484,16 +4364,6 @@
       "goals": 0,
       "assists": null,
       "team": "Everton"
-    },
-    {
-      "id": 403702,
-      "name": "Tom Watson",
-      "teamId": 331,
-      "position": "F",
-      "age": 20,
-      "goals": 0,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
     },
     {
       "id": 343573,
@@ -4516,14 +4386,14 @@
       "team": "Chelsea"
     },
     {
-      "id": 356075,
-      "name": "Trey Nyoni",
-      "teamId": 364,
-      "position": "M",
-      "age": 19,
+      "id": 320848,
+      "name": "Toti Gomes",
+      "teamId": 380,
+      "position": "D",
+      "age": 27,
       "goals": 0,
       "assists": null,
-      "team": "Liverpool"
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 340640,
@@ -4556,24 +4426,14 @@
       "team": "Manchester United"
     },
     {
-      "id": 387460,
-      "name": "Tymur Tutierov",
-      "teamId": 366,
-      "position": "M",
-      "age": 21,
+      "id": 259863,
+      "name": "Tyrell Malacia",
+      "teamId": 360,
+      "position": "D",
+      "age": 26,
       "goals": 0,
       "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 368864,
-      "name": "Tyrique George",
-      "teamId": 368,
-      "position": "F",
-      "age": 20,
-      "goals": 0,
-      "assists": null,
-      "team": "Everton"
+      "team": "Manchester United"
     },
     {
       "id": 181312,
@@ -4636,6 +4496,16 @@
       "team": "Liverpool"
     },
     {
+      "id": 379855,
+      "name": "Wellity Lucky",
+      "teamId": 364,
+      "position": "D",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Liverpool"
+    },
+    {
       "id": 270190,
       "name": "Wesley Fofana",
       "teamId": 363,
@@ -4644,16 +4514,6 @@
       "goals": 0,
       "assists": null,
       "team": "Chelsea"
-    },
-    {
-      "id": 297784,
-      "name": "Wilfried Gnonto",
-      "teamId": 357,
-      "position": "F",
-      "age": 22,
-      "goals": 0,
-      "assists": null,
-      "team": "Leeds United"
     },
     {
       "id": 168421,
@@ -4666,34 +4526,24 @@
       "team": "Crystal Palace"
     },
     {
-      "id": 395778,
-      "name": "Will Wright",
-      "teamId": 364,
-      "position": "F",
-      "age": 18,
+      "id": 152349,
+      "name": "Willy Boly",
+      "teamId": 393,
+      "position": "D",
+      "age": 35,
       "goals": 0,
       "assists": null,
-      "team": "Liverpool"
+      "team": "Nottingham Forest"
     },
     {
-      "id": 291269,
-      "name": "William Dennis",
-      "teamId": 349,
-      "position": "G",
-      "age": 26,
+      "id": 301462,
+      "name": "Yerson Mosquera",
+      "teamId": 380,
+      "position": "D",
+      "age": 25,
       "goals": 0,
       "assists": null,
-      "team": "AFC Bournemouth"
-    },
-    {
-      "id": 345687,
-      "name": "Wilson Odobert",
-      "teamId": 367,
-      "position": "F",
-      "age": 21,
-      "goals": 0,
-      "assists": null,
-      "team": "Tottenham Hotspur"
+      "team": "Wolverhampton Wanderers"
     },
     {
       "id": 193297,
@@ -4706,14 +4556,14 @@
       "team": "Aston Villa"
     },
     {
-      "id": 366990,
-      "name": "Yunus Konak",
-      "teamId": 337,
+      "id": 232810,
+      "name": "Yves Bissouma",
+      "teamId": 367,
       "position": "M",
-      "age": 20,
+      "age": 29,
       "goals": 0,
       "assists": null,
-      "team": "Brentford"
+      "team": "Tottenham Hotspur"
     },
     {
       "id": 348303,
@@ -4724,16 +4574,6 @@
       "goals": 0,
       "assists": null,
       "team": "Nottingham Forest"
-    },
-    {
-      "id": 363218,
-      "name": "Aaron Anselmino",
-      "teamId": 363,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
     },
     {
       "id": 366239,
@@ -4756,26 +4596,6 @@
       "team": "Sunderland"
     },
     {
-      "id": 239750,
-      "name": "Abdülkadir Ömür",
-      "teamId": 306,
-      "position": "M",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 275674,
-      "name": "Abu Kamara",
-      "teamId": 306,
-      "position": "F",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
       "id": 371336,
       "name": "Adam Harrison",
       "teamId": 361,
@@ -4786,24 +4606,14 @@
       "team": "Newcastle United"
     },
     {
-      "id": 359150,
-      "name": "Ahmed Abdullahi",
-      "teamId": 366,
-      "position": "F",
-      "age": 22,
+      "id": 17828,
+      "name": "Adam Webster",
+      "teamId": 331,
+      "position": "D",
+      "age": 31,
       "goals": null,
       "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 384110,
-      "name": "Aidan Dausch",
-      "teamId": 388,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": null
+      "team": "Brighton & Hove Albion"
     },
     {
       "id": 353304,
@@ -4816,36 +4626,6 @@
       "team": "Newcastle United"
     },
     {
-      "id": 243545,
-      "name": "Ajibola Alese",
-      "teamId": 366,
-      "position": "D",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 396630,
-      "name": "Aladji Bamba",
-      "teamId": 361,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
-      "id": 197627,
-      "name": "Alan Browne",
-      "teamId": 366,
-      "position": "M",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
       "id": 164148,
       "name": "Alex Cairns",
       "teamId": 357,
@@ -4856,324 +4636,54 @@
       "team": "Leeds United"
     },
     {
-      "id": 219390,
-      "name": "Alex Palmer",
-      "teamId": 373,
+      "id": 341729,
+      "name": "Alexei Rojas",
+      "teamId": 359,
       "position": "G",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 297800,
-      "name": "Alex Paulsen",
-      "teamId": 349,
-      "position": "G",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": "AFC Bournemouth"
-    },
-    {
-      "id": 306013,
-      "name": "Alfie Devine",
-      "teamId": 367,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 330579,
-      "name": "Ali Al-Hamadi",
-      "teamId": 373,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 353151,
-      "name": "Álvaro Rodríguez",
-      "teamId": 349,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": "AFC Bournemouth"
-    },
-    {
-      "id": 327170,
-      "name": "Amario Cozier-Duberry",
-      "teamId": 331,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 308891,
-      "name": "Anis Mehmeti",
-      "teamId": 373,
-      "position": "M",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 379858,
-      "name": "Anthony Munda",
-      "teamId": 361,
-      "position": "M",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
-      "id": 414372,
-      "name": "Archie Howard",
-      "teamId": 306,
-      "position": "G",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 3111011,
-      "name": "Archie Lightfoot",
-      "teamId": 366,
-      "position": "D",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 273628,
-      "name": "Ashley Phillips",
-      "teamId": 367,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 319404,
-      "name": "Aurèle Amenda",
-      "teamId": 388,
-      "position": "D",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 246825,
-      "name": "Azor Matusiwa",
-      "teamId": 373,
-      "position": "M",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 222608,
-      "name": "Babajide David",
-      "teamId": 306,
-      "position": "F",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 359108,
-      "name": "Bazoumana Touré",
-      "teamId": 361,
-      "position": "F",
       "age": 20,
       "goals": null,
       "assists": null,
-      "team": "Newcastle United"
+      "team": "Arsenal"
     },
     {
-      "id": 366236,
-      "name": "Ben Hammond",
-      "teamId": 393,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
-      "id": 9426,
-      "name": "Ben Johnson",
-      "teamId": 373,
+      "id": 358084,
+      "name": "Caleb Kporha",
+      "teamId": 384,
       "position": "D",
-      "age": 26,
+      "age": 20,
       "goals": null,
       "assists": null,
-      "team": null
+      "team": "Crystal Palace"
     },
     {
-      "id": 3111012,
-      "name": "Ben Kindon",
-      "teamId": 366,
-      "position": "D",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 169619,
-      "name": "Ben Wilson",
-      "teamId": 388,
-      "position": "M",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 362266,
-      "name": "Benjamin Fredrick",
-      "teamId": 337,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Brentford"
-    },
-    {
-      "id": 303931,
-      "name": "Bobby Thomas",
-      "teamId": 388,
-      "position": "D",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 240495,
-      "name": "Brandon Thomas-Asante",
-      "teamId": 388,
-      "position": "F",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 401451,
-      "name": "Brian Madjo",
-      "teamId": 362,
-      "position": "F",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "team": "Aston Villa"
-    },
-    {
-      "id": 359218,
-      "name": "Calum Scanlon",
+      "id": 350664,
+      "name": "Carter Pinnington",
       "teamId": 364,
       "position": "D",
-      "age": 21,
+      "age": 19,
       "goals": null,
       "assists": null,
       "team": "Liverpool"
     },
     {
-      "id": 399896,
-      "name": "Calvin Diakite",
+      "id": 354206,
+      "name": "Charlie Crew",
+      "teamId": 357,
+      "position": "M",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": "Leeds United"
+    },
+    {
+      "id": 315532,
+      "name": "Charlie Holland",
       "teamId": 363,
-      "position": "D",
+      "position": "M",
       "age": 17,
       "goals": null,
       "assists": null,
       "team": "Chelsea"
-    },
-    {
-      "id": 183326,
-      "name": "Cameron Humphreys",
-      "teamId": 373,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 307069,
-      "name": "Carl Rushworth",
-      "teamId": 331,
-      "position": "G",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 406350,
-      "name": "Cathal McCarthy",
-      "teamId": 306,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 243648,
-      "name": "Cedric Kipre",
-      "teamId": 373,
-      "position": "D",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 3111013,
-      "name": "Charles Richard Dinsdale",
-      "teamId": 366,
-      "position": "M",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 326187,
-      "name": "Charlie Hughes",
-      "teamId": 306,
-      "position": "D",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 409810,
-      "name": "Charlie Walker-Smith",
-      "teamId": 384,
-      "position": "D",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Crystal Palace"
     },
     {
       "id": 266628,
@@ -5181,206 +4691,6 @@
       "teamId": 384,
       "position": "M",
       "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 238192,
-      "name": "Chiedozie Ogbene",
-      "teamId": 373,
-      "position": "F",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 168746,
-      "name": "Christian Walton",
-      "teamId": 373,
-      "position": "G",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 303793,
-      "name": "Christos Tzolis",
-      "teamId": 359,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": "Arsenal"
-    },
-    {
-      "id": 181092,
-      "name": "Chuba Akpom",
-      "teamId": 373,
-      "position": "F",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 298520,
-      "name": "Cieran Slicker",
-      "teamId": 373,
-      "position": "G",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 361355,
-      "name": "Claudio Echeverri",
-      "teamId": 382,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester City"
-    },
-    {
-      "id": 279786,
-      "name": "Cody Drameh",
-      "teamId": 306,
-      "position": "D",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 274285,
-      "name": "Costinha",
-      "teamId": 331,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 286347,
-      "name": "Daizen Maeda",
-      "teamId": 373,
-      "position": "F",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 350674,
-      "name": "Damola Ajayi",
-      "teamId": 367,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 381055,
-      "name": "Daniel Armer",
-      "teamId": 360,
-      "position": "D",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 347049,
-      "name": "Daniel Gore",
-      "teamId": 360,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 312182,
-      "name": "Daniel Jebbison",
-      "teamId": 349,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": "AFC Bournemouth"
-    },
-    {
-      "id": 243440,
-      "name": "Dara O'Shea",
-      "teamId": 373,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 308216,
-      "name": "Darko Gyabi",
-      "teamId": 306,
-      "position": "M",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 215075,
-      "name": "Darnell Furlong",
-      "teamId": 373,
-      "position": "D",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 402242,
-      "name": "Dastan Satpaev",
-      "teamId": 363,
-      "position": "F",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 111337,
-      "name": "David Button",
-      "teamId": 373,
-      "position": "G",
-      "age": 37,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 301047,
-      "name": "David Datro Fofana",
-      "teamId": 363,
-      "position": "F",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 345407,
-      "name": "David Ozoh",
-      "teamId": 384,
-      "position": "M",
-      "age": 21,
       "goals": null,
       "assists": null,
       "team": "Crystal Palace"
@@ -5396,324 +4706,24 @@
       "team": "Tottenham Hotspur"
     },
     {
-      "id": 325550,
-      "name": "Dermot Mee",
-      "teamId": 360,
-      "position": "G",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 191603,
-      "name": "Dillon Phillips",
-      "teamId": 306,
-      "position": "G",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 3109635,
-      "name": "Dylan Thompson",
-      "teamId": 367,
-      "position": "G",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 318359,
-      "name": "Eiran Cashin",
-      "teamId": 331,
-      "position": "D",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 306055,
-      "name": "Eliot Matazo",
-      "teamId": 306,
+      "id": 366750,
+      "name": "Ellis Clark",
+      "teamId": 379,
       "position": "M",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 308555,
-      "name": "Elkan Baggott",
-      "teamId": 373,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 282647,
-      "name": "Ellis Simms",
-      "teamId": 388,
-      "position": "F",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 322654,
-      "name": "Emersonn",
-      "teamId": 373,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 304871,
-      "name": "Emmanuel Emegha",
-      "teamId": 363,
-      "position": "F",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 317076,
-      "name": "Enis Destan",
-      "teamId": 306,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 398006,
-      "name": "Enzo Kana-Biyik",
-      "teamId": 360,
-      "position": "F",
       "age": 19,
       "goals": null,
       "assists": null,
-      "team": "Manchester United"
+      "team": "Burnley"
     },
     {
-      "id": 246954,
-      "name": "Ephron Mason-Clark",
-      "teamId": 388,
-      "position": "F",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 368547,
-      "name": "Ethan Wheatley",
-      "teamId": 360,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 360077,
-      "name": "Ethan Williams",
-      "teamId": 360,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 289645,
-      "name": "Evan Ferguson",
-      "teamId": 331,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 347523,
-      "name": "Ewen Jaouen",
-      "teamId": 361,
-      "position": "G",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
-      "id": 88865,
-      "name": "Fabio Vieira",
+      "id": 351060,
+      "name": "Harrison Dudziak",
       "teamId": 359,
       "position": "M",
-      "age": 26,
+      "age": 20,
       "goals": null,
       "assists": null,
       "team": "Arsenal"
-    },
-    {
-      "id": 318680,
-      "name": "Fatawu Issahaku",
-      "teamId": 373,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 3111009,
-      "name": "Felix Scott",
-      "teamId": 366,
-      "position": "F",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 298519,
-      "name": "Finley Burns",
-      "teamId": 382,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester City"
-    },
-    {
-      "id": 414669,
-      "name": "Finn Geragusyan",
-      "teamId": 366,
-      "position": "F",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 348265,
-      "name": "George Abbott",
-      "teamId": 367,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 241325,
-      "name": "George Hirst",
-      "teamId": 373,
-      "position": "F",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 412867,
-      "name": "George Shepherd",
-      "teamId": 388,
-      "position": "M",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 376274,
-      "name": "Geovany Quenda",
-      "teamId": 363,
-      "position": "M",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 220474,
-      "name": "Haji Wright",
-      "teamId": 388,
-      "position": "F",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 294344,
-      "name": "Harrison Ashby",
-      "teamId": 361,
-      "position": "D",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
-      "id": 293337,
-      "name": "Harrison Clarke",
-      "teamId": 373,
-      "position": "D",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 356940,
-      "name": "Harry Amass",
-      "teamId": 360,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 397880,
-      "name": "Harry Byrne",
-      "teamId": 367,
-      "position": "M",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 392340,
-      "name": "Harvey Broad",
-      "teamId": 388,
-      "position": "D",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 306773,
-      "name": "Harvey Cartwright",
-      "teamId": 306,
-      "position": "G",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": null
     },
     {
       "id": 315879,
@@ -5726,394 +4736,54 @@
       "team": "Liverpool"
     },
     {
-      "id": 282978,
-      "name": "Hayden Hackney",
-      "teamId": 368,
-      "position": "M",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": "Everton"
-    },
-    {
-      "id": 270752,
-      "name": "Hidemasa Morita",
-      "teamId": 306,
-      "position": "M",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 359400,
-      "name": "Ibrahim Osman",
-      "teamId": 331,
-      "position": "F",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 407397,
-      "name": "Ifeanyi Ndukwe",
-      "teamId": 364,
-      "position": "D",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 307242,
-      "name": "Isaac Schmidt",
-      "teamId": 357,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": "Leeds United"
-    },
-    {
-      "id": 378457,
-      "name": "Ismeal Kabia",
+      "id": 390095,
+      "name": "Jack Porter",
       "teamId": 359,
-      "position": "F",
-      "age": 20,
+      "position": "G",
+      "age": 18,
       "goals": null,
       "assists": null,
       "team": "Arsenal"
     },
     {
-      "id": 294427,
-      "name": "Issa Kaboré",
-      "teamId": 382,
-      "position": "D",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester City"
-    },
-    {
-      "id": 277234,
-      "name": "Ivor Pandur",
-      "teamId": 306,
-      "position": "G",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 157933,
-      "name": "Jack Butland",
-      "teamId": 306,
-      "position": "G",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 269343,
-      "name": "Jack Clarke",
-      "teamId": 373,
-      "position": "F",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 286967,
-      "name": "Jack Rudoni",
-      "teamId": 388,
-      "position": "M",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 139744,
-      "name": "Jack Taylor",
-      "teamId": 373,
-      "position": "M",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 384068,
-      "name": "Jacob Devaney",
-      "teamId": 360,
-      "position": "M",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 291174,
-      "name": "Jacob Greaves",
-      "teamId": 373,
-      "position": "D",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 354137,
-      "name": "Jaden Heskey",
-      "teamId": 382,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester City"
-    },
-    {
-      "id": 295370,
-      "name": "Jaden Philogene",
-      "teamId": 373,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 328043,
-      "name": "Jahnoah Markelo",
-      "teamId": 388,
-      "position": "F",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 143533,
-      "name": "Jake Bidwell",
-      "teamId": 388,
-      "position": "D",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 346914,
-      "name": "James Debayo",
-      "teamId": 306,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 347313,
-      "name": "Jamie Donley",
-      "teamId": 367,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 376683,
-      "name": "Jannik Schuster",
-      "teamId": 337,
-      "position": "D",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Brentford"
-    },
-    {
-      "id": 206172,
-      "name": "Jay Da Silva",
-      "teamId": 388,
-      "position": "D",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 386199,
-      "name": "Jaydan Kamason",
-      "teamId": 360,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 354737,
-      "name": "Jayden Danns",
-      "teamId": 364,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 352820,
-      "name": "Jayden Meghoma",
-      "teamId": 337,
-      "position": "D",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Brentford"
-    },
-    {
-      "id": 355980,
-      "name": "Jérémy Jacquet",
-      "teamId": 364,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 389329,
-      "name": "Jeremy Monga",
-      "teamId": 382,
-      "position": "F",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester City"
-    },
-    {
-      "id": 241429,
-      "name": "Joe Gauci",
-      "teamId": 362,
-      "position": "G",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": "Aston Villa"
-    },
-    {
-      "id": 277531,
-      "name": "Joe Gelhardt",
-      "teamId": 357,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": "Leeds United"
-    },
-    {
-      "id": 126027,
-      "name": "Joe White",
-      "teamId": 361,
-      "position": "M",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
-      "id": 260168,
-      "name": "Joel Latibeaudiere",
-      "teamId": 388,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 386992,
-      "name": "Johan Manzambi",
-      "teamId": 362,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Aston Villa"
-    },
-    {
-      "id": 168424,
-      "name": "John Egan",
-      "teamId": 306,
-      "position": "D",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 3108507,
-      "name": "Joseph Junior Andreou Gabriel",
-      "teamId": 360,
-      "position": "F",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 326249,
-      "name": "Joseph Whitworth",
+      "id": 330617,
+      "name": "Jackson Izquierdo",
       "teamId": 384,
       "position": "G",
-      "age": 22,
+      "age": 21,
       "goals": null,
       "assists": null,
       "team": "Crystal Palace"
     },
     {
-      "id": 277614,
-      "name": "Josh Eccles",
-      "teamId": 388,
-      "position": "M",
+      "id": 374017,
+      "name": "Jaden Dixon",
+      "teamId": 359,
+      "position": "D",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "team": "Arsenal"
+    },
+    {
+      "id": 271218,
+      "name": "Jordan Beyer",
+      "teamId": 379,
+      "position": "D",
       "age": 26,
       "goals": null,
       "assists": null,
-      "team": null
+      "team": "Burnley"
     },
     {
-      "id": 307117,
-      "name": "Josh Wilson-Esbrand",
-      "teamId": 382,
+      "id": 351059,
+      "name": "Josh Nichols",
+      "teamId": 359,
       "position": "D",
-      "age": 23,
+      "age": 20,
       "goals": null,
       "assists": null,
-      "team": "Manchester City"
-    },
-    {
-      "id": 3111014,
-      "name": "Joshua Abe",
-      "teamId": 364,
-      "position": "F",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 395890,
-      "name": "Joshua Lambie",
-      "teamId": 364,
-      "position": "F",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Liverpool"
+      "team": "Arsenal"
     },
     {
       "id": 368826,
@@ -6126,74 +4796,24 @@
       "team": "Brentford"
     },
     {
-      "id": 370703,
-      "name": "Juma Bah",
+      "id": 366242,
+      "name": "Justin Hanks",
+      "teamId": 393,
+      "position": "D",
+      "age": 21,
+      "goals": null,
+      "assists": null,
+      "team": "Nottingham Forest"
+    },
+    {
+      "id": 390094,
+      "name": "Kaden Braithwaite",
       "teamId": 382,
       "position": "D",
-      "age": 20,
+      "age": 18,
       "goals": null,
       "assists": null,
       "team": "Manchester City"
-    },
-    {
-      "id": 367694,
-      "name": "Kai Andrews",
-      "teamId": 388,
-      "position": "M",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 294308,
-      "name": "Kaine Kesler Hayden",
-      "teamId": 388,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 223453,
-      "name": "Kalvin Phillips",
-      "teamId": 382,
-      "position": "M",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester City"
-    },
-    {
-      "id": 307073,
-      "name": "Kasey McAteer",
-      "teamId": 373,
-      "position": "M",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 235695,
-      "name": "Kasey Palmer",
-      "teamId": 306,
-      "position": "M",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 324582,
-      "name": "Kayne Van Oevelen",
-      "teamId": 373,
-      "position": "G",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": null
     },
     {
       "id": 351250,
@@ -6206,114 +4826,44 @@
       "team": "Nottingham Forest"
     },
     {
-      "id": 194114,
-      "name": "Kieran Dowell",
-      "teamId": 306,
-      "position": "M",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 362203,
-      "name": "Kim Ji-Soo",
-      "teamId": 337,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Brentford"
-    },
-    {
-      "id": 246244,
-      "name": "Kjell Scherpen",
-      "teamId": 373,
+      "id": 386202,
+      "name": "Khari Ranson",
+      "teamId": 359,
       "position": "G",
-      "age": 26,
+      "age": 18,
       "goals": null,
       "assists": null,
-      "team": null
+      "team": "Arsenal"
     },
     {
-      "id": 365367,
-      "name": "Kosta Nedeljkovic",
-      "teamId": 362,
+      "id": 372014,
+      "name": "Kian Noble",
+      "teamId": 382,
       "position": "D",
-      "age": 20,
+      "age": 19,
       "goals": null,
       "assists": null,
-      "team": "Aston Villa"
+      "team": "Manchester City"
     },
     {
-      "id": 226177,
-      "name": "Kostas Tsimikas",
+      "id": 389424,
+      "name": "Kornel Misciur",
       "teamId": 364,
-      "position": "D",
-      "age": 30,
+      "position": "G",
+      "age": 19,
       "goals": null,
       "assists": null,
       "team": "Liverpool"
     },
     {
-      "id": 306812,
-      "name": "Kyle Joseph",
-      "teamId": 306,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 283086,
-      "name": "Leif Davis",
-      "teamId": 373,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 231826,
-      "name": "Lewie Coyle",
-      "teamId": 306,
-      "position": "D",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 350661,
-      "name": "Lewis Koumas",
-      "teamId": 364,
-      "position": "F",
+      "id": 351382,
+      "name": "Lewis Orford",
+      "teamId": 371,
+      "position": "M",
       "age": 20,
       "goals": null,
       "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 269341,
-      "name": "Liam Kitching",
-      "teamId": 388,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 271879,
-      "name": "Liam Millar",
-      "teamId": 306,
-      "position": "F",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": null
+      "team": "West Ham United"
     },
     {
       "id": 359158,
@@ -6326,56 +4876,6 @@
       "team": "Tottenham Hotspur"
     },
     {
-      "id": 3114844,
-      "name": "Lucca Benetton",
-      "teamId": 384,
-      "position": "G",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 364591,
-      "name": "Luís Semedo",
-      "teamId": 366,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 32572,
-      "name": "Luke Chambers",
-      "teamId": 364,
-      "position": "D",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 261083,
-      "name": "Luke Woolfenden",
-      "teamId": 388,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 399562,
-      "name": "Mahdi Nicoll-Jazuli",
-      "teamId": 363,
-      "position": "M",
-      "age": 16,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
       "id": 396748,
       "name": "Malachi Hardy",
       "teamId": 367,
@@ -6386,44 +4886,14 @@
       "team": "Tottenham Hotspur"
     },
     {
-      "id": 359097,
-      "name": "Malick Yalcouyé",
-      "teamId": 331,
+      "id": 410322,
+      "name": "Malik Olayiwola",
+      "teamId": 368,
       "position": "M",
-      "age": 20,
+      "age": 17,
       "goals": null,
       "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 301554,
-      "name": "Marcelino Núñez",
-      "teamId": 373,
-      "position": "M",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 362486,
-      "name": "Marco Palestra",
-      "teamId": 363,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 230945,
-      "name": "Marcus Rashford",
-      "teamId": 360,
-      "position": "F",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
+      "team": "Everton"
     },
     {
       "id": 141705,
@@ -6431,56 +4901,6 @@
       "teamId": 361,
       "position": "G",
       "age": 34,
-      "goals": null,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
-      "id": 358407,
-      "name": "Mark O’Mahony",
-      "teamId": 331,
-      "position": "F",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 356074,
-      "name": "Martin Sherif",
-      "teamId": 368,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Everton"
-    },
-    {
-      "id": 326201,
-      "name": "Mason Burstow",
-      "teamId": 306,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 364001,
-      "name": "Mason Melia",
-      "teamId": 367,
-      "position": "F",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 416448,
-      "name": "Mason Miley",
-      "teamId": 361,
-      "position": "M",
-      "age": 17,
       "goals": null,
       "assists": null,
       "team": "Newcastle United"
@@ -6496,194 +4916,14 @@
       "team": "AFC Bournemouth"
     },
     {
-      "id": 346709,
-      "name": "Mateo Joseph",
-      "teamId": 357,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": "Leeds United"
-    },
-    {
-      "id": 399404,
-      "name": "Matheos Ferreira",
-      "teamId": 361,
-      "position": "F",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
-      "id": 318087,
-      "name": "Matheus França",
-      "teamId": 384,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 153613,
-      "name": "Matt Crooks",
-      "teamId": 306,
-      "position": "M",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 191337,
-      "name": "Matt Grimes",
-      "teamId": 388,
-      "position": "M",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 192929,
-      "name": "Matt Targett",
-      "teamId": 306,
+      "id": 347290,
+      "name": "Murray Campbell",
+      "teamId": 379,
       "position": "D",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 307281,
-      "name": "Matthew Cox",
-      "teamId": 337,
-      "position": "G",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": "Brentford"
-    },
-    {
-      "id": 291172,
-      "name": "Matty Jacob",
-      "teamId": 306,
-      "position": "D",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 243725,
-      "name": "Max Aarons",
-      "teamId": 349,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": "AFC Bournemouth"
-    },
-    {
-      "id": 231674,
-      "name": "Maximilian Wöber",
-      "teamId": 357,
-      "position": "D",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "team": "Leeds United"
-    },
-    {
-      "id": 380624,
-      "name": "Michael Laffey",
-      "teamId": 364,
-      "position": "M",
       "age": 20,
       "goals": null,
       "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 289942,
-      "name": "Michael Svoboda",
-      "teamId": 331,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 340205,
-      "name": "Miguel Ángel Brau",
-      "teamId": 388,
-      "position": "D",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 332343,
-      "name": "Mike Penders",
-      "teamId": 363,
-      "position": "G",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 365332,
-      "name": "Mikey Moore",
-      "teamId": 367,
-      "position": "F",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 281139,
-      "name": "Milan van Ewijk",
-      "teamId": 388,
-      "position": "D",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 392682,
-      "name": "Modou Cissé",
-      "teamId": 362,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Aston Villa"
-    },
-    {
-      "id": 366068,
-      "name": "Mofe Jemide",
-      "teamId": 384,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 320417,
-      "name": "Mohamed Belloumi",
-      "teamId": 306,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": null
+      "team": "Burnley"
     },
     {
       "id": 299911,
@@ -6696,124 +4936,14 @@
       "team": "Chelsea"
     },
     {
-      "id": 379270,
-      "name": "Nathan Tinsdale",
-      "teamId": 306,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 268371,
-      "name": "Nazariy Rusyn",
-      "teamId": 366,
-      "position": "F",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 308524,
-      "name": "Nicolas Jackson",
-      "teamId": 363,
-      "position": "F",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 325949,
-      "name": "Norman Bassette",
-      "teamId": 388,
-      "position": "F",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 291945,
-      "name": "Oliver Dovin",
-      "teamId": 388,
-      "position": "G",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 193010,
-      "name": "Oliver McBurnie",
-      "teamId": 306,
-      "position": "F",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 408508,
-      "name": "Olutayo Subuloye",
-      "teamId": 363,
-      "position": "D",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 243754,
-      "name": "Omar Richards",
-      "teamId": 393,
-      "position": "D",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
-      "id": 331082,
-      "name": "Omari Kellyman",
-      "teamId": 363,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 276546,
-      "name": "Óscar Mingueza",
-      "teamId": 384,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 369824,
-      "name": "Oscar Varney",
-      "teamId": 388,
+      "id": 376499,
+      "name": "Nils Ramming",
+      "teamId": 331,
       "position": "G",
       "age": 19,
       "goals": null,
       "assists": null,
-      "team": null
-    },
-    {
-      "id": 328740,
-      "name": "Óscar Zambrano",
-      "teamId": 306,
-      "position": "M",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": null
+      "team": "Brighton & Hove Albion"
     },
     {
       "id": 348298,
@@ -6826,171 +4956,21 @@
       "team": "AFC Bournemouth"
     },
     {
-      "id": 330618,
-      "name": "Owen Goodman",
-      "teamId": 384,
+      "id": 409811,
+      "name": "Rhys Oakley",
+      "teamId": 362,
       "position": "G",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 210139,
-      "name": "Paddy McNair",
-      "teamId": 306,
-      "position": "D",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 325556,
-      "name": "Radek Vítek",
-      "teamId": 360,
-      "position": "G",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
-      "id": 295544,
-      "name": "Raphael Borges Rodrigues",
-      "teamId": 388,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 249851,
-      "name": "Regan Slater",
-      "teamId": 306,
-      "position": "M",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 400749,
-      "name": "Reggie Walsh",
-      "teamId": 363,
-      "position": "M",
       "age": 17,
       "goals": null,
       "assists": null,
-      "team": "Chelsea"
+      "team": "Aston Villa"
     },
     {
-      "id": 399564,
-      "name": "Reggie Watson",
-      "teamId": 363,
-      "position": "M",
-      "age": 16,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 372596,
-      "name": "Reiss-Alexander Russell-Denny",
-      "teamId": 367,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 415025,
-      "name": "Rodrigo Rêgo",
-      "teamId": 331,
-      "position": "F",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 377956,
-      "name": "Rory Finneran",
-      "teamId": 361,
-      "position": "M",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
-      "id": 243576,
-      "name": "Ryan Giles",
-      "teamId": 306,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 223547,
-      "name": "Sammie Szmodics",
-      "teamId": 373,
-      "position": "F",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 384372,
-      "name": "Sean Steur",
-      "teamId": 361,
-      "position": "M",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Newcastle United"
-    },
-    {
-      "id": 178051,
-      "name": "Semi Ajayi",
-      "teamId": 306,
-      "position": "D",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 330045,
-      "name": "Sindre Walle Egeli",
-      "teamId": 373,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 379039,
-      "name": "Stanl Ashbee",
-      "teamId": 306,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 330605,
-      "name": "Stefan Bajcetic",
+      "id": 340762,
+      "name": "Rhys Williams",
       "teamId": 364,
-      "position": "M",
-      "age": 21,
+      "position": "D",
+      "age": 25,
       "goals": null,
       "assists": null,
       "team": "Liverpool"
@@ -7006,86 +4986,6 @@
       "team": "Manchester City"
     },
     {
-      "id": 318390,
-      "name": "Tarik Muharemovic",
-      "teamId": 357,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": "Leeds United"
-    },
-    {
-      "id": 302002,
-      "name": "Tatsuhiro Sakamoto",
-      "teamId": 388,
-      "position": "M",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 330230,
-      "name": "Tayo Adaramola",
-      "teamId": 384,
-      "position": "D",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 349214,
-      "name": "Ted Curd",
-      "teamId": 363,
-      "position": "G",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Chelsea"
-    },
-    {
-      "id": 328465,
-      "name": "Thimothee Lo-Tutala",
-      "teamId": 306,
-      "position": "G",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 166473,
-      "name": "Thomas Meunier",
-      "teamId": 366,
-      "position": "D",
-      "age": 34,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 297167,
-      "name": "Timothee Pembélé",
-      "teamId": 366,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 308778,
-      "name": "Toby Collyer",
-      "teamId": 360,
-      "position": "M",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester United"
-    },
-    {
       "id": 248761,
       "name": "Tom McGill",
       "teamId": 331,
@@ -7096,184 +4996,14 @@
       "team": "Brighton & Hove Albion"
     },
     {
-      "id": 3111010,
-      "name": "Tom Proctor",
-      "teamId": 366,
-      "position": "M",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 392107,
-      "name": "Trey Ogunsuyi",
-      "teamId": 366,
-      "position": "F",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": "Sunderland"
-    },
-    {
-      "id": 252390,
-      "name": "Trialist 1",
-      "teamId": 384,
-      "position": "D",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Crystal Palace"
-    },
-    {
-      "id": 397474,
-      "name": "Tye Hall",
-      "teamId": 367,
-      "position": "M",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 367427,
-      "name": "Tyler Bindon",
-      "teamId": 393,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
-      "id": 3109634,
-      "name": "Tyler Tingey",
-      "teamId": 367,
-      "position": "D",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 374109,
-      "name": "Tyrese Hall",
-      "teamId": 367,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 397545,
-      "name": "Víctor Muñoz",
-      "teamId": 364,
-      "position": "F",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 256015,
-      "name": "Victor Torp",
-      "teamId": 388,
-      "position": "M",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 289840,
-      "name": "Vitezslav Jaros",
-      "teamId": 364,
+      "id": 223246,
+      "name": "Václav Hladky",
+      "teamId": 379,
       "position": "G",
-      "age": 25,
+      "age": 35,
       "goals": null,
       "assists": null,
-      "team": "Liverpool"
-    },
-    {
-      "id": 361434,
-      "name": "Vitor Reis",
-      "teamId": 382,
-      "position": "D",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Manchester City"
-    },
-    {
-      "id": 181516,
-      "name": "Wes Burns",
-      "teamId": 373,
-      "position": "F",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "team": null
-    },
-    {
-      "id": 349181,
-      "name": "Will Lankshear",
-      "teamId": 367,
-      "position": "F",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 238886,
-      "name": "Xaver Schlager",
-      "teamId": 393,
-      "position": "M",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "team": "Nottingham Forest"
-    },
-    {
-      "id": 371578,
-      "name": "Yang Min-Hyeok",
-      "teamId": 367,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Tottenham Hotspur"
-    },
-    {
-      "id": 371574,
-      "name": "Yoon Do-Yong",
-      "teamId": 331,
-      "position": "F",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 407059,
-      "name": "Zadok Yohanna",
-      "teamId": 331,
-      "position": "F",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 375234,
-      "name": "Zyan Blake",
-      "teamId": 393,
-      "position": "F",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "team": "Nottingham Forest"
+      "team": "Burnley"
     }
   ]
 }

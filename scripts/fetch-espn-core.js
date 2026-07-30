@@ -25,6 +25,7 @@
  */
 'use strict';
 
+const fs = require('fs')
 const path = require('path');
 const { sleep, fetchJson, writeJsonIfChanged } = require('./lib/http');
 const { SEASON, LEAGUES, core, TEAM_OVERRIDES } = require('./lib/espn-endpoints');
@@ -253,10 +254,12 @@ function pickStat(stats, names) {
 
 async function fetchPlayers(league, rosterMap) {
   const season = league.season || SEASON;
-  const { count, items } = await collectList(core.athletes(league.slug, PAGE_SIZE, 1));
-  const ids = items.map((i) => idFromRef(i.$ref)).filter(Boolean);
-  const wanted = ids.slice(0, PLAYERS_LIMIT);
-  console.log(`  · [${league.slug}] 球员列表 ${count} 人（本页抓取 ${wanted.length}）`);
+  // 数据准确性（2026-07-30 fix）：改为迭代 team roster 聚合的 rosterMap（当前赛季真名单），
+  // 不再用 league-level athletes 端点（含已转会/退役的 stale 球员）。
+  // rosterMap 来自 fetchTeams 阶段每队 /teams/{id}/athletes?season=X 端点聚合。
+  const allIds = Array.from(rosterMap.keys());
+  const wanted = Number.isFinite(PLAYERS_LIMIT) ? allIds.slice(0, PLAYERS_LIMIT) : allIds;
+  console.log(`  · [${league.slug}] 球员列表 ${allIds.length} 人（团队花名册聚合，本页抓取 ${wanted.length}）`);
 
   const index = [];
   let ok = 0;
@@ -277,7 +280,7 @@ async function fetchPlayers(league, rosterMap) {
 
       const position = normalizePosition(profile.position && (profile.position.displayName || profile.position.name)) || null;
 
-      // 球队归属：赛季花名册优先（权威），档案 team/defaultTeam 兜底（外租/离队球员）
+      // 球队归属：花名册优先（权威当前赛季），档案 team/defaultTeam 兜底（极少数边缘情况）
       const teamId =
         rosterMap.get(id) ??
         idFromRef(profile.team && profile.team.$ref) ??
@@ -330,6 +333,27 @@ async function fetchPlayers(league, rosterMap) {
 
   index.sort((a, b) => (b.goals ?? -1) - (a.goals ?? -1) || a.name.localeCompare(b.name));
   console.log(`  · [${league.slug}] 球员完成 ${ok} 成功 / ${fail} 失败`);
+
+  // 清理 stale 球员档案：删除不在当前 index 里的旧 .json 文件
+  // （数据准确性：避免转会/退役球员的旧档案残留 + 被 leaders 直接 fetch 时回显错误 teamId）
+  const playerDir = path.join(DATA_ROOT, league.slug, 'players');
+  const indexIds = new Set(index.map((p) => String(p.id)));
+  let removed = 0;
+  if (fs.existsSync(playerDir)) {
+    for (const f of fs.readdirSync(playerDir)) {
+      if (!f.endsWith('.json') || f === 'index.json') continue;
+      const id = f.replace(/\.json$/, '');
+      if (!indexIds.has(id)) {
+        try {
+          fs.unlinkSync(path.join(playerDir, f));
+          removed += 1;
+        } catch (e) {
+          console.warn(`  ! 删除 stale ${f} 失败: ${e.message}`);
+        }
+      }
+    }
+  }
+  if (removed > 0) console.log(`  · [${league.slug}] 清理 stale 球员档案 ${removed} 个`);
   return index;
 }
 

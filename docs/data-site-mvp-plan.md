@@ -176,27 +176,27 @@
 
 > 按日期倒序记录每次调研进展，格式：`### YYYY-MM-DD`
 
-### 2026-07-30 — 懂球帝 season_id 全 6 联赛锁定 + 西/意/德/法译名抓取完工
+### 2026-07-30 — ESPN athletes 端点 stale 数据修复 + 团队花名册聚合
 
-**调研内容**：2026-07-29 完成英超+中超译名抓取后，剩余 4 联赛（西甲/意甲/德甲/法甲）season_id 未探查，今日补齐。
+**调研内容**：Phase 4 上线后实测发现球员列表显示已转会/退役球员（如 Calvert-Lewin 显示在利兹联、Semenyo 在曼城等），且 athletes 端点 count 包含历史赛季残留。
 
-**探查方法**：
-- 西甲/意甲/德甲：浏览器开 `dongqiudi.com` 主页 → 点 sidebar 联赛切换 → 监听 network 看 standing API 的 season_id（chrome-devtools MCP 自动化）
-- 法甲：sidebar 无入口（dongqiudi 主页 sidebar 只有英超/中超/西甲/意甲/德甲/中甲 6 项，法甲被排除）。改用 Node 脚本批量请求 standing API 候选 season_id 范围（24590–24670 / 26300–26340）扫出有数据的 ID，按队名首三队辨认（24652=巴黎/朗斯/里尔 = 法甲）
+**根因**：`fetch-espn-core.js` 之前用 `/leagues/{slug}/athletes`（league-level all-time 端点），返回 728 人（EPL），含已转会/退役但 ESPN 仍标在该联赛的 stale 球员。teamId 来自球员档案（可能过期），非当前真实归属。
 
-**实测结果（2026-07-30）**：
-- **西甲 season_id=24651**（巴萨/皇马/比利亚雷亚尔），20 队 → 新增 1699 个译名变体
-- **意甲 season_id=24596**（国米/那不勒斯/罗马），20 队 → 新增 2225 个变体
-- **德甲 season_id=24648**（拜仁/多特/RB莱比锡），18 队 → 新增 1691 个变体
-- **法甲 season_id=24652**（巴黎/朗斯/里尔），18 队 → 新增 1588 个变体
-- 四联赛合计新增 **7203 个变体**，players-zh.json 从 7486 → **14689**
-- 至此六联赛译名表抓取全部完工，验证样本：维尼修斯/劳塔罗-马丁内斯/登贝莱/古伊里/维尔茨（如有）均命中
+**修复方案**：改用 `fetchTeams` 阶段聚合的 `rosterMap`（来自每队 `/teams/{id}/athletes?season=X` 端点）作为球员列表源——这是当前赛季真名单，自动过滤 stale：
+- `fetchPlayers(league, rosterMap)` 迭代 `rosterMap` 的 athleteId（约 500 人/EPL），而非 league athletes 端点（728 人）
+- teamId 用 `rosterMap` 值（当前赛季权威归属），档案 team/defaultTeam 仅作兜底
+- 加 cleanup 步骤：删除 index.json 之外的旧 .json 档案，避免被 leaders 直接 fetch 时回显错误 teamId
 
-**脚本能力升级**：`scripts/fetch-dqd-players.js` LEAGUES 配置从 2 联赛扩到 6 联赛，新增 `--laliga` / `--seriea` / `--bundesliga` / `--ligue1` 四个参数，支持多联赛批量调用
+**实测改善**（eng.1）：
+- 球员总数 728 → 500（过滤 228 stale，含已转会的 Calvert-Lewin 实际 2025 转会到 Leeds 数据正确保留）
+- stale 文件清理 380 个（之前 fetch 残留）
+- 命中率 81.1% (514/634) → 79.8% (399/500)，绝对命中数下降 115——因为旧数据里 stale 球员的中文名字（dongqiudi 旧 roster 抓的）不再被使用，但当前 500 真名单里主力/常用替补中文化覆盖完整
+
+**剩余缺口**：U21/U18 青年队球员（dongqiudi 不收，无解；要补需引入第二个数据源）
 
 ---
 
-### 2026-07-29 — 懂球帝中英文球员译名表抓取（Phase 3 弹窗球员名中文化）
+### 2026-07-30 — 懂球帝 season_id 全 6 联赛锁定 + 西/意/德/法译名抓取完工
 
 **调研内容**：ESPN site.api summary 返回的 roster 只有英文 displayName / shortName，没有中文译名 API。Phase 3 比赛详情弹窗在中文模式下球员名仍是英文，需要外部源补中英对照表。
 

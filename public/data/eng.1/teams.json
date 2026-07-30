@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-07-29T08:50:39.382Z",
+  "updateTime": "2026-07-30T05:45:01.572Z",
   "league": "eng.1",
   "season": "2025",
   "count": 20,
@@ -50,8 +50,9 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/359.png",
       "venue": {
-        "name": "Aviva Stadium",
-        "city": "Dublin"
+        "name": "Emirates Stadium",
+        "city": "London",
+        "country": "England"
       },
       "isActive": true,
       "record": {
@@ -204,9 +205,9 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/363.png",
       "venue": {
-        "name": "Kai Tak Sports Park",
-        "city": "Mongkok, Kowloon",
-        "country": "Hong Kong"
+        "name": "Stamford Bridge",
+        "city": "London",
+        "country": "England"
       },
       "isActive": true,
       "record": {
@@ -234,7 +235,11 @@
       "alternateColor": "#ffdd00",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/384.png",
-      "venue": null,
+      "venue": {
+        "name": "Selhurst Park",
+        "city": "London",
+        "country": "England"
+      },
       "isActive": true,
       "record": {
         "wins": 11,
@@ -323,7 +328,11 @@
       "alternateColor": "#0000FF",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/357.png",
-      "venue": null,
+      "venue": {
+        "name": "Elland Road",
+        "city": "Leeds",
+        "country": "England"
+      },
       "isActive": true,
       "record": {
         "wins": 11,
@@ -351,8 +360,8 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/364.png",
       "venue": {
-        "name": "GEODIS Park",
-        "city": "Nashville, Tennessee",
+        "name": "Yankee Stadium",
+        "city": "New York City",
         "country": "USA"
       },
       "isActive": true,
@@ -382,9 +391,9 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/382.png",
       "venue": {
-        "name": "Kai Tak Sports Park",
-        "city": "Mongkok, Kowloon",
-        "country": "Hong Kong"
+        "name": "Etihad Stadium",
+        "city": "Manchester",
+        "country": "England"
       },
       "isActive": true,
       "record": {
@@ -413,9 +422,9 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/360.png",
       "venue": {
-        "name": "Helsinki Olympic Stadium",
-        "city": "Helsinki",
-        "country": "Finland"
+        "name": "Old Trafford",
+        "city": "Manchester",
+        "country": "England"
       },
       "isActive": true,
       "record": {
@@ -506,9 +515,9 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/366.png",
       "venue": {
-        "name": "Red Bull Arena",
-        "city": "Harrison, New Jersey",
-        "country": "USA"
+        "name": "Stadium of Light",
+        "city": "Sunderland",
+        "country": "England"
       },
       "isActive": true,
       "record": {
@@ -537,8 +546,8 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/367.png",
       "venue": {
-        "name": "Tottenham Hotspur Training Centre",
-        "city": "Enfield",
+        "name": "Tottenham Hotspur Stadium",
+        "city": "London",
         "country": "England"
       },
       "isActive": true,
