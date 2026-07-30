@@ -1,10 +1,30 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-07-30T06:42:43.914Z",
+  "updateTime": "2026-07-30T08:58:51.585Z",
   "league": "ger.1",
   "season": "2025",
-  "count": 450,
+  "count": 564,
   "players": [
+    {
+      "id": 142200,
+      "name": "Harry Kane",
+      "teamId": 132,
+      "position": "F",
+      "age": 33,
+      "goals": 36,
+      "assists": null,
+      "team": "Bayern Munich"
+    },
+    {
+      "id": 273300,
+      "name": "Deniz Undav",
+      "teamId": 134,
+      "position": "F",
+      "age": 30,
+      "goals": 19,
+      "assists": null,
+      "team": "VfB Stuttgart"
+    },
     {
       "id": 186381,
       "name": "Serhou Guirassy",
@@ -14,6 +34,26 @@
       "goals": 17,
       "assists": null,
       "team": "Borussia Dortmund"
+    },
+    {
+      "id": 212330,
+      "name": "Patrik Schick",
+      "teamId": 131,
+      "position": "F",
+      "age": 30,
+      "goals": 16,
+      "assists": null,
+      "team": "Bayer Leverkusen"
+    },
+    {
+      "id": 257390,
+      "name": "Luis Díaz",
+      "teamId": 132,
+      "position": "F",
+      "age": 29,
+      "goals": 15,
+      "assists": null,
+      "team": "Bayern Munich"
     },
     {
       "id": 286831,
@@ -46,6 +86,26 @@
       "team": "RB Leipzig"
     },
     {
+      "id": 184869,
+      "name": "Haris Tabakovic",
+      "teamId": 268,
+      "position": "F",
+      "age": 32,
+      "goals": 13,
+      "assists": null,
+      "team": "Borussia Mönchengladbach"
+    },
+    {
+      "id": 274887,
+      "name": "Jonathan Burkardt",
+      "teamId": 125,
+      "position": "F",
+      "age": 26,
+      "goals": 13,
+      "assists": null,
+      "team": "Eintracht Frankfurt"
+    },
+    {
       "id": 380795,
       "name": "Said El Mala",
       "teamId": 122,
@@ -54,6 +114,16 @@
       "goals": 13,
       "assists": null,
       "team": "FC Cologne"
+    },
+    {
+      "id": 269136,
+      "name": "Ermedin Demirovic",
+      "teamId": 134,
+      "position": "F",
+      "age": 28,
+      "goals": 12,
+      "assists": null,
+      "team": "VfB Stuttgart"
     },
     {
       "id": 210818,
@@ -66,6 +136,16 @@
       "team": "Mainz"
     },
     {
+      "id": 402479,
+      "name": "Yan Diomande",
+      "teamId": 11420,
+      "position": "F",
+      "age": 19,
+      "goals": 12,
+      "assists": null,
+      "team": "RB Leipzig"
+    },
+    {
       "id": 310883,
       "name": "Igor Matanovic",
       "teamId": 126,
@@ -76,6 +156,16 @@
       "team": "SC Freiburg"
     },
     {
+      "id": 331057,
+      "name": "Fisnik Asllani",
+      "teamId": 7911,
+      "position": "F",
+      "age": 23,
+      "goals": 10,
+      "assists": null,
+      "team": "TSG Hoffenheim"
+    },
+    {
       "id": 234757,
       "name": "Jens Stage",
       "teamId": 137,
@@ -84,6 +174,16 @@
       "goals": 10,
       "assists": null,
       "team": "Werder Bremen"
+    },
+    {
+      "id": 290639,
+      "name": "Maximilian Beier",
+      "teamId": 124,
+      "position": "F",
+      "age": 23,
+      "goals": 9,
+      "assists": null,
+      "team": "Borussia Dortmund"
     },
     {
       "id": 324766,
@@ -114,6 +214,56 @@
       "goals": 8,
       "assists": null,
       "team": "Eintracht Frankfurt"
+    },
+    {
+      "id": 345905,
+      "name": "Dzenan Pejcinovic",
+      "teamId": 138,
+      "position": "F",
+      "age": 21,
+      "goals": 8,
+      "assists": null,
+      "team": "VfL Wolfsburg"
+    },
+    {
+      "id": 315384,
+      "name": "Mohamed Amoura",
+      "teamId": 138,
+      "position": "F",
+      "age": 26,
+      "goals": 8,
+      "assists": null,
+      "team": "VfL Wolfsburg"
+    },
+    {
+      "id": 308524,
+      "name": "Nicolas Jackson",
+      "teamId": 132,
+      "position": "F",
+      "age": 25,
+      "goals": 8,
+      "assists": null,
+      "team": "Bayern Munich"
+    },
+    {
+      "id": 178980,
+      "name": "Serge Gnabry",
+      "teamId": 132,
+      "position": "F",
+      "age": 31,
+      "goals": 8,
+      "assists": null,
+      "team": "Bayern Munich"
+    },
+    {
+      "id": 303792,
+      "name": "Tim Lemperle",
+      "teamId": 7911,
+      "position": "F",
+      "age": 24,
+      "goals": 8,
+      "assists": null,
+      "team": "TSG Hoffenheim"
     },
     {
       "id": 268951,
@@ -156,6 +306,16 @@
       "team": "FC Cologne"
     },
     {
+      "id": 290811,
+      "name": "Jamie Leweling",
+      "teamId": 134,
+      "position": "F",
+      "age": 25,
+      "goals": 7,
+      "assists": null,
+      "team": "VfB Stuttgart"
+    },
+    {
       "id": 197628,
       "name": "Julian Brandt",
       "teamId": 124,
@@ -164,6 +324,26 @@
       "goals": 7,
       "assists": null,
       "team": "Borussia Dortmund"
+    },
+    {
+      "id": 274913,
+      "name": "Karim Adeyemi",
+      "teamId": 124,
+      "position": "F",
+      "age": 24,
+      "goals": 7,
+      "assists": null,
+      "team": "Borussia Dortmund"
+    },
+    {
+      "id": 255355,
+      "name": "Ragnar Ache",
+      "teamId": 122,
+      "position": "F",
+      "age": 28,
+      "goals": 7,
+      "assists": null,
+      "team": "FC Cologne"
     },
     {
       "id": 179571,
@@ -184,6 +364,16 @@
       "goals": 6,
       "assists": null,
       "team": "FC Augsburg"
+    },
+    {
+      "id": 296321,
+      "name": "Arnaud Kalimuendo",
+      "teamId": 125,
+      "position": "F",
+      "age": 24,
+      "goals": 6,
+      "assists": null,
+      "team": "Eintracht Frankfurt"
     },
     {
       "id": 237727,
@@ -236,6 +426,16 @@
       "team": "VfB Stuttgart"
     },
     {
+      "id": 146804,
+      "name": "Michael Gregoritsch",
+      "teamId": 3841,
+      "position": "F",
+      "age": 32,
+      "goals": 6,
+      "assists": null,
+      "team": "FC Augsburg"
+    },
+    {
       "id": 212478,
       "name": "Oliver Burke",
       "teamId": 598,
@@ -244,6 +444,16 @@
       "goals": 6,
       "assists": null,
       "team": "1. FC Union Berlin"
+    },
+    {
+      "id": 234376,
+      "name": "Phillip Tietz",
+      "teamId": 2950,
+      "position": "F",
+      "age": 29,
+      "goals": 6,
+      "assists": null,
+      "team": "Mainz"
     },
     {
       "id": 268239,
@@ -276,6 +486,36 @@
       "team": "1. FC Union Berlin"
     },
     {
+      "id": 359108,
+      "name": "Bazoumana Touré",
+      "teamId": 7911,
+      "position": "F",
+      "age": 20,
+      "goals": 5,
+      "assists": null,
+      "team": "TSG Hoffenheim"
+    },
+    {
+      "id": 398709,
+      "name": "Christian Kofane",
+      "teamId": 131,
+      "position": "F",
+      "age": 20,
+      "goals": 5,
+      "assists": null,
+      "team": "Bayer Leverkusen"
+    },
+    {
+      "id": 259453,
+      "name": "Danel Sinani",
+      "teamId": 270,
+      "position": "F",
+      "age": 29,
+      "goals": 5,
+      "assists": null,
+      "team": "St. Pauli"
+    },
+    {
       "id": 233622,
       "name": "Danilho Doekhi",
       "teamId": 598,
@@ -286,11 +526,31 @@
       "team": "1. FC Union Berlin"
     },
     {
+      "id": 346619,
+      "name": "Derry Scherhant",
+      "teamId": 126,
+      "position": "F",
+      "age": 23,
+      "goals": 5,
+      "assists": null,
+      "team": "SC Freiburg"
+    },
+    {
       "id": 257287,
       "name": "Edmond Tapsoba",
       "teamId": 131,
       "position": "D",
       "age": 27,
+      "goals": 5,
+      "assists": null,
+      "team": "Bayer Leverkusen"
+    },
+    {
+      "id": 318534,
+      "name": "Ernest Poku",
+      "teamId": 131,
+      "position": "F",
+      "age": 22,
       "goals": 5,
       "assists": null,
       "team": "Bayer Leverkusen"
@@ -316,6 +576,16 @@
       "team": "SC Freiburg"
     },
     {
+      "id": 340639,
+      "name": "Justin Njinmah",
+      "teamId": 137,
+      "position": "F",
+      "age": 25,
+      "goals": 5,
+      "assists": null,
+      "team": "Werder Bremen"
+    },
+    {
       "id": 206863,
       "name": "Kevin Diks",
       "teamId": 268,
@@ -326,6 +596,16 @@
       "team": "Borussia Mönchengladbach"
     },
     {
+      "id": 402841,
+      "name": "Lennart Karl",
+      "teamId": 132,
+      "position": "M",
+      "age": 18,
+      "goals": 5,
+      "assists": null,
+      "team": "Bayern Munich"
+    },
+    {
       "id": 174550,
       "name": "Leon Goretzka",
       "teamId": 132,
@@ -334,6 +614,26 @@
       "goals": 5,
       "assists": null,
       "team": "Bayern Munich"
+    },
+    {
+      "id": 191352,
+      "name": "Luca Waldschmidt",
+      "teamId": 122,
+      "position": "F",
+      "age": 30,
+      "goals": 5,
+      "assists": null,
+      "team": "FC Cologne"
+    },
+    {
+      "id": 275797,
+      "name": "Marius Bulter",
+      "teamId": 122,
+      "position": "F",
+      "age": 33,
+      "goals": 5,
+      "assists": null,
+      "team": "FC Cologne"
     },
     {
       "id": 286828,
@@ -376,6 +676,16 @@
       "team": "1. FC Union Berlin"
     },
     {
+      "id": 300961,
+      "name": "Ransford-Yeboah Königsdörffer",
+      "teamId": 127,
+      "position": "F",
+      "age": 24,
+      "goals": 5,
+      "assists": null,
+      "team": "Hamburg SV"
+    },
+    {
       "id": 176228,
       "name": "Raphaël Guerreiro",
       "teamId": 132,
@@ -384,6 +694,16 @@
       "goals": 5,
       "assists": null,
       "team": "Bayern Munich"
+    },
+    {
+      "id": 291849,
+      "name": "Rayan Philippe",
+      "teamId": 127,
+      "position": "F",
+      "age": 25,
+      "goals": 5,
+      "assists": null,
+      "team": "Hamburg SV"
     },
     {
       "id": 219627,
@@ -404,6 +724,36 @@
       "goals": 5,
       "assists": null,
       "team": "1. FC Heidenheim 1846"
+    },
+    {
+      "id": 304019,
+      "name": "Tiago Tomás",
+      "teamId": 134,
+      "position": "F",
+      "age": 24,
+      "goals": 5,
+      "assists": null,
+      "team": "VfB Stuttgart"
+    },
+    {
+      "id": 317322,
+      "name": "Andreas Hountondji",
+      "teamId": 270,
+      "position": "F",
+      "age": 24,
+      "goals": 4,
+      "assists": null,
+      "team": "St. Pauli"
+    },
+    {
+      "id": 305555,
+      "name": "Ansgar Knauff",
+      "teamId": 125,
+      "position": "F",
+      "age": 24,
+      "goals": 4,
+      "assists": null,
+      "team": "Eintracht Frankfurt"
     },
     {
       "id": 319368,
@@ -476,6 +826,26 @@
       "team": "Mainz"
     },
     {
+      "id": 241662,
+      "name": "Martin Terrier",
+      "teamId": 131,
+      "position": "F",
+      "age": 29,
+      "goals": 4,
+      "assists": null,
+      "team": "Bayer Leverkusen"
+    },
+    {
+      "id": 312389,
+      "name": "Marvin Pieringer",
+      "teamId": 6418,
+      "position": "F",
+      "age": 26,
+      "goals": 4,
+      "assists": null,
+      "team": "1. FC Heidenheim 1846"
+    },
+    {
       "id": 120829,
       "name": "Nathaniel Brown",
       "teamId": 125,
@@ -506,6 +876,16 @@
       "team": "TSG Hoffenheim"
     },
     {
+      "id": 300095,
+      "name": "Patrick Wimmer",
+      "teamId": 138,
+      "position": "M",
+      "age": 25,
+      "goals": 4,
+      "assists": null,
+      "team": "VfL Wolfsburg"
+    },
+    {
       "id": 238296,
       "name": "Romano Schmid",
       "teamId": 137,
@@ -534,6 +914,16 @@
       "goals": 4,
       "assists": null,
       "team": "SC Freiburg"
+    },
+    {
+      "id": 387129,
+      "name": "Abdoulie Ceesay",
+      "teamId": 270,
+      "position": "F",
+      "age": 22,
+      "goals": 3,
+      "assists": null,
+      "team": "St. Pauli"
     },
     {
       "id": 219294,
@@ -626,6 +1016,26 @@
       "team": "Borussia Dortmund"
     },
     {
+      "id": 312112,
+      "name": "Eren Dinkci",
+      "teamId": 6418,
+      "position": "F",
+      "age": 24,
+      "goals": 3,
+      "assists": null,
+      "team": "1. FC Heidenheim 1846"
+    },
+    {
+      "id": 361212,
+      "name": "Ibrahim Maza",
+      "teamId": 131,
+      "position": "M",
+      "age": 20,
+      "goals": 3,
+      "assists": null,
+      "team": "Bayer Leverkusen"
+    },
+    {
       "id": 303821,
       "name": "Jamal Musiala",
       "teamId": 132,
@@ -666,6 +1076,16 @@
       "team": "Hamburg SV"
     },
     {
+      "id": 346662,
+      "name": "Jean-Mattéo Bahoya",
+      "teamId": 125,
+      "position": "F",
+      "age": 21,
+      "goals": 3,
+      "assists": null,
+      "team": "Eintracht Frankfurt"
+    },
+    {
       "id": 304793,
       "name": "Jens Castrop",
       "teamId": 268,
@@ -674,6 +1094,16 @@
       "goals": 3,
       "assists": null,
       "team": "Borussia Mönchengladbach"
+    },
+    {
+      "id": 364204,
+      "name": "Jovan Milosevic",
+      "teamId": 137,
+      "position": "F",
+      "age": 20,
+      "goals": 3,
+      "assists": null,
+      "team": "Werder Bremen"
     },
     {
       "id": 322555,
@@ -714,6 +1144,16 @@
       "goals": 3,
       "assists": null,
       "team": "SC Freiburg"
+    },
+    {
+      "id": 305853,
+      "name": "Marco Grüll",
+      "teamId": 137,
+      "position": "F",
+      "age": 28,
+      "goals": 3,
+      "assists": null,
+      "team": "Werder Bremen"
     },
     {
       "id": 250459,
@@ -786,6 +1226,16 @@
       "team": "Eintracht Frankfurt"
     },
     {
+      "id": 355997,
+      "name": "Samuel Mbangula",
+      "teamId": 137,
+      "position": "F",
+      "age": 22,
+      "goals": 3,
+      "assists": null,
+      "team": "Werder Bremen"
+    },
+    {
       "id": 195027,
       "name": "Sheraldo Becker",
       "teamId": 2950,
@@ -794,6 +1244,16 @@
       "goals": 3,
       "assists": null,
       "team": "Mainz"
+    },
+    {
+      "id": 271352,
+      "name": "Shuto Machino",
+      "teamId": 268,
+      "position": "F",
+      "age": 26,
+      "goals": 3,
+      "assists": null,
+      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 324660,
@@ -821,6 +1281,16 @@
       "teamId": 138,
       "position": "D",
       "age": 21,
+      "goals": 2,
+      "assists": null,
+      "team": "VfL Wolfsburg"
+    },
+    {
+      "id": 338854,
+      "name": "Adam Daghim",
+      "teamId": 138,
+      "position": "F",
+      "age": 20,
       "goals": 2,
       "assists": null,
       "team": "VfL Wolfsburg"
@@ -856,6 +1326,16 @@
       "team": "1. FC Heidenheim 1846"
     },
     {
+      "id": 308843,
+      "name": "Armindo Sieb",
+      "teamId": 2950,
+      "position": "F",
+      "age": 23,
+      "goals": 2,
+      "assists": null,
+      "team": "Mainz"
+    },
+    {
       "id": 319530,
       "name": "Arthur Chaves",
       "teamId": 3841,
@@ -864,6 +1344,16 @@
       "goals": 2,
       "assists": null,
       "team": "FC Augsburg"
+    },
+    {
+      "id": 416636,
+      "name": "Ayoube Amaimouni",
+      "teamId": 125,
+      "position": "F",
+      "age": 21,
+      "goals": 2,
+      "assists": null,
+      "team": "Eintracht Frankfurt"
     },
     {
       "id": 294317,
@@ -944,6 +1434,16 @@
       "goals": 2,
       "assists": null,
       "team": "St. Pauli"
+    },
+    {
+      "id": 291629,
+      "name": "Fábio Silva",
+      "teamId": 124,
+      "position": "F",
+      "age": 24,
+      "goals": 2,
+      "assists": null,
+      "team": "Borussia Dortmund"
     },
     {
       "id": 337306,
@@ -1146,6 +1646,16 @@
       "team": "St. Pauli"
     },
     {
+      "id": 372035,
+      "name": "Max Moerstedt",
+      "teamId": 7911,
+      "position": "F",
+      "age": 20,
+      "goals": 2,
+      "assists": null,
+      "team": "TSG Hoffenheim"
+    },
+    {
       "id": 359207,
       "name": "Mert Kömür",
       "teamId": 3841,
@@ -1196,6 +1706,16 @@
       "team": "Eintracht Frankfurt"
     },
     {
+      "id": 294291,
+      "name": "Ricky-Jade Jones",
+      "teamId": 270,
+      "position": "F",
+      "age": 23,
+      "goals": 2,
+      "assists": null,
+      "team": "St. Pauli"
+    },
+    {
       "id": 258963,
       "name": "Ridle Baku",
       "teamId": 11420,
@@ -1216,6 +1736,16 @@
       "team": "Bayer Leverkusen"
     },
     {
+      "id": 332689,
+      "name": "Rodrigo Ribeiro",
+      "teamId": 3841,
+      "position": "F",
+      "age": 21,
+      "goals": 2,
+      "assists": null,
+      "team": "FC Augsburg"
+    },
+    {
       "id": 175905,
       "name": "Silvan Widmer",
       "teamId": 2950,
@@ -1224,6 +1754,16 @@
       "goals": 2,
       "assists": null,
       "team": "Mainz"
+    },
+    {
+      "id": 307508,
+      "name": "Sirlord Conteh",
+      "teamId": 6418,
+      "position": "F",
+      "age": 30,
+      "goals": 2,
+      "assists": null,
+      "team": "1. FC Heidenheim 1846"
     },
     {
       "id": 144620,
@@ -1396,6 +1936,16 @@
       "team": "Hamburg SV"
     },
     {
+      "id": 307515,
+      "name": "Benedict Hollerbach",
+      "teamId": 2950,
+      "position": "F",
+      "age": 25,
+      "goals": 1,
+      "assists": null,
+      "team": "Mainz"
+    },
+    {
       "id": 220711,
       "name": "Benjamin Henrichs",
       "teamId": 11420,
@@ -1464,6 +2014,16 @@
       "goals": 1,
       "assists": null,
       "team": "1. FC Union Berlin"
+    },
+    {
+      "id": 388392,
+      "name": "Fabio Baldé",
+      "teamId": 127,
+      "position": "F",
+      "age": 21,
+      "goals": 1,
+      "assists": null,
+      "team": "Hamburg SV"
     },
     {
       "id": 151464,
@@ -1576,6 +2136,16 @@
       "team": "1. FC Heidenheim 1846"
     },
     {
+      "id": 271215,
+      "name": "Jonas Wind",
+      "teamId": 138,
+      "position": "F",
+      "age": 27,
+      "goals": 1,
+      "assists": null,
+      "team": "VfL Wolfsburg"
+    },
+    {
       "id": 266839,
       "name": "Josha Vagnoman",
       "teamId": 134,
@@ -1636,6 +2206,26 @@
       "team": "St. Pauli"
     },
     {
+      "id": 332325,
+      "name": "Keke Topp",
+      "teamId": 137,
+      "position": "F",
+      "age": 22,
+      "goals": 1,
+      "assists": null,
+      "team": "Werder Bremen"
+    },
+    {
+      "id": 362959,
+      "name": "Kento Shiogai",
+      "teamId": 138,
+      "position": "F",
+      "age": 21,
+      "goals": 1,
+      "assists": null,
+      "team": "VfL Wolfsburg"
+    },
+    {
       "id": 175006,
       "name": "Kevin Stöger",
       "teamId": 268,
@@ -1654,6 +2244,16 @@
       "goals": 1,
       "assists": null,
       "team": "Bayern Munich"
+    },
+    {
+      "id": 366823,
+      "name": "Livan Burcu",
+      "teamId": 598,
+      "position": "F",
+      "age": 21,
+      "goals": 1,
+      "assists": null,
+      "team": "1. FC Union Berlin"
     },
     {
       "id": 364803,
@@ -1796,6 +2396,16 @@
       "team": "VfL Wolfsburg"
     },
     {
+      "id": 263134,
+      "name": "Nathan Tella",
+      "teamId": 131,
+      "position": "F",
+      "age": 27,
+      "goals": 1,
+      "assists": null,
+      "team": "Bayer Leverkusen"
+    },
+    {
       "id": 284835,
       "name": "Nicolás Capaldo",
       "teamId": 127,
@@ -1926,6 +2536,36 @@
       "team": "TSG Hoffenheim"
     },
     {
+      "id": 407196,
+      "name": "Salim Musah",
+      "teamId": 137,
+      "position": "F",
+      "age": 20,
+      "goals": 1,
+      "assists": null,
+      "team": "Werder Bremen"
+    },
+    {
+      "id": 403833,
+      "name": "Samuele Inácio",
+      "teamId": 124,
+      "position": "F",
+      "age": 18,
+      "goals": 1,
+      "assists": null,
+      "team": "Borussia Dortmund"
+    },
+    {
+      "id": 279282,
+      "name": "Silas Katompa-Mvumpa",
+      "teamId": 2950,
+      "position": "F",
+      "age": 27,
+      "goals": 1,
+      "assists": null,
+      "team": "Mainz"
+    },
+    {
       "id": 268808,
       "name": "Stanley N'Soki",
       "teamId": 598,
@@ -1934,6 +2574,16 @@
       "goals": 1,
       "assists": null,
       "team": "1. FC Union Berlin"
+    },
+    {
+      "id": 366911,
+      "name": "Tidiam Gomis",
+      "teamId": 11420,
+      "position": "F",
+      "age": 19,
+      "goals": 1,
+      "assists": null,
+      "team": "RB Leipzig"
     },
     {
       "id": 220796,
@@ -1976,6 +2626,16 @@
       "team": "VfL Wolfsburg"
     },
     {
+      "id": 359793,
+      "name": "Younes Ebnoutalib",
+      "teamId": 125,
+      "position": "F",
+      "age": 22,
+      "goals": 1,
+      "assists": null,
+      "team": "Eintracht Frankfurt"
+    },
+    {
       "id": 182245,
       "name": "Yussuf Poulsen",
       "teamId": 127,
@@ -1994,6 +2654,16 @@
       "goals": 0,
       "assists": null,
       "team": "TSG Hoffenheim"
+    },
+    {
+      "id": 371484,
+      "name": "Alejo Sarco",
+      "teamId": 268,
+      "position": "F",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 257085,
@@ -2024,6 +2694,26 @@
       "goals": 0,
       "assists": null,
       "team": "VfB Stuttgart"
+    },
+    {
+      "id": 384471,
+      "name": "Alexander Røssing-Lelesiit",
+      "teamId": 127,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Hamburg SV"
+    },
+    {
+      "id": 403767,
+      "name": "Alexander Staff",
+      "teamId": 125,
+      "position": "F",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Eintracht Frankfurt"
     },
     {
       "id": 349922,
@@ -2166,6 +2856,36 @@
       "team": "Bayer Leverkusen"
     },
     {
+      "id": 345115,
+      "name": "Badredine Bouanani",
+      "teamId": 134,
+      "position": "F",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "VfB Stuttgart"
+    },
+    {
+      "id": 409016,
+      "name": "Bara Sapoko Ndiaye",
+      "teamId": 132,
+      "position": "M",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "Bayern Munich"
+    },
+    {
+      "id": 422013,
+      "name": "Bastian Assomo",
+      "teamId": 132,
+      "position": "F",
+      "age": 16,
+      "goals": 0,
+      "assists": null,
+      "team": "Bayern Munich"
+    },
+    {
       "id": 307489,
       "name": "Ben Voll",
       "teamId": 270,
@@ -2174,6 +2894,16 @@
       "goals": 0,
       "assists": null,
       "team": "St. Pauli"
+    },
+    {
+      "id": 366562,
+      "name": "Bence Dárdai",
+      "teamId": 138,
+      "position": "M",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "VfL Wolfsburg"
     },
     {
       "id": 220716,
@@ -2204,6 +2934,16 @@
       "goals": 0,
       "assists": null,
       "team": "TSG Hoffenheim"
+    },
+    {
+      "id": 415252,
+      "name": "Bruno Katz",
+      "teamId": 138,
+      "position": "F",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "VfL Wolfsburg"
     },
     {
       "id": 221460,
@@ -2286,6 +3026,16 @@
       "team": "1. FC Union Berlin"
     },
     {
+      "id": 379024,
+      "name": "Cole Campbell",
+      "teamId": 7911,
+      "position": "F",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "TSG Hoffenheim"
+    },
+    {
       "id": 260643,
       "name": "Connor Metcalfe",
       "teamId": 270,
@@ -2294,6 +3044,26 @@
       "goals": 0,
       "assists": null,
       "team": "St. Pauli"
+    },
+    {
+      "id": 390031,
+      "name": "Cyriaque Irié",
+      "teamId": 126,
+      "position": "F",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "SC Freiburg"
+    },
+    {
+      "id": 359707,
+      "name": "Damion Downs",
+      "teamId": 127,
+      "position": "F",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "Hamburg SV"
     },
     {
       "id": 258870,
@@ -2356,6 +3126,16 @@
       "team": "FC Augsburg"
     },
     {
+      "id": 405585,
+      "name": "David Daiber",
+      "teamId": 132,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Bayern Munich"
+    },
+    {
       "id": 418989,
       "name": "David Fürst",
       "teamId": 122,
@@ -2374,6 +3154,16 @@
       "goals": 0,
       "assists": null,
       "team": "St. Pauli"
+    },
+    {
+      "id": 386438,
+      "name": "David Preu",
+      "teamId": 598,
+      "position": "F",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "1. FC Union Berlin"
     },
     {
       "id": 343969,
@@ -2411,6 +3201,16 @@
       "teamId": 598,
       "position": "D",
       "age": 27,
+      "goals": 0,
+      "assists": null,
+      "team": "1. FC Union Berlin"
+    },
+    {
+      "id": 386460,
+      "name": "Dmytro Bohdanov",
+      "teamId": 598,
+      "position": "F",
+      "age": 19,
       "goals": 0,
       "assists": null,
       "team": "1. FC Union Berlin"
@@ -2456,6 +3256,16 @@
       "team": "Borussia Dortmund"
     },
     {
+      "id": 346947,
+      "name": "Eliesse Ben Seghir",
+      "teamId": 131,
+      "position": "F",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Bayer Leverkusen"
+    },
+    {
       "id": 209595,
       "name": "Ellyes Skhiri",
       "teamId": 125,
@@ -2474,6 +3284,26 @@
       "goals": 0,
       "assists": null,
       "team": "St. Pauli"
+    },
+    {
+      "id": 419917,
+      "name": "Emmanuel Owen",
+      "teamId": 131,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Bayer Leverkusen"
+    },
+    {
+      "id": 420899,
+      "name": "Erblin Osmani",
+      "teamId": 132,
+      "position": "M",
+      "age": 17,
+      "goals": 0,
+      "assists": null,
+      "team": "Bayern Munich"
     },
     {
       "id": 228393,
@@ -2524,6 +3354,26 @@
       "goals": 0,
       "assists": null,
       "team": "Borussia Mönchengladbach"
+    },
+    {
+      "id": 307031,
+      "name": "Fabio Moreno Fell",
+      "teamId": 2950,
+      "position": "F",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "Mainz"
+    },
+    {
+      "id": 408344,
+      "name": "Felipe Chávez",
+      "teamId": 122,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "FC Cologne"
     },
     {
       "id": 279961,
@@ -2646,6 +3496,16 @@
       "team": "Borussia Mönchengladbach"
     },
     {
+      "id": 416417,
+      "name": "Fynn Schenten",
+      "teamId": 122,
+      "position": "F",
+      "age": 18,
+      "goals": 0,
+      "assists": null,
+      "team": "FC Cologne"
+    },
+    {
       "id": 306347,
       "name": "Giorgi Gocholeishvili",
       "teamId": 127,
@@ -2706,6 +3566,16 @@
       "team": "TSG Hoffenheim"
     },
     {
+      "id": 317473,
+      "name": "Ismaël Gharbi",
+      "teamId": 3841,
+      "position": "F",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "FC Augsburg"
+    },
+    {
       "id": 178071,
       "name": "Jackson Irvine",
       "teamId": 270,
@@ -2741,6 +3611,16 @@
       "teamId": 268,
       "position": "G",
       "age": 24,
+      "goals": 0,
+      "assists": null,
+      "team": "Borussia Mönchengladbach"
+    },
+    {
+      "id": 386420,
+      "name": "Jan Urbich",
+      "teamId": 268,
+      "position": "F",
+      "age": 22,
       "goals": 0,
       "assists": null,
       "team": "Borussia Mönchengladbach"
@@ -2854,6 +3734,26 @@
       "goals": 0,
       "assists": null,
       "team": "Bayer Leverkusen"
+    },
+    {
+      "id": 367725,
+      "name": "Jeremy Arévalo",
+      "teamId": 134,
+      "position": "F",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "VfB Stuttgart"
+    },
+    {
+      "id": 278822,
+      "name": "Jesper Lindstrom",
+      "teamId": 138,
+      "position": "M",
+      "age": 26,
+      "goals": 0,
+      "assists": null,
+      "team": "VfL Wolfsburg"
     },
     {
       "id": 324820,
@@ -3104,6 +4004,16 @@
       "goals": 0,
       "assists": null,
       "team": "Mainz"
+    },
+    {
+      "id": 252323,
+      "name": "Lazar Jovanovic",
+      "teamId": 134,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "VfB Stuttgart"
     },
     {
       "id": 205972,
@@ -3406,6 +4316,16 @@
       "team": "St. Pauli"
     },
     {
+      "id": 403781,
+      "name": "Mathis Albert",
+      "teamId": 124,
+      "position": "F",
+      "age": 17,
+      "goals": 0,
+      "assists": null,
+      "team": "Borussia Dortmund"
+    },
+    {
       "id": 419946,
       "name": "Mats Heitmann",
       "teamId": 137,
@@ -3464,6 +4384,16 @@
       "goals": 0,
       "assists": null,
       "team": "Werder Bremen"
+    },
+    {
+      "id": 417373,
+      "name": "Maycon Cardozo",
+      "teamId": 132,
+      "position": "M",
+      "age": 17,
+      "goals": 0,
+      "assists": null,
+      "team": "Bayern Munich"
     },
     {
       "id": 184550,
@@ -3544,6 +4474,16 @@
       "goals": 0,
       "assists": null,
       "team": "FC Augsburg"
+    },
+    {
+      "id": 351280,
+      "name": "Nelson Weiper",
+      "teamId": 2950,
+      "position": "F",
+      "age": 21,
+      "goals": 0,
+      "assists": null,
+      "team": "Mainz"
     },
     {
       "id": 406370,
@@ -3746,6 +4686,16 @@
       "team": "1. FC Heidenheim 1846"
     },
     {
+      "id": 376056,
+      "name": "Otto Stange",
+      "teamId": 127,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "Hamburg SV"
+    },
+    {
       "id": 223266,
       "name": "Pascal Stenzel",
       "teamId": 134,
@@ -3794,6 +4744,16 @@
       "goals": 0,
       "assists": null,
       "team": "RB Leipzig"
+    },
+    {
+      "id": 414502,
+      "name": "Pharell Hensel",
+      "teamId": 138,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "VfL Wolfsburg"
     },
     {
       "id": 289322,
@@ -3846,6 +4806,16 @@
       "team": "Borussia Mönchengladbach"
     },
     {
+      "id": 397578,
+      "name": "Romeo Aigbekaen",
+      "teamId": 270,
+      "position": "F",
+      "age": 22,
+      "goals": 0,
+      "assists": null,
+      "team": "St. Pauli"
+    },
+    {
       "id": 121007,
       "name": "Ron-Robert Zieler",
       "teamId": 122,
@@ -3884,6 +4854,16 @@
       "goals": 0,
       "assists": null,
       "team": "Borussia Dortmund"
+    },
+    {
+      "id": 413839,
+      "name": "Samba Konate",
+      "teamId": 11420,
+      "position": "F",
+      "age": 17,
+      "goals": 0,
+      "assists": null,
+      "team": "RB Leipzig"
     },
     {
       "id": 304258,
@@ -3930,7 +4910,7 @@
       "name": "Sota Kawasaki",
       "teamId": 2950,
       "position": "M",
-      "age": 24,
+      "age": 25,
       "goals": 0,
       "assists": null,
       "team": "Mainz"
@@ -3966,6 +4946,16 @@
       "team": "Bayern Munich"
     },
     {
+      "id": 271135,
+      "name": "Taichi Hara",
+      "teamId": 270,
+      "position": "F",
+      "age": 27,
+      "goals": 0,
+      "assists": null,
+      "team": "St. Pauli"
+    },
+    {
       "id": 344654,
       "name": "Tiago Pereira",
       "teamId": 268,
@@ -3984,6 +4974,16 @@
       "goals": 0,
       "assists": null,
       "team": "VfL Wolfsburg"
+    },
+    {
+      "id": 185906,
+      "name": "Tim Kleindienst",
+      "teamId": 268,
+      "position": "F",
+      "age": 30,
+      "goals": 0,
+      "assists": null,
+      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 346376,
@@ -4046,6 +5046,16 @@
       "team": "Borussia Mönchengladbach"
     },
     {
+      "id": 411445,
+      "name": "Tobias Weigel",
+      "teamId": 6418,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "1. FC Heidenheim 1846"
+    },
+    {
       "id": 283683,
       "name": "Tom Krauss",
       "teamId": 122,
@@ -4074,6 +5084,26 @@
       "goals": 0,
       "assists": null,
       "team": "St. Pauli"
+    },
+    {
+      "id": 388614,
+      "name": "Trevor Benedict",
+      "teamId": 138,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "VfL Wolfsburg"
+    },
+    {
+      "id": 406851,
+      "name": "Uchenna Ogundu",
+      "teamId": 3841,
+      "position": "F",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "FC Augsburg"
     },
     {
       "id": 418789,
@@ -4126,6 +5156,16 @@
       "team": "Werder Bremen"
     },
     {
+      "id": 303116,
+      "name": "William Bøving",
+      "teamId": 2950,
+      "position": "F",
+      "age": 23,
+      "goals": 0,
+      "assists": null,
+      "team": "Mainz"
+    },
+    {
       "id": 313897,
       "name": "William Mikelbrencis",
       "teamId": 127,
@@ -4134,6 +5174,26 @@
       "goals": 0,
       "assists": null,
       "team": "Hamburg SV"
+    },
+    {
+      "id": 399864,
+      "name": "Wisdom Mike",
+      "teamId": 132,
+      "position": "F",
+      "age": 17,
+      "goals": 0,
+      "assists": null,
+      "team": "Bayern Munich"
+    },
+    {
+      "id": 357092,
+      "name": "Yannick Eduardo",
+      "teamId": 7911,
+      "position": "F",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "TSG Hoffenheim"
     },
     {
       "id": 266657,
@@ -4146,6 +5206,26 @@
       "team": "FC Augsburg"
     },
     {
+      "id": 408999,
+      "name": "Yannik Wagner",
+      "teamId": 6418,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": null,
+      "team": "1. FC Heidenheim 1846"
+    },
+    {
+      "id": 417605,
+      "name": "Youssoupha Niang",
+      "teamId": 122,
+      "position": "F",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "FC Cologne"
+    },
+    {
       "id": 265965,
       "name": "Yukinari Sugawara",
       "teamId": 137,
@@ -4154,6 +5234,16 @@
       "goals": 0,
       "assists": null,
       "team": "Werder Bremen"
+    },
+    {
+      "id": 380942,
+      "name": "Ayodele Thomas",
+      "teamId": 11420,
+      "position": "F",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "team": "RB Leipzig"
     },
     {
       "id": 397120,
@@ -4316,6 +5406,26 @@
       "team": "Bayer Leverkusen"
     },
     {
+      "id": 366388,
+      "name": "Kasey Bos",
+      "teamId": 2950,
+      "position": "F",
+      "age": 22,
+      "goals": null,
+      "assists": null,
+      "team": "Mainz"
+    },
+    {
+      "id": 418044,
+      "name": "Lauri Penna",
+      "teamId": 134,
+      "position": "M",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "team": "VfB Stuttgart"
+    },
+    {
       "id": 376555,
       "name": "Louis Babatz",
       "teamId": 2950,
@@ -4374,6 +5484,16 @@
       "goals": null,
       "assists": null,
       "team": "FC Augsburg"
+    },
+    {
+      "id": 384155,
+      "name": "Malek El Mala",
+      "teamId": 122,
+      "position": "F",
+      "age": 21,
+      "goals": null,
+      "assists": null,
+      "team": "FC Cologne"
     },
     {
       "id": 394412,
@@ -4446,6 +5566,16 @@
       "team": "VfL Wolfsburg"
     },
     {
+      "id": 387845,
+      "name": "Sani Suleiman",
+      "teamId": 11420,
+      "position": "F",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "team": "RB Leipzig"
+    },
+    {
       "id": 331297,
       "name": "Silas Ostrzinski",
       "teamId": 124,
@@ -4474,6 +5604,16 @@
       "goals": null,
       "assists": null,
       "team": "Werder Bremen"
+    },
+    {
+      "id": 345393,
+      "name": "Thomas Kastanaras",
+      "teamId": 3841,
+      "position": "F",
+      "age": 23,
+      "goals": null,
+      "assists": null,
+      "team": "FC Augsburg"
     },
     {
       "id": 388683,
