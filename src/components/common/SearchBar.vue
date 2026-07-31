@@ -18,6 +18,7 @@ const teamsStore = useTeamsStore()
 const q = ref('')
 const open = ref(false)
 const inputRef = ref<HTMLInputElement | null>(null)
+const selectedIndex = ref(-1)
 let debounce: ReturnType<typeof setTimeout> | null = null
 
 const league = computed<LeagueSlug | null>(() => {
@@ -30,6 +31,7 @@ const teamHits = ref<Team[]>([])
 
 watch(q, (v) => {
   if (debounce) clearTimeout(debounce)
+  selectedIndex.value = -1
   if (!v.trim()) {
     playerHits.value = []
     teamHits.value = []
@@ -73,11 +75,35 @@ function goTeam(id: number) {
   inputRef.value?.blur()
 }
 
+const totalHits = computed(() => playerHits.value.length + teamHits.value.length)
+
+function selectIndex(i: number) {
+  const pLen = playerHits.value.length
+  if (i < pLen) goPlayer(playerHits.value[i].id)
+  else goTeam(teamHits.value[i - pLen].id)
+}
+
 function onKeydown(e: KeyboardEvent) {
   if (e.key === 'Escape') {
     q.value = ''
     open.value = false
     inputRef.value?.blur()
+    return
+  }
+  if (!open.value || totalHits.value === 0) return
+  if (e.key === 'ArrowDown') {
+    e.preventDefault()
+    selectedIndex.value = (selectedIndex.value + 1) % totalHits.value
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault()
+    selectedIndex.value = (selectedIndex.value - 1 + totalHits.value) % totalHits.value
+  } else if (e.key === 'Enter') {
+    if (selectedIndex.value === -1) {
+      if (playerHits.value.length) selectIndex(0)
+      else if (teamHits.value.length) selectIndex(playerHits.value.length)
+    } else {
+      selectIndex(selectedIndex.value)
+    }
   }
 }
 
@@ -114,11 +140,12 @@ const hasResults = computed(() => playerHits.value.length > 0 || teamHits.value.
           {{ t('search.players', app.lang) }}
         </div>
         <button
-          v-for="p in playerHits"
+          v-for="(p, i) in playerHits"
           :key="p.id"
           type="button"
           @mousedown.prevent="goPlayer(p.id)"
-          class="w-full text-left px-3 py-1.5 flex items-center gap-2 hover:bg-white/5 transition-colors"
+          @mouseenter="selectedIndex = i"
+          :class="['w-full text-left px-3 py-1.5 flex items-center gap-2 transition-colors', selectedIndex === i ? 'bg-white/10' : 'hover:bg-white/5']"
         >
           <span class="text-xs font-mono-d text-slate-500 w-4">{{ p.position }}</span>
           <span class="text-sm text-white flex-1 truncate">{{ playerName(p.name, app.lang) }}</span>
@@ -130,11 +157,12 @@ const hasResults = computed(() => playerHits.value.length > 0 || teamHits.value.
           {{ t('search.teams', app.lang) }}
         </div>
         <button
-          v-for="tm in teamHits"
+          v-for="(tm, j) in teamHits"
           :key="tm.id"
           type="button"
           @mousedown.prevent="goTeam(tm.id)"
-          class="w-full text-left px-3 py-1.5 flex items-center gap-2 hover:bg-white/5 transition-colors"
+          @mouseenter="selectedIndex = playerHits.length + j"
+          :class="['w-full text-left px-3 py-1.5 flex items-center gap-2 transition-colors', selectedIndex === playerHits.length + j ? 'bg-white/10' : 'hover:bg-white/5']"
         >
           <TeamLogo :team="tm" :size="18" />
           <span class="text-sm text-white flex-1 truncate">{{ teamName(tm.name, app.lang) }}</span>

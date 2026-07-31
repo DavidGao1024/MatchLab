@@ -1,11 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { isLeagueSlug } from '../utils/constants'
+import HomeView from '../views/HomeView.vue'
 
 // GitHub Pages 无服务端回退，统一 hash mode（图纸 §7 决策）
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/', name: 'home', component: () => import('../views/HomeView.vue') },
+    { path: '/', name: 'home', component: HomeView },
     // 裸 /:league → 该联赛积分榜（规格 v1.2）
     { path: '/:league', redirect: (to) => `/${to.params.league}/standings` },
     { path: '/:league/standings', name: 'standings', component: () => import('../views/StandingsView.vue') },
