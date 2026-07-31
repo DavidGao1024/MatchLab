@@ -7,7 +7,7 @@
 ## 一、项目画像
 
 - **代号**：MatchLab — 五大联赛（英超/西甲/意甲/德甲/法甲）数据查询网站
-- **当前阶段**：Phase 6 图表 + 高阶功能完工（xG 趋势图/生涯曲线/历史赛季切换/球员对比页，2026-07-30 验收）；Phase 0–6 全部完工，MVP 完成；施工图纸见 `docs/implementation-plan.md`
+- **当前阶段**：Phase 0–6 MVP 完工（2026-07-30 验收）；**子项目 1「个人化基础」（球队订阅 + 收藏夹 + iCal 导出）实施中**（2026-07-31 起，无后端 + localStorage 路径，9/25 Task 完工）；施工图纸见 `docs/implementation-plan.md`，子项目计划文档见 `docs/superpowers/plans/2026-07-31-personalization-mvp.md`，设计稿见 `docs/superpowers/specs/2026-07-31-personalization-mvp-design.md`
 - **协作模式**：总司令下令 → 营长执行；全局铁律（未经指令不改码、先汇报后更新、不擅自持久化）全程有效
 
 ## 二、军衔记录（本项目独立计算）
@@ -32,7 +32,7 @@
 - 计划文档统一放 `projectDoc/plan/`，一个任务一个文件
 - 数据结构与 API 接口不能变，UI 可大改
 - 抓取脚本永远零依赖（仅 Node 内置模块）
-- 开工须先获总司令明确指令，当前状态：🟢 MVP 完工（Phase 0–6 全部完工：脚手架+数据管线+积分榜+赛程+弹窗+译名表+球员数据+排行榜+球队详情+图表+对比页）
+- 开工须先获总司令明确指令，当前状态：🟡 子项目 1「个人化基础」实施中（Phase 0–6 MVP 完工基线之上：球队订阅 + 收藏夹 + iCal 导出，无后端 + localStorage 路径；2026-07-31 起 9/25 Task 完工，13 commit 在 main，80 单测全绿；剩余 Task 10-25 待开工）
 - **数据提交约定**（避免和 daily Actions 冲突）：本地跑 fetch 脚本（fetch-espn-core/fetch-understat/fetch-espn-scores/build-team-map/fetch-dqd-players 等）只用来验证脚本能跑，**不要 `git add public/data/`**。数据文件由 `.github/workflows/fetch-data.yml` 每天 UTC 06:00 跑（或手动触发 workflow_dispatch）。本地代码改动 commit 时显式 `git add src/ scripts/ docs/ types/ package.json` 等代码路径，避开 `public/data/`，否则 push 时会和 daily Actions 的数据 commit 撞冲突。如要立即更新线上数据：到 GitHub Actions 页面手动触发 "Fetch Data" workflow。
 
 ---

@@ -82,6 +82,7 @@
 
 | 方向 | 估工作量 | 前置 |
 |---|---|---|
+| **子项目 1 个人化基础（球队订阅 + 收藏夹 + iCal 导出）** | 中 | **实施中**（2026-07-31 起，9/25 Task 完工，见 `docs/superpowers/plans/2026-07-31-personalization-mvp.md`） |
 | PWA + Service Worker 离线缓存 | 中 | SW 缓存策略需区分静态 JSON（缓存优先）与 ESPN 直连（网络优先） |
 | 内容深化（球员更多统计分类、球队阵容页、射手榜单独页） | 中 | 数据已有，前端补 UI |
 | 历史赛季回溯（25 个赛季的 standings/赛程切换） | 中大 | `seasons.json` 已抓，需补 fetchSeasons 落地 standings/赛程 |
