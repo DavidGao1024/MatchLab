@@ -9,8 +9,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
+    "typecheck": "vue-tsc -b",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepare": "husky"
   },
   "dependencies": {
     "chart.js": "^4.5.1",
@@ -24,6 +26,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",
+    "husky": "^9.1.7",
     "tailwindcss": "^4.3.3",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
