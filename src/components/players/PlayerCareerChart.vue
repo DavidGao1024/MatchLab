@@ -56,8 +56,9 @@ function pickGA(stats: PlayerStats | null): { goals: number | null; assists: num
   let goals: number | null = null
   let assists: number | null = null
   for (const cat of Object.values(stats)) {
-    if (!cat || typeof cat !== 'object') continue
-    for (const [k, v] of Object.entries(cat)) {
+    if (!cat) continue
+    const entries: Array<[string, number | null]> = Object.entries(cat)
+    for (const [k, v] of entries) {
       if (goals === null && (k === 'totalGoals' || k === 'goals')) goals = v
       if (assists === null && (k === 'assists' || k === 'goalAssists')) assists = v
     }

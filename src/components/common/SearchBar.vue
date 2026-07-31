@@ -6,6 +6,7 @@ import { usePlayersStore } from '../../stores/players'
 import { useTeamsStore } from '../../stores/teams'
 import { isLeagueSlug, type LeagueSlug } from '../../utils/constants'
 import { playerName, teamName, t } from '../../utils/i18n'
+import type { Team } from '../../types/models'
 import TeamLogo from './TeamLogo.vue'
 
 const app = useAppStore()
@@ -25,7 +26,7 @@ const league = computed<LeagueSlug | null>(() => {
 })
 
 const playerHits = ref<ReturnType<typeof players.search>>([])
-const teamHits = ref<{ id: number; name: string; color: string; logo: string; logoDark: string }[]>([])
+const teamHits = ref<Team[]>([])
 
 watch(q, (v) => {
   if (debounce) clearTimeout(debounce)
@@ -49,7 +50,6 @@ watch(q, (v) => {
       teamHits.value = bundle.teams
         .filter((t) => t.name.toLowerCase().includes(lower) || t.abbreviation.toLowerCase().includes(lower))
         .slice(0, 3)
-        .map((t) => t)
     } else {
       teamHits.value = []
     }

@@ -112,7 +112,7 @@ export const usePlayersStore = defineStore('players', {
     search(league: LeagueSlug, q: string, limit = 10): PlayerSummary[] {
       const ms = this.searchIdx[league]
       if (!ms || !q.trim()) return []
-      const results = ms.search(q.trim(), { limit })
+      const results = ms.search(q.trim()).slice(0, limit)
       return results.map((r) => ({
         id: Number(r.id),
         name: r.name,
