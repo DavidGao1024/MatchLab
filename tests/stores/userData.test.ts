@@ -1,11 +1,16 @@
 // @vitest-environment jsdom
-import { describe, it, expect, beforeEach } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useUserDataStore } from '../../src/stores/userData'
 
 beforeEach(() => {
   setActivePinia(createPinia())
   localStorage.clear()
+  vi.useFakeTimers()
+})
+
+afterEach(() => {
+  vi.useRealTimers()
 })
 
 describe('useUserDataStore state', () => {
@@ -31,5 +36,18 @@ describe('useUserDataStore state', () => {
     await s.init()
     expect(s.subscriptions.length).toBe(1)
     expect(s.subscriptions[0].teamName).toBe('Arsenal')
+  })
+})
+
+describe('useUserDataStore 持久化', () => {
+  it('addSubscription 后 debounce 200ms 写入 localStorage', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    s.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
+    expect(localStorage.getItem('matchlab:subscriptions')).toBeNull()
+    vi.advanceTimersByTime(200)
+    const stored = JSON.parse(localStorage.getItem('matchlab:subscriptions')!)
+    expect(stored.version).toBe(1)
+    expect(stored.items.length).toBe(1)
   })
 })
