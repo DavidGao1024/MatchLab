@@ -66,5 +66,12 @@ export const useUserDataStore = defineStore('userData', {
       this.subscriptions.push({ ...input, addedAt: new Date().toISOString() })
       this.schedulePersist()
     },
+    removeSubscription(teamId: number) {
+      this.subscriptions = this.subscriptions.filter((s) => s.teamId !== teamId)
+      this.schedulePersist()
+    },
+    isSubscribed(teamId: number): boolean {
+      return this.subscriptions.some((s) => s.teamId === teamId)
+    },
   },
 })
