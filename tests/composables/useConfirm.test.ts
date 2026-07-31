@@ -1,7 +1,10 @@
-import { describe, it, expect } from 'vitest'
-import { useConfirm } from '../../src/composables/useConfirm'
+import { describe, it, expect, beforeEach } from 'vitest'
+import { useConfirm, __resetConfirm } from '../../src/composables/useConfirm'
 
 describe('useConfirm', () => {
+  beforeEach(() => {
+    __resetConfirm()
+  })
   it('初始状态隐藏', () => {
     const c = useConfirm()
     expect(c.state.value.visible).toBe(false)
