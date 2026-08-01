@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-07-29T09:21:50.134Z",
+  "updateTime": "2026-08-01T08:58:41.730Z",
   "league": "chn.1",
   "season": "2026",
   "id": 227940,
@@ -8,13 +8,13 @@
   "lastName": "Traore",
   "displayName": "Mamadou Traore",
   "shortName": "M. Traore",
-  "age": 31,
-  "height": 191,
-  "weight": 69,
-  "dateOfBirth": "1994-10-03T07:00Z",
+  "age": 24,
+  "height": 170,
+  "weight": 68,
+  "dateOfBirth": "2002-04-03T08:00Z",
   "jersey": 2,
-  "position": "D",
-  "positionLabel": "Defender",
+  "position": "F",
+  "positionLabel": "Forward",
   "teamId": 22537,
   "stats": {
     "defensive": {
@@ -30,7 +30,7 @@
       "recoveries": 16
     },
     "general": {
-      "appearances": 17,
+      "appearances": 18,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -43,12 +43,12 @@
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 1528,
+      "minutes": 1529,
       "ownGoals": 1,
-      "passPct": 0.872,
+      "passPct": 0.869,
       "redCards": 0,
       "starts": 17,
-      "subIns": 0,
+      "subIns": 1,
       "subOuts": 1,
       "suspensions": 0,
       "timeEnded": 0,
@@ -58,10 +58,10 @@
       "wonCorners": 0,
       "yellowCards": 3,
       "duelsLost": 15,
-      "duelsWon": 22,
-      "duels": 37,
+      "duelsWon": 23,
+      "duels": 38,
       "secondYellow": 0,
-      "touches": 322
+      "touches": 324
     },
     "goalKeeping": {
       "cleanSheet": 5,
@@ -85,10 +85,10 @@
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 18,
-      "accuratePasses": 225,
+      "accuratePasses": 226,
       "accurateThroughBalls": 0,
       "attemptsInBox": 125,
-      "attemptsOutBox": 71,
+      "attemptsOutBox": 72,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -99,7 +99,7 @@
       "headedGoals": 0,
       "inaccurateCrosses": 0,
       "inaccurateLongBalls": 0,
-      "inaccuratePasses": 33,
+      "inaccuratePasses": 34,
       "inaccurateThroughBalls": 0,
       "leftFootedShots": 2,
       "longballPct": 0.563,
@@ -123,13 +123,13 @@
       "totalCrosses": 1,
       "totalGoals": 1,
       "totalLongBalls": 32,
-      "totalPasses": 258,
+      "totalPasses": 260,
       "totalShots": 8,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 1,
       "progressiveCarries": 29,
-      "touchesInOppBox": 8
+      "touchesInOppBox": 9
     }
   }
 }

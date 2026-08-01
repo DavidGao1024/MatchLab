@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-07-30T09:03:54.311Z",
+  "updateTime": "2026-08-01T10:08:11.154Z",
   "league": "chn.1",
   "season": "2026",
-  "matchesCounted": 156,
+  "matchesCounted": 157,
   "count": 16,
   "standings": [
     {
@@ -34,6 +34,19 @@
     },
     {
       "rank": 3,
+      "teamId": 22537,
+      "team": "Dalian Yingbo",
+      "played": 20,
+      "won": 9,
+      "drawn": 2,
+      "lost": 9,
+      "goalsFor": 31,
+      "goalsAgainst": 36,
+      "goalDiff": -5,
+      "points": 29
+    },
+    {
+      "rank": 4,
       "teamId": 22536,
       "team": "Yunnan Yukun",
       "played": 20,
@@ -43,19 +56,6 @@
       "goalsFor": 40,
       "goalsAgainst": 38,
       "goalDiff": 2,
-      "points": 28
-    },
-    {
-      "rank": 4,
-      "teamId": 22537,
-      "team": "Dalian Yingbo",
-      "played": 19,
-      "won": 9,
-      "drawn": 1,
-      "lost": 9,
-      "goalsFor": 30,
-      "goalsAgainst": 35,
-      "goalDiff": -5,
       "points": 28
     },
     {
@@ -117,14 +117,14 @@
       "rank": 9,
       "teamId": 8240,
       "team": "Henan",
-      "played": 19,
+      "played": 20,
       "won": 8,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 8,
-      "goalsFor": 25,
-      "goalsAgainst": 24,
+      "goalsFor": 26,
+      "goalsAgainst": 25,
       "goalDiff": 1,
-      "points": 21,
+      "points": 22,
       "deduction": 6
     },
     {
