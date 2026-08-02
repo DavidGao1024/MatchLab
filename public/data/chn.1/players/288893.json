@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-07-29T09:23:39.966Z",
+  "updateTime": "2026-08-02T09:02:15.798Z",
   "league": "chn.1",
   "season": "2026",
   "id": 288893,
@@ -19,18 +19,18 @@
   "stats": {
     "defensive": {
       "blockedShots": 1,
-      "effectiveClearance": 0,
+      "effectiveClearance": 5,
       "effectiveTackles": 0,
       "inneffectiveTackles": 0,
       "interceptions": 0,
       "tacklePct": 0,
-      "totalClearance": 0,
+      "totalClearance": 5,
       "totalTackles": 0,
       "tacklesLost": 0,
-      "recoveries": 0
+      "recoveries": 1
     },
     "general": {
-      "appearances": 12,
+      "appearances": 13,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -43,12 +43,12 @@
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 1047,
+      "minutes": 1059,
       "ownGoals": 0,
       "passPct": 0,
       "redCards": 0,
       "starts": 12,
-      "subIns": 0,
+      "subIns": 1,
       "subOuts": 2,
       "suspensions": 0,
       "timeEnded": 0,
@@ -61,7 +61,7 @@
       "duelsWon": 0,
       "duels": 0,
       "secondYellow": 0,
-      "touches": 0
+      "touches": 8
     },
     "goalKeeping": {
       "cleanSheet": 1,
@@ -87,8 +87,8 @@
       "accurateLongBalls": 0,
       "accuratePasses": 0,
       "accurateThroughBalls": 0,
-      "attemptsInBox": 82,
-      "attemptsOutBox": 44,
+      "attemptsInBox": 90,
+      "attemptsOutBox": 46,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -123,7 +123,7 @@
       "totalCrosses": 0,
       "totalGoals": 0,
       "totalLongBalls": 0,
-      "totalPasses": 0,
+      "totalPasses": 1,
       "totalShots": 5,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
