@@ -175,6 +175,7 @@ describe('MyTeamCard narrow 模式（2-3 队订阅）', () => {
     const html = w.html()
     expect(html).not.toMatch(/rank-badge/)
     expect(html).not.toMatch(/wdl-cell/)
+    expect(html).toMatch(/narrow-card/)
     expect(w.text()).toContain('Arsenal')
   })
 })
@@ -233,5 +234,7 @@ describe('MyTeamCard standings 未加载', () => {
 
     expect(w.text()).toContain('Arsenal')
     expect(w.text()).not.toContain('26')
+    const html = w.html()
+    expect(html).toMatch(/wdl-skeleton/)
   })
 })
