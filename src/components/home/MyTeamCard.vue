@@ -169,7 +169,14 @@ function formatDateLong(iso: string): string {
       <header class="wide-header">
         <span class="tag">订阅主队</span>
         <span class="league">{{ subscription.league.toUpperCase() }}</span>
-        <h3 class="team-name" @click="goTeam">{{ displayName(subscription.teamName) }}</h3>
+        <h3
+          class="team-name"
+          role="button"
+          tabindex="0"
+          @click="goTeam"
+          @keydown.enter="goTeam"
+          @keydown.space.prevent="goTeam"
+        >{{ displayName(subscription.teamName) }}</h3>
         <div v-if="standing" class="rank-badge">
           <span class="num">{{ standing.rank }}</span>
           <span class="of">/ {{ (standings.rows[subscription.league] ?? []).length || 20 }}</span>
@@ -209,12 +216,13 @@ function formatDateLong(iso: string): string {
             <span>开球 <span class="kickoff-time">{{ formatKickoffTime((todayMatch ?? nextMatch)!.date) }}</span></span>
             <span class="countdown">{{ formatCountdown((todayMatch ?? nextMatch)!.date) }}</span>
           </div>
-          <div v-if="todayMatch || nextMatch" class="venue-row">◉ {{ (todayMatch ?? nextMatch)!.venue }}</div>
+          <div v-if="todayMatch || nextMatch" class="venue-row">◉ {{ (todayMatch ?? nextMatch)!.venue || '—' }}</div>
         </section>
 
         <!-- 列 2：最近 3 场 -->
         <section class="recent-block">
           <div class="section-label">最近 3 场</div>
+          <div v-if="!recentMatches.length" class="empty-placeholder">暂无最近比赛</div>
           <div v-for="m in recentMatches" :key="m.eventId" class="vs-row">
             <div class="vs-side home">
               <span :class="m.home.id === subscription.teamId ? 'name mine' : 'name opp'">{{ displayName(m.home.name) }}</span>
@@ -274,7 +282,14 @@ function formatDateLong(iso: string): string {
       <header class="narrow-header">
         <span class="tag">订阅主队</span>
         <span class="league">{{ subscription.league.toUpperCase() }}</span>
-        <h3 class="team-name" @click="goTeam">{{ displayName(subscription.teamName) }}</h3>
+        <h3
+          class="team-name"
+          role="button"
+          tabindex="0"
+          @click="goTeam"
+          @keydown.enter="goTeam"
+          @keydown.space.prevent="goTeam"
+        >{{ displayName(subscription.teamName) }}</h3>
       </header>
       <div v-if="todayMatch" class="today-mini">
         <div class="today-meta">今日 · {{ formatKickoff(todayMatch.date) }}</div>
@@ -297,6 +312,7 @@ function formatDateLong(iso: string): string {
       <div v-else class="today-mini"><div class="today-meta">赛季已结束</div></div>
 
       <div class="section-label">最近 3 场</div>
+      <div v-if="!recentMatches.length" class="empty-placeholder">暂无最近比赛</div>
       <div v-for="m in recentMatches" :key="m.eventId" class="vs-row">
         <div class="vs-side home">
           <span :class="m.home.id === subscription.teamId ? 'name mine' : 'name opp'">{{ displayName(m.home.name) }}</span>
@@ -420,6 +436,13 @@ function formatDateLong(iso: string): string {
   font-family: var(--font-mono-d, monospace); font-size: 9px;
   color: var(--slate-500, #64748b); letter-spacing: 0.22em; text-transform: uppercase;
   margin-bottom: 6px;
+}
+.empty-placeholder {
+  color: var(--slate-600, #475569);
+  font-size: 12px;
+  padding: 8px 0;
+  font-family: var(--font-mono-d, monospace);
+  letter-spacing: 0.12em;
 }
 
 /* === vs row（wide + narrow 共用）=== */

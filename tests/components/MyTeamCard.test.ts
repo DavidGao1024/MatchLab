@@ -93,7 +93,7 @@ describe('MyTeamCard', () => {
     await flushPromises()
     expect(w.text()).toContain('Arsenal')
   })
-  it('今日无赛显示"赛季已结束"', async () => {
+  it('无任何赛程显示"赛季已结束"', async () => {
     const store = useUserDataStore()
     await store.init()
     store.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
