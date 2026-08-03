@@ -10,21 +10,39 @@ interface State {
   subscriptions: Subscription[]
   favorites: { teams: Favorite[]; players: Favorite[] }
   initialized: boolean
+  /** localStorage 不可用（隐私模式/配额满）→ 所有按钮 disabled 防止无效操作 */
+  readOnly: boolean
 }
 
 let persistTimer: ReturnType<typeof setTimeout> | null = null
+
+/** 探测 localStorage 是否可写（隐私模式/配额满时 setItem 抛错） */
+function isLocalStorageWritable(): boolean {
+  try {
+    const k = 'matchlab:storage-test'
+    localStorage.setItem(k, '1')
+    localStorage.removeItem(k)
+    return true
+  } catch {
+    return false
+  }
+}
 
 export const useUserDataStore = defineStore('userData', {
   state: (): State => ({
     subscriptions: [],
     favorites: { teams: [], players: [] },
     initialized: false,
+    readOnly: false,
   }),
   actions: {
     async init() {
       if (this.initialized) return
       this.hydrate()
-      window.addEventListener('storage', this.onStorageEvent)
+      this.readOnly = !isLocalStorageWritable()
+      if (!this.readOnly) {
+        window.addEventListener('storage', this.onStorageEvent)
+      }
       this.initialized = true
     },
     hydrate() {
@@ -40,10 +58,12 @@ export const useUserDataStore = defineStore('userData', {
       }
     },
     schedulePersist() {
+      if (this.readOnly) return
       if (persistTimer) clearTimeout(persistTimer)
       persistTimer = setTimeout(() => this.persist(), 200)
     },
     persist() {
+      if (this.readOnly) return
       const subsData: UserData = { version: USER_DATA_VERSION, items: this.subscriptions }
       localStorage.setItem(SUBSCRIPTIONS_KEY, JSON.stringify(subsData))
       const favData: FavoritesData = {

@@ -187,3 +187,28 @@ describe('useUserDataStore 多 tab 同步', () => {
     expect(s.subscriptions.length).toBe(before)
   })
 })
+
+describe('useUserDataStore readOnly（隐私模式）', () => {
+  it('setItem 抛错 → readOnly=true + 不挂 storage 监听', async () => {
+    const spy = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+      throw new DOMException('quota exceeded')
+    })
+    const s = useUserDataStore()
+    await s.init()
+    expect(s.readOnly).toBe(true)
+    // readOnly 状态下 addSubscription 不调 schedulePersist → 不会触发 setTimeout
+    const before = s.subscriptions.length
+    s.addSubscription({ league: 'eng.1', teamId: 999, teamName: 'X' })
+    expect(s.subscriptions.length).toBe(before + 1) // state 仍更新（in-memory）
+    // 不调 schedulePersist：run pending timers 应无 setItem 调用（persist 早退）
+    spy.mockClear()
+    vi.advanceTimersByTime(500)
+    expect(spy).not.toHaveBeenCalled()
+    spy.mockRestore()
+  })
+  it('localStorage 可用 → readOnly=false', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    expect(s.readOnly).toBe(false)
+  })
+})

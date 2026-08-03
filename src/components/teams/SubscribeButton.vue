@@ -17,7 +17,10 @@ const toast = useToast()
 const confirm = useConfirm()
 
 const subscribed = computed(() => store.isSubscribed(props.teamId))
-const atLimit = computed(() => store.subscriptions.length >= SUBSCRIPTIONS_LIMIT && !subscribed.value)
+const atLimit = computed(() =>
+  store.readOnly
+  || (store.subscriptions.length >= SUBSCRIPTIONS_LIMIT && !subscribed.value),
+)
 
 async function onClick() {
   if (subscribed.value) {

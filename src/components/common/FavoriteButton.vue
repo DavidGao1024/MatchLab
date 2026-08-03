@@ -17,6 +17,7 @@ const toast = useToast()
 
 const fav = computed(() => store.isFavorite(props.type, props.id))
 const atLimit = computed(() => {
+  if (store.readOnly) return true
   const total = store.favorites.teams.length + store.favorites.players.length
   return total >= FAVORITES_LIMIT && !fav.value
 })

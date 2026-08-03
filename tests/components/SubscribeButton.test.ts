@@ -52,4 +52,11 @@ describe('SubscribeButton', () => {
     const w = mount(SubscribeButton, { props: { league: 'eng.1', teamId: 4, teamName: 'D' } })
     expect(w.find('button').attributes('disabled')).toBeDefined()
   })
+  it('store.readOnly → 按钮 disabled（隐私模式）', async () => {
+    const store = useUserDataStore()
+    await store.init()
+    store.readOnly = true
+    const w = mount(SubscribeButton, { props: { league: 'eng.1', teamId: 359, teamName: 'Arsenal' } })
+    expect(w.find('button').attributes('disabled')).toBeDefined()
+  })
 })

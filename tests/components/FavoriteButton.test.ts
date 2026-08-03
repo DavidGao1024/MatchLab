@@ -45,4 +45,11 @@ describe('FavoriteButton', () => {
     const w = mount(FavoriteButton, { props: { type: 'team', id: 999, name: 'X', league: 'eng.1' } })
     expect(w.find('button').attributes('disabled')).toBeDefined()
   })
+  it('store.readOnly → 按钮 disabled（隐私模式）', async () => {
+    const store = useUserDataStore()
+    await store.init()
+    store.readOnly = true
+    const w = mount(FavoriteButton, { props: { type: 'team', id: 359, name: 'Arsenal', league: 'eng.1' } })
+    expect(w.find('button').attributes('disabled')).toBeDefined()
+  })
 })

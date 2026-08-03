@@ -51,4 +51,16 @@ describe('ExportCalendarButton', () => {
     expect(w.text()).toContain('导出赛程到日历')
     expect(URL.createObjectURL).not.toHaveBeenCalled()
   })
+  it('store.readOnly → 按钮 disabled（隐私模式）', async () => {
+    const { useUserDataStore } = await import('../../src/stores/userData')
+    const store = useUserDataStore()
+    await store.init()
+    store.readOnly = true
+    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
+    const w = mount(ExportCalendarButton, {
+      props: { league: 'eng.1', teamId: 359, teamName: 'Arsenal', teamSlug: 'arsenal', seasonStart: 2025 },
+    })
+    expect(w.find('button').attributes('disabled')).toBeDefined()
+    expect(URL.createObjectURL).not.toHaveBeenCalled()
+  })
 })
