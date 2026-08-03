@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-02T08:38:44.589Z",
+  "updateTime": "2026-08-03T10:04:30.404Z",
   "league": "esp.1",
   "season": "2025",
   "count": 20,
@@ -439,7 +439,11 @@
       "alternateColor": "#00529F",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/86.png",
-      "venue": null,
+      "venue": {
+        "name": "Santiago Bernabéu",
+        "city": "Madrid",
+        "country": "Spain"
+      },
       "isActive": true,
       "record": {
         "wins": 27,
