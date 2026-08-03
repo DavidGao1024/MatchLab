@@ -57,7 +57,7 @@ const teamSlug = computed(() => {
   const t = team.value
   if (!t) return String(teamId.value)
   const base = t.shortDisplayName || t.name
-  return base.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+  return base.toLowerCase().replace(/\s+/g, '-')
 })
 const seasonStart = computed(() => {
   const now = new Date()
