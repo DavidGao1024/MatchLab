@@ -45,11 +45,11 @@
 | 20 FavoritesView + 路由 | ✅ | （本次提交） | tabs 切换 + 球队项含 iCal 导出按钮；测试加切到球员 tab 验证 Haaland（plan 默认 tab 看不到球员）；slug/seasonStart 抽 computed；空值兜底 `t.teamId && ...`；按钮 type=button |
 | 21 TeamDetailView 改造 | ✅ | （本次提交） | 头部加 SubscribeButton + FavoriteButton + ExportCalendarButton；slug 用 shortDisplayName slugify；seasonStart 抽 computed；手动浏览器验证待回归（用户回来跑） |
 | 22 PlayerDetailView 改造 | ✅ | （本次提交） | 球员名旁加 FavoriteButton；手动浏览器验证待回归 |
-| 23 HomeView 加 MyTeamCard | ⏸ 待开工 | — | + EmptyState 引导 |
+| 23 HomeView 加 MyTeamCard | ✅ | （本次提交） | 顶部加订阅卡片区（无订阅→EmptyState 引导去积分榜；有订阅→grid 1-3 列响应）；手动浏览器验证待回归 |
 | 24 App.vue 整合 | ⏸ 待开工 | — | init + Toast/ConfirmDialog 挂载 + AppHeader 加 FavoritesDropdown |
 | 25 终验 | ⏸ 待开工 | — | 全量测试 + typecheck + build + 手动验收 |
 
-**累计**：22/25 Task 完工，26 commit 在 main 分支，133 单测全绿。
+**累计**：23/25 Task 完工，27 commit 在 main 分支，133 单测全绿。
 
 **待补的跟进项**（Approved 不阻塞，建议后续修）：
 - Task 6 EmptyState：缺 `role="status"` + 按钮 `type="button"`（Task 14/18 首次使用时一并修）

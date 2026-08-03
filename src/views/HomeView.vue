@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
+import EmptyState from '../components/common/EmptyState.vue'
 import LeagueCard from '../components/home/LeagueCard.vue'
 import MatchdayStrip from '../components/home/MatchdayStrip.vue'
+import MyTeamCard from '../components/home/MyTeamCard.vue'
 import { fetchJsonCached } from '../composables/useJsonFetch'
 import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { useStandingsStore } from '../stores/standings'
+import { useUserDataStore } from '../stores/userData'
 import type { Match } from '../types/models'
 import type { MatchesFile } from '../types/static'
 import { FOCUS_LEAGUE, LEAGUE_SLUGS, defaultMonth, seasonMonths } from '../utils/constants'
@@ -15,6 +19,10 @@ import { lastCompletedMatchday, selectStripMatches } from '../utils/matches'
 
 const app = useAppStore()
 const standings = useStandingsStore()
+const userStore = useUserDataStore()
+const router = useRouter()
+
+onMounted(() => userStore.init())
 
 const focus = FOCUS_LEAGUE
 const others = LEAGUE_SLUGS.filter((l) => l !== focus)
@@ -97,7 +105,26 @@ const featuredId = computed(() => {
     <DataError v-if="error" :message="error" @retry="load" />
     <DataLoading v-else-if="loading && !standings.rows[focus]" kind="cards" />
     <template v-else>
-      <!-- ① 上轮战报转播带（查不到完赛比赛日则不出，规格 v1.2） -->
+      <!-- ① 订阅主队卡片（无订阅 → 引导去积分榜订阅） -->
+      <section v-if="userStore.initialized" class="max-w-5xl mx-auto px-4 mb-4">
+        <div v-if="userStore.subscriptions.length === 0">
+          <EmptyState
+            title="订阅主队，首页直接看今日赛程"
+            body="点击下方任意球队进入详情页订阅"
+            cta-text="去积分榜"
+            @cta="router.push('/eng.1/standings')"
+          />
+        </div>
+        <div v-else class="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+          <MyTeamCard
+            v-for="sub in userStore.subscriptions"
+            :key="sub.teamId"
+            :subscription="sub"
+          />
+        </div>
+      </section>
+
+      <!-- ② 上轮战报转播带（查不到完赛比赛日则不出，规格 v1.2） -->
       <MatchdayStrip
         v-if="strip && stripMatches.length"
         :league="focus"
