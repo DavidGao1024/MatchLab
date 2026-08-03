@@ -18,7 +18,8 @@ const teams = useTeamsStore()
 const app = useAppStore()
 
 const todayMatch = ref<Match | null>(null)
-const nextMatch = ref<Match | null>(null)
+const nextMatch = ref<Match | null>(null)        // hero 在无 todayMatch 时用
+const afterNextMatch = ref<Match | null>(null)   // footer 用（既非 today 也非 next）
 const recentMatches = ref<Match[]>([])
 const injuries = ref<string[]>([])
 const loading = ref(true)
@@ -61,10 +62,15 @@ async function load() {
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
     todayMatch.value = teamMatches.find((m) => isToday(m.date)) ?? null
     const future = teamMatches.filter((m) => new Date(m.date) > now)
-    // footer 下场预告 = today 之后的第一个 future（无 today 则第二个 future，避免与 hero 重复）
-    const nextIdx = todayMatch.value ? 0 : 1
-    nextMatch.value = future[nextIdx] ?? future[0] ?? null
-    const past = teamMatches.filter((m) => new Date(m.date) < now)
+    // nextMatch = 第一个非 todayMatch 的 future（hero 在无 todayMatch 时用）
+    nextMatch.value = future.find((m) => m.eventId !== todayMatch.value?.eventId) ?? null
+    // afterNextMatch = 第三个 future（既非 todayMatch 也非 nextMatch，footer 用）
+    afterNextMatch.value = future.find((m) =>
+      m.eventId !== todayMatch.value?.eventId && m.eventId !== nextMatch.value?.eventId
+    ) ?? null
+    const past = teamMatches.filter((m) =>
+      new Date(m.date) < now && m.eventId !== todayMatch.value?.eventId
+    )
     recentMatches.value = past.slice(-3).reverse()
     try {
       const inj = await fetchTeamInjuries(props.subscription.league, props.subscription.teamId)
@@ -134,7 +140,7 @@ function formatKickoffTime(iso: string): string {
 
 function formatDateShort(iso: string): string {
   const d = new Date(iso)
-  return `${d.getMonth() + 1}/${d.getDate()}`
+  return `${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}`
 }
 
 function formatDateLong(iso: string): string {
