@@ -47,9 +47,9 @@
 | 22 PlayerDetailView 改造 | ✅ | （本次提交） | 球员名旁加 FavoriteButton；手动浏览器验证待回归 |
 | 23 HomeView 加 MyTeamCard | ✅ | （本次提交） | 顶部加订阅卡片区（无订阅→EmptyState 引导去积分榜；有订阅→grid 1-3 列响应）；手动浏览器验证待回归 |
 | 24 App.vue 整合 | ✅ | （本次提交） | init + Toast/ConfirmDialog 挂载到根 template 末尾；AppHeader 加 FavoritesDropdown（SearchBar 与语言切换按钮之间）；手动浏览器验证待回归 |
-| 25 终验 | ⏸ 待开工 | — | 全量测试 + typecheck + build + 手动验收 |
+| 25 终验 | 🟡 自动部分 ✅ | — | 自动验收全绿（133 单测 + typecheck + build ✓）；手动浏览器验收 14 项清单待用户回归跑 |
 
-**累计**：24/25 Task 完工，28 commit 在 main 分支，133 单测全绿。
+**累计**：25/25 Task 完工（Task 25 手动验收待回归），29 commit 在 main 分支，133 单测全绿。
 
 **待补的跟进项**（Approved 不阻塞，建议后续修）：
 - Task 6 EmptyState：缺 `role="status"` + 按钮 `type="button"`（Task 14/18 首次使用时一并修）
