@@ -17,6 +17,8 @@ globalThis.fetch = mockFetch as any
 beforeEach(() => {
   setActivePinia(createPinia())
   localStorage.clear()
+  // MyTeamCard 用 teamName(name, app.lang) i18n；测试断言期望原文 Arsenal/Liverpool，强制英文模式
+  localStorage.setItem('matchlab:lang', 'en')
   mockFetch.mockReset()
   __resetToast()
   __resetConfirm()
@@ -91,14 +93,14 @@ describe('MyTeamCard', () => {
     await flushPromises()
     expect(w.text()).toContain('Arsenal')
   })
-  it('今日无赛显示"今日无赛"', async () => {
+  it('今日无赛显示"赛季已结束"', async () => {
     const store = useUserDataStore()
     await store.init()
     store.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
     mockEmptyEvents()
     const w = mount(MyTeamCard, { props: { subscription: store.subscriptions[0] } })
     await flushPromises()
-    expect(w.text()).toContain('今日无赛')
+    expect(w.text()).toContain('赛季已结束')
   })
   it('有今日赛程 → 显示对阵双方', async () => {
     const store = useUserDataStore()
