@@ -7,8 +7,9 @@ import { useStandingsStore } from '../../stores/standings'
 import { useTeamsStore } from '../../stores/teams'
 import { useAppStore } from '../../stores/app'
 import { teamName } from '../../utils/i18n'
+import TeamLogo from '../common/TeamLogo.vue'
 import type { Subscription } from '../../types/user-data'
-import type { Match, StandingRow, Team } from '../../types/models'
+import type { Match, MatchTeam, StandingRow, Team } from '../../types/models'
 
 const props = defineProps<{ subscription: Subscription }>()
 const router = useRouter()
@@ -33,6 +34,14 @@ const standing = computed<StandingRow | undefined>(() => {
 })
 const layoutMode = computed<'wide' | 'narrow'>(() => userStore.subscriptions.length === 1 ? 'wide' : 'narrow')
 const isWide = computed(() => layoutMode.value === 'wide')
+// footer 用：今日赛时显示 nextMatch（今日赛之后第一场 future），无今日赛时显示 afterNextMatch（避免与 hero 重复）
+const footerMatch = computed<Match | null>(() => todayMatch.value ? nextMatch.value : afterNextMatch.value)
+const leagueDisplayName = computed(() => {
+  const info = app.leagueInfo(props.subscription.league)
+  const zh = info?.nameZh
+  const en = info?.name ?? props.subscription.league.toUpperCase()
+  return app.lang === 'zh' && zh ? `${zh} · ${en}` : en
+})
 
 function isToday(dateStr: string): boolean {
   const d = new Date(dateStr)
@@ -94,6 +103,19 @@ function goTeam() {
 
 function displayName(name: string): string {
   return teamName(name, app.lang)
+}
+
+function teamFor(side: MatchTeam): Team {
+  return teams.teamById(props.subscription.league, side.id) ?? {
+    id: side.id,
+    name: side.name,
+    shortDisplayName: side.name,
+    abbreviation: side.abbreviation ?? '',
+    color: teamColor.value,
+    alternateColor: '',
+    logo: side.logo,
+    logoDark: side.logo,
+  }
 }
 
 function scoreLine(m: Match): string {
@@ -168,7 +190,7 @@ function formatDateLong(iso: string): string {
       <!-- Header -->
       <header class="wide-header">
         <span class="tag">订阅主队</span>
-        <span class="league">{{ subscription.league.toUpperCase() }}</span>
+        <span class="league">{{ leagueDisplayName }}</span>
         <h3
           class="team-name"
           role="button"
@@ -196,14 +218,16 @@ function formatDateLong(iso: string): string {
           <div v-else-if="nextMatch" class="hero-meta">
             <span class="next-dot"></span>下场 · {{ formatKickoff(nextMatch.date) }}
           </div>
-          <div v-else class="hero-meta">赛季已结束</div>
+          <div v-else class="hero-meta">赛季已结束{{ standing ? ` · 最终第 ${standing.rank} 名` : '' }}</div>
 
           <div v-if="todayMatch || nextMatch" class="hero-matchup">
             <div class="hero-side left">
               <span class="hero-abbr">{{ displayName((todayMatch ?? nextMatch)!.home.name) }}</span>
+              <TeamLogo :team="teamFor((todayMatch ?? nextMatch)!.home)" :size="36" />
             </div>
             <div class="hero-vs">VS</div>
             <div class="hero-side right">
+              <TeamLogo :team="teamFor((todayMatch ?? nextMatch)!.away)" :size="36" />
               <span class="hero-abbr">{{ displayName((todayMatch ?? nextMatch)!.away.name) }}</span>
             </div>
           </div>
@@ -226,12 +250,14 @@ function formatDateLong(iso: string): string {
           <div v-for="m in recentMatches" :key="m.eventId" class="vs-row">
             <div class="vs-side home">
               <span :class="m.home.id === subscription.teamId ? 'name mine' : 'name opp'">{{ displayName(m.home.name) }}</span>
+              <TeamLogo :team="teamFor(m.home)" :size="16" />
             </div>
             <div>
               <div :class="`vs-score ${matchTone(m)}`">{{ scoreLine(m) }}</div>
               <div class="vs-date">{{ formatDateShort(m.date) }}</div>
             </div>
             <div class="vs-side away">
+              <TeamLogo :team="teamFor(m.away)" :size="16" />
               <span :class="m.away.id === subscription.teamId ? 'name mine' : 'name opp'">{{ displayName(m.away.name) }}</span>
             </div>
           </div>
@@ -269,10 +295,14 @@ function formatDateLong(iso: string): string {
           <span class="inj-label">伤员</span>
           <span class="inj-names">{{ injuries.join(' · ') }}</span>
         </div>
-        <div v-if="afterNextMatch" class="next-game">
+        <div v-if="footerMatch" class="next-game">
           <div class="next-label">下场</div>
-          <div class="next-match">{{ displayName(afterNextMatch.home.name) }} vs {{ displayName(afterNextMatch.away.name) }}</div>
-          <div class="next-meta">{{ formatDateLong(afterNextMatch.date) }}</div>
+          <div class="next-match">{{ displayName(footerMatch.home.name) }} vs {{ displayName(footerMatch.away.name) }}</div>
+          <div class="next-meta">{{ formatDateLong(footerMatch.date) }}</div>
+        </div>
+        <div v-else class="next-game">
+          <div class="next-label">下场</div>
+          <div class="next-match" style="color: var(--slate-500, #64748b);">无再下场</div>
         </div>
       </footer>
     </div>
@@ -281,7 +311,7 @@ function formatDateLong(iso: string): string {
     <div v-else class="narrow-body">
       <header class="narrow-header">
         <span class="tag">订阅主队</span>
-        <span class="league">{{ subscription.league.toUpperCase() }}</span>
+        <span class="league">{{ leagueDisplayName }}</span>
         <h3
           class="team-name"
           role="button"
@@ -294,34 +324,48 @@ function formatDateLong(iso: string): string {
       <div v-if="todayMatch" class="today-mini">
         <div class="today-meta">今日 · {{ formatKickoff(todayMatch.date) }}</div>
         <div class="mini-matchup">
-          <span class="mini-side left">{{ displayName(todayMatch.home.name) }}</span>
+          <span class="mini-side left">
+            <TeamLogo :team="teamFor(todayMatch.home)" :size="16" />
+            {{ displayName(todayMatch.home.name) }}
+          </span>
           <span class="vs-text">VS</span>
-          <span class="mini-side right">{{ displayName(todayMatch.away.name) }}</span>
+          <span class="mini-side right">
+            {{ displayName(todayMatch.away.name) }}
+            <TeamLogo :team="teamFor(todayMatch.away)" :size="16" />
+          </span>
         </div>
         <div class="kickoff">{{ formatKickoffTime(todayMatch.date) }}</div>
       </div>
       <div v-else-if="nextMatch" class="today-mini">
         <div class="today-meta">下场 · {{ formatKickoff(nextMatch.date) }}</div>
         <div class="mini-matchup">
-          <span class="mini-side left">{{ displayName(nextMatch.home.name) }}</span>
+          <span class="mini-side left">
+            <TeamLogo :team="teamFor(nextMatch.home)" :size="16" />
+            {{ displayName(nextMatch.home.name) }}
+          </span>
           <span class="vs-text">VS</span>
-          <span class="mini-side right">{{ displayName(nextMatch.away.name) }}</span>
+          <span class="mini-side right">
+            {{ displayName(nextMatch.away.name) }}
+            <TeamLogo :team="teamFor(nextMatch.away)" :size="16" />
+          </span>
         </div>
         <div class="kickoff">{{ formatKickoffTime(nextMatch.date) }}</div>
       </div>
-      <div v-else class="today-mini"><div class="today-meta">赛季已结束</div></div>
+      <div v-else class="today-mini"><div class="today-meta">赛季已结束{{ standing ? ` · 第 ${standing.rank} 名` : '' }}</div></div>
 
       <div class="section-label">最近 3 场</div>
       <div v-if="!recentMatches.length" class="empty-placeholder">暂无最近比赛</div>
       <div v-for="m in recentMatches" :key="m.eventId" class="vs-row">
         <div class="vs-side home">
           <span :class="m.home.id === subscription.teamId ? 'name mine' : 'name opp'">{{ displayName(m.home.name) }}</span>
+          <TeamLogo :team="teamFor(m.home)" :size="16" />
         </div>
         <div>
           <div :class="`vs-score ${matchTone(m)}`">{{ scoreLine(m) }}</div>
           <div class="vs-date">{{ formatDateShort(m.date) }}</div>
         </div>
         <div class="vs-side away">
+          <TeamLogo :team="teamFor(m.away)" :size="16" />
           <span :class="m.away.id === subscription.teamId ? 'name mine' : 'name opp'">{{ displayName(m.away.name) }}</span>
         </div>
       </div>
@@ -553,8 +597,11 @@ function formatDateLong(iso: string): string {
 }
 .today-meta { font-family: var(--font-mono-d, monospace); font-size: 9px; color: var(--slate-400, #94a3b8); letter-spacing: 0.18em; text-transform: uppercase; }
 .mini-matchup { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 6px; margin-top: 4px; }
-.mini-side { font-family: var(--font-cond, sans-serif); font-size: 14px; color: #fff; }
-.mini-side.left { text-align: right; }
+.mini-side {
+  font-family: var(--font-cond, sans-serif); font-size: 14px; color: #fff;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.mini-side.left { justify-content: flex-end; }
 .vs-text { color: var(--slate-500, #64748b); font-size: 10px; font-family: var(--font-mono-d, monospace); text-align: center; }
 .kickoff { font-family: var(--font-cond, sans-serif); font-size: 14px; color: var(--team-color); text-align: center; margin-top: 2px; }
 .inj-bar {
