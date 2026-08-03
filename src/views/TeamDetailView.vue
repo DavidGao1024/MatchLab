@@ -5,6 +5,9 @@ import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
 import TeamLogo from '../components/common/TeamLogo.vue'
 import TeamSquad from '../components/teams/TeamSquad.vue'
+import SubscribeButton from '../components/teams/SubscribeButton.vue'
+import FavoriteButton from '../components/common/FavoriteButton.vue'
+import ExportCalendarButton from '../components/teams/ExportCalendarButton.vue'
 import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { usePlayersStore } from '../stores/players'
@@ -50,6 +53,16 @@ const squad = computed(() => {
 
 const displayName = computed(() => (team.value ? teamName(team.value.name, app.lang) : ''))
 const record = computed(() => team.value?.record ?? null)
+const teamSlug = computed(() => {
+  const t = team.value
+  if (!t) return String(teamId.value)
+  const base = t.shortDisplayName || t.name
+  return base.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+})
+const seasonStart = computed(() => {
+  const now = new Date()
+  return now.getMonth() >= 7 ? now.getFullYear() : now.getFullYear() - 1
+})
 
 function back() {
   router.push(`/${league.value}/standings`)
@@ -73,6 +86,17 @@ function back() {
             <span v-if="team.venue?.name">· {{ team.venue.name }}</span>
             <span v-if="team.venue?.city" class="text-slate-500">{{ team.venue.city }}</span>
           </p>
+          <div class="flex items-center gap-3 mt-3">
+            <SubscribeButton :league="league" :team-id="teamId" :team-name="displayName" />
+            <FavoriteButton type="team" :id="teamId" :name="displayName" :league="league" />
+            <ExportCalendarButton
+              :league="league"
+              :team-id="teamId"
+              :team-name="displayName"
+              :team-slug="teamSlug"
+              :season-start="seasonStart"
+            />
+          </div>
         </div>
       </div>
 
