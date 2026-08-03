@@ -162,12 +162,12 @@ describe('MyTeamCard wide 模式（1 队订阅）', () => {
   })
 })
 
-describe('MyTeamCard narrow 模式（2-3 队订阅）', () => {
-  it('不渲染 rank badge + 不渲染 WDL 三宫格', async () => {
+describe('MyTeamCard 多队订阅仍用 wide 模式（每卡拉宽占满）', () => {
+  it('2 队订阅渲染 wide 布局（rank badge + WDL）', async () => {
     const userStore = useUserDataStore()
     await userStore.init()
     userStore.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
-    userStore.addSubscription({ league: 'eng.1', teamId: 25, teamName: 'Liverpool' })
+    userStore.addSubscription({ league: 'eng.1', teamId: 362, teamName: 'Aston Villa' })
     injectStoreData()
     mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
 
@@ -175,18 +175,18 @@ describe('MyTeamCard narrow 模式（2-3 队订阅）', () => {
     await flushPromises()
 
     const html = w.html()
-    expect(html).not.toMatch(/rank-badge/)
-    expect(html).not.toMatch(/wdl-cell/)
-    expect(html).toMatch(/narrow-card/)
+    expect(html).toMatch(/wide-card/)
+    expect(html).toMatch(/rank-badge/)
+    expect(html).toMatch(/wdl-cell/)
     expect(w.text()).toContain('Arsenal')
   })
 
-  it('3 队订阅也是 narrow 模式', async () => {
+  it('3 队订阅也渲染 wide 布局', async () => {
     const userStore = useUserDataStore()
     await userStore.init()
     userStore.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
-    userStore.addSubscription({ league: 'eng.1', teamId: 25, teamName: 'Liverpool' })
-    userStore.addSubscription({ league: 'eng.1', teamId: 382, teamName: 'Man City' })
+    userStore.addSubscription({ league: 'eng.1', teamId: 362, teamName: 'Aston Villa' })
+    userStore.addSubscription({ league: 'eng.1', teamId: 349, teamName: 'AFC Bournemouth' })
     injectStoreData()
     mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
 
@@ -194,8 +194,8 @@ describe('MyTeamCard narrow 模式（2-3 队订阅）', () => {
     await flushPromises()
 
     const html = w.html()
-    expect(html).toMatch(/narrow-card/)
-    expect(html).not.toMatch(/rank-badge/)
+    expect(html).toMatch(/wide-card/)
+    expect(html).toMatch(/rank-badge/)
   })
 })
 

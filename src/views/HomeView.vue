@@ -106,7 +106,7 @@ const featuredId = computed(() => {
     <DataLoading v-else-if="loading && !standings.rows[focus]" kind="cards" />
     <template v-else>
       <!-- ① 订阅主队卡片（无订阅 → 引导去积分榜订阅） -->
-      <section v-if="userStore.initialized" class="max-w-7xl w-full mx-auto px-4 mb-4">
+      <section v-if="userStore.initialized" class="mb-4">
         <div v-if="userStore.subscriptions.length === 0">
           <EmptyState
             title="订阅主队，首页直接看今日赛程"
@@ -115,15 +115,7 @@ const featuredId = computed(() => {
             @cta="router.push('/eng.1/standings')"
           />
         </div>
-        <div
-          v-else
-          class="grid gap-3"
-          :class="userStore.subscriptions.length === 1
-            ? 'grid-cols-1'
-            : userStore.subscriptions.length === 2
-              ? 'md:grid-cols-2'
-              : 'md:grid-cols-2 lg:grid-cols-3'"
-        >
+        <div v-else class="flex flex-col gap-3">
           <MyTeamCard
             v-for="sub in userStore.subscriptions"
             :key="sub.teamId"

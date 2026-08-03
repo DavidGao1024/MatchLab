@@ -2,7 +2,6 @@
 import { ref, computed, watch, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { fetchLiveScores, fetchTeamInjuries } from '../../composables/useEspanFetch'
-import { useUserDataStore } from '../../stores/userData'
 import { useStandingsStore } from '../../stores/standings'
 import { useTeamsStore } from '../../stores/teams'
 import { useAppStore } from '../../stores/app'
@@ -13,7 +12,6 @@ import type { Match, MatchTeam, StandingRow, Team } from '../../types/models'
 
 const props = defineProps<{ subscription: Subscription }>()
 const router = useRouter()
-const userStore = useUserDataStore()
 const standings = useStandingsStore()
 const teams = useTeamsStore()
 const app = useAppStore()
@@ -32,8 +30,6 @@ const standing = computed<StandingRow | undefined>(() => {
   const rows = standings.rows[props.subscription.league] ?? []
   return rows.find((r) => r.teamId === props.subscription.teamId)
 })
-const layoutMode = computed<'wide' | 'narrow'>(() => userStore.subscriptions.length === 1 ? 'wide' : 'narrow')
-const isWide = computed(() => layoutMode.value === 'wide')
 // footer 用：今日赛时显示 nextMatch（今日赛之后第一场 future），无今日赛时显示 afterNextMatch（避免与 hero 重复）
 const footerMatch = computed<Match | null>(() => todayMatch.value ? nextMatch.value : afterNextMatch.value)
 const leagueDisplayName = computed(() => {
@@ -177,7 +173,7 @@ function formatDateLong(iso: string): string {
 <template>
   <article
     :style="{ '--team-color': teamColor }"
-    :class="isWide ? 'wide-card' : 'narrow-card'"
+    class="wide-card"
   >
     <!-- Loading 态 -->
     <div v-if="loading" class="p-4 text-sm text-slate-500">加载中...</div>
@@ -185,8 +181,8 @@ function formatDateLong(iso: string): string {
     <!-- 错误态 -->
     <div v-else-if="error" class="p-4 text-sm text-red-400">{{ error }}</div>
 
-    <!-- Wide 模式（1 队订阅） -->
-    <div v-else-if="isWide" class="wide-body">
+    <!-- Wide 模式 -->
+    <div v-else class="wide-body">
       <!-- Header -->
       <header class="wide-header">
         <span class="tag">订阅主队</span>
@@ -306,79 +302,11 @@ function formatDateLong(iso: string): string {
         </div>
       </footer>
     </div>
-
-    <!-- Narrow 模式（2-3 队订阅） -->
-    <div v-else class="narrow-body">
-      <header class="narrow-header">
-        <span class="tag">订阅主队</span>
-        <span class="league">{{ leagueDisplayName }}</span>
-        <h3
-          class="team-name"
-          role="button"
-          tabindex="0"
-          @click="goTeam"
-          @keydown.enter="goTeam"
-          @keydown.space.prevent="goTeam"
-        >{{ displayName(subscription.teamName) }}</h3>
-      </header>
-      <div v-if="todayMatch" class="today-mini">
-        <div class="today-meta">今日 · {{ formatKickoff(todayMatch.date) }}</div>
-        <div class="mini-matchup">
-          <span class="mini-side left">
-            <TeamLogo :team="teamFor(todayMatch.home)" :size="16" />
-            {{ displayName(todayMatch.home.name) }}
-          </span>
-          <span class="vs-text">VS</span>
-          <span class="mini-side right">
-            {{ displayName(todayMatch.away.name) }}
-            <TeamLogo :team="teamFor(todayMatch.away)" :size="16" />
-          </span>
-        </div>
-        <div class="kickoff">{{ formatKickoffTime(todayMatch.date) }}</div>
-      </div>
-      <div v-else-if="nextMatch" class="today-mini">
-        <div class="today-meta">下场 · {{ formatKickoff(nextMatch.date) }}</div>
-        <div class="mini-matchup">
-          <span class="mini-side left">
-            <TeamLogo :team="teamFor(nextMatch.home)" :size="16" />
-            {{ displayName(nextMatch.home.name) }}
-          </span>
-          <span class="vs-text">VS</span>
-          <span class="mini-side right">
-            {{ displayName(nextMatch.away.name) }}
-            <TeamLogo :team="teamFor(nextMatch.away)" :size="16" />
-          </span>
-        </div>
-        <div class="kickoff">{{ formatKickoffTime(nextMatch.date) }}</div>
-      </div>
-      <div v-else class="today-mini"><div class="today-meta">赛季已结束{{ standing ? ` · 第 ${standing.rank} 名` : '' }}</div></div>
-
-      <div class="section-label">最近 3 场</div>
-      <div v-if="!recentMatches.length" class="empty-placeholder">暂无最近比赛</div>
-      <div v-for="m in recentMatches" :key="m.eventId" class="vs-row">
-        <div class="vs-side home">
-          <span :class="m.home.id === subscription.teamId ? 'name mine' : 'name opp'">{{ displayName(m.home.name) }}</span>
-          <TeamLogo :team="teamFor(m.home)" :size="16" />
-        </div>
-        <div>
-          <div :class="`vs-score ${matchTone(m)}`">{{ scoreLine(m) }}</div>
-          <div class="vs-date">{{ formatDateShort(m.date) }}</div>
-        </div>
-        <div class="vs-side away">
-          <TeamLogo :team="teamFor(m.away)" :size="16" />
-          <span :class="m.away.id === subscription.teamId ? 'name mine' : 'name opp'">{{ displayName(m.away.name) }}</span>
-        </div>
-      </div>
-
-      <div v-if="injuries.length" class="inj-bar">
-        <span class="inj-label">伤员</span>{{ injuries.join(' · ') }}
-      </div>
-    </div>
   </article>
 </template>
 
 <style scoped>
-.wide-card, .narrow-card {
+.wide-card {
   background: linear-gradient(180deg, color-mix(in srgb, var(--team-color) 16%, #10152a), #10152a);
   border: 1px solid color-mix(in srgb, var(--team-color) 35%, transparent);
   border-radius: 14px;
@@ -386,7 +314,6 @@ function formatDateLong(iso: string): string {
   display: flex;
   flex-direction: column;
 }
-.narrow-card { border-radius: 12px; }
 
 /* === Wide === */
 .wide-body { display: flex; flex-direction: column; }
@@ -411,7 +338,6 @@ function formatDateLong(iso: string): string {
   font-size: 32px; letter-spacing: 0.02em;
   color: #fff; cursor: pointer; margin: 0;
 }
-.narrow-card .team-name { font-size: 22px; margin-left: auto; }
 .rank-badge {
   margin-left: auto;
   background: color-mix(in srgb, var(--team-color) 18%, transparent);
@@ -489,7 +415,7 @@ function formatDateLong(iso: string): string {
   letter-spacing: 0.12em;
 }
 
-/* === vs row（wide + narrow 共用）=== */
+/* === vs row === */
 .vs-row {
   display: grid; grid-template-columns: 1fr auto 1fr;
   align-items: center; gap: 8px;
@@ -516,8 +442,6 @@ function formatDateLong(iso: string): string {
   font-family: var(--font-mono-d, monospace); font-size: 9px;
   color: var(--slate-600, #475569); letter-spacing: 0.12em; text-align: center; margin-top: 1px;
 }
-.narrow-card .vs-side { font-size: 12px; }
-.narrow-card .vs-score { font-size: 11px; }
 
 /* === stats === */
 .wdl {
@@ -585,29 +509,4 @@ function formatDateLong(iso: string): string {
 .next-label { font-size: 9px; color: var(--slate-500, #64748b); letter-spacing: 0.22em; text-transform: uppercase; }
 .next-match { font-family: var(--font-cond, sans-serif); font-size: 16px; color: #fff; letter-spacing: 0.04em; margin-top: 2px; }
 .next-meta { font-size: 10px; color: var(--slate-400, #94a3b8); margin-top: 2px; letter-spacing: 0.12em; }
-
-/* === narrow === */
-.narrow-body { padding: 12px 14px 10px; display: flex; flex-direction: column; gap: 8px; }
-.narrow-header { display: flex; align-items: center; gap: 8px; }
-.today-mini {
-  padding: 8px 10px;
-  background: rgba(0,0,0,0.30);
-  border: 1px solid color-mix(in srgb, var(--team-color) 35%, transparent);
-  border-radius: 6px;
-}
-.today-meta { font-family: var(--font-mono-d, monospace); font-size: 9px; color: var(--slate-400, #94a3b8); letter-spacing: 0.18em; text-transform: uppercase; }
-.mini-matchup { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 6px; margin-top: 4px; }
-.mini-side {
-  font-family: var(--font-cond, sans-serif); font-size: 14px; color: #fff;
-  display: inline-flex; align-items: center; gap: 4px;
-}
-.mini-side.left { justify-content: flex-end; }
-.vs-text { color: var(--slate-500, #64748b); font-size: 10px; font-family: var(--font-mono-d, monospace); text-align: center; }
-.kickoff { font-family: var(--font-cond, sans-serif); font-size: 14px; color: var(--team-color); text-align: center; margin-top: 2px; }
-.inj-bar {
-  padding: 5px 8px;
-  border-left: 2px solid #ef4444;
-  background: rgba(239,68,68,0.06);
-  font-size: 10px; color: #fca5a5;
-}
 </style>
