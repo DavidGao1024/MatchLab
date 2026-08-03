@@ -38,7 +38,7 @@
 | 13 伤病端点 | ✅ | （本次提交） | CORS 实测 200 OK；结构 ≠ plan 假设（顶层 injuries 非 athletes，type 是对象，status 顶层字符串），适配实现读 type.description；五大联赛当前返 0 条（预季），NFL/NBA 验证可用 |
 | 14 SubscribeButton | ✅ | （本次提交） | 含确认弹窗 + 上限禁用；catch 用 instanceof Error 代替 as any（沿用 Task 10 重构方向） |
 | 15 FavoriteButton | ✅ | （本次提交） | 心形按钮 + 上限禁用；catch instanceof Error 替代 as any；type=button |
-| 16 generateICal | ⏸ 待开工 | — | RFC 5545 |
+| 16 generateICal | ✅ | （本次提交） | RFC 5545；用 Match 类型字段（home/away 非 homeTeam）+ 完整文本转义（逗号/分号/反斜杠/换行） |
 | 17 ExportCalendarButton | ⏸ 待开工 | — | loading + Promise.all 并发 |
 | 18 MyTeamCard | ⏸ 待开工 | — | 今日赛程 + 最近 3 场 + 伤员 |
 | 19 FavoritesDropdown | ⏸ 待开工 | — | 顶部导航下拉 |
@@ -49,7 +49,7 @@
 | 24 App.vue 整合 | ⏸ 待开工 | — | init + Toast/ConfirmDialog 挂载 + AppHeader 加 FavoritesDropdown |
 | 25 终验 | ⏸ 待开工 | — | 全量测试 + typecheck + build + 手动验收 |
 
-**累计**：15/25 Task 完工，19 commit 在 main 分支，119 单测全绿。
+**累计**：16/25 Task 完工，20 commit 在 main 分支，124 单测全绿。
 
 **待补的跟进项**（Approved 不阻塞，建议后续修）：
 - Task 6 EmptyState：缺 `role="status"` + 按钮 `type="button"`（Task 14/18 首次使用时一并修）
