@@ -514,3 +514,38 @@ export async function fetchMatchSummary(
   const s = (await res.json()) as EspnSummary
   return normalizeSummary(s, homeId, awayId, lang)
 }
+
+// ===== Task 13: 球队伤员端点（CORS 已验证 2026-08-03，site.api 浏览器直连）=====
+
+export interface InjuryPlayer {
+  athleteId: number
+  name: string
+  type: string
+  status: string
+}
+
+interface InjuryCacheEntry { data: InjuryPlayer[]; ts: number }
+const injuryCache = new Map<string, InjuryCacheEntry>()
+const INJURY_TTL = 5 * 60_000
+
+/** 仅供测试：清空伤员缓存 */
+export function clearInjuryCache() { injuryCache.clear() }
+
+/** 球队伤员列表（5 分钟缓存）。ESPN 实测：顶层 injuries 数组，非 athletes；
+ *  每条 athlete.{id,displayName}、type.{description}、status（顶层字符串）、details.{type,location,returnDate} */
+export async function fetchTeamInjuries(league: LeagueSlug, teamId: number): Promise<InjuryPlayer[]> {
+  const key = `${league}:${teamId}`
+  const hit = injuryCache.get(key)
+  if (hit && Date.now() - hit.ts < INJURY_TTL) return hit.data
+  const res = await fetch(`${SITE_API}/${league}/injuries?team=${teamId}`)
+  if (!res.ok) throw new Error(`ESPN HTTP ${res.status}`)
+  const data = await res.json() as { injuries?: any[] }
+  const list: InjuryPlayer[] = (data.injuries ?? []).map((it) => ({
+    athleteId: Number(it.athlete?.id ?? 0),
+    name: it.athlete?.displayName ?? '',
+    type: it.type?.description ?? '',
+    status: typeof it.status === 'string' ? it.status : '',
+  })).filter((p) => p.athleteId > 0)
+  injuryCache.set(key, { data: list, ts: Date.now() })
+  return list
+}

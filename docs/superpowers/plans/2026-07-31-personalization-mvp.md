@@ -32,10 +32,10 @@
 | 7 store 骨架 | ✅ | `6b9fdc0` | state + init + hydrate |
 | 8 store 持久化 + addSubscription | ✅ | `24fb22d` | debounce 200ms + dedup + 上限 3 + storage 监听 |
 | 9 订阅 actions | ✅ | `e78b58d` | removeSubscription + isSubscribed + 4 测试 |
-| 10 收藏 actions | ⏸ 待开工 | — | addFavorite/removeFavorite/toggleFavorite/isFavorite（上限 50） |
-| 11 多 tab 同步测试 | ⏸ 待开工 | — | storage event 同步测试（实现已在 Task 8） |
-| 12 useEspanFetch 缓存层 | ⏸ 待开工 | — | 60s 默认 + 进行中 10s |
-| 13 伤病端点 | ⏸ 待开工 | — | 需先手动验证 CORS（用户回来允许开浏览器后） |
+| 10 收藏 actions | ✅ | `638a7e4` + `d352c91` | add/remove/toggle/isFavorite（上限 50）+ 消除 as any 分支内联 + 补测试 |
+| 11 多 tab 同步测试 | ✅ | `1d075cc` | storage event 同步测试覆盖 |
+| 12 useEspanFetch 缓存层 | ✅ | `b8e4304` | 60s 默认 + 进行中 10s（isMonthLive 判定） |
+| 13 伤病端点 | ✅ | （本次提交） | CORS 实测 200 OK；结构 ≠ plan 假设（顶层 injuries 非 athletes，type 是对象，status 顶层字符串），适配实现读 type.description；五大联赛当前返 0 条（预季），NFL/NBA 验证可用 |
 | 14 SubscribeButton | ⏸ 待开工 | — | 含确认弹窗 + 上限禁用 |
 | 15 FavoriteButton | ⏸ 待开工 | — | 心形按钮 + 上限禁用 |
 | 16 generateICal | ⏸ 待开工 | — | RFC 5545 |
@@ -49,7 +49,7 @@
 | 24 App.vue 整合 | ⏸ 待开工 | — | init + Toast/ConfirmDialog 挂载 + AppHeader 加 FavoritesDropdown |
 | 25 终验 | ⏸ 待开工 | — | 全量测试 + typecheck + build + 手动验收 |
 
-**累计**：9/25 Task 完工，13 commit 在 main 分支，80 单测全绿。
+**累计**：13/25 Task 完工，17 commit 在 main 分支，112 单测全绿。
 
 **待补的跟进项**（Approved 不阻塞，建议后续修）：
 - Task 6 EmptyState：缺 `role="status"` + 按钮 `type="button"`（Task 14/18 首次使用时一并修）
