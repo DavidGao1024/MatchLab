@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
 import TeamLogo from '../components/common/TeamLogo.vue'
+import FavoriteButton from '../components/common/FavoriteButton.vue'
 import PlayerStatsGrid from '../components/players/PlayerStatsGrid.vue'
 import PlayerXgChart from '../components/players/PlayerXgChart.vue'
 import PlayerCareerChart from '../components/players/PlayerCareerChart.vue'
@@ -98,7 +99,10 @@ function back() {
       <div class="flex items-center gap-4 mb-6">
         <TeamLogo :team="team" :size="56" />
         <div class="flex-1 min-w-0">
-          <h1 class="font-cond text-3xl font-semibold text-white truncate">{{ displayName }}</h1>
+          <div class="flex items-center gap-3">
+            <h1 class="font-cond text-3xl font-semibold text-white truncate">{{ displayName }}</h1>
+            <FavoriteButton type="player" :id="playerId" :name="displayName" :league="league" />
+          </div>
           <p class="text-sm text-slate-400 mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
             <router-link v-if="team" :to="`/${league}/team/${team.id}`" class="hover:text-white hover:underline">
               {{ teamDisplay }}
