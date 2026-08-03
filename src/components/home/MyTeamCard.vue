@@ -25,12 +25,18 @@ async function load() {
   loading.value = true
   try {
     const now = new Date()
-    const seasonStart = now.getMonth() >= 7 ? now.getFullYear() : now.getFullYear() - 1
-    const months = ['08', '09', '10', '11', '12', '01', '02', '03', '04', '05']
-    const all = await Promise.all(months.map((m) => {
-      const y = Number(m) >= 8 ? seasonStart : seasonStart + 1
-      return fetchLiveScores(props.subscription.league, `${y}-${m}`)
-    }))
+    // 拉取过去 12 个月 + 未来 10 个月（共 23 个月），覆盖跨赛季间隙：
+    // 8 月初新赛季未开赛时仍能看到上赛季最近 3 场
+    const months: string[] = []
+    for (let i = -12; i <= 10; i++) {
+      const d = new Date(now.getFullYear(), now.getMonth() + i, 1)
+      const y = d.getFullYear()
+      const m = String(d.getMonth() + 1).padStart(2, '0')
+      months.push(`${y}-${m}`)
+    }
+    const all = await Promise.all(
+      months.map((m) => fetchLiveScores(props.subscription.league, m)),
+    )
     const teamMatches = all.flat()
       .filter((m) => m.home.id === props.subscription.teamId || m.away.id === props.subscription.teamId)
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
