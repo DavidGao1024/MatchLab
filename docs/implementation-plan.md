@@ -874,6 +874,30 @@ interface MatchTeam {
 
 ---
 
+### 子项目 1：个人化基础 — ✅ 完工（2026-08-03 验收）
+
+**目标**：球队订阅 + 收藏夹 + iCal 导出，无后端 + localStorage 路径。
+
+**实施**：subagent-driven 模式，2026-07-31 起 2026-08-03 验收通过。详见 `docs/superpowers/plans/2026-07-31-personalization-mvp.md`（25 Task + 3 followup 修复）。
+
+**关键产出**：
+- ✅ `src/types/user-data.ts` — Subscription/Favorite 接口 + 常量（订阅上限 3 / 收藏上限 50）
+- ✅ `src/stores/userData.ts` — Pinia store + hydrate/persist + 多 tab 同步 + readOnly flag
+- ✅ `src/utils/{download,migrate,iCal}.ts` — downloadBlob + 数据迁移 + RFC 5545 生成
+- ✅ `src/composables/{useToast,useConfirm,useEspanFetch}.ts` — Toast + ConfirmDialog 单例 + fetchLiveScores/fetchTeamInjuries 缓存层
+- ✅ `src/components/{common,teams,home,layout}/*.vue` — Toast/ConfirmDialog/EmptyState/SubscribeButton/FavoriteButton/ExportCalendarButton/MyTeamCard/FavoritesDropdown 共 8 个新组件
+- ✅ `src/views/FavoritesView.vue` + `/favorites` 路由 — 收藏夹页 tabs 切换
+- ✅ `TeamDetailView`/`PlayerDetailView`/`HomeView`/`App.vue`/`AppHeader` 整合改造
+
+**验收**：138 单测全绿，typecheck/build 通过，浏览器手动 16 项清单 11 ✅ + 3 unit test 已覆盖 + 2 待回归（伤员 ESPN 赛季中复测 + iCal 导入本地日历应用）。
+
+**3 followup 修复**：
+1. MyTeamCard 拉取过去 12 月 + 未来 10 月（共 23 月），跨赛季间隙能显示上赛季末最近 3 场
+2. TeamDetailView teamSlug 用 `\s+` 模式替代 `[^a-z0-9]+`，中文队名不再变双横线文件名
+3. 隐私模式 readOnly flag — store 加 `isLocalStorageWritable` 探测，三按钮 disabled，schedulePersist/persist 早退避免 setTimeout 内抛 uncaught
+
+---
+
 ## 11. 从世界杯项目复用清单
 
 | 模块 | 源文件 | 复用方式 |

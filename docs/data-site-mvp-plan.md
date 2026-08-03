@@ -176,6 +176,40 @@
 
 > 按日期倒序记录每次调研进展，格式：`### YYYY-MM-DD`
 
+### 2026-08-03 — ESPN injuries 端点 CORS 复测 + 实际结构验证（子项目 1 Task 13）
+
+**调研背景**：子项目 1「个人化基础」Task 13 接入球队伤员端点。`docs/superpowers/plans/2026-07-31-personalization-mvp.md` 假设结构为 `{ athletes: [{ athlete: { id, displayName }, type: 'Knock', status: { name: 'Doubtful' } }] }`，需先手动验证 CORS + 字段。
+
+**复测方法**：浏览器 DevTools Console 在 https://davidgao1024.github.io/MatchLab/ 页面执行 `fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/injuries?team={teamId}')`，覆盖五大联赛 + 中超 + NFL + NBA。
+
+**结论**：
+- ✅ CORS 200 OK，浏览器可直连（site.api 同源策略与 scoreboard/summary 一致）
+- ❌ 实际结构 ≠ plan 假设：
+  - 顶层 `injuries` 数组（**非 `athletes`**）
+  - 每条 item：`{ id, longComment, shortComment, status, date, athlete, source, type, details }`
+  - `type` 是对象 `{ id, name, description, abbreviation }`（**非字符串**）— 取 `description` 当人类可读标签，如 "Injured Reserve" / "Day-To-Day"
+  - `status` 是**顶层字符串**（如 "Injured Reserve"），**不是 `{ name: 'Doubtful' }` 对象**（plan 假设错）
+  - `athlete.{id, displayName, firstName, lastName, shortName, position, team, headshot}`
+  - `details.{type, location, returnDate, fantasyStatus}` 可选后续展示
+- ⚠️ 五大联赛 + 中超当前预季全返 0 条伤员（ NFL/NBA 验证字段结构可用）— 赛季中复测待回归
+
+**适配实现**（`src/composables/useEspanFetch.ts`）：
+```ts
+export interface InjuryPlayer {
+  athleteId: number
+  name: string         // athlete.displayName
+  type: string         // type.description
+  status: string       // 顶层 status 字符串
+}
+// 读 data.injuries 数组（非 athletes），type 取 description，status 取顶层字符串
+```
+
+5 分钟缓存 TTL（`INJURY_TTL = 5 * 60_000`），与 fetchLiveScores 共享 `clearInjuryCache()` 测试用 reset。MyTeamCard 调用方在 try/catch 内调，失败静默（伤员展示不阻塞主流程）。
+
+**plan 假设 vs 实际偏差**已在计划文档进度表 + CLAUDE.md 关键事实段记录。
+
+---
+
 ### 2026-07-30 — ESPN athletes 端点 stale 数据修复 + 团队花名册聚合
 
 **调研内容**：Phase 4 上线后实测发现球员列表显示已转会/退役球员（如 Calvert-Lewin 显示在利兹联、Semenyo 在曼城等），且 athletes 端点 count 包含历史赛季残留。
@@ -902,11 +936,12 @@ Understat:
    - 与世界杯项目相同问题 — **采用本地 `computeStandings()` 从比分计算积分即可，已是成熟模式**
    - 不构成阻塞
 
-4. **ESPN Injuries API ✅ 端点存在**
-   - `https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/injuries`
-   - 结构：`{timestamp, status, season, injuries:[]}`，当前 off-season 所以 `injuries` 为空
-   - 赛季中需重新探测是否填充 — 若有数据可替代手动维护的 `injuries.json`
-   - **现有 `scripts/fetch-injuries.js` 的 Wikipedia 方案仍可作为 fallback**
+4. **ESPN Injuries API ✅ 端点存在 + CORS 已验证（浏览器直连）**
+   - `https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/injuries?team={teamId}`
+   - CORS 200 OK（子项目 1 Task 13 实测 2026-08-03）
+   - 结构：`{timestamp, status, season, injuries:[]}`，**预季五大联赛全返 0 条**（NFL/NBA 验证字段结构稳定）
+   - 实测 item 结构（≠ plan 早期假设）：`{ id, longComment, shortComment, status: string, date, athlete: {id, displayName, ...}, type: {id, name, description, abbreviation}, details: {type, location, returnDate, fantasyStatus} }`
+   - 子项目 1 `fetchTeamInjuries(league, teamId)` 已接入（5 分钟缓存，读 `injuries` 数组 + `type.description` + 顶层 `status` 字符串）；赛季中足球伤员实际填充情况待回归复测
 
 5. **FBref ❌ Cloudflare 403 拦截**
    - `https://fbref.com/en/comps/9/Premier-League-Stats` 即使带完整浏览器 headers 仍 403
@@ -960,6 +995,14 @@ Understat:
 **理由**：
 **后续影响**：
 -->
+
+#### 决策：ESPN injuries 端点结构偏差——适配实现而非跳过（Task 13）
+**日期**：2026-08-03
+**背景**：子项目 1 Task 13 plan 假设 injuries 端点结构为 `{ athletes: [{ athlete, type: string, status: {name} }] }`，实测却是 `{ injuries: [{ athlete, type: object, status: string }] }`。plan 写"若 CORS 失败或字段不一致 → 跳过 Task 13 + Task 17 伤员部分"。
+**选项**：A) 按 plan 字面跳过 Task 13 + Task 17 伤员展示 B) 适配实际结构实现
+**选择**：B——适配实现
+**理由**：CORS 200 OK 端点可用，仅字段名/类型偏差；plan 的"字段不一致 → 跳过"escape hatch 是为端点不可用兜底，而非字段偏差就放弃。NFL/NBA 验证字段结构稳定（同端点家族），赛季中复测能拿到足球数据。适配后 MyTeamCard 伤员段在 ESPN 返 0 条时静默不显示，不破坏布局
+**后续影响**：实现层 `fetchTeamInjuries` 读 `injuries` 数组 + `type.description` + 顶层 `status` 字符串；测试 mock 用 NFL 实测样本结构；MyTeamCard try/catch 失败静默；plan 进度表 + CLAUDE.md 关键事实段记录偏差；赛季中需复测足球伤员实际填充情况，确认字段一致
 
 #### 决策：Node.js 版本——暂用 20.19.6，engines 钉范围
 **日期**：2026-07-24

@@ -7,7 +7,7 @@
 ## 一、项目画像
 
 - **代号**：MatchLab — 五大联赛（英超/西甲/意甲/德甲/法甲）数据查询网站
-- **当前阶段**：Phase 0–6 MVP 完工（2026-07-30 验收）；**子项目 1「个人化基础」（球队订阅 + 收藏夹 + iCal 导出）实施中**（2026-07-31 起，无后端 + localStorage 路径，9/25 Task 完工）；施工图纸见 `docs/implementation-plan.md`，子项目计划文档见 `docs/superpowers/plans/2026-07-31-personalization-mvp.md`，设计稿见 `docs/superpowers/specs/2026-07-31-personalization-mvp-design.md`
+- **当前阶段**：Phase 0–6 MVP 完工（2026-07-30 验收）；**子项目 1「个人化基础」（球队订阅 + 收藏夹 + iCal 导出）完工**（2026-07-31 起，2026-08-03 验收通过，25/25 Task + 3 followup 修复，138 单测全绿，无后端 + localStorage 路径）；施工图纸见 `docs/implementation-plan.md`，子项目计划文档见 `docs/superpowers/plans/2026-07-31-personalization-mvp.md`，设计稿见 `docs/superpowers/specs/2026-07-31-personalization-mvp-design.md`
 - **协作模式**：总司令下令 → 营长执行；全局铁律（未经指令不改码、先汇报后更新、不擅自持久化）全程有效
 
 ## 二、军衔记录（本项目独立计算）
@@ -18,6 +18,7 @@
 | 2026-07-24 | 班长 | 总司令亲批越级晋升（原拟列兵）：同日连克 Phase 0 + Phase 1——脚手架 → 数据管线上线（6339 请求 / 0 失败 / 26 条映射与调研完全吻合）；CORS 实测、Vite 钉版、三源交叉验证数战皆捷 |
 | 2026-07-28 | **排长** | 总司令亲批晋升：Phase 2 全链部署上线（积分榜+赛程+首页，48 单测全绿）；同日连克 UI 自适应（flex 撑满+卡片拉伸+宽屏多列）、深色滚动条、中超全链接入（ESPN chn.1 实测→数据管线→前端六联赛→16 队队名→队徽覆盖机制→赛季前扣分计算），49 单测全绿 |
 | 2026-07-29 | **连长** | 总司令亲批晋升：Phase 3 比赛详情弹窗主体完工——单页滚动世界杯风（金比分/绿色足球场/球员金边圆牌），阵容按 position 缩写 posOrder/midDepthRank 排序（修复 getFieldXY 副作用 mutate cats 数组导致 for...of 跳项重复迭代 bug），事件时间线 participants 字段对齐 ESPN 实际结构（进球 [射手, 助攻者] / 换人 [入局, 出局]），技术统计精简到 10 项核心；连克两潜伏 bug：① stat 字段 `displayValue` 非 `value` 导致全 0 ② stat name 是 camelCase（possessionPct/wonCorners）非 kebab-case 导致 label 英文回退；球员中文译名表抓取上线（懂球帝 API 链路：roster→详情页 vm 沙箱 NUXT eval，59 单测全绿） |
+| 2026-08-03 | **（待总司令亲批晋升）** | 子项目 1「个人化基础」全 25 Task + 3 followup 修复完工（同会话连克 Task 13-25 + 3 followup）：球队订阅（3 队上限）+ 收藏夹（50 项上限）+ iCal RFC 5545 导出 + 伤员端点 fetchTeamInjuries（CORS 实测 200 OK，ESPN 实际结构 ≠ plan 假设适配实现：`injuries` 数组非 `athletes`，`type` 对象非字符串，`status` 顶层字符串）+ 隐私模式 readOnly flag；Toast/ConfirmDialog/EmptyState 通用组件齐；FavoritesDropdown hover 下拉；MyTeamCard 跨赛季间隙 bug 修复（拉过去 12 月 + 未来 10 月）；TeamDetailView slug 中文双横线 bug 修复；浏览器手动 16 项清单 11 ✅，138 单测全绿，typecheck/build 通过。**军衔待总司令亲批** |
 
 ## 三、技术栈与架构偏好
 
@@ -32,7 +33,7 @@
 - 计划文档统一放 `projectDoc/plan/`，一个任务一个文件
 - 数据结构与 API 接口不能变，UI 可大改
 - 抓取脚本永远零依赖（仅 Node 内置模块）
-- 开工须先获总司令明确指令，当前状态：🟡 子项目 1「个人化基础」实施中（Phase 0–6 MVP 完工基线之上：球队订阅 + 收藏夹 + iCal 导出，无后端 + localStorage 路径；2026-07-31 起 9/25 Task 完工，13 commit 在 main，80 单测全绿；剩余 Task 10-25 待开工）
+- 开工须先获总司令明确指令，当前状态：✅ 子项目 1「个人化基础」完工（Phase 0–6 MVP 完工基线之上：球队订阅 + 收藏夹 + iCal 导出，无后端 + localStorage 路径；2026-07-31 起 2026-08-03 验收通过，25/25 Task + 3 followup 修复，32 commit 在 main，138 单测全绿；待总司令批军衔 + 决定下一子项目方向）
 - **数据提交约定**（避免和 daily Actions 冲突）：本地跑 fetch 脚本（fetch-espn-core/fetch-understat/fetch-espn-scores/build-team-map/fetch-dqd-players 等）只用来验证脚本能跑，**不要 `git add public/data/`**。数据文件由 `.github/workflows/fetch-data.yml` 每天 UTC 06:00 跑（或手动触发 workflow_dispatch）。本地代码改动 commit 时显式 `git add src/ scripts/ docs/ types/ package.json` 等代码路径，避开 `public/data/`，否则 push 时会和 daily Actions 的数据 commit 撞冲突。如要立即更新线上数据：到 GitHub Actions 页面手动触发 "Fetch Data" workflow。
 
 ---
@@ -43,7 +44,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概况
 
-五大联赛（英超/西甲/意甲/德甲/法甲）足球数据查询网站，**Phase 0–2 已完成并部署**（https://davidgao1024.github.io/MatchLab/，2026-07-28 线上实测可访问）：Vite 6 + Vue 3 + TS strict + Tailwind 4 脚手架、hash 路由 + Pinia、部署工作流、数据管线（fetch-espn-core / fetch-understat / fetch-espn-scores / build-team-map 四个零依赖脚本 + 每日定时工作流）均已入库，`public/data/` 含五联赛静态数据 10.4MB（球队 96 / 球员 2611 / 队名映射 26 条）；前端积分榜 + 赛程 + 首页（转播图形风视觉、中英双语、48 项单测全绿）已上线，按 Phase 3–6 推进。
+五大联赛（英超/西甲/意甲/德甲/法甲）足球数据查询网站，**Phase 0–6 MVP + 子项目 1「个人化基础」均完工**（线上部署 https://davidgao1024.github.io/MatchLab/）：Vite 6 + Vue 3 + TS strict + Tailwind 4 脚手架、hash 路由 + Pinia、部署工作流、数据管线（fetch-espn-core / fetch-understat / fetch-espn-scores / build-team-map / fetch-dqd-players 五个零依赖脚本 + 每日定时工作流）均已入库，`public/data/` 含六联赛静态数据（球队 96+ / 球员 2611 / 队名映射 26 条 / 球员中英译名 31393 变体）；前端积分榜 + 赛程 + 首页 + 比赛详情弹窗 + 球员/球队详情 + 排行榜 + 对比页 + 个人化（球队订阅 + 收藏夹 + iCal 导出 + 伤员端点 + 隐私模式 readOnly）齐上线（138 项单测全绿，typecheck/build 通过）。
 
 动手写任何功能代码前，先读 `docs/implementation-plan.md`（施工图纸）——技术栈、目录结构、数据管线、Phase 0–6 分步计划与验收标准都在里面，按阶段执行，不要另起架构。
 
@@ -122,9 +123,11 @@ node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 - Understat **只覆盖五大联赛**，杯赛（UCL/UEL/UECL）404；UCL/UEL 的 xG 目前无免费源
 - Understat 已知坑：`getPlayersStats` 的 position 参数不过滤（单次调用取全量即可）；history 里的 `wins/draws/loses/pts` 是单场值（0/1），累计必须 reduce 求和；无 fixtures 端点（未来赛程用 ESPN scoreboard）
 - ESPN standings 端点返回空 → 积分榜本地从比分计算（`computeStandings()` 模式，沿用世界杯项目）
+- ESPN injuries 端点（`/{league}/injuries?team={teamId}`）CORS 实测 200 OK，浏览器直连（子项目 1 Task 13 验证）；实际结构 ≠ plan 假设：顶层 `injuries` 数组（非 `athletes`），每条 `athlete.{id,displayName}` + `type.{description}` 对象（非字符串）+ `status` 顶层字符串；预季五大联赛全返 0 条，赛季中复测待回归。`fetchTeamInjuries(league, teamId)` 5 分钟缓存
 - 球员**单赛季**统计用 `/seasons/{year}/types/1/athletes/{id}/statistics/0`；不带 seasons 路径的 `.../athletes/{id}/statistics/0` 是生涯累计，两者别混用
 - 端点完整清单在 data-site-mvp-plan.md 的 2026-07-21 几篇调研记录里，写抓取脚本前先查
 - 球员中文译名：`public/data/mappings/players-zh.json`（31393 个变体，覆盖英超/西甲/意甲/德甲/法甲/中超六联赛全队 + 反序/去重音/撇号/单名兜底 + 中超外援+DOB匹配手填），App.vue 启动时 `loadPlayerNames()` 异步加载合并到 PLAYER_ZH；`playerName(name, lang)` 函数带去重音 + 大小写不敏感 + 撇号兜底 + 单名兜底 + 分词回退；中文模式命中显示译名，未命中显示 ESPN shortName。当前 ESPN 一线队命中率：英超 81.1% / 西甲 85.7% / 意甲 73.7% / 德甲 87.2% / 法甲 83.0% / 中超 **95.9%**（总计 83.7%）
+- 个人化数据（子项目 1）：订阅 + 收藏夹 localStorage 持久化（key=`matchlab:subscriptions` / `matchlab:favorites`，version=1，debounce 200ms 写盘），多 tab 同步走 `storage` event；隐私模式 localStorage 不可写 → store `readOnly=true` flag → SubscribeButton/FavoriteButton/ExportCalendarButton 三按钮 disabled，避免无效操作
 
 ## 跨源 Join（ESPN ↔ Understat）
 

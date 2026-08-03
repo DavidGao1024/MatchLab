@@ -68,21 +68,28 @@
 | **ESPN core ID 跨赛事全局一致**（Arsenal=359，Haaland=253989） | 数据模型按 `(entity_id, league_slug, season)` 三元组组织，无需映射表 | Phase 1 调研 |
 | **抓取脚本零依赖约定**：仅 Node 内置模块（https/zlib/fs），UA 伪装、gzip 解压、请求间隔 ≥200ms、数据无变化不 commit；CommonJS 隔离（`scripts/package.json` 的 `type: commonjs`） | 所有抓取脚本 | Phase 1 |
 | **Understat ↔ ESPN 队名映射**：26 条差异，维护 `UNDERSTAT_TEAM_MAP`；球员用 lower-case 姓名精确匹配（92.5% 命中） + 编辑距离 fuzzy match + 人工 `player-name-map.json` 兜底 | 跨源 Join | Phase 1 调研 |
+| **localStorage 数据持久化模式**：`version` 字段防 schema 演进 + `migrate*` 函数 hydrate 时归一化 + `schedulePersist` debounce 200ms 写盘 + `storage` event 多 tab 同步 + `readOnly` flag 探测隐私模式 | 浏览器端用户数据（订阅/收藏/对比等） | 子项目 1 |
+| **iCal 导出模式**：`generateICal` 生成 RFC 5545 文本（`injuries` 数组映射 VEVENT，UID 含 `team-slug-date-teamId-awayId@matchlab` 保证稳定）+ `downloadBlob` 触发下载 + `Promise.all` 并发拉取赛季 10 个月 | 用户导出赛程到本地日历应用 | 子项目 1 |
+| **ESPN 端点结构实测模式**：plan/spec 假设的 JSON 结构必须用浏览器 DevTools 实测验证（顶层字段名 + 字段类型 + 嵌套层级），偏差时适配实现而非盲跳过；用 NFL/NBA 同端点家族验证字段结构（足球预季返 0 条时） | 接入新 ESPN 端点 | 子项目 1 Task 13 |
+| **subagent-driven TDD 工作流**：每 Task 写测试 → 跑失败 → 实现 → 跑通过 → 提交；catch 用 `e instanceof Error` 替代 `as any`（沿用 Task 10 重构方向）；组件加 `type="button"` + a11y 属性 | 多 Task 子项目实施 | 子项目 1 |
 
-## 五、当前线上状态（2026-07-31）
+## 五、当前线上状态（2026-08-03）
 
 - 线上：https://davidgao1024.github.io/MatchLab/
 - 部署 workflow：`Deploy to GitHub Pages`（push to main 触发）
 - 数据 workflow：`Fetch Data`（每天 UTC 06:00，数据无变化不 commit）
-- 首屏 entry chunk：186KB / gzip 70KB（含 HomeView 静态 import）
-- 最大 chunk：PlayerDetailView 179KB / gzip 62.86KB（chart.js 占大头，未来可考虑动态注册 chart 组件减体积）
+- 首屏 entry chunk：199KB / gzip 75KB（含 HomeView 静态 import + 子项目 1 个人化组件）
+- 最大 chunk：PlayerDetailView 179KB / gzip 62.96KB（chart.js 占大头，未来可考虑动态注册 chart 组件减体积）
 - ESPN 一线队译名命中率：英超 81.1% / 西甲 85.7% / 意甲 73.7% / 德甲 87.2% / 法甲 83.0% / 中超 95.9%（总计 83.7%）
+- 测试覆盖：138 单测 / 24 文件全绿（Phase 0-6 + 子项目 1）
+- 子项目 1「个人化基础」完工：25/25 Task + 3 followup 修复（2026-08-03 验收），32 commit 在 main，typecheck/build 通过
 
 ## 六、后续可能的方向
 
 | 方向 | 估工作量 | 前置 |
 |---|---|---|
-| **子项目 1 个人化基础（球队订阅 + 收藏夹 + iCal 导出）** | 中 | **实施中**（2026-07-31 起，9/25 Task 完工，见 `docs/superpowers/plans/2026-07-31-personalization-mvp.md`） |
+| **子项目 1 个人化基础** | 中 | ✅ **完工**（2026-07-31 起 2026-08-03 验收，25/25 Task + 3 followup 修复，见 `docs/superpowers/plans/2026-07-31-personalization-mvp.md`） |
+| **商用化决策待办** | 中 | 部署切换（GitHub Pages → 自有域名 + 付费 host）+ 数据源授权（ESPN/Understat 商用授权）+ 隐藏代码（私有仓库 or obfuscation），待总司令决策 |
 | PWA + Service Worker 离线缓存 | 中 | SW 缓存策略需区分静态 JSON（缓存优先）与 ESPN 直连（网络优先） |
 | 内容深化（球员更多统计分类、球队阵容页、射手榜单独页） | 中 | 数据已有，前端补 UI |
 | 历史赛季回溯（25 个赛季的 standings/赛程切换） | 中大 | `seasons.json` 已抓，需补 fetchSeasons 落地 standings/赛程 |
