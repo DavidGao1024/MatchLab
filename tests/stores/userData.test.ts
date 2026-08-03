@@ -162,3 +162,28 @@ describe('useUserDataStore 收藏 actions', () => {
     expect(s.isFavorite('player', 999)).toBe(false)
   })
 })
+
+describe('useUserDataStore 多 tab 同步', () => {
+  it('storage event 触发 hydrate', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    // 模拟另一 tab 写入
+    localStorage.setItem('matchlab:subscriptions', JSON.stringify({
+      version: 1,
+      items: [{ league: 'eng.1', teamId: 359, teamName: 'Arsenal', addedAt: 'x' }],
+    }))
+    window.dispatchEvent(new StorageEvent('storage', {
+      key: 'matchlab:subscriptions',
+      newValue: localStorage.getItem('matchlab:subscriptions'),
+    }))
+    expect(s.subscriptions.length).toBe(1)
+    expect(s.subscriptions[0].teamName).toBe('Arsenal')
+  })
+  it('其他 key 的 storage event 不触发 hydrate', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    const before = s.subscriptions.length
+    window.dispatchEvent(new StorageEvent('storage', { key: 'other-key', newValue: 'x' }))
+    expect(s.subscriptions.length).toBe(before)
+  })
+})
