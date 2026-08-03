@@ -68,6 +68,7 @@
   - 右侧 away：36px crest + 队名
 - kickoff-row：开球时间（mono 13px white bold）+ 倒计时（Bebas Neue 22px team-color）
 - venue-row：`◉ EMIRATES STADIUM`（mono 10px slate-500）
+- **进行中比赛**（`match.status === 'in'`）：标签变"进行中" + 红色 live dot + `match.clock` 替代开球时间，倒计时位置改显当前比分
 - **无今日赛时**：英雄区显示"今日无赛"标签 + 下场预告（next match 取 `teamMatches.find(m => new Date(m.date) > now)` 的第一场，含对阵 + 开球时间 + 倒计时 + 球场），把"今日"标签改为"下场"。无下场（赛季已结束）则显示"赛季已结束"+ 上赛季最终排名
 
 ### 列 2 最近 3 场（1fr）
@@ -89,8 +90,10 @@
 ### Footer（双列）
 - 左：红条伤员（INJ-label + 球员名列表）
 - 右：下场预告（NEXT label + `ARS vs TOT` Bebas Neue 16px + `8/28 · 周六 22:00` mono 10px）
-  - 数据源：`teamMatches.find(m => new Date(m.date) > now)` 的第一场（仅次于今日赛的下场）
-  - 与列 1 今日赛英雄区的"无今日赛时下场预告"共享同一逻辑——只取一场下场，避免重复展示
+  - 数据源逻辑树（避免与列 1 hero 的下场预告重复）：
+    - 有今日赛 → footer 显示**下一场**（today 之后的第一个 future match）
+    - 无今日赛 → 列 1 hero 已显示下场预告，footer 显**再下一场**（future match 索引 [1]）；若只有一场 future，footer 显"无再下场"占位
+    - 赛季已结束（无 future） → footer 显"赛季已结束"
 
 ## 四、2-3 队紧凑卡结构
 
@@ -115,9 +118,9 @@
 
 - 卡宽：grid 列宽（2 队 1/2，3 队 1/3）
 - padding：`12px 14px`
-- header：tag + league + team-name（Bebas Neue 22px，右对齐）
-- today：迷你框，无大队徽 / 倒计时 / 球场，只显示对阵 + 开球时间
-- recent 3 场：vs 格式同 1 队，字号略小（13px → 12px）
+- header：tag + league + team-name（Bebas Neue 22px，右对齐，`margin-left: auto`）
+- today：迷你框，**迷你队徽 16-18px**（不是 1 队的 36px 大队徽）+ 对阵 + 开球时间，无倒计时 / 球场
+- recent 3 场：vs 格式同 1 队（3 列 grid + mine/opp 高亮 + W/D/L tone），字号略小（13px → 12px）
 - 伤员：红条一行（不占底栏，放卡尾）
 
 ## 五、组件结构
@@ -127,9 +130,14 @@
 **Props**：
 - `subscription: Subscription`（已有，含 league / teamId / teamName）
 
+**布局判定**：组件内读 `useUserDataStore().subscriptions.length` 决定 1 队拉宽 vs 2-3 队紧凑。1 队 → `layoutMode = 'wide'`，2-3 队 → `layoutMode = 'narrow'`。模板内 `<article :class="layoutMode === 'wide' ? 'wide-card-classes' : 'narrow-card-classes'">` 切换。
+
 **新依赖**（已有 store）：
 - `useStandingsStore`：读 `rows[league]` 找 `teamId === subscription.teamId` 的 StandingRow → rank / points / won / drawn / lost / goalsFor / goalsAgainst / form
 - `useTeamsStore`：`teamById(league, teamId)` → 拿 `team.color` + `team.shortDisplayName` 等
+- `useAppStore`：`app.lang` 用于 `teamName()` i18n 本地化球队名显示
+
+**球队名本地化**：所有显示给用户的队名都用 `teamName(name, app.lang)` 转换（中文模式命中译名表显示中文，英文模式显示 ESPN 原名）。包括 hero 大字号、vs 行 mine/opp 队名。
 
 **CSS 变量**：
 - 组件根 `<article>` 上 `:style="{ '--team-color': teamColor }"`，`teamColor = computed(() => team.value?.color || app.leagueInfo(league)?.color || '#3D195B')`
@@ -172,9 +180,10 @@ HomeView
 ## 八、错误处理
 
 - **standingsStore 该联赛未加载** → 战绩区显示骨架（"-" 占位），不阻塞渲染
-- **fetchLiveScores 失败** → 整卡显示错误态（沿用 `DataError` 组件）
+- **fetchLiveScores 失败** → 整卡显示错误态（沿用 `DataError` 组件，需在 MyTeamCard 新增 import）
 - **fetchTeamInjuries 失败** → 伤员红条静默不显示（已有 try/catch）
 - **team.color 为空** → fallback 联赛色 `app.leagueInfo(league)?.color`，再 fallback `#3D195B`
+- **teamsStore 该队未加载** → team-name fallback 用 `subscription.teamName`（订阅时存的本地化名）；team.color fallback 走联赛色
 
 ## 九、测试
 
@@ -196,7 +205,14 @@ HomeView
 ## 十、范围外
 
 - 不动 EmptyState / ConfirmDialog / Toast 通用组件
-- 不动 HomeView 顶部订阅区 wrapper（只改 MyTeamCard 本身）
+- 不动 HomeView 顶部订阅区 wrapper（只改 `max-w-5xl → max-w-7xl` 一处让单卡有横向空间，其他不改）
 - 不动 store / composable 层
 - 不动其他 Phase 0-6 视图
 - 不引入新 npm 依赖
+
+## 十一、风险与权衡
+
+- **standings 数据依赖**：MyTeamCard 读 `standingsStore.rows[league]`，该数据由 HomeView 加载（LeagueCard 触发 `standings.load()`）。HomeView 加载失败时 MyTeamCard 战绩区显骨架，不阻塞整卡——可接受。
+- **多卡同时 fetch**：3 队订阅 × 23 个月 fetchLiveScores = 69 次并行 fetch（但有共享缓存层，重复 league+month 命中缓存，实际 ≤30 次）。Task 12 缓存层足够覆盖。
+- **`team.color` 数据完整性**：ESPN core 抓取的 team 档案含 `color`/`alternateColor`，部分小联赛球队可能为空字符串——已用联赛色 fallback 兜底。
+- **1 队拉宽在 4K 屏过宽**：max-w-7xl = 1280px，4K 屏（3840px）下仍居中合理留白，不会拉到全屏宽。
