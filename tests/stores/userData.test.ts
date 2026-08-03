@@ -88,3 +88,52 @@ describe('useUserDataStore 订阅 actions', () => {
     expect(() => s.addSubscription({ league: 'eng.1', teamId: 4, teamName: 'D' })).toThrow()
   })
 })
+
+describe('useUserDataStore 收藏 actions', () => {
+  it('addFavorite 球队', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    s.addFavorite('team', { league: 'eng.1', teamId: 359, name: 'Arsenal' })
+    vi.advanceTimersByTime(200)
+    expect(s.favorites.teams.length).toBe(1)
+    expect(s.isFavorite('team', 359)).toBe(true)
+  })
+  it('addFavorite 球员', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    s.addFavorite('player', { league: 'eng.1', athleteId: 253989, name: 'Haaland' })
+    vi.advanceTimersByTime(200)
+    expect(s.favorites.players.length).toBe(1)
+    expect(s.isFavorite('player', 253989)).toBe(true)
+  })
+  it('重复 addFavorite 被 dedup', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    s.addFavorite('team', { league: 'eng.1', teamId: 359, name: 'Arsenal' })
+    s.addFavorite('team', { league: 'eng.1', teamId: 359, name: 'Arsenal' })
+    expect(s.favorites.teams.length).toBe(1)
+  })
+  it('toggleFavorite 切换态', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    s.toggleFavorite('team', 359, 'Arsenal', 'eng.1')
+    expect(s.favorites.teams.length).toBe(1)
+    s.toggleFavorite('team', 359, 'Arsenal', 'eng.1')
+    expect(s.favorites.teams.length).toBe(0)
+  })
+  it('removeFavorite 删除', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    s.addFavorite('team', { league: 'eng.1', teamId: 359, name: 'Arsenal' })
+    s.removeFavorite('team', 359)
+    expect(s.favorites.teams.length).toBe(0)
+  })
+  it('超 50 项抛错', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    for (let i = 0; i < 50; i++) {
+      s.addFavorite('team', { league: 'eng.1', teamId: i, name: `T${i}` })
+    }
+    expect(() => s.addFavorite('team', { league: 'eng.1', teamId: 999, name: 'X' })).toThrow()
+  })
+})
