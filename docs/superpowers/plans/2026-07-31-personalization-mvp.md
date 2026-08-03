@@ -40,7 +40,7 @@
 | 15 FavoriteButton | ✅ | （本次提交） | 心形按钮 + 上限禁用；catch instanceof Error 替代 as any；type=button |
 | 16 generateICal | ✅ | （本次提交） | RFC 5545；用 Match 类型字段（home/away 非 homeTeam）+ 完整文本转义（逗号/分号/反斜杠/换行） |
 | 17 ExportCalendarButton | ✅ | （本次提交） | 10 月并发 fetchLiveScores + generateICal + downloadBlob；用 Match 类型字段（home/away 非 homeTeam）；catch instanceof Error；type=button |
-| 18 MyTeamCard | ⏸ 待开工 | — | 今日赛程 + 最近 3 场 + 伤员 |
+| 18 MyTeamCard | ✅ | （本次提交） | 今日赛程 + 最近 3 场 + 伤员（fetchTeamInjuries 接入）；用 Match 类型字段（home/away 非 homeTeam）；scoreLine 处理 null score；加"有今日赛程"测试 |
 | 19 FavoritesDropdown | ⏸ 待开工 | — | 顶部导航下拉 |
 | 20 FavoritesView + 路由 | ⏸ 待开工 | — | tabs 切换 + iCal 导出按钮 |
 | 21 TeamDetailView 改造 | ⏸ 待开工 | — | 三个按钮齐 |
@@ -49,7 +49,7 @@
 | 24 App.vue 整合 | ⏸ 待开工 | — | init + Toast/ConfirmDialog 挂载 + AppHeader 加 FavoritesDropdown |
 | 25 终验 | ⏸ 待开工 | — | 全量测试 + typecheck + build + 手动验收 |
 
-**累计**：17/25 Task 完工，21 commit 在 main 分支，126 单测全绿。
+**累计**：18/25 Task 完工，22 commit 在 main 分支，129 单测全绿。
 
 **待补的跟进项**（Approved 不阻塞，建议后续修）：
 - Task 6 EmptyState：缺 `role="status"` + 按钮 `type="button"`（Task 14/18 首次使用时一并修）
