@@ -4,6 +4,26 @@ import type { LeagueSlug } from '../utils/constants'
 
 const SITE_API = 'https://site.api.espn.com/apis/site/v2/sports/soccer'
 
+interface ScoreCacheEntry { data: Match[]; ts: number }
+const scoreCache = new Map<string, ScoreCacheEntry>()
+const TTL_DEFAULT = 60_000
+const TTL_LIVE = 10_000
+
+/** 进行中比赛持续不超过 3 小时；当月有进行中比赛则用短 TTL */
+function isMonthLive(data: Match[]): boolean {
+  const now = Date.now()
+  return data.some((m) => {
+    if (m.status !== 'in') return false
+    const start = new Date(m.date).getTime()
+    return now - start < 3 * 3600_000 && now > start
+  })
+}
+
+function scoreCacheKey(league: string, month: string) { return `${league}:${month}` }
+
+/** 仅供测试：清空缓存 */
+export function clearScoreCache() { scoreCache.clear() }
+
 /** 'YYYY-MM' → ESPN dates 参数 YYYYMM01-YYYYMMDD（月末按 UTC 日历推） */
 export function monthDateRange(month: string): string {
   const [y, m] = month.split('-').map(Number)
@@ -40,14 +60,22 @@ export function normalizeEvent(e: EspnEvent): Match | null {
   }
 }
 
-/** 当月直播比分（limit=200 防分页截断，蓝图 §6.3 / 规格 v1.5） */
+/** 当月直播比分（limit=200 防分页截断，蓝图 §6.3 / 规格 v1.5）
+ *  加共享内存缓存：60s 默认 / 10s 当月有进行中比赛 */
 export async function fetchLiveScores(league: LeagueSlug, month: string): Promise<Match[]> {
+  const key = scoreCacheKey(league, month)
+  const hit = scoreCache.get(key)
+  if (hit) {
+    const age = Date.now() - hit.ts
+    const ttl = isMonthLive(hit.data) ? TTL_LIVE : TTL_DEFAULT
+    if (age < ttl) return hit.data
+  }
   const res = await fetch(`${SITE_API}/${league}/scoreboard?dates=${monthDateRange(month)}&limit=200`)
   if (!res.ok) throw new Error(`ESPN HTTP ${res.status}`)
   const sb = (await res.json()) as EspnScoreboard
-  return (sb.events ?? [])
-    .map(normalizeEvent)
-    .filter((m): m is Match => m !== null)
+  const data = (sb.events ?? []).map(normalizeEvent).filter((m): m is Match => m !== null)
+  scoreCache.set(key, { data, ts: Date.now() })
+  return data
 }
 
 // ===== Phase 3：比赛详情弹窗 summary 端点（CORS 已验证，与 scoreboard 同源同端点族）=====
