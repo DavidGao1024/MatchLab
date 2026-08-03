@@ -46,7 +46,7 @@ async function load() {
         const li = app.leagueInfo(l)
         const ls = li?.season ?? season
         const lt = li?.seasonType ?? 'european'
-        return standings.load(l, ls, { withForm: false, seasonType: lt }).catch(() => null)
+        return standings.load(l, ls, { withForm: false, seasonType: lt, forceFresh: true }).catch(() => null)
       }),
     ])
     // "上轮" = 最近一个有完赛的比赛日，从默认月份往前最多回看 2 个月份文件（规格 v1.2）
@@ -58,7 +58,7 @@ async function load() {
       if (seq.value !== my) return // 过期响应防护：扫描途中视图已切换则立即放弃
       let matches: Match[]
       try {
-        matches = (await fetchJsonCached<MatchesFile>(`data/${focus}/matches/${m}.json`, 60 * 60 * 1000, season)).matches
+        matches = (await fetchJsonCached<MatchesFile>(`data/${focus}/matches/${m}.json`, 60 * 60 * 1000, season, { forceFresh: true })).matches
       } catch {
         continue // 该月文件缺失 → 继续回看
       }

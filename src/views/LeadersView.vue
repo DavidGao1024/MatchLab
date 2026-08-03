@@ -28,7 +28,7 @@ async function load() {
   error.value = ''
   try {
     await ensureLeague(league.value)
-    await leaders.ensure(league.value, season.value)
+    await leaders.ensure(league.value, season.value, { forceFresh: true })
     if (seq.value !== my) return
   } catch (e) {
     if (seq.value !== my) return

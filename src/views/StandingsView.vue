@@ -35,7 +35,7 @@ async function load() {
   xgNotice.value = false
   try {
     await ensureLeague(league.value) // 加载顺序契约：队徽/主色先就位
-    await store.load(league.value, season.value, { seasonType: seasonType.value })
+    await store.load(league.value, season.value, { seasonType: seasonType.value, forceFresh: true })
     if (seq.value !== my) return // 过期响应防护（规格 v1.5）：返回时视图已切换则放弃后续处理（store 按联赛命名空间隔离，数据本身不串）
   } catch (e) {
     if (seq.value !== my) return

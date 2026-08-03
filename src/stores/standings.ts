@@ -5,7 +5,7 @@ import type { MatchesFile, RawStanding, StandingsFile, TeamNameMapFile, XgFile }
 import { applyForm, mergeStandings } from '../utils/standings'
 import { currentMonth, seasonMonths, type LeagueSlug } from '../utils/constants'
 
-const STANDINGS_TTL = 60 * 60 * 1000
+const STANDINGS_TTL = 5 * 60 * 1000
 const XG_TTL = 24 * 60 * 60 * 1000
 
 /** 形势列回看窗口：当前月之前（含当月）的最后两个月份文件；赛季初不足两个用实际数量 */
@@ -41,18 +41,18 @@ export const useStandingsStore = defineStore('standings', {
       const merged = mergeStandings(raw, league, xg?.standings ?? null, this.teamNameMap)
       this.rows[league] = applyForm(merged, this.formMatches[league] ?? [])
     },
-    async load(league: LeagueSlug, season: string, opts: { withForm?: boolean; seasonType?: 'european' | 'calendar' } = {}) {
+    async load(league: LeagueSlug, season: string, opts: { withForm?: boolean; seasonType?: 'european' | 'calendar'; forceFresh?: boolean } = {}) {
       const withForm = opts.withForm ?? true
       const sType = opts.seasonType ?? 'european'
       this.loading[league] = true
       try {
-        const sf = await fetchJsonCached<StandingsFile>(`data/${league}/standings.json`, STANDINGS_TTL, season)
+        const sf = await fetchJsonCached<StandingsFile>(`data/${league}/standings.json`, STANDINGS_TTL, season, { forceFresh: opts.forceFresh })
         this.raw[league] = sf.standings
         if (withForm) {
           const months = formMonths(season, sType)
           const files = await Promise.all(
             months.map((m) =>
-              fetchJsonCached<MatchesFile>(`data/${league}/matches/${m}.json`, STANDINGS_TTL, season).catch(() => null),
+              fetchJsonCached<MatchesFile>(`data/${league}/matches/${m}.json`, STANDINGS_TTL, season, { forceFresh: opts.forceFresh }).catch(() => null),
             ),
           )
           this.formMatches[league] = files.flatMap((f) => f?.matches ?? [])

@@ -11,12 +11,15 @@ export const useLeadersStore = defineStore('leaders', {
     loading: {} as Partial<Record<LeagueSlug, boolean>>,
   }),
   actions: {
-    async ensure(league: LeagueSlug, season: string): Promise<LeadersFile> {
-      const hit = this.bundles[league]
-      if (hit) return hit
+    async ensure(league: LeagueSlug, season: string, opts: { forceFresh?: boolean } = {}): Promise<LeadersFile> {
+      // forceFresh 时跳过内存缓存检查（修潜伏坑：切走再切回 ensure 直接返回旧内存，永不重拉）
+      if (!opts.forceFresh) {
+        const hit = this.bundles[league]
+        if (hit) return hit
+      }
       this.loading[league] = true
       try {
-        const f = await fetchJsonCached<LeadersFile>(`data/${league}/leaders.json`, TTL, season)
+        const f = await fetchJsonCached<LeadersFile>(`data/${league}/leaders.json`, TTL, season, opts)
         this.bundles[league] = f
         return f
       } finally {
