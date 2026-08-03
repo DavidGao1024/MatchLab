@@ -178,6 +178,23 @@ describe('MyTeamCard narrow 模式（2-3 队订阅）', () => {
     expect(html).toMatch(/narrow-card/)
     expect(w.text()).toContain('Arsenal')
   })
+
+  it('3 队订阅也是 narrow 模式', async () => {
+    const userStore = useUserDataStore()
+    await userStore.init()
+    userStore.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
+    userStore.addSubscription({ league: 'eng.1', teamId: 25, teamName: 'Liverpool' })
+    userStore.addSubscription({ league: 'eng.1', teamId: 382, teamName: 'Man City' })
+    injectStoreData()
+    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
+
+    const w = mount(MyTeamCard, { props: { subscription: userStore.subscriptions[0] } })
+    await flushPromises()
+
+    const html = w.html()
+    expect(html).toMatch(/narrow-card/)
+    expect(html).not.toMatch(/rank-badge/)
+  })
 })
 
 describe('MyTeamCard 球队主色 CSS 变量', () => {
@@ -204,20 +221,31 @@ describe('MyTeamCard vs 行 mine/opp 高亮 + WDL tone', () => {
     await userStore.init()
     userStore.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
     injectStoreData()
-    const winMatch = makeMatch({
-      eventId: 'w1', date: '2026-05-12T19:00:00Z', status: 'post', completed: true,
-      home: { id: 359, name: 'Arsenal', abbreviation: 'ARS', logo: '', score: 1, winner: true },
-      away: { id: 39, name: 'Burnley', abbreviation: 'BUR', logo: '', score: 0, winner: false },
-    })
-    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [winMatch] }) })
+    // raw ESPN event（normalizeEvent 能产出 Match）
+    const rawEvent = {
+      id: 'w1',
+      date: '2026-05-12T19:00:00Z',
+      status: { type: { state: 'post' } },
+      competitions: [{
+        competitors: [
+          { homeAway: 'home', team: { id: '359', displayName: 'Arsenal', abbreviation: 'ARS' }, score: '1', winner: true },
+          { homeAway: 'away', team: { id: '39', displayName: 'Burnley', abbreviation: 'BUR' }, score: '0', winner: false },
+        ],
+        venue: { fullName: 'Emirates Stadium' },
+      }],
+    }
+    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [rawEvent] }) })
 
     const w = mount(MyTeamCard, { props: { subscription: userStore.subscriptions[0] } })
     await flushPromises()
 
-    const html = w.html()
-    expect(html).toMatch(/class="[^"]*name[^"]*mine[^"]*"/)
-    expect(html).toMatch(/class="[^"]*name[^"]*opp[^"]*"/)
-    expect(html).toMatch(/vs-score w/)
+    // BEM 风格选择器（不依赖 class 属性内顺序）
+    const mineEls = w.findAll('.name.mine')
+    const oppEls = w.findAll('.name.opp')
+    expect(mineEls.length).toBeGreaterThan(0)
+    expect(oppEls.length).toBeGreaterThan(0)
+    const wScore = w.findAll('.vs-score.w')
+    expect(wScore.length).toBeGreaterThan(0)
   })
 })
 
