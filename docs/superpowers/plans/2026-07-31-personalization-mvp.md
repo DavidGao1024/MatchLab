@@ -42,14 +42,14 @@
 | 17 ExportCalendarButton | ✅ | （本次提交） | 10 月并发 fetchLiveScores + generateICal + downloadBlob；用 Match 类型字段（home/away 非 homeTeam）；catch instanceof Error；type=button |
 | 18 MyTeamCard | ✅ | （本次提交） | 今日赛程 + 最近 3 场 + 伤员（fetchTeamInjuries 接入）；用 Match 类型字段（home/away 非 homeTeam）；scoreLine 处理 null score；加"有今日赛程"测试 |
 | 19 FavoritesDropdown | ✅ | （本次提交） | hover 触发；测试改 `.relative` 选择器（plan 的 button.trigger 不冒泡到 wrapper）；加 type=button + 空值兜底（`t.teamId && goTeam`） |
-| 20 FavoritesView + 路由 | ⏸ 待开工 | — | tabs 切换 + iCal 导出按钮 |
+| 20 FavoritesView + 路由 | ✅ | （本次提交） | tabs 切换 + 球队项含 iCal 导出按钮；测试加切到球员 tab 验证 Haaland（plan 默认 tab 看不到球员）；slug/seasonStart 抽 computed；空值兜底 `t.teamId && ...`；按钮 type=button |
 | 21 TeamDetailView 改造 | ⏸ 待开工 | — | 三个按钮齐 |
 | 22 PlayerDetailView 改造 | ⏸ 待开工 | — | FavoriteButton |
 | 23 HomeView 加 MyTeamCard | ⏸ 待开工 | — | + EmptyState 引导 |
 | 24 App.vue 整合 | ⏸ 待开工 | — | init + Toast/ConfirmDialog 挂载 + AppHeader 加 FavoritesDropdown |
 | 25 终验 | ⏸ 待开工 | — | 全量测试 + typecheck + build + 手动验收 |
 
-**累计**：19/25 Task 完工，23 commit 在 main 分支，131 单测全绿。
+**累计**：20/25 Task 完工，24 commit 在 main 分支，133 单测全绿。
 
 **待补的跟进项**（Approved 不阻塞，建议后续修）：
 - Task 6 EmptyState：缺 `role="status"` + 按钮 `type="button"`（Task 14/18 首次使用时一并修）

@@ -17,6 +17,7 @@ const router = createRouter({
     { path: '/:league/leaders', name: 'leaders', component: () => import('../views/LeadersView.vue') },
     { path: '/:league/team/:id', name: 'team-detail', component: () => import('../views/TeamDetailView.vue') },
     { path: '/:league/compare', name: 'compare', component: () => import('../views/CompareView.vue') },
+    { path: '/favorites', name: 'favorites', component: () => import('../views/FavoritesView.vue') },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
 })
