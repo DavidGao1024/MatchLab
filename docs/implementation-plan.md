@@ -896,6 +896,28 @@ interface MatchTeam {
 2. TeamDetailView teamSlug 用 `\s+` 模式替代 `[^a-z0-9]+`，中文队名不再变双横线文件名
 3. 隐私模式 readOnly flag — store 加 `isLocalStorageWritable` 探测，三按钮 disabled，schedulePersist/persist 早退避免 setTimeout 内抛 uncaught
 
+### 子项目 1.5：MyTeamCard 重设计 — ✅ 完工（2026-08-03 验收）
+
+**目标**：子项目 1 Task 18 实现的 MyTeamCard 用浅色 Tailwind 默认样式，与项目"转播图形风"暗色基调脱节。重写为暗背景渐变 + 球队主色 CSS var + Bebas Neue 大字 + JetBrains Mono 标签的战报卡风。
+
+**实施**：subagent-driven TDD 模式，5 Task（测试 → script → template → HomeView → 验收）+ 后续 final review 修复 + 用户反馈"永远 wide + 与下方等宽"调整。详见 `docs/superpowers/plans/2026-08-03-myteamcard-redesign.md`（5 Task + 后续调整）。
+
+**关键产出**：
+- ✅ MyTeamCard 永远渲染 wide 3 列布局（hero 今日赛英雄区 + recent vs 最近 3 场 + stats WDL/积分/form/GF-GA + footer 伤员红条/下场预告）
+- ✅ 球队主色 `--team-color` CSS var 驱动背景渐变/边框/标签/rank-badge/倒计时
+- ✅ mini MatchCard vs 行（mine/opp class + W/D/L tone + 月日戳）
+- ✅ footerMatch 数据树（`todayMatch ? nextMatch : afterNextMatch` 避免与 hero 重复）
+- ✅ 进行中比赛特化（红 live dot + pulse 动画 + clock + 当前比分）
+- ✅ 球队名 i18n（`teamName(name, app.lang)`）+ 联赛名 i18n（中英双语）
+- ✅ TeamLogo crest（hero 36px + vs-row 16px）
+- ✅ a11y 加固（h3 role="button" + tabindex + keydown enter/space）
+- ✅ HomeView 订阅区 section 与 MatchdayStrip/LeagueCards 等宽 1568px（去 max-w + px-4 + mx-auto，让 flex stretch 生效）
+- ✅ 多卡纵向堆叠各占满一行（grid 改 flex flex-col gap-3）
+
+**验收**：144 单测全绿（+6 新 MyTeamCard 测试 = 9 个），typecheck/build 通过，浏览器实测 3 队订阅 → 3 张 wide-card 各 1568px 宽，与 MatchdayStrip/LeagueCards 完全等宽。
+
+**已知 followup**：form pills 数据缺失（HomeView 加载 standings 用 `withForm=false`，form 字段空，`v-if` 守卫不渲染）—— 数据可用性 fallback，非 bug，建议 HomeView 切 `withForm=true` 或 MyTeamCard 单独加载 form 数据。
+
 ---
 
 ## 11. 从世界杯项目复用清单

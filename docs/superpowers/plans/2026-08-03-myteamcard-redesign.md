@@ -2,7 +2,24 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** 重写 `src/components/home/MyTeamCard.vue`，对齐项目"转播图形风"暗色 + 球队主色基调；1 队订阅时拉宽 3 列信息丰富布局，2-3 队用紧凑窄卡 grid；最近 3 场统一 mini MatchCard vs 格式。
+**状态：✅ 完工（2026-08-03）**
+
+| Task | 状态 | commit |
+|---|---|---|
+| 1 加 6 个新测试（TDD RED） | ✅ | `e5372d6` + `f8d0afc` + `86cdc51` |
+| 2 重写 script setup | ✅ | `e789b47` + `87e403f` |
+| 3 重写 template + style scoped | ✅ | `629cf1e` + `f30bd8d` |
+| 4 HomeView wrapper max-w-7xl | ✅ | `82270a9` |
+| 5 全量验收 + 浏览器复验 | ✅ | `07987f2` + `be978ed` |
+| 后续：永远 wide + 与下方等宽 | ✅ | `5db5cd8` |
+
+累计 10 commit 在 main，144 单测全绿（+6 新 MyTeamCard 测试 = 9 个），typecheck/build 通过。
+
+**后续调整（commit `5db5cd8`）**：用户反馈"订阅行宽度不管订阅几个队都要占满宽 + 和下方等宽"。原 plan 的 wide/narrow 双模式被简化——MyTeamCard 永远渲染 wide 3 列布局，HomeView 订阅区 section 去 max-w-7xl + px-4 + mx-auto 改为 `mb-4`（让卡宽 = main 内宽 1568px，与 MatchdayStrip/LeagueCards 等宽），grid 改 `flex flex-col gap-3` 让多卡纵向堆叠各占满一行。删除了 isWide/layoutMode/userStore + 整个 narrow 模板分支 + 相关 CSS。
+
+---
+
+**Goal:** 重写 `src/components/home/MyTeamCard.vue`，对齐项目"转播图形风"暗色 + 球队主色基调；1 队订阅时拉宽 3 列信息丰富布局，2-3 队用紧凑窄卡 grid；最近 3 场统一 mini MatchCard vs 格式。（注：完工后调整为永远 wide 模式，见上方"后续调整"。）
 
 **Architecture:** 单文件重写（不拆子组件）；通过 `useUserDataStore().subscriptions.length` 判定 wide/narrow 布局；用 `team.color` 驱动 `--team-color` CSS 变量；复用现有 `useStandingsStore` / `useTeamsStore` / `fetchLiveScores` / `fetchTeamInjuries`。
 

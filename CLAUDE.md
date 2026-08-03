@@ -7,7 +7,7 @@
 ## 一、项目画像
 
 - **代号**：MatchLab — 五大联赛（英超/西甲/意甲/德甲/法甲）数据查询网站
-- **当前阶段**：Phase 0–6 MVP 完工（2026-07-30 验收）；**子项目 1「个人化基础」（球队订阅 + 收藏夹 + iCal 导出）完工**（2026-07-31 起，2026-08-03 验收通过，25/25 Task + 3 followup 修复，138 单测全绿，无后端 + localStorage 路径）；施工图纸见 `docs/implementation-plan.md`，子项目计划文档见 `docs/superpowers/plans/2026-07-31-personalization-mvp.md`，设计稿见 `docs/superpowers/specs/2026-07-31-personalization-mvp-design.md`
+- **当前阶段**：Phase 0–6 MVP 完工（2026-07-30 验收）；**子项目 1「个人化基础」（球队订阅 + 收藏夹 + iCal 导出）完工**（2026-07-31 起，2026-08-03 验收通过，25/25 Task + 3 followup 修复，无后端 + localStorage 路径）；**子项目 1.5「MyTeamCard 重设计」完工**（2026-08-03，5 Task TDD + 后续调整，永远 wide 模式 + 与下方等宽）；共 144 单测全绿；施工图纸见 `docs/implementation-plan.md`，子项目 1 计划文档见 `docs/superpowers/plans/2026-07-31-personalization-mvp.md`，MyTeamCard 重设计计划文档见 `docs/superpowers/plans/2026-08-03-myteamcard-redesign.md`
 - **协作模式**：总司令下令 → 营长执行；全局铁律（未经指令不改码、先汇报后更新、不擅自持久化）全程有效
 
 ## 二、军衔记录（本项目独立计算）

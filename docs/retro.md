@@ -72,17 +72,20 @@
 | **iCal 导出模式**：`generateICal` 生成 RFC 5545 文本（`injuries` 数组映射 VEVENT，UID 含 `team-slug-date-teamId-awayId@matchlab` 保证稳定）+ `downloadBlob` 触发下载 + `Promise.all` 并发拉取赛季 10 个月 | 用户导出赛程到本地日历应用 | 子项目 1 |
 | **ESPN 端点结构实测模式**：plan/spec 假设的 JSON 结构必须用浏览器 DevTools 实测验证（顶层字段名 + 字段类型 + 嵌套层级），偏差时适配实现而非盲跳过；用 NFL/NBA 同端点家族验证字段结构（足球预季返 0 条时） | 接入新 ESPN 端点 | 子项目 1 Task 13 |
 | **subagent-driven TDD 工作流**：每 Task 写测试 → 跑失败 → 实现 → 跑通过 → 提交；catch 用 `e instanceof Error` 替代 `as any`（沿用 Task 10 重构方向）；组件加 `type="button"` + a11y 属性 | 多 Task 子项目实施 | 子项目 1 |
+| **MyTeamCard 战报卡模式**：暗背景渐变 + 球队主色 CSS var + Bebas Neue 大字 + JetBrains Mono 标签 + 3 列 wide 模式（hero 今日赛 + recent vs + stats WDL/form/GF-GA + footer 伤员/下场预告）+ mini MatchCard vs 行（mine/opp class + W/D/L tone）+ footerMatch 数据树（todayMatch ? nextMatch : afterNextMatch 避免重复） | 首页订阅卡片 / 跨赛事关注多队 | MyTeamCard 重设计 |
+| **flex cross-axis + mx-auto 不 stretch 兜底**：在 `flex flex-col` 父级下，子元素 `mx-auto` 在 cross-axis 不触发 stretch，宽度跟内容走；要占满父宽需加 `w-full` 或干脆去掉 max-w + mx-auto 让 flex stretch 生效 | flex 容器内子元素需占满 cross-axis 宽度 | MyTeamCard 重设计 后续调整 |
 
 ## 五、当前线上状态（2026-08-03）
 
 - 线上：https://davidgao1024.github.io/MatchLab/
 - 部署 workflow：`Deploy to GitHub Pages`（push to main 触发）
 - 数据 workflow：`Fetch Data`（每天 UTC 06:00，数据无变化不 commit）
-- 首屏 entry chunk：199KB / gzip 75KB（含 HomeView 静态 import + 子项目 1 个人化组件）
+- 首屏 entry chunk：206KB / gzip 77KB（含 HomeView 静态 import + 子项目 1 个人化组件 + MyTeamCard 重设计 wide 模式）
 - 最大 chunk：PlayerDetailView 179KB / gzip 62.96KB（chart.js 占大头，未来可考虑动态注册 chart 组件减体积）
 - ESPN 一线队译名命中率：英超 81.1% / 西甲 85.7% / 意甲 73.7% / 德甲 87.2% / 法甲 83.0% / 中超 95.9%（总计 83.7%）
-- 测试覆盖：138 单测 / 24 文件全绿（Phase 0-6 + 子项目 1）
-- 子项目 1「个人化基础」完工：25/25 Task + 3 followup 修复（2026-08-03 验收），32 commit 在 main，typecheck/build 通过
+- 测试覆盖：144 单测 / 24 文件全绿（Phase 0-6 + 子项目 1 + MyTeamCard 重设计）
+- 子项目 1「个人化基础」完工：25/25 Task + 3 followup 修复（2026-08-03 验收），32 commit 在 main
+- MyTeamCard 重设计完工：5 Task TDD + 后续调整（永远 wide + 与下方等宽），10 commit 在 main（子项目 1 之后），144 单测全绿
 
 ## 六、后续可能的方向
 
