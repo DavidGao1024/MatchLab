@@ -136,4 +136,29 @@ describe('useUserDataStore 收藏 actions', () => {
     }
     expect(() => s.addFavorite('team', { league: 'eng.1', teamId: 999, name: 'X' })).toThrow()
   })
+  it('混合上限（teams+players 合计 50）', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    for (let i = 0; i < 30; i++) {
+      s.addFavorite('team', { league: 'eng.1', teamId: i, name: `T${i}` })
+    }
+    for (let i = 0; i < 20; i++) {
+      s.addFavorite('player', { league: 'eng.1', athleteId: i + 1000, name: `P${i}` })
+    }
+    expect(() => s.addFavorite('team', { league: 'eng.1', teamId: 999, name: 'X' })).toThrow()
+  })
+  it('removeFavorite 球员分支', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    s.addFavorite('player', { league: 'eng.1', athleteId: 253989, name: 'Haaland' })
+    s.removeFavorite('player', 253989)
+    expect(s.favorites.players.length).toBe(0)
+    expect(s.isFavorite('player', 253989)).toBe(false)
+  })
+  it('isFavorite 负向断言', async () => {
+    const s = useUserDataStore()
+    await s.init()
+    expect(s.isFavorite('team', 999)).toBe(false)
+    expect(s.isFavorite('player', 999)).toBe(false)
+  })
 })

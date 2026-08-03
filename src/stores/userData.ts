@@ -74,49 +74,52 @@ export const useUserDataStore = defineStore('userData', {
       return this.subscriptions.some((s) => s.teamId === teamId)
     },
     addFavorite(type: 'team' | 'player', input: { league: Subscription['league']; teamId?: number; athleteId?: number; name: string }) {
-      const list = type === 'team' ? this.favorites.teams : this.favorites.players
-      const idField = type === 'team' ? 'teamId' : 'athleteId'
-      const idVal = type === 'team' ? input.teamId : input.athleteId
-      if (idVal !== undefined && list.some((f) => (f as any)[idField] === idVal)) return
       const total = this.favorites.teams.length + this.favorites.players.length
       if (total >= FAVORITES_LIMIT) {
         throw new Error(`收藏上限 ${FAVORITES_LIMIT} 项`)
       }
-      const fav: Favorite = {
-        league: input.league,
-        name: input.name,
-        addedAt: new Date().toISOString(),
+      if (type === 'team') {
+        const list = this.favorites.teams
+        if (input.teamId !== undefined && list.some((f) => f.teamId === input.teamId)) return
+        const fav: Favorite = { league: input.league, name: input.name, addedAt: new Date().toISOString() }
+        if (input.teamId !== undefined) fav.teamId = input.teamId
+        list.push(fav)
+      } else {
+        const list = this.favorites.players
+        if (input.athleteId !== undefined && list.some((f) => f.athleteId === input.athleteId)) return
+        const fav: Favorite = { league: input.league, name: input.name, addedAt: new Date().toISOString() }
+        if (input.athleteId !== undefined) fav.athleteId = input.athleteId
+        list.push(fav)
       }
-      if (input.teamId !== undefined) fav.teamId = input.teamId
-      if (input.athleteId !== undefined) fav.athleteId = input.athleteId
-      list.push(fav)
       this.schedulePersist()
     },
     removeFavorite(type: 'team' | 'player', id: number) {
-      const idField = type === 'team' ? 'teamId' : 'athleteId'
       if (type === 'team') {
-        this.favorites.teams = this.favorites.teams.filter((f) => (f as any)[idField] !== id)
+        this.favorites.teams = this.favorites.teams.filter((f) => f.teamId !== id)
       } else {
-        this.favorites.players = this.favorites.players.filter((f) => (f as any)[idField] !== id)
+        this.favorites.players = this.favorites.players.filter((f) => f.athleteId !== id)
       }
       this.schedulePersist()
     },
     toggleFavorite(type: 'team' | 'player', id: number, name: string, league: Subscription['league']) {
-      const idField = type === 'team' ? 'teamId' : 'athleteId'
       const list = type === 'team' ? this.favorites.teams : this.favorites.players
-      const exists = list.some((f) => (f as any)[idField] === id)
+      const exists = type === 'team'
+        ? list.some((f) => f.teamId === id)
+        : list.some((f) => f.athleteId === id)
       if (exists) {
         this.removeFavorite(type, id)
       } else {
-        const input: any = { league, name }
-        input[idField] = id
+        const input = type === 'team'
+          ? { league, name, teamId: id }
+          : { league, name, athleteId: id }
         this.addFavorite(type, input)
       }
     },
     isFavorite(type: 'team' | 'player', id: number): boolean {
-      const idField = type === 'team' ? 'teamId' : 'athleteId'
-      const list = type === 'team' ? this.favorites.teams : this.favorites.players
-      return list.some((f) => (f as any)[idField] === id)
+      if (type === 'team') {
+        return this.favorites.teams.some((f) => f.teamId === id)
+      }
+      return this.favorites.players.some((f) => f.athleteId === id)
     },
   },
 })
