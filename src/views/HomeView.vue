@@ -106,7 +106,7 @@ const featuredId = computed(() => {
     <DataLoading v-else-if="loading && !standings.rows[focus]" kind="cards" />
     <template v-else>
       <!-- ① 订阅主队卡片（无订阅 → 引导去积分榜订阅） -->
-      <section v-if="userStore.initialized" class="max-w-5xl mx-auto px-4 mb-4">
+      <section v-if="userStore.initialized" class="max-w-7xl mx-auto px-4 mb-4">
         <div v-if="userStore.subscriptions.length === 0">
           <EmptyState
             title="订阅主队，首页直接看今日赛程"
