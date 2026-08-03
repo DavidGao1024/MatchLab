@@ -1,17 +1,37 @@
 <script setup lang="ts">
-import { ref, watch, onMounted } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { fetchLiveScores, fetchTeamInjuries } from '../../composables/useEspanFetch'
+import { useUserDataStore } from '../../stores/userData'
+import { useStandingsStore } from '../../stores/standings'
+import { useTeamsStore } from '../../stores/teams'
+import { useAppStore } from '../../stores/app'
+import { teamName } from '../../utils/i18n'
 import type { Subscription } from '../../types/user-data'
-import type { Match } from '../../types/models'
+import type { Match, StandingRow, Team } from '../../types/models'
 
 const props = defineProps<{ subscription: Subscription }>()
 const router = useRouter()
+const userStore = useUserDataStore()
+const standings = useStandingsStore()
+const teams = useTeamsStore()
+const app = useAppStore()
 
 const todayMatch = ref<Match | null>(null)
+const nextMatch = ref<Match | null>(null)
 const recentMatches = ref<Match[]>([])
 const injuries = ref<string[]>([])
 const loading = ref(true)
+const error = ref('')
+
+const team = computed<Team | undefined>(() => teams.teamById(props.subscription.league, props.subscription.teamId))
+const teamColor = computed(() => team.value?.color || app.leagueInfo(props.subscription.league)?.color || '#3D195B')
+const standing = computed<StandingRow | undefined>(() => {
+  const rows = standings.rows[props.subscription.league] ?? []
+  return rows.find((r) => r.teamId === props.subscription.teamId)
+})
+const layoutMode = computed<'wide' | 'narrow'>(() => userStore.subscriptions.length === 1 ? 'wide' : 'narrow')
+const isWide = computed(() => layoutMode.value === 'wide')
 
 function isToday(dateStr: string): boolean {
   const d = new Date(dateStr)
@@ -23,10 +43,9 @@ function isToday(dateStr: string): boolean {
 
 async function load() {
   loading.value = true
+  error.value = ''
   try {
     const now = new Date()
-    // 拉取过去 12 个月 + 未来 10 个月（共 23 个月），覆盖跨赛季间隙：
-    // 8 月初新赛季未开赛时仍能看到上赛季最近 3 场
     const months: string[] = []
     for (let i = -12; i <= 10; i++) {
       const d = new Date(now.getFullYear(), now.getMonth() + i, 1)
@@ -41,6 +60,10 @@ async function load() {
       .filter((m) => m.home.id === props.subscription.teamId || m.away.id === props.subscription.teamId)
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
     todayMatch.value = teamMatches.find((m) => isToday(m.date)) ?? null
+    const future = teamMatches.filter((m) => new Date(m.date) > now)
+    // footer 下场预告 = today 之后的第一个 future（无 today 则第二个 future，避免与 hero 重复）
+    const nextIdx = todayMatch.value ? 0 : 1
+    nextMatch.value = future[nextIdx] ?? future[0] ?? null
     const past = teamMatches.filter((m) => new Date(m.date) < now)
     recentMatches.value = past.slice(-3).reverse()
     try {
@@ -49,6 +72,8 @@ async function load() {
     } catch {
       injuries.value = []
     }
+  } catch (e) {
+    error.value = e instanceof Error ? e.message : String(e)
   } finally {
     loading.value = false
   }
@@ -61,11 +86,63 @@ function goTeam() {
   router.push(`/${props.subscription.league}/team/${props.subscription.teamId}`)
 }
 
+function displayName(name: string): string {
+  return teamName(name, app.lang)
+}
+
 function scoreLine(m: Match): string {
   if (m.home.score != null && m.away.score != null) {
     return `${m.home.score}-${m.away.score}`
   }
   return 'vs'
+}
+
+type Tone = 'w' | 'd' | 'l' | 'none'
+function matchTone(m: Match): Tone {
+  if (m.status !== 'post' || m.home.score == null || m.away.score == null) return 'none'
+  const mine = props.subscription.teamId
+  const myHome = m.home.id === mine
+  const myScore = myHome ? m.home.score : m.away.score
+  const oppScore = myHome ? m.away.score : m.home.score
+  if (myScore > oppScore) return 'w'
+  if (myScore < oppScore) return 'l'
+  return 'd'
+}
+
+function formatCountdown(targetIso: string): string {
+  const ms = new Date(targetIso).getTime() - Date.now()
+  if (ms <= 0) return '00D 00H 00M'
+  const d = Math.floor(ms / 86400000)
+  const h = Math.floor((ms % 86400000) / 3600000)
+  const m = Math.floor((ms % 3600000) / 60000)
+  return `${String(d).padStart(2, '0')}D ${String(h).padStart(2, '0')}H ${String(m).padStart(2, '0')}M`
+}
+
+function formatKickoff(iso: string): string {
+  const d = new Date(iso)
+  const hh = String(d.getHours()).padStart(2, '0')
+  const mm = String(d.getMinutes()).padStart(2, '0')
+  return `${hh}:${mm} 北京`
+}
+
+function formatKickoffTime(iso: string): string {
+  const d = new Date(iso)
+  const hh = String(d.getUTCHours()).padStart(2, '0')
+  const mm = String(d.getUTCMinutes()).padStart(2, '0')
+  return `${hh}:${mm} UTC`
+}
+
+function formatDateShort(iso: string): string {
+  const d = new Date(iso)
+  return `${d.getMonth() + 1}/${d.getDate()}`
+}
+
+function formatDateLong(iso: string): string {
+  const d = new Date(iso)
+  const hh = String(d.getHours()).padStart(2, '0')
+  const mm = String(d.getMinutes()).padStart(2, '0')
+  const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
+  return `${d.getMonth() + 1}/${d.getDate()} · ${weekdays[d.getDay()]} ${hh}:${mm}`
 }
 </script>
 
