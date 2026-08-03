@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useAppStore } from '../../stores/app'
+import FavoritesDropdown from './FavoritesDropdown.vue'
 import LeagueTabs from './LeagueTabs.vue'
 import LeagueSubNav from './LeagueSubNav.vue'
 import SearchBar from '../common/SearchBar.vue'
@@ -22,6 +23,7 @@ const app = useAppStore()
       </router-link>
       <LeagueTabs class="ml-2" />
       <SearchBar class="ml-auto w-full max-w-xs hidden md:block" />
+      <FavoritesDropdown />
       <button
         type="button"
         @click="app.toggleLang()"
