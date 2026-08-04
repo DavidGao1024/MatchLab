@@ -173,18 +173,12 @@ function formatDateLong(iso: string): string {
 <template>
   <article
     :style="{ '--team-color': teamColor }"
-    class="wide-card"
+    class="compact-card"
   >
-    <!-- Loading 态 -->
     <div v-if="loading" class="p-4 text-sm text-slate-500">加载中...</div>
-
-    <!-- 错误态 -->
     <div v-else-if="error" class="p-4 text-sm text-red-400">{{ error }}</div>
-
-    <!-- Wide 模式 -->
-    <div v-else class="wide-body">
-      <!-- Header -->
-      <header class="wide-header">
+    <div v-else class="compact-body">
+      <header class="compact-header">
         <span class="tag">订阅主队</span>
         <span class="league">{{ leagueDisplayName }}</span>
         <h3
@@ -201,9 +195,7 @@ function formatDateLong(iso: string): string {
         </div>
       </header>
 
-      <!-- Main 3 列 grid -->
-      <div class="wide-grid">
-        <!-- 列 1：今日赛英雄区 -->
+      <div class="compact-grid">
         <section class="hero-block">
           <div v-if="todayMatch?.status === 'in'" class="hero-meta">
             <span class="live-dot live"></span>进行中 · {{ todayMatch.clock ?? '—' }}
@@ -219,11 +211,11 @@ function formatDateLong(iso: string): string {
           <div v-if="todayMatch || nextMatch" class="hero-matchup">
             <div class="hero-side left">
               <span class="hero-abbr">{{ displayName((todayMatch ?? nextMatch)!.home.name) }}</span>
-              <TeamLogo :team="teamFor((todayMatch ?? nextMatch)!.home)" :size="36" />
+              <TeamLogo :team="teamFor((todayMatch ?? nextMatch)!.home)" :size="26" />
             </div>
             <div class="hero-vs">VS</div>
             <div class="hero-side right">
-              <TeamLogo :team="teamFor((todayMatch ?? nextMatch)!.away)" :size="36" />
+              <TeamLogo :team="teamFor((todayMatch ?? nextMatch)!.away)" :size="26" />
               <span class="hero-abbr">{{ displayName((todayMatch ?? nextMatch)!.away.name) }}</span>
             </div>
           </div>
@@ -239,27 +231,6 @@ function formatDateLong(iso: string): string {
           <div v-if="todayMatch || nextMatch" class="venue-row">◉ {{ (todayMatch ?? nextMatch)!.venue || '—' }}</div>
         </section>
 
-        <!-- 列 2：最近 3 场 -->
-        <section class="recent-block">
-          <div class="section-label">最近 3 场</div>
-          <div v-if="!recentMatches.length" class="empty-placeholder">暂无最近比赛</div>
-          <div v-for="m in recentMatches" :key="m.eventId" class="vs-row">
-            <div class="vs-side home">
-              <span :class="m.home.id === subscription.teamId ? 'name mine' : 'name opp'">{{ displayName(m.home.name) }}</span>
-              <TeamLogo :team="teamFor(m.home)" :size="16" />
-            </div>
-            <div>
-              <div :class="`vs-score ${matchTone(m)}`">{{ scoreLine(m) }}</div>
-              <div class="vs-date">{{ formatDateShort(m.date) }}</div>
-            </div>
-            <div class="vs-side away">
-              <TeamLogo :team="teamFor(m.away)" :size="16" />
-              <span :class="m.away.id === subscription.teamId ? 'name mine' : 'name opp'">{{ displayName(m.away.name) }}</span>
-            </div>
-          </div>
-        </section>
-
-        <!-- 列 3：战绩区 -->
         <section class="stats-block">
           <div class="section-label">赛季战绩</div>
           <div v-if="standing" class="wdl">
@@ -278,35 +249,37 @@ function formatDateLong(iso: string): string {
               <span v-for="(f, i) in standing.form" :key="i" :class="`pill ${f.toLowerCase()}`">{{ f }}</span>
             </div>
           </div>
+        </section>
+
+        <section class="gf-ga-block">
+          <div class="section-label">攻防</div>
           <div v-if="standing" class="gf-ga">
             <div class="gf-ga-cell"><span class="gf-ga-label">GF</span><span class="gf-ga-val">{{ standing.goalsFor }}</span></div>
             <div class="gf-ga-cell"><span class="gf-ga-label">GA</span><span class="gf-ga-val">{{ standing.goalsAgainst }}</span></div>
           </div>
+          <div v-if="injuries.length" class="inj-block">
+            <span class="inj-label">伤员</span>
+            <span class="inj-names">{{ injuries.join(' · ') }}</span>
+          </div>
         </section>
-      </div>
 
-      <!-- Footer -->
-      <footer class="wide-footer">
-        <div v-if="injuries.length" class="inj-block">
-          <span class="inj-label">伤员</span>
-          <span class="inj-names">{{ injuries.join(' · ') }}</span>
-        </div>
-        <div v-if="footerMatch" class="next-game">
+        <section v-if="footerMatch" class="next-block">
           <div class="next-label">下场</div>
           <div class="next-match">{{ displayName(footerMatch.home.name) }} vs {{ displayName(footerMatch.away.name) }}</div>
           <div class="next-meta">{{ formatDateLong(footerMatch.date) }}</div>
-        </div>
-        <div v-else class="next-game">
+          <div class="next-venue">◉ {{ footerMatch.venue || '—' }}</div>
+        </section>
+        <section v-else class="next-block">
           <div class="next-label">下场</div>
-          <div class="next-match" style="color: var(--slate-500, #64748b);">无再下场</div>
-        </div>
-      </footer>
+          <div class="next-match skeleton">无再下场</div>
+        </section>
+      </div>
     </div>
   </article>
 </template>
 
 <style scoped>
-.wide-card {
+.compact-card {
   background: linear-gradient(180deg, color-mix(in srgb, var(--team-color) 16%, #10152a), #10152a);
   border: 1px solid color-mix(in srgb, var(--team-color) 35%, transparent);
   border-radius: 14px;
@@ -315,50 +288,52 @@ function formatDateLong(iso: string): string {
   flex-direction: column;
 }
 
-/* === Wide === */
-.wide-body { display: flex; flex-direction: column; }
-.wide-header {
-  display: flex; align-items: center; gap: 12px;
-  padding: 16px 24px 12px;
+.compact-body { display: flex; flex-direction: column; }
+
+.compact-header {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 16px 10px;
   border-bottom: 1px solid color-mix(in srgb, var(--team-color) 25%, transparent);
 }
 .tag {
   border: 1px solid color-mix(in srgb, var(--team-color) 60%, transparent);
   color: color-mix(in srgb, var(--team-color) 75%, white);
-  padding: 3px 10px; border-radius: 4px;
+  padding: 3px 8px; border-radius: 4px;
   font-family: var(--font-mono-d, monospace); font-size: 9px;
   letter-spacing: 0.22em; text-transform: uppercase;
 }
 .league {
-  font-family: var(--font-mono-d, monospace); font-size: 11px;
+  font-family: var(--font-mono-d, monospace); font-size: 10px;
   color: var(--slate-400, #94a3b8); letter-spacing: 0.18em;
 }
 .team-name {
   font-family: var(--font-cond, sans-serif);
-  font-size: 32px; letter-spacing: 0.02em;
+  font-size: 22px; letter-spacing: 0.02em;
   color: #fff; cursor: pointer; margin: 0;
 }
 .rank-badge {
   margin-left: auto;
   background: color-mix(in srgb, var(--team-color) 18%, transparent);
   border: 1px solid color-mix(in srgb, var(--team-color) 45%, transparent);
-  border-radius: 6px; padding: 6px 12px;
+  border-radius: 6px; padding: 5px 11px;
   font-family: var(--font-cond, sans-serif);
-  display: flex; align-items: baseline; gap: 6px;
+  display: flex; align-items: baseline; gap: 5px;
 }
-.rank-badge .num { font-size: 22px; color: #fff; }
-.rank-badge .of { font-size: 11px; color: var(--slate-400, #94a3b8); letter-spacing: 0.12em; }
+.rank-badge .num { font-size: 18px; color: #fff; font-weight: 600; }
+.rank-badge .of { font-size: 10px; color: var(--slate-400, #94a3b8); letter-spacing: 0.12em; }
 
-.wide-grid {
-  display: grid; grid-template-columns: 1.5fr 1fr 1.1fr;
-  gap: 16px; padding: 16px 24px 0;
+.compact-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr auto;
+  gap: 12px; padding: 12px 16px;
 }
-@media (max-width: 980px) { .wide-grid { grid-template-columns: 1fr; } }
+@media (max-width: 720px) {
+  .compact-grid { grid-template-columns: 1fr; }
+}
 
 .hero-block {
   background: rgba(0,0,0,0.32);
   border: 1px solid color-mix(in srgb, var(--team-color) 35%, transparent);
-  border-radius: 10px; padding: 14px 16px;
+  border-radius: 8px; padding: 10px 12px;
 }
 .hero-meta {
   font-family: var(--font-mono-d, monospace); font-size: 10px;
@@ -376,137 +351,104 @@ function formatDateLong(iso: string): string {
   50% { opacity: 0.5; }
 }
 .hero-matchup {
-  display: grid; grid-template-columns: 1fr auto 1fr;
-  align-items: center; gap: 10px; margin-top: 10px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin-top: 8px;
 }
-.hero-side { display: flex; align-items: center; gap: 10px; }
+.hero-side { display: flex; align-items: center; gap: 8px; }
 .hero-side.left { justify-content: flex-end; }
 .hero-side.right { justify-content: flex-start; }
-.hero-abbr { font-family: var(--font-cond, sans-serif); font-size: 22px; letter-spacing: 0.04em; color: #fff; }
-.hero-vs { font-family: var(--font-cond, sans-serif); font-size: 14px; color: var(--slate-500, #64748b); }
+.hero-abbr { font-family: var(--font-cond, sans-serif); font-size: 16px; letter-spacing: 0.04em; color: #fff; }
+.hero-vs { font-family: var(--font-cond, sans-serif); font-size: 12px; color: var(--slate-500, #64748b); }
 .kickoff-row {
-  margin-top: 12px; padding-top: 10px;
+  margin-top: 10px; padding-top: 8px;
   border-top: 1px dashed rgba(255,255,255,0.08);
   display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
-  font-family: var(--font-mono-d, monospace); font-size: 11px;
+  font-family: var(--font-mono-d, monospace); font-size: 10px;
   color: var(--slate-400, #94a3b8); letter-spacing: 0.12em;
 }
-.kickoff-time { color: #fff; font-weight: 600; font-size: 13px; }
+.kickoff-time { color: #fff; font-weight: 600; font-size: 11px; }
 .countdown {
-  font-family: var(--font-cond, sans-serif); font-size: 22px;
-  color: var(--team-color); letter-spacing: 0.06em;
+  font-family: var(--font-cond, sans-serif); font-size: 16px;
+  color: var(--team-color); letter-spacing: 0.06em; font-weight: 600;
 }
 .venue-row {
-  margin-top: 6px;
-  font-family: var(--font-mono-d, monospace); font-size: 10px;
+  margin-top: 4px;
+  font-family: var(--font-mono-d, monospace); font-size: 9px;
   color: var(--slate-500, #64748b); letter-spacing: 0.12em;
 }
 
 .section-label {
   font-family: var(--font-mono-d, monospace); font-size: 9px;
   color: var(--slate-500, #64748b); letter-spacing: 0.22em; text-transform: uppercase;
-  margin-bottom: 6px;
-}
-.empty-placeholder {
-  color: var(--slate-600, #475569);
-  font-size: 12px;
-  padding: 8px 0;
-  font-family: var(--font-mono-d, monospace);
-  letter-spacing: 0.12em;
+  margin-bottom: 5px;
 }
 
-/* === vs row === */
-.vs-row {
-  display: grid; grid-template-columns: 1fr auto 1fr;
-  align-items: center; gap: 8px;
-  padding: 6px 0;
-  border-bottom: 1px dashed rgba(255,255,255,0.06);
-  font-family: var(--font-cond, sans-serif);
-}
-.vs-row:last-child { border-bottom: 0; }
-.vs-side { display: flex; align-items: center; gap: 6px; min-width: 0; font-size: 13px; letter-spacing: 0.04em; }
-.vs-side.home { justify-content: flex-end; }
-.vs-side.away { justify-content: flex-start; }
-.vs-side .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.vs-side .name.mine { color: #fff; font-weight: 600; }
-.vs-side .name.opp { color: var(--slate-400, #94a3b8); }
-.vs-score {
-  font-family: var(--font-mono-d, monospace); font-size: 13px; font-weight: 500;
-  padding: 0 6px; min-width: 40px; text-align: center;
-}
-.vs-score.w { color: #10b981; }
-.vs-score.d { color: #cbd5e1; }
-.vs-score.l { color: #ef4444; }
-.vs-score.none { color: var(--slate-400, #94a3b8); }
-.vs-date {
-  font-family: var(--font-mono-d, monospace); font-size: 9px;
-  color: var(--slate-600, #475569); letter-spacing: 0.12em; text-align: center; margin-top: 1px;
-}
-
-/* === stats === */
+.stats-block { display: flex; flex-direction: column; }
 .wdl {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;
+  display: flex; gap: 4px;
   font-family: var(--font-mono-d, monospace);
 }
 .wdl-cell {
-  background: rgba(255,255,255,0.03); border-radius: 4px; padding: 6px 8px;
-  border: 1px solid rgba(255,255,255,0.04);
+  flex: 1;
+  background: rgba(255,255,255,0.03); border-radius: 4px; padding: 5px 7px;
+  border: 1px solid rgba(255,255,255,0.04); text-align: center;
 }
 .wdl-label { font-size: 9px; color: var(--slate-500, #64748b); letter-spacing: 0.18em; }
-.wdl-val { font-size: 16px; font-weight: 600; margin-top: 2px; color: #fff; }
+.wdl-val { font-size: 14px; font-weight: 600; margin-top: 1px; color: #fff; }
 .wdl-w .wdl-val { color: #10b981; }
 .wdl-d .wdl-val { color: #cbd5e1; }
 .wdl-l .wdl-val { color: #ef4444; }
-.wdl-skeleton { color: var(--slate-600, #475569); padding: 8px; }
+.wdl-skeleton { color: var(--slate-600, #475569); padding: 8px; text-align: center; }
 .points-row {
   display: flex; justify-content: space-between; align-items: baseline;
-  margin-top: 8px; padding: 6px 8px;
+  margin-top: 6px; padding: 5px 7px;
   background: color-mix(in srgb, var(--team-color) 10%, transparent);
   border-radius: 4px;
 }
 .points-label { font-family: var(--font-mono-d, monospace); font-size: 9px; color: var(--slate-400, #94a3b8); letter-spacing: 0.18em; text-transform: uppercase; }
-.points-val { font-family: var(--font-cond, sans-serif); font-size: 22px; color: var(--team-color); }
-.form-row { margin-top: 10px; }
-.form-pills { display: flex; gap: 4px; }
+.points-val { font-family: var(--font-cond, sans-serif); font-size: 18px; color: var(--team-color); font-weight: 600; }
+.form-row { margin-top: 6px; }
+.form-pills { display: flex; gap: 3px; }
 .pill {
-  width: 22px; height: 22px; border-radius: 4px;
+  width: 16px; height: 16px; border-radius: 3px;
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-mono-d, monospace); font-size: 11px; font-weight: 600;
+  font-family: var(--font-mono-d, monospace); font-size: 9px; font-weight: 600;
 }
 .pill.w { background: rgba(16,185,129,0.18); color: #10b981; }
 .pill.d { background: rgba(148,163,184,0.15); color: #cbd5e1; }
 .pill.l { background: rgba(239,68,68,0.18); color: #ef4444; }
+
+.gf-ga-block { display: flex; flex-direction: column; }
 .gf-ga {
-  margin-top: 10px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5px;
   font-family: var(--font-mono-d, monospace); font-size: 11px;
 }
 .gf-ga-cell {
-  background: rgba(255,255,255,0.03); padding: 6px 8px; border-radius: 4px;
+  background: rgba(255,255,255,0.03); padding: 5px 7px; border-radius: 4px;
   display: flex; justify-content: space-between; align-items: baseline;
 }
 .gf-ga-label { color: var(--slate-500, #64748b); font-size: 9px; letter-spacing: 0.18em; }
-.gf-ga-val { color: #fff; font-weight: 600; font-size: 14px; }
-
-/* === wide footer === */
-.wide-footer {
-  margin: 14px 24px 18px; padding: 10px 14px;
-  background: rgba(0,0,0,0.22); border-radius: 8px;
-  display: grid; grid-template-columns: 1fr auto;
-  gap: 12px; align-items: center;
-  border: 1px solid rgba(255,255,255,0.05);
-}
+.gf-ga-val { color: #fff; font-weight: 600; font-size: 13px; }
 .inj-block {
-  border-left: 3px solid #ef4444; padding-left: 10px;
-  font-size: 12px; color: #fca5a5;
-  display: flex; align-items: center; gap: 10px;
+  margin-top: 6px;
+  border-left: 3px solid #ef4444; padding-left: 7px;
+  font-size: 10px; color: #fca5a5;
+  display: flex; align-items: center; gap: 6px;
 }
 .inj-label {
   font-family: var(--font-mono-d, monospace); font-size: 9px;
   color: #ef4444; letter-spacing: 0.22em; text-transform: uppercase;
 }
-.next-game { text-align: right; font-family: var(--font-mono-d, monospace); }
-.next-label { font-size: 9px; color: var(--slate-500, #64748b); letter-spacing: 0.22em; text-transform: uppercase; }
-.next-match { font-family: var(--font-cond, sans-serif); font-size: 16px; color: #fff; letter-spacing: 0.04em; margin-top: 2px; }
-.next-meta { font-size: 10px; color: var(--slate-400, #94a3b8); margin-top: 2px; letter-spacing: 0.12em; }
+
+.next-block {
+  background: rgba(0,0,0,0.22); border-radius: 8px; padding: 8px 10px;
+  border: 1px solid rgba(255,255,255,0.05);
+  display: flex; flex-direction: column; justify-content: center;
+  min-width: 120px;
+}
+.next-label { font-family: var(--font-mono-d, monospace); font-size: 9px; color: var(--slate-500, #64748b); letter-spacing: 0.22em; text-transform: uppercase; }
+.next-match { font-family: var(--font-cond, sans-serif); font-size: 14px; color: #fff; letter-spacing: 0.04em; margin-top: 2px; }
+.next-match.skeleton { color: var(--slate-500, #64748b); }
+.next-meta { font-family: var(--font-mono-d, monospace); font-size: 9px; color: var(--slate-400, #94a3b8); margin-top: 2px; letter-spacing: 0.12em; }
+.next-venue { margin-top: 3px; font-family: var(--font-mono-d, monospace); font-size: 8px; color: var(--slate-500, #64748b); letter-spacing: 0.18em; }
 </style>
