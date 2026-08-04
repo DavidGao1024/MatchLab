@@ -13,18 +13,18 @@ const th = 'px-1 py-2 text-center font-cond text-[10px] font-medium uppercase tr
 </script>
 
 <template>
-  <!-- 语义表格 + 窄视口整体横滑（规格 §四交互 / §七无障碍） -->
+  <!-- 语义表格 + 窄视口整体横滑（规格 §四交互 / §七无障碍）；移动端隐藏次要列 + 行展开（移动兼容 §1） -->
   <div class="overflow-x-auto rounded-lg border border-white/10">
-    <table class="w-full min-w-[760px] border-collapse">
+    <table class="w-full md:min-w-[760px] border-collapse">
       <thead class="bg-[#0e1424] text-slate-500">
         <tr>
           <th scope="col" class="sticky left-0 z-[2] bg-[#0e1424] px-2 py-2 text-left font-cond text-[10px] font-medium uppercase tracking-[0.14em]">
             # / {{ t('col.team', app.lang) }}
           </th>
-          <th v-for="c in STAT_COLS" :key="c" scope="col" :class="th">{{ t(c, app.lang) }}</th>
+          <th v-for="c in STAT_COLS" :key="c" scope="col" :class="`${th} ${c === 'col.pts' ? '' : 'hidden md:table-cell'}`">{{ t(c, app.lang) }}</th>
           <th scope="col" :class="th">{{ t('col.form', app.lang) }}</th>
           <template v-if="showXg">
-            <th v-for="c in ['xG', 'xGA', 'xPts']" :key="c" scope="col" :class="`${th} normal-case text-emerald-300/70`">{{ c }}</th>
+            <th v-for="c in ['xG', 'xGA', 'xPts']" :key="c" scope="col" :class="`${th} normal-case text-emerald-300/70 hidden md:table-cell`">{{ c }}</th>
           </template>
         </tr>
       </thead>

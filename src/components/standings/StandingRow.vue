@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import type { StandingRow } from '../../types/models'
 import type { LeagueSlug } from '../../utils/constants'
 import { useAppStore } from '../../stores/app'
@@ -41,30 +41,39 @@ const zoneBar = computed(() => {
 })
 
 const stat = 'tabular px-1 py-2.5 text-center text-xs text-slate-300'
+
+// 移动端行展开状态（规格 移动端兼容 §1）
+const expanded = ref(false)
+function toggleExpand() {
+  expanded.value = !expanded.value
+}
 </script>
 
 <template>
   <tr
-    class="group border-b border-white/5 transition-colors hover:bg-white/[0.04]"
+    class="group border-b border-white/5 transition-colors hover:bg-white/[0.04] md:cursor-default cursor-pointer md:[&:hover]:bg-white/[0.04]"
+    :class="expanded ? 'bg-white/[0.06]' : ''"
     :style="{ boxShadow: `inset 3px 0 0 ${zoneBar}` }"
+    @click="toggleExpand"
   >
     <th scope="row" class="sticky left-0 z-[1] bg-[#0e1424] px-2 py-2.5 text-left font-normal transition-colors group-hover:bg-[#161d31]">
-      <router-link :to="teamLink" class="inline-flex min-w-44 items-center gap-2.5 hover:text-white">
+      <router-link :to="teamLink" class="inline-flex min-w-44 items-center gap-2.5 hover:text-white" @click.stop>
         <span class="font-score w-5 text-right text-base" :class="row.rank === 1 ? 'text-white' : 'text-slate-400'">{{ row.rank }}</span>
         <TeamLogo :team="team" :size="20" />
         <span class="truncate font-cond text-[13px] hover:underline" :class="row.zone === 'ucl' ? 'text-slate-100' : 'text-slate-300'">
           {{ teamName(row.team, app.lang) }}
         </span>
+        <span class="md:hidden ml-auto text-slate-500 text-xs" :class="expanded ? 'rotate-90' : ''">▸</span>
       </router-link>
     </th>
-    <td :class="stat">{{ row.played }}</td>
-    <td :class="stat">{{ row.won }}</td>
-    <td :class="stat">{{ row.drawn }}</td>
-    <td :class="stat">{{ row.lost }}</td>
-    <td :class="stat">{{ row.goalsFor }}</td>
-    <td :class="stat">{{ row.goalsAgainst }}</td>
+    <td :class="stat" class="hidden md:table-cell">{{ row.played }}</td>
+    <td :class="stat" class="hidden md:table-cell">{{ row.won }}</td>
+    <td :class="stat" class="hidden md:table-cell">{{ row.drawn }}</td>
+    <td :class="stat" class="hidden md:table-cell">{{ row.lost }}</td>
+    <td :class="stat" class="hidden md:table-cell">{{ row.goalsFor }}</td>
+    <td :class="stat" class="hidden md:table-cell">{{ row.goalsAgainst }}</td>
     <td
-      class="tabular px-1 py-2.5 text-center text-xs"
+      class="tabular px-1 py-2.5 text-center text-xs hidden md:table-cell"
       :class="row.goalDiff > 0 ? 'text-emerald-300/80' : row.goalDiff < 0 ? 'text-red-300/70' : 'text-slate-300'"
     >{{ row.goalDiff > 0 ? `+${row.goalDiff}` : row.goalDiff }}</td>
     <td class="px-2 py-2.5 text-center">
@@ -73,9 +82,27 @@ const stat = 'tabular px-1 py-2.5 text-center text-xs text-slate-300'
     </td>
     <td class="px-2 py-2.5 text-center"><FormDots :details="dots" /></td>
     <template v-if="showXg">
-      <td class="tabular px-1 py-2.5 text-center text-xs text-emerald-300/80">{{ row.xG?.toFixed(1) ?? '–' }}</td>
-      <td class="tabular px-1 py-2.5 text-center text-xs text-emerald-300/80">{{ row.xGA?.toFixed(1) ?? '–' }}</td>
-      <td class="tabular px-1 py-2.5 text-center text-xs text-emerald-300/80">{{ row.xPts?.toFixed(1) ?? '–' }}</td>
+      <td class="tabular px-1 py-2.5 text-center text-xs text-emerald-300/80 hidden md:table-cell">{{ row.xG?.toFixed(1) ?? '–' }}</td>
+      <td class="tabular px-1 py-2.5 text-center text-xs text-emerald-300/80 hidden md:table-cell">{{ row.xGA?.toFixed(1) ?? '–' }}</td>
+      <td class="tabular px-1 py-2.5 text-center text-xs text-emerald-300/80 hidden md:table-cell">{{ row.xPts?.toFixed(1) ?? '–' }}</td>
     </template>
+  </tr>
+  <!-- 移动端展开行：渲染次要数据（赛/胜/平/负/进/失/净 + 可选 xG） -->
+  <tr v-if="expanded" class="md:hidden border-b border-white/5 bg-black/20">
+    <td colspan="4" class="px-3 py-3">
+      <div class="grid grid-cols-3 gap-x-3 gap-y-2 font-mono-d text-[11px] text-slate-300">
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">赛</span><span class="text-white font-semibold">{{ row.played }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">胜</span><span class="text-emerald-400 font-semibold">{{ row.won }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">平</span><span class="text-slate-300 font-semibold">{{ row.drawn }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">负</span><span class="text-red-400 font-semibold">{{ row.lost }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">进</span><span class="text-white font-semibold">{{ row.goalsFor }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">失</span><span class="text-white font-semibold">{{ row.goalsAgainst }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">净</span><span :class="row.goalDiff > 0 ? 'text-emerald-400' : row.goalDiff < 0 ? 'text-red-400' : 'text-slate-300'" class="font-semibold">{{ row.goalDiff > 0 ? `+${row.goalDiff}` : row.goalDiff }}</span></div>
+        <template v-if="showXg">
+          <div class="flex items-baseline justify-between"><span class="text-slate-500">xG</span><span class="text-emerald-300 font-semibold">{{ row.xG?.toFixed(1) ?? '–' }}</span></div>
+          <div class="flex items-baseline justify-between"><span class="text-slate-500">xGA</span><span class="text-emerald-300 font-semibold">{{ row.xGA?.toFixed(1) ?? '–' }}</span></div>
+        </template>
+      </div>
+    </td>
   </tr>
 </template>
