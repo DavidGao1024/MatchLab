@@ -19,7 +19,6 @@ const app = useAppStore()
 const todayMatch = ref<Match | null>(null)
 const nextMatch = ref<Match | null>(null)        // hero 在无 todayMatch 时用
 const afterNextMatch = ref<Match | null>(null)   // footer 用（既非 today 也非 next）
-const recentMatches = ref<Match[]>([])
 const injuries = ref<string[]>([])
 const loading = ref(true)
 const error = ref('')
@@ -73,10 +72,6 @@ async function load() {
     afterNextMatch.value = future.find((m) =>
       m.eventId !== todayMatch.value?.eventId && m.eventId !== nextMatch.value?.eventId
     ) ?? null
-    const past = teamMatches.filter((m) =>
-      new Date(m.date) < now && m.eventId !== todayMatch.value?.eventId
-    )
-    recentMatches.value = past.slice(-3).reverse()
     try {
       const inj = await fetchTeamInjuries(props.subscription.league, props.subscription.teamId)
       injuries.value = inj.slice(0, 3).map((i) => i.name)
@@ -114,25 +109,6 @@ function teamFor(side: MatchTeam): Team {
   }
 }
 
-function scoreLine(m: Match): string {
-  if (m.home.score != null && m.away.score != null) {
-    return `${m.home.score}-${m.away.score}`
-  }
-  return 'vs'
-}
-
-type Tone = 'w' | 'd' | 'l' | 'none'
-function matchTone(m: Match): Tone {
-  if (m.status !== 'post' || m.home.score == null || m.away.score == null) return 'none'
-  const mine = props.subscription.teamId
-  const myHome = m.home.id === mine
-  const myScore = myHome ? m.home.score : m.away.score
-  const oppScore = myHome ? m.away.score : m.home.score
-  if (myScore > oppScore) return 'w'
-  if (myScore < oppScore) return 'l'
-  return 'd'
-}
-
 function formatCountdown(targetIso: string): string {
   const ms = new Date(targetIso).getTime() - Date.now()
   if (ms <= 0) return '00D 00H 00M'
@@ -154,11 +130,6 @@ function formatKickoffTime(iso: string): string {
   const hh = String(d.getUTCHours()).padStart(2, '0')
   const mm = String(d.getUTCMinutes()).padStart(2, '0')
   return `${hh}:${mm} UTC`
-}
-
-function formatDateShort(iso: string): string {
-  const d = new Date(iso)
-  return `${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}`
 }
 
 function formatDateLong(iso: string): string {
