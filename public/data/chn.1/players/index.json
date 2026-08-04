@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-02T09:05:45.118Z",
+  "updateTime": "2026-08-03T10:29:52.404Z",
   "league": "chn.1",
   "season": "2026",
   "count": 498,
@@ -66,6 +66,16 @@
       "team": "Tianjin Jinmen Tiger"
     },
     {
+      "id": 222356,
+      "name": "Wesley",
+      "teamId": 22199,
+      "position": "F",
+      "age": 29,
+      "goals": 10,
+      "assists": null,
+      "team": "Shenzhen Xinpengcheng"
+    },
+    {
       "id": 251743,
       "name": "Guy Mbenza",
       "teamId": 131705,
@@ -84,16 +94,6 @@
       "goals": 9,
       "assists": null,
       "team": "Chengdu Rongcheng"
-    },
-    {
-      "id": 222356,
-      "name": "Wesley",
-      "teamId": 22199,
-      "position": "F",
-      "age": 29,
-      "goals": 9,
-      "assists": null,
-      "team": "Shenzhen Xinpengcheng"
     },
     {
       "id": 302535,
@@ -174,6 +174,16 @@
       "goals": 8,
       "assists": null,
       "team": "Zhejiang Professional FC"
+    },
+    {
+      "id": 301780,
+      "name": "Jeffinho",
+      "teamId": 131705,
+      "position": "F",
+      "age": 26,
+      "goals": 7,
+      "assists": null,
+      "team": "Liaoning Tieren"
     },
     {
       "id": 238804,
@@ -326,11 +336,11 @@
       "team": "Chongqing Tonglianglong"
     },
     {
-      "id": 301780,
-      "name": "Jeffinho",
+      "id": 236393,
+      "name": "Takahiro Kunimoto",
       "teamId": 131705,
-      "position": "F",
-      "age": 26,
+      "position": "M",
+      "age": 28,
       "goals": 5,
       "assists": null,
       "team": "Liaoning Tieren"
@@ -454,16 +464,6 @@
       "goals": 4,
       "assists": null,
       "team": "Beijing Guoan"
-    },
-    {
-      "id": 236393,
-      "name": "Takahiro Kunimoto",
-      "teamId": 131705,
-      "position": "M",
-      "age": 28,
-      "goals": 4,
-      "assists": null,
-      "team": "Liaoning Tieren"
     },
     {
       "id": 286535,
@@ -594,6 +594,26 @@
       "goals": 3,
       "assists": null,
       "team": "Shanghai Shenhua"
+    },
+    {
+      "id": 171600,
+      "name": "Peng Xinli",
+      "teamId": 22198,
+      "position": "M",
+      "age": 35,
+      "goals": 3,
+      "assists": null,
+      "team": "Qingdao West Coast"
+    },
+    {
+      "id": 236467,
+      "name": "Samir Memisevic",
+      "teamId": 22198,
+      "position": "D",
+      "age": 32,
+      "goals": 3,
+      "assists": null,
+      "team": "Qingdao West Coast"
     },
     {
       "id": 297603,
@@ -764,26 +784,6 @@
       "goals": 2,
       "assists": null,
       "team": "Shanghai Port"
-    },
-    {
-      "id": 171600,
-      "name": "Peng Xinli",
-      "teamId": 22198,
-      "position": "M",
-      "age": 35,
-      "goals": 2,
-      "assists": null,
-      "team": "Qingdao West Coast"
-    },
-    {
-      "id": 236467,
-      "name": "Samir Memisevic",
-      "teamId": 22198,
-      "position": "D",
-      "age": 32,
-      "goals": 2,
-      "assists": null,
-      "team": "Qingdao West Coast"
     },
     {
       "id": 234678,
@@ -1066,6 +1066,16 @@
       "team": "Shanghai Port"
     },
     {
+      "id": 187021,
+      "name": "Jiang Zhipeng",
+      "teamId": 22199,
+      "position": "D",
+      "age": 37,
+      "goals": 1,
+      "assists": null,
+      "team": "Shenzhen Xinpengcheng"
+    },
+    {
       "id": 361772,
       "name": "Jin Shunkai",
       "teamId": 977,
@@ -1274,6 +1284,16 @@
       "goals": 1,
       "assists": null,
       "team": "Yunnan Yukun"
+    },
+    {
+      "id": 252956,
+      "name": "Saulo",
+      "teamId": 977,
+      "position": "F",
+      "age": 29,
+      "goals": 1,
+      "assists": null,
+      "team": "Shanghai Shenhua"
     },
     {
       "id": 234667,
@@ -2296,16 +2316,6 @@
       "team": "Zhejiang Professional FC"
     },
     {
-      "id": 187021,
-      "name": "Jiang Zhipeng",
-      "teamId": 22199,
-      "position": "D",
-      "age": 37,
-      "goals": 0,
-      "assists": null,
-      "team": "Shenzhen Xinpengcheng"
-    },
-    {
       "id": 282861,
       "name": "Jiaqi Han",
       "teamId": 2052,
@@ -2334,6 +2344,16 @@
       "goals": 0,
       "assists": null,
       "team": "Chongqing Tonglianglong"
+    },
+    {
+      "id": 3098691,
+      "name": "Jingyao Cui",
+      "teamId": 21910,
+      "position": "M",
+      "age": null,
+      "goals": 0,
+      "assists": null,
+      "team": "Qingdao Hainiu"
     },
     {
       "id": 321621,
@@ -2886,6 +2906,16 @@
       "team": "Wuhan Three Towns"
     },
     {
+      "id": 3099596,
+      "name": "Mingyu Wu",
+      "teamId": 131705,
+      "position": "D",
+      "age": null,
+      "goals": 0,
+      "assists": null,
+      "team": "Liaoning Tieren"
+    },
+    {
       "id": 234492,
       "name": "Mirahmetjan Muzepper",
       "teamId": 21355,
@@ -3154,16 +3184,6 @@
       "goals": 0,
       "assists": null,
       "team": "Chongqing Tonglianglong"
-    },
-    {
-      "id": 252956,
-      "name": "Saulo",
-      "teamId": 977,
-      "position": "F",
-      "age": 29,
-      "goals": 0,
-      "assists": null,
-      "team": "Shanghai Shenhua"
     },
     {
       "id": 400659,
@@ -3784,6 +3804,16 @@
       "goals": 0,
       "assists": null,
       "team": "Beijing Guoan"
+    },
+    {
+      "id": 400605,
+      "name": "Xie Jintian",
+      "teamId": 131705,
+      "position": "G",
+      "age": 20,
+      "goals": 0,
+      "assists": null,
+      "team": "Liaoning Tieren"
     },
     {
       "id": 234233,
@@ -4616,16 +4646,6 @@
       "team": "Qingdao Hainiu"
     },
     {
-      "id": 3098691,
-      "name": "Jingyao Cui",
-      "teamId": 21910,
-      "position": "M",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Qingdao Hainiu"
-    },
-    {
       "id": 3098684,
       "name": "Juncheng Cui",
       "teamId": 15515,
@@ -4694,16 +4714,6 @@
       "goals": null,
       "assists": null,
       "team": "Shandong Taishan"
-    },
-    {
-      "id": 3099596,
-      "name": "Mingyu Wu",
-      "teamId": 131705,
-      "position": "D",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "team": "Liaoning Tieren"
     },
     {
       "id": 3107051,
@@ -4844,16 +4854,6 @@
       "goals": null,
       "assists": null,
       "team": "Chengdu Rongcheng"
-    },
-    {
-      "id": 400605,
-      "name": "Xie Jintian",
-      "teamId": 131705,
-      "position": "G",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "team": "Liaoning Tieren"
     },
     {
       "id": 3098689,
