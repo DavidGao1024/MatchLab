@@ -257,6 +257,7 @@ function formatDateLong(iso: string): string {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  container-type: inline-size;
 }
 
 .compact-body { display: flex; flex-direction: column; }
@@ -297,7 +298,7 @@ function formatDateLong(iso: string): string {
   display: grid; grid-template-columns: 1.4fr 1fr 1fr auto;
   gap: 12px; padding: 12px 16px;
 }
-@media (max-width: 720px) {
+@container (max-width: 720px) {
   .compact-grid { grid-template-columns: 1fr; }
 }
 
