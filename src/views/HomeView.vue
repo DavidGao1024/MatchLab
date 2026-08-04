@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
 import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
 import EmptyState from '../components/common/EmptyState.vue'
@@ -20,7 +19,6 @@ import { lastCompletedMatchday, selectStripMatches } from '../utils/matches'
 const app = useAppStore()
 const standings = useStandingsStore()
 const userStore = useUserDataStore()
-const router = useRouter()
 
 onMounted(() => userStore.init())
 
@@ -111,11 +109,9 @@ const featuredId = computed(() => {
           <EmptyState
             title="订阅主队，首页直接看今日赛程"
             body="点击下方任意球队进入详情页订阅"
-            cta-text="去积分榜"
-            @cta="router.push('/eng.1/standings')"
           />
         </div>
-        <div v-else class="flex flex-col gap-3">
+        <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
           <MyTeamCard
             v-for="sub in userStore.subscriptions"
             :key="sub.teamId"
