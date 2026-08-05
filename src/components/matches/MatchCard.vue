@@ -6,7 +6,7 @@ import { useAppStore } from '../../stores/app'
 import { useTimezone } from '../../composables/useTimezone'
 import { useTeamsStore } from '../../stores/teams'
 import { useMatchesStore } from '../../stores/matches'
-import { t, teamName } from '../../utils/i18n'
+import { t, teamName, venueName } from '../../utils/i18n'
 import type { Team } from '../../types/models'
 import TeamLogo from '../common/TeamLogo.vue'
 
@@ -90,7 +90,7 @@ const scoreCls = computed(() => (tone.value.home === 'draw' && props.match.statu
     <!-- 底栏：本地开球时间（跨天自动"次日"）· 英文球场名（规格 v1.6） -->
     <div class="mt-2 flex items-center justify-between gap-3 border-t border-dashed border-white/10 pt-1.5 font-mono-d text-[9px] text-slate-500">
       <time class="shrink-0" :datetime="match.date">{{ tz.kickoff(match.date) }}</time>
-      <span class="truncate">{{ match.venue }}</span>
+      <span class="truncate">{{ venueName(match.venue, app.lang) }}</span>
     </div>
   </article>
 </template>

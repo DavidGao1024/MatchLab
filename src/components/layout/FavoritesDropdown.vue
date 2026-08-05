@@ -2,8 +2,11 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useUserDataStore } from '../../stores/userData'
+import { useAppStore } from '../../stores/app'
+import { playerName, teamName } from '../../utils/i18n'
 
 const store = useUserDataStore()
+const app = useAppStore()
 const router = useRouter()
 const open = ref(false)
 
@@ -54,7 +57,7 @@ function goFavorites() {
         class="block w-full text-left px-3 py-1.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700"
         @click="t.teamId && goTeam(t.league, t.teamId)"
       >
-        {{ t.name }}
+        {{ teamName(t.name, app.lang) }}
       </button>
       <div v-if="store.favorites.players.length" class="px-3 py-1 text-xs text-slate-400">球员</div>
       <button
@@ -64,7 +67,7 @@ function goFavorites() {
         class="block w-full text-left px-3 py-1.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700"
         @click="p.athleteId && goPlayer(p.league, p.athleteId)"
       >
-        {{ p.name }}
+        {{ playerName(p.name, app.lang) }}
       </button>
     </div>
   </div>

@@ -49,13 +49,13 @@ describe('FavoritesView', () => {
     store.addFavorite('player', { league: 'eng.1', athleteId: 253989, name: 'Haaland' })
     const { w } = mountWithRouter()
     await flushPromises()
-    // 默认 tab=teams → 显示 Arsenal
-    expect(w.text()).toContain('Arsenal')
-    // 切到球员 tab → 显示 Haaland
+    // 默认 tab=teams → lang=zh 显示中文队名
+    expect(w.text()).toContain('阿森纳')
+    // 切到球员 tab → 显示 Haaland 中文译名
     const playersTab = w.findAll('button').find((b) => b.text().includes('球员'))
     expect(playersTab).toBeTruthy()
     await playersTab!.trigger('click')
     await flushPromises()
-    expect(w.text()).toContain('Haaland')
+    expect(w.text()).toContain('哈兰德')
   })
 })

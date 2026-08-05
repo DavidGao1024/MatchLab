@@ -12,7 +12,7 @@ import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { usePlayersStore } from '../stores/players'
 import { useTeamsStore } from '../stores/teams'
-import { teamName, t } from '../utils/i18n'
+import { cityName, teamName, t, venueName } from '../utils/i18n'
 import type { LeagueSlug } from '../utils/constants'
 
 const route = useRoute()
@@ -83,8 +83,8 @@ function back() {
           <h1 class="font-cond text-3xl font-semibold text-white truncate">{{ displayName }}</h1>
           <p class="text-sm text-slate-400 mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
             <span class="text-slate-500">{{ team.abbreviation }}</span>
-            <span v-if="team.venue?.name">· {{ team.venue.name }}</span>
-            <span v-if="team.venue?.city" class="text-slate-500">{{ team.venue.city }}</span>
+            <span v-if="team.venue?.name">· {{ venueName(team.venue.name, app.lang) }}</span>
+            <span v-if="team.venue?.city" class="text-slate-500">{{ cityName(team.venue.city, app.lang) }}</span>
           </p>
           <div class="flex items-center gap-3 mt-3">
             <SubscribeButton :league="league" :team-id="teamId" :team-name="displayName" />

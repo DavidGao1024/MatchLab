@@ -123,7 +123,9 @@ const LABEL: Record<string, { zh: string; en: string }> = {
 function label(field: string): string {
   const hit = LABEL[field]
   if (hit) return app.lang === 'zh' ? hit.zh : hit.en
-  // camelCase → Title Case
+  // 中文模式下未映射字段原样返回 key（避免输出英文 Title Case 误导用户）
+  if (app.lang === 'zh') return field
+  // 英文模式：camelCase → Title Case
   return field.replace(/([A-Z])/g, ' $1').replace(/^./, (s) => s.toUpperCase()).trim()
 }
 

@@ -40,6 +40,7 @@ describe('FavoritesDropdown', () => {
     store.addFavorite('team', { league: 'eng.1', teamId: 359, name: 'Arsenal' })
     const w = mount(FavoritesDropdown, { global: { plugins: [router] } })
     await w.find('.relative').trigger('mouseenter')
-    expect(w.text()).toContain('Arsenal')
+    // lang=zh → teamName 显示中文
+    expect(w.text()).toContain('阿森纳')
   })
 })

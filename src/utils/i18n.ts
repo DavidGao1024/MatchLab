@@ -449,6 +449,202 @@ function normalizeAccents(s: string): string {
     .replace(/ł/g, 'l').replace(/Ł/g, 'L')
 }
 
+/** 球场中文名（按 teams.json 的 venue.name 键） */
+const VENUE_ZH: Record<string, string> = {
+  // 英超
+  'Vitality Stadium': '迪恩考特球场',
+  'Emirates Stadium': '酋长球场',
+  'Villa Park': '维拉公园球场',
+  'Gtech Community Stadium': 'GTech 社区球场',
+  'American Express Stadium': '美国运通球场',
+  'Turf Moor': '特夫摩尔球场',
+  'Kai Tak Sports Park': '启德体育园',
+  'Selhurst Park': '塞尔赫斯特公园',
+  'Hill Dickinson Stadium': '希尔·迪金森球场',
+  'Craven Cottage': '克拉文农场',
+  'Elland Road': '埃兰路球场',
+  'Anfield': '安菲尔德',
+  'Etihad Stadium': '伊蒂哈德球场',
+  'Old Trafford': '老特拉福德',
+  "St. James' Park": '圣詹姆斯公园',
+  'The City Ground': '城市球场',
+  'Stadium of Light': '光明球场',
+  'Tottenham Hotspur Stadium': '热刺球场',
+  'London Stadium': '伦敦奥林匹克球场',
+  'Molineux Stadium': '莫利纽克斯球场',
+  // 西甲
+  'Mendizorrotza': '门迪索罗萨',
+  "San Mamés": '圣马梅斯',
+  'Riyadh Air Metropolitano': '大都会球场',
+  'Spotify Camp Nou': '诺坎普',
+  'Balaidos': '巴莱多斯',
+  'Estadio Martínez Valero': '马丁内斯·巴莱罗球场',
+  'RCDE Stadium': 'RCDE 球场',
+  'Estadio Coliseum': '科利塞姆球场',
+  'Estadi Montilivi': '蒙蒂利维',
+  'Estadi Ciutat de València': '瓦伦西亚城市球场',
+  'Estadi Mallorca Son Moix': '索恩莫伊斯球场',
+  'El Sadar': '萨达尔',
+  'Estadio de Vallecas': '巴列卡斯球场',
+  'Estadio La Cartuja': '拉卡图哈球场',
+  'Santiago Bernabéu': '伯纳乌',
+  'Estadio Carlos Tartiere': '卡洛斯·塔蒂耶雷球场',
+  'Reale Arena': '雷亚莱球场',
+  'Ramón Sánchez Pizjuán Stadium': '皮斯胡安球场',
+  'Mestalla Stadium': '梅斯塔利亚',
+  'Estadio de la Cerámica': '陶瓷球场',
+  // 意甲
+  'San Siro': '圣西罗',
+  'Olimpico': '罗马奥林匹克',
+  'New Balance Arena': '新百伦球场',
+  "Renato Dall'Ara": '雷纳托·达尔拉',
+  'Unipol Domus': '乌尼波尔穹顶',
+  'Giuseppe Sinigaglia': '西尼加利亚',
+  'Stadio Giovanni Zini': '乔瓦尼·齐尼球场',
+  'Stadio Artemio Franchi': '阿尔泰米奥·弗兰基球场',
+  'Stadio Luigi Ferraris': '路易吉·费拉里斯',
+  'Stadio Marcantonio Bentegodi': '本特戈迪',
+  'Allianz Stadium': '安联球场',
+  'Via del Mare': '滨海球场',
+  'Stadio Diego Armando Maradona': '马拉多纳球场',
+  'Ennio Tardini': '塔迪尼',
+  'Arena Garibaldi - Stadio Romeo Anconetani': '加里波第球场',
+  'Mapei Stadium': '马佩球场',
+  'Stadio Olimpico Grande Torino': '都灵奥林匹克',
+  'Stadio Friuli': '弗留利',
+  // 德甲
+  'Voith-Arena': '福伊特球场',
+  'Stadion An der Alten Försterei': '老森林管理所球场',
+  'BayArena': '拜耳球场',
+  'Allianz Arena': '安联球场',
+  'Signal Iduna Park': '西格纳伊度公园',
+  'BORUSSIA-PARK': '普鲁士公园',
+  'Deutsche Bank Park': '德意志银行公园',
+  'WWK Arena': 'WWK 球场',
+  'RheinEnergieStadion': '莱茵能源球场',
+  'Volksparkstadion': '人民公园球场',
+  'MEWA ARENA': '美瓦球场',
+  'Red Bull Arena': '红牛球场',
+  'Europa-Park Stadion': '欧洲公园球场',
+  'Millerntor-Stadion': '米勒恩托球场',
+  'PreZero Arena': '普雷零球场',
+  'MHPArena': 'MHP 球场',
+  'Volkswagen Arena': '大众竞技场',
+  'Weserstadion': '威悉球场',
+  // 法甲
+  "Stade de l'Abbé-Deschamps": '德尚普斯神父球场',
+  'Stade Raymond Kopa': '雷蒙·科帕球场',
+  'Stade Louis II': '路易二世球场',
+  'Stade Francis-Le Blé': '弗朗西斯·勒布莱球场',
+  'Stade Océane': '海洋球场',
+  'Stade Bollaert-Delelis': '博莱特-德莱利斯球场',
+  'Decathlon Arena - Stade Pierre-Mauroy': '皮埃尔·莫鲁瓦球场',
+  'Stade du Moustoir - Yves Allainmat': '穆斯托瓦球场',
+  'Groupama Stadium': '格鲁帕马球场',
+  'Stade Vélodrome': '韦洛德罗姆',
+  'Stade Saint-Symphorien': '圣西姆弗里安球场',
+  'Stade de la Beaujoire': '博茹瓦尔球场',
+  'Allianz Riviera': '蔚蓝海岸安联',
+  'Stade Jean Bouin': '让·布安球场',
+  'Parc des Princes': '王子公园',
+  'Roazhon Park': '罗阿泽公园',
+  'Stade de la Meinau': '梅纳乌球场',
+  'Stadium Municipal de Toulouse': '图卢兹市政球场',
+  // 中超
+  "Workers' Stadium": '工人体育场',
+  'Chengdu Phoenix Mountain Sports Park': '成都凤凰山足球场',
+  'Chongqing Longxing Football Stadium': '重庆龙兴足球场',
+  'Dalian Suoyuwan Football Stadium': '大连梭鱼湾足球场',
+  'Zhengzhou Hanghai Stadium': '郑州航海体育场',
+  'Tiexi New District Sports Centre': '铁西新区体育中心',
+  'Qingdao Youth Football Stadium': '青岛青春足球场',
+  'Qingdao West Coast University City Stadium': '青岛西海岸大学城体育场',
+  'Jinan Olympic Sports Center Stadium': '济南奥体中心体育场',
+  'SAIC Motor Pudong Arena': '上汽浦东足球场',
+  'Shanghai Stadium': '上海体育场',
+  'Shenzhen Stadium': '深圳体育场',
+  'TEDA Football Stadium': '泰达足球场',
+  'Wuhan Sports Center Stadium': '武汉体育中心体育场',
+  'Yuxi Plateau Sports Center Stadium': '玉溪高原体育运动中心体育场',
+  'Yellow Dragon Sports Center Stadium': '黄龙体育中心体育场',
+}
+
+/** 城市中文名（按 teams.json 的 venue.city 键） */
+const CITY_ZH: Record<string, string> = {
+  // 英超
+  'Bournemouth': '伯恩茅斯', 'London': '伦敦', 'Birmingham': '伯明翰',
+  'Brentford': '布伦特福德', 'Falmer': '法尔默', 'Burnley': '伯恩利',
+  'Mongkok, Kowloon': '香港旺角', 'Liverpool': '利物浦', 'Leeds': '利兹',
+  'Manchester': '曼彻斯特', 'Newcastle-upon-Tyne': '纽卡斯尔',
+  'Nottingham': '诺丁汉', 'Sunderland': '桑德兰', 'Wolverhampton': '伍尔弗汉普顿',
+  // 西甲
+  'Vitoria-Gasteiz': '维多利亚', 'Bilbao': '毕尔巴鄂', 'Madrid': '马德里',
+  'Barcelona': '巴塞罗那', 'Vigo': '维哥', 'Elche': '埃尔切',
+  'Getafe': '赫塔费', 'Girona': '赫罗纳', 'Manises': '马尼塞斯',
+  'Palma de Mallorca': '帕尔马-马略卡', 'Pamplona': '潘普洛纳',
+  'Sevilla': '塞维利亚', 'Oviedo': '奥维耶多', 'San Sebastian': '圣塞巴斯蒂安',
+  'Villarreal': '比利亚雷亚尔',
+  // 意甲
+  'Milano': '米兰', 'Roma': '罗马', 'Bergamo': '贝加莫',
+  'Bologna': '博洛尼亚', 'Cagliari': '卡利亚里', 'Como': '科莫',
+  'Cremona': '克雷莫纳', 'Firenze': '佛罗伦萨', 'Genova': '热那亚',
+  'Verona': '维罗纳', 'Torino': '都灵', 'Lecce': '莱切',
+  'Napoli': '那不勒斯', 'Parma': '帕尔马', 'Pisa': '比萨',
+  'Reggio Emilia': '雷焦艾米利亚', 'Udine': '乌迪内',
+  // 德甲
+  'Heidenheim': '海登海姆', 'Berlin': '柏林', 'Leverkusen': '勒沃库森',
+  'München': '慕尼黑', 'Aue': '奥厄', 'Mönchengladbach': '门兴格拉德巴赫',
+  'Frankfurt': '法兰克福', 'Augsburg': '奥格斯堡', 'Cologne': '科隆',
+  'Hamburg Norderstedt': '汉堡', 'Mainz': '美因茨', 'Leipzig': '莱比锡',
+  'Freiburg im Breisgau': '弗赖堡', 'Sinsheim': '辛斯海姆',
+  'Stuttgart': '斯图加特', 'Wolfsburg': '沃尔夫斯堡', 'Bremen': '不来梅',
+  // 法甲
+  'Auxerre': '欧塞尔', 'Angers': '昂热', 'Monaco': '摩纳哥',
+  'Brest': '布雷斯特', 'Le Havre': '勒阿弗尔', 'Lens': '朗斯',
+  'Lille': '里尔', 'Lorient': '洛里昂', 'Lyon': '里昂',
+  'Marseille': '马赛', 'Metz': '梅斯', 'Nantes': '南特',
+  'Nice': '尼斯', 'Paris': '巴黎', 'Rennes': '雷恩',
+  'Strasbourg': '斯特拉斯堡', 'Toulouse': '图卢兹',
+  // 中超
+  'Beijing': '北京', 'Chengdu': '成都', 'Chongqing': '重庆',
+  'Dalian': '大连', 'Zhengzhou': '郑州', 'Liaoning': '辽宁',
+  'Qingdao': '青岛', 'Jinan': '济南', 'Shanghai': '上海',
+  'Shenzhen': '深圳', 'Tianjin': '天津', 'Wuhan': '武汉',
+  'Yuxi': '玉溪', 'Hangzhou': '杭州',
+}
+
+/** 场馆名：中文查译名表，英文/未收录回退原文 */
+export function venueName(name: string, lang: Lang): string {
+  return lang === 'zh' ? (VENUE_ZH[name] ?? name) : name
+}
+
+/** 城市名：中文查译名表，英文/未收录回退原文 */
+export function cityName(name: string, lang: Lang): string {
+  return lang === 'zh' ? (CITY_ZH[name] ?? name) : name
+}
+
+/** 排行榜分类中文名（按 leaders.json 的 cat.name 键， ESPN 12 项稳定） */
+const LEADERS_CAT_ZH: Record<string, string> = {
+  goalsLeaders: '进球榜',
+  assistsLeaders: '助攻榜',
+  goals: '进球',
+  assists: '助攻',
+  shotsOnTarget: '射正',
+  yellowCards: '黄牌',
+  redCards: '红牌',
+  foulsCommitted: '犯规',
+  foulsSuffered: '被侵犯',
+  totalShots: '射门',
+  accuratePasses: '成功传球',
+  saves: '扑救',
+}
+
+/** 排行榜分类名：中文查译名表，英文/未收录回退 displayName */
+export function leadersCatName(name: string, displayName: string, lang: Lang): string {
+  if (lang !== 'zh') return displayName
+  return LEADERS_CAT_ZH[name] ?? displayName
+}
+
 /** 球员名：中文查译名表 + 去重音/大小写不敏感/撇号兜底/分词回退；英文/未收录直接用原名 */
 export function playerName(name: string, lang: Lang): string {
   if (!name || lang !== 'zh') return name

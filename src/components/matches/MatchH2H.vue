@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import type { H2HEntry } from '../../types/models'
 import { useAppStore } from '../../stores/app'
-import { teamName } from '../../utils/i18n'
+import { t, teamName } from '../../utils/i18n'
 
 const props = defineProps<{ h2h: H2HEntry[]; defaultOpen?: boolean }>()
 const app = useAppStore()
@@ -12,7 +12,7 @@ const open = ref(props.defaultOpen ?? false)
 <template>
   <section v-if="h2h.length" class="match-section">
     <button class="h2h-toggle" @click="open = !open">
-      <span class="h2h-title">历史交锋</span>
+      <span class="h2h-title">{{ t('modal.h2h', app.lang) }}</span>
       <span class="h2h-count">{{ h2h.length }}</span>
       <span class="h2h-arrow" :class="{ 'is-open': open }">▾</span>
     </button>
@@ -22,7 +22,7 @@ const open = ref(props.defaultOpen ?? false)
         <span class="h2h-team h2h-home">{{ teamName(g.homeName, app.lang) }}</span>
         <span class="h2h-score">
           <template v-if="g.homeScore != null && g.awayScore != null">{{ g.homeScore }} - {{ g.awayScore }}</template>
-          <template v-else>vs</template>
+          <template v-else>{{ t('h2h.vs', app.lang) }}</template>
         </span>
         <span class="h2h-team h2h-away">{{ teamName(g.awayName, app.lang) }}</span>
       </div>

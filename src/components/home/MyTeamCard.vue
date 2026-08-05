@@ -5,7 +5,7 @@ import { fetchLiveScores, fetchTeamInjuries } from '../../composables/useEspanFe
 import { useStandingsStore } from '../../stores/standings'
 import { useTeamsStore } from '../../stores/teams'
 import { useAppStore } from '../../stores/app'
-import { teamName } from '../../utils/i18n'
+import { playerName, teamName, t, venueName } from '../../utils/i18n'
 import TeamLogo from '../common/TeamLogo.vue'
 import type { Subscription } from '../../types/user-data'
 import type { Match, MatchTeam, StandingRow, Team } from '../../types/models'
@@ -199,15 +199,15 @@ function formatDateLong(iso: string): string {
             <span>开球 <span class="kickoff-time">{{ formatKickoffTime((todayMatch ?? nextMatch)!.date) }}</span></span>
             <span class="countdown">{{ formatCountdown((todayMatch ?? nextMatch)!.date) }}</span>
           </div>
-          <div v-if="todayMatch || nextMatch" class="venue-row">◉ {{ (todayMatch ?? nextMatch)!.venue || '—' }}</div>
+          <div v-if="todayMatch || nextMatch" class="venue-row">◉ {{ venueName((todayMatch ?? nextMatch)!.venue || '', app.lang) || '—' }}</div>
         </section>
 
         <section class="stats-block">
           <div class="section-label">赛季战绩</div>
           <div v-if="standing" class="wdl">
-            <div class="wdl-cell wdl-w"><div class="wdl-label">W</div><div class="wdl-val">{{ standing.won }}</div></div>
-            <div class="wdl-cell wdl-d"><div class="wdl-label">D</div><div class="wdl-val">{{ standing.drawn }}</div></div>
-            <div class="wdl-cell wdl-l"><div class="wdl-label">L</div><div class="wdl-val">{{ standing.lost }}</div></div>
+            <div class="wdl-cell wdl-w"><div class="wdl-label">{{ t('col.won', app.lang) }}</div><div class="wdl-val">{{ standing.won }}</div></div>
+            <div class="wdl-cell wdl-d"><div class="wdl-label">{{ t('col.drawn', app.lang) }}</div><div class="wdl-val">{{ standing.drawn }}</div></div>
+            <div class="wdl-cell wdl-l"><div class="wdl-label">{{ t('col.lost', app.lang) }}</div><div class="wdl-val">{{ standing.lost }}</div></div>
           </div>
           <div v-else class="wdl-skeleton">—</div>
           <div v-if="standing" class="points-row">
@@ -225,12 +225,12 @@ function formatDateLong(iso: string): string {
         <section class="gf-ga-block">
           <div class="section-label">攻防</div>
           <div v-if="standing" class="gf-ga">
-            <div class="gf-ga-cell"><span class="gf-ga-label">GF</span><span class="gf-ga-val">{{ standing.goalsFor }}</span></div>
-            <div class="gf-ga-cell"><span class="gf-ga-label">GA</span><span class="gf-ga-val">{{ standing.goalsAgainst }}</span></div>
+            <div class="gf-ga-cell"><span class="gf-ga-label">{{ t('col.gf', app.lang) }}</span><span class="gf-ga-val">{{ standing.goalsFor }}</span></div>
+            <div class="gf-ga-cell"><span class="gf-ga-label">{{ t('col.ga', app.lang) }}</span><span class="gf-ga-val">{{ standing.goalsAgainst }}</span></div>
           </div>
           <div v-if="injuries.length" class="inj-block">
             <span class="inj-label">伤员</span>
-            <span class="inj-names">{{ injuries.join(' · ') }}</span>
+            <span class="inj-names">{{ injuries.map(n => playerName(n, app.lang)).join(' · ') }}</span>
           </div>
         </section>
 
@@ -238,7 +238,7 @@ function formatDateLong(iso: string): string {
           <div class="next-label">下场</div>
           <div class="next-match">{{ displayName(footerMatch.home.name) }} vs {{ displayName(footerMatch.away.name) }}</div>
           <div class="next-meta">{{ formatDateLong(footerMatch.date) }}</div>
-          <div class="next-venue">◉ {{ footerMatch.venue || '—' }}</div>
+          <div class="next-venue">◉ {{ venueName(footerMatch.venue || '', app.lang) || '—' }}</div>
         </section>
         <section v-else class="next-block">
           <div class="next-label">下场</div>

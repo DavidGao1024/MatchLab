@@ -8,7 +8,7 @@ import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { useLeadersStore } from '../stores/leaders'
 import { useTeamsStore } from '../stores/teams'
-import { playerName, teamName, t } from '../utils/i18n'
+import { leadersCatName, playerName, teamName, t } from '../utils/i18n'
 import type { LeagueSlug } from '../utils/constants'
 
 const route = useRoute()
@@ -77,7 +77,7 @@ function teamFor(id: number) {
           class="text-xs font-cond tracking-wider px-3 py-1.5 whitespace-nowrap rounded transition-colors"
           :class="i === activeCat ? 'text-white bg-white/10 shadow-[inset_0_-2px_0_var(--league-color)]' : 'text-slate-400 hover:text-white hover:bg-white/5'"
         >
-          {{ app.lang === 'zh' ? cat.displayName : cat.displayName }}
+          {{ leadersCatName(cat.name, cat.displayName, app.lang) }}
         </button>
       </div>
 

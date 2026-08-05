@@ -6,8 +6,11 @@ import EmptyState from '../components/common/EmptyState.vue'
 import ExportCalendarButton from '../components/teams/ExportCalendarButton.vue'
 import { useRouter } from 'vue-router'
 import type { LeagueSlug } from '../utils/constants'
+import { useAppStore } from '../stores/app'
+import { playerName, teamName } from '../utils/i18n'
 
 const store = useUserDataStore()
+const app = useAppStore()
 const toast = useToast()
 const router = useRouter()
 const tab = ref<'teams' | 'players'>('teams')
@@ -74,8 +77,8 @@ function removePlayer(id: number) {
             v-if="t.teamId"
             class="cursor-pointer text-blue-600 hover:underline"
             @click="goTeam(t.league, t.teamId)"
-          >{{ t.name }}</span>
-          <span v-else class="text-slate-700 dark:text-slate-200">{{ t.name }}</span>
+          >{{ teamName(t.name, app.lang) }}</span>
+          <span v-else class="text-slate-700 dark:text-slate-200">{{ teamName(t.name, app.lang) }}</span>
           <div v-if="t.teamId" class="flex gap-2">
             <ExportCalendarButton
               :league="t.league"
@@ -98,8 +101,8 @@ function removePlayer(id: number) {
             v-if="p.athleteId"
             class="cursor-pointer text-blue-600 hover:underline"
             @click="goPlayer(p.league, p.athleteId)"
-          >{{ p.name }}</span>
-          <span v-else class="text-slate-700 dark:text-slate-200">{{ p.name }}</span>
+          >{{ playerName(p.name, app.lang) }}</span>
+          <span v-else class="text-slate-700 dark:text-slate-200">{{ playerName(p.name, app.lang) }}</span>
           <button
             v-if="p.athleteId"
             type="button"

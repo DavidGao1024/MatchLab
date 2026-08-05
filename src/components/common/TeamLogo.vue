@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import type { Team } from '../../types/models'
+import { teamName } from '../../utils/i18n'
+import { useAppStore } from '../../stores/app'
 
 const props = withDefaults(defineProps<{ team?: Team; size?: number }>(), { size: 20 })
+const app = useAppStore()
 
 const failedDark = ref(false)
 const failedAll = ref(false)
@@ -46,6 +49,6 @@ function onError() {
     v-else-if="team"
     class="inline-flex items-center justify-center rounded-full font-cond text-white shrink-0"
     :style="{ width: `${size}px`, height: `${size}px`, background: team.color, fontSize: `${Math.round(size * 0.55)}px` }"
-    :aria-label="team.name"
-  >{{ team.name.charAt(0) }}</span>
+    :aria-label="teamName(team.name, app.lang)"
+  >{{ teamName(team.name, app.lang).charAt(0) }}</span>
 </template>

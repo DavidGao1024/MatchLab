@@ -51,7 +51,7 @@ function displayShort(p: Pick<LineupPlayer, 'name' | 'shortName'>): string {
         {{ side === 'home' ? '主队' : '客队' }}
       </span>
       <span v-if="lineup.formation" class="match-field-formation">{{ lineup.formation }}</span>
-      <span v-if="lineup.coachName" class="match-field-coach">{{ lineup.coachName }}</span>
+      <span v-if="lineup.coachName" class="match-field-coach">{{ playerName(lineup.coachName, app.lang) }}</span>
     </div>
 
     <div class="match-pitch">

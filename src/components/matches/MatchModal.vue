@@ -5,7 +5,7 @@ import type { LeagueSlug } from '../../utils/constants'
 import { useAppStore } from '../../stores/app'
 import { useTeamsStore } from '../../stores/teams'
 import { fetchMatchSummary } from '../../composables/useEspanFetch'
-import { teamName } from '../../utils/i18n'
+import { teamName, venueName } from '../../utils/i18n'
 import TeamLogo from '../common/TeamLogo.vue'
 import DataLoading from '../common/DataLoading.vue'
 import DataError from '../common/DataError.vue'
@@ -100,7 +100,7 @@ const scoreDisplay = computed(() =>
             <div class="match-meta">
               <span>{{ match.clock || '' }}</span>
               <span>·</span>
-              <span>{{ match.venue }}</span>
+              <span>{{ venueName(match.venue, app.lang) }}</span>
             </div>
           </header>
 
