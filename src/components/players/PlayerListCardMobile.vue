@@ -24,10 +24,11 @@ function posLabel(p: string): string {
 
 <template>
   <div
-    class="card mb-2 rounded-lg border border-white/10 p-3 cursor-pointer hover:bg-white/[0.04] transition-colors"
-    :style="{ background: team ? `${team.color}0d` : 'rgba(255,255,255,0.02)' }"
+    class="mb-2 rounded-lg border border-white/10 p-3 cursor-pointer hover:bg-white/[0.04] transition-colors"
+    :style="{ background: team?.color ? `${team.color}0d` : 'rgba(255,255,255,0.02)' }"
     @click="$emit('click')"
   >
+    <!-- `0d` 是 5% alpha 的 hex 表示（#RRGGBB + 0d → rgba 5%）；team.color 空串兜底，避免拼出非法背景值 -->
     <div class="flex items-center gap-2 mb-2">
       <span class="text-slate-500 font-mono-d text-xs w-5">{{ rank }}</span>
       <TeamLogo :team="team" :size="20" />

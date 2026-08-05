@@ -7,8 +7,8 @@ import type { PlayerSummary, Team } from '../../src/types/models'
 
 function makeTeam(over: Partial<Team> = {}): Team {
   return {
-    id: 359, name: 'Arsenal', shortDisplayName: 'Arsenal', abbreviation: 'ARS',
-    color: '#EF0107', alternateColor: '#9C1B1B', logo: '', logoDark: '',
+    id: 503, name: 'Manchester City', shortDisplayName: 'Man City', abbreviation: 'MCI',
+    color: '#6CABDD', alternateColor: '#1C2C5B', logo: '', logoDark: '',
     ...over,
   }
 }
@@ -51,5 +51,15 @@ describe('PlayerListCardMobile', () => {
     })
     await w.trigger('click')
     expect(w.emitted('click')).toBeTruthy()
+  })
+
+  it('null age/goals/assists 显示 —', () => {
+    const w = mount(PlayerListCardMobile, {
+      props: { player: makePlayer({ age: null, goals: null, assists: null }), team: makeTeam(), rank: 1, lang: 'zh' },
+    })
+    const html = w.html()
+    // '—' 出现 3 次（age/goals/assists 三处）
+    const matches = html.match(/—/g) ?? []
+    expect(matches.length).toBe(3)
   })
 })
