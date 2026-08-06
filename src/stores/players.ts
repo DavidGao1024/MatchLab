@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import MiniSearch from 'minisearch'
 import { fetchJsonCached } from '../composables/useJsonFetch'
+import { loadPlayerNames, playerName, teamName } from '../utils/i18n'
 import type { PlayerFile, PlayersIndexFile } from '../types/static'
 import type { PlayerProfile, PlayerSummary } from '../types/models'
 import type { LeagueSlug } from '../utils/constants'
@@ -13,6 +14,8 @@ interface SearchDoc {
   id: string
   name: string
   team: string
+  nameZh: string
+  teamZh: string
   teamId: number
   position: string
   age: number | null
@@ -68,9 +71,11 @@ export const usePlayersStore = defineStore('players', {
       this.loadingIdx[league] = true
       try {
         const f = await fetchJsonCached<PlayersIndexFile>(`data/${league}/players/index.json`, INDEX_TTL, season)
+        // 建索引前等译名表合并完，中文搜索才有 nameZh/teamZh 可查
+        await loadPlayerNames()
         const list = f.players.map(toSummary)
         const ms = new MiniSearch<SearchDoc>({
-          fields: ['name', 'team'],
+          fields: ['name', 'team', 'nameZh', 'teamZh'],
           storeFields: ['id', 'name', 'teamId', 'team', 'position', 'age', 'goals', 'assists'],
           searchOptions: { prefix: true, fuzzy: 0.2, boost: { name: 2 }, combineWith: 'AND' },
         })
@@ -79,6 +84,8 @@ export const usePlayersStore = defineStore('players', {
             id: String(p.id),
             name: p.name,
             team: p.team,
+            nameZh: playerName(p.name, 'zh'),
+            teamZh: teamName(p.team, 'zh'),
             teamId: p.teamId,
             position: p.position,
             age: p.age,
@@ -108,11 +115,18 @@ export const usePlayersStore = defineStore('players', {
         this.loadingProfile[key] = false
       }
     },
-    /** 搜索球员；返回前 limit 条 */
+    /** 搜索球员；返回前 limit 条；中文输入走译名子串匹配 */
     search(league: LeagueSlug, q: string, limit = 10): PlayerSummary[] {
+      const query = q.trim()
+      if (!query) return []
+      if (/[一-鿿]/.test(query)) {
+        return (this.indexes[league] ?? [])
+          .filter((p) => playerName(p.name, 'zh').includes(query) || teamName(p.team, 'zh').includes(query))
+          .slice(0, limit)
+      }
       const ms = this.searchIdx[league]
-      if (!ms || !q.trim()) return []
-      const results = ms.search(q.trim()).slice(0, limit)
+      if (!ms) return []
+      const results = ms.search(query).slice(0, limit)
       return results.map((r) => ({
         id: Number(r.id),
         name: r.name,

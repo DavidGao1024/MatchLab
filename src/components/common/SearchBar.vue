@@ -21,9 +21,11 @@ const inputRef = ref<HTMLInputElement | null>(null)
 const selectedIndex = ref(-1)
 let debounce: ReturnType<typeof setTimeout> | null = null
 
+// 无 league 路由（首页）回退当前焦点联赛，保证全局可搜可跳
 const league = computed<LeagueSlug | null>(() => {
   const p = route.params.league
-  return typeof p === 'string' && isLeagueSlug(p) ? p : null
+  if (typeof p === 'string' && isLeagueSlug(p)) return p
+  return app.currentLeague && isLeagueSlug(app.currentLeague) ? app.currentLeague : null
 })
 
 const playerHits = ref<ReturnType<typeof players.search>>([])
@@ -45,12 +47,13 @@ watch(q, (v) => {
       teamHits.value = []
       return
     }
+    await players.ensureIndex(lg, app.leagueInfo(lg)?.season ?? '2025')
     playerHits.value = players.search(lg, v, 5)
     const bundle = teamsStore.bundles[lg]
     if (bundle) {
       const lower = v.toLowerCase()
       teamHits.value = bundle.teams
-        .filter((t) => t.name.toLowerCase().includes(lower) || t.abbreviation.toLowerCase().includes(lower))
+        .filter((t) => t.name.toLowerCase().includes(lower) || t.abbreviation.toLowerCase().includes(lower) || teamName(t.name, 'zh').includes(v))
         .slice(0, 3)
     } else {
       teamHits.value = []
