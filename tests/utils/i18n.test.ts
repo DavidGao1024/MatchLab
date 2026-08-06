@@ -22,8 +22,13 @@ describe('teamName()', () => {
   })
 })
 
-describe('TEAM_ZH 覆盖 112 队', () => {
-  it('六联赛队数 = 20+20+20+18+18+16', () => {
-    expect(Object.keys(TEAM_ZH)).toHaveLength(112)
+describe('TEAM_ZH 覆盖 126 队', () => {
+  it('六联赛 112 队 + 2026-27 升班马补录 14 队', () => {
+    expect(Object.keys(TEAM_ZH)).toHaveLength(126)
+  })
+  it('升班马译名命中', () => {
+    expect(teamName('Coventry City', 'zh')).toBe('考文垂')
+    expect(teamName('Hull City', 'zh')).toBe('赫尔城')
+    expect(teamName('Schalke 04', 'zh')).toBe('沙尔克04')
   })
 })

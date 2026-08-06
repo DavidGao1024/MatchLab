@@ -1,6 +1,6 @@
 export type Lang = 'zh' | 'en'
 
-/** 96 队标准中文译名（键 = teams.json 的 displayName，一个不多一个不少） */
+/** 96 队标准中文译名（键 = teams.json 的 displayName）+ 赛季交替升班马补录 */
 export const TEAM_ZH: Record<string, string> = {
   // 英超 eng.1（20）
   'AFC Bournemouth': '伯恩茅斯',
@@ -120,6 +120,26 @@ export const TEAM_ZH: Record<string, string> = {
   'Dalian Yingbo': '大连英博',
   'Chongqing Tonglianglong': '重庆铜梁龙',
   'Liaoning Tieren': '辽宁铁人',
+  // ===== 2026-27 升班马补录（赛季交替，teams.json 尚为 2025-26 阵容，实时赛程已出现）=====
+  // 英超 eng.1
+  'Coventry City': '考文垂',
+  'Hull City': '赫尔城',
+  'Ipswich Town': '伊普斯维奇',
+  // 西甲 esp.1
+  'Racing Santander': '桑坦德竞技',
+  'Deportivo La Coruña': '拉科鲁尼亚',
+  'Málaga': '马拉加',
+  // 意甲 ita.1
+  'Monza': '蒙扎',
+  'Frosinone': '弗罗西诺内',
+  'Venezia': '威尼斯',
+  // 德甲 ger.1
+  'SC Paderborn 07': '帕德博恩',
+  'SV Elversberg': '埃尔夫斯贝格',
+  'Schalke 04': '沙尔克04',
+  // 法甲 fra.1
+  'Le Mans': '勒芒',
+  'Troyes': '特鲁瓦',
 }
 
 const UI: Record<string, { zh: string; en: string }> = {
@@ -195,6 +215,8 @@ const UI: Record<string, { zh: string; en: string }> = {
   // ===== Phase 4：球员 / 排行榜 / 搜索 =====
   'nav.players': { zh: '球员', en: 'Players' },
   'nav.leaders': { zh: '排行榜', en: 'Leaders' },
+  'nav.favorites': { zh: '收藏', en: 'Favorites' },
+  'fav.viewAll': { zh: '查看全部 →', en: 'View all →' },
   'search.placeholder': { zh: '搜索球员或球队…', en: 'Search players or teams…' },
   'search.players': { zh: '球员', en: 'Players' },
   'search.teams': { zh: '球队', en: 'Teams' },
@@ -265,6 +287,21 @@ const UI: Record<string, { zh: string; en: string }> = {
   'compare.placeholder': { zh: '搜索球员 ID 或姓名添加到对比', en: 'Search player to compare' },
   'compare.empty': { zh: '尚未选择球员，从搜索框添加', en: 'No players selected' },
   'compare.maxPlayers': { zh: '最多 4 人对比', en: 'Max 4 players' },
+  'compare.max': { zh: '最高', en: 'max' },
+  // ===== 首页订阅卡（MyTeamCard）=====
+  'card.tag': { zh: '订阅主队', en: 'My Team' },
+  'card.today': { zh: '今日', en: 'Today' },
+  'card.next': { zh: '下场', en: 'Next' },
+  'card.live': { zh: '进行中', en: 'Live' },
+  'card.seOver': { zh: '赛季已结束', en: 'Season ended' },
+  'card.kickoff': { zh: '开球', en: 'Kickoff' },
+  'card.beijing': { zh: '北京', en: 'Beijing' },
+  'card.seasonRecord': { zh: '赛季战绩', en: 'Season Record' },
+  'card.recent5': { zh: '最近 5 场', en: 'Last 5' },
+  'card.attack': { zh: '攻防', en: 'Att / Def' },
+  'card.injured': { zh: '伤员', en: 'Injuries' },
+  'card.noNext': { zh: '无再下场', en: 'No more fixtures' },
+  'card.loading': { zh: '加载中...', en: 'Loading...' },
   'compare.diff': { zh: '差值', en: 'Diff' },
   'seasonSelector.label': { zh: '赛季', en: 'Season' },
   'seasonSelector.current': { zh: '当前', en: 'Current' },
@@ -412,18 +449,31 @@ let PLAYER_ZH: Record<string, string> = {
 }
 
 /** 异步加载 players-zh.json 合并到 PLAYER_ZH（应用启动调用一次） */
-export async function loadPlayerNames(): Promise<void> {
-  try {
-    const base = import.meta.env.BASE_URL
-    const res = await fetch(`${base}data/mappings/players-zh.json`)
-    if (!res.ok) return
-    const data = await res.json()
-    if (data?.players && typeof data.players === 'object') {
-      PLAYER_ZH = { ...data.players, ...PLAYER_ZH }
-    }
-  } catch {
-    // 静默失败，不影响应用启动
+let playerNamesPromise: Promise<void> | null = null
+
+/** 记忆化：多次调用共享同一 Promise，players store 建索引前 await 它保证译名表已合并 */
+export function loadPlayerNames(): Promise<void> {
+  if (!playerNamesPromise) {
+    playerNamesPromise = (async () => {
+      try {
+        const base = import.meta.env.BASE_URL
+        const res = await fetch(`${base}data/mappings/players-zh.json`)
+        if (!res.ok) return
+        const data = await res.json()
+        if (data?.players && typeof data.players === 'object') {
+          PLAYER_ZH = { ...data.players, ...PLAYER_ZH }
+        }
+      } catch {
+        // 静默失败，不影响应用启动
+      }
+    })()
   }
+  return playerNamesPromise
+}
+
+/** 仅供测试：重置记忆化 Promise */
+export function __resetPlayerNames(): void {
+  playerNamesPromise = null
 }
 
 // 去重音：Vinícius → Vinicius，便于大小写不敏感匹配
