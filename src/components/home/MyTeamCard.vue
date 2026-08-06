@@ -111,33 +111,29 @@ function teamFor(side: MatchTeam): Team {
 
 function formatCountdown(targetIso: string): string {
   const ms = new Date(targetIso).getTime() - Date.now()
-  if (ms <= 0) return '00D 00H 00M'
+  if (ms <= 0) return app.lang === 'zh' ? '0天 0时 0分' : '00D 00H 00M'
   const d = Math.floor(ms / 86400000)
   const h = Math.floor((ms % 86400000) / 3600000)
   const m = Math.floor((ms % 3600000) / 60000)
+  if (app.lang === 'zh') return `${d}天 ${h}时 ${m}分`
   return `${String(d).padStart(2, '0')}D ${String(h).padStart(2, '0')}H ${String(m).padStart(2, '0')}M`
-}
-
-function formatKickoff(iso: string): string {
-  const d = new Date(iso)
-  const hh = String(d.getHours()).padStart(2, '0')
-  const mm = String(d.getMinutes()).padStart(2, '0')
-  return `${hh}:${mm} 北京`
 }
 
 function formatKickoffTime(iso: string): string {
   const d = new Date(iso)
-  const hh = String(d.getUTCHours()).padStart(2, '0')
-  const mm = String(d.getUTCMinutes()).padStart(2, '0')
-  return `${hh}:${mm} UTC`
+  const hh = String(d.getHours()).padStart(2, '0')
+  const mm = String(d.getMinutes()).padStart(2, '0')
+  return `${hh}:${mm} ${t('card.beijing', app.lang)}`
 }
 
 function formatDateLong(iso: string): string {
   const d = new Date(iso)
   const hh = String(d.getHours()).padStart(2, '0')
   const mm = String(d.getMinutes()).padStart(2, '0')
-  const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
-  return `${d.getMonth() + 1}/${d.getDate()} · ${weekdays[d.getDay()]} ${hh}:${mm}`
+  const zh = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
+  const en = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+  const wd = app.lang === 'zh' ? zh[d.getDay()] : en[d.getDay()]
+  return `${d.getMonth() + 1}/${d.getDate()} · ${wd} ${hh}:${mm}`
 }
 </script>
 
@@ -146,11 +142,11 @@ function formatDateLong(iso: string): string {
     :style="{ '--team-color': teamColor }"
     class="compact-card"
   >
-    <div v-if="loading" class="p-4 text-sm text-slate-500">加载中...</div>
+    <div v-if="loading" class="p-4 text-sm text-slate-500">{{ t('card.loading', app.lang) }}</div>
     <div v-else-if="error" class="p-4 text-sm text-red-400">{{ error }}</div>
     <div v-else class="compact-body">
       <header class="compact-header">
-        <span class="tag">订阅主队</span>
+        <span class="tag">{{ t('card.tag', app.lang) }}</span>
         <span class="league">{{ leagueDisplayName }}</span>
         <h3
           class="team-name"
@@ -169,15 +165,15 @@ function formatDateLong(iso: string): string {
       <div class="compact-grid">
         <section class="hero-block">
           <div v-if="todayMatch?.status === 'in'" class="hero-meta">
-            <span class="live-dot live"></span>进行中 · {{ todayMatch.clock ?? '—' }}
+            <span class="live-dot live"></span>{{ t('card.live', app.lang) }} · {{ todayMatch.clock ?? '—' }}
           </div>
           <div v-else-if="todayMatch" class="hero-meta">
-            <span class="live-dot"></span>今日 · {{ formatKickoff(todayMatch.date) }}
+            <span class="live-dot"></span>{{ t('card.today', app.lang) }} · {{ formatDateLong(todayMatch.date) }}
           </div>
           <div v-else-if="nextMatch" class="hero-meta">
-            <span class="next-dot"></span>下场 · {{ formatKickoff(nextMatch.date) }}
+            <span class="next-dot"></span>{{ t('card.next', app.lang) }} · {{ formatDateLong(nextMatch.date) }}
           </div>
-          <div v-else class="hero-meta">赛季已结束{{ standing ? ` · 最终第 ${standing.rank} 名` : '' }}</div>
+          <div v-else class="hero-meta">{{ t('card.seOver', app.lang) }}{{ standing ? (app.lang === 'zh' ? ` · 最终第 ${standing.rank} 名` : ` · Finished #${standing.rank}`) : '' }}</div>
 
           <div v-if="todayMatch || nextMatch" class="hero-matchup">
             <div class="hero-side left">
@@ -192,18 +188,18 @@ function formatDateLong(iso: string): string {
           </div>
 
           <div v-if="todayMatch?.status === 'in'" class="kickoff-row">
-            <span>进行中 <span class="kickoff-time">{{ todayMatch.home.score ?? 0 }} - {{ todayMatch.away.score ?? 0 }}</span></span>
+            <span>{{ t('card.live', app.lang) }} <span class="kickoff-time">{{ todayMatch.home.score ?? 0 }} - {{ todayMatch.away.score ?? 0 }}</span></span>
             <span class="countdown">{{ todayMatch.clock ?? '—' }}</span>
           </div>
           <div v-else-if="todayMatch || nextMatch" class="kickoff-row">
-            <span>开球 <span class="kickoff-time">{{ formatKickoffTime((todayMatch ?? nextMatch)!.date) }}</span></span>
+            <span>{{ t('card.kickoff', app.lang) }} <span class="kickoff-time">{{ formatKickoffTime((todayMatch ?? nextMatch)!.date) }}</span></span>
             <span class="countdown">{{ formatCountdown((todayMatch ?? nextMatch)!.date) }}</span>
           </div>
           <div v-if="todayMatch || nextMatch" class="venue-row">◉ {{ venueName((todayMatch ?? nextMatch)!.venue || '', app.lang) || '—' }}</div>
         </section>
 
         <section class="stats-block">
-          <div class="section-label">赛季战绩</div>
+          <div class="section-label">{{ t('card.seasonRecord', app.lang) }}</div>
           <div v-if="standing" class="wdl">
             <div class="wdl-cell wdl-w"><div class="wdl-label">{{ t('col.won', app.lang) }}</div><div class="wdl-val">{{ standing.won }}</div></div>
             <div class="wdl-cell wdl-d"><div class="wdl-label">{{ t('col.drawn', app.lang) }}</div><div class="wdl-val">{{ standing.drawn }}</div></div>
@@ -211,11 +207,11 @@ function formatDateLong(iso: string): string {
           </div>
           <div v-else class="wdl-skeleton">—</div>
           <div v-if="standing" class="points-row">
-            <span class="points-label">积分</span>
+            <span class="points-label">{{ t('col.pts', app.lang) }}</span>
             <span class="points-val">{{ standing.points }}</span>
           </div>
           <div v-if="standing && standing.form?.length" class="form-row">
-            <div class="section-label">最近 5 场</div>
+            <div class="section-label">{{ t('card.recent5', app.lang) }}</div>
             <div class="form-pills">
               <span v-for="(f, i) in standing.form" :key="i" :class="`pill ${f.toLowerCase()}`">{{ f }}</span>
             </div>
@@ -223,26 +219,26 @@ function formatDateLong(iso: string): string {
         </section>
 
         <section class="gf-ga-block">
-          <div class="section-label">攻防</div>
+          <div class="section-label">{{ t('card.attack', app.lang) }}</div>
           <div v-if="standing" class="gf-ga">
             <div class="gf-ga-cell"><span class="gf-ga-label">{{ t('col.gf', app.lang) }}</span><span class="gf-ga-val">{{ standing.goalsFor }}</span></div>
             <div class="gf-ga-cell"><span class="gf-ga-label">{{ t('col.ga', app.lang) }}</span><span class="gf-ga-val">{{ standing.goalsAgainst }}</span></div>
           </div>
           <div v-if="injuries.length" class="inj-block">
-            <span class="inj-label">伤员</span>
+            <span class="inj-label">{{ t('card.injured', app.lang) }}</span>
             <span class="inj-names">{{ injuries.map(n => playerName(n, app.lang)).join(' · ') }}</span>
           </div>
         </section>
 
         <section v-if="footerMatch" class="next-block">
-          <div class="next-label">下场</div>
+          <div class="next-label">{{ t('card.next', app.lang) }}</div>
           <div class="next-match">{{ displayName(footerMatch.home.name) }} vs {{ displayName(footerMatch.away.name) }}</div>
           <div class="next-meta">{{ formatDateLong(footerMatch.date) }}</div>
           <div class="next-venue">◉ {{ venueName(footerMatch.venue || '', app.lang) || '—' }}</div>
         </section>
         <section v-else class="next-block">
-          <div class="next-label">下场</div>
-          <div class="next-match skeleton">无再下场</div>
+          <div class="next-label">{{ t('card.next', app.lang) }}</div>
+          <div class="next-match skeleton">{{ t('card.noNext', app.lang) }}</div>
         </section>
       </div>
     </div>
@@ -263,7 +259,7 @@ function formatDateLong(iso: string): string {
 .compact-body { display: flex; flex-direction: column; }
 
 .compact-header {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 10px; row-gap: 4px; flex-wrap: wrap;
   padding: 12px 16px 10px;
   border-bottom: 1px solid color-mix(in srgb, var(--team-color) 25%, transparent);
 }

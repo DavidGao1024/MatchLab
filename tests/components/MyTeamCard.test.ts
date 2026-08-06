@@ -100,7 +100,7 @@ describe('MyTeamCard', () => {
     mockEmptyEvents()
     const w = mount(MyTeamCard, { props: { subscription: store.subscriptions[0] } })
     await flushPromises()
-    expect(w.text()).toContain('赛季已结束')
+    expect(w.text()).toContain('Season ended')
   })
   it('有今日赛程 → 显示对阵双方', async () => {
     const store = useUserDataStore()
@@ -144,7 +144,7 @@ describe('MyTeamCard 紧凑模式（1 队订阅）', () => {
     await flushPromises()
 
     const html = w.html()
-    expect(html).toContain('订阅主队')
+    expect(html).toContain('My Team')
     expect(html).toMatch(/rank-badge/)
     const wdlCells = w.findAll('.wdl-cell')
     expect(wdlCells.length).toBe(3)

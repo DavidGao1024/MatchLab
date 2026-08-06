@@ -3,7 +3,7 @@ import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useUserDataStore } from '../../stores/userData'
 import { useAppStore } from '../../stores/app'
-import { playerName, teamName } from '../../utils/i18n'
+import { playerName, t, teamName } from '../../utils/i18n'
 
 const store = useUserDataStore()
 const app = useAppStore()
@@ -36,7 +36,7 @@ function goFavorites() {
       type="button"
       class="px-3 py-1.5 text-sm text-slate-700 dark:text-slate-200 hover:opacity-80"
     >
-      收藏 ({{ total }})
+      {{ t('nav.favorites', app.lang) }} ({{ total }})
     </button>
     <div
       v-if="open && total > 0"
@@ -47,7 +47,7 @@ function goFavorites() {
         class="block w-full text-left px-3 py-2 text-xs text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-700"
         @click="goFavorites"
       >
-        查看全部 →
+        {{ t('fav.viewAll', app.lang) }}
       </button>
       <div v-if="store.favorites.teams.length" class="px-3 py-1 text-xs text-slate-400">球队</div>
       <button
