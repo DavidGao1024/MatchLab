@@ -3,7 +3,7 @@
   "league": "fra.1",
   "understatLeague": "Ligue_1",
   "season": "2025",
-  "updateTime": "2026-07-24T07:26:22.007Z",
+  "updateTime": "2026-08-05T10:10:58.575Z",
   "standings": [
     {
       "rank": 1,
@@ -175,6 +175,27 @@
     },
     {
       "rank": 9,
+      "teamId": "174",
+      "team": "Toulouse",
+      "matches": 34,
+      "wins": 12,
+      "draws": 9,
+      "loses": 13,
+      "pts": 45,
+      "scored": 47,
+      "missed": 46,
+      "xG": 46.607634,
+      "xGA": 44.4032524,
+      "npxG": 41.286969000000006,
+      "npxGA": 40.6027864,
+      "xpts": 49.73160000000001,
+      "deep": 212,
+      "deepAllowed": 200,
+      "xGD": 2.2,
+      "npxGD": 0.68
+    },
+    {
+      "rank": 10,
       "teamId": "179",
       "team": "Lorient",
       "matches": 34,
@@ -193,27 +214,6 @@
       "deepAllowed": 217,
       "xGD": -3.77,
       "npxGD": -4.68
-    },
-    {
-      "rank": 10,
-      "teamId": "174",
-      "team": "Toulouse",
-      "matches": 33,
-      "wins": 12,
-      "draws": 8,
-      "loses": 13,
-      "pts": 44,
-      "scored": 47,
-      "missed": 46,
-      "xG": 46.288619999999995,
-      "xGA": 44.3192382,
-      "npxG": 40.967955,
-      "npxGA": 40.5187722,
-      "xpts": 48.212500000000006,
-      "deep": 210,
-      "deepAllowed": 198,
-      "xGD": 1.97,
-      "npxGD": 0.45
     },
     {
       "rank": 11,
@@ -345,22 +345,22 @@
       "rank": 17,
       "teamId": "168",
       "team": "Nantes",
-      "matches": 33,
+      "matches": 34,
       "wins": 5,
-      "draws": 8,
+      "draws": 9,
       "loses": 20,
-      "pts": 23,
+      "pts": 24,
       "scored": 29,
       "missed": 52,
-      "xG": 37.82231999999999,
-      "xGA": 52.753942999999985,
-      "npxG": 34.626689999999996,
-      "npxGA": 48.953514999999996,
-      "xpts": 35.454100000000004,
-      "deep": 149,
-      "deepAllowed": 205,
-      "xGD": -14.93,
-      "npxGD": -14.33
+      "xG": 37.90633419999999,
+      "xGA": 53.07295699999999,
+      "npxG": 34.710704199999995,
+      "npxGA": 49.272529,
+      "xpts": 36.280800000000006,
+      "deep": 151,
+      "deepAllowed": 207,
+      "xGD": -15.17,
+      "npxGD": -14.56
     },
     {
       "rank": 18,
@@ -7778,6 +7778,930 @@
       ]
     },
     {
+      "teamId": "174",
+      "team": "Toulouse",
+      "history": [
+        {
+          "date": "2025-08-16 19:05:00",
+          "homeAway": "a",
+          "result": "w",
+          "scored": 1,
+          "missed": 0,
+          "xG": 0.56945,
+          "xGA": 0.95554,
+          "npxG": 0.56945,
+          "npxGA": 0.95554,
+          "xpts": 0.9146,
+          "npxGD": -0.38608999999999993,
+          "ppda": {
+            "att": 272,
+            "def": 19
+          },
+          "ppdaAllowed": {
+            "att": 213,
+            "def": 19
+          },
+          "deep": 9,
+          "deepAllowed": 11,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2025-08-24 15:15:00",
+          "homeAway": "h",
+          "result": "w",
+          "scored": 2,
+          "missed": 0,
+          "xG": 1.32432,
+          "xGA": 0.750148,
+          "npxG": 1.32432,
+          "npxGA": 0.750148,
+          "xpts": 2.0229,
+          "npxGD": 0.5741719999999999,
+          "ppda": {
+            "att": 248,
+            "def": 26
+          },
+          "ppdaAllowed": {
+            "att": 233,
+            "def": 25
+          },
+          "deep": 3,
+          "deepAllowed": 7,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2025-08-30 19:05:00",
+          "homeAway": "h",
+          "result": "l",
+          "scored": 3,
+          "missed": 6,
+          "xG": 2.33006,
+          "xGA": 2.49609,
+          "npxG": 1.56997,
+          "npxGA": 0.975901,
+          "xpts": 1.246,
+          "npxGD": 0.5940690000000001,
+          "ppda": {
+            "att": 575,
+            "def": 16
+          },
+          "ppdaAllowed": {
+            "att": 147,
+            "def": 21
+          },
+          "deep": 5,
+          "deepAllowed": 11,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2025-09-14 13:00:00",
+          "homeAway": "a",
+          "result": "l",
+          "scored": 1,
+          "missed": 2,
+          "xG": 1.15678,
+          "xGA": 2.42116,
+          "npxG": 1.15678,
+          "npxGA": 1.66107,
+          "xpts": 0.503,
+          "npxGD": -0.5042900000000001,
+          "ppda": {
+            "att": 344,
+            "def": 14
+          },
+          "ppdaAllowed": {
+            "att": 114,
+            "def": 28
+          },
+          "deep": 2,
+          "deepAllowed": 9,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2025-09-21 15:15:00",
+          "homeAway": "a",
+          "result": "l",
+          "scored": 0,
+          "missed": 1,
+          "xG": 1.50957,
+          "xGA": 0.883373,
+          "npxG": 0.749478,
+          "npxGA": 0.883373,
+          "xpts": 1.9142,
+          "npxGD": -0.133895,
+          "ppda": {
+            "att": 155,
+            "def": 30
+          },
+          "ppdaAllowed": {
+            "att": 278,
+            "def": 19
+          },
+          "deep": 7,
+          "deepAllowed": 5,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2025-09-27 17:00:00",
+          "homeAway": "h",
+          "result": "d",
+          "scored": 2,
+          "missed": 2,
+          "xG": 1.98573,
+          "xGA": 1.8303,
+          "npxG": 1.22563,
+          "npxGA": 1.8303,
+          "xpts": 1.4598,
+          "npxGD": -0.60467,
+          "ppda": {
+            "att": 349,
+            "def": 35
+          },
+          "ppdaAllowed": {
+            "att": 244,
+            "def": 17
+          },
+          "deep": 8,
+          "deepAllowed": 4,
+          "pts": 1,
+          "wins": 0,
+          "draws": 1,
+          "loses": 0
+        },
+        {
+          "date": "2025-10-05 13:00:00",
+          "homeAway": "a",
+          "result": "w",
+          "scored": 2,
+          "missed": 1,
+          "xG": 1.36525,
+          "xGA": 1.42206,
+          "npxG": 1.36525,
+          "npxGA": 1.42206,
+          "xpts": 1.3385000000000002,
+          "npxGD": -0.05681000000000003,
+          "ppda": {
+            "att": 428,
+            "def": 32
+          },
+          "ppdaAllowed": {
+            "att": 111,
+            "def": 21
+          },
+          "deep": 5,
+          "deepAllowed": 6,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2025-10-19 15:15:00",
+          "homeAway": "h",
+          "result": "w",
+          "scored": 4,
+          "missed": 0,
+          "xG": 2.73037,
+          "xGA": 0.119104,
+          "npxG": 1.97027,
+          "npxGA": 0.119104,
+          "xpts": 2.9146,
+          "npxGD": 1.8511659999999999,
+          "ppda": {
+            "att": 450,
+            "def": 27
+          },
+          "ppdaAllowed": {
+            "att": 194,
+            "def": 12
+          },
+          "deep": 3,
+          "deepAllowed": 4,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2025-10-25 17:00:00",
+          "homeAway": "a",
+          "result": "l",
+          "scored": 0,
+          "missed": 1,
+          "xG": 0.584122,
+          "xGA": 3.37276,
+          "npxG": 0.584122,
+          "npxGA": 3.37276,
+          "xpts": 0.0867,
+          "npxGD": -2.7886379999999997,
+          "ppda": {
+            "att": 257,
+            "def": 34
+          },
+          "ppdaAllowed": {
+            "att": 167,
+            "def": 32
+          },
+          "deep": 3,
+          "deepAllowed": 7,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2025-10-29 19:05:00",
+          "homeAway": "h",
+          "result": "d",
+          "scored": 2,
+          "missed": 2,
+          "xG": 1.62131,
+          "xGA": 1.26096,
+          "npxG": 0.86121,
+          "npxGA": 1.26096,
+          "xpts": 1.6521,
+          "npxGD": -0.39975000000000005,
+          "ppda": {
+            "att": 224,
+            "def": 25
+          },
+          "ppdaAllowed": {
+            "att": 254,
+            "def": 16
+          },
+          "deep": 14,
+          "deepAllowed": 2,
+          "pts": 1,
+          "wins": 0,
+          "draws": 1,
+          "loses": 0
+        },
+        {
+          "date": "2025-11-02 16:15:00",
+          "homeAway": "h",
+          "result": "d",
+          "scored": 0,
+          "missed": 0,
+          "xG": 1.07851,
+          "xGA": 1.07299,
+          "npxG": 1.07851,
+          "npxGA": 1.07299,
+          "xpts": 1.3203,
+          "npxGD": 0.005519999999999969,
+          "ppda": {
+            "att": 284,
+            "def": 21
+          },
+          "ppdaAllowed": {
+            "att": 149,
+            "def": 26
+          },
+          "deep": 6,
+          "deepAllowed": 5,
+          "pts": 1,
+          "wins": 0,
+          "draws": 1,
+          "loses": 0
+        },
+        {
+          "date": "2025-11-09 14:00:00",
+          "homeAway": "a",
+          "result": "d",
+          "scored": 1,
+          "missed": 1,
+          "xG": 1.15206,
+          "xGA": 1.26999,
+          "npxG": 0.391967,
+          "npxGA": 0.509893,
+          "xpts": 1.1729,
+          "npxGD": -0.11792600000000003,
+          "ppda": {
+            "att": 218,
+            "def": 24
+          },
+          "ppdaAllowed": {
+            "att": 276,
+            "def": 9
+          },
+          "deep": 6,
+          "deepAllowed": 2,
+          "pts": 1,
+          "wins": 0,
+          "draws": 1,
+          "loses": 0
+        },
+        {
+          "date": "2025-11-23 16:15:00",
+          "homeAway": "h",
+          "result": "l",
+          "scored": 0,
+          "missed": 1,
+          "xG": 1.85382,
+          "xGA": 0.324057,
+          "npxG": 1.85382,
+          "npxGA": 0.324057,
+          "xpts": 2.5349,
+          "npxGD": 1.529763,
+          "ppda": {
+            "att": 269,
+            "def": 29
+          },
+          "ppdaAllowed": {
+            "att": 290,
+            "def": 29
+          },
+          "deep": 8,
+          "deepAllowed": 3,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2025-11-29 20:05:00",
+          "homeAway": "a",
+          "result": "d",
+          "scored": 2,
+          "missed": 2,
+          "xG": 1.09387,
+          "xGA": 1.62768,
+          "npxG": 1.09387,
+          "npxGA": 1.62768,
+          "xpts": 0.9501999999999999,
+          "npxGD": -0.5338100000000001,
+          "ppda": {
+            "att": 405,
+            "def": 12
+          },
+          "ppdaAllowed": {
+            "att": 125,
+            "def": 31
+          },
+          "deep": 4,
+          "deepAllowed": 7,
+          "pts": 1,
+          "wins": 0,
+          "draws": 1,
+          "loses": 0
+        },
+        {
+          "date": "2025-12-06 18:00:00",
+          "homeAway": "h",
+          "result": "w",
+          "scored": 1,
+          "missed": 0,
+          "xG": 0.64097,
+          "xGA": 0.0918532,
+          "npxG": 0.64097,
+          "npxGA": 0.0918532,
+          "xpts": 1.9096000000000002,
+          "npxGD": 0.5491168000000001,
+          "ppda": {
+            "att": 542,
+            "def": 32
+          },
+          "ppdaAllowed": {
+            "att": 186,
+            "def": 21
+          },
+          "deep": 1,
+          "deepAllowed": 2,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2025-12-13 20:05:00",
+          "homeAway": "a",
+          "result": "w",
+          "scored": 3,
+          "missed": 0,
+          "xG": 2.03766,
+          "xGA": 0.366399,
+          "npxG": 1.27757,
+          "npxGA": 0.366399,
+          "xpts": 2.6748000000000003,
+          "npxGD": 0.9111710000000002,
+          "ppda": {
+            "att": 408,
+            "def": 16
+          },
+          "ppdaAllowed": {
+            "att": 203,
+            "def": 18
+          },
+          "deep": 6,
+          "deepAllowed": 6,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2026-01-02 19:45:00",
+          "homeAway": "h",
+          "result": "l",
+          "scored": 0,
+          "missed": 3,
+          "xG": 0.46972,
+          "xGA": 2.67769,
+          "npxG": 0.46972,
+          "npxGA": 2.67769,
+          "xpts": 0.1617,
+          "npxGD": -2.20797,
+          "ppda": {
+            "att": 318,
+            "def": 23
+          },
+          "ppdaAllowed": {
+            "att": 144,
+            "def": 35
+          },
+          "deep": 3,
+          "deepAllowed": 9,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2026-01-17 18:00:00",
+          "homeAway": "h",
+          "result": "w",
+          "scored": 5,
+          "missed": 1,
+          "xG": 1.77349,
+          "xGA": 1.41914,
+          "npxG": 1.77349,
+          "npxGA": 1.41914,
+          "xpts": 1.6162999999999998,
+          "npxGD": 0.35434999999999994,
+          "ppda": {
+            "att": 334,
+            "def": 21
+          },
+          "ppdaAllowed": {
+            "att": 247,
+            "def": 27
+          },
+          "deep": 11,
+          "deepAllowed": 4,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2026-01-25 16:15:00",
+          "homeAway": "a",
+          "result": "w",
+          "scored": 2,
+          "missed": 0,
+          "xG": 0.684258,
+          "xGA": 0.988274,
+          "npxG": 0.684258,
+          "npxGA": 0.988274,
+          "xpts": 1.0110999999999999,
+          "npxGD": -0.30401599999999995,
+          "ppda": {
+            "att": 282,
+            "def": 22
+          },
+          "ppdaAllowed": {
+            "att": 244,
+            "def": 31
+          },
+          "deep": 5,
+          "deepAllowed": 4,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2026-02-01 16:15:00",
+          "homeAway": "h",
+          "result": "d",
+          "scored": 0,
+          "missed": 0,
+          "xG": 0.804565,
+          "xGA": 0.871363,
+          "npxG": 0.804565,
+          "npxGA": 0.871363,
+          "xpts": 1.2609,
+          "npxGD": -0.06679800000000002,
+          "ppda": {
+            "att": 233,
+            "def": 31
+          },
+          "ppdaAllowed": {
+            "att": 289,
+            "def": 20
+          },
+          "deep": 5,
+          "deepAllowed": 10,
+          "pts": 1,
+          "wins": 0,
+          "draws": 1,
+          "loses": 0
+        },
+        {
+          "date": "2026-02-08 16:15:00",
+          "homeAway": "a",
+          "result": "l",
+          "scored": 0,
+          "missed": 1,
+          "xG": 0.691991,
+          "xGA": 1.17089,
+          "npxG": 0.691991,
+          "npxGA": 1.17089,
+          "xpts": 0.8826,
+          "npxGD": -0.47889899999999996,
+          "ppda": {
+            "att": 337,
+            "def": 45
+          },
+          "ppdaAllowed": {
+            "att": 267,
+            "def": 14
+          },
+          "deep": 5,
+          "deepAllowed": 2,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2026-02-15 14:00:00",
+          "homeAway": "a",
+          "result": "l",
+          "scored": 1,
+          "missed": 2,
+          "xG": 3.12342,
+          "xGA": 0.977711,
+          "npxG": 3.12342,
+          "npxGA": 0.977711,
+          "xpts": 2.6815,
+          "npxGD": 2.145709,
+          "ppda": {
+            "att": 160,
+            "def": 36
+          },
+          "ppdaAllowed": {
+            "att": 241,
+            "def": 12
+          },
+          "deep": 20,
+          "deepAllowed": 0,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2026-02-21 18:00:00",
+          "homeAway": "h",
+          "result": "d",
+          "scored": 1,
+          "missed": 1,
+          "xG": 2.67763,
+          "xGA": 0.687806,
+          "npxG": 2.67763,
+          "npxGA": 0.687806,
+          "xpts": 2.6822999999999997,
+          "npxGD": 1.989824,
+          "ppda": {
+            "att": 270,
+            "def": 32
+          },
+          "ppdaAllowed": {
+            "att": 236,
+            "def": 14
+          },
+          "deep": 13,
+          "deepAllowed": 7,
+          "pts": 1,
+          "wins": 0,
+          "draws": 1,
+          "loses": 0
+        },
+        {
+          "date": "2026-02-28 16:00:00",
+          "homeAway": "a",
+          "result": "l",
+          "scored": 0,
+          "missed": 1,
+          "xG": 0.668386,
+          "xGA": 0.709138,
+          "npxG": 0.668386,
+          "npxGA": 0.709138,
+          "xpts": 1.2665000000000002,
+          "npxGD": -0.04075200000000001,
+          "ppda": {
+            "att": 415,
+            "def": 26
+          },
+          "ppdaAllowed": {
+            "att": 194,
+            "def": 25
+          },
+          "deep": 3,
+          "deepAllowed": 3,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2026-03-07 20:05:00",
+          "homeAway": "h",
+          "result": "l",
+          "scored": 0,
+          "missed": 1,
+          "xG": 1.28713,
+          "xGA": 1.3226,
+          "npxG": 1.28713,
+          "npxGA": 1.3226,
+          "xpts": 1.3039999999999998,
+          "npxGD": -0.03546999999999989,
+          "ppda": {
+            "att": 312,
+            "def": 27
+          },
+          "ppdaAllowed": {
+            "att": 257,
+            "def": 32
+          },
+          "deep": 6,
+          "deepAllowed": 4,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2026-03-15 16:15:00",
+          "homeAway": "a",
+          "result": "w",
+          "scored": 4,
+          "missed": 3,
+          "xG": 1.74262,
+          "xGA": 1.62616,
+          "npxG": 1.74262,
+          "npxGA": 1.62616,
+          "xpts": 1.4724,
+          "npxGD": 0.11646000000000001,
+          "ppda": {
+            "att": 324,
+            "def": 22
+          },
+          "ppdaAllowed": {
+            "att": 308,
+            "def": 16
+          },
+          "deep": 13,
+          "deepAllowed": 4,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2026-03-21 16:00:00",
+          "homeAway": "h",
+          "result": "w",
+          "scored": 1,
+          "missed": 0,
+          "xG": 1.48458,
+          "xGA": 0.477676,
+          "npxG": 1.48458,
+          "npxGA": 0.477676,
+          "xpts": 2.2643,
+          "npxGD": 1.006904,
+          "ppda": {
+            "att": 425,
+            "def": 31
+          },
+          "ppdaAllowed": {
+            "att": 239,
+            "def": 20
+          },
+          "deep": 2,
+          "deepAllowed": 4,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2026-04-03 18:45:00",
+          "homeAway": "a",
+          "result": "l",
+          "scored": 1,
+          "missed": 3,
+          "xG": 0.102597,
+          "xGA": 1.7337,
+          "npxG": 0.102597,
+          "npxGA": 1.7337,
+          "xpts": 0.0939,
+          "npxGD": -1.631103,
+          "ppda": {
+            "att": 512,
+            "def": 22
+          },
+          "ppdaAllowed": {
+            "att": 163,
+            "def": 18
+          },
+          "deep": 2,
+          "deepAllowed": 12,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2026-04-12 15:15:00",
+          "homeAway": "h",
+          "result": "l",
+          "scored": 0,
+          "missed": 4,
+          "xG": 1.46514,
+          "xGA": 2.08775,
+          "npxG": 1.46514,
+          "npxGA": 1.32766,
+          "xpts": 0.8952,
+          "npxGD": 0.13748000000000005,
+          "ppda": {
+            "att": 435,
+            "def": 22
+          },
+          "ppdaAllowed": {
+            "att": 242,
+            "def": 27
+          },
+          "deep": 4,
+          "deepAllowed": 10,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2026-04-17 18:45:00",
+          "homeAway": "a",
+          "result": "l",
+          "scored": 2,
+          "missed": 3,
+          "xG": 0.578481,
+          "xGA": 3.98387,
+          "npxG": 0.578481,
+          "npxGA": 3.98387,
+          "xpts": 0.0621,
+          "npxGD": -3.405389,
+          "ppda": {
+            "att": 203,
+            "def": 14
+          },
+          "ppdaAllowed": {
+            "att": 88,
+            "def": 24
+          },
+          "deep": 3,
+          "deepAllowed": 20,
+          "pts": 0,
+          "wins": 0,
+          "draws": 0,
+          "loses": 1
+        },
+        {
+          "date": "2026-04-25 19:05:00",
+          "homeAway": "h",
+          "result": "d",
+          "scored": 2,
+          "missed": 2,
+          "xG": 2.15303,
+          "xGA": 1.34617,
+          "npxG": 2.15303,
+          "npxGA": 1.34617,
+          "xpts": 1.9664,
+          "npxGD": 0.8068600000000001,
+          "ppda": {
+            "att": 324,
+            "def": 35
+          },
+          "ppdaAllowed": {
+            "att": 311,
+            "def": 26
+          },
+          "deep": 7,
+          "deepAllowed": 4,
+          "pts": 1,
+          "wins": 0,
+          "draws": 1,
+          "loses": 0
+        },
+        {
+          "date": "2026-05-03 15:15:00",
+          "homeAway": "a",
+          "result": "w",
+          "scored": 2,
+          "missed": 1,
+          "xG": 1.67665,
+          "xGA": 0.405296,
+          "npxG": 1.67665,
+          "npxGA": 0.405296,
+          "xpts": 2.3811000000000004,
+          "npxGD": 1.271354,
+          "ppda": {
+            "att": 303,
+            "def": 28
+          },
+          "ppdaAllowed": {
+            "att": 261,
+            "def": 25
+          },
+          "deep": 10,
+          "deepAllowed": 4,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2026-05-10 19:00:00",
+          "homeAway": "h",
+          "result": "w",
+          "scored": 2,
+          "missed": 1,
+          "xG": 1.87108,
+          "xGA": 1.56954,
+          "npxG": 1.87108,
+          "npxGA": 1.56954,
+          "xpts": 1.5951,
+          "npxGD": 0.30154000000000014,
+          "ppda": {
+            "att": 256,
+            "def": 22
+          },
+          "ppdaAllowed": {
+            "att": 179,
+            "def": 21
+          },
+          "deep": 8,
+          "deepAllowed": 6,
+          "pts": 3,
+          "wins": 1,
+          "draws": 0,
+          "loses": 0
+        },
+        {
+          "date": "2026-05-17 18:00:00",
+          "homeAway": "a",
+          "result": "d",
+          "scored": 0,
+          "missed": 0,
+          "xG": 0.319014,
+          "xGA": 0.0840142,
+          "npxG": 0.319014,
+          "npxGA": 0.0840142,
+          "xpts": 1.5191,
+          "npxGD": 0.23499980000000004,
+          "ppda": {
+            "att": 106,
+            "def": 6
+          },
+          "ppdaAllowed": {
+            "att": 47,
+            "def": 11
+          },
+          "deep": 2,
+          "deepAllowed": 2,
+          "pts": 1,
+          "wins": 0,
+          "draws": 1,
+          "loses": 0
+        }
+      ]
+    },
+    {
       "teamId": "179",
       "team": "Lorient",
       "history": [
@@ -8698,903 +9622,6 @@
           "wins": 0,
           "draws": 0,
           "loses": 1
-        }
-      ]
-    },
-    {
-      "teamId": "174",
-      "team": "Toulouse",
-      "history": [
-        {
-          "date": "2025-08-16 19:05:00",
-          "homeAway": "a",
-          "result": "w",
-          "scored": 1,
-          "missed": 0,
-          "xG": 0.56945,
-          "xGA": 0.95554,
-          "npxG": 0.56945,
-          "npxGA": 0.95554,
-          "xpts": 0.9146,
-          "npxGD": -0.38608999999999993,
-          "ppda": {
-            "att": 272,
-            "def": 19
-          },
-          "ppdaAllowed": {
-            "att": 213,
-            "def": 19
-          },
-          "deep": 9,
-          "deepAllowed": 11,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
-        },
-        {
-          "date": "2025-08-24 15:15:00",
-          "homeAway": "h",
-          "result": "w",
-          "scored": 2,
-          "missed": 0,
-          "xG": 1.32432,
-          "xGA": 0.750148,
-          "npxG": 1.32432,
-          "npxGA": 0.750148,
-          "xpts": 2.0229,
-          "npxGD": 0.5741719999999999,
-          "ppda": {
-            "att": 248,
-            "def": 26
-          },
-          "ppdaAllowed": {
-            "att": 233,
-            "def": 25
-          },
-          "deep": 3,
-          "deepAllowed": 7,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
-        },
-        {
-          "date": "2025-08-30 19:05:00",
-          "homeAway": "h",
-          "result": "l",
-          "scored": 3,
-          "missed": 6,
-          "xG": 2.33006,
-          "xGA": 2.49609,
-          "npxG": 1.56997,
-          "npxGA": 0.975901,
-          "xpts": 1.246,
-          "npxGD": 0.5940690000000001,
-          "ppda": {
-            "att": 575,
-            "def": 16
-          },
-          "ppdaAllowed": {
-            "att": 147,
-            "def": 21
-          },
-          "deep": 5,
-          "deepAllowed": 11,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2025-09-14 13:00:00",
-          "homeAway": "a",
-          "result": "l",
-          "scored": 1,
-          "missed": 2,
-          "xG": 1.15678,
-          "xGA": 2.42116,
-          "npxG": 1.15678,
-          "npxGA": 1.66107,
-          "xpts": 0.503,
-          "npxGD": -0.5042900000000001,
-          "ppda": {
-            "att": 344,
-            "def": 14
-          },
-          "ppdaAllowed": {
-            "att": 114,
-            "def": 28
-          },
-          "deep": 2,
-          "deepAllowed": 9,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2025-09-21 15:15:00",
-          "homeAway": "a",
-          "result": "l",
-          "scored": 0,
-          "missed": 1,
-          "xG": 1.50957,
-          "xGA": 0.883373,
-          "npxG": 0.749478,
-          "npxGA": 0.883373,
-          "xpts": 1.9142,
-          "npxGD": -0.133895,
-          "ppda": {
-            "att": 155,
-            "def": 30
-          },
-          "ppdaAllowed": {
-            "att": 278,
-            "def": 19
-          },
-          "deep": 7,
-          "deepAllowed": 5,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2025-09-27 17:00:00",
-          "homeAway": "h",
-          "result": "d",
-          "scored": 2,
-          "missed": 2,
-          "xG": 1.98573,
-          "xGA": 1.8303,
-          "npxG": 1.22563,
-          "npxGA": 1.8303,
-          "xpts": 1.4598,
-          "npxGD": -0.60467,
-          "ppda": {
-            "att": 349,
-            "def": 35
-          },
-          "ppdaAllowed": {
-            "att": 244,
-            "def": 17
-          },
-          "deep": 8,
-          "deepAllowed": 4,
-          "pts": 1,
-          "wins": 0,
-          "draws": 1,
-          "loses": 0
-        },
-        {
-          "date": "2025-10-05 13:00:00",
-          "homeAway": "a",
-          "result": "w",
-          "scored": 2,
-          "missed": 1,
-          "xG": 1.36525,
-          "xGA": 1.42206,
-          "npxG": 1.36525,
-          "npxGA": 1.42206,
-          "xpts": 1.3385000000000002,
-          "npxGD": -0.05681000000000003,
-          "ppda": {
-            "att": 428,
-            "def": 32
-          },
-          "ppdaAllowed": {
-            "att": 111,
-            "def": 21
-          },
-          "deep": 5,
-          "deepAllowed": 6,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
-        },
-        {
-          "date": "2025-10-19 15:15:00",
-          "homeAway": "h",
-          "result": "w",
-          "scored": 4,
-          "missed": 0,
-          "xG": 2.73037,
-          "xGA": 0.119104,
-          "npxG": 1.97027,
-          "npxGA": 0.119104,
-          "xpts": 2.9146,
-          "npxGD": 1.8511659999999999,
-          "ppda": {
-            "att": 450,
-            "def": 27
-          },
-          "ppdaAllowed": {
-            "att": 194,
-            "def": 12
-          },
-          "deep": 3,
-          "deepAllowed": 4,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
-        },
-        {
-          "date": "2025-10-25 17:00:00",
-          "homeAway": "a",
-          "result": "l",
-          "scored": 0,
-          "missed": 1,
-          "xG": 0.584122,
-          "xGA": 3.37276,
-          "npxG": 0.584122,
-          "npxGA": 3.37276,
-          "xpts": 0.0867,
-          "npxGD": -2.7886379999999997,
-          "ppda": {
-            "att": 257,
-            "def": 34
-          },
-          "ppdaAllowed": {
-            "att": 167,
-            "def": 32
-          },
-          "deep": 3,
-          "deepAllowed": 7,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2025-10-29 19:05:00",
-          "homeAway": "h",
-          "result": "d",
-          "scored": 2,
-          "missed": 2,
-          "xG": 1.62131,
-          "xGA": 1.26096,
-          "npxG": 0.86121,
-          "npxGA": 1.26096,
-          "xpts": 1.6521,
-          "npxGD": -0.39975000000000005,
-          "ppda": {
-            "att": 224,
-            "def": 25
-          },
-          "ppdaAllowed": {
-            "att": 254,
-            "def": 16
-          },
-          "deep": 14,
-          "deepAllowed": 2,
-          "pts": 1,
-          "wins": 0,
-          "draws": 1,
-          "loses": 0
-        },
-        {
-          "date": "2025-11-02 16:15:00",
-          "homeAway": "h",
-          "result": "d",
-          "scored": 0,
-          "missed": 0,
-          "xG": 1.07851,
-          "xGA": 1.07299,
-          "npxG": 1.07851,
-          "npxGA": 1.07299,
-          "xpts": 1.3203,
-          "npxGD": 0.005519999999999969,
-          "ppda": {
-            "att": 284,
-            "def": 21
-          },
-          "ppdaAllowed": {
-            "att": 149,
-            "def": 26
-          },
-          "deep": 6,
-          "deepAllowed": 5,
-          "pts": 1,
-          "wins": 0,
-          "draws": 1,
-          "loses": 0
-        },
-        {
-          "date": "2025-11-09 14:00:00",
-          "homeAway": "a",
-          "result": "d",
-          "scored": 1,
-          "missed": 1,
-          "xG": 1.15206,
-          "xGA": 1.26999,
-          "npxG": 0.391967,
-          "npxGA": 0.509893,
-          "xpts": 1.1729,
-          "npxGD": -0.11792600000000003,
-          "ppda": {
-            "att": 218,
-            "def": 24
-          },
-          "ppdaAllowed": {
-            "att": 276,
-            "def": 9
-          },
-          "deep": 6,
-          "deepAllowed": 2,
-          "pts": 1,
-          "wins": 0,
-          "draws": 1,
-          "loses": 0
-        },
-        {
-          "date": "2025-11-23 16:15:00",
-          "homeAway": "h",
-          "result": "l",
-          "scored": 0,
-          "missed": 1,
-          "xG": 1.85382,
-          "xGA": 0.324057,
-          "npxG": 1.85382,
-          "npxGA": 0.324057,
-          "xpts": 2.5349,
-          "npxGD": 1.529763,
-          "ppda": {
-            "att": 269,
-            "def": 29
-          },
-          "ppdaAllowed": {
-            "att": 290,
-            "def": 29
-          },
-          "deep": 8,
-          "deepAllowed": 3,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2025-11-29 20:05:00",
-          "homeAway": "a",
-          "result": "d",
-          "scored": 2,
-          "missed": 2,
-          "xG": 1.09387,
-          "xGA": 1.62768,
-          "npxG": 1.09387,
-          "npxGA": 1.62768,
-          "xpts": 0.9501999999999999,
-          "npxGD": -0.5338100000000001,
-          "ppda": {
-            "att": 405,
-            "def": 12
-          },
-          "ppdaAllowed": {
-            "att": 125,
-            "def": 31
-          },
-          "deep": 4,
-          "deepAllowed": 7,
-          "pts": 1,
-          "wins": 0,
-          "draws": 1,
-          "loses": 0
-        },
-        {
-          "date": "2025-12-06 18:00:00",
-          "homeAway": "h",
-          "result": "w",
-          "scored": 1,
-          "missed": 0,
-          "xG": 0.64097,
-          "xGA": 0.0918532,
-          "npxG": 0.64097,
-          "npxGA": 0.0918532,
-          "xpts": 1.9096000000000002,
-          "npxGD": 0.5491168000000001,
-          "ppda": {
-            "att": 542,
-            "def": 32
-          },
-          "ppdaAllowed": {
-            "att": 186,
-            "def": 21
-          },
-          "deep": 1,
-          "deepAllowed": 2,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
-        },
-        {
-          "date": "2025-12-13 20:05:00",
-          "homeAway": "a",
-          "result": "w",
-          "scored": 3,
-          "missed": 0,
-          "xG": 2.03766,
-          "xGA": 0.366399,
-          "npxG": 1.27757,
-          "npxGA": 0.366399,
-          "xpts": 2.6748000000000003,
-          "npxGD": 0.9111710000000002,
-          "ppda": {
-            "att": 408,
-            "def": 16
-          },
-          "ppdaAllowed": {
-            "att": 203,
-            "def": 18
-          },
-          "deep": 6,
-          "deepAllowed": 6,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
-        },
-        {
-          "date": "2026-01-02 19:45:00",
-          "homeAway": "h",
-          "result": "l",
-          "scored": 0,
-          "missed": 3,
-          "xG": 0.46972,
-          "xGA": 2.67769,
-          "npxG": 0.46972,
-          "npxGA": 2.67769,
-          "xpts": 0.1617,
-          "npxGD": -2.20797,
-          "ppda": {
-            "att": 318,
-            "def": 23
-          },
-          "ppdaAllowed": {
-            "att": 144,
-            "def": 35
-          },
-          "deep": 3,
-          "deepAllowed": 9,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2026-01-17 18:00:00",
-          "homeAway": "h",
-          "result": "w",
-          "scored": 5,
-          "missed": 1,
-          "xG": 1.77349,
-          "xGA": 1.41914,
-          "npxG": 1.77349,
-          "npxGA": 1.41914,
-          "xpts": 1.6162999999999998,
-          "npxGD": 0.35434999999999994,
-          "ppda": {
-            "att": 334,
-            "def": 21
-          },
-          "ppdaAllowed": {
-            "att": 247,
-            "def": 27
-          },
-          "deep": 11,
-          "deepAllowed": 4,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
-        },
-        {
-          "date": "2026-01-25 16:15:00",
-          "homeAway": "a",
-          "result": "w",
-          "scored": 2,
-          "missed": 0,
-          "xG": 0.684258,
-          "xGA": 0.988274,
-          "npxG": 0.684258,
-          "npxGA": 0.988274,
-          "xpts": 1.0110999999999999,
-          "npxGD": -0.30401599999999995,
-          "ppda": {
-            "att": 282,
-            "def": 22
-          },
-          "ppdaAllowed": {
-            "att": 244,
-            "def": 31
-          },
-          "deep": 5,
-          "deepAllowed": 4,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
-        },
-        {
-          "date": "2026-02-01 16:15:00",
-          "homeAway": "h",
-          "result": "d",
-          "scored": 0,
-          "missed": 0,
-          "xG": 0.804565,
-          "xGA": 0.871363,
-          "npxG": 0.804565,
-          "npxGA": 0.871363,
-          "xpts": 1.2609,
-          "npxGD": -0.06679800000000002,
-          "ppda": {
-            "att": 233,
-            "def": 31
-          },
-          "ppdaAllowed": {
-            "att": 289,
-            "def": 20
-          },
-          "deep": 5,
-          "deepAllowed": 10,
-          "pts": 1,
-          "wins": 0,
-          "draws": 1,
-          "loses": 0
-        },
-        {
-          "date": "2026-02-08 16:15:00",
-          "homeAway": "a",
-          "result": "l",
-          "scored": 0,
-          "missed": 1,
-          "xG": 0.691991,
-          "xGA": 1.17089,
-          "npxG": 0.691991,
-          "npxGA": 1.17089,
-          "xpts": 0.8826,
-          "npxGD": -0.47889899999999996,
-          "ppda": {
-            "att": 337,
-            "def": 45
-          },
-          "ppdaAllowed": {
-            "att": 267,
-            "def": 14
-          },
-          "deep": 5,
-          "deepAllowed": 2,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2026-02-15 14:00:00",
-          "homeAway": "a",
-          "result": "l",
-          "scored": 1,
-          "missed": 2,
-          "xG": 3.12342,
-          "xGA": 0.977711,
-          "npxG": 3.12342,
-          "npxGA": 0.977711,
-          "xpts": 2.6815,
-          "npxGD": 2.145709,
-          "ppda": {
-            "att": 160,
-            "def": 36
-          },
-          "ppdaAllowed": {
-            "att": 241,
-            "def": 12
-          },
-          "deep": 20,
-          "deepAllowed": 0,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2026-02-21 18:00:00",
-          "homeAway": "h",
-          "result": "d",
-          "scored": 1,
-          "missed": 1,
-          "xG": 2.67763,
-          "xGA": 0.687806,
-          "npxG": 2.67763,
-          "npxGA": 0.687806,
-          "xpts": 2.6822999999999997,
-          "npxGD": 1.989824,
-          "ppda": {
-            "att": 270,
-            "def": 32
-          },
-          "ppdaAllowed": {
-            "att": 236,
-            "def": 14
-          },
-          "deep": 13,
-          "deepAllowed": 7,
-          "pts": 1,
-          "wins": 0,
-          "draws": 1,
-          "loses": 0
-        },
-        {
-          "date": "2026-02-28 16:00:00",
-          "homeAway": "a",
-          "result": "l",
-          "scored": 0,
-          "missed": 1,
-          "xG": 0.668386,
-          "xGA": 0.709138,
-          "npxG": 0.668386,
-          "npxGA": 0.709138,
-          "xpts": 1.2665000000000002,
-          "npxGD": -0.04075200000000001,
-          "ppda": {
-            "att": 415,
-            "def": 26
-          },
-          "ppdaAllowed": {
-            "att": 194,
-            "def": 25
-          },
-          "deep": 3,
-          "deepAllowed": 3,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2026-03-07 20:05:00",
-          "homeAway": "h",
-          "result": "l",
-          "scored": 0,
-          "missed": 1,
-          "xG": 1.28713,
-          "xGA": 1.3226,
-          "npxG": 1.28713,
-          "npxGA": 1.3226,
-          "xpts": 1.3039999999999998,
-          "npxGD": -0.03546999999999989,
-          "ppda": {
-            "att": 312,
-            "def": 27
-          },
-          "ppdaAllowed": {
-            "att": 257,
-            "def": 32
-          },
-          "deep": 6,
-          "deepAllowed": 4,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2026-03-15 16:15:00",
-          "homeAway": "a",
-          "result": "w",
-          "scored": 4,
-          "missed": 3,
-          "xG": 1.74262,
-          "xGA": 1.62616,
-          "npxG": 1.74262,
-          "npxGA": 1.62616,
-          "xpts": 1.4724,
-          "npxGD": 0.11646000000000001,
-          "ppda": {
-            "att": 324,
-            "def": 22
-          },
-          "ppdaAllowed": {
-            "att": 308,
-            "def": 16
-          },
-          "deep": 13,
-          "deepAllowed": 4,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
-        },
-        {
-          "date": "2026-03-21 16:00:00",
-          "homeAway": "h",
-          "result": "w",
-          "scored": 1,
-          "missed": 0,
-          "xG": 1.48458,
-          "xGA": 0.477676,
-          "npxG": 1.48458,
-          "npxGA": 0.477676,
-          "xpts": 2.2643,
-          "npxGD": 1.006904,
-          "ppda": {
-            "att": 425,
-            "def": 31
-          },
-          "ppdaAllowed": {
-            "att": 239,
-            "def": 20
-          },
-          "deep": 2,
-          "deepAllowed": 4,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
-        },
-        {
-          "date": "2026-04-03 18:45:00",
-          "homeAway": "a",
-          "result": "l",
-          "scored": 1,
-          "missed": 3,
-          "xG": 0.102597,
-          "xGA": 1.7337,
-          "npxG": 0.102597,
-          "npxGA": 1.7337,
-          "xpts": 0.0939,
-          "npxGD": -1.631103,
-          "ppda": {
-            "att": 512,
-            "def": 22
-          },
-          "ppdaAllowed": {
-            "att": 163,
-            "def": 18
-          },
-          "deep": 2,
-          "deepAllowed": 12,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2026-04-12 15:15:00",
-          "homeAway": "h",
-          "result": "l",
-          "scored": 0,
-          "missed": 4,
-          "xG": 1.46514,
-          "xGA": 2.08775,
-          "npxG": 1.46514,
-          "npxGA": 1.32766,
-          "xpts": 0.8952,
-          "npxGD": 0.13748000000000005,
-          "ppda": {
-            "att": 435,
-            "def": 22
-          },
-          "ppdaAllowed": {
-            "att": 242,
-            "def": 27
-          },
-          "deep": 4,
-          "deepAllowed": 10,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2026-04-17 18:45:00",
-          "homeAway": "a",
-          "result": "l",
-          "scored": 2,
-          "missed": 3,
-          "xG": 0.578481,
-          "xGA": 3.98387,
-          "npxG": 0.578481,
-          "npxGA": 3.98387,
-          "xpts": 0.0621,
-          "npxGD": -3.405389,
-          "ppda": {
-            "att": 203,
-            "def": 14
-          },
-          "ppdaAllowed": {
-            "att": 88,
-            "def": 24
-          },
-          "deep": 3,
-          "deepAllowed": 20,
-          "pts": 0,
-          "wins": 0,
-          "draws": 0,
-          "loses": 1
-        },
-        {
-          "date": "2026-04-25 19:05:00",
-          "homeAway": "h",
-          "result": "d",
-          "scored": 2,
-          "missed": 2,
-          "xG": 2.15303,
-          "xGA": 1.34617,
-          "npxG": 2.15303,
-          "npxGA": 1.34617,
-          "xpts": 1.9664,
-          "npxGD": 0.8068600000000001,
-          "ppda": {
-            "att": 324,
-            "def": 35
-          },
-          "ppdaAllowed": {
-            "att": 311,
-            "def": 26
-          },
-          "deep": 7,
-          "deepAllowed": 4,
-          "pts": 1,
-          "wins": 0,
-          "draws": 1,
-          "loses": 0
-        },
-        {
-          "date": "2026-05-03 15:15:00",
-          "homeAway": "a",
-          "result": "w",
-          "scored": 2,
-          "missed": 1,
-          "xG": 1.67665,
-          "xGA": 0.405296,
-          "npxG": 1.67665,
-          "npxGA": 0.405296,
-          "xpts": 2.3811000000000004,
-          "npxGD": 1.271354,
-          "ppda": {
-            "att": 303,
-            "def": 28
-          },
-          "ppdaAllowed": {
-            "att": 261,
-            "def": 25
-          },
-          "deep": 10,
-          "deepAllowed": 4,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
-        },
-        {
-          "date": "2026-05-10 19:00:00",
-          "homeAway": "h",
-          "result": "w",
-          "scored": 2,
-          "missed": 1,
-          "xG": 1.87108,
-          "xGA": 1.56954,
-          "npxG": 1.87108,
-          "npxGA": 1.56954,
-          "xpts": 1.5951,
-          "npxGD": 0.30154000000000014,
-          "ppda": {
-            "att": 256,
-            "def": 22
-          },
-          "ppdaAllowed": {
-            "att": 179,
-            "def": 21
-          },
-          "deep": 8,
-          "deepAllowed": 6,
-          "pts": 3,
-          "wins": 1,
-          "draws": 0,
-          "loses": 0
         }
       ]
     },
@@ -16036,6 +16063,33 @@
           "wins": 0,
           "draws": 0,
           "loses": 1
+        },
+        {
+          "date": "2026-05-17 18:00:00",
+          "homeAway": "h",
+          "result": "d",
+          "scored": 0,
+          "missed": 0,
+          "xG": 0.0840142,
+          "xGA": 0.319014,
+          "npxG": 0.0840142,
+          "npxGA": 0.319014,
+          "xpts": 0.8267,
+          "npxGD": -0.23499980000000004,
+          "ppda": {
+            "att": 47,
+            "def": 11
+          },
+          "ppdaAllowed": {
+            "att": 106,
+            "def": 6
+          },
+          "deep": 2,
+          "deepAllowed": 2,
+          "pts": 1,
+          "wins": 0,
+          "draws": 1,
+          "loses": 0
         }
       ]
     },
