@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
 import TeamLogo from '../components/common/TeamLogo.vue'
+import ComparePlayerCardMobile from '../components/players/ComparePlayerCardMobile.vue'
 import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { useCompareStore } from '../stores/compare'
@@ -57,6 +58,7 @@ interface Row {
   field: string
   label: string
   values: (number | null)[]
+  isMaxFlags?: boolean[]
 }
 
 const ROWS_DEF: Array<{ category: keyof PlayerProfile['stats']; field: string; label: string }> = [
@@ -82,7 +84,9 @@ const rows = computed<Row[]>(() => {
       if (!cat) return null
       return (cat as Record<string, number | null>)[field] ?? null
     })
-    return { category, field, label, values }
+    const max = Math.max(...values.filter((x): x is number => x !== null))
+    const isMaxFlags = values.map((v) => v !== null && v === max)
+    return { category, field, label, values, isMaxFlags }
   })
 })
 
@@ -179,36 +183,49 @@ function goDetail(id: number) {
       <div v-if="compare.ids.length === 0" class="text-center text-slate-500 py-12 text-sm">
         {{ t('compare.empty', app.lang) }}
       </div>
-
-      <!-- 对比表格 -->
-      <div v-else class="overflow-x-auto">
-        <table class="w-full text-sm">
-          <thead class="text-[10px] uppercase tracking-wider text-slate-500 font-mono-d border-b border-white/10">
-            <tr>
-              <th class="py-2 px-2 text-left w-32">{{ t('col.player', app.lang) }}</th>
-              <th v-for="p in profiles" :key="p.id" class="py-2 px-3 text-center min-w-[120px]">
-                <div class="flex flex-col items-center gap-1">
-                  <TeamLogo :team="teamFor(p.teamId)" :size="32" />
-                  <button class="text-xs text-white hover:underline truncate max-w-[100px]" @click="goDetail(p.id)">
-                    {{ playerName(p.displayName, app.lang) }}
-                  </button>
-                  <button class="text-[9px] text-slate-500 hover:text-red-400" @click="removePlayer(p.id)">
-                    {{ t('compare.remove', app.lang) }} ×
-                  </button>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="row in rows" :key="row.category + row.field" class="border-b border-white/5">
-              <td class="py-2 px-2 text-slate-400 text-xs">{{ row.label }}</td>
-              <td v-for="(v, i) in row.values" :key="i" class="py-2 px-3 text-center font-mono-d" :class="isMax(i, row.values) ? 'text-emerald-300' : 'text-slate-300'">
-                {{ fmtVal(v) }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <template v-else>
+        <div class="hidden md:block overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="text-[10px] uppercase tracking-wider text-slate-500 font-mono-d border-b border-white/10">
+              <tr>
+                <th class="py-2 px-2 text-left w-32">{{ t('col.player', app.lang) }}</th>
+                <th v-for="p in profiles" :key="p.id" class="py-2 px-3 text-center min-w-[120px]">
+                  <div class="flex flex-col items-center gap-1">
+                    <TeamLogo :team="teamFor(p.teamId)" :size="32" />
+                    <button class="text-xs text-white hover:underline truncate max-w-[100px]" @click="goDetail(p.id)">
+                      {{ playerName(p.displayName, app.lang) }}
+                    </button>
+                    <button class="text-[9px] text-slate-500 hover:text-red-400" @click="removePlayer(p.id)">
+                      {{ t('compare.remove', app.lang) }} ×
+                    </button>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="row in rows" :key="row.category + row.field" class="border-b border-white/5">
+                <td class="py-2 px-2 text-slate-400 text-xs">{{ row.label }}</td>
+                <td v-for="(v, i) in row.values" :key="i" class="py-2 px-3 text-center font-mono-d" :class="isMax(i, row.values) ? 'text-emerald-300' : 'text-slate-300'">
+                  {{ fmtVal(v) }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="md:hidden">
+          <ComparePlayerCardMobile
+            v-for="(p, idx) in profiles"
+            :key="p.id"
+            :profile="p"
+            :team="teamFor(p.teamId)"
+            :rows="rows"
+            :player-index="idx"
+            :lang="app.lang"
+            @remove="removePlayer(p.id)"
+            @click="goDetail(p.id)"
+          />
+        </div>
+      </template>
     </template>
   </section>
 </template>
