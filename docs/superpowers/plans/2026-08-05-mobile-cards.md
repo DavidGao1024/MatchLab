@@ -12,6 +12,21 @@
 
 **Spec：** `docs/superpowers/specs/2026-08-05-mobile-cards-design.md`
 
+## 进度跟踪
+
+| Task | 内容 | 状态 | Commit |
+|---|---|---|---|
+| 1 | PlayerListCardMobile 组件 + 4 单测 | ✅ | `7b81b69` + 修 `f4ae1a8`（删 card 死类 / team.color 空串兜底 / null 边界测试） |
+| 2 | LeaderRowCardMobile 组件 + 3 单测 | ✅ | `5112733` |
+| 3 | ComparePlayerCardMobile 组件 + 4 单测 | ✅ | `bb94bcb`（button 顺序修正：移除按钮 DOM 第 1 位 + order-3 视觉行末） |
+| 4 | AppHeader 移动搜索图标 + 全屏搜索层 + 4 单测 | ✅ | `27a13a0`（test 间状态污染修：beforeEach 清 document.body） |
+| 5 | PlayersView 双 DOM + 3 单测 | ✅ | `5f5df5f` |
+| 6 | LeadersView 双 DOM + 3 单测 | ✅ | `a707690`（fetch stub + reset fresh gate） |
+| 7 | CompareView 双 DOM + 3 单测 | ✅ | `13e1577`（fetch stub 替代直插 profiles / `@remove="removePlayer(p.id)"` 适配 emit 无 payload） |
+| 8 | 全量回归 + 验收清单 | ✅ | 单测 172/172 + typecheck + build 全过；375px 手测 + i18n 手测待回归；CLAUDE.md 完工记录与最终 commit 按用户指示**未做** |
+
+**最终状态**：8/8 Task 完工，subagent-driven-development 流程走完（implementer + spec review + quality review 双关），所有 subagent commit 在 main 本地，**未 push**。375px 移动手测与 i18n 双语手测列入待回归清单（subagent 执行期间按项目约定禁用浏览器）。
+
 ---
 
 ## 文件结构
