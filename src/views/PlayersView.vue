@@ -3,6 +3,7 @@ import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
+import PlayerListCardMobile from '../components/players/PlayerListCardMobile.vue'
 import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { usePlayersStore } from '../stores/players'
@@ -80,6 +81,10 @@ function go(p: { id: number }) {
   router.push(`/${league.value}/player/${p.id}`)
 }
 
+function teamFor(id: number) {
+  return teams.teamById(league.value, id)
+}
+
 function posLabel(p: string): string {
   if (p === 'G') return t('players.positionG', app.lang)
   if (p === 'D') return t('players.positionD', app.lang)
@@ -125,7 +130,7 @@ function posLabel(p: string): string {
       <div v-if="filtered.length === 0" class="text-center text-slate-500 py-12 text-sm">
         {{ t('players.empty', app.lang) }}
       </div>
-      <div v-else class="overflow-x-auto">
+      <div v-else class="hidden md:block overflow-x-auto">
         <table class="w-full text-sm">
           <thead class="text-[10px] uppercase tracking-wider text-slate-500 font-mono-d border-b border-white/10">
             <tr>
@@ -156,6 +161,17 @@ function posLabel(p: string): string {
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="md:hidden">
+        <PlayerListCardMobile
+          v-for="(p, i) in pageItems"
+          :key="p.id"
+          :player="p"
+          :team="teamFor(p.teamId)"
+          :rank="(page - 1) * 50 + i + 1"
+          :lang="app.lang"
+          @click="go(p)"
+        />
       </div>
       <!-- 分页 -->
       <div v-if="totalPages > 1" class="flex justify-center items-center gap-2 mt-4 text-xs">
