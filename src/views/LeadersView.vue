@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
 import TeamLogo from '../components/common/TeamLogo.vue'
+import LeaderRowCardMobile from '../components/players/LeaderRowCardMobile.vue'
 import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { useLeadersStore } from '../stores/leaders'
@@ -81,7 +82,7 @@ function teamFor(id: number) {
         </button>
       </div>
 
-      <div v-if="current" class="overflow-x-auto">
+      <div v-if="current" class="hidden md:block overflow-x-auto">
         <table class="w-full text-sm">
           <thead class="text-[10px] uppercase tracking-wider text-slate-500 font-mono-d border-b border-white/10">
             <tr>
@@ -109,6 +110,18 @@ function teamFor(id: number) {
             </tr>
           </tbody>
         </table>
+      </div>
+      <div v-if="current" class="md:hidden">
+        <LeaderRowCardMobile
+          v-for="e in current.entries"
+          :key="e.athleteId"
+          :entry="e"
+          :team="teamFor(e.teamId)"
+          :category="current.name"
+          :cat-display-name="current.displayName"
+          :lang="app.lang"
+          @click="go(e.athleteId)"
+        />
       </div>
     </template>
   </section>
