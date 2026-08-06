@@ -24,7 +24,7 @@
 
 const path = require('path');
 const { sleep, httpRequest, writeJsonIfChanged } = require('./lib/http');
-const { SEASON, LEAGUES } = require('./lib/espn-endpoints');
+const { SEASON, LEAGUES, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
 
 const BASE = 'https://understat.com';
 const DELAY_MS = 1200;
@@ -32,7 +32,8 @@ const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 
 const argv = process.argv.slice(2);
 const requested = argv[0];
-const season = argv[1] || SEASON;
+// 未显式传赛季时由 resolveSeasonsInPlace 在 main 里按开赛判定填值
+let season = argv[1] || '';
 
 const targets = requested
   ? LEAGUES.filter((l) => l.understatSlug === requested || l.slug === requested)
@@ -299,6 +300,10 @@ async function processLeague(league) {
 }
 
 async function main() {
+  if (!season) {
+    await resolveSeasonsInPlace(targets);
+    season = targets[0]?.season || SEASON;
+  }
   console.log(`[understat] 联赛: ${targets.map((t) => t.understatSlug).join(', ')}  赛季: ${season}`);
   for (const league of targets) {
     try {

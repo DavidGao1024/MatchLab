@@ -11,6 +11,8 @@
  */
 'use strict';
 
+const { fetchJson } = require('./http');
+
 const CORE_BASE = 'https://sports.core.api.espn.com';
 const SITE_BASE = 'https://site.api.espn.com/apis/site/v2/sports/soccer';
 
@@ -63,4 +65,41 @@ const TEAM_OVERRIDES = {
   8239:   { logo: 'logos/chn.1/8239.png' },                      // 天津津门虎（ESPN logo 过旧）
 };
 
-module.exports = { CORE_BASE, SITE_BASE, SEASON, LEAGUES, core, site, TEAM_OVERRIDES };
+/** 开赛月份：欧洲制 8 月开幕；自然年制 3 月开幕 */
+function seasonOpenMonth(seasonType) {
+  return seasonType === 'calendar' ? 3 : 8;
+}
+
+/** 候选赛季（日期驱动）：欧洲制 8–12 月=当年、1–7 月=上一年；自然年制=当年 */
+function candidateSeason(seasonType, now) {
+  const y = now.getUTCFullYear();
+  if (seasonType === 'calendar') return y;
+  return now.getUTCMonth() + 1 >= 8 ? y : y - 1;
+}
+
+/**
+ * 赛季交替判定（2026-08-06）：候选新赛季开幕月已有完赛（state=post）才切新季，
+ * 否则回退上一季——季前空窗期站继续展示旧季完整数据。
+ * 原地改写 league.season，下游（core/scores/understat/leagues.json 汇总）同对象可见；
+ * 每联赛 1 次 scoreboard 请求，失败保守不改。
+ */
+async function resolveSeasonsInPlace(leagues, now = new Date()) {
+  for (const league of leagues) {
+    const type = league.seasonType || 'european';
+    const cand = candidateSeason(type, now);
+    const m = seasonOpenMonth(type);
+    const mm = String(m).padStart(2, '0');
+    const last = new Date(Date.UTC(cand, m + 1, 0)).getUTCDate();
+    try {
+      const sb = await fetchJson(`${SITE_BASE}/${league.slug}/scoreboard?dates=${cand}${mm}01-${cand}${mm}${String(last).padStart(2, '0')}&limit=200`);
+      const started = (sb.events ?? []).some((e) => e.status?.type?.state === 'post');
+      league.season = started ? String(cand) : String(cand - 1);
+    } catch {
+      // 网络失败不改 season（保守沿用配置值）
+    }
+    console.log(`[season] ${league.slug} → ${league.season}（候选 ${cand}）`);
+  }
+  return leagues;
+}
+
+module.exports = { CORE_BASE, SITE_BASE, SEASON, LEAGUES, core, site, TEAM_OVERRIDES, resolveSeasonsInPlace };

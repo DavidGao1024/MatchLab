@@ -19,7 +19,7 @@
 
 const path = require('path');
 const { sleep, fetchJson, writeJsonIfChanged } = require('./lib/http');
-const { SEASON, LEAGUES, site } = require('./lib/espn-endpoints');
+const { SEASON, LEAGUES, site, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 const DELAY_MS = 200;
@@ -192,6 +192,7 @@ async function processLeague(league) {
 }
 
 async function main() {
+  await resolveSeasonsInPlace(LEAGUES);
   console.log(`[scores] 联赛: ${targets.map((t) => t.slug).join(', ')}`);
   for (const league of targets) {
     await processLeague(league);

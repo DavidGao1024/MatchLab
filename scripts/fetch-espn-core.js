@@ -28,7 +28,7 @@
 const fs = require('fs')
 const path = require('path');
 const { sleep, fetchJson, writeJsonIfChanged } = require('./lib/http');
-const { SEASON, LEAGUES, core, TEAM_OVERRIDES } = require('./lib/espn-endpoints');
+const { SEASON, LEAGUES, core, TEAM_OVERRIDES, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 const REQUEST_DELAY_MS = 200;
@@ -313,7 +313,8 @@ async function fetchPlayers(league, rosterMap) {
       writeJsonIfChanged(file, doc);
 
       const goals = pickStat(stats, ['totalGoals', 'goals']);
-      const assists = pickStat(stats, ['assists', 'totalAssists']);
+      // 2026-08-06 fix：ESPN 实际字段为 offensive.goalAssists（旧名单永不命中，导致全员助攻 null）
+      const assists = pickStat(stats, ['assists', 'totalAssists', 'goalAssists']);
       index.push({
         id: doc.id,
         name: doc.displayName,
@@ -502,6 +503,7 @@ async function processLeague(league) {
 }
 
 async function main() {
+  await resolveSeasonsInPlace(LEAGUES);
   console.log(`[espn-core] 联赛: ${targets.map((t) => t.slug).join(', ')}  赛季: ${targets.map((t) => t.season || SEASON).join('/')}${Number.isFinite(PLAYERS_LIMIT) ? `  PLAYERS_LIMIT=${PLAYERS_LIMIT}` : ''}`);
   const summary = [];
   for (const league of targets) {
