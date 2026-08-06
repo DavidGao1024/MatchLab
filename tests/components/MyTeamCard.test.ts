@@ -133,7 +133,7 @@ describe('MyTeamCard', () => {
 })
 
 describe('MyTeamCard 紧凑模式（1 队订阅）', () => {
-  it('渲染 rank badge + WDL + form pills + GF/GA', async () => {
+  it('渲染 rank badge + WDL + form pills', async () => {
     const userStore = useUserDataStore()
     await userStore.init()
     userStore.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
@@ -155,10 +155,8 @@ describe('MyTeamCard 紧凑模式（1 队订阅）', () => {
     expect(pointsRow.text()).toContain('85')
     const formPills = w.findAll('.form-pills .pill')
     expect(formPills.length).toBe(5)
-    const gfGa = w.findAll('.gf-ga-cell')
-    expect(gfGa.length).toBe(2)
-    expect(gfGa[0].text()).toContain('75')
-    expect(gfGa[1].text()).toContain('32')
+    // 攻防块已按用户指示移除（2026-08-06）
+    expect(w.findAll('.gf-ga-cell').length).toBe(0)
   })
 })
 

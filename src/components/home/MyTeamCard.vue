@@ -109,23 +109,6 @@ function teamFor(side: MatchTeam): Team {
   }
 }
 
-function formatCountdown(targetIso: string): string {
-  const ms = new Date(targetIso).getTime() - Date.now()
-  if (ms <= 0) return app.lang === 'zh' ? '0天 0时 0分' : '00D 00H 00M'
-  const d = Math.floor(ms / 86400000)
-  const h = Math.floor((ms % 86400000) / 3600000)
-  const m = Math.floor((ms % 3600000) / 60000)
-  if (app.lang === 'zh') return `${d}天 ${h}时 ${m}分`
-  return `${String(d).padStart(2, '0')}D ${String(h).padStart(2, '0')}H ${String(m).padStart(2, '0')}M`
-}
-
-function formatKickoffTime(iso: string): string {
-  const d = new Date(iso)
-  const hh = String(d.getHours()).padStart(2, '0')
-  const mm = String(d.getMinutes()).padStart(2, '0')
-  return `${hh}:${mm} ${t('card.beijing', app.lang)}`
-}
-
 function formatDateLong(iso: string): string {
   const d = new Date(iso)
   const hh = String(d.getHours()).padStart(2, '0')
@@ -191,10 +174,6 @@ function formatDateLong(iso: string): string {
             <span>{{ t('card.live', app.lang) }} <span class="kickoff-time">{{ todayMatch.home.score ?? 0 }} - {{ todayMatch.away.score ?? 0 }}</span></span>
             <span class="countdown">{{ todayMatch.clock ?? '—' }}</span>
           </div>
-          <div v-else-if="todayMatch || nextMatch" class="kickoff-row">
-            <span>{{ t('card.kickoff', app.lang) }} <span class="kickoff-time">{{ formatKickoffTime((todayMatch ?? nextMatch)!.date) }}</span></span>
-            <span class="countdown">{{ formatCountdown((todayMatch ?? nextMatch)!.date) }}</span>
-          </div>
           <div v-if="todayMatch || nextMatch" class="venue-row">◉ {{ venueName((todayMatch ?? nextMatch)!.venue || '', app.lang) || '—' }}</div>
         </section>
 
@@ -215,14 +194,6 @@ function formatDateLong(iso: string): string {
             <div class="form-pills">
               <span v-for="(f, i) in standing.form" :key="i" :class="`pill ${f.toLowerCase()}`">{{ f }}</span>
             </div>
-          </div>
-        </section>
-
-        <section class="gf-ga-block">
-          <div class="section-label">{{ t('card.attack', app.lang) }}</div>
-          <div v-if="standing" class="gf-ga">
-            <div class="gf-ga-cell"><span class="gf-ga-label">{{ t('col.gf', app.lang) }}</span><span class="gf-ga-val">{{ standing.goalsFor }}</span></div>
-            <div class="gf-ga-cell"><span class="gf-ga-label">{{ t('col.ga', app.lang) }}</span><span class="gf-ga-val">{{ standing.goalsAgainst }}</span></div>
           </div>
           <div v-if="injuries.length" class="inj-block">
             <span class="inj-label">{{ t('card.injured', app.lang) }}</span>
@@ -291,7 +262,7 @@ function formatDateLong(iso: string): string {
 .rank-badge .of { font-size: 10px; color: var(--slate-400, #94a3b8); letter-spacing: 0.12em; }
 
 .compact-grid {
-  display: grid; grid-template-columns: 1.4fr 1fr 1fr auto;
+  display: grid; grid-template-columns: 1.4fr 1fr auto;
   gap: 12px; padding: 12px 16px;
 }
 @container (max-width: 720px) {
@@ -386,17 +357,6 @@ function formatDateLong(iso: string): string {
 .pill.d { background: rgba(148,163,184,0.15); color: #cbd5e1; }
 .pill.l { background: rgba(239,68,68,0.18); color: #ef4444; }
 
-.gf-ga-block { display: flex; flex-direction: column; }
-.gf-ga {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 5px;
-  font-family: var(--font-mono-d, monospace); font-size: 11px;
-}
-.gf-ga-cell {
-  background: rgba(255,255,255,0.03); padding: 5px 7px; border-radius: 4px;
-  display: flex; justify-content: space-between; align-items: baseline;
-}
-.gf-ga-label { color: var(--slate-500, #64748b); font-size: 9px; letter-spacing: 0.18em; }
-.gf-ga-val { color: #fff; font-weight: 600; font-size: 13px; }
 .inj-block {
   margin-top: 6px;
   border-left: 3px solid #ef4444; padding-left: 7px;
