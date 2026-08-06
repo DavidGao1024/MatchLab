@@ -28,7 +28,7 @@ interface Row { category: string; field: string; label: string; values: (number 
 beforeEach(() => setActivePinia(createPinia()))
 
 describe('ComparePlayerCardMobile', () => {
-  it('中文模式渲染球员名 + 各统计项 + max 标记', () => {
+  it('中文模式渲染球员名 + 各统计项 + 最高标记', () => {
     const rows: Row[] = [
       { category: 'offensive', field: 'totalGoals', label: '进球', values: [14, 12, 8], isMaxFlags: [true, false, false] },
       { category: 'offensive', field: 'goalAssists', label: '助攻', values: [2, 7, 5], isMaxFlags: [false, true, false] },
@@ -45,7 +45,7 @@ describe('ComparePlayerCardMobile', () => {
     expect(w.text()).toContain('哈兰德')
     expect(w.text()).toContain('进球')
     expect(w.text()).toContain('14')
-    expect(w.text()).toContain('max')
+    expect(w.text()).toContain('最高')
     expect(w.text()).toContain('助攻')
     // 卡片显示该球员的助攻值（index 0 → 2，不是 max）
     expect(w.text()).toContain('2')

@@ -93,7 +93,6 @@ const rows = computed<Row[]>(() => {
 function fmtVal(v: number | null | undefined): string {
   if (v === null || v === undefined) return '—'
   if (typeof v === 'number') {
-    if (v > 0 && v <= 1) return `${(v * 100).toFixed(1)}%`
     if (Number.isInteger(v)) return String(v)
     return v.toFixed(2)
   }

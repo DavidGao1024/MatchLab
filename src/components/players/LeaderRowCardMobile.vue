@@ -31,7 +31,7 @@ defineEmits<{ click: [] }>()
     </div>
     <div class="text-right shrink-0">
       <div class="font-mono-d text-[9px] uppercase tracking-[0.18em] text-slate-500">{{ leadersCatName(category, catDisplayName, lang) }}</div>
-      <div class="text-white font-mono-d text-xl font-semibold leading-tight">{{ entry.displayValue }}</div>
+      <div class="text-white font-mono-d text-xl font-semibold leading-tight">{{ entry.value }}</div>
     </div>
   </div>
 </template>

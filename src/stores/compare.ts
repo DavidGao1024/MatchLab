@@ -27,7 +27,8 @@ export const useCompareStore = defineStore('compare', {
   actions: {
     add(id: number) {
       if (this.ids.length >= MAX || this.ids.includes(id)) return
-      this.ids.push(id)
+      // 引用替换而非 push 原地改：watch(() => ids) 靠引用变化触发（2026-08-06 fix：push 导致添加后不刷新）
+      this.ids = [...this.ids, id]
       this.persist()
     },
     remove(id: number) {

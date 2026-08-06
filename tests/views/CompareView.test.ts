@@ -91,10 +91,10 @@ describe('CompareView 双 DOM', () => {
     expect(w.find('.md\\:hidden').exists()).toBe(true)
   })
 
-  it('移动端渲染球员名 + max 标记', async () => {
+  it('移动端渲染球员名 + 最高标记', async () => {
     const { w } = await setup()
     expect(w.text()).toContain('哈兰德')
-    // 单人对比，所有项都是 max
-    expect(w.text()).toContain('max')
+    // 单人对比，所有项都是最高
+    expect(w.text()).toContain('最高')
   })
 })

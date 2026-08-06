@@ -25,7 +25,6 @@ defineEmits<{ remove: []; click: [] }>()
 function fmtVal(v: number | null | undefined): string {
   if (v === null || v === undefined) return '—'
   if (typeof v === 'number') {
-    if (v > 0 && v <= 1) return `${(v * 100).toFixed(1)}%`
     if (Number.isInteger(v)) return String(v)
     return v.toFixed(2)
   }
@@ -67,7 +66,7 @@ function rowValue(row: Row): number | null {
       <div v-for="row in rows" :key="row.category + row.field" class="flex justify-between">
         <span class="text-slate-400">{{ row.label }}</span>
         <span :class="['font-mono-d', isMax(row) ? 'text-emerald-300 font-semibold' : 'text-slate-300']">
-          {{ fmtVal(rowValue(row)) }}<span v-if="isMax(row)" class="ml-1 text-[10px]">(max)</span>
+          {{ fmtVal(rowValue(row)) }}<span v-if="isMax(row)" class="ml-1 text-[10px]">({{ t('compare.max', lang) }})</span>
         </span>
       </div>
     </div>
