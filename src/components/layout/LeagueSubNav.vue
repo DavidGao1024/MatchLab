@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useAppStore } from '../../stores/app'
 import { isLeagueSlug, type LeagueSlug } from '../../utils/constants'
+import LeaguePicker from './LeaguePicker.vue'
 
 const app = useAppStore()
 const route = useRoute()
@@ -37,20 +38,24 @@ function isActive(name: string): boolean {
 
 <template>
   <nav v-if="active" class="border-b border-white/10 bg-[#0c101b]/60">
-    <div class="max-w-[1600px] mx-auto px-4 flex gap-1 overflow-x-auto">
-      <router-link
-        v-for="tab in TABS"
-        :key="tab.routeName"
-        :to="tab.path(active)"
-        class="font-cond text-sm tracking-wider px-4 py-2.5 whitespace-nowrap border-b-2 transition-colors"
-        :class="
-          isActive(tab.routeName)
-            ? 'text-white border-[var(--league-color)]'
-            : 'text-slate-400 hover:text-white border-transparent'
-        "
-      >
-        {{ app.lang === 'zh' ? tab.labelZh : tab.labelEn }}
-      </router-link>
+    <div class="max-w-[1600px] mx-auto px-2 md:px-4 flex items-center gap-1">
+      <!-- 移动端联赛下拉（md:hidden，桌面不渲染）；放在 overflow 容器外，面板不被裁 -->
+      <LeaguePicker />
+      <div class="flex gap-1 overflow-x-auto">
+        <router-link
+          v-for="tab in TABS"
+          :key="tab.routeName"
+          :to="tab.path(active)"
+          class="font-cond text-sm tracking-wider whitespace-nowrap border-b-2 transition-colors px-3 py-2 md:px-4 md:py-2.5"
+          :class="
+            isActive(tab.routeName)
+              ? 'text-white border-[var(--league-color)]'
+              : 'text-slate-400 hover:text-white border-transparent'
+          "
+        >
+          {{ app.lang === 'zh' ? tab.labelZh : tab.labelEn }}
+        </router-link>
+      </div>
     </div>
   </nav>
 </template>
