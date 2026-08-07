@@ -1,6 +1,7 @@
 // @vitest-environment jsdom
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { nextTick } from 'vue'
 import { setActivePinia, createPinia } from 'pinia'
 import { createRouter, createMemoryHistory } from 'vue-router'
 import FavoritesDropdown from '../../src/components/layout/FavoritesDropdown.vue'
@@ -19,28 +20,79 @@ beforeEach(() => {
   __resetToast()
   __resetConfirm()
   vi.useFakeTimers()
+  document.body.innerHTML = ''
 })
 
 afterEach(() => {
   vi.useRealTimers()
 })
 
+function firePointer(el: Element, type: string, pointerType: string) {
+  const ev = new Event(type, { bubbles: true })
+  ;(ev as any).pointerType = pointerType
+  el.dispatchEvent(ev)
+}
+
 describe('FavoritesDropdown', () => {
-  it('空收藏不显示下拉', async () => {
+  it('空收藏：鼠标悬停不显示下拉', async () => {
     const store = useUserDataStore()
     await store.init()
     const w = mount(FavoritesDropdown, { global: { plugins: [router] } })
     expect(w.text()).toContain('收藏 (0)')
-    await w.find('.relative').trigger('mouseenter')
-    expect(w.find('.absolute').exists()).toBe(false)
+    firePointer(w.find('.relative').element, 'pointerenter', 'mouse')
+    await nextTick()
+    expect(w.find('div.absolute').exists()).toBe(false)
   })
-  it('有收藏 hover 后显示列表', async () => {
+
+  it('有收藏：鼠标悬停显示列表（中文）', async () => {
     const store = useUserDataStore()
     await store.init()
     store.addFavorite('team', { league: 'eng.1', teamId: 359, name: 'Arsenal' })
     const w = mount(FavoritesDropdown, { global: { plugins: [router] } })
-    await w.find('.relative').trigger('mouseenter')
-    // lang=zh → teamName 显示中文
+    firePointer(w.find('.relative').element, 'pointerenter', 'mouse')
+    await nextTick()
     expect(w.text()).toContain('阿森纳')
+  })
+
+  it('触屏 pointerenter（pointerType=touch）不展开', async () => {
+    const store = useUserDataStore()
+    await store.init()
+    store.addFavorite('team', { league: 'eng.1', teamId: 359, name: 'Arsenal' })
+    const w = mount(FavoritesDropdown, { global: { plugins: [router] } })
+    firePointer(w.find('.relative').element, 'pointerenter', 'touch')
+    expect(w.find('div.absolute').exists()).toBe(false)
+  })
+
+  it('点击按钮开合（触屏路径）', async () => {
+    const store = useUserDataStore()
+    await store.init()
+    store.addFavorite('team', { league: 'eng.1', teamId: 359, name: 'Arsenal' })
+    const w = mount(FavoritesDropdown, { global: { plugins: [router] } })
+    await w.find('button').trigger('click')
+    expect(w.find('div.absolute').exists()).toBe(true)
+    await w.find('button').trigger('click')
+    expect(w.find('div.absolute').exists()).toBe(false)
+  })
+
+  it('打开后点击组件外部关闭', async () => {
+    const store = useUserDataStore()
+    await store.init()
+    store.addFavorite('team', { league: 'eng.1', teamId: 359, name: 'Arsenal' })
+    const w = mount(FavoritesDropdown, { global: { plugins: [router] } })
+    await w.find('button').trigger('click')
+    expect(w.find('div.absolute').exists()).toBe(true)
+    const outside = document.createElement('div')
+    document.body.appendChild(outside)
+    outside.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+    await Promise.resolve()
+    expect(w.find('div.absolute').exists()).toBe(false)
+  })
+
+  it('total=0 移动端无角标；按钮有 aria-label', async () => {
+    const store = useUserDataStore()
+    await store.init()
+    const w = mount(FavoritesDropdown, { global: { plugins: [router] } })
+    expect(w.find('.fav-badge').exists()).toBe(false)
+    expect(w.find('button').attributes('aria-label')).toBe('收藏')
   })
 })
