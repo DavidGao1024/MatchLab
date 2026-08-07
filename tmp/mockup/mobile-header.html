@@ -25,6 +25,7 @@
   .r3{display:flex;gap:2px;padding:0 10px;border-bottom:1px solid rgba(255,255,255,.08);overflow:hidden;}
   .s{font-size:11px;color:#94a3b8;padding:8px 9px;border-bottom:2px solid transparent;white-space:nowrap;}
   .s.on{color:#fff;border-bottom-color:#ef4444;}
+  .lgb{font-size:11px;color:#fff;border:1px solid rgba(255,255,255,.22);background:rgba(239,68,68,.16);border-radius:8px;padding:6px 10px;white-space:nowrap;margin-right:5px;}
   .bd{padding:12px;display:flex;flex-direction:column;gap:9px;}
   .blk{border:1px dashed rgba(255,255,255,.15);border-radius:9px;color:#475569;font-size:11px;display:flex;align-items:center;justify-content:center;}
   .note{margin-top:26px;max-width:640px;font-size:13px;color:#94a3b8;line-height:1.8;}
@@ -33,8 +34,8 @@
 </style>
 </head>
 <body>
-  <h1>移动端首页头部重设计 · 方案 A（双层头部）精修</h1>
-  <p class="sub">左：首页（两层）。右：联赛页（三层，第三层是本来就有的页内导航）。深色底为实际配色。</p>
+  <h1>移动端首页头部重设计 · 方案 A + 方案甲（统一双层）</h1>
+  <p class="sub">左：首页（联赛整行一键切换）。右：联赛相关页（联赛收进「英超 ▾」下拉、与页内导航同行）。深色底为实际配色。</p>
 
   <div class="wrap">
     <!-- 首页 -->
@@ -60,9 +61,9 @@
       </div>
     </div>
 
-    <!-- 联赛页 -->
+    <!-- 联赛页（方案甲：联赛收进下拉，两层） -->
     <div class="col">
-      <div class="cap">联赛页 · 移动端（第三层为现有页内导航）</div>
+      <div class="cap">联赛页 · 移动端（方案甲：联赛收进下拉，仍两层）</div>
       <div class="ph">
         <div class="r1">
           <span class="lg"><i class="d"></i>MATCHLAB</span>
@@ -73,13 +74,12 @@
           </span>
         </div>
         <div class="r2">
-          <span class="t on">英超</span><span class="t">西甲</span><span class="t">意甲</span><span class="t">德甲</span><span class="t">法甲</span><span class="t">中超</span>
-        </div>
-        <div class="r3">
+          <span class="lgb">英超 &#9662;</span>
           <span class="s on">积分榜</span><span class="s">赛程</span><span class="s">球员</span><span class="s">排行榜</span><span class="s">对比</span>
         </div>
         <div class="bd">
-          <div class="blk" style="height:130px">积分榜表格</div>
+          <div class="blk" style="height:150px">积分榜表格</div>
+          <div class="blk" style="height:20px;font-size:9px">点「英超 ▾」弹 6 联赛选择</div>
         </div>
       </div>
     </div>
@@ -89,9 +89,9 @@
     <b>要点：</b>
     ① 第一层只剩 logo + 三个操作，logo 在手机上缩小一号；
     ② 收藏改成 &#9829; 图标 + 角标数字，<span class="warn">顺手修掉现在手机上点不开的下拉（目前只有鼠标悬停才弹）</span>；
-    ③ 联赛标签字号加大、触点加高，横滑；
-    ④ 联赛页第三层导航保持不动，只把间距收窄一点；
-    ⑤ 桌面端（md 以上）一行布局完全不变。
+    ③ 首页联赛标签整行、字号加大触点加高、横滑、一键切换；
+    ④ 联赛相关页把联赛收进「英超 ▾」下拉、与页内导航同行，页内导航保持一键直达；
+    ⑤ 移动端所有页面统一两层，桌面端（md 以上）一行布局完全不变。
   </div>
 </body>
 </html>
