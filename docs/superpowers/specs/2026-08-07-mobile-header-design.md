@@ -41,9 +41,18 @@
 （联赛页追加）第三层：积分榜 赛程 球员 排行榜 对比  ← 现有页内导航，仅收窄间距
 ```
 
-- 首页头部约两层（**~92px**），联赛页约三层（**~132px**）
+- 首页头部约两层（**~90px**），联赛页约三层（**~127px**）
 - 纵向间距移动端收窄：容器 `py-2 md:py-3`、换行竖距 `gap-y-2`（不换行时竖距不生效，PC 无感）
 - 联赛标签字号加大、触点加高，横向滚动
+
+**两/三层按路由是否带 league 参数划分**（LeagueSubNav 现有 `v-if="active"` 逻辑，不改）：
+
+| 层数 | 页面 |
+|---|---|
+| 两层 | 首页 `/`、收藏页 `/favorites`（无 league 参数） |
+| 三层 | 积分榜 / 赛程 / 球员 / 排行榜 / 对比 / **球队详情** / **球员详情**（均带 `:league` 参数） |
+
+注意球队详情、球员详情也在三层之列，实施与手测不可遗漏。
 
 ### 桌面端（≥ 768px）：保持现状一行
 
@@ -118,6 +127,7 @@ AppHeader 顶行容器改为 `flex flex-wrap md:flex-nowrap items-center gap-x-4
 2. `tests/components/FavoritesDropdown.test.ts`（更新）
    - 现有 hover 用例改为 `trigger('pointerenter', { pointerType: 'mouse' })` 后保持通过
    - 新增：`pointerType: 'touch'` 的 pointerenter 不展开；点击按钮开合、点外部关闭、`total === 0` 无角标
+   - 注意：jsdom 对 PointerEvent / `pointerType` 支持不稳，若 `trigger` 塞不进属性，改用手工构造事件（如 `new Event('pointerenter')` 后赋 `pointerType`）再 `dispatchEvent`
 
 ### 现有测试
 
@@ -141,7 +151,7 @@ AppHeader 顶行容器改为 `flex flex-wrap md:flex-nowrap items-center gap-x-4
 
 ## 八、风险与备选
 
-1. **flex-wrap + order 在极端窄屏（< 320px）仍可能换行错乱**：若出现，降级为双 DOM（移动/桌面各一份 LeagueTabs），与项目既有模式对齐（备选，不在本批默认实施）
+1. **flex-wrap + order 布局未经真实渲染验证**：这是推演方案，**实施第一步先用最小样例（或在真实 AppHeader 上）验证移动端两层 / 桌面端单行都成立**，再继续其余改动；若极端窄屏（< 320px）换行错乱，降级为双 DOM（移动/桌面各一份 LeagueTabs），与项目既有模式对齐（备选，不在本批默认实施）
 2. **联赛页三层头部占高 ~132px**：为"联赛一键直达"的既定取舍，用户已认可；若后续嫌高，可考虑滚动时收起联赛行（备选）
 3. **指针事件兼容性**：`pointerenter/pointerleave + pointerType` 现代浏览器全支持（含微信内核）；极旧内核若不支持，退化为"仅点按开合"，不影响可用性
 4. **桌面点按收藏按钮会收起已悬停展开的下拉**：预期内的无害行为，不改"悬停展开"的主路径
