@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>移动端首页头部重设计 · 方案 A 精修</title>
+<style>
+  body{margin:0;background:#1a2030;color:#e2e8f0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;padding:32px;}
+  h1{font-size:20px;margin:0 0 4px;}
+  .sub{color:#94a3b8;font-size:13px;margin:0 0 24px;}
+  .wrap{display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start;}
+  .col{display:flex;flex-direction:column;gap:10px;}
+  .cap{font-size:13px;color:#cbd5e1;font-weight:600;}
+  .ph{width:270px;border:2px solid rgba(255,255,255,.16);border-radius:26px;overflow:hidden;background:#0c101b;box-shadow:0 10px 30px rgba(0,0,0,.35);}
+  .r1{display:flex;align-items:center;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.08);}
+  .lg{font-weight:700;letter-spacing:.1em;font-size:13px;color:#fff;display:flex;align-items:center;gap:6px;}
+  .lg .d{width:8px;height:8px;border-radius:50%;background:#ef4444;box-shadow:0 0 9px #ef4444;}
+  .grp{margin-left:auto;display:flex;align-items:center;gap:6px;}
+  .ib{font-style:normal;font-size:13px;color:#cbd5e1;border:1px solid rgba(255,255,255,.16);border-radius:7px;padding:4px 7px;position:relative;line-height:1;display:inline-flex;align-items:center;}
+  .ib em{position:absolute;top:-6px;right:-6px;background:#3b82f6;color:#fff;font-size:9px;border-radius:999px;padding:1px 4px;font-style:normal;}
+  .pill{font-style:normal;font-size:10px;color:#cbd5e1;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:4px 8px;}
+  .r2{display:flex;gap:4px;padding:7px 10px;border-bottom:1px solid rgba(255,255,255,.08);overflow:hidden;}
+  .t{font-size:12px;color:#94a3b8;padding:7px 11px;border-radius:6px;border-bottom:2px solid transparent;white-space:nowrap;}
+  .t.on{color:#fff;background:rgba(255,255,255,.1);border-bottom-color:#ef4444;}
+  .r3{display:flex;gap:2px;padding:0 10px;border-bottom:1px solid rgba(255,255,255,.08);overflow:hidden;}
+  .s{font-size:11px;color:#94a3b8;padding:8px 9px;border-bottom:2px solid transparent;white-space:nowrap;}
+  .s.on{color:#fff;border-bottom-color:#ef4444;}
+  .bd{padding:12px;display:flex;flex-direction:column;gap:9px;}
+  .blk{border:1px dashed rgba(255,255,255,.15);border-radius:9px;color:#475569;font-size:11px;display:flex;align-items:center;justify-content:center;}
+  .note{margin-top:26px;max-width:640px;font-size:13px;color:#94a3b8;line-height:1.8;}
+  .note b{color:#e2e8f0;}
+  .note .warn{color:#f87171;}
+</style>
+</head>
+<body>
+  <h1>移动端首页头部重设计 · 方案 A（双层头部）精修</h1>
+  <p class="sub">左：首页（两层）。右：联赛页（三层，第三层是本来就有的页内导航）。深色底为实际配色。</p>
+
+  <div class="wrap">
+    <!-- 首页 -->
+    <div class="col">
+      <div class="cap">首页 · 移动端（375px）</div>
+      <div class="ph">
+        <div class="r1">
+          <span class="lg"><i class="d"></i>MATCHLAB</span>
+          <span class="grp">
+            <i class="ib" title="搜索">&#128269;</i>
+            <i class="ib" title="收藏">&#9829;<em>3</em></i>
+            <i class="pill">中 / EN</i>
+          </span>
+        </div>
+        <div class="r2">
+          <span class="t on">英超</span><span class="t">西甲</span><span class="t">意甲</span><span class="t">德甲</span><span class="t">法甲</span><span class="t">中超</span>
+        </div>
+        <div class="bd">
+          <div class="blk" style="height:56px">MyTeamCard 订阅卡</div>
+          <div class="blk" style="height:40px">上轮战报转播带</div>
+          <div class="blk" style="height:80px">联赛卡片</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 联赛页 -->
+    <div class="col">
+      <div class="cap">联赛页 · 移动端（第三层为现有页内导航）</div>
+      <div class="ph">
+        <div class="r1">
+          <span class="lg"><i class="d"></i>MATCHLAB</span>
+          <span class="grp">
+            <i class="ib">&#128269;</i>
+            <i class="ib">&#9829;<em>3</em></i>
+            <i class="pill">中 / EN</i>
+          </span>
+        </div>
+        <div class="r2">
+          <span class="t on">英超</span><span class="t">西甲</span><span class="t">意甲</span><span class="t">德甲</span><span class="t">法甲</span><span class="t">中超</span>
+        </div>
+        <div class="r3">
+          <span class="s on">积分榜</span><span class="s">赛程</span><span class="s">球员</span><span class="s">排行榜</span><span class="s">对比</span>
+        </div>
+        <div class="bd">
+          <div class="blk" style="height:130px">积分榜表格</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>要点：</b>
+    ① 第一层只剩 logo + 三个操作，logo 在手机上缩小一号；
+    ② 收藏改成 &#9829; 图标 + 角标数字，<span class="warn">顺手修掉现在手机上点不开的下拉（目前只有鼠标悬停才弹）</span>；
+    ③ 联赛标签字号加大、触点加高，横滑；
+    ④ 联赛页第三层导航保持不动，只把间距收窄一点；
+    ⑤ 桌面端（md 以上）一行布局完全不变。
+  </div>
+</body>
+</html>
