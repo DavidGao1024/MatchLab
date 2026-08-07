@@ -9,7 +9,10 @@ import AppHeader from '../../src/components/layout/AppHeader.vue'
 function makeRouter() {
   return createRouter({
     history: createMemoryHistory(),
-    routes: [{ path: '/', component: { template: '<div/>' } }],
+    routes: [
+      { path: '/', name: 'home', component: { template: '<div/>' } },
+      { path: '/:league/standings', name: 'standings', component: { template: '<div/>' } },
+    ],
   })
 }
 
@@ -51,5 +54,33 @@ describe('AppHeader', () => {
     await nextTick()
     await new Promise((r) => setTimeout(r, 10))
     expect(document.querySelector('.mobile-search-overlay')).toBeNull()
+  })
+
+  it('顶行容器带 flex-wrap 与 md:flex-nowrap', () => {
+    const w = mount(AppHeader, { global: { plugins: [makeRouter()] } })
+    const container = w.find('header > div')
+    expect(container.classes()).toContain('flex-wrap')
+    expect(container.classes()).toContain('md:flex-nowrap')
+  })
+
+  it('首页路由：LeagueTabs wrapper 带 order-last w-full（移动端整行）', async () => {
+    const router = makeRouter()
+    router.push('/')
+    await router.isReady()
+    const w = mount(AppHeader, { global: { plugins: [router] } })
+    const nav = w.find('nav.overflow-x-auto') // LeagueTabs 根
+    const wrapper = nav.element.parentElement as HTMLElement
+    expect(wrapper.className).toContain('order-last')
+    expect(wrapper.className).toContain('w-full')
+  })
+
+  it('联赛路由：LeagueTabs wrapper 带 hidden（移动端交给 LeaguePicker）', async () => {
+    const router = makeRouter()
+    router.push('/eng.1/standings')
+    await router.isReady()
+    const w = mount(AppHeader, { global: { plugins: [router] } })
+    const nav = w.find('nav.overflow-x-auto')
+    const wrapper = nav.element.parentElement as HTMLElement
+    expect(wrapper.className).toContain('hidden')
   })
 })

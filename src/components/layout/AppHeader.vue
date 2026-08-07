@@ -1,21 +1,30 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import { useRoute } from 'vue-router'
 import { useAppStore } from '../../stores/app'
+import { isLeagueSlug } from '../../utils/constants'
 import FavoritesDropdown from './FavoritesDropdown.vue'
 import LeagueTabs from './LeagueTabs.vue'
 import LeagueSubNav from './LeagueSubNav.vue'
 import SearchBar from '../common/SearchBar.vue'
 
 const app = useAppStore()
+const route = useRoute()
 const searchOpen = ref(false)
+
+// 路由是否带合法 league 参数：决定移动端 LeagueTabs 整行显示还是隐藏（路由状态，非设备判断）
+const hasActiveLeague = computed(() => {
+  const p = route.params.league
+  return typeof p === 'string' && isLeagueSlug(p)
+})
 </script>
 
 <template>
   <header class="sticky top-0 z-40 bg-[#0c101b]/80 backdrop-blur border-b border-white/10">
-    <div class="max-w-[1600px] mx-auto px-4 py-3 flex items-center gap-4">
+    <div class="max-w-[1600px] mx-auto px-4 py-2 md:py-3 flex flex-wrap md:flex-nowrap items-center gap-x-4 gap-y-2">
       <router-link
         to="/"
-        class="font-score text-2xl tracking-[0.14em] text-white flex items-center gap-2 shrink-0"
+        class="font-score text-xl md:text-2xl tracking-[0.14em] text-white flex items-center gap-2 shrink-0"
       >
         <span
           class="w-2.5 h-2.5 rounded-full transition-colors duration-700"
@@ -23,13 +32,22 @@ const searchOpen = ref(false)
         ></span>
         MATCHLAB
       </router-link>
-      <LeagueTabs class="ml-2" />
+      <!-- LeagueTabs 外裹 wrapper：显隐类挂 wrapper，避免 hidden 与组件根 flex 打架 -->
+      <div
+        :class="
+          hasActiveLeague
+            ? 'hidden md:block md:order-none md:w-auto md:ml-2'
+            : 'order-last w-full md:order-none md:w-auto md:ml-2'
+        "
+      >
+        <LeagueTabs />
+      </div>
       <!-- PC 端搜索框：完全不动 -->
       <SearchBar class="ml-auto w-full max-w-xs hidden md:block" />
       <!-- 移动端搜索图标按钮 -->
       <button
         type="button"
-        class="md:hidden shrink-0 text-slate-300 hover:text-white p-1.5 rounded border border-white/15"
+        class="ml-auto md:hidden shrink-0 text-slate-300 hover:text-white p-1.5 rounded border border-white/15"
         :aria-label="app.lang === 'zh' ? '搜索' : 'Search'"
         @click="searchOpen = true"
       >
