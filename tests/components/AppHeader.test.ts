@@ -72,6 +72,7 @@ describe('AppHeader', () => {
     const wrapper = nav.element.parentElement as HTMLElement
     expect(wrapper.className).toContain('order-last')
     expect(wrapper.className).toContain('w-full')
+    expect(wrapper.className).toContain('md:min-w-0')
   })
 
   it('联赛路由：LeagueTabs wrapper 带 hidden（移动端交给 LeaguePicker）', async () => {
@@ -82,5 +83,6 @@ describe('AppHeader', () => {
     const nav = w.find('nav.overflow-x-auto')
     const wrapper = nav.element.parentElement as HTMLElement
     expect(wrapper.className).toContain('hidden')
+    expect(wrapper.className).toContain('md:min-w-0')
   })
 })

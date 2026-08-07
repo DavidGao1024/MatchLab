@@ -36,8 +36,8 @@ const hasActiveLeague = computed(() => {
       <div
         :class="
           hasActiveLeague
-            ? 'hidden md:block md:order-none md:w-auto md:ml-2'
-            : 'order-last w-full md:order-none md:w-auto md:ml-2'
+            ? 'hidden md:block md:order-none md:w-auto md:ml-2 md:min-w-0'
+            : 'order-last w-full md:order-none md:w-auto md:ml-2 md:min-w-0'
         "
       >
         <LeagueTabs />
