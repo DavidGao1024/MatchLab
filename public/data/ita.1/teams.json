@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-07T07:38:16.547Z",
+  "updateTime": "2026-08-08T07:14:45.670Z",
   "league": "ita.1",
   "season": "2025",
   "count": 20,
@@ -107,11 +107,7 @@
       "alternateColor": "#ffffff",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/107.png",
-      "venue": {
-        "name": "Renato Dall'Ara",
-        "city": "Bologna",
-        "country": "Italy"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 16,
@@ -197,7 +193,11 @@
       "alternateColor": "#ffffff",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4050.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/4050.png",
-      "venue": null,
+      "venue": {
+        "name": "Stadio Giovanni Zini",
+        "city": "Cremona",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 8,
@@ -223,7 +223,11 @@
       "alternateColor": "#ffffff",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/109.png",
-      "venue": null,
+      "venue": {
+        "name": "Stadio Artemio Franchi",
+        "city": "Firenze",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 9,
@@ -279,11 +283,7 @@
       "alternateColor": "#ffffff",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/119.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/119.png",
-      "venue": {
-        "name": "Stadio Marcantonio Bentegodi",
-        "city": "Verona",
-        "country": "Italy"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 3,
@@ -310,8 +310,8 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/110.png",
       "venue": {
-        "name": "San Siro",
-        "city": "Milano",
+        "name": "San Nicola",
+        "city": "Bari",
         "country": "Italy"
       },
       "isActive": true,
@@ -340,9 +340,9 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/111.png",
       "venue": {
-        "name": "Allianz Stadium",
-        "city": "Torino",
-        "country": "Italy"
+        "name": "Optus Stadium",
+        "city": "Perth",
+        "country": "Australia"
       },
       "isActive": true,
       "record": {
@@ -399,11 +399,7 @@
       "alternateColor": "#08305d",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/113.png",
-      "venue": {
-        "name": "Via Del Mare",
-        "city": "Lecce",
-        "country": "Italy"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 10,
@@ -429,11 +425,7 @@
       "alternateColor": "#ffffff",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/114.png",
-      "venue": {
-        "name": "Stadio Diego Armando Maradona",
-        "city": "Napoli",
-        "country": "Italy"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 23,
