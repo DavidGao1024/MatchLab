@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-03T10:29:53.384Z",
+  "updateTime": "2026-08-09T07:37:15.643Z",
   "league": "chn.1",
   "season": "2026",
   "categories": [
@@ -57,7 +57,7 @@
         {
           "rank": 6,
           "value": 10,
-          "displayValue": "Matches: 21, Goals: 10",
+          "displayValue": "Matches: 22, Goals: 10",
           "athleteId": 222356,
           "athleteName": "Wesley",
           "teamId": 22199,
@@ -74,6 +74,15 @@
         },
         {
           "rank": 8,
+          "value": 10,
+          "displayValue": "Matches: 20, Goals: 10",
+          "athleteId": 233666,
+          "athleteName": "Zhang Yuning",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 9,
           "value": 9,
           "displayValue": "Matches: 21, Goals: 9",
           "athleteId": 302535,
@@ -82,7 +91,7 @@
           "teamName": "Shandong Taishan"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "value": 9,
           "displayValue": "Matches: 20, Goals: 9",
           "athleteId": 207701,
@@ -91,22 +100,13 @@
           "teamName": "Chengdu Rongcheng"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "value": 9,
           "displayValue": "Matches: 19, Goals: 9",
           "athleteId": 251743,
           "athleteName": "Guy Mbenza",
           "teamId": 131705,
           "teamName": "Liaoning Tieren"
-        },
-        {
-          "rank": 11,
-          "value": 9,
-          "displayValue": "Matches: 19, Goals: 9",
-          "athleteId": 233666,
-          "athleteName": "Zhang Yuning",
-          "teamId": 2052,
-          "teamName": "Beijing Guoan"
         },
         {
           "rank": 12,
@@ -191,6 +191,15 @@
         },
         {
           "rank": 21,
+          "value": 7,
+          "displayValue": "Matches: 17, Goals: 7",
+          "athleteId": 208131,
+          "athleteName": "Fábio Abreu",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 22,
           "value": 6,
           "displayValue": "Matches: 20, Goals: 6",
           "athleteId": 238895,
@@ -199,7 +208,7 @@
           "teamName": "Tianjin Jinmen Tiger"
         },
         {
-          "rank": 22,
+          "rank": 23,
           "value": 6,
           "displayValue": "Matches: 20, Goals: 6",
           "athleteId": 172228,
@@ -208,7 +217,7 @@
           "teamName": "Dalian Yingbo"
         },
         {
-          "rank": 23,
+          "rank": 24,
           "value": 6,
           "displayValue": "Matches: 20, Goals: 6",
           "athleteId": 237548,
@@ -217,22 +226,13 @@
           "teamName": "Zhejiang Professional FC"
         },
         {
-          "rank": 24,
+          "rank": 25,
           "value": 6,
           "displayValue": "Matches: 19, Goals: 6",
           "athleteId": 203128,
           "athleteName": "Gustavo Sauer",
           "teamId": 21506,
           "teamName": "Wuhan Three Towns"
-        },
-        {
-          "rank": 25,
-          "value": 6,
-          "displayValue": "Matches: 17, Goals: 6",
-          "athleteId": 276449,
-          "athleteName": "Malcom Edjouma",
-          "teamId": 21910,
-          "teamName": "Qingdao Hainiu"
         }
       ]
     },
@@ -343,6 +343,15 @@
         {
           "rank": 12,
           "value": 5,
+          "displayValue": "Matches: 20, Assists: 5",
+          "athleteId": 233666,
+          "athleteName": "Zhang Yuning",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 13,
+          "value": 5,
           "displayValue": "Matches: 19, Assists: 5",
           "athleteId": 203128,
           "athleteName": "Gustavo Sauer",
@@ -350,7 +359,7 @@
           "teamName": "Wuhan Three Towns"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "value": 5,
           "displayValue": "Matches: 19, Assists: 5",
           "athleteId": 255779,
@@ -359,7 +368,7 @@
           "teamName": "Shanghai Shenhua"
         },
         {
-          "rank": 14,
+          "rank": 15,
           "value": 5,
           "displayValue": "Matches: 19, Assists: 5",
           "athleteId": 290424,
@@ -368,7 +377,7 @@
           "teamName": "Chongqing Tonglianglong"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "value": 5,
           "displayValue": "Matches: 16, Assists: 5",
           "athleteId": 218955,
@@ -377,18 +386,9 @@
           "teamName": "Shandong Taishan"
         },
         {
-          "rank": 16,
-          "value": 4,
-          "displayValue": "Matches: 21, Assists: 4",
-          "athleteId": 251462,
-          "athleteName": "Davidson",
-          "teamId": 22198,
-          "teamName": "Qingdao West Coast"
-        },
-        {
           "rank": 17,
           "value": 4,
-          "displayValue": "Matches: 21, Assists: 4",
+          "displayValue": "Matches: 22, Assists: 4",
           "athleteId": 222356,
           "athleteName": "Wesley",
           "teamId": 22199,
@@ -398,13 +398,22 @@
           "rank": 18,
           "value": 4,
           "displayValue": "Matches: 21, Assists: 4",
+          "athleteId": 251462,
+          "athleteName": "Davidson",
+          "teamId": 22198,
+          "teamName": "Qingdao West Coast"
+        },
+        {
+          "rank": 19,
+          "value": 4,
+          "displayValue": "Matches: 21, Assists: 4",
           "athleteId": 302535,
           "athleteName": "Zeca",
           "teamId": 7521,
           "teamName": "Shandong Taishan"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "value": 4,
           "displayValue": "Matches: 21, Assists: 4",
           "athleteId": 212536,
@@ -413,7 +422,7 @@
           "teamName": "Chengdu Rongcheng"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 4,
           "displayValue": "Matches: 20, Assists: 4",
           "athleteId": 229019,
@@ -422,7 +431,7 @@
           "teamName": "Shanghai Port"
         },
         {
-          "rank": 21,
+          "rank": 22,
           "value": 4,
           "displayValue": "Matches: 20, Assists: 4",
           "athleteId": 172228,
@@ -431,7 +440,7 @@
           "teamName": "Dalian Yingbo"
         },
         {
-          "rank": 22,
+          "rank": 23,
           "value": 4,
           "displayValue": "Matches: 19, Assists: 4",
           "athleteId": 202305,
@@ -440,22 +449,13 @@
           "teamName": "Henan"
         },
         {
-          "rank": 23,
+          "rank": 24,
           "value": 4,
           "displayValue": "Matches: 19, Assists: 4",
           "athleteId": 247046,
           "athleteName": "Nélson Luz",
           "teamId": 22198,
           "teamName": "Qingdao West Coast"
-        },
-        {
-          "rank": 24,
-          "value": 4,
-          "displayValue": "Matches: 19, Assists: 4",
-          "athleteId": 233666,
-          "athleteName": "Zhang Yuning",
-          "teamId": 2052,
-          "teamName": "Beijing Guoan"
         },
         {
           "rank": 25,
@@ -538,6 +538,15 @@
         },
         {
           "rank": 8,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 233666,
+          "athleteName": "Zhang Yuning",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 9,
           "value": 9,
           "displayValue": "9",
           "athleteId": 302535,
@@ -546,7 +555,7 @@
           "teamName": "Shandong Taishan"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "value": 9,
           "displayValue": "9",
           "athleteId": 207701,
@@ -555,22 +564,13 @@
           "teamName": "Chengdu Rongcheng"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "value": 9,
           "displayValue": "9",
           "athleteId": 251743,
           "athleteName": "Guy Mbenza",
           "teamId": 131705,
           "teamName": "Liaoning Tieren"
-        },
-        {
-          "rank": 11,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 233666,
-          "athleteName": "Zhang Yuning",
-          "teamId": 2052,
-          "teamName": "Beijing Guoan"
         },
         {
           "rank": 12,
@@ -655,6 +655,15 @@
         },
         {
           "rank": 21,
+          "value": 7,
+          "displayValue": "7",
+          "athleteId": 208131,
+          "athleteName": "Fábio Abreu",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 22,
           "value": 6,
           "displayValue": "6",
           "athleteId": 238895,
@@ -663,7 +672,7 @@
           "teamName": "Tianjin Jinmen Tiger"
         },
         {
-          "rank": 22,
+          "rank": 23,
           "value": 6,
           "displayValue": "6",
           "athleteId": 172228,
@@ -672,7 +681,7 @@
           "teamName": "Dalian Yingbo"
         },
         {
-          "rank": 23,
+          "rank": 24,
           "value": 6,
           "displayValue": "6",
           "athleteId": 237548,
@@ -681,22 +690,13 @@
           "teamName": "Zhejiang Professional FC"
         },
         {
-          "rank": 24,
+          "rank": 25,
           "value": 6,
           "displayValue": "6",
           "athleteId": 203128,
           "athleteName": "Gustavo Sauer",
           "teamId": 21506,
           "teamName": "Wuhan Three Towns"
-        },
-        {
-          "rank": 25,
-          "value": 6,
-          "displayValue": "6",
-          "athleteId": 276449,
-          "athleteName": "Malcom Edjouma",
-          "teamId": 21910,
-          "teamName": "Qingdao Hainiu"
         }
       ]
     },
@@ -808,13 +808,22 @@
           "rank": 12,
           "value": 5,
           "displayValue": "5",
+          "athleteId": 233666,
+          "athleteName": "Zhang Yuning",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 13,
+          "value": 5,
+          "displayValue": "5",
           "athleteId": 203128,
           "athleteName": "Gustavo Sauer",
           "teamId": 21506,
           "teamName": "Wuhan Three Towns"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "value": 5,
           "displayValue": "5",
           "athleteId": 255779,
@@ -823,7 +832,7 @@
           "teamName": "Shanghai Shenhua"
         },
         {
-          "rank": 14,
+          "rank": 15,
           "value": 5,
           "displayValue": "5",
           "athleteId": 290424,
@@ -832,22 +841,13 @@
           "teamName": "Chongqing Tonglianglong"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "value": 5,
           "displayValue": "5",
           "athleteId": 218955,
           "athleteName": "Crysan",
           "teamId": 7521,
           "teamName": "Shandong Taishan"
-        },
-        {
-          "rank": 16,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 251462,
-          "athleteName": "Davidson",
-          "teamId": 22198,
-          "teamName": "Qingdao West Coast"
         },
         {
           "rank": 17,
@@ -862,13 +862,22 @@
           "rank": 18,
           "value": 4,
           "displayValue": "4",
+          "athleteId": 251462,
+          "athleteName": "Davidson",
+          "teamId": 22198,
+          "teamName": "Qingdao West Coast"
+        },
+        {
+          "rank": 19,
+          "value": 4,
+          "displayValue": "4",
           "athleteId": 302535,
           "athleteName": "Zeca",
           "teamId": 7521,
           "teamName": "Shandong Taishan"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "value": 4,
           "displayValue": "4",
           "athleteId": 212536,
@@ -877,7 +886,7 @@
           "teamName": "Chengdu Rongcheng"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 4,
           "displayValue": "4",
           "athleteId": 229019,
@@ -886,7 +895,7 @@
           "teamName": "Shanghai Port"
         },
         {
-          "rank": 21,
+          "rank": 22,
           "value": 4,
           "displayValue": "4",
           "athleteId": 172228,
@@ -895,7 +904,7 @@
           "teamName": "Dalian Yingbo"
         },
         {
-          "rank": 22,
+          "rank": 23,
           "value": 4,
           "displayValue": "4",
           "athleteId": 202305,
@@ -904,22 +913,13 @@
           "teamName": "Henan"
         },
         {
-          "rank": 23,
+          "rank": 24,
           "value": 4,
           "displayValue": "4",
           "athleteId": 247046,
           "athleteName": "Nélson Luz",
           "teamId": 22198,
           "teamName": "Qingdao West Coast"
-        },
-        {
-          "rank": 24,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 233666,
-          "athleteName": "Zhang Yuning",
-          "teamId": 2052,
-          "teamName": "Beijing Guoan"
         },
         {
           "rank": 25,
@@ -977,22 +977,31 @@
           "rank": 5,
           "value": 28,
           "displayValue": "28",
-          "athleteId": 207701,
-          "athleteName": "Wei Shihao",
-          "teamId": 21355,
-          "teamName": "Chengdu Rongcheng"
-        },
-        {
-          "rank": 6,
-          "value": 26,
-          "displayValue": "26",
           "athleteId": 222356,
           "athleteName": "Wesley",
           "teamId": 22199,
           "teamName": "Shenzhen Xinpengcheng"
         },
         {
+          "rank": 6,
+          "value": 28,
+          "displayValue": "28",
+          "athleteId": 207701,
+          "athleteName": "Wei Shihao",
+          "teamId": 21355,
+          "teamName": "Chengdu Rongcheng"
+        },
+        {
           "rank": 7,
+          "value": 26,
+          "displayValue": "26",
+          "athleteId": 208131,
+          "athleteName": "Fábio Abreu",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 8,
           "value": 26,
           "displayValue": "26",
           "athleteId": 218955,
@@ -1001,7 +1010,7 @@
           "teamName": "Shandong Taishan"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "value": 24,
           "displayValue": "24",
           "athleteId": 251743,
@@ -1010,16 +1019,16 @@
           "teamName": "Liaoning Tieren"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "value": 23,
           "displayValue": "23",
-          "athleteId": 208131,
-          "athleteName": "Fábio Abreu",
+          "athleteId": 233666,
+          "athleteName": "Zhang Yuning",
           "teamId": 2052,
           "teamName": "Beijing Guoan"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "value": 22,
           "displayValue": "22",
           "athleteId": 365941,
@@ -1028,22 +1037,13 @@
           "teamName": "Zhejiang Professional FC"
         },
         {
-          "rank": 11,
+          "rank": 12,
           "value": 21,
           "displayValue": "21",
           "athleteId": 250439,
           "athleteName": "Alberto Quiles Piosa",
           "teamId": 8239,
           "teamName": "Tianjin Jinmen Tiger"
-        },
-        {
-          "rank": 12,
-          "value": 21,
-          "displayValue": "21",
-          "athleteId": 233666,
-          "athleteName": "Zhang Yuning",
-          "teamId": 2052,
-          "teamName": "Beijing Guoan"
         },
         {
           "rank": 13,
@@ -1441,13 +1441,31 @@
           "rank": 5,
           "value": 1,
           "displayValue": "1",
+          "athleteId": 187021,
+          "athleteName": "Jiang Zhipeng",
+          "teamId": 22199,
+          "teamName": "Shenzhen Xinpengcheng"
+        },
+        {
+          "rank": 6,
+          "value": 1,
+          "displayValue": "1",
+          "athleteId": 271104,
+          "athleteName": "Cao Yongjing",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 7,
+          "value": 1,
+          "displayValue": "1",
           "athleteId": 341581,
           "athleteName": "Du Yuezheng",
           "teamId": 131704,
           "teamName": "Chongqing Tonglianglong"
         },
         {
-          "rank": 6,
+          "rank": 8,
           "value": 1,
           "displayValue": "1",
           "athleteId": 361948,
@@ -1456,7 +1474,7 @@
           "teamName": "Shanghai Port"
         },
         {
-          "rank": 7,
+          "rank": 9,
           "value": 1,
           "displayValue": "1",
           "athleteId": 290212,
@@ -1465,7 +1483,7 @@
           "teamName": "Wuhan Three Towns"
         },
         {
-          "rank": 8,
+          "rank": 10,
           "value": 1,
           "displayValue": "1",
           "athleteId": 301780,
@@ -1474,31 +1492,13 @@
           "teamName": "Liaoning Tieren"
         },
         {
-          "rank": 9,
+          "rank": 11,
           "value": 1,
           "displayValue": "1",
           "athleteId": 317989,
           "athleteName": "Xie Wenneng",
           "teamId": 7521,
           "teamName": "Shandong Taishan"
-        },
-        {
-          "rank": 10,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 187021,
-          "athleteName": "Jiang Zhipeng",
-          "teamId": 22199,
-          "teamName": "Shenzhen Xinpengcheng"
-        },
-        {
-          "rank": 11,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 271104,
-          "athleteName": "Cao Yongjing",
-          "teamId": 2052,
-          "teamName": "Beijing Guoan"
         },
         {
           "rank": 12,
@@ -1513,13 +1513,22 @@
           "rank": 13,
           "value": 1,
           "displayValue": "1",
+          "athleteId": 400618,
+          "athleteName": "Xuan Zhijian",
+          "teamId": 22199,
+          "teamName": "Shenzhen Xinpengcheng"
+        },
+        {
+          "rank": 14,
+          "value": 1,
+          "displayValue": "1",
           "athleteId": 286495,
           "athleteName": "Huang Jiahui",
           "teamId": 8239,
           "teamName": "Tianjin Jinmen Tiger"
         },
         {
-          "rank": 14,
+          "rank": 15,
           "value": 1,
           "displayValue": "1",
           "athleteId": 194410,
@@ -1528,22 +1537,13 @@
           "teamName": "Zhejiang Professional FC"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "value": 1,
           "displayValue": "1",
           "athleteId": 260063,
           "athleteName": "Manafá",
           "teamId": 977,
           "teamName": "Shanghai Shenhua"
-        },
-        {
-          "rank": 16,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 400618,
-          "athleteName": "Xuan Zhijian",
-          "teamId": 22199,
-          "teamName": "Shenzhen Xinpengcheng"
         },
         {
           "rank": 17,
@@ -1698,6 +1698,15 @@
         },
         {
           "rank": 8,
+          "value": 34,
+          "displayValue": "34",
+          "athleteId": 321058,
+          "athleteName": "Guilherme Ramos",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 9,
           "value": 33,
           "displayValue": "33",
           "athleteId": 353741,
@@ -1706,22 +1715,13 @@
           "teamName": "Qingdao Hainiu"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "value": 33,
           "displayValue": "33",
           "athleteId": 238804,
           "athleteName": "Landry Dimata",
           "teamId": 131704,
           "teamName": "Chongqing Tonglianglong"
-        },
-        {
-          "rank": 10,
-          "value": 31,
-          "displayValue": "31",
-          "athleteId": 321058,
-          "athleteName": "Guilherme Ramos",
-          "teamId": 2052,
-          "teamName": "Beijing Guoan"
         },
         {
           "rank": 11,
@@ -1799,13 +1799,22 @@
           "rank": 19,
           "value": 28,
           "displayValue": "28",
+          "athleteId": 178422,
+          "athleteName": "Tim Chow",
+          "teamId": 22199,
+          "teamName": "Shenzhen Xinpengcheng"
+        },
+        {
+          "rank": 20,
+          "value": 28,
+          "displayValue": "28",
           "athleteId": 301780,
           "athleteName": "Jeffinho",
           "teamId": 131705,
           "teamName": "Liaoning Tieren"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 27,
           "displayValue": "27",
           "athleteId": 287781,
@@ -1814,7 +1823,7 @@
           "teamName": "Yunnan Yukun"
         },
         {
-          "rank": 21,
+          "rank": 22,
           "value": 27,
           "displayValue": "27",
           "athleteId": 236393,
@@ -1823,7 +1832,16 @@
           "teamName": "Liaoning Tieren"
         },
         {
-          "rank": 22,
+          "rank": 23,
+          "value": 27,
+          "displayValue": "27",
+          "athleteId": 233666,
+          "athleteName": "Zhang Yuning",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 24,
           "value": 27,
           "displayValue": "27",
           "athleteId": 419704,
@@ -1832,29 +1850,11 @@
           "teamName": "Qingdao West Coast"
         },
         {
-          "rank": 23,
+          "rank": 25,
           "value": 26,
           "displayValue": "26",
           "athleteId": 144889,
           "athleteName": "Alexandru Ionita",
-          "teamId": 22536,
-          "teamName": "Yunnan Yukun"
-        },
-        {
-          "rank": 24,
-          "value": 26,
-          "displayValue": "26",
-          "athleteId": 399388,
-          "athleteName": "Mao Weijie",
-          "teamId": 22537,
-          "teamName": "Dalian Yingbo"
-        },
-        {
-          "rank": 25,
-          "value": 26,
-          "displayValue": "26",
-          "athleteId": 269826,
-          "athleteName": "Caio Vinicius",
           "teamId": 22536,
           "teamName": "Yunnan Yukun"
         }
@@ -1869,19 +1869,19 @@
           "rank": 1,
           "value": 76,
           "displayValue": "76",
-          "athleteId": 251462,
-          "athleteName": "Davidson",
-          "teamId": 22198,
-          "teamName": "Qingdao West Coast"
-        },
-        {
-          "rank": 2,
-          "value": 75,
-          "displayValue": "75",
           "athleteId": 286876,
           "athleteName": "Aboubacar Konte",
           "teamId": 2052,
           "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 2,
+          "value": 76,
+          "displayValue": "76",
+          "athleteId": 251462,
+          "athleteName": "Davidson",
+          "teamId": 22198,
+          "teamName": "Qingdao West Coast"
         },
         {
           "rank": 3,
@@ -1903,21 +1903,21 @@
         },
         {
           "rank": 5,
+          "value": 52,
+          "displayValue": "52",
+          "athleteId": 222356,
+          "athleteName": "Wesley",
+          "teamId": 22199,
+          "teamName": "Shenzhen Xinpengcheng"
+        },
+        {
+          "rank": 6,
           "value": 51,
           "displayValue": "51",
           "athleteId": 194410,
           "athleteName": "Alexandru Mitrita",
           "teamId": 18203,
           "teamName": "Zhejiang Professional FC"
-        },
-        {
-          "rank": 6,
-          "value": 48,
-          "displayValue": "48",
-          "athleteId": 222356,
-          "athleteName": "Wesley",
-          "teamId": 22199,
-          "teamName": "Shenzhen Xinpengcheng"
         },
         {
           "rank": 7,
@@ -2002,21 +2002,21 @@
         },
         {
           "rank": 16,
+          "value": 41,
+          "displayValue": "41",
+          "athleteId": 208131,
+          "athleteName": "Fábio Abreu",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 17,
           "value": 38,
           "displayValue": "38",
           "athleteId": 301780,
           "athleteName": "Jeffinho",
           "teamId": 131705,
           "teamName": "Liaoning Tieren"
-        },
-        {
-          "rank": 17,
-          "value": 38,
-          "displayValue": "38",
-          "athleteId": 208131,
-          "athleteName": "Fábio Abreu",
-          "teamId": 2052,
-          "teamName": "Beijing Guoan"
         },
         {
           "rank": 18,
@@ -2085,10 +2085,10 @@
           "rank": 25,
           "value": 30,
           "displayValue": "30",
-          "athleteId": 176678,
-          "athleteName": "Nicolae Stanciu",
-          "teamId": 22537,
-          "teamName": "Dalian Yingbo"
+          "athleteId": 187021,
+          "athleteName": "Jiang Zhipeng",
+          "teamId": 22199,
+          "teamName": "Shenzhen Xinpengcheng"
         }
       ]
     },
@@ -2171,6 +2171,15 @@
         },
         {
           "rank": 9,
+          "value": 58,
+          "displayValue": "58",
+          "athleteId": 233666,
+          "athleteName": "Zhang Yuning",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 10,
           "value": 56,
           "displayValue": "56",
           "athleteId": 365941,
@@ -2179,7 +2188,7 @@
           "teamName": "Zhejiang Professional FC"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "value": 56,
           "displayValue": "56",
           "athleteId": 287781,
@@ -2188,7 +2197,16 @@
           "teamName": "Yunnan Yukun"
         },
         {
-          "rank": 11,
+          "rank": 12,
+          "value": 55,
+          "displayValue": "55",
+          "athleteId": 208131,
+          "athleteName": "Fábio Abreu",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 13,
           "value": 54,
           "displayValue": "54",
           "athleteId": 202305,
@@ -2197,16 +2215,7 @@
           "teamName": "Henan"
         },
         {
-          "rank": 12,
-          "value": 54,
-          "displayValue": "54",
-          "athleteId": 233666,
-          "athleteName": "Zhang Yuning",
-          "teamId": 2052,
-          "teamName": "Beijing Guoan"
-        },
-        {
-          "rank": 13,
+          "rank": 14,
           "value": 53,
           "displayValue": "53",
           "athleteId": 155123,
@@ -2215,7 +2224,7 @@
           "teamName": "Chengdu Rongcheng"
         },
         {
-          "rank": 14,
+          "rank": 15,
           "value": 52,
           "displayValue": "52",
           "athleteId": 302535,
@@ -2224,7 +2233,7 @@
           "teamName": "Shandong Taishan"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "value": 51,
           "displayValue": "51",
           "athleteId": 144889,
@@ -2233,7 +2242,7 @@
           "teamName": "Yunnan Yukun"
         },
         {
-          "rank": 16,
+          "rank": 17,
           "value": 51,
           "displayValue": "51",
           "athleteId": 301780,
@@ -2242,7 +2251,7 @@
           "teamName": "Liaoning Tieren"
         },
         {
-          "rank": 17,
+          "rank": 18,
           "value": 50,
           "displayValue": "50",
           "athleteId": 250439,
@@ -2251,7 +2260,7 @@
           "teamName": "Tianjin Jinmen Tiger"
         },
         {
-          "rank": 18,
+          "rank": 19,
           "value": 50,
           "displayValue": "50",
           "athleteId": 306195,
@@ -2260,31 +2269,22 @@
           "teamName": "Shenzhen Xinpengcheng"
         },
         {
-          "rank": 19,
-          "value": 50,
-          "displayValue": "50",
-          "athleteId": 208131,
-          "athleteName": "Fábio Abreu",
-          "teamId": 2052,
-          "teamName": "Beijing Guoan"
+          "rank": 20,
+          "value": 49,
+          "displayValue": "49",
+          "athleteId": 222356,
+          "athleteName": "Wesley",
+          "teamId": 22199,
+          "teamName": "Shenzhen Xinpengcheng"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 47,
           "displayValue": "47",
           "athleteId": 251462,
           "athleteName": "Davidson",
           "teamId": 22198,
           "teamName": "Qingdao West Coast"
-        },
-        {
-          "rank": 21,
-          "value": 47,
-          "displayValue": "47",
-          "athleteId": 222356,
-          "athleteName": "Wesley",
-          "teamId": 22199,
-          "teamName": "Shenzhen Xinpengcheng"
         },
         {
           "rank": 22,
@@ -2331,8 +2331,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 384,
-          "displayValue": "384",
+          "value": 444,
+          "displayValue": "444",
           "athleteId": 271077,
           "athleteName": "Dawhan",
           "teamId": 2052,
@@ -2340,8 +2340,8 @@
         },
         {
           "rank": 2,
-          "value": 375,
-          "displayValue": "375",
+          "value": 428,
+          "displayValue": "428",
           "athleteId": 286876,
           "athleteName": "Aboubacar Konte",
           "teamId": 2052,
@@ -2349,8 +2349,8 @@
         },
         {
           "rank": 3,
-          "value": 363,
-          "displayValue": "363",
+          "value": 410,
+          "displayValue": "410",
           "athleteId": 321058,
           "athleteName": "Guilherme Ramos",
           "teamId": 2052,
@@ -2448,6 +2448,15 @@
         },
         {
           "rank": 14,
+          "value": 269,
+          "displayValue": "269",
+          "athleteId": 317631,
+          "athleteName": "Bai Yang",
+          "teamId": 2052,
+          "teamName": "Beijing Guoan"
+        },
+        {
+          "rank": 15,
           "value": 264,
           "displayValue": "264",
           "athleteId": 238509,
@@ -2456,7 +2465,7 @@
           "teamName": "Chengdu Rongcheng"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "value": 258,
           "displayValue": "258",
           "athleteId": 191223,
@@ -2465,7 +2474,7 @@
           "teamName": "Henan"
         },
         {
-          "rank": 16,
+          "rank": 17,
           "value": 256,
           "displayValue": "256",
           "athleteId": 212536,
@@ -2474,7 +2483,7 @@
           "teamName": "Chengdu Rongcheng"
         },
         {
-          "rank": 17,
+          "rank": 18,
           "value": 253,
           "displayValue": "253",
           "athleteId": 239082,
@@ -2483,7 +2492,7 @@
           "teamName": "Chongqing Tonglianglong"
         },
         {
-          "rank": 18,
+          "rank": 19,
           "value": 248,
           "displayValue": "248",
           "athleteId": 236101,
@@ -2492,22 +2501,13 @@
           "teamName": "Liaoning Tieren"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "value": 245,
           "displayValue": "245",
           "athleteId": 275980,
           "athleteName": "Zhu Chenjie",
           "teamId": 977,
           "teamName": "Shanghai Shenhua"
-        },
-        {
-          "rank": 20,
-          "value": 244,
-          "displayValue": "244",
-          "athleteId": 317631,
-          "athleteName": "Bai Yang",
-          "teamId": 2052,
-          "teamName": "Beijing Guoan"
         },
         {
           "rank": 21,
@@ -2635,30 +2635,30 @@
         },
         {
           "rank": 9,
-          "value": 47,
-          "displayValue": "47",
-          "athleteId": 322952,
-          "athleteName": "Yan Bingliang",
-          "teamId": 8239,
-          "teamName": "Tianjin Jinmen Tiger"
-        },
-        {
-          "rank": 10,
-          "value": 46,
-          "displayValue": "46",
+          "value": 50,
+          "displayValue": "50",
           "athleteId": 146451,
           "athleteName": "Hou Sen",
           "teamId": 2052,
           "teamName": "Beijing Guoan"
         },
         {
-          "rank": 11,
-          "value": 44,
-          "displayValue": "44",
+          "rank": 10,
+          "value": 48,
+          "displayValue": "48",
           "athleteId": 302695,
           "athleteName": "Peng",
           "teamId": 22199,
           "teamName": "Shenzhen Xinpengcheng"
+        },
+        {
+          "rank": 11,
+          "value": 47,
+          "displayValue": "47",
+          "athleteId": 322952,
+          "athleteName": "Yan Bingliang",
+          "teamId": 8239,
+          "teamName": "Tianjin Jinmen Tiger"
         },
         {
           "rank": 12,
