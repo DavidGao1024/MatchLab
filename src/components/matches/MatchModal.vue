@@ -5,7 +5,7 @@ import type { LeagueSlug } from '../../utils/constants'
 import { useAppStore } from '../../stores/app'
 import { useTeamsStore } from '../../stores/teams'
 import { fetchMatchSummary } from '../../composables/useEspanFetch'
-import { teamName, venueName } from '../../utils/i18n'
+import { t, teamName, venueName } from '../../utils/i18n'
 import TeamLogo from '../common/TeamLogo.vue'
 import DataLoading from '../common/DataLoading.vue'
 import DataError from '../common/DataError.vue'
@@ -76,7 +76,7 @@ const scoreDisplay = computed(() =>
 <template>
   <Teleport to="body">
     <div class="match-overlay" role="dialog" aria-modal="true" @click.self="emit('close')">
-      <button class="match-close" :aria-label="'关闭'" @click="emit('close')">✕</button>
+      <button class="match-close" :aria-label="t('match.close', app.lang)" @click="emit('close')">✕</button>
 
       <div class="match-modal">
         <div class="match-modal-body">

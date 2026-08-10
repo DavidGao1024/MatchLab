@@ -103,6 +103,24 @@ describe('StandingRow 移动端展开行为', () => {
     expect(wrapper.text()).not.toContain('净')
   })
 
+  it('英文模式：展开标签 P/GD，无中文残留', async () => {
+    localStorage.clear()
+    localStorage.setItem('matchlab:lang', 'en')
+    const { standings } = setup()
+    const row = makeRow()
+    const wrapper = mount(StandingRow, {
+      props: { row, league: 'eng.1', showXg: false },
+      global: { plugins: [makeRouter()] },
+    })
+    const trs = wrapper.findAll('tr')
+    await trs[0].trigger('click')
+    const text = wrapper.text()
+    expect(text).toContain('GF')
+    expect(text).toContain('GD')
+    expect(text).not.toContain('赛')
+    expect(text).not.toContain('净')
+  })
+
   it('showXg=true 时展开行含 xG/xGA', async () => {
     const { standings } = setup()
     const row = makeRow({ xG: 28.8, xGA: 5.51, xPts: 30.2 })

@@ -6,7 +6,7 @@ import { useAppStore } from '../../stores/app'
 import { useStandingsStore } from '../../stores/standings'
 import { useTeamsStore } from '../../stores/teams'
 import { formDetails } from '../../utils/matches'
-import { teamName } from '../../utils/i18n'
+import { t, teamName } from '../../utils/i18n'
 import TeamLogo from '../common/TeamLogo.vue'
 import FormDots from './FormDots.vue'
 
@@ -78,7 +78,11 @@ function toggleExpand() {
     >{{ row.goalDiff > 0 ? `+${row.goalDiff}` : row.goalDiff }}</td>
     <td class="px-2 py-2.5 text-center">
       <span class="font-score text-lg text-white">{{ row.points }}</span>
-      <span v-if="row.deduction" class="ml-0.5 text-[9px] font-mono-d text-red-400/80" :title="`扣 ${row.deduction} 分`">-{{ row.deduction }}</span>
+      <span
+        v-if="row.deduction"
+        class="ml-0.5 text-[9px] font-mono-d text-red-400/80"
+        :title="app.lang === 'zh' ? `扣 ${row.deduction} 分` : `${row.deduction} pts deducted`"
+      >-{{ row.deduction }}</span>
     </td>
     <td class="px-2 py-2.5 text-center"><FormDots :details="dots" /></td>
     <template v-if="showXg">
@@ -91,13 +95,13 @@ function toggleExpand() {
   <tr v-if="expanded" class="md:hidden border-b border-white/5 bg-black/20">
     <td colspan="4" class="px-3 py-3">
       <div class="grid grid-cols-3 gap-x-3 gap-y-2 font-mono-d text-[11px] text-slate-300">
-        <div class="flex items-baseline justify-between"><span class="text-slate-500">赛</span><span class="text-white font-semibold">{{ row.played }}</span></div>
-        <div class="flex items-baseline justify-between"><span class="text-slate-500">胜</span><span class="text-emerald-400 font-semibold">{{ row.won }}</span></div>
-        <div class="flex items-baseline justify-between"><span class="text-slate-500">平</span><span class="text-slate-300 font-semibold">{{ row.drawn }}</span></div>
-        <div class="flex items-baseline justify-between"><span class="text-slate-500">负</span><span class="text-red-400 font-semibold">{{ row.lost }}</span></div>
-        <div class="flex items-baseline justify-between"><span class="text-slate-500">进</span><span class="text-white font-semibold">{{ row.goalsFor }}</span></div>
-        <div class="flex items-baseline justify-between"><span class="text-slate-500">失</span><span class="text-white font-semibold">{{ row.goalsAgainst }}</span></div>
-        <div class="flex items-baseline justify-between"><span class="text-slate-500">净</span><span :class="row.goalDiff > 0 ? 'text-emerald-400' : row.goalDiff < 0 ? 'text-red-400' : 'text-slate-300'" class="font-semibold">{{ row.goalDiff > 0 ? `+${row.goalDiff}` : row.goalDiff }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">{{ t('col.played', app.lang) }}</span><span class="text-white font-semibold">{{ row.played }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">{{ t('col.won', app.lang) }}</span><span class="text-emerald-400 font-semibold">{{ row.won }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">{{ t('col.drawn', app.lang) }}</span><span class="text-slate-300 font-semibold">{{ row.drawn }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">{{ t('col.lost', app.lang) }}</span><span class="text-red-400 font-semibold">{{ row.lost }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">{{ t('col.gf', app.lang) }}</span><span class="text-white font-semibold">{{ row.goalsFor }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">{{ t('col.ga', app.lang) }}</span><span class="text-white font-semibold">{{ row.goalsAgainst }}</span></div>
+        <div class="flex items-baseline justify-between"><span class="text-slate-500">{{ t('col.gd', app.lang) }}</span><span :class="row.goalDiff > 0 ? 'text-emerald-400' : row.goalDiff < 0 ? 'text-red-400' : 'text-slate-300'" class="font-semibold">{{ row.goalDiff > 0 ? `+${row.goalDiff}` : row.goalDiff }}</span></div>
         <template v-if="showXg">
           <div class="flex items-baseline justify-between"><span class="text-slate-500">xG</span><span class="text-emerald-300 font-semibold">{{ row.xG?.toFixed(1) ?? '–' }}</span></div>
           <div class="flex items-baseline justify-between"><span class="text-slate-500">xGA</span><span class="text-emerald-300 font-semibold">{{ row.xGA?.toFixed(1) ?? '–' }}</span></div>

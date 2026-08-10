@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import type { LineupPlayer, MatchLineup } from '../../types/models'
 import { useAppStore } from '../../stores/app'
-import { playerName } from '../../utils/i18n'
+import { playerName, t } from '../../utils/i18n'
 
 const props = defineProps<{ lineup: MatchLineup | null; side: 'home' | 'away' }>()
 const app = useAppStore()
@@ -42,13 +42,13 @@ function displayShort(p: Pick<LineupPlayer, 'name' | 'shortName'>): string {
 
 <template>
   <div v-if="!lineup" class="match-lineup-empty">
-    阵容尚未公布
+    {{ t('lineup.notAnnounced', app.lang) }}
   </div>
 
   <div v-else class="match-field-col">
     <div class="match-field-head">
       <span class="match-field-team" :class="side === 'home' ? 'is-home' : 'is-away'">
-        {{ side === 'home' ? '主队' : '客队' }}
+        {{ side === 'home' ? t('match.home', app.lang) : t('match.away', app.lang) }}
       </span>
       <span v-if="lineup.formation" class="match-field-formation">{{ lineup.formation }}</span>
       <span v-if="lineup.coachName" class="match-field-coach">{{ playerName(lineup.coachName, app.lang) }}</span>
@@ -77,7 +77,7 @@ function displayShort(p: Pick<LineupPlayer, 'name' | 'shortName'>): string {
     </div>
 
     <div v-if="lineup.bench.length" class="match-bench">
-      <div class="match-bench-title">替补 · {{ lineup.bench.length }}</div>
+      <div class="match-bench-title">{{ t('lineup.bench', app.lang) }} · {{ lineup.bench.length }}</div>
       <div class="match-bench-list">
         <span v-for="p in lineup.bench" :key="p.id" class="match-bench-item">
           <span class="match-bench-num">#{{ p.jersey ?? '?' }}</span>{{ displayShort(p) }}

@@ -61,20 +61,21 @@ interface Row {
   isMaxFlags?: boolean[]
 }
 
+// label 存 i18n 键（cmp.*），显示处按语言翻译
 const ROWS_DEF: Array<{ category: keyof PlayerProfile['stats']; field: string; label: string }> = [
-  { category: 'general', field: 'appearances', label: '出场' },
-  { category: 'general', field: 'starts', label: '首发' },
-  { category: 'general', field: 'minutes', label: '分钟' },
-  { category: 'offensive', field: 'totalGoals', label: '进球' },
-  { category: 'offensive', field: 'shotsOnTarget', label: '射正' },
-  { category: 'offensive', field: 'totalShots', label: '射门' },
-  { category: 'offensive', field: 'accuratePasses', label: '精准传球' },
-  { category: 'offensive', field: 'goalAssists', label: '助攻' },
-  { category: 'general', field: 'yellowCards', label: '黄牌' },
-  { category: 'general', field: 'redCards', label: '红牌' },
-  { category: 'defensive', field: 'totalTackles', label: '总抢断' },
-  { category: 'defensive', field: 'interceptions', label: '拦截' },
-  { category: 'defensive', field: 'totalClearance', label: '总解围' },
+  { category: 'general', field: 'appearances', label: 'cmp.appearances' },
+  { category: 'general', field: 'starts', label: 'cmp.starts' },
+  { category: 'general', field: 'minutes', label: 'cmp.minutes' },
+  { category: 'offensive', field: 'totalGoals', label: 'cmp.goals' },
+  { category: 'offensive', field: 'shotsOnTarget', label: 'cmp.shotsOnTarget' },
+  { category: 'offensive', field: 'totalShots', label: 'cmp.shots' },
+  { category: 'offensive', field: 'accuratePasses', label: 'cmp.accuratePasses' },
+  { category: 'offensive', field: 'goalAssists', label: 'cmp.assists' },
+  { category: 'general', field: 'yellowCards', label: 'cmp.yellowCards' },
+  { category: 'general', field: 'redCards', label: 'cmp.redCards' },
+  { category: 'defensive', field: 'totalTackles', label: 'cmp.totalTackles' },
+  { category: 'defensive', field: 'interceptions', label: 'cmp.interceptions' },
+  { category: 'defensive', field: 'totalClearance', label: 'cmp.totalClearance' },
 ]
 
 const rows = computed<Row[]>(() => {
@@ -203,7 +204,7 @@ function goDetail(id: number) {
             </thead>
             <tbody>
               <tr v-for="row in rows" :key="row.category + row.field" class="border-b border-white/5">
-                <td class="py-2 px-2 text-slate-400 text-xs">{{ row.label }}</td>
+                <td class="py-2 px-2 text-slate-400 text-xs">{{ t(row.label, app.lang) }}</td>
                 <td v-for="(v, i) in row.values" :key="i" class="py-2 px-3 text-center font-mono-d" :class="isMax(i, row.values) ? 'text-emerald-300' : 'text-slate-300'">
                   {{ fmtVal(v) }}
                 </td>

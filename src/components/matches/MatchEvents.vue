@@ -2,10 +2,15 @@
 import { computed } from 'vue'
 import type { MatchEvent } from '../../types/models'
 import { useAppStore } from '../../stores/app'
-import { playerName } from '../../utils/i18n'
+import { playerName, t } from '../../utils/i18n'
 
 const props = defineProps<{ events: MatchEvent[] }>()
 const app = useAppStore()
+
+function assistLabel(name: string): string {
+  const n = playerName(name, app.lang)
+  return app.lang === 'zh' ? `（助攻: ${n}）` : `(Assist: ${n})`
+}
 
 // 按分钟升序；同分钟按原索引稳定排序
 const sorted = computed(() =>
@@ -25,10 +30,10 @@ const ICON: Record<MatchEvent['type'], string> = {
 </script>
 
 <template>
-  <div v-if="!events.length" class="match-empty">暂无事件数据</div>
+  <div v-if="!events.length" class="match-empty">{{ t('match.eventsEmpty', app.lang) }}</div>
 
   <section v-else class="match-section">
-    <h3 class="match-section-title">比赛事件</h3>
+    <h3 class="match-section-title">{{ t('match.eventsTitle', app.lang) }}</h3>
 
     <div
       v-for="e in sorted"
@@ -38,7 +43,7 @@ const ICON: Record<MatchEvent['type'], string> = {
     >
       <span class="match-event-time">{{ e.minute }}'</span>
       <span class="match-event-icon">{{ ICON[e.type] }}</span>
-      <span v-if="e.type === 'ownGoal'" class="own-goal-label">（乌龙）</span>
+      <span v-if="e.type === 'ownGoal'" class="own-goal-label">{{ t('match.ownGoal', app.lang) }}</span>
       <span class="match-event-player">
         <template v-if="e.type === 'substitution'">
           {{ playerName(e.primaryName, app.lang) }}
@@ -49,7 +54,7 @@ const ICON: Record<MatchEvent['type'], string> = {
         <template v-else>
           {{ playerName(e.primaryName, app.lang) }}
           <span v-if="e.secondaryName && (e.type === 'goal' || e.type === 'penalty')" class="match-event-assist">
-            （助攻: {{ playerName(e.secondaryName, app.lang) }}）
+            {{ assistLabel(e.secondaryName) }}
           </span>
         </template>
       </span>

@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { StatRow } from '../../types/models'
+import { useAppStore } from '../../stores/app'
+import { t } from '../../utils/i18n'
 
 const props = defineProps<{ stats: StatRow[] }>()
+const app = useAppStore()
 
 const rows = computed(() =>
   props.stats.map((s) => {
@@ -18,10 +21,10 @@ const rows = computed(() =>
 </script>
 
 <template>
-  <div v-if="!stats.length" class="match-empty">暂无技术统计</div>
+  <div v-if="!stats.length" class="match-empty">{{ t('match.statsEmpty', app.lang) }}</div>
 
   <section v-else class="match-section">
-    <h3 class="match-section-title">技术统计</h3>
+    <h3 class="match-section-title">{{ t('match.statsTitle', app.lang) }}</h3>
 
     <div v-for="(s, i) in rows" :key="i" class="match-stat-row">
       <span class="match-stat-label">{{ s.label }}</span>

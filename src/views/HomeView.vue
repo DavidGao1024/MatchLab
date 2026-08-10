@@ -9,6 +9,7 @@ import MyTeamCard from '../components/home/MyTeamCard.vue'
 import { fetchJsonCached } from '../composables/useJsonFetch'
 import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
+import { t } from '../utils/i18n'
 import { useStandingsStore } from '../stores/standings'
 import { useUserDataStore } from '../stores/userData'
 import type { Match } from '../types/models'
@@ -107,8 +108,8 @@ const featuredId = computed(() => {
       <section v-if="userStore.initialized" class="mb-4">
         <div v-if="userStore.subscriptions.length === 0">
           <EmptyState
-            title="订阅主队，首页直接看今日赛程"
-            body="点击下方任意球队进入详情页订阅"
+            :title="t('home.emptySubTitle', app.lang)"
+            :body="t('home.emptySubBody', app.lang)"
           />
         </div>
         <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3">

@@ -64,7 +64,7 @@ function rowValue(row: Row): number | null {
     </div>
     <div class="space-y-1.5 text-xs">
       <div v-for="row in rows" :key="row.category + row.field" class="flex justify-between">
-        <span class="text-slate-400">{{ row.label }}</span>
+        <span class="text-slate-400">{{ t(row.label, lang) }}</span>
         <span :class="['font-mono-d', isMax(row) ? 'text-emerald-300 font-semibold' : 'text-slate-300']">
           {{ fmtVal(rowValue(row)) }}<span v-if="isMax(row)" class="ml-1 text-[10px]">({{ t('compare.max', lang) }})</span>
         </span>

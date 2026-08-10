@@ -97,4 +97,12 @@ describe('CompareView 双 DOM', () => {
     // 单人对比，所有项都是最高
     expect(w.text()).toContain('最高')
   })
+
+  it('英文模式：统计标签英文（无中文残留）', async () => {
+    localStorage.setItem('matchlab:lang', 'en')
+    const { w } = await setup()
+    expect(w.text()).toContain('Appearances')
+    expect(w.text()).toContain('Haaland')
+    expect(w.text()).not.toContain('出场')
+  })
 })
