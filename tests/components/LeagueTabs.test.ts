@@ -58,6 +58,13 @@ describe('LeagueTabs', () => {
     expect(router.currentRoute.value.path).toBe('/esp.1/standings')
   })
 
+  it('滚动区隐藏滚动条——窄桌面被压缩时滚动条不占行高', async () => {
+    const { w } = await setup('/eng.1/standings')
+    // html 上的 scrollbar-width: thin 不继承到内部滚动区（实测 computed auto），
+    // Windows 经典滚动条 15px 会把窄桌面顶行撑高；此处显式隐藏（可滚不可见）
+    expect(w.find('nav').classes()).toContain('scrollbar-none')
+  })
+
   it('移动端加大触点（含 text-sm px-3.5 py-2 类）', async () => {
     const { w } = await setup('/eng.1/standings')
     const cls = w.findAll('button')[0].classes()

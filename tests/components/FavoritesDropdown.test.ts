@@ -104,6 +104,15 @@ describe('FavoritesDropdown', () => {
     expect(cls).toContain('pt-2')
   })
 
+  it('按钮文字 nowrap——窄桌面 flex 压缩时不折行撑高顶行', async () => {
+    const store = useUserDataStore()
+    await store.init()
+    const w = mount(FavoritesDropdown, { global: { plugins: [router] } })
+    // 窄桌面（约 768–950px）单行头部宽度不足时 flex 压缩各子项，
+    // 无 nowrap 的文字会被压成竖排撑高整行（2026-08-10 实测 96px）
+    expect(w.find('button').classes()).toContain('whitespace-nowrap')
+  })
+
   it('total=0 移动端无角标；按钮有 aria-label', async () => {
     const store = useUserDataStore()
     await store.init()

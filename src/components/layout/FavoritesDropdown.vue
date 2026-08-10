@@ -59,7 +59,7 @@ function goFavorites() {
     <button
       type="button"
       :aria-label="t('nav.favorites', app.lang)"
-      class="relative px-3 py-1.5 text-sm text-slate-700 dark:text-slate-200 hover:opacity-80"
+      class="relative whitespace-nowrap px-3 py-1.5 text-sm text-slate-700 dark:text-slate-200 hover:opacity-80"
       @click.stop="toggle"
     >
       <!-- 移动端：♥ 图标 + 角标（total=0 不渲染角标） -->

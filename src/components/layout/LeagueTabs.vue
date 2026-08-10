@@ -8,7 +8,7 @@ const { active, label, pick } = useLeagueSwitch()
 </script>
 
 <template>
-  <nav class="flex gap-1 overflow-x-auto" :aria-label="app.lang === 'zh' ? '联赛切换' : 'League switch'">
+  <nav class="flex gap-1 overflow-x-auto scrollbar-none" :aria-label="app.lang === 'zh' ? '联赛切换' : 'League switch'">
     <button
       v-for="slug in LEAGUE_SLUGS"
       :key="slug"

@@ -17,6 +17,12 @@ html {
 ::-webkit-scrollbar-thumb { background: #2a3040; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #3d4558; }
 
+/* 横滚区隐藏滚动条（LeagueTabs 用）：html 上的 scrollbar-width: thin 不继承到
+   内部滚动区（computed 仍 auto），Windows 经典条占 15px 会撑高窄桌面顶行；
+   隐藏后功能保留（滚轮/触控板仍可横滚），截断的标签本身提示还有内容 */
+.scrollbar-none { scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
 body {
   background-color: var(--base);
   color: #e8ecf5;
