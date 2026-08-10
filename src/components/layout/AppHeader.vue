@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useAppStore } from '../../stores/app'
 import { isLeagueSlug } from '../../utils/constants'
@@ -11,6 +11,11 @@ import SearchBar from '../common/SearchBar.vue'
 const app = useAppStore()
 const route = useRoute()
 const searchOpen = ref(false)
+
+// 导航即关层：回车/点候选跳详情后不困在搜索层（2026-08-10 回归发现）
+watch(() => route.fullPath, () => {
+  searchOpen.value = false
+})
 
 // 路由是否带合法 league 参数：决定移动端 LeagueTabs 整行显示还是隐藏（路由状态，非设备判断）
 const hasActiveLeague = computed(() => {

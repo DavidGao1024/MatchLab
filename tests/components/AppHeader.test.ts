@@ -56,6 +56,19 @@ describe('AppHeader', () => {
     expect(document.querySelector('.mobile-search-overlay')).toBeNull()
   })
 
+  it('路由变化 → 全屏层自动关（回车跳详情后不困在搜索层）', async () => {
+    const router = makeRouter()
+    router.push('/')
+    await router.isReady()
+    const w = mount(AppHeader, { global: { plugins: [router] } })
+    await w.find('button.md\\:hidden').trigger('click')
+    await nextTick()
+    expect(document.querySelector('.mobile-search-overlay')).not.toBeNull()
+    router.push('/eng.1/standings')
+    await new Promise((r) => setTimeout(r, 10))
+    expect(document.querySelector('.mobile-search-overlay')).toBeNull()
+  })
+
   it('顶行容器带 flex-wrap 与 md:flex-nowrap', () => {
     const w = mount(AppHeader, { global: { plugins: [makeRouter()] } })
     const container = w.find('header > div')
