@@ -43,6 +43,14 @@ describe('SubscribeButton', () => {
     // 弹窗由 useConfirm 控制 state.visible，未点确认/取消前订阅仍存在
     expect(store.isSubscribed(359)).toBe(true)
   })
+  it('英文模式：按钮文案英文', async () => {
+    localStorage.setItem('matchlab:lang', 'en')
+    const store = useUserDataStore()
+    await store.init()
+    const w = mount(SubscribeButton, { props: { league: 'eng.1', teamId: 359, teamName: 'Arsenal' } })
+    expect(w.text()).toContain('Subscribe')
+    expect(w.text()).not.toContain('订阅主队')
+  })
   it('达到上限 3 队时按钮 disabled', async () => {
     const store = useUserDataStore()
     await store.init()

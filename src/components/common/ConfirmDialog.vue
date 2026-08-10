@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useConfirm } from '../../composables/useConfirm'
+import { useAppStore } from '../../stores/app'
+import { t } from '../../utils/i18n'
 const { state, resolve } = useConfirm()
+const app = useAppStore()
 </script>
 
 <template>
@@ -21,13 +24,13 @@ const { state, resolve } = useConfirm()
           class="px-3 py-1.5 rounded text-sm bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:opacity-80"
           @click="resolve(false)"
         >
-          取消
+          {{ t('dialog.cancel', app.lang) }}
         </button>
         <button
           class="px-3 py-1.5 rounded text-sm bg-red-600 text-white hover:opacity-80"
           @click="resolve(true)"
         >
-          确认
+          {{ t('dialog.confirm', app.lang) }}
         </button>
       </div>
     </div>

@@ -7,7 +7,7 @@ import ExportCalendarButton from '../components/teams/ExportCalendarButton.vue'
 import { useRouter } from 'vue-router'
 import type { LeagueSlug } from '../utils/constants'
 import { useAppStore } from '../stores/app'
-import { playerName, teamName } from '../utils/i18n'
+import { playerName, t as tr, teamName } from '../utils/i18n'
 
 const store = useUserDataStore()
 const app = useAppStore()
@@ -29,22 +29,22 @@ function goPlayer(league: LeagueSlug, id: number) { router.push(`/${league}/play
 
 function removeTeam(id: number) {
   store.removeFavorite('team', id)
-  toast.success('已取消收藏')
+  toast.success(tr('fav.removed', app.lang))
 }
 function removePlayer(id: number) {
   store.removeFavorite('player', id)
-  toast.success('已取消收藏')
+  toast.success(tr('fav.removed', app.lang))
 }
 </script>
 
 <template>
   <div class="max-w-3xl mx-auto p-4">
-    <h1 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">我的收藏</h1>
+    <h1 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">{{ tr('fav.title', app.lang) }}</h1>
     <div v-if="store.favorites.teams.length === 0 && store.favorites.players.length === 0">
       <EmptyState
-        title="暂无收藏"
-        body="去球队/球员详情页点击 ☆ 添加收藏"
-        cta-text="去积分榜找球队"
+        :title="tr('fav.emptyTitle', app.lang)"
+        :body="tr('fav.emptyBody', app.lang)"
+        :cta-text="tr('fav.emptyCta', app.lang)"
         @cta="router.push('/eng.1/standings')"
       />
     </div>
@@ -56,7 +56,7 @@ function removePlayer(id: number) {
           :class="tab === 'teams' ? 'bg-blue-600 text-white' : 'bg-slate-200 dark:bg-slate-700'"
           @click="tab = 'teams'"
         >
-          球队 ({{ store.favorites.teams.length }})
+          {{ tr('fav.teams', app.lang) }} ({{ store.favorites.teams.length }})
         </button>
         <button
           type="button"
@@ -64,7 +64,7 @@ function removePlayer(id: number) {
           :class="tab === 'players' ? 'bg-blue-600 text-white' : 'bg-slate-200 dark:bg-slate-700'"
           @click="tab = 'players'"
         >
-          球员 ({{ store.favorites.players.length }})
+          {{ tr('fav.players', app.lang) }} ({{ store.favorites.players.length }})
         </button>
       </div>
       <div v-if="tab === 'teams'">
@@ -87,7 +87,7 @@ function removePlayer(id: number) {
               :team-slug="slugify(t.name)"
               :season-start="seasonStart"
             />
-            <button type="button" class="text-red-500 text-sm" @click="t.teamId && removeTeam(t.teamId)">删除</button>
+            <button type="button" class="text-red-500 text-sm" @click="t.teamId && removeTeam(t.teamId)">{{ tr('fav.remove', app.lang) }}</button>
           </div>
         </div>
       </div>
@@ -108,7 +108,7 @@ function removePlayer(id: number) {
             type="button"
             class="text-red-500 text-sm"
             @click="removePlayer(p.athleteId)"
-          >删除</button>
+          >{{ tr('fav.remove', app.lang) }}</button>
         </div>
       </div>
     </div>

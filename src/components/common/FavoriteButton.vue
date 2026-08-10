@@ -2,6 +2,8 @@
 import { computed } from 'vue'
 import { useUserDataStore } from '../../stores/userData'
 import { useToast } from '../../composables/useToast'
+import { useAppStore } from '../../stores/app'
+import { t } from '../../utils/i18n'
 import { FAVORITES_LIMIT } from '../../types/user-data'
 import type { LeagueSlug } from '../../utils/constants'
 
@@ -13,6 +15,7 @@ const props = defineProps<{
 }>()
 
 const store = useUserDataStore()
+const app = useAppStore()
 const toast = useToast()
 
 const fav = computed(() => store.isFavorite(props.type, props.id))
@@ -25,8 +28,9 @@ const atLimit = computed(() => {
 function onClick() {
   try {
     store.toggleFavorite(props.type, props.id, props.name, props.league)
-  } catch (e) {
-    toast.error(e instanceof Error ? e.message : '收藏失败')
+  } catch {
+    // toggleFavorite 只会因上限抛错；中文保留原措辞（带数字），英文走 i18n
+    toast.error(app.lang === 'zh' ? `收藏上限 ${FAVORITES_LIMIT} 项` : t('fav.limitReached', app.lang))
   }
 }
 </script>

@@ -3,6 +3,8 @@ import { computed } from 'vue'
 import { useUserDataStore } from '../../stores/userData'
 import { useToast } from '../../composables/useToast'
 import { useConfirm } from '../../composables/useConfirm'
+import { useAppStore } from '../../stores/app'
+import { t } from '../../utils/i18n'
 import { SUBSCRIPTIONS_LIMIT } from '../../types/user-data'
 import type { LeagueSlug } from '../../utils/constants'
 
@@ -13,6 +15,7 @@ const props = defineProps<{
 }>()
 
 const store = useUserDataStore()
+const app = useAppStore()
 const toast = useToast()
 const confirm = useConfirm()
 
@@ -24,17 +27,23 @@ const atLimit = computed(() =>
 
 async function onClick() {
   if (subscribed.value) {
-    const ok = await confirm.open('取消订阅？', `确定取消订阅 ${props.teamName}？`)
+    const body = app.lang === 'zh' ? `确定取消订阅 ${props.teamName}？` : `Unsubscribe from ${props.teamName}?`
+    const ok = await confirm.open(t('sub.confirmTitle', app.lang), body)
     if (ok) {
       store.removeSubscription(props.teamId)
-      toast.success(`已取消订阅 ${props.teamName}`)
+      toast.success(app.lang === 'zh' ? `已取消订阅 ${props.teamName}` : `Unsubscribed from ${props.teamName}`)
     }
   } else {
     try {
       store.addSubscription({ league: props.league, teamId: props.teamId, teamName: props.teamName })
-      toast.success(`已订阅 ${props.teamName}，首页将显示今日赛程`)
-    } catch (e) {
-      toast.error(e instanceof Error ? e.message : '订阅失败')
+      toast.success(
+        app.lang === 'zh'
+          ? `已订阅 ${props.teamName}，首页将显示今日赛程`
+          : `Subscribed to ${props.teamName}; today's fixtures will show on home`,
+      )
+    } catch {
+      // addSubscription 只会因上限抛错；中文保留原措辞（带数字），英文走 i18n
+      toast.error(app.lang === 'zh' ? `订阅上限 ${SUBSCRIPTIONS_LIMIT} 队` : t('sub.limitReached', app.lang))
     }
   }
 }
@@ -50,6 +59,6 @@ async function onClick() {
     :disabled="atLimit"
     @click="onClick"
   >
-    {{ subscribed ? '已订阅 ✓' : '订阅主队' }}
+    {{ subscribed ? t('sub.btnDone', app.lang) : t('sub.btn', app.lang) }}
   </button>
 </template>

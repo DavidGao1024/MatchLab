@@ -5,6 +5,8 @@ import { generateICal } from '../../utils/iCal'
 import { downloadBlob } from '../../utils/download'
 import { useToast } from '../../composables/useToast'
 import { useUserDataStore } from '../../stores/userData'
+import { useAppStore } from '../../stores/app'
+import { t } from '../../utils/i18n'
 import type { Match } from '../../types/models'
 import type { LeagueSlug } from '../../utils/constants'
 
@@ -17,6 +19,7 @@ const props = defineProps<{
 }>()
 
 const store = useUserDataStore()
+const app = useAppStore()
 const loading = ref(false)
 const toast = useToast()
 
@@ -36,9 +39,9 @@ async function onExport() {
     }) as Match[]
     const ical = generateICal({ name: props.teamName, slug: props.teamSlug }, teamMatches)
     downloadBlob(`matchlab-${props.teamSlug}-${props.seasonStart}.ics`, ical, 'text/calendar')
-    toast.success(`已导出 ${teamMatches.length} 场赛程`)
+    toast.success(app.lang === 'zh' ? `已导出 ${teamMatches.length} 场赛程` : `Exported ${teamMatches.length} matches`)
   } catch (e) {
-    toast.error('赛程数据获取失败，请稍后重试')
+    toast.error(t('cal.exportFailed', app.lang))
   } finally {
     loading.value = false
   }
@@ -52,6 +55,6 @@ async function onExport() {
     :disabled="loading || store.readOnly"
     @click="onExport"
   >
-    {{ loading ? '正在生成...' : '导出赛程到日历' }}
+    {{ loading ? t('cal.exporting', app.lang) : t('cal.export', app.lang) }}
   </button>
 </template>
