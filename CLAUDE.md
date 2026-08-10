@@ -98,7 +98,8 @@ node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 - 抓取脚本公共库：`scripts/lib/http.js`（UA/gzip/重试/比较写入）、`scripts/lib/espn-endpoints.js`（端点常量 + 联赛配置）
 - 定时抓取：`.github/workflows/fetch-data.yml`（每天 UTC 06:00，数据无变化不 commit）
 - FBref 路径已被 Understat 取代（数据更干净、无反爬），脚本仅保留 HTML 解析逻辑备用
-- 新写抓取脚本沿用同一约定：纯 Node 内置模块（https/zlib/fs）、UA 伪装、gzip 解压、请求间隔（≥200ms）、数据无变化不 commit；脚本为 CommonJS（由 `scripts/package.json` 的 `type: commonjs` 隔离，不受根 package.json `type: module` 影响）
+- 新写抓取脚本沿用同一约定：纯 Node 内置模块（https/zlib/fs）、UA 设置（默认浏览器 UA；**服务端抓 site.api 必须用 curl UA**，见数据源结论关键事实）、gzip 解压、请求间隔（≥200ms）、数据无变化不 commit；脚本为 CommonJS（由 `scripts/package.json` 的 `type: commonjs` 隔离，不受根 package.json `type: module` 影响）
+- **空榜防线**（2026-08-10 增设）：`fetch-espn-scores.js` 全月份抓取失败时拒绝写榜并抛错，让工作流红灯——08-05 事故证明「静默用空数据覆写」比抓取失败本身危害更大；**Actions 红灯务必查看原因**，别只等第二天自动重跑
 
 ## 架构核心（需综合多份文档才能拼出的大图）
 
@@ -126,6 +127,7 @@ node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 - Understat **只覆盖五大联赛**，杯赛（UCL/UEL/UECL）404；UCL/UEL 的 xG 目前无免费源
 - Understat 已知坑：`getPlayersStats` 的 position 参数不过滤（单次调用取全量即可）；history 里的 `wins/draws/loses/pts` 是单场值（0/1），累计必须 reduce 求和；无 fixtures 端点（未来赛程用 ESPN scoreboard）
 - ESPN standings 端点返回空 → 积分榜本地从比分计算（`computeStandings()` 模式，沿用世界杯项目）
+- **site.api 服务端抓取 UA 坑（2026-08-10 实测）**：Akamai 反爬拦「服务器 IP + 浏览器 UA」组合返 403——服务端抓 scoreboard 必须传 `{ ua: UA_CURL }`（`curl/8.5.0`，定义在 `scripts/lib/http.js`）；真实浏览器直连（实时比分）与 core API 均不受影响。2026-08-05 此坑曾致六联赛积分榜被空榜覆写、线上空窗 5 天（复盘见 data-site-mvp-plan.md 2026-08-10 调研记录）
 - ESPN injuries 端点（`/{league}/injuries?team={teamId}`）CORS 实测 200 OK，浏览器直连（子项目 1 Task 13 验证）；实际结构 ≠ plan 假设：顶层 `injuries` 数组（非 `athletes`），每条 `athlete.{id,displayName}` + `type.{description}` 对象（非字符串）+ `status` 顶层字符串；预季五大联赛全返 0 条，赛季中复测待回归。`fetchTeamInjuries(league, teamId)` 5 分钟缓存
 - 球员**单赛季**统计用 `/seasons/{year}/types/1/athletes/{id}/statistics/0`；不带 seasons 路径的 `.../athletes/{id}/statistics/0` 是生涯累计，两者别混用
 - 端点完整清单在 data-site-mvp-plan.md 的 2026-07-21 几篇调研记录里，写抓取脚本前先查

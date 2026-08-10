@@ -176,6 +176,34 @@
 
 > 按日期倒序记录每次调研进展，格式：`### YYYY-MM-DD`
 
+### 2026-08-10 — ESPN site.api Akamai 反爬突变：服务端抓取 403（线上积分榜空窗事故复盘）
+
+**背景**：2026-08-10 总司令报线上积分榜不显示。排查发现六联赛 `standings.json` 自 2026-08-05 数据提交起全变空榜（`matchesCounted: 0`），08-05 至 08-09 每日 Actions 连续产出空榜、无法自愈。
+
+**根因链**：
+1. 08-03 至 08-05 之间 ESPN site.api 的 Akamai 反爬策略生效：**「服务器/数据中心 IP + 浏览器 UA」组合直接 403 Access Denied**
+2. Actions 内逐月 scoreboard 请求（脚本 UA 为 Chrome 131）全部 403；`fetch-espn-scores.js` 逐月 catch 静默跳过 → `allMatches` 为空数组
+3. 设计缺陷：空 `allMatches` 照样算出空榜并覆写上一份正确的 `standings.json`（月份文件只在抓取成功时写，未被污染）
+
+**实测证据**（2026-08-10，本地网络）：
+- 浏览器 UA（Chrome 131 / 140）请求 scoreboard → 403
+- `curl/8.5.0` UA → 200 OK（eng.1 2025-08 返 30 场、chn.1 2026-07 返 33 场、eng.1 2026-05 返 41 场）
+- core API（`sports.core.api.espn.com`）不受此策略影响——同期 Actions 的球员文件仍在正常更新
+- 前端浏览器直连（真浏览器 + 用户 IP）不受影响——事故期间实时比分照常
+
+**修复**（提交 129bb79 + dd09b06）：
+- `scripts/lib/http.js` 增加可选 `ua` 参数，导出 `UA_CURL = 'curl/8.5.0'`
+- `fetch-espn-scores.js` 逐月抓取与 `espn-endpoints.js` 的 `resolveSeasonsInPlace` 赛季探测一律传 `{ ua: UA_CURL }`
+- 空榜防线：全月份抓取失败时拒绝写榜并抛错，工作流红灯（此前静默吞错）
+- 五大联赛 `standings.json` 从 f149b77（08-03）恢复完整版（赛季已完赛数据冻结）；修复后本地重算结果与历史版逐字节一致（忽略 updateTime）
+- 中超在进行中，留给工作流用新脚本重抓
+
+**遗留风险**：
+- 部分月份失败仍会写出缺场榜单（既有行为，防线只覆盖全失败）
+- 若 ESPN 未来连 curl UA 也拦，防线会红灯报警，抓取需另谋出路
+
+---
+
 ### 2026-08-03 — ESPN injuries 端点 CORS 复测 + 实际结构验证（子项目 1 Task 13）
 
 **调研背景**：子项目 1「个人化基础」Task 13 接入球队伤员端点。`docs/superpowers/plans/2026-07-31-personalization-mvp.md` 假设结构为 `{ athletes: [{ athlete: { id, displayName }, type: 'Knock', status: { name: 'Doubtful' } }] }`，需先手动验证 CORS + 字段。
@@ -995,6 +1023,14 @@ Understat:
 **理由**：
 **后续影响**：
 -->
+
+#### 决策：site.api 服务端抓取改 curl UA + 空榜防线（08-05 事故抢救）
+**日期**：2026-08-10
+**背景**：08-05 起 ESPN site.api 的 Akamai 拦「服务器 IP + 浏览器 UA」组合返回 403，Actions 逐月 scoreboard 抓取静默全败，空 allMatches 算出空榜覆写正确积分榜，线上积分榜空窗 5 天
+**选项**：A) UA 改 curl 风格（诚实声明非浏览器）B) 补全浏览器请求头更像浏览器 C) 放弃 Actions 抓取改代理/换源
+**选择**：A + 全失败空榜防线
+**理由**：curl UA 实测 200，成本最低；拦截规则针对「服务器 IP 伪装浏览器」的特征，诚实声明 curl 反而合规；B 是反爬军备竞赛不可靠；C 成本过高暂无必要。防线独立于 UA 修复——本次事故证明「静默用空数据覆写」比抓取失败本身危害更大，任何原因导致的全失败都不该落盘
+**后续影响**：今后凡是服务端抓 site.api 一律传 `{ ua: UA_CURL }`；core API / Understat / 懂球帝链路保持原 UA 不动；若 curl UA 未来也被拦，工作流红灯需人工介入；部分月份失败仍写缺场榜单属既有行为，暂不扩线
 
 #### 决策：ESPN injuries 端点结构偏差——适配实现而非跳过（Task 13）
 **日期**：2026-08-03
