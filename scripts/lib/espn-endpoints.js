@@ -11,7 +11,7 @@
  */
 'use strict';
 
-const { fetchJson } = require('./http');
+const { fetchJson, UA_CURL } = require('./http');
 
 const CORE_BASE = 'https://sports.core.api.espn.com';
 const SITE_BASE = 'https://site.api.espn.com/apis/site/v2/sports/soccer';
@@ -91,7 +91,8 @@ async function resolveSeasonsInPlace(leagues, now = new Date()) {
     const mm = String(m).padStart(2, '0');
     const last = new Date(Date.UTC(cand, m + 1, 0)).getUTCDate();
     try {
-      const sb = await fetchJson(`${SITE_BASE}/${league.slug}/scoreboard?dates=${cand}${mm}01-${cand}${mm}${String(last).padStart(2, '0')}&limit=200`);
+      // site.api 服务端抓取必须用 curl UA（浏览器 UA + 服务器 IP 会被 Akamai 403）
+      const sb = await fetchJson(`${SITE_BASE}/${league.slug}/scoreboard?dates=${cand}${mm}01-${cand}${mm}${String(last).padStart(2, '0')}&limit=200`, { ua: UA_CURL });
       const started = (sb.events ?? []).some((e) => e.status?.type?.state === 'post');
       league.season = started ? String(cand) : String(cand - 1);
     } catch {

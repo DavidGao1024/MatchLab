@@ -17,6 +17,13 @@ const path = require('path');
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
 
+/**
+ * curl 风格 UA（2026-08-10 救火实测结论）：ESPN site.api 的 Akamai 反爬会拦
+ * 「服务器 IP + 浏览器 UA」组合返回 403，但放行诚实的 curl UA。
+ * 凡是服务端抓 site.api 的调用（scoreboard）一律传 { ua: UA_CURL }。
+ */
+const UA_CURL = 'curl/8.5.0';
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -29,12 +36,13 @@ function httpRequest(url, opts = {}) {
     timeout = 20000,
     retries = 3,
     retryDelayMs = 2000,
+    ua = UA, // 覆盖默认 UA（site.api 服务端抓取需传 UA_CURL，见常量注释）
   } = opts;
 
   const attempt = () => new Promise((resolve, reject) => {
     const u = new URL(url);
     const reqHeaders = {
-      'User-Agent': UA,
+      'User-Agent': ua,
       'Accept': 'application/json, text/javascript, */*; q=0.01',
       'Accept-Language': 'en-US,en;q=0.9',
       'Accept-Encoding': 'gzip, deflate, br',
@@ -149,4 +157,4 @@ function writeJsonIfChanged(filePath, data) {
   return true;
 }
 
-module.exports = { UA, sleep, httpRequest, fetchJson, writeJson, writeJsonIfChanged };
+module.exports = { UA, UA_CURL, sleep, httpRequest, fetchJson, writeJson, writeJsonIfChanged };

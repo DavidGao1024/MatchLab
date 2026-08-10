@@ -18,7 +18,7 @@
 'use strict';
 
 const path = require('path');
-const { sleep, fetchJson, writeJsonIfChanged } = require('./lib/http');
+const { sleep, fetchJson, writeJsonIfChanged, UA_CURL } = require('./lib/http');
 const { SEASON, LEAGUES, site, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
@@ -150,11 +150,14 @@ async function processLeague(league) {
   console.log(`\n===== [${league.slug}] ${league.name} 赛程（${rangeLabel}） =====`);
   const leagueDir = path.join(DATA_ROOT, league.slug);
   const allMatches = [];
+  let successMonths = 0; // 请求成功的月份数（含空赛月）；0 = 全失败，防线拒绝空榜覆写（2026-08-10）
 
   for (const { key, dates } of months) {
     await sleep(DELAY_MS);
     try {
-      const resp = await fetchJson(site.scoreboard(league.slug, dates, 200));
+      // site.api 服务端抓取必须用 curl UA（浏览器 UA + 服务器 IP 会被 Akamai 403，2026-08-10 实测）
+      const resp = await fetchJson(site.scoreboard(league.slug, dates, 200), { ua: UA_CURL });
+      successMonths += 1;
       const events = resp.events || [];
       if (events.length === 0) {
         console.log(`  · ${key}: 无比赛`);
@@ -175,6 +178,13 @@ async function processLeague(league) {
     } catch (e) {
       console.warn(`  ! ${key} 抓取失败: ${e.message}`);
     }
+  }
+
+  // 空榜防线：全月份抓取失败时若继续，会用空数组算出空榜覆写上一份正确数据
+  // （2026-08-05 线上积分榜空窗事故根因）。此处抛错让工作流红灯，人工介入。
+  // 注：部分月份失败的榜单缺失风险仍存在，属既有行为，暂不扩线。
+  if (successMonths === 0) {
+    throw new Error(`[${league.slug}] ${months.length} 个月 scoreboard 全部抓取失败，拒绝以空榜覆写 standings.json`);
   }
 
   const standings = computeStandings(allMatches, league.pointDeductions || {});
