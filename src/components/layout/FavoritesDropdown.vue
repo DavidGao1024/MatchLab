@@ -73,37 +73,38 @@ function goFavorites() {
       <!-- 桌面端：文字（不变） -->
       <span class="hidden md:inline">{{ t('nav.favorites', app.lang) }} ({{ total }})</span>
     </button>
-    <div
-      v-if="open && total > 0"
-      class="absolute right-0 mt-2 w-56 rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-lg z-40"
-    >
-      <button
-        type="button"
-        class="block w-full text-left px-3 py-2 text-xs text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-700"
-        @click="goFavorites"
-      >
-        {{ t('fav.viewAll', app.lang) }}
-      </button>
-      <div v-if="store.favorites.teams.length" class="px-3 py-1 text-xs text-slate-400">球队</div>
-      <button
-        v-for="tm in store.favorites.teams"
-        :key="`t${tm.teamId}`"
-        type="button"
-        class="block w-full text-left px-3 py-1.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700"
-        @click="tm.teamId && goTeam(tm.league, tm.teamId)"
-      >
-        {{ teamName(tm.name, app.lang) }}
-      </button>
-      <div v-if="store.favorites.players.length" class="px-3 py-1 text-xs text-slate-400">球员</div>
-      <button
-        v-for="p in store.favorites.players"
-        :key="`p${p.athleteId}`"
-        type="button"
-        class="block w-full text-left px-3 py-1.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700"
-        @click="p.athleteId && goPlayer(p.league, p.athleteId)"
-      >
-        {{ playerName(p.name, app.lang) }}
-      </button>
+    <!-- 悬停桥：间隙做成外层 pt-2（属于面板元素），鼠标穿过不触发 pointerleave 误关；
+         视觉样式（圆角/边框/背景/阴影）挂内层，外观与原版一致 -->
+    <div v-if="open && total > 0" class="absolute right-0 top-full z-40 pt-2">
+      <div class="w-56 rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-lg">
+        <button
+          type="button"
+          class="block w-full text-left px-3 py-2 text-xs text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-700"
+          @click="goFavorites"
+        >
+          {{ t('fav.viewAll', app.lang) }}
+        </button>
+        <div v-if="store.favorites.teams.length" class="px-3 py-1 text-xs text-slate-400">{{ t('fav.teams', app.lang) }}</div>
+        <button
+          v-for="tm in store.favorites.teams"
+          :key="`t${tm.teamId}`"
+          type="button"
+          class="block w-full text-left px-3 py-1.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700"
+          @click="tm.teamId && goTeam(tm.league, tm.teamId)"
+        >
+          {{ teamName(tm.name, app.lang) }}
+        </button>
+        <div v-if="store.favorites.players.length" class="px-3 py-1 text-xs text-slate-400">{{ t('fav.players', app.lang) }}</div>
+        <button
+          v-for="p in store.favorites.players"
+          :key="`p${p.athleteId}`"
+          type="button"
+          class="block w-full text-left px-3 py-1.5 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700"
+          @click="p.athleteId && goPlayer(p.league, p.athleteId)"
+        >
+          {{ playerName(p.name, app.lang) }}
+        </button>
+      </div>
     </div>
   </div>
 </template>

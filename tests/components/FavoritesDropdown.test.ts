@@ -88,6 +88,22 @@ describe('FavoritesDropdown', () => {
     expect(w.find('div.absolute').exists()).toBe(false)
   })
 
+  it('面板间隙由面板自身 padding 承担（悬停桥）——防鼠标穿过间隙误关', async () => {
+    const store = useUserDataStore()
+    await store.init()
+    store.addFavorite('team', { league: 'eng.1', teamId: 359, name: 'Arsenal' })
+    const w = mount(FavoritesDropdown, { global: { plugins: [router] } })
+    firePointer(w.find('.relative').element, 'pointerenter', 'mouse')
+    await nextTick()
+    const panel = w.find('div.absolute')
+    expect(panel.exists()).toBe(true)
+    // 间隙若是 mt-* 则不属于面板元素，鼠标经过即触发 pointerleave 误关；
+    // 必须收进面板自身做 pt-*，悬停区域才连续（桌面 hover 主路径）
+    const cls = panel.classes()
+    expect(cls.some((c) => c.startsWith('mt-'))).toBe(false)
+    expect(cls).toContain('pt-2')
+  })
+
   it('total=0 移动端无角标；按钮有 aria-label', async () => {
     const store = useUserDataStore()
     await store.init()
