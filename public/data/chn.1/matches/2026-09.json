@@ -1,9 +1,9 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-10T01:13:10.735Z",
+  "updateTime": "2026-08-11T08:56:04.818Z",
   "league": "chn.1",
   "month": "2026-09",
-  "count": 8,
+  "count": 9,
   "matches": [
     {
       "eventId": "401861465",
@@ -201,6 +201,31 @@
         "name": "Zhejiang Professional FC",
         "abbreviation": "ZHE",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18203.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "401861291",
+      "date": "2026-09-12T11:00Z",
+      "name": "Liaoning Tieren at Tianjin Jinmen Tiger",
+      "status": "pre",
+      "completed": false,
+      "clock": "0'",
+      "venue": "TEDA Football Stadium",
+      "home": {
+        "id": 8239,
+        "name": "Tianjin Jinmen Tiger",
+        "abbreviation": "TIG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8239.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 131705,
+        "name": "Liaoning Tieren",
+        "abbreviation": "LIA",
+        "logo": "",
         "score": 0,
         "winner": null
       }
