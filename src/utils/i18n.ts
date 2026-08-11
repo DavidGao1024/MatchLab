@@ -233,6 +233,7 @@ const UI: Record<string, { zh: string; en: string }> = {
   'sub.failed': { zh: '订阅失败', en: 'Failed to subscribe' },
   'sub.limitReached': { zh: '订阅已达上限', en: 'Subscription limit reached' },
   'cal.export': { zh: '导出赛程到日历', en: 'Export to Calendar' },
+  'cal.exportShort': { zh: '日历', en: 'iCal' },
   'cal.exporting': { zh: '正在生成...', en: 'Generating...' },
   'cal.exportFailed': { zh: '赛程数据获取失败，请稍后重试', en: 'Failed to load fixtures, please try again later' },
   'dialog.cancel': { zh: '取消', en: 'Cancel' },

@@ -72,4 +72,23 @@ describe('ExportCalendarButton', () => {
     expect(w.find('button').attributes('disabled')).toBeDefined()
     expect(URL.createObjectURL).not.toHaveBeenCalled()
   })
+  it('compact 变体：短文案日历 + 导出逻辑不变', async () => {
+    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
+    const w = mount(ExportCalendarButton, {
+      props: { league: 'eng.1', teamId: 359, teamName: 'Arsenal', teamSlug: 'arsenal', seasonStart: 2025, compact: true },
+    })
+    expect(w.text()).toContain('日历')
+    expect(w.text()).not.toContain('导出赛程到日历')
+    await w.find('button').trigger('click')
+    await flushPromises()
+    expect(URL.createObjectURL).toHaveBeenCalled()
+  })
+  it('compact 变体英文模式：iCal', async () => {
+    localStorage.setItem('matchlab:lang', 'en')
+    const w = mount(ExportCalendarButton, {
+      props: { league: 'eng.1', teamId: 359, teamName: 'Arsenal', teamSlug: 'arsenal', seasonStart: 2025, compact: true },
+    })
+    expect(w.text()).toContain('iCal')
+    expect(w.text()).not.toContain('日历')
+  })
 })
