@@ -49,7 +49,9 @@ function removePlayer(id: number) {
 </script>
 
 <template>
-  <section class="mx-auto max-w-3xl p-4">
+  <!-- w-full 是必需的：App.vue 的 router-view 透传 flex flex-col，配合 mx-auto 会让宽度退回内容
+       min-content，英文长队名会把整行推出 375px 视口（2026-08-11 手测发现） -->
+  <section class="mx-auto max-w-3xl w-full p-4">
     <h1 class="font-cond text-2xl font-semibold text-white">{{ tr('fav.title', app.lang) }}</h1>
 
     <div v-if="store.favorites.teams.length === 0 && store.favorites.players.length === 0" class="mt-4">
