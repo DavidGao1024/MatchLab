@@ -134,9 +134,11 @@ describe('FavoritesView', () => {
     store.addFavorite('team', { league: 'eng.1', teamId: 359, name: 'Arsenal' })
     const { w } = mountWithRouter()
     await flushPromises()
+    expect(mockFetch).toHaveBeenCalledWith(expect.stringContaining('eng.1'), undefined)
     expect(w.text()).toContain('阿森纳')
     expect(w.text()).toContain('英超')
-    expect(w.text()).toContain('阿') // 兜底首字圆牌
+    const badge = w.find('span[aria-hidden="true"]')
+    expect(badge.text()).toBe('阿')
     expect(w.text()).toContain('删除') // 按钮不受影响
   })
   it('无编号遗留条目：只有名字和徽章，无任何按钮', async () => {
@@ -172,6 +174,5 @@ describe('FavoritesView', () => {
     await w.findAll('button').find((b) => b.text().includes('阿森纳'))!.trigger('click')
     await flushPromises()
     expect(router.currentRoute.value.path).toBe('/eng.1/team/359')
-    vi.useFakeTimers()
   })
 })

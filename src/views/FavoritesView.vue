@@ -35,6 +35,8 @@ function goTeam(league: LeagueSlug, id: number) { router.push(`/${league}/team/$
 function goPlayer(league: LeagueSlug, id: number) { router.push(`/${league}/player/${id}`) }
 function onTeamGo(f: Favorite) { if (f.teamId !== undefined) goTeam(f.league, f.teamId) }
 function onPlayerGo(f: Favorite) { if (f.athleteId !== undefined) goPlayer(f.league, f.athleteId) }
+function onTeamRemove(f: Favorite) { if (f.teamId !== undefined) removeTeam(f.teamId) }
+function onPlayerRemove(f: Favorite) { if (f.athleteId !== undefined) removePlayer(f.athleteId) }
 
 function removeTeam(id: number) {
   store.removeFavorite('team', id)
@@ -89,7 +91,7 @@ function removePlayer(id: number) {
           :team-id="f.teamId"
           :team="teamOf(f)"
           @go="onTeamGo(f)"
-          @remove="f.teamId !== undefined && removeTeam(f.teamId)"
+          @remove="onTeamRemove(f)"
         />
       </div>
       <div v-if="tab === 'players'" class="mt-3 space-y-2">
@@ -101,7 +103,7 @@ function removePlayer(id: number) {
           :league="f.league"
           :athlete-id="f.athleteId"
           @go="onPlayerGo(f)"
-          @remove="f.athleteId !== undefined && removePlayer(f.athleteId)"
+          @remove="onPlayerRemove(f)"
         />
       </div>
     </template>
