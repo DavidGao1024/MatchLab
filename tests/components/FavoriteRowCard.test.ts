@@ -3,6 +3,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { setActivePinia, createPinia } from 'pinia'
 import FavoriteRowCard from '../../src/components/favorites/FavoriteRowCard.vue'
+import TeamLogo from '../../src/components/common/TeamLogo.vue'
 import { useAppStore } from '../../src/stores/app'
 import { __resetToast } from '../../src/composables/useToast'
 import { __resetConfirm } from '../../src/composables/useConfirm'
@@ -45,6 +46,7 @@ describe('FavoriteRowCard', () => {
     expect(w.text()).toContain('英超')
     expect(w.text()).toContain('日历')
     expect(w.text()).toContain('删除')
+    expect(w.findComponent(TeamLogo).exists()).toBe(true)
   })
   it('球队行：名字点击 emit go，删除点击 emit remove', async () => {
     const w = mount(FavoriteRowCard, {
@@ -77,8 +79,10 @@ describe('FavoriteRowCard', () => {
     const w = mount(FavoriteRowCard, {
       props: { kind: 'team', name: 'Arsenal', league: 'eng.1', teamId: 359 },
     })
-    // 未传 team → 兜底圆牌显示译名首字「阿」
-    expect(w.text()).toContain('阿')
+    // 未传 team → 兜底圆牌显示译名首字「阿」，背景走联赛默认色 #3D195B
+    const badge = w.find('span[aria-hidden="true"]')
+    expect(badge.text()).toBe('阿')
+    expect(badge.attributes('style')).toContain('rgb(61, 25, 91)')
   })
   it('英文模式：全无中文残留', () => {
     localStorage.setItem('matchlab:lang', 'en')
