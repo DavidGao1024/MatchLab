@@ -1,31 +1,40 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useUserDataStore } from '../stores/userData'
+import { useTeamsStore } from '../stores/teams'
 import { useToast } from '../composables/useToast'
 import EmptyState from '../components/common/EmptyState.vue'
-import ExportCalendarButton from '../components/teams/ExportCalendarButton.vue'
+import FavoriteRowCard from '../components/favorites/FavoriteRowCard.vue'
 import { useRouter } from 'vue-router'
 import type { LeagueSlug } from '../utils/constants'
 import { useAppStore } from '../stores/app'
-import { playerName, t as tr, teamName } from '../utils/i18n'
+import { t as tr } from '../utils/i18n'
+import type { Favorite } from '../types/user-data'
 
 const store = useUserDataStore()
+const teams = useTeamsStore()
 const app = useAppStore()
 const toast = useToast()
 const router = useRouter()
 const tab = ref<'teams' | 'players'>('teams')
 
-const seasonStart = computed(() => {
-  const now = new Date()
-  return now.getMonth() >= 7 ? now.getFullYear() : now.getFullYear() - 1
+// 队徽预载：只走档案库 ensure()（仅拉数据、无副作用），
+// 不用 ensureLeague——它会把入参联赛设为"当前联赛"，收藏夹是跨联赛页，会搅乱联赛上下文。
+// 只为有球队收藏的联赛预载；尽力而为，失败落首字圆牌兜底。
+const teamLeagues = computed<LeagueSlug[]>(() =>
+  [...new Set(store.favorites.teams.filter((f) => f.teamId !== undefined).map((f) => f.league))],
+)
+onMounted(() => {
+  Promise.allSettled(teamLeagues.value.map((l) => teams.ensure(l))).catch(() => { /* 尽力而为 */ })
 })
 
-function slugify(name: string): string {
-  return name.toLowerCase().replace(/\s+/g, '-')
-}
+const teamOf = (f: Favorite) =>
+  f.teamId !== undefined ? teams.teamById(f.league, f.teamId) : undefined
 
 function goTeam(league: LeagueSlug, id: number) { router.push(`/${league}/team/${id}`) }
 function goPlayer(league: LeagueSlug, id: number) { router.push(`/${league}/player/${id}`) }
+function onTeamGo(f: Favorite) { if (f.teamId !== undefined) goTeam(f.league, f.teamId) }
+function onPlayerGo(f: Favorite) { if (f.athleteId !== undefined) goPlayer(f.league, f.athleteId) }
 
 function removeTeam(id: number) {
   store.removeFavorite('team', id)
@@ -38,9 +47,10 @@ function removePlayer(id: number) {
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto p-4">
-    <h1 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">{{ tr('fav.title', app.lang) }}</h1>
-    <div v-if="store.favorites.teams.length === 0 && store.favorites.players.length === 0">
+  <section class="mx-auto max-w-3xl p-4">
+    <h1 class="font-cond text-2xl font-semibold text-white">{{ tr('fav.title', app.lang) }}</h1>
+
+    <div v-if="store.favorites.teams.length === 0 && store.favorites.players.length === 0" class="mt-4">
       <EmptyState
         :title="tr('fav.emptyTitle', app.lang)"
         :body="tr('fav.emptyBody', app.lang)"
@@ -48,69 +58,52 @@ function removePlayer(id: number) {
         @cta="router.push('/eng.1/standings')"
       />
     </div>
-    <div v-else>
-      <div class="flex gap-2 mb-4">
+    <template v-else>
+      <!-- 页签：暗色圆角钮 + 中性浅色下划线（本页无联赛上下文，不用联赛色） -->
+      <div class="mt-4 flex gap-2">
         <button
           type="button"
-          class="px-3 py-1 text-sm rounded"
-          :class="tab === 'teams' ? 'bg-blue-600 text-white' : 'bg-slate-200 dark:bg-slate-700'"
+          class="rounded-lg px-3.5 py-1.5 text-sm transition-colors"
+          :class="tab === 'teams'
+            ? 'bg-white/10 text-white shadow-[inset_0_-2px_0_rgba(255,255,255,0.45)]'
+            : 'text-slate-400 hover:bg-white/5 hover:text-white'"
           @click="tab = 'teams'"
-        >
-          {{ tr('fav.teams', app.lang) }} ({{ store.favorites.teams.length }})
-        </button>
+        >{{ tr('fav.teams', app.lang) }} ({{ store.favorites.teams.length }})</button>
         <button
           type="button"
-          class="px-3 py-1 text-sm rounded"
-          :class="tab === 'players' ? 'bg-blue-600 text-white' : 'bg-slate-200 dark:bg-slate-700'"
+          class="rounded-lg px-3.5 py-1.5 text-sm transition-colors"
+          :class="tab === 'players'
+            ? 'bg-white/10 text-white shadow-[inset_0_-2px_0_rgba(255,255,255,0.45)]'
+            : 'text-slate-400 hover:bg-white/5 hover:text-white'"
           @click="tab = 'players'"
-        >
-          {{ tr('fav.players', app.lang) }} ({{ store.favorites.players.length }})
-        </button>
+        >{{ tr('fav.players', app.lang) }} ({{ store.favorites.players.length }})</button>
       </div>
-      <div v-if="tab === 'teams'">
-        <div
-          v-for="t in store.favorites.teams"
-          :key="t.teamId"
-          class="flex items-center justify-between p-3 mb-2 rounded border border-slate-200 dark:border-slate-700"
-        >
-          <span
-            v-if="t.teamId"
-            class="cursor-pointer text-blue-600 hover:underline"
-            @click="goTeam(t.league, t.teamId)"
-          >{{ teamName(t.name, app.lang) }}</span>
-          <span v-else class="text-slate-700 dark:text-slate-200">{{ teamName(t.name, app.lang) }}</span>
-          <div v-if="t.teamId" class="flex gap-2">
-            <ExportCalendarButton
-              :league="t.league"
-              :team-id="t.teamId"
-              :team-name="t.name"
-              :team-slug="slugify(t.name)"
-              :season-start="seasonStart"
-            />
-            <button type="button" class="text-red-500 text-sm" @click="t.teamId && removeTeam(t.teamId)">{{ tr('fav.remove', app.lang) }}</button>
-          </div>
-        </div>
+
+      <div v-if="tab === 'teams'" class="mt-3 space-y-2">
+        <FavoriteRowCard
+          v-for="f in store.favorites.teams"
+          :key="f.teamId ?? `name:${f.name}`"
+          kind="team"
+          :name="f.name"
+          :league="f.league"
+          :team-id="f.teamId"
+          :team="teamOf(f)"
+          @go="onTeamGo(f)"
+          @remove="f.teamId !== undefined && removeTeam(f.teamId)"
+        />
       </div>
-      <div v-if="tab === 'players'">
-        <div
-          v-for="p in store.favorites.players"
-          :key="p.athleteId"
-          class="flex items-center justify-between p-3 mb-2 rounded border border-slate-200 dark:border-slate-700"
-        >
-          <span
-            v-if="p.athleteId"
-            class="cursor-pointer text-blue-600 hover:underline"
-            @click="goPlayer(p.league, p.athleteId)"
-          >{{ playerName(p.name, app.lang) }}</span>
-          <span v-else class="text-slate-700 dark:text-slate-200">{{ playerName(p.name, app.lang) }}</span>
-          <button
-            v-if="p.athleteId"
-            type="button"
-            class="text-red-500 text-sm"
-            @click="removePlayer(p.athleteId)"
-          >{{ tr('fav.remove', app.lang) }}</button>
-        </div>
+      <div v-if="tab === 'players'" class="mt-3 space-y-2">
+        <FavoriteRowCard
+          v-for="f in store.favorites.players"
+          :key="f.athleteId ?? `name:${f.name}`"
+          kind="player"
+          :name="f.name"
+          :league="f.league"
+          :athlete-id="f.athleteId"
+          @go="onPlayerGo(f)"
+          @remove="f.athleteId !== undefined && removePlayer(f.athleteId)"
+        />
       </div>
-    </div>
-  </div>
+    </template>
+  </section>
 </template>
