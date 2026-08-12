@@ -224,13 +224,13 @@ export function bannerTheme(color: string, altColor: string): BannerTheme {
 - [ ] **Step 4: 跑测试确认全绿**
 
 Run: `npm run test -- tests/utils/teamColor.test.ts`
-Expected: PASS，13 项全过
+Expected: PASS，15 项全过
 
 - [ ] **Step 5: 提交**
 
 ```bash
 git add src/utils/teamColor.ts tests/utils/teamColor.test.ts
-git commit -m "feat: 旗面颜色兜底纯函数 bannerTheme——近黑提亮/白底换深字/副色斜纹降级，13 项单测钉死阈值边界"
+git commit -m "feat: 旗面颜色兜底纯函数 bannerTheme——近黑提亮/白底换深字/副色斜纹降级，15 项单测钉死阈值边界"
 ```
 
 ---
@@ -852,7 +852,7 @@ git commit -m "feat: 首页订阅区电脑端永远占满一行——网格列�
 - [ ] **Step 1: 三件套全跑**
 
 Run: `npm run typecheck && npm run test && npm run build`
-Expected: 类型检查无错、单测全绿（总数应为 234 + 13 = 247 项：旧 MyTeamCard 8 项被新 8 项等量替换，净增 teamColor 13 项）、构建成功
+Expected: 类型检查无错、单测全绿（总数应为 234 + 15 + 2 = 251 项：旧 MyTeamCard 8 项被新 8 项等量替换，净增 teamColor 15 项 + 质量复审补的 2 项边界测试）、构建成功
 
 - [ ] **Step 2: 自查 diff 无越界**
 
