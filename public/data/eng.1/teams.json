@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-08T07:03:52.884Z",
+  "updateTime": "2026-08-11T07:18:11.729Z",
   "league": "eng.1",
   "season": "2025",
   "count": 20,
@@ -328,7 +328,11 @@
       "alternateColor": "#FFCD00",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/357.png",
-      "venue": null,
+      "venue": {
+        "name": "Elland Road",
+        "city": "Leeds",
+        "country": "England"
+      },
       "isActive": true,
       "record": {
         "wins": 11,
@@ -387,9 +391,9 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/382.png",
       "venue": {
-        "name": "Seoul World Cup Stadium",
-        "city": "Seoul",
-        "country": "South Korea"
+        "name": "Etihad Stadium",
+        "city": "Manchester",
+        "country": "England"
       },
       "isActive": true,
       "record": {
