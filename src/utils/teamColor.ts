@@ -23,15 +23,18 @@ export interface BannerTheme {
 const DARK_FLOOR = 0.16
 const LIGHT_CEIL = 0.85
 const DARK_TARGET = 0.2
+const ACCENT_FLOOR = 0.45   // 主色明度低于此值时作深底强调色太暗，需提亮
+const ACCENT_TARGET = 0.6   // 强调色提亮目标明度
 
 export function hexToRgb(hex: string): [number, number, number] {
   const h = hex.replace('#', '')
   const full = h.length === 3 ? h.split('').map((c) => c + c).join('') : h
+  if (!/^[0-9a-fA-F]{6}$/.test(full)) return [0, 0, 0]
   const n = parseInt(full, 16)
-  if (Number.isNaN(n)) return [0, 0, 0]
   return [(n >> 16) & 255, (n >> 8) & 255, n & 255]
 }
 
+/** 线性加权亮度（0.2126/0.7152/0.0722，范围 0-1）。注意：非 WCAG 相对亮度，无 gamma 校正 */
 export function luminance(hex: string): number {
   const [r, g, b] = hexToRgb(hex)
   return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255
@@ -70,17 +73,18 @@ export function bannerTheme(color: string, altColor: string): BannerTheme {
     from = mix(color, '#ffffff', (DARK_TARGET - lum) / (1 - lum))
   }
   const darkText = lum > LIGHT_CEIL
-  const accent = lum >= 0.45 || darkText
+  const accent = lum >= ACCENT_FLOOR || darkText
     ? color
-    : mix(color, '#ffffff', (0.6 - lum) / (1 - lum))
-  const stripe = altDistinct(color, altColor)
+    : mix(color, '#ffffff', (ACCENT_TARGET - lum) / (1 - lum))
+  const useAlt = altDistinct(color, altColor)
+  const stripe = useAlt
     ? rgba(altColor, 0.15)
     : darkText ? rgba(mix(color, '#000000', 0.6), 0.15) : 'rgba(0,0,0,0.12)'
   return {
     from,
     to: mix(from, '#000000', 0.3),
     stripe,
-    pinFrom: altDistinct(color, altColor) ? altColor : accent,
+    pinFrom: useAlt ? altColor : accent,
     pinTo: from,
     darkText,
     accent,

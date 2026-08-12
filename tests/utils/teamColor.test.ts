@@ -75,3 +75,13 @@ describe('bannerTheme 斜纹与细线兜底', () => {
     expect(th.pinTo).toBe(th.from)
   })
 })
+
+describe('hexToRgb 边界', () => {
+  it('3 位 hex 正常展开', () => {
+    expect(hexToRgb('#f00')).toEqual([255, 0, 0])
+  })
+  it('空串与非法 hex 兜底纯黑', () => {
+    expect(hexToRgb('')).toEqual([0, 0, 0])
+    expect(hexToRgb('#12zzzz')).toEqual([0, 0, 0])
+  })
+})
