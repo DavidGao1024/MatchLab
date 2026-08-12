@@ -172,6 +172,7 @@ async function fetchTeams(league) {
     const ov = TEAM_OVERRIDES[id];
     if (ov) {
       if (ov.color) team.color = ov.color;
+      if (ov.alternateColor) team.alternateColor = ov.alternateColor;
       if (ov.logo) {
         const localFile = path.join(__dirname, '..', 'public', ov.logo);
         if (require('fs').existsSync(localFile)) {

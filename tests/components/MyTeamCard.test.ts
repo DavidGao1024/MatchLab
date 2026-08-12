@@ -181,6 +181,34 @@ describe('队旗卡·比赛状态', () => {
   })
 })
 
+describe('队旗卡·球队包按需加载', () => {
+  it('球队包未预载 → 卡片自载后显示球队主色而非兜底色', async () => {
+    // 不预注入 teams bundle：首页只预载焦点联赛，订阅队可能来自任何联赛（回归：中超订阅曾显示联赛色）
+    mockFetch.mockImplementation(async (url: string) => ({
+      ok: true,
+      json: async () => {
+        if (url.includes('data/chn.1/meta.json')) return { season: '2025', seasonType: 'calendar' }
+        if (url.includes('data/chn.1/teams.json')) return {
+          teams: [{
+            id: 8239, displayName: 'Tianjin Jinmen Tiger', shortDisplayName: 'Tianjin',
+            abbreviation: 'TJJ', color: '#5B2D8B', alternateColor: '#FDB913',
+            logo: '', logoDark: '',
+          }],
+        }
+        return { events: [] } // scoreboard 月份请求
+      },
+    }))
+    const store = useUserDataStore()
+    await store.init()
+    store.addSubscription({ league: 'chn.1', teamId: 8239, teamName: 'Tianjin Jinmen Tiger' })
+    const w = mount(MyTeamCard, { props: { subscription: store.subscriptions[0] } })
+    await flushPromises()
+    await w.vm.$nextTick()
+    const style = w.find('article').attributes('style') ?? ''
+    expect(style).toContain('#5B2D8B')
+  })
+})
+
 describe('队旗卡·交互与降级', () => {
   it('点旗面 → 跳球队详情页', async () => {
     injectStoreData()

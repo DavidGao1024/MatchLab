@@ -74,6 +74,9 @@ function isToday(dateStr: string): boolean {
 async function load() {
   loading.value = true
   error.value = ''
+  // 自载本队所属联赛的球队包：首页只预载焦点联赛，订阅队可能来自任何联赛。
+  // 只为旗色与队徽，失败静默退回联赛色兜底；包到达后旗面自动换色
+  teams.ensure(props.subscription.league).catch(() => {})
   try {
     const now = new Date()
     let today: Match | null = null

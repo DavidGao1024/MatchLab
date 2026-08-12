@@ -56,13 +56,13 @@ const site = {
 /**
  * 队级数据覆盖：ESPN 缺失/过时的 logo 和颜色，用本地文件兜底。
  * 把正确 logo PNG 丢到 public/logos/{league}/{teamId}.png 即可生效。
- * color 用于修正 ESPN 返回 #000000 占位色的情况。
+ * color / alternateColor 用于修正 ESPN 返回占位色或错色的情况。
  */
 const TEAM_OVERRIDES = {
   // 中超 chn.1（logo 路径相对于 public/，前端自动拼 BASE_URL）
   131704: { logo: 'logos/chn.1/131704.png', color: '#C8102E' },  // 重庆铜梁龙
   131705: { logo: 'logos/chn.1/131705.png', color: '#C8102E' },  // 辽宁铁人
-  8239:   { logo: 'logos/chn.1/8239.png' },                      // 天津津门虎（ESPN logo 过旧）
+  8239:   { logo: 'logos/chn.1/8239.png', color: '#5B2D8B', alternateColor: '#FDB913' }, // 天津津门虎（ESPN logo 过旧；主场紫色+黄细节，ESPN 错给深红）
 };
 
 /** 开赛月份：欧洲制 8 月开幕；自然年制 3 月开幕 */
