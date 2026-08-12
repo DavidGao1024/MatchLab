@@ -26,6 +26,14 @@ onMounted(() => userStore.init())
 const focus = FOCUS_LEAGUE
 const others = LEAGUE_SLUGS.filter((l) => l !== focus)
 
+// 订阅区网格列数：电脑端永远占满一行——1 队通栏、2 队对半、3 队三分（设计稿 §六）；
+// 三个类名均为静态字面量，保证 Tailwind 按需编译能扫到
+const subGridCols = computed(() => {
+  const n = userStore.subscriptions.length
+  if (n <= 1) return 'md:grid-cols-1'
+  return n === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'
+})
+
 const seq = ref(0)
 const error = ref('')
 const loading = ref(true)
@@ -112,7 +120,7 @@ const featuredId = computed(() => {
             :body="t('home.emptySubBody', app.lang)"
           />
         </div>
-        <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-3" :class="subGridCols">
           <MyTeamCard
             v-for="sub in userStore.subscriptions"
             :key="sub.teamId"
