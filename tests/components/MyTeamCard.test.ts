@@ -6,25 +6,29 @@ import MyTeamCard from '../../src/components/home/MyTeamCard.vue'
 import { useUserDataStore } from '../../src/stores/userData'
 import { useStandingsStore } from '../../src/stores/standings'
 import { useTeamsStore } from '../../src/stores/teams'
-import type { StandingRow, Team, Match, MatchStatus } from '../../src/types/models'
-import { clearScoreCache, clearInjuryCache } from '../../src/composables/useEspanFetch'
+import type { StandingRow, Team } from '../../src/types/models'
+import { clearScoreCache } from '../../src/composables/useEspanFetch'
 import { __resetToast } from '../../src/composables/useToast'
 import { __resetConfirm } from '../../src/composables/useConfirm'
 
 const mockFetch = vi.fn()
 globalThis.fetch = mockFetch as any
+const pushSpy = vi.fn()
+vi.mock('vue-router', () => ({ useRouter: () => ({ push: pushSpy }) }))
 
 beforeEach(() => {
   setActivePinia(createPinia())
   localStorage.clear()
-  // MyTeamCard 用 teamName(name, app.lang) i18n；测试断言期望原文 Arsenal/Liverpool，强制英文模式
+  // 强制英文模式，断言用原文队名
   localStorage.setItem('matchlab:lang', 'en')
   mockFetch.mockReset()
+  pushSpy.mockReset()
   __resetToast()
   __resetConfirm()
   clearScoreCache()
-  clearInjuryCache()
   vi.useFakeTimers()
+  // 钉死"现在"，赛程今日/未来判断可复现
+  vi.setSystemTime(new Date('2026-08-12T12:00:00Z'))
 })
 
 afterEach(() => {
@@ -33,6 +37,33 @@ afterEach(() => {
 
 function mockEmptyEvents() {
   mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
+}
+
+function mockEvents(events: unknown[]) {
+  mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events }) })
+}
+
+/** 以钉死的"现在"为基准取本地某日某点的 ISO 时间，跨时区测试同日判断不漂移 */
+function localAt(dayOffset: number, hour: number): string {
+  const now = new Date()
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate() + dayOffset, hour, 0, 0).toISOString()
+}
+
+/** ESPN 原始事件形状（normalizeEvent 的输入） */
+function rawEvent(over: Record<string, unknown> = {}) {
+  return {
+    id: '99',
+    date: '2026-08-15T19:00:00Z',
+    status: { type: { state: 'pre' }, displayClock: '0:00' },
+    competitions: [{
+      competitors: [
+        { homeAway: 'home', team: { id: '359', displayName: 'Arsenal', abbreviation: 'ARS' }, score: '0' },
+        { homeAway: 'away', team: { id: '25', displayName: 'Liverpool', abbreviation: 'LIV' }, score: '0' },
+      ],
+      venue: { fullName: 'Emirates Stadium' },
+    }],
+    ...over,
+  }
 }
 
 function makeTeam(over: Partial<Team> = {}): Team {
@@ -52,20 +83,6 @@ function makeStanding(over: Partial<StandingRow> = {}): StandingRow {
   }
 }
 
-function makeMatch(over: Partial<Match> = {}): Match {
-  return {
-    eventId: 'e1',
-    date: '2026-08-21T19:00:00Z',
-    status: 'pre' as MatchStatus,
-    completed: false,
-    venue: 'Emirates Stadium',
-    home: { id: 359, name: 'Arsenal', abbreviation: 'ARS', logo: '', score: null, winner: null },
-    away: { id: 25, name: 'Liverpool', abbreviation: 'LIV', logo: '', score: null, winner: null },
-    ...over,
-  }
-}
-
-/** 注入 teamsStore + standingsStore 测试数据 */
 function injectStoreData(opts: { team?: Team; standing?: StandingRow | null } = {}) {
   const teams = useTeamsStore()
   const standings = useStandingsStore()
@@ -75,160 +92,113 @@ function injectStoreData(opts: { team?: Team; standing?: StandingRow | null } = 
     teams: [team],
     byId: new Map([[team.id, team]]),
   }
-  if (opts.standing === null) {
-    standings.rows['eng.1'] = []
-  } else {
-    standings.rows['eng.1'] = [opts.standing ?? makeStanding()]
-  }
-  return { team, standing: opts.standing }
+  standings.rows['eng.1'] = opts.standing === null ? [] : [opts.standing ?? makeStanding()]
 }
 
-describe('MyTeamCard', () => {
-  it('传入 subscription 渲染球队名', async () => {
-    const store = useUserDataStore()
-    await store.init()
-    store.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
+async function mountCard() {
+  const store = useUserDataStore()
+  await store.init()
+  store.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
+  const w = mount(MyTeamCard, { props: { subscription: store.subscriptions[0] } })
+  await flushPromises()
+  return w
+}
+
+describe('队旗卡·结构', () => {
+  it('渲染队名 + 旗面 + 四格数据', async () => {
+    injectStoreData()
     mockEmptyEvents()
-    const w = mount(MyTeamCard, { props: { subscription: store.subscriptions[0] } })
-    await flushPromises()
+    const w = await mountCard()
     expect(w.text()).toContain('Arsenal')
+    expect(w.find('.flag').exists()).toBe(true)
+    expect(w.findAll('.stat-cell').length).toBe(4)
   })
-  it('无任何赛程显示"赛季已结束"', async () => {
-    const store = useUserDataStore()
-    await store.init()
-    store.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
+
+  it('球队主色上根节点：--flag-from 含 team.color，--accent 在位', async () => {
+    injectStoreData({ team: makeTeam({ color: '#EF0107' }) })
     mockEmptyEvents()
-    const w = mount(MyTeamCard, { props: { subscription: store.subscriptions[0] } })
-    await flushPromises()
-    expect(w.text()).toContain('Season ended')
+    const w = await mountCard()
+    const style = w.find('article').attributes('style') ?? ''
+    expect(style).toContain('--flag-from')
+    expect(style).toContain('#EF0107')
+    expect(style).toContain('--accent')
   })
-  it('有今日赛程 → 显示对阵双方', async () => {
-    const store = useUserDataStore()
-    await store.init()
-    store.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
-    const todayISO = new Date().toISOString()
-    mockFetch.mockResolvedValue({
-      ok: true,
-      json: async () => ({
-        events: [{
-          id: '99',
-          date: todayISO,
-          status: { type: { state: 'pre' } },
-          competitions: [{
-            competitors: [
-              { homeAway: 'home', team: { id: '359', displayName: 'Arsenal', abbreviation: 'ARS' }, score: '0' },
-              { homeAway: 'away', team: { id: '25', displayName: 'Liverpool', abbreviation: 'LIV' }, score: '0' },
-            ],
-            venue: { fullName: 'Emirates' },
-          }],
-        }],
-      }),
-    })
-    const w = mount(MyTeamCard, { props: { subscription: store.subscriptions[0] } })
-    await flushPromises()
+})
+
+describe('队旗卡·比赛状态', () => {
+  it('无任何赛程 → 赛季已结束 + 最终名次', async () => {
+    injectStoreData()
+    mockEmptyEvents()
+    const w = await mountCard()
+    expect(w.text()).toContain('Season ended')
+    expect(w.text()).toContain('Finished #1')
+  })
+
+  it('今日未开球 → Today 标签 + 对阵双方', async () => {
+    injectStoreData()
+    mockEvents([rawEvent({
+      date: localAt(0, 23),
+      status: { type: { state: 'pre' }, displayClock: '0:00' },
+    })])
+    const w = await mountCard()
+    expect(w.text()).toContain('Today')
     expect(w.text()).toContain('Arsenal')
     expect(w.text()).toContain('Liverpool')
-    expect(w.text()).not.toContain('今日无赛')
   })
-})
 
-describe('MyTeamCard 紧凑模式（1 队订阅）', () => {
-  it('渲染 rank badge + WDL + form pills', async () => {
-    const userStore = useUserDataStore()
-    await userStore.init()
-    userStore.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
+  it('今日已完赛 → 按无今日赛处理，显示下场', async () => {
     injectStoreData()
-    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
-
-    const w = mount(MyTeamCard, { props: { subscription: userStore.subscriptions[0] } })
-    await flushPromises()
-
-    const html = w.html()
-    expect(html).toContain('My Team')
-    expect(html).toMatch(/rank-badge/)
-    const wdlCells = w.findAll('.wdl-cell')
-    expect(wdlCells.length).toBe(3)
-    expect(wdlCells[0].text()).toContain('26')
-    expect(wdlCells[1].text()).toContain('7')
-    expect(wdlCells[2].text()).toContain('5')
-    const pointsRow = w.find('.points-row')
-    expect(pointsRow.text()).toContain('85')
-    const formPills = w.findAll('.form-pills .pill')
-    expect(formPills.length).toBe(5)
-    // 攻防块已按用户指示移除（2026-08-06）
-    expect(w.findAll('.gf-ga-cell').length).toBe(0)
+    mockEvents([
+      rawEvent({
+        id: '98',
+        date: localAt(0, 9),
+        status: { type: { state: 'post' }, displayClock: '90:00' },
+      }),
+      rawEvent({ id: '99', date: localAt(3, 19) }),
+    ])
+    const w = await mountCard()
+    expect(w.text()).toContain('Next')
+    expect(w.text()).not.toContain('Today')
   })
-})
 
-describe('MyTeamCard 多队订阅（每卡仍渲染紧凑结构）', () => {
-  it('2 队订阅渲染 wide 布局（rank badge + WDL）', async () => {
-    const userStore = useUserDataStore()
-    await userStore.init()
-    userStore.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
-    userStore.addSubscription({ league: 'eng.1', teamId: 362, teamName: 'Aston Villa' })
+  it('今日进行中 → Live + 大比分 + 时钟', async () => {
     injectStoreData()
-    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
-
-    const w = mount(MyTeamCard, { props: { subscription: userStore.subscriptions[0] } })
-    await flushPromises()
-
-    const html = w.html()
-    expect(html).toMatch(/compact-card/)
-    expect(html).toMatch(/rank-badge/)
-    expect(html).toMatch(/wdl-cell/)
-    expect(w.text()).toContain('Arsenal')
+    mockEvents([rawEvent({
+      date: localAt(0, 23),
+      status: { type: { state: 'in' }, displayClock: '67:00' },
+      competitions: [{
+        competitors: [
+          { homeAway: 'home', team: { id: '359', displayName: 'Arsenal', abbreviation: 'ARS' }, score: '2' },
+          { homeAway: 'away', team: { id: '25', displayName: 'Liverpool', abbreviation: 'LIV' }, score: '1' },
+        ],
+        venue: { fullName: 'Emirates Stadium' },
+      }],
+    })])
+    const w = await mountCard()
+    expect(w.text()).toContain('Live')
+    expect(w.text()).toContain('2 - 1')
+    expect(w.text()).toContain('67:00')
   })
+})
 
-  it('3 队订阅也渲染 wide 布局', async () => {
-    const userStore = useUserDataStore()
-    await userStore.init()
-    userStore.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
-    userStore.addSubscription({ league: 'eng.1', teamId: 362, teamName: 'Aston Villa' })
-    userStore.addSubscription({ league: 'eng.1', teamId: 349, teamName: 'AFC Bournemouth' })
+describe('队旗卡·交互与降级', () => {
+  it('点旗面 → 跳球队详情页', async () => {
     injectStoreData()
-    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
-
-    const w = mount(MyTeamCard, { props: { subscription: userStore.subscriptions[0] } })
-    await flushPromises()
-
-    const html = w.html()
-    expect(html).toMatch(/compact-card/)
-    expect(html).toMatch(/rank-badge/)
+    mockEmptyEvents()
+    const w = await mountCard()
+    await w.find('.flag').trigger('click')
+    expect(pushSpy).toHaveBeenCalledWith('/eng.1/team/359')
   })
-})
 
-describe('MyTeamCard 球队主色 CSS 变量', () => {
-  it('--team-color 含 team.color', async () => {
-    const userStore = useUserDataStore()
-    await userStore.init()
-    userStore.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
-    injectStoreData({ team: makeTeam({ color: '#EF0107' }) })
-    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
-
-    const w = mount(MyTeamCard, { props: { subscription: userStore.subscriptions[0] } })
-    await flushPromises()
-
-    const root = w.find('article')
-    const style = root.attributes('style') ?? ''
-    expect(style).toContain('--team-color')
-    expect(style).toContain('#EF0107')
-  })
-})
-
-describe('MyTeamCard standings 未加载', () => {
-  it('战绩区显示占位"-"不阻塞渲染', async () => {
-    const userStore = useUserDataStore()
-    await userStore.init()
-    userStore.addSubscription({ league: 'eng.1', teamId: 359, teamName: 'Arsenal' })
+  it('standings 未加载 → 四格占位不阻塞、无排名徽章', async () => {
     injectStoreData({ standing: null })
-    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
-
-    const w = mount(MyTeamCard, { props: { subscription: userStore.subscriptions[0] } })
-    await flushPromises()
-
+    mockEmptyEvents()
+    const w = await mountCard()
     expect(w.text()).toContain('Arsenal')
     expect(w.text()).not.toContain('26')
-    const html = w.html()
-    expect(html).toMatch(/wdl-skeleton/)
+    expect(w.find('.flag-rank').exists()).toBe(false)
+    const vals = w.findAll('.stat-val')
+    expect(vals.length).toBe(4)
+    for (const v of vals) expect(v.text()).toBe('–')
   })
 })
