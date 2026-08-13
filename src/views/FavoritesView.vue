@@ -21,11 +21,13 @@ const tab = ref<'teams' | 'players'>('teams')
 // 队徽预载：只走档案库 ensure()（仅拉数据、无副作用），
 // 不用 ensureLeague——它会把入参联赛设为"当前联赛"，收藏夹是跨联赛页，会搅乱联赛上下文。
 // 只为有球队收藏的联赛预载；尽力而为，失败落首字圆牌兜底。
+// forceFresh：队色队徽是"低频但会被纠偏"的数据，进页即绕过 24h 缓存取最新
+// （2026-08-13 天津颜色纠偏滞留事故；5 分钟节流由 fetchJsonCached 兜住）
 const teamLeagues = computed<LeagueSlug[]>(() =>
   [...new Set(store.favorites.teams.filter((f) => f.teamId !== undefined).map((f) => f.league))],
 )
 onMounted(() => {
-  Promise.allSettled(teamLeagues.value.map((l) => teams.ensure(l))).catch(() => { /* 尽力而为 */ })
+  Promise.allSettled(teamLeagues.value.map((l) => teams.ensure(l, { forceFresh: true }))).catch(() => { /* 尽力而为 */ })
 })
 
 const teamOf = (f: Favorite) =>

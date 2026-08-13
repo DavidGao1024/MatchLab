@@ -17,12 +17,16 @@ export const useTeamsStore = defineStore('teams', {
     bundles: {} as Partial<Record<LeagueSlug, LeagueBundle>>,
   }),
   actions: {
-    async ensure(league: LeagueSlug): Promise<LeagueBundle> {
-      const hit = this.bundles[league]
-      if (hit) return hit
+    async ensure(league: LeagueSlug, opts: { forceFresh?: boolean } = {}): Promise<LeagueBundle> {
+      // forceFresh 时跳过内存缓存检查（照 leaders 模式：否则切走再切回直接返回旧内存，永不重拉）。
+      // 用途：订阅卡/收藏夹等"队色队徽可见"入口取最新，纠偏后老访客刷新即见效，不等 24h TTL。
+      if (!opts.forceFresh) {
+        const hit = this.bundles[league]
+        if (hit) return hit
+      }
       const [metaF, teamsF] = await Promise.all([
-        fetchJsonCached<MetaFile>(`data/${league}/meta.json`, TTL),
-        fetchJsonCached<TeamsFile>(`data/${league}/teams.json`, TTL),
+        fetchJsonCached<MetaFile>(`data/${league}/meta.json`, TTL, 'na', opts),
+        fetchJsonCached<TeamsFile>(`data/${league}/teams.json`, TTL, 'na', opts),
       ])
       const teams: Team[] = teamsF.teams.map((t) => ({
         id: t.id,

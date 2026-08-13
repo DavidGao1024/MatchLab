@@ -75,8 +75,10 @@ async function load() {
   loading.value = true
   error.value = ''
   // 自载本队所属联赛的球队包：首页只预载焦点联赛，订阅队可能来自任何联赛。
-  // 只为旗色与队徽，失败静默退回联赛色兜底；包到达后旗面自动换色
-  teams.ensure(props.subscription.league).catch(() => {})
+  // 只为旗色与队徽，失败静默退回联赛色兜底；包到达后旗面自动换色。
+  // forceFresh：队色是"低频但会被纠偏"的数据，进卡即绕过 24h 缓存取最新
+  // （2026-08-13 天津颜色纠偏滞留事故；5 分钟节流由 fetchJsonCached 兜住）
+  teams.ensure(props.subscription.league, { forceFresh: true }).catch(() => {})
   try {
     const now = new Date()
     let today: Match | null = null
