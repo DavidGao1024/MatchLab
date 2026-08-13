@@ -14,6 +14,7 @@ import { usePlayersStore } from '../stores/players'
 import { useTeamsStore } from '../stores/teams'
 import { cityName, teamName, t, venueName } from '../utils/i18n'
 import type { LeagueSlug } from '../utils/constants'
+import { bannerTheme } from '../utils/teamColor'
 
 const route = useRoute()
 const router = useRouter()
@@ -63,6 +64,26 @@ const seasonStart = computed(() => {
   const now = new Date()
   return now.getMonth() >= 7 ? now.getFullYear() : now.getFullYear() - 1
 })
+// 主副色主题（与订阅卡同一套 bannerTheme：近黑提亮/白主色深字/副色兜底全在函数里）
+const theme = computed(() => {
+  const tm = team.value
+  if (!tm) return null
+  const main = tm.color || app.leagueInfo(league.value)?.color || '#3D195B'
+  return bannerTheme(main, tm.alternateColor || '')
+})
+const themeVars = computed((): Record<string, string> => {
+  const th = theme.value
+  if (!th) return {}
+  return {
+    '--flag-from': th.from,
+    '--flag-to': th.to,
+    '--flag-stripe': th.stripe,
+    '--pin-from': th.pinFrom,
+    '--pin-to': th.pinTo,
+    '--accent': th.accent,
+    '--flag-text': th.darkText ? '#0f172a' : '#ffffff',
+  }
+})
 
 function back() {
   router.push(`/${league.value}/standings`)
@@ -70,76 +91,115 @@ function back() {
 </script>
 
 <template>
-  <section class="py-6">
+  <section class="py-6" :style="themeVars">
     <button type="button" class="text-xs text-slate-400 hover:text-white mb-3" @click="back">‹ {{ t('col.team', app.lang) }}</button>
 
     <DataError v-if="error" :message="error" @retry="load" />
     <DataLoading v-else-if="!ready" kind="cards" />
     <template v-else-if="team">
-      <!-- 头部：队徽 + 名字 + 简称 -->
-      <div class="flex items-center gap-4 mb-6">
-        <TeamLogo :team="team" :size="64" />
-        <div class="flex-1 min-w-0">
-          <h1 class="font-cond text-3xl font-semibold text-white truncate">{{ displayName }}</h1>
-          <p class="text-sm text-slate-400 mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span class="text-slate-500">{{ team.abbreviation }}</span>
-            <span v-if="team.venue?.name">· {{ venueName(team.venue.name, app.lang) }}</span>
-            <span v-if="team.venue?.city" class="text-slate-500">{{ cityName(team.venue.city, app.lang) }}</span>
-          </p>
-          <div class="flex items-center gap-3 mt-3">
-            <SubscribeButton :league="league" :team-id="teamId" :team-name="displayName" />
-            <FavoriteButton type="team" :id="teamId" :name="displayName" :league="league" />
-            <ExportCalendarButton
-              :league="league"
-              :team-id="teamId"
-              :team-name="displayName"
-              :team-slug="teamSlug"
-              :season-start="seasonStart"
-            />
+      <!-- 页头：队旗面（主色渐变 + 副色斜纹，与订阅卡同一视觉语言，spec §3.2） -->
+      <div class="team-banner">
+        <div class="team-flag" :class="{ 'is-light': theme?.darkText }">
+          <TeamLogo :team="team" :size="64" />
+          <div class="flag-id">
+            <h1 class="flag-name">{{ displayName }}</h1>
+            <p class="flag-sub">
+              {{ team.abbreviation }}<template v-if="team.venue?.name"> · {{ venueName(team.venue.name, app.lang) }}</template><template v-if="team.venue?.city"> · {{ cityName(team.venue.city, app.lang) }}</template>
+            </p>
           </div>
         </div>
+        <div class="pin"></div>
+      </div>
+      <div class="flex items-center gap-3 mt-3 mb-6">
+        <SubscribeButton :league="league" :team-id="teamId" :team-name="displayName" />
+        <FavoriteButton type="team" :id="teamId" :name="displayName" :league="league" />
+        <ExportCalendarButton
+          :league="league"
+          :team-id="teamId"
+          :team-name="displayName"
+          :team-slug="teamSlug"
+          :season-start="seasonStart"
+        />
       </div>
 
-      <!-- 球队战绩 -->
-      <div v-if="record" class="grid grid-cols-3 md:grid-cols-7 gap-2 mb-6">
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
-          <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('team.played', app.lang) }}</div>
-          <div class="text-base text-white font-mono-d">{{ record.played }}</div>
-        </div>
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
-          <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('team.col.w', app.lang) }}</div>
-          <div class="text-base text-white font-mono-d">{{ record.wins }}</div>
-        </div>
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
-          <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('team.col.d', app.lang) }}</div>
-          <div class="text-base text-white font-mono-d">{{ record.draws }}</div>
-        </div>
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
-          <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('team.col.l', app.lang) }}</div>
-          <div class="text-base text-white font-mono-d">{{ record.losses }}</div>
-        </div>
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
-          <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('team.col.gf', app.lang) }}</div>
-          <div class="text-base text-white font-mono-d">{{ record.goalsFor }}</div>
-        </div>
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
-          <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('team.col.ga', app.lang) }}</div>
-          <div class="text-base text-white font-mono-d">{{ record.goalsAgainst }}</div>
-        </div>
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
-          <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('team.col.pts', app.lang) }}</div>
-          <div class="text-base text-white font-mono-d">{{ record.points }}</div>
-        </div>
+      <!-- 球队战绩（主色边条点缀，spec §3.4） -->
+      <div v-if="record" class="record-grid">
+        <div class="stat-cell"><div class="stat-label">{{ t('team.played', app.lang) }}</div><div class="stat-val">{{ record.played }}</div></div>
+        <div class="stat-cell"><div class="stat-label">{{ t('team.col.w', app.lang) }}</div><div class="stat-val val-w">{{ record.wins }}</div></div>
+        <div class="stat-cell"><div class="stat-label">{{ t('team.col.d', app.lang) }}</div><div class="stat-val val-d">{{ record.draws }}</div></div>
+        <div class="stat-cell"><div class="stat-label">{{ t('team.col.l', app.lang) }}</div><div class="stat-val val-l">{{ record.losses }}</div></div>
+        <div class="stat-cell"><div class="stat-label">{{ t('team.col.gf', app.lang) }}</div><div class="stat-val">{{ record.goalsFor }}</div></div>
+        <div class="stat-cell"><div class="stat-label">{{ t('team.col.ga', app.lang) }}</div><div class="stat-val">{{ record.goalsAgainst }}</div></div>
+        <div class="stat-cell stat-pts"><div class="stat-label">{{ t('team.col.pts', app.lang) }}</div><div class="stat-val val-pts">{{ record.points }}</div></div>
       </div>
 
       <!-- 阵容（按位置分组） -->
       <div class="mt-6">
-        <h2 class="font-cond text-lg tracking-wider text-white mb-3 pb-1 border-b border-white/10">
+        <h2 class="squad-title">
           {{ t('team.squad', app.lang) }}
-          <span class="text-slate-600 font-mono-d text-xs ml-2">({{ squad.length }})</span>
+          <span class="squad-count">({{ squad.length }})</span>
         </h2>
         <TeamSquad :players="squad" :league="league" />
       </div>
     </template>
   </section>
 </template>
+
+<style scoped>
+/* ===== 队旗面（主题变量挂 section 根，视觉语言同订阅卡）===== */
+.team-banner { border-radius: 14px; overflow: hidden; }
+.team-flag {
+  position: relative;
+  display: flex; align-items: center; gap: 16px;
+  padding: 20px;
+  background: linear-gradient(112deg, var(--flag-from), var(--flag-to));
+  color: var(--flag-text);
+}
+.team-flag::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(115deg, transparent 0 26px, var(--flag-stripe) 26px 50px);
+}
+.team-flag > * { position: relative; }
+.flag-id { flex: 1; min-width: 0; }
+.flag-name {
+  font-family: var(--font-cond, sans-serif);
+  font-size: 28px; font-weight: 800; letter-spacing: 0.05em;
+  margin: 0; color: var(--flag-text);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.35);
+  overflow-wrap: anywhere;
+}
+.flag-sub { font-size: 12px; letter-spacing: 0.12em; opacity: 0.85; margin-top: 3px; }
+.team-flag.is-light .flag-name { text-shadow: none; }
+.pin { height: 3px; background: linear-gradient(90deg, var(--pin-from), var(--pin-to)); }
+
+/* ===== 战绩格：主色边条 + 积分格强调（spec §3.4）===== */
+.record-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 24px; }
+@media (min-width: 768px) { .record-grid { grid-template-columns: repeat(7, 1fr); } }
+.stat-cell {
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px; padding: 8px;
+  background: rgba(255,255,255,0.02);
+}
+.stat-label { font-family: var(--font-mono-d, monospace); font-size: 10px; text-transform: uppercase; color: #64748b; }
+.stat-val { font-family: var(--font-mono-d, monospace); font-size: 16px; color: #ffffff; }
+.val-w { color: #10b981; }
+.val-d { color: #cbd5e1; }
+.val-l { color: #ef4444; }
+.stat-pts {
+  background: color-mix(in srgb, var(--accent) 13%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 42%, transparent);
+  border-left-color: var(--accent);
+}
+.val-pts { color: var(--accent); }
+
+/* ===== 阵容标题：主色下划线 ===== */
+.squad-title {
+  font-family: var(--font-cond, sans-serif);
+  font-size: 18px; letter-spacing: 0.05em; color: #ffffff;
+  margin-bottom: 12px; padding-bottom: 4px;
+  border-bottom: 2px solid var(--accent);
+}
+.squad-count { font-family: var(--font-mono-d, monospace); font-size: 12px; color: #475569; margin-left: 8px; }
+</style>

@@ -4,6 +4,10 @@
   /* 联赛主题色：App.vue 切联赛时写入（默认英超紫） */
   --league-color: #3D195B;
   --base: #0c101b;
+  /* 字体变量：scoped style 里 var(--font-cond)/var(--font-mono-d) 的消费端
+     （MyTeamCard、TeamDetailView）依赖；字体栈与同名 class 保持一致 */
+  --font-cond: 'Oswald', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  --font-mono-d: 'IBM Plex Mono', ui-monospace, monospace;
 }
 
 html {
