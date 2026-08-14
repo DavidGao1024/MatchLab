@@ -12,12 +12,31 @@
 
 ---
 
+## 施工进度（2026-08-14 会话更新）
+
+| Task | 状态 | 提交 | 备注 |
+|---|---|---|---|
+| 1 NationFlag 组件 | ✅ 完工，双审通过 | `47bb2b3` | 5 项测试绿 |
+| 2 类型+store 透传+MiniSearch 白名单 | ✅ 完工，双审通过 | `5c2dc73` | 5 项测试绿，全量 272 绿 |
+| 3 球员列表两处插旗 | ⬜ 未开工 | — | **下一步从这里接** |
+| 4 详情页+阵容插旗 | ⬜ 未开工 | — | |
+| 5 搜索+对比页插旗 | ⬜ 未开工 | — | |
+| 6 抓取脚本+冒烟 | ⬜ 未开工 | — | |
+| 7 全量验收+手测+还原 | ⬜ 未开工 | — | 手测需总司令在场给浏览器许可 |
+
+**接力要点**：
+- 测试基线实测 **262**（原写 234 系旧数，已被球队主题等后续提交刷新）；完工目标 **277**，当前 272。
+- 子代理模式执行：每 Task 一个实现子代理 + 规格审查 + 质量审查，计划全文粘贴给子代理（勿让其读本文件）。
+- 质量审查遗留两条 Minor 未采纳（性价比低，顺手可并入 Task 3）：①英文搜索无国籍球员 `citizenship` 归一为 null 的对称用例；②profileFile mock 补 source/updateTime/league/season 四顶层字段。
+- Task 1 质量审查另建议：NationFlag 顶行补一句注释说明「单根 img 靠 attrs fallthrough 承接父级 margin 类」，防后人加包裹元素破坏间距——同样可并入 Task 3 顺手做。
+- 工作区遗留：`tmp/scan-zh.cjs` 未跟踪旧文件，与本功能无关，未动；本地 4 个提交未 push（按铁律不主动 push）。
+
 ## 项目约定（执行者必读）
 
 1. **数据提交铁律**：任何 commit 一律显式 `git add src/ scripts/ tests/ docs/` 等代码路径，**绝不 `git add public/data/`**（数据由每日 Actions 管）。不 push。
 2. **本机加密层警告**：`tests/` 下文件用 bash `cat`/`head`/`grep` 读可能出乱码（SafeNet 透明加密），**一律用 Read/Edit/Write 工具操作文件**；vitest 能正常读到，跑测试不受影响。
 3. 测试命令：`npm test`（vitest run 全量）、`npx vitest run <文件>`（单文件）；类型检查 `npm run typecheck`；构建 `npm run build`。
-4. 现有测试基线 234 项全绿，每个 Task 结束时必须保持全绿（加上新增用例）。
+4. 现有测试基线 272 项全绿（Task 2 完工后；起点 262），每个 Task 结束时必须保持全绿（加上新增用例）。
 5. 浏览器手测**须先获总司令许可**；375px 移动视口用完恢复窗口宽度 ≥1024。
 6. commit 信息用 HEREDOC 传递，结尾附 `Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>`（计划里为省篇幅只写正文）。
 
@@ -51,7 +70,7 @@
 - Create: `src/components/common/NationFlag.vue`
 - Test: `tests/components/NationFlag.test.ts`
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 新建 `tests/components/NationFlag.test.ts`：
 
@@ -105,12 +124,12 @@ describe('NationFlag', () => {
 })
 ```
 
-- [ ] **Step 2: 跑测试确认失败**
+- [x] **Step 2: 跑测试确认失败**
 
 Run: `npx vitest run tests/components/NationFlag.test.ts`
 Expected: FAIL——`NationFlag.vue` 不存在，导入报错
 
-- [ ] **Step 3: 实现组件**
+- [x] **Step 3: 实现组件**
 
 新建 `src/components/common/NationFlag.vue`（模式参照 `TeamLogo.vue`，降级更简：失败即隐藏，不做兜底牌）：
 
@@ -143,12 +162,12 @@ watch(() => props.flag, () => { failed.value = false })
 </template>
 ```
 
-- [ ] **Step 4: 跑测试确认通过**
+- [x] **Step 4: 跑测试确认通过**
 
 Run: `npx vitest run tests/components/NationFlag.test.ts`
 Expected: PASS（5 项）
 
-- [ ] **Step 5: 提交**
+- [x] **Step 5: 提交**
 
 ```bash
 git add src/components/common/NationFlag.vue tests/components/NationFlag.test.ts
@@ -165,7 +184,7 @@ git commit -m "feat: 国旗组件 NationFlag——ESPN 图热链 + 失败隐藏"
 - Modify: `src/stores/players.ts`（`SearchDoc` 13–24 行、`toSummary` 26–37 行、`toProfile` 39–56 行、`storeFields` 79 行、`addAll` 82–95 行、`search()` 130–139 行）
 - Test: `tests/stores/players.test.ts`
 
-- [ ] **Step 1: 写失败测试**
+- [x] **Step 1: 写失败测试**
 
 改 `tests/stores/players.test.ts`：
 
@@ -243,12 +262,12 @@ describe('国籍字段透传', () => {
 })
 ```
 
-- [ ] **Step 2: 跑测试确认失败**
+- [x] **Step 2: 跑测试确认失败**
 
 Run: `npx vitest run tests/stores/players.test.ts`
 Expected: FAIL——新用例断言 undefined ≠ 'Egypt'（旧三项用例仍绿）
 
-- [ ] **Step 3: 类型加字段**
+- [x] **Step 3: 类型加字段**
 
 `src/types/static.ts`——`PlayerIndexEntry` 末尾（`team: string` 之后）加：
 
@@ -261,7 +280,7 @@ Expected: FAIL——新用例断言 undefined ≠ 'Egypt'（旧三项用例仍�
 
 `src/types/models.ts`——`PlayerSummary`（`assists` 行之后）与 `PlayerProfile`（`stats` 行之后）各加同样两行。
 
-- [ ] **Step 4: store 透传 + 白名单**
+- [x] **Step 4: store 透传 + 白名单**
 
 `src/stores/players.ts`：
 
@@ -306,12 +325,12 @@ Expected: FAIL——新用例断言 undefined ≠ 'Egypt'（旧三项用例仍�
         flag: r.flag ?? null,
 ```
 
-- [ ] **Step 5: 跑测试与类型检查确认通过**
+- [x] **Step 5: 跑测试与类型检查确认通过**
 
 Run: `npx vitest run tests/stores/players.test.ts && npm run typecheck`
 Expected: 全 PASS，typecheck 无错
 
-- [ ] **Step 6: 提交**
+- [x] **Step 6: 提交**
 
 ```bash
 git add src/types/static.ts src/types/models.ts src/stores/players.ts tests/stores/players.test.ts
@@ -666,7 +685,7 @@ git commit -m "feat: 抓取脚本补 citizenship/flag 两字段——每日 Acti
 - [ ] **Step 1: 全量测试 + 类型检查 + 构建**
 
 Run: `npm test && npm run typecheck && npm run build`
-Expected: 全部通过；测试总数 249（基线 234 + 本次新增 15：组件 5 + store 5 + 列表 2 + 阵容 1 + 对比 2）
+Expected: 全部通过；测试总数 277（基线 262——计划原写 234 系旧数，球队主题子项目入库后已增长——加本次新增 15：组件 5 + store 5 + 列表 2 + 阵容 1 + 对比 2）
 
 - [ ] **Step 2: 手测清单（先请示总司令开浏览器）**
 
