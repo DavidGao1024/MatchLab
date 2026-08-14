@@ -21,6 +21,8 @@ interface SearchDoc {
   age: number | null
   goals: number | null
   assists: number | null
+  citizenship: string | null
+  flag: string | null
 }
 
 function toSummary(p: PlayersIndexFile['players'][number]): PlayerSummary {
@@ -33,6 +35,8 @@ function toSummary(p: PlayersIndexFile['players'][number]): PlayerSummary {
     age: p.age,
     goals: p.goals,
     assists: p.assists,
+    citizenship: p.citizenship,
+    flag: p.flag,
   }
 }
 
@@ -52,6 +56,8 @@ function toProfile(f: PlayerFile): PlayerProfile {
     positionLabel: f.positionLabel ?? f.position,
     teamId: f.teamId,
     stats: f.stats,
+    citizenship: f.citizenship,
+    flag: f.flag,
   }
 }
 
@@ -76,7 +82,7 @@ export const usePlayersStore = defineStore('players', {
         const list = f.players.map(toSummary)
         const ms = new MiniSearch<SearchDoc>({
           fields: ['name', 'team', 'nameZh', 'teamZh'],
-          storeFields: ['id', 'name', 'teamId', 'team', 'position', 'age', 'goals', 'assists'],
+          storeFields: ['id', 'name', 'teamId', 'team', 'position', 'age', 'goals', 'assists', 'citizenship', 'flag'],
           searchOptions: { prefix: true, fuzzy: 0.2, boost: { name: 2 }, combineWith: 'AND' },
         })
         ms.addAll(
@@ -91,6 +97,8 @@ export const usePlayersStore = defineStore('players', {
             age: p.age,
             goals: p.goals,
             assists: p.assists,
+            citizenship: p.citizenship ?? null,
+            flag: p.flag ?? null,
           })),
         )
         this.indexes[league] = list
@@ -136,6 +144,8 @@ export const usePlayersStore = defineStore('players', {
         age: r.age,
         goals: r.goals,
         assists: r.assists,
+        citizenship: r.citizenship ?? null,
+        flag: r.flag ?? null,
       }))
     },
   },

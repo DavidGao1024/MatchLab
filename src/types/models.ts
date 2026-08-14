@@ -108,6 +108,8 @@ export interface PlayerSummary {
   age: number | null
   goals: number | null
   assists: number | null
+  citizenship?: string | null
+  flag?: string | null
 }
 
 /** 球员档案（业务模型，含 i18n 友好的姓名/队名） */
@@ -126,6 +128,8 @@ export interface PlayerProfile {
   positionLabel: string
   teamId: number
   stats: PlayerFile['stats']
+  citizenship?: string | null
+  flag?: string | null
 }
 
 /** 排行榜分类（业务模型） */

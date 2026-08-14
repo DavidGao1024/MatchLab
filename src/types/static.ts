@@ -126,6 +126,8 @@ export interface PlayerIndexEntry {
   goals: number | null
   assists: number | null
   team: string
+  citizenship?: string | null
+  flag?: string | null
 }
 
 export interface PlayersIndexFile {
@@ -163,6 +165,8 @@ export interface PlayerFile {
   position: string
   positionLabel?: string
   teamId: number
+  citizenship?: string | null
+  flag?: string | null
   stats: PlayerStats
 }
 

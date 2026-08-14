@@ -9,10 +9,16 @@ globalThis.fetch = mockFetch as any
 
 const indexFile = {
   players: [
-    { id: 11, name: 'Mohamed Salah', teamId: 14, team: 'Liverpool', position: 'F', age: 34, goals: 7, assists: 5 },
-    { id: 22, name: 'Virgil van Dijk', teamId: 14, team: 'Liverpool', position: 'D', age: 33, goals: 1, assists: 0 },
+    { id: 11, name: 'Mohamed Salah', teamId: 14, team: 'Liverpool', position: 'F', age: 34, goals: 7, assists: 5, citizenship: 'Egypt', flag: 'https://a.espncdn.com/i/teamlogos/countries/500/egy.png' },
+    { id: 22, name: 'Virgil van Dijk', teamId: 14, team: 'Liverpool', position: 'D', age: 33, goals: 1, assists: 0, citizenship: 'Netherlands', flag: 'https://a.espncdn.com/i/teamlogos/countries/500/ned.png' },
     { id: 33, name: 'Zh Testson', teamId: 14, team: 'Liverpool', position: 'M', age: 20, goals: 0, assists: 0 },
   ],
+}
+
+const profileFile = {
+  id: 11, displayName: 'Mohamed Salah', age: 34, height: 175, weight: 72,
+  jersey: 11, position: 'F', teamId: 14, stats: { general: {} },
+  citizenship: 'Egypt', flag: 'https://a.espncdn.com/i/teamlogos/countries/500/egy.png',
 }
 
 beforeEach(() => {
@@ -27,6 +33,9 @@ beforeEach(() => {
     }
     if (String(url).includes('/players/index.json')) {
       return { ok: true, json: async () => indexFile }
+    }
+    if (String(url).includes('/players/11.json')) {
+      return { ok: true, json: async () => profileFile }
     }
     throw new Error(`unexpected url ${url}`)
   })
@@ -55,5 +64,45 @@ describe('players store 搜索', () => {
     const hits = s.search('eng.1', 'Sala')
     expect(hits.length).toBe(1)
     expect(hits[0].name).toBe('Mohamed Salah')
+  })
+})
+
+describe('国籍字段透传', () => {
+  it('ensureIndex 带出 citizenship/flag', async () => {
+    const s = usePlayersStore()
+    const list = await s.ensureIndex('eng.1', '2025')
+    const salah = list.find((p) => p.id === 11)
+    expect(salah?.citizenship).toBe('Egypt')
+    expect(salah?.flag).toBe('https://a.espncdn.com/i/teamlogos/countries/500/egy.png')
+  })
+
+  it('旧数据无国籍字段不报错（undefined）', async () => {
+    const s = usePlayersStore()
+    const list = await s.ensureIndex('eng.1', '2025')
+    const t = list.find((p) => p.id === 33)
+    expect(t?.citizenship).toBeUndefined()
+    expect(t?.flag).toBeUndefined()
+  })
+
+  it('英文搜索结果带出 citizenship/flag（MiniSearch 白名单）', async () => {
+    const s = usePlayersStore()
+    await s.ensureIndex('eng.1', '2025')
+    const hits = s.search('eng.1', 'Sala')
+    expect(hits[0].citizenship).toBe('Egypt')
+    expect(hits[0].flag).toContain('egy.png')
+  })
+
+  it('中文搜索结果带出 citizenship/flag（索引数组分支）', async () => {
+    const s = usePlayersStore()
+    await s.ensureIndex('eng.1', '2025')
+    const hits = s.search('eng.1', '范迪')
+    expect(hits[0].citizenship).toBe('Netherlands')
+  })
+
+  it('ensureProfile 带出 citizenship/flag', async () => {
+    const s = usePlayersStore()
+    const p = await s.ensureProfile('eng.1', 11, '2025')
+    expect(p.citizenship).toBe('Egypt')
+    expect(p.flag).toContain('egy.png')
   })
 })
