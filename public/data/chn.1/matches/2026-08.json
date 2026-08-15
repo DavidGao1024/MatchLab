@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-14T09:20:01.425Z",
+  "updateTime": "2026-08-15T08:26:27.007Z",
   "league": "chn.1",
   "month": "2026-08",
   "count": 41,
@@ -398,24 +398,25 @@
       "eventId": "401861447",
       "date": "2026-08-14T11:35Z",
       "name": "Qingdao Hainiu at Shandong Taishan",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Jinan Olympic Sports Center Stadium",
       "home": {
         "id": 7521,
         "name": "Shandong Taishan",
         "abbreviation": "SHT",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7521.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       },
       "away": {
         "id": 21910,
         "name": "Qingdao Hainiu",
         "abbreviation": "QIN",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21910.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -423,16 +424,17 @@
       "eventId": "401861448",
       "date": "2026-08-14T11:35Z",
       "name": "Shanghai Port at Wuhan Three Towns",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
       "venue": "Wuhan Sports Center Stadium",
       "home": {
         "id": 21506,
         "name": "Wuhan Three Towns",
         "abbreviation": "WTT",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21506.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       },
       "away": {
@@ -440,17 +442,18 @@
         "name": "Shanghai Port",
         "abbreviation": "SIPG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/15515.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       }
     },
     {
       "eventId": "401861500",
       "date": "2026-08-14T12:00Z",
       "name": "Chongqing Tonglianglong at Qingdao West Coast",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Qingdao West Coast University City Stadium",
       "home": {
         "id": 22198,

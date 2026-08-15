@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-08-14T09:20:02.768Z",
+  "updateTime": "2026-08-15T08:26:28.061Z",
   "league": "chn.1",
   "season": "2026",
-  "matchesCounted": 171,
+  "matchesCounted": 174,
   "count": 16,
   "standings": [
     {
@@ -21,19 +21,33 @@
     },
     {
       "rank": 2,
+      "teamId": 7521,
+      "team": "Shandong Taishan",
+      "played": 23,
+      "won": 12,
+      "drawn": 3,
+      "lost": 8,
+      "goalsFor": 42,
+      "goalsAgainst": 38,
+      "goalDiff": 4,
+      "points": 33,
+      "deduction": 6
+    },
+    {
+      "rank": 3,
       "teamId": 22198,
       "team": "Qingdao West Coast",
-      "played": 22,
+      "played": 23,
       "won": 7,
-      "drawn": 11,
+      "drawn": 12,
       "lost": 4,
       "goalsFor": 26,
       "goalsAgainst": 29,
       "goalDiff": -3,
-      "points": 32
+      "points": 33
     },
     {
-      "rank": 3,
+      "rank": 4,
       "teamId": 22537,
       "team": "Dalian Yingbo",
       "played": 21,
@@ -46,7 +60,7 @@
       "points": 32
     },
     {
-      "rank": 4,
+      "rank": 5,
       "teamId": 22536,
       "team": "Yunnan Yukun",
       "played": 22,
@@ -59,21 +73,20 @@
       "points": 31
     },
     {
-      "rank": 5,
-      "teamId": 7521,
-      "team": "Shandong Taishan",
-      "played": 22,
-      "won": 11,
-      "drawn": 3,
-      "lost": 8,
-      "goalsFor": 39,
-      "goalsAgainst": 37,
-      "goalDiff": 2,
-      "points": 30,
-      "deduction": 6
+      "rank": 6,
+      "teamId": 131704,
+      "team": "Chongqing Tonglianglong",
+      "played": 23,
+      "won": 7,
+      "drawn": 9,
+      "lost": 7,
+      "goalsFor": 25,
+      "goalsAgainst": 27,
+      "goalDiff": -2,
+      "points": 30
     },
     {
-      "rank": 6,
+      "rank": 7,
       "teamId": 2052,
       "team": "Beijing Guoan",
       "played": 21,
@@ -87,20 +100,21 @@
       "deduction": 5
     },
     {
-      "rank": 7,
-      "teamId": 131704,
-      "team": "Chongqing Tonglianglong",
+      "rank": 8,
+      "teamId": 15515,
+      "team": "Shanghai Port",
       "played": 22,
-      "won": 7,
-      "drawn": 8,
+      "won": 8,
+      "drawn": 7,
       "lost": 7,
-      "goalsFor": 25,
-      "goalsAgainst": 27,
-      "goalDiff": -2,
-      "points": 29
+      "goalsFor": 34,
+      "goalsAgainst": 28,
+      "goalDiff": 6,
+      "points": 26,
+      "deduction": 5
     },
     {
-      "rank": 8,
+      "rank": 9,
       "teamId": 18203,
       "team": "Zhejiang Professional FC",
       "played": 21,
@@ -111,20 +125,6 @@
       "goalsAgainst": 36,
       "goalDiff": -5,
       "points": 24,
-      "deduction": 5
-    },
-    {
-      "rank": 9,
-      "teamId": 15515,
-      "team": "Shanghai Port",
-      "played": 21,
-      "won": 7,
-      "drawn": 7,
-      "lost": 7,
-      "goalsFor": 31,
-      "goalsAgainst": 26,
-      "goalDiff": 5,
-      "points": 23,
       "deduction": 5
     },
     {
@@ -199,13 +199,13 @@
       "rank": 15,
       "teamId": 21506,
       "team": "Wuhan Three Towns",
-      "played": 20,
+      "played": 21,
       "won": 4,
       "drawn": 8,
-      "lost": 8,
-      "goalsFor": 28,
-      "goalsAgainst": 35,
-      "goalDiff": -7,
+      "lost": 9,
+      "goalsFor": 30,
+      "goalsAgainst": 38,
+      "goalDiff": -8,
       "points": 15,
       "deduction": 5
     },
@@ -213,13 +213,13 @@
       "rank": 16,
       "teamId": 21910,
       "team": "Qingdao Hainiu",
-      "played": 22,
+      "played": 23,
       "won": 6,
       "drawn": 3,
-      "lost": 13,
-      "goalsFor": 30,
-      "goalsAgainst": 41,
-      "goalDiff": -11,
+      "lost": 14,
+      "goalsFor": 31,
+      "goalsAgainst": 44,
+      "goalDiff": -13,
       "points": 14,
       "deduction": 7
     }
