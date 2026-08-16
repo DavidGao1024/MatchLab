@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-15T08:26:27.007Z",
+  "updateTime": "2026-08-16T08:26:50.988Z",
   "league": "chn.1",
   "month": "2026-08",
   "count": 41,
@@ -476,16 +476,17 @@
       "eventId": "401861501",
       "date": "2026-08-15T11:00Z",
       "name": "Shenzhen Xinpengcheng at Liaoning Tieren",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Tiexi New District Sports Centre",
       "home": {
         "id": 131705,
         "name": "Liaoning Tieren",
         "abbreviation": "LIA",
         "logo": "",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -493,24 +494,25 @@
         "name": "Shenzhen Xinpengcheng",
         "abbreviation": "SHX",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/22199.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       }
     },
     {
       "eventId": "401861450",
       "date": "2026-08-15T11:35Z",
       "name": "Beijing Guoan at Tianjin Jinmen Tiger",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Tianjin Olympic Center Stadium",
       "home": {
         "id": 8239,
         "name": "Tianjin Jinmen Tiger",
         "abbreviation": "TIG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8239.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       },
       "away": {
@@ -518,24 +520,25 @@
         "name": "Beijing Guoan",
         "abbreviation": "BG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2052.png",
-        "score": 0,
-        "winner": null
+        "score": 4,
+        "winner": true
       }
     },
     {
       "eventId": "401861449",
       "date": "2026-08-15T11:35Z",
       "name": "Chengdu Rongcheng at Zhejiang Professional FC",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+11'",
+      "period": 2,
       "venue": "Yellow Dragon Sports Center Stadium",
       "home": {
         "id": 18203,
         "name": "Zhejiang Professional FC",
         "abbreviation": "ZHE",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18203.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       },
       "away": {
@@ -543,32 +546,33 @@
         "name": "Chengdu Rongcheng",
         "abbreviation": "CHE",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21355.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       }
     },
     {
       "eventId": "401861452",
       "date": "2026-08-15T12:00Z",
       "name": "Henan at Shanghai Shenhua",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Shanghai Stadium",
       "home": {
         "id": 977,
         "name": "Shanghai Shenhua",
         "abbreviation": "SHE",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/977.png",
-        "score": 0,
-        "winner": null
+        "score": 4,
+        "winner": true
       },
       "away": {
         "id": 8240,
         "name": "Henan",
         "abbreviation": "HEN",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8240.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -576,24 +580,25 @@
       "eventId": "401861451",
       "date": "2026-08-15T12:00Z",
       "name": "Dalian Yingbo at Yunnan Yukun",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
       "venue": "Yuxi Plateau Sports Center Stadium",
       "home": {
         "id": 22536,
         "name": "Yunnan Yukun",
         "abbreviation": "YUN",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/22536.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       },
       "away": {
         "id": 22537,
         "name": "Dalian Yingbo",
         "abbreviation": "DYI",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/22537.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },

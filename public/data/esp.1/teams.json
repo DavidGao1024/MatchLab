@@ -1,8 +1,8 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-15T06:54:38.185Z",
+  "updateTime": "2026-08-16T06:55:51.360Z",
   "league": "esp.1",
-  "season": "2025",
+  "season": "2026",
   "count": 20,
   "teams": [
     {
@@ -14,7 +14,7 @@
       "shortDisplayName": "Alavés",
       "abbreviation": "ALA",
       "color": "#0000ff",
-      "alternateColor": "#c3c3c3",
+      "alternateColor": "#FFC0CB",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/96.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/96.png",
       "venue": {
@@ -24,15 +24,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 11,
-        "draws": 10,
-        "losses": 17,
-        "played": 38,
-        "points": 43,
-        "goalDiff": -12,
-        "goalsFor": 44,
-        "goalsAgainst": 56,
-        "summary": "11-10-17"
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "played": 1,
+        "points": 3,
+        "goalDiff": 3,
+        "goalsFor": 3,
+        "goalsAgainst": 0,
+        "summary": "1-0-0"
       }
     },
     {
@@ -44,7 +44,7 @@
       "shortDisplayName": "Athletic",
       "abbreviation": "ATH",
       "color": "#C8142F",
-      "alternateColor": "#0000ff",
+      "alternateColor": "#000000",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/93.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/93.png",
       "venue": {
@@ -54,15 +54,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 13,
-        "draws": 6,
-        "losses": 19,
-        "played": 38,
-        "points": 45,
-        "goalDiff": -15,
-        "goalsFor": 43,
-        "goalsAgainst": 58,
-        "summary": "13-6-19"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -74,25 +74,25 @@
       "shortDisplayName": "Atlético",
       "abbreviation": "ATM",
       "color": "#ca3624",
-      "alternateColor": "#000099",
+      "alternateColor": "#000000",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/1068.png",
       "venue": {
-        "name": "Cerro del Espino",
+        "name": "Riyadh Air Metropolitano",
         "city": "Madrid",
         "country": "Spain"
       },
       "isActive": true,
       "record": {
-        "wins": 21,
-        "draws": 6,
-        "losses": 11,
-        "played": 38,
-        "points": 69,
-        "goalDiff": 18,
-        "goalsFor": 62,
-        "goalsAgainst": 44,
-        "summary": "21-6-11"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -115,15 +115,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 31,
-        "draws": 1,
-        "losses": 6,
-        "played": 38,
-        "points": 94,
-        "goalDiff": 59,
-        "goalsFor": 95,
-        "goalsAgainst": 36,
-        "summary": "31-1-6"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -145,15 +145,45 @@
       },
       "isActive": true,
       "record": {
-        "wins": 14,
-        "draws": 12,
-        "losses": 12,
-        "played": 38,
-        "points": 54,
-        "goalDiff": 5,
-        "goalsFor": 53,
-        "goalsAgainst": 48,
-        "summary": "14-12-12"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
+      }
+    },
+    {
+      "id": 90,
+      "uid": "s:600~t:90",
+      "location": "Deportivo",
+      "name": "Deportivo",
+      "displayName": "Deportivo",
+      "shortDisplayName": "Deportivo",
+      "abbreviation": "DEP",
+      "color": "#3366CC",
+      "alternateColor": "#000000",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/90.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/90.png",
+      "venue": {
+        "name": "Riazor",
+        "city": "La Coruña",
+        "country": "Spain"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -164,26 +194,26 @@
       "displayName": "Elche",
       "shortDisplayName": "Elche",
       "abbreviation": "ELC",
-      "color": "#ffffff",
-      "alternateColor": "#288A00",
+      "color": "#288A00",
+      "alternateColor": "#4B2B67",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3751.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/3751.png",
       "venue": {
-        "name": "Pinatar Arena",
-        "city": "Murcia",
+        "name": "Estadio Martínez Valero",
+        "city": "Elche",
         "country": "Spain"
       },
       "isActive": true,
       "record": {
-        "wins": 10,
-        "draws": 13,
-        "losses": 15,
-        "played": 38,
-        "points": 43,
-        "goalDiff": -8,
-        "goalsFor": 49,
-        "goalsAgainst": 57,
-        "summary": "10-13-15"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -205,15 +235,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 12,
-        "draws": 10,
-        "losses": 16,
-        "played": 38,
-        "points": 46,
-        "goalDiff": -12,
-        "goalsFor": 43,
-        "goalsAgainst": 55,
-        "summary": "12-10-16"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -225,7 +255,7 @@
       "shortDisplayName": "Getafe",
       "abbreviation": "GET",
       "color": "#0000ff",
-      "alternateColor": "#C8142F",
+      "alternateColor": "#7F1734",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/2922.png",
       "venue": {
@@ -235,46 +265,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 15,
-        "draws": 6,
-        "losses": 17,
-        "played": 38,
-        "points": 51,
-        "goalDiff": -6,
-        "goalsFor": 32,
-        "goalsAgainst": 38,
-        "summary": "15-6-17"
-      }
-    },
-    {
-      "id": 9812,
-      "uid": "s:600~t:9812",
-      "location": "Girona",
-      "name": "Girona",
-      "nickname": "Girona",
-      "displayName": "Girona",
-      "shortDisplayName": "Girona",
-      "abbreviation": "GIR",
-      "color": "#C60000",
-      "alternateColor": "#004996",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9812.png",
-      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/9812.png",
-      "venue": {
-        "name": "Estadi Montilivi",
-        "city": "Girona",
-        "country": "Spain"
-      },
-      "isActive": true,
-      "record": {
-        "wins": 9,
-        "draws": 14,
-        "losses": 15,
-        "played": 38,
-        "points": 41,
-        "goalDiff": -16,
-        "goalsFor": 39,
-        "goalsAgainst": 55,
-        "summary": "9-14-15"
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "played": 1,
+        "points": 0,
+        "goalDiff": -3,
+        "goalsFor": 0,
+        "goalsAgainst": 3,
+        "summary": "0-0-1"
       }
     },
     {
@@ -296,45 +295,45 @@
       },
       "isActive": true,
       "record": {
-        "wins": 11,
-        "draws": 9,
-        "losses": 18,
-        "played": 38,
-        "points": 42,
-        "goalDiff": -14,
-        "goalsFor": 47,
-        "goalsAgainst": 61,
-        "summary": "11-9-18"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
-      "id": 84,
-      "uid": "s:600~t:84",
-      "location": "Mallorca",
-      "name": "Mallorca",
-      "displayName": "Mallorca",
-      "shortDisplayName": "Mallorca",
-      "abbreviation": "MLL",
-      "color": "#C8142F",
-      "alternateColor": "#ccff00",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/84.png",
-      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/84.png",
+      "id": 99,
+      "uid": "s:600~t:99",
+      "location": "Málaga",
+      "name": "Málaga",
+      "displayName": "Málaga",
+      "shortDisplayName": "Málaga",
+      "abbreviation": "MCF",
+      "color": "#b9e8f0",
+      "alternateColor": "#D19CA4",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/99.png",
       "venue": {
-        "name": "Estadi Mallorca Son Moix",
-        "city": "Palma de Mallorca",
+        "name": "La Rosaleda",
+        "city": "Malaga",
         "country": "Spain"
       },
       "isActive": true,
       "record": {
-        "wins": 11,
-        "draws": 9,
-        "losses": 18,
-        "played": 38,
-        "points": 42,
-        "goalDiff": -10,
-        "goalsFor": 47,
-        "goalsAgainst": 57,
-        "summary": "11-9-18"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -356,15 +355,45 @@
       },
       "isActive": true,
       "record": {
-        "wins": 11,
-        "draws": 9,
-        "losses": 18,
-        "played": 38,
-        "points": 42,
-        "goalDiff": -6,
-        "goalsFor": 44,
-        "goalsAgainst": 50,
-        "summary": "11-9-18"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
+      }
+    },
+    {
+      "id": 87,
+      "uid": "s:600~t:87",
+      "location": "Racing Santander",
+      "name": "Racing Santander",
+      "displayName": "Racing Santander",
+      "shortDisplayName": "Racing",
+      "abbreviation": "RAC",
+      "color": "#ffffff",
+      "alternateColor": "#3B6C1A",
+      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/87.png",
+      "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/87.png",
+      "venue": {
+        "name": "El Sardineros",
+        "city": "Santander",
+        "country": "Spain"
+      },
+      "isActive": true,
+      "record": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -386,15 +415,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 12,
-        "draws": 14,
-        "losses": 12,
-        "played": 38,
-        "points": 50,
-        "goalDiff": -3,
-        "goalsFor": 41,
-        "goalsAgainst": 44,
-        "summary": "12-14-12"
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "played": 1,
+        "points": 0,
+        "goalDiff": -1,
+        "goalsFor": 1,
+        "goalsAgainst": 2,
+        "summary": "0-0-1"
       }
     },
     {
@@ -406,7 +435,7 @@
       "shortDisplayName": "Betis",
       "abbreviation": "BET",
       "color": "#288A00",
-      "alternateColor": "#ccff00",
+      "alternateColor": "#0A422D",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/244.png",
       "venue": {
@@ -416,15 +445,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 15,
-        "draws": 15,
-        "losses": 8,
-        "played": 38,
-        "points": 60,
-        "goalDiff": 11,
-        "goalsFor": 59,
-        "goalsAgainst": 48,
-        "summary": "15-15-8"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -436,51 +465,25 @@
       "shortDisplayName": "Real Madrid",
       "abbreviation": "RMA",
       "color": "#ffffff",
-      "alternateColor": "#00529F",
+      "alternateColor": "#1B4D3E",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/86.png",
-      "venue": null,
-      "isActive": true,
-      "record": {
-        "wins": 27,
-        "draws": 5,
-        "losses": 6,
-        "played": 38,
-        "points": 86,
-        "goalDiff": 42,
-        "goalsFor": 77,
-        "goalsAgainst": 35,
-        "summary": "27-5-6"
-      }
-    },
-    {
-      "id": 92,
-      "uid": "s:600~t:92",
-      "location": "Real Oviedo",
-      "name": "Real Oviedo",
-      "displayName": "Real Oviedo",
-      "shortDisplayName": "Real Oviedo",
-      "abbreviation": "OVI",
-      "color": "#e23627",
-      "alternateColor": "#ffd200",
-      "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/92.png",
-      "logoDark": null,
       "venue": {
-        "name": "Estadio Carlos Tartiere",
-        "city": "Oviedo",
+        "name": "Santiago Bernabéu",
+        "city": "Madrid",
         "country": "Spain"
       },
       "isActive": true,
       "record": {
-        "wins": 6,
-        "draws": 11,
-        "losses": 21,
-        "played": 38,
-        "points": 29,
-        "goalDiff": -34,
-        "goalsFor": 26,
-        "goalsAgainst": 60,
-        "summary": "6-11-21"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -492,7 +495,7 @@
       "shortDisplayName": "Real Sociedad",
       "abbreviation": "RSO",
       "color": "#3366CC",
-      "alternateColor": "#ffdd00",
+      "alternateColor": "#000000",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/89.png",
       "venue": {
@@ -502,15 +505,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 11,
-        "draws": 13,
-        "losses": 14,
-        "played": 38,
-        "points": 46,
-        "goalDiff": -2,
-        "goalsFor": 59,
-        "goalsAgainst": 61,
-        "summary": "11-13-14"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -532,15 +535,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 12,
-        "draws": 7,
-        "losses": 19,
-        "played": 38,
-        "points": 43,
-        "goalDiff": -14,
-        "goalsFor": 46,
-        "goalsAgainst": 60,
-        "summary": "12-7-19"
+        "wins": 1,
+        "draws": 0,
+        "losses": 0,
+        "played": 1,
+        "points": 3,
+        "goalDiff": 1,
+        "goalsFor": 2,
+        "goalsAgainst": 1,
+        "summary": "1-0-0"
       }
     },
     {
@@ -552,7 +555,7 @@
       "shortDisplayName": "Valencia",
       "abbreviation": "VAL",
       "color": "#ffffff",
-      "alternateColor": "#004996",
+      "alternateColor": "#FF6F00",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/94.png",
       "venue": {
@@ -562,15 +565,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 13,
-        "draws": 10,
-        "losses": 15,
-        "played": 38,
-        "points": 49,
-        "goalDiff": -9,
-        "goalsFor": 46,
-        "goalsAgainst": 55,
-        "summary": "13-10-15"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     },
     {
@@ -592,15 +595,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 22,
-        "draws": 6,
-        "losses": 10,
-        "played": 38,
-        "points": 72,
-        "goalDiff": 26,
-        "goalsFor": 72,
-        "goalsAgainst": 46,
-        "summary": "22-6-10"
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "played": 0,
+        "points": 0,
+        "goalDiff": 0,
+        "goalsFor": 0,
+        "goalsAgainst": 0,
+        "summary": "0-0-0"
       }
     }
   ]

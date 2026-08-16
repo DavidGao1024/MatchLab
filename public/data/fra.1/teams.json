@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-15T07:10:11.239Z",
+  "updateTime": "2026-08-16T07:10:16.998Z",
   "league": "fra.1",
   "season": "2025",
   "count": 18,
@@ -227,7 +227,11 @@
       "alternateColor": "#1a1a1a",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/273.png",
-      "venue": null,
+      "venue": {
+        "name": "Stade du Moustoir - Yves Allainmat",
+        "city": "Lorient",
+        "country": "France"
+      },
       "isActive": true,
       "record": {
         "wins": 11,
@@ -403,7 +407,11 @@
       "alternateColor": "#000000",
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/6851.png",
-      "venue": null,
+      "venue": {
+        "name": "Stade Jean Bouin",
+        "city": "Paris",
+        "country": "France"
+      },
       "isActive": true,
       "record": {
         "wins": 11,
@@ -430,9 +438,9 @@
       "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
       "logoDark": "https://a.espncdn.com/i/teamlogos/soccer/500-dark/160.png",
       "venue": {
-        "name": "Ullevi Stadium",
-        "city": "Gothenburg",
-        "country": "Sweden"
+        "name": "Parc des Princes",
+        "city": "Paris",
+        "country": "France"
       },
       "isActive": true,
       "record": {
