@@ -27,10 +27,11 @@ jobs:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # action 升到 Node24 运行时以消除 Node20 deprecated 警告；
+      #  构建 node-version 仍钉 20，与本地 .nvmrc 20.19.6 对齐（不改变构建行为）
+      - uses: actions/checkout@v7
 
-      # 与本地 .nvmrc 20.19.6 对齐（环境钉版三处一致）
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 20
           cache: npm
