@@ -29,8 +29,15 @@ const fs = require('fs')
 const path = require('path');
 const { sleep, fetchJson, writeJsonIfChanged } = require('./lib/http');
 const { SEASON, LEAGUES, core, TEAM_OVERRIDES, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
+const { resolveFill } = require('./lib/nationality-fill');
+const { COUNTRY_MAP } = require('./lib/country-map');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
+
+let NAT_MAP = {};
+try {
+  NAT_MAP = JSON.parse(fs.readFileSync(path.join(DATA_ROOT, 'mappings', 'players-nationality.json'), 'utf8')).players || {};
+} catch { /* 无映射文件不补底 */ }
 const REQUEST_DELAY_MS = 200;
 const PAGE_SIZE = 50; // ESPN core 支持的上限附近；调研用的 limit=5 需 130 页，50 只需 ~13 页
 const PLAYERS_LIMIT = process.env.PLAYERS_LIMIT ? Number(process.env.PLAYERS_LIMIT) : Infinity;
@@ -289,6 +296,7 @@ async function fetchPlayers(league, rosterMap) {
         idFromRef(profile.defaultTeam && profile.defaultTeam.$ref) ??
         null;
 
+      const fill = profile.citizenship ? null : resolveFill([profile.displayName, profile.shortName], NAT_MAP, COUNTRY_MAP);
       const doc = {
         source: 'sports.core.api.espn.com',
         updateTime: new Date().toISOString(),
@@ -307,6 +315,8 @@ async function fetchPlayers(league, rosterMap) {
         position,
         positionLabel: (profile.position && (profile.position.displayName || profile.position.name)) || null,
         teamId,
+        citizenship: profile.citizenship ?? (fill ? fill.citizenship : null),
+        flag: (profile.flag && profile.flag.href) || (fill ? fill.flag : null),
         stats: stats || null,
       };
 
@@ -324,6 +334,8 @@ async function fetchPlayers(league, rosterMap) {
         age: doc.age,
         goals,
         assists,
+        citizenship: doc.citizenship,
+        flag: doc.flag,
       });
 
       ok += 1;

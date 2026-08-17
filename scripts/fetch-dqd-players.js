@@ -26,6 +26,7 @@ const REFERER_BASE = 'https://www.dongqiudi.com/'
 
 const ROOT = path.resolve(__dirname, '..')
 const OUT_PATH = path.join(ROOT, 'public/data/mappings/players-zh.json')
+const OUT_NAT_PATH = path.join(ROOT, 'public/data/mappings/players-nationality.json')
 const TEAMS_PATH = path.join(ROOT, 'public/data/eng.1/teams.json')
 
 // 五大联赛 + 中超的 dongqiudi season_id（2026-25 赛季，实测 2026-07-30）
@@ -122,6 +123,7 @@ async function fetchPlayerDetail(personId) {
   return {
     enName: baseInfo.person_en_name || '',
     cnName: baseInfo.person_name || '',
+    nationality: baseInfo.nationality || '',
   }
 }
 
@@ -202,6 +204,7 @@ async function main() {
 
   console.log(`开始抓取 ${teamIds.length} 个球队的球员译名...`)
   const out = {}
+  const natOut = {}
   let processed = 0
   for (const teamId of teamIds) {
     console.log(`[${++processed}/${teamIds.length}] team ${teamId}`)
@@ -222,6 +225,7 @@ async function main() {
         const det = await fetchPlayerDetail(p.person_id)
         if (det.enName && det.cnName) {
           expandNameVariants(det.enName, det.cnName, out)
+          if (det.nationality) expandNameVariants(det.enName, det.nationality, natOut)
           if (pIdx % 5 === 0) {
             console.log(`  [${pIdx}/${roster.length}] ${det.enName} → ${det.cnName}`)
           }
@@ -246,6 +250,16 @@ async function main() {
   existing._source = '懂球帝球队阵容 + 球员详情页 (ESPN 英文 ↔ 懂球帝中文)'
   existing._totalKeys = after
   fs.writeFileSync(OUT_PATH, JSON.stringify(existing, null, 2))
+  let existingNat = { players: {} }
+  try { existingNat = JSON.parse(fs.readFileSync(OUT_NAT_PATH, 'utf8')) } catch {}
+  const mergedNat = { ...natOut, ...(existingNat.players || {}) }
+  fs.writeFileSync(OUT_NAT_PATH, JSON.stringify({
+    _generated: new Date().toISOString().slice(0, 10),
+    _source: '懂球帝球员详情页 base_info.nationality',
+    players: mergedNat,
+    _totalKeys: Object.keys(mergedNat).length,
+  }, null, 2))
+  console.log(`国籍映射：${Object.keys(mergedNat).length} 条 → ${OUT_NAT_PATH}`)
   console.log(`\n抓取完成：新增 ${after - before} 个译名（之前 ${before} 个 → 合并后 ${after} 个）`)
   console.log(`输出：${OUT_PATH}`)
 }
