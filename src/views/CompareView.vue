@@ -3,6 +3,7 @@ import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
+import NationFlag from '../components/common/NationFlag.vue'
 import TeamLogo from '../components/common/TeamLogo.vue'
 import ComparePlayerCardMobile from '../components/players/ComparePlayerCardMobile.vue'
 import { ensureLeague } from '../composables/useLeague'
@@ -172,6 +173,7 @@ function goDetail(id: number) {
               class="w-full text-left px-3 py-1.5 hover:bg-white/5 transition-colors flex items-center gap-2"
             >
               <span class="text-xs font-mono-d text-slate-500 w-4">{{ r.position }}</span>
+              <NationFlag :flag="r.flag" :citizenship="r.citizenship" :size="16" />
               <span class="text-sm text-white flex-1 truncate">{{ playerName(r.name, app.lang) }}</span>
               <span class="text-xs text-slate-400 truncate">{{ teamName(r.team, app.lang) }}</span>
             </button>
@@ -193,6 +195,7 @@ function goDetail(id: number) {
                   <div class="flex flex-col items-center gap-1">
                     <TeamLogo :team="teamFor(p.teamId)" :size="32" />
                     <button class="text-xs text-white hover:underline truncate max-w-[100px]" @click="goDetail(p.id)">
+                      <NationFlag :flag="p.flag" :citizenship="p.citizenship" :size="16" class="mr-1" />
                       {{ playerName(p.displayName, app.lang) }}
                     </button>
                     <button class="text-[9px] text-slate-500 hover:text-red-400" @click="removePlayer(p.id)">

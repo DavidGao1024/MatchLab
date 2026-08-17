@@ -12,6 +12,7 @@ watch(() => props.flag, () => { failed.value = false })
 </script>
 
 <template>
+  <!-- 单根 img 靠 attrs fallthrough 承接父级 margin 类（如 mr-1），勿加包裹元素，防破坏间距 -->
   <img
     v-if="flag && !failed"
     :src="flag"

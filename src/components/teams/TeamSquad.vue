@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAppStore } from '../../stores/app'
+import NationFlag from '../common/NationFlag.vue'
 import { playerName, t } from '../../utils/i18n'
 import type { PlayerSummary } from '../../types/models'
 import type { LeagueSlug } from '../../utils/constants'
@@ -53,6 +54,7 @@ function fmtNum(n: number | null): string {
           @click="go(p)"
           class="text-left px-2 py-1.5 rounded hover:bg-white/5 transition-colors flex items-center gap-3"
         >
+          <NationFlag :flag="p.flag" :citizenship="p.citizenship" :size="16" />
           <span class="text-white text-sm flex-1 truncate">{{ playerName(p.name, app.lang) }}</span>
           <span class="text-xs text-slate-500 font-mono-d w-10 text-right">{{ fmtNum(p.goals) }}G</span>
           <span class="text-xs text-slate-500 font-mono-d w-10 text-right">{{ fmtNum(p.assists) }}A</span>

@@ -28,6 +28,7 @@ async function setup() {
   players.indexes['eng.1'] = [{
     id: 253989, name: 'Erling Haaland', teamId: 503, team: 'Manchester City',
     position: 'F', age: 25, goals: 14, assists: 2,
+    citizenship: 'Norway', flag: 'https://a.espncdn.com/i/teamlogos/countries/500/nor.png',
   }] as any
   teams.bundles['eng.1'] = {
     meta: { season: '2025' } as any,
@@ -53,5 +54,13 @@ describe('PlayersView 双 DOM', () => {
   it('移动端卡片渲染球员名（中文模式）', async () => {
     const { w } = await setup()
     expect(w.text()).toContain('哈兰德')
+  })
+
+  it('球员名前渲染国旗（PC 表格 + 移动卡双 DOM）', async () => {
+    const { w } = await setup()
+    const imgs = w.findAll('img[src*="nor.png"]')
+    expect(imgs.length).toBe(2)
+    expect(imgs[0].attributes('title')).toBe('Norway')
+    expect(imgs[1].attributes('title')).toBe('Norway')
   })
 })

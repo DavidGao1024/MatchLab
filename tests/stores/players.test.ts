@@ -8,6 +8,7 @@ const mockFetch = vi.fn()
 globalThis.fetch = mockFetch as any
 
 const indexFile = {
+  source: 'sports.core.api.espn.com', updateTime: '2026-08-17T06:00:00Z', league: 'eng.1', season: '2025', count: 3,
   players: [
     { id: 11, name: 'Mohamed Salah', teamId: 14, team: 'Liverpool', position: 'F', age: 34, goals: 7, assists: 5, citizenship: 'Egypt', flag: 'https://a.espncdn.com/i/teamlogos/countries/500/egy.png' },
     { id: 22, name: 'Virgil van Dijk', teamId: 14, team: 'Liverpool', position: 'D', age: 33, goals: 1, assists: 0, citizenship: 'Netherlands', flag: 'https://a.espncdn.com/i/teamlogos/countries/500/ned.png' },
@@ -16,6 +17,7 @@ const indexFile = {
 }
 
 const profileFile = {
+  source: 'sports.core.api.espn.com', updateTime: '2026-08-17T06:00:00Z', league: 'eng.1', season: '2025',
   id: 11, displayName: 'Mohamed Salah', age: 34, height: 175, weight: 72,
   jersey: 11, position: 'F', teamId: 14, stats: { general: {} },
   citizenship: 'Egypt', flag: 'https://a.espncdn.com/i/teamlogos/countries/500/egy.png',
@@ -104,5 +106,13 @@ describe('国籍字段透传', () => {
     const p = await s.ensureProfile('eng.1', 11, '2025')
     expect(p.citizenship).toBe('Egypt')
     expect(p.flag).toContain('egy.png')
+  })
+
+  it('英文搜索无国籍球员 citizenship/flag 归一为 null', async () => {
+    const s = usePlayersStore()
+    await s.ensureIndex('eng.1', '2025')
+    const hits = s.search('eng.1', 'Testson')
+    expect(hits[0].citizenship).toBeNull()
+    expect(hits[0].flag).toBeNull()
   })
 })

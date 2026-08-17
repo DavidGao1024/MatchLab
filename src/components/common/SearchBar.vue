@@ -7,6 +7,7 @@ import { useTeamsStore } from '../../stores/teams'
 import { isLeagueSlug, type LeagueSlug } from '../../utils/constants'
 import { playerName, teamName, t } from '../../utils/i18n'
 import type { Team } from '../../types/models'
+import NationFlag from './NationFlag.vue'
 import TeamLogo from './TeamLogo.vue'
 
 const app = useAppStore()
@@ -151,6 +152,7 @@ const hasResults = computed(() => playerHits.value.length > 0 || teamHits.value.
           :class="['w-full text-left px-3 py-1.5 flex items-center gap-2 transition-colors', selectedIndex === i ? 'bg-white/10' : 'hover:bg-white/5']"
         >
           <span class="text-xs font-mono-d text-slate-500 w-4">{{ p.position }}</span>
+          <NationFlag :flag="p.flag" :citizenship="p.citizenship" :size="16" />
           <span class="text-sm text-white flex-1 truncate">{{ playerName(p.name, app.lang) }}</span>
           <span class="text-xs text-slate-400 truncate">{{ teamName(p.team, app.lang) }}</span>
         </button>

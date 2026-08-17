@@ -109,3 +109,13 @@ describe('球队详情页·点缀落位', () => {
     expect(h3.attributes('style') ?? '').toContain('var(--accent')
   })
 })
+
+describe('球队阵容·国旗', () => {
+  it('阵容球员有国籍时名字前渲染国旗', async () => {
+    const w = await setup(makeTeam(), [makePlayer({ citizenship: 'England', flag: 'https://a.espncdn.com/i/teamlogos/countries/500/eng.png' })])
+    const img = w.find('img[src*="eng.png"]')
+    expect(img.exists()).toBe(true)
+    expect(img.attributes('title')).toBe('England')
+    expect(img.attributes('width')).toBe('16')
+  })
+})

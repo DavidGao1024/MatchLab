@@ -9,6 +9,7 @@ import PlayerStatsGrid from '../components/players/PlayerStatsGrid.vue'
 import PlayerXgChart from '../components/players/PlayerXgChart.vue'
 import PlayerCareerChart from '../components/players/PlayerCareerChart.vue'
 import SeasonSelector from '../components/common/SeasonSelector.vue'
+import NationFlag from '../components/common/NationFlag.vue'
 import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { usePlayersStore } from '../stores/players'
@@ -100,7 +101,7 @@ function back() {
         <TeamLogo :team="team" :size="56" />
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-3">
-            <h1 class="font-cond text-3xl font-semibold text-white truncate">{{ displayName }}</h1>
+            <h1 class="font-cond text-3xl font-semibold text-white truncate"><NationFlag :flag="profile.flag" :citizenship="profile.citizenship" :size="24" class="mr-1.5" />{{ displayName }}</h1>
             <FavoriteButton type="player" :id="playerId" :name="displayName" :league="league" />
           </div>
           <p class="text-sm text-slate-400 mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">

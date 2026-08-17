@@ -85,4 +85,18 @@ describe('ComparePlayerCardMobile', () => {
     await nameBtn!.trigger('click')
     expect(w.emitted('click')).toBeTruthy()
   })
+
+  it('有国籍时名字前渲染国旗', () => {
+    const rows: Row[] = []
+    const w = mount(ComparePlayerCardMobile, {
+      props: {
+        profile: makeProfile({ citizenship: 'Norway', flag: 'https://a.espncdn.com/i/teamlogos/countries/500/nor.png' }),
+        team: makeTeam(), rows, playerIndex: 0, lang: 'zh',
+      },
+    })
+    // 旗必须在「名字按钮」内部（承载球员名的 button），而非队徽旁等其他位置
+    const nameBtn = w.findAll('button').find((b) => b.text().includes('哈兰德'))
+    expect(nameBtn).toBeTruthy()
+    expect(nameBtn!.find('img[src*="nor.png"]').exists()).toBe(true)
+  })
 })

@@ -3,6 +3,7 @@ import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
+import NationFlag from '../components/common/NationFlag.vue'
 import PlayerListCardMobile from '../components/players/PlayerListCardMobile.vue'
 import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
@@ -151,6 +152,7 @@ function posLabel(p: string): string {
             >
               <td class="py-2 px-2 text-slate-500 font-mono-d">{{ (page - 1) * 50 + i + 1 }}</td>
               <td class="py-2 px-2">
+                <NationFlag :flag="p.flag" :citizenship="p.citizenship" :size="16" class="mr-1" />
                 <span class="text-white">{{ playerName(p.name, app.lang) }}</span>
                 <span class="text-slate-500 text-xs ml-2">{{ teamName(p.team, app.lang) }}</span>
               </td>

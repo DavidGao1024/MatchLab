@@ -10,6 +10,10 @@ import { useTeamsStore } from '../../src/stores/teams'
 import { __resetFreshGateForTests } from '../../src/composables/useJsonFetch'
 
 const mockProfile = {
+  source: 'sports.core.api.espn.com',
+  updateTime: '2026-08-17T06:00:00Z',
+  league: 'eng.1',
+  season: '2025',
   id: 253989,
   displayName: 'Erling Haaland',
   shortName: 'Haaland',
@@ -22,6 +26,8 @@ const mockProfile = {
   position: 'F',
   positionLabel: 'Forward',
   teamId: 503,
+  citizenship: 'Norway',
+  flag: 'https://a.espncdn.com/i/teamlogos/countries/500/nor.png',
   stats: {
     general: { appearances: 20, starts: 18, minutes: 1600, yellowCards: 1, redCards: 0 },
     offensive: { totalGoals: 14, shotsOnTarget: 30, totalShots: 50, accuratePasses: 200, goalAssists: 2 },
@@ -30,7 +36,14 @@ const mockProfile = {
   },
 }
 
-const mockIndex = { players: [] }
+const mockIndex = {
+  source: 'sports.core.api.espn.com',
+  updateTime: '2026-08-17T06:00:00Z',
+  league: 'eng.1',
+  season: '2025',
+  count: 0,
+  players: [],
+}
 
 beforeEach(() => {
   setActivePinia(createPinia())
@@ -104,5 +117,12 @@ describe('CompareView 双 DOM', () => {
     expect(w.text()).toContain('Appearances')
     expect(w.text()).toContain('Haaland')
     expect(w.text()).not.toContain('出场')
+  })
+
+  it('已选球员名前渲染国旗（PC 表头 + 移动卡双 DOM）', async () => {
+    const { w } = await setup()
+    const imgs = w.findAll('img[src*="nor.png"]')
+    expect(imgs.length).toBe(2)
+    expect(imgs[0].attributes('title')).toBe('Norway')
   })
 })

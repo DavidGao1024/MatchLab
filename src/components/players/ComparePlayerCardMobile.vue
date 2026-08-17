@@ -2,6 +2,7 @@
 import type { PlayerProfile, Team } from '../../types/models'
 import type { Lang } from '../../utils/i18n'
 import { playerName, t } from '../../utils/i18n'
+import NationFlag from '../common/NationFlag.vue'
 import TeamLogo from '../common/TeamLogo.vue'
 
 interface Row {
@@ -59,6 +60,7 @@ function rowValue(row: Row): number | null {
         class="flex-1 truncate text-left text-white font-cond text-sm hover:underline"
         @click="$emit('click')"
       >
+        <NationFlag :flag="profile.flag" :citizenship="profile.citizenship" :size="16" class="mr-1" />
         {{ playerName(profile.displayName, lang) }}
       </button>
     </div>

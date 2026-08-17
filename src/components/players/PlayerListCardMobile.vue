@@ -2,6 +2,7 @@
 import type { PlayerSummary, Team } from '../../types/models'
 import type { Lang } from '../../utils/i18n'
 import { playerName, teamName, t } from '../../utils/i18n'
+import NationFlag from '../common/NationFlag.vue'
 import TeamLogo from '../common/TeamLogo.vue'
 
 const props = defineProps<{
@@ -32,6 +33,7 @@ function posLabel(p: string): string {
     <div class="flex items-center gap-2 mb-2">
       <span class="text-slate-500 font-mono-d text-xs w-5">{{ rank }}</span>
       <TeamLogo :team="team" :size="20" />
+      <NationFlag :flag="player.flag" :citizenship="player.citizenship" :size="16" />
       <span class="text-white font-cond text-sm flex-1 truncate">{{ playerName(player.name, lang) }}</span>
       <span class="text-slate-500 text-xs truncate max-w-[100px]">{{ teamName(player.team, lang) }}</span>
     </div>

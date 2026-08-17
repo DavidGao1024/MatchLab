@@ -62,4 +62,16 @@ describe('PlayerListCardMobile', () => {
     const matches = html.match(/—/g) ?? []
     expect(matches.length).toBe(3)
   })
+
+  it('有国籍时名字前渲染国旗', () => {
+    const w = mount(PlayerListCardMobile, {
+      props: {
+        player: makePlayer({ citizenship: 'Norway', flag: 'https://a.espncdn.com/i/teamlogos/countries/500/nor.png' }),
+        team: makeTeam(), rank: 1, lang: 'zh',
+      },
+    })
+    const img = w.find('img[src*="nor.png"]')
+    expect(img.exists()).toBe(true)
+    expect(img.attributes('title')).toBe('Norway')
+  })
 })
