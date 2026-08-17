@@ -1,10 +1,10 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-08-16T08:26:39.593Z",
+  "updateTime": "2026-08-17T10:35:27.444Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 2,
-  "count": 4,
+  "matchesCounted": 4,
+  "count": 8,
   "standings": [
     {
       "rank": 1,
@@ -21,6 +21,19 @@
     },
     {
       "rank": 2,
+      "teamId": 88,
+      "team": "Espanyol",
+      "played": 1,
+      "won": 1,
+      "drawn": 0,
+      "lost": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "goalDiff": 3,
+      "points": 3
+    },
+    {
+      "rank": 3,
       "teamId": 243,
       "team": "Sevilla",
       "played": 1,
@@ -33,7 +46,33 @@
       "points": 3
     },
     {
-      "rank": 3,
+      "rank": 4,
+      "teamId": 87,
+      "team": "Racing Santander",
+      "played": 1,
+      "won": 0,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "goalDiff": 0,
+      "points": 1
+    },
+    {
+      "rank": 5,
+      "teamId": 102,
+      "team": "Villarreal",
+      "played": 1,
+      "won": 0,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "goalDiff": 0,
+      "points": 1
+    },
+    {
+      "rank": 6,
       "teamId": 101,
       "team": "Rayo Vallecano",
       "played": 1,
@@ -46,9 +85,22 @@
       "points": 0
     },
     {
-      "rank": 4,
+      "rank": 7,
       "teamId": 2922,
       "team": "Getafe",
+      "played": 1,
+      "won": 0,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 0,
+      "goalsAgainst": 3,
+      "goalDiff": -3,
+      "points": 0
+    },
+    {
+      "rank": 8,
+      "teamId": 1538,
+      "team": "Levante",
       "played": 1,
       "won": 0,
       "drawn": 0,
