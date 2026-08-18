@@ -21,7 +21,7 @@ watch(() => props.flag, () => { failed.value = false })
     loading="lazy"
     :width="size"
     :height="size"
-    class="rounded-full object-contain shrink-0 inline-block align-middle"
+    class="object-contain shrink-0 inline-block align-middle"
     @error="failed = true"
   />
 </template>
