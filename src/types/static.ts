@@ -274,3 +274,26 @@ export interface SeasonsFile {
   count: number
   seasons: SeasonEntry[]
 }
+
+/** transfers.json 球员转会记录（ESPN athletes/{id}/transactions） */
+export interface TransferEntry {
+  playerId: number
+  playerName: string | null
+  date: string | null
+  fromTeamId: number | null
+  fromTeam: string | null
+  toTeamId: number | null
+  toTeam: string | null
+  type: string | null
+  amount: number | null
+  displayAmount: string | null
+}
+
+export interface TransfersFile {
+  source: string
+  updateTime: string
+  league: string
+  playersScanned: number
+  count: number
+  transfers: TransferEntry[]
+}

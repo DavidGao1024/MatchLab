@@ -16,6 +16,8 @@ import { usePlayersStore } from '../stores/players'
 import { useTeamsStore } from '../stores/teams'
 import { useXgStore } from '../stores/xg'
 import { playerName, teamName, t } from '../utils/i18n'
+import { buildCareer } from '../utils/career'
+import { useTransfersStore } from '../stores/transfers'
 import { XG_ENABLED } from '../utils/constants'
 import type { LeagueSlug } from '../utils/constants'
 
@@ -25,6 +27,7 @@ const app = useAppStore()
 const players = usePlayersStore()
 const teams = useTeamsStore()
 const xg = useXgStore()
+const transfers = useTransfersStore()
 
 const league = computed(() => route.params.league as LeagueSlug)
 const playerId = computed(() => Number(route.params.id))
@@ -45,6 +48,7 @@ async function load() {
     if (seq.value !== my) return
     // xG 后台并行加载，不阻塞主流程（合规舍弃：开关关时不加载，避免对已删数据发 404）
     if (XG_ENABLED) xg.ensure(league.value, season.value).catch(() => { /* xg 失败静默 */ })
+    transfers.ensure(league.value).catch(() => { /* 转会履历失败静默 */ })
   } catch (e) {
     if (seq.value !== my) return
     error.value = e instanceof Error ? e.message : String(e)
@@ -58,6 +62,7 @@ const profile = computed(() => players.profiles[`${league.value}:${playerId.valu
 const team = computed(() => (profile.value ? teams.teamById(league.value, profile.value.teamId) : undefined))
 const ready = computed(() => !players.loadingProfile[`${league.value}:${playerId.value}`] && !!profile.value)
 const xgRow = computed(() => (profile.value ? xg.byName(league.value, profile.value.displayName) : null))
+const career = computed(() => (profile.value ? buildCareer(transfers.forPlayer(league.value, playerId.value)) : []))
 
 const displayName = computed(() => profile.value ? playerName(profile.value.displayName, app.lang) : '')
 const teamDisplay = computed(() => team.value ? teamName(team.value.name, app.lang) : '')
@@ -68,6 +73,12 @@ function posLabel(p: string): string {
   if (p === 'M') return t('players.positionM', app.lang)
   if (p === 'F') return t('players.positionF', app.lang)
   return p
+}
+
+function fmtCareerSpan(c: { from: number; to: number | null }): string {
+  if (c.to == null) return `${c.from}–${t('player.toNow', app.lang)}`
+  if (c.from === c.to) return String(c.from)
+  return `${c.from}–${c.to}`
 }
 
 function fmtHeight(h: number | null): string {
@@ -134,6 +145,17 @@ function back() {
           <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('player.born', app.lang) }}</div>
           <div class="text-base text-white font-mono-d">{{ fmtDob(profile.dateOfBirth) }}</div>
         </div>
+      </div>
+
+      <!-- 球员履历（效力球队 + 年份区间，数据源 ESPN transactions） -->
+      <div v-if="career.length" class="border border-white/10 rounded-lg p-4 mb-6 bg-white/[0.02]">
+        <h2 class="font-cond text-sm tracking-wider text-white mb-3">{{ t('player.career', app.lang) }}</h2>
+        <ol class="space-y-1.5">
+          <li v-for="(c, i) in career" :key="i" class="flex items-center gap-3 text-sm">
+            <span class="font-mono-d text-slate-500 w-24 shrink-0">{{ fmtCareerSpan(c) }}</span>
+            <span class="text-white">{{ c.team ? teamName(c.team, app.lang) : '' }}</span>
+          </li>
+        </ol>
       </div>
 
       <!-- xG 数据区块 -->
