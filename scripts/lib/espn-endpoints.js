@@ -78,8 +78,9 @@ function candidateSeason(seasonType, now) {
 }
 
 /**
- * 赛季交替判定（2026-08-06）：候选新赛季开幕月已有完赛（state=post）才切新季，
- * 否则回退上一季——季前空窗期站继续展示旧季完整数据。
+ * 赛季交替判定（2026-08-06 初版需完赛才切；2026-08-18 放宽）：候选新赛季开幕月
+ * 有赛程（任意状态，pre 也算）即切新季，否则回退上一季。
+ * 放宽理由：季前赛程已排定（如英超 8/21 揭幕），继续展示上季完整数据不合时宜。
  * 原地改写 league.season，下游（core/scores/understat/leagues.json 汇总）同对象可见；
  * 每联赛 1 次 scoreboard 请求，失败保守不改。
  */
@@ -93,8 +94,8 @@ async function resolveSeasonsInPlace(leagues, now = new Date()) {
     try {
       // site.api 服务端抓取必须用 curl UA（浏览器 UA + 服务器 IP 会被 Akamai 403）
       const sb = await fetchJson(`${SITE_BASE}/${league.slug}/scoreboard?dates=${cand}${mm}01-${cand}${mm}${String(last).padStart(2, '0')}&limit=200`, { ua: UA_CURL });
-      const started = (sb.events ?? []).some((e) => e.status?.type?.state === 'post');
-      league.season = started ? String(cand) : String(cand - 1);
+      const scheduled = (sb.events ?? []).length > 0;
+      league.season = scheduled ? String(cand) : String(cand - 1);
     } catch {
       // 网络失败不改 season（保守沿用配置值）
     }

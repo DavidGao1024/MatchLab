@@ -101,6 +101,11 @@ function computeStandings(matches, deductions = {}) {
   };
 
   for (const m of matches) {
+    if (m.home && m.home.id != null && !Number.isNaN(m.home.id)) get(m.home.id, m.home.name);
+    if (m.away && m.away.id != null && !Number.isNaN(m.away.id)) get(m.away.id, m.away.name);
+  }
+
+  for (const m of matches) {
     if (!m.completed || !m.home || !m.away || m.home.score == null || m.away.score == null) continue;
     const h = get(m.home.id, m.home.name);
     const a = get(m.away.id, m.away.name);
