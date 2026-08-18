@@ -8,6 +8,9 @@ export function isLeagueSlug(v: string): v is LeagueSlug {
 /** 首页默认焦点联赛（规格 §四首页） */
 export const FOCUS_LEAGUE: LeagueSlug = 'eng.1'
 
+/** xG 功能开关（合规：Understat 无授权已舍弃，链路保留）。置 true 恢复展示，需配合 workflow 恢复 Understat 抓取 */
+export const XG_ENABLED = false
+
 /** localStorage 缓存键前缀，版本升级改这里使全站缓存失效 */
 export const CACHE_PREFIX = 'matchlab:v1'
 

@@ -16,6 +16,7 @@ import { usePlayersStore } from '../stores/players'
 import { useTeamsStore } from '../stores/teams'
 import { useXgStore } from '../stores/xg'
 import { playerName, teamName, t } from '../utils/i18n'
+import { XG_ENABLED } from '../utils/constants'
 import type { LeagueSlug } from '../utils/constants'
 
 const route = useRoute()
@@ -42,8 +43,8 @@ async function load() {
     await players.ensureIndex(league.value, season.value) // SearchBar 索引也确保就位
     await players.ensureProfile(league.value, playerId.value, season.value)
     if (seq.value !== my) return
-    // xG 后台并行加载，不阻塞主流程
-    xg.ensure(league.value, season.value).catch(() => { /* xg 失败静默 */ })
+    // xG 后台并行加载，不阻塞主流程（合规舍弃：开关关时不加载，避免对已删数据发 404）
+    if (XG_ENABLED) xg.ensure(league.value, season.value).catch(() => { /* xg 失败静默 */ })
   } catch (e) {
     if (seq.value !== my) return
     error.value = e instanceof Error ? e.message : String(e)
@@ -136,7 +137,7 @@ function back() {
       </div>
 
       <!-- xG 数据区块 -->
-      <div v-if="xgRow" class="border border-white/10 rounded-lg p-4 mb-6 bg-white/[0.02]">
+      <div v-if="XG_ENABLED && xgRow" class="border border-white/10 rounded-lg p-4 mb-6 bg-white/[0.02]">
         <div class="flex items-center justify-between mb-3">
           <h2 class="font-cond text-sm tracking-wider text-white">{{ t('player.xgSection', app.lang) }}</h2>
           <SeasonSelector v-if="season !== selectedSeason" :league="league" :model-value="selectedSeason" @update:model-value="(v) => router.replace({ query: { ...route.query, season: v } })" />
@@ -153,7 +154,7 @@ function back() {
       </div>
 
       <!-- xG 趋势图（Phase 6，逐场 + 5 场滚动平均） -->
-      <PlayerXgChart :league="league" :understat-player-id="xgRow ? xgRow.id : null" />
+      <PlayerXgChart v-if="XG_ENABLED" :league="league" :understat-player-id="xgRow ? xgRow.id : null" />
 
       <!-- 生涯曲线（Phase 6，最近 8 个赛季进球/助攻） -->
       <PlayerCareerChart :league="league" :player-id="playerId" :current-season="season" />

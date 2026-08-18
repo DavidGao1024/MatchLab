@@ -30,14 +30,15 @@ jobs:
       - name: Fetch ESPN core (teams/players/leaders)
         run: node scripts/fetch-espn-core.js
 
-      - name: Fetch Understat (xG)
-        run: node scripts/fetch-understat.js
+      # Understat (xG) 2026-08-18 合规舍弃：不再获取/展示 xG，链路保留（fetch-understat.js / build-team-map.js 文件未删）。
+      # 恢复时重新启用下面两步即可：
+      # - name: Fetch Understat (xG)
+      #   run: node scripts/fetch-understat.js
+      # - name: Rebuild team-name map
+      #   run: node scripts/build-team-map.js
 
       - name: Fetch ESPN scores + compute standings
         run: node scripts/fetch-espn-scores.js
-
-      - name: Rebuild team-name map
-        run: node scripts/build-team-map.js
 
       # 条件提交：脚本层 writeJsonIfChanged 已保证数据无变化时文件不动，
       # 这里 git diff 为空则跳过 commit（抓取间隔内数据不变是常态）

@@ -10,6 +10,7 @@ import { useAppStore } from '../stores/app'
 import { useStandingsStore } from '../stores/standings'
 import { useTeamsStore } from '../stores/teams'
 import { t } from '../utils/i18n'
+import { XG_ENABLED } from '../utils/constants'
 import type { LeagueSlug } from '../utils/constants'
 
 const route = useRoute()
@@ -70,7 +71,7 @@ const ready = computed(() => !store.loading[league.value] && rows.value.length >
       <p class="font-mono-d text-[10px] text-slate-500">
         {{ t('standings.updated', app.lang) }} {{ store.updateTime[league] ? tz.updated(store.updateTime[league]!) : '—' }}
       </p>
-      <label class="ml-auto inline-flex cursor-pointer items-center gap-2 text-xs text-slate-300">
+      <label v-if="XG_ENABLED" class="ml-auto inline-flex cursor-pointer items-center gap-2 text-xs text-slate-300">
         <input type="checkbox" class="accent-[var(--league-color)]" :checked="!!store.xgOn[league]" @change="onToggleXg" />
         {{ t('standings.xgToggle', app.lang) }}
       </label>
