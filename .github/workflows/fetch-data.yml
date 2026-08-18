@@ -40,6 +40,9 @@ jobs:
       - name: Fetch ESPN scores + compute standings
         run: node scripts/fetch-espn-scores.js
 
+      - name: Fetch transfers (career history)
+        run: node scripts/fetch-transfers.js
+
       # 条件提交：脚本层 writeJsonIfChanged 已保证数据无变化时文件不动，
       # 这里 git diff 为空则跳过 commit（抓取间隔内数据不变是常态）
       - name: Commit if changed
