@@ -16,6 +16,8 @@ const tz = useTimezone()
       <span>{{ t('footer.snapshot', app.lang) }} {{ app.leaguesUpdateTime ? tz.updated(app.leaguesUpdateTime) : '—' }}</span>
       <span aria-hidden="true">·</span>
       <span>{{ t('footer.source', app.lang) }} ESPN</span>
+      <span aria-hidden="true">·</span>
+      <span>{{ t('footer.disclaimer', app.lang) }}</span>
       <span class="ml-auto">MATCHLAB · {{ t('footer.tagline', app.lang) }}</span>
     </div>
   </footer>

@@ -155,8 +155,8 @@ function mapTeamDetail(raw) {
     abbreviation: raw.abbreviation,
     color: raw.color ? `#${raw.color}` : null,
     alternateColor: raw.alternateColor ? `#${raw.alternateColor}` : null,
-    logo: logo ? logo.href : null,
-    logoDark: logoDark ? logoDark.href : null,
+    logo: logo ? `logos/${raw.id}.png` : null,
+    logoDark: logoDark ? `logos/${raw.id}-dark.png` : null,
     venue: raw.venue
       ? { name: raw.venue.fullName, city: raw.venue.address && raw.venue.address.city, country: raw.venue.address && raw.venue.address.country }
       : null,

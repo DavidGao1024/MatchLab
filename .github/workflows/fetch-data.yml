@@ -5,7 +5,7 @@ name: Fetch Data
 
 on:
   schedule:
-    - cron: '0 6 * * *' # 每天 UTC 06:00（北京时间 14:00）
+    - cron: '0 6 * * 1,4,6' # 每周一/四/六 UTC 06:00（北京时间 14:00），档案件变化慢降频减"高频爬虫"嫌疑
   workflow_dispatch: # 支持手动触发
 
 permissions:
