@@ -31,6 +31,7 @@ const { sleep, fetchJson, writeJsonIfChanged } = require('./lib/http');
 const { SEASON, LEAGUES, core, TEAM_OVERRIDES, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
 const { resolveFill } = require('./lib/nationality-fill');
 const { COUNTRY_MAP } = require('./lib/country-map');
+const { localFlagPath } = require('./lib/flag-map');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 
@@ -297,6 +298,7 @@ async function fetchPlayers(league, rosterMap) {
         null;
 
       const fill = profile.citizenship ? null : resolveFill([profile.displayName, profile.shortName], NAT_MAP, COUNTRY_MAP);
+      const citizenship = profile.citizenship ?? (fill ? fill.citizenship : null);
       const doc = {
         source: 'sports.core.api.espn.com',
         updateTime: new Date().toISOString(),
@@ -315,8 +317,8 @@ async function fetchPlayers(league, rosterMap) {
         position,
         positionLabel: (profile.position && (profile.position.displayName || profile.position.name)) || null,
         teamId,
-        citizenship: profile.citizenship ?? (fill ? fill.citizenship : null),
-        flag: (profile.flag && profile.flag.href) || (fill ? fill.flag : null),
+        citizenship,
+        flag: localFlagPath(citizenship),
         stats: stats || null,
       };
 

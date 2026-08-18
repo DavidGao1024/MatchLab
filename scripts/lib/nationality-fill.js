@@ -2,7 +2,7 @@
  * 球员国籍补齐纯逻辑（零依赖、无网络）
  *
  * 用途：对 ESPN 缺 citizenship 的球员，用懂球帝给的中文国名，
- * 经 country-map.js 码表转成英文国名 + ESPN 国旗 URL。
+ * 经 country-map.js 码表转成英文国名 + 本地国旗路径。
  *
  * 键匹配策略（candidateKeys）：
  *   1. 原名原序
@@ -12,7 +12,7 @@
  */
 'use strict';
 
-const FLAG_BASE = 'https://a.espncdn.com/i/teamlogos/countries/500/';
+const { localFlagPath } = require('./flag-map');
 
 function deaccent(s) {
   return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -52,7 +52,8 @@ function resolveFill(names, natMap, countryMap) {
   if (!zh) return null;
   const m = countryMap && countryMap[zh];
   if (!m || !m.code) return null;
-  return { citizenship: m.en || zh, flag: FLAG_BASE + m.code + '.png' };
+  const citizenship = m.en || zh;
+  return { citizenship, flag: localFlagPath(citizenship) };
 }
 
-module.exports = { FLAG_BASE, deaccent, reversed, candidateKeys, lookupZh, resolveFill };
+module.exports = { deaccent, reversed, candidateKeys, lookupZh, resolveFill };
