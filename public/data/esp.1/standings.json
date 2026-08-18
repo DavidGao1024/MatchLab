@@ -1,10 +1,10 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-08-17T10:35:27.444Z",
+  "updateTime": "2026-08-18T06:49:59.398Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 4,
-  "count": 8,
+  "matchesCounted": 5,
+  "count": 10,
   "standings": [
     {
       "rank": 1,
@@ -73,6 +73,32 @@
     },
     {
       "rank": 6,
+      "teamId": 90,
+      "team": "Deportivo",
+      "played": 1,
+      "won": 0,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 1,
+      "goalsAgainst": 1,
+      "goalDiff": 0,
+      "points": 1
+    },
+    {
+      "rank": 7,
+      "teamId": 3751,
+      "team": "Elche",
+      "played": 1,
+      "won": 0,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 1,
+      "goalsAgainst": 1,
+      "goalDiff": 0,
+      "points": 1
+    },
+    {
+      "rank": 8,
       "teamId": 101,
       "team": "Rayo Vallecano",
       "played": 1,
@@ -85,7 +111,7 @@
       "points": 0
     },
     {
-      "rank": 7,
+      "rank": 9,
       "teamId": 2922,
       "team": "Getafe",
       "played": 1,
@@ -98,7 +124,7 @@
       "points": 0
     },
     {
-      "rank": 8,
+      "rank": 10,
       "teamId": 1538,
       "team": "Levante",
       "played": 1,
