@@ -390,6 +390,7 @@ const UI: Record<string, { zh: string; en: string }> = {
   'player.born': { zh: '出生', en: 'Born' },
   'player.height': { zh: '身高', en: 'Height' },
   'player.weight': { zh: '体重', en: 'Weight' },
+  'player.marketValue': { zh: '身价', en: 'Market value' },
   'player.career': { zh: '履历', en: 'Career History' },
   'player.toNow': { zh: '至今', en: 'Present' },
   'player.xgSection': { zh: 'xG 数据 (Understat)', en: 'xG (Understat)' },
@@ -407,6 +408,7 @@ const UI: Record<string, { zh: string; en: string }> = {
   'team.record': { zh: '战绩', en: 'Record' },
   'team.played': { zh: '已赛', en: 'Played' },
   'team.squad': { zh: '阵容', en: 'Squad' },
+  'team.squadValue': { zh: '总身价', en: 'Squad value' },
   'team.stats': { zh: '球队统计', en: 'Team Stats' },
   'team.col.gf': { zh: '进球', en: 'GF' },
   'team.col.ga': { zh: '失球', en: 'GA' },
@@ -616,8 +618,110 @@ export function __resetPlayerNames(): void {
   playerNamesPromise = null
 }
 
+// ===== 球员/球队身价映射（懂球帝一次性抓取，启动时加载） =====
+let PLAYER_VALUE: Record<string, number> = {}
+let TEAM_VALUE: Record<string, number> = {}
+
+let playerValuesPromise: Promise<void> | null = null
+let teamValuesPromise: Promise<void> | null = null
+
+/** 记忆化加载 player-values.json（万欧），失败静默 */
+export function loadPlayerValues(): Promise<void> {
+  if (!playerValuesPromise) {
+    playerValuesPromise = (async () => {
+      try {
+        const base = import.meta.env.BASE_URL
+        const res = await fetch(`${base}data/mappings/player-values.json`)
+        if (!res.ok) return
+        const data = await res.json()
+        if (data?.players && typeof data.players === 'object') {
+          PLAYER_VALUE = { ...data.players }
+        }
+      } catch {
+        // 静默失败，不影响应用启动
+      }
+    })()
+  }
+  return playerValuesPromise
+}
+
+/** 记忆化加载 team-values.json（百万欧），失败静默 */
+export function loadTeamValues(): Promise<void> {
+  if (!teamValuesPromise) {
+    teamValuesPromise = (async () => {
+      try {
+        const base = import.meta.env.BASE_URL
+        const res = await fetch(`${base}data/mappings/team-values.json`)
+        if (!res.ok) return
+        const data = await res.json()
+        if (data?.teams && typeof data.teams === 'object') {
+          TEAM_VALUE = { ...data.teams }
+        }
+      } catch {
+        // 静默失败，不影响应用启动
+      }
+    })()
+  }
+  return teamValuesPromise
+}
+
+/** 按英文名查身价：精确 → 大小写不敏感 → 去重音 → 去重音+大小写不敏感 */
+function lookupValue(map: Record<string, number>, name: string): number | null {
+  if (!name) return null
+  if (map[name] != null) return map[name]
+  const lower = name.toLowerCase()
+  for (const k of Object.keys(map)) if (k.toLowerCase() === lower) return map[k]
+  const norm = normalizeAccents(name)
+  if (norm !== name && map[norm] != null) return map[norm]
+  const normLower = norm.toLowerCase()
+  for (const k of Object.keys(map)) if (normalizeAccents(k).toLowerCase() === normLower) return map[k]
+  return null
+}
+
+/** 球员身价（万欧），无数据返回 null */
+export function playerValue(name: string): number | null {
+  return lookupValue(PLAYER_VALUE, name)
+}
+
+/** 球队总身价（百万欧），无数据返回 null */
+export function teamValue(name: string): number | null {
+  return lookupValue(TEAM_VALUE, name)
+}
+
+/** 仅供测试：注入球员身价映射 */
+export function __setPlayerValues(map: Record<string, number>): void {
+  PLAYER_VALUE = map
+}
+
+/** 仅供测试：注入球队身价映射 */
+export function __setTeamValues(map: Record<string, number>): void {
+  TEAM_VALUE = map
+}
+
+function trimNum(n: number): string {
+  const v = Math.round(n * 10) / 10
+  return Number.isInteger(v) ? String(v) : v.toFixed(1)
+}
+
+/** 球员身价展示（输入万欧）：中文 5500万欧 / 1.1亿欧；英文 €55M / €110M */
+export function formatPlayerValue(wanEuro: number, lang: Lang): string {
+  if (lang === 'en') return `€${trimNum(wanEuro / 100)}M`
+  if (wanEuro >= 10000) return `${trimNum(wanEuro / 10000)}亿欧`
+  return `${wanEuro}万欧`
+}
+
+/** 球队总身价展示（输入百万欧）：中文 14.1亿欧；英文 €1.41B / €874M */
+export function formatTeamValue(millionEuro: number, lang: Lang): string {
+  if (lang === 'en') {
+    if (millionEuro >= 1000) return `€${trimNum(millionEuro / 1000)}B`
+    return `€${trimNum(millionEuro)}M`
+  }
+  if (millionEuro >= 100) return `${trimNum(millionEuro / 100)}亿欧`
+  return `${trimNum(millionEuro * 100)}万欧`
+}
+
 // 去重音：Vinícius → Vinicius，便于大小写不敏感匹配
-function normalizeAccents(s: string): string {
+export function normalizeAccents(s: string): string {
   return s
     .replace(/[áàâãäå]/g, 'a').replace(/[ÁÀÂÃÄÅ]/g, 'A')
     .replace(/[éèêë]/g, 'e').replace(/[ÉÈÊË]/g, 'E')

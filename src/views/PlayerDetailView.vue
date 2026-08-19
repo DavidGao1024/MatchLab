@@ -15,7 +15,7 @@ import { useAppStore } from '../stores/app'
 import { usePlayersStore } from '../stores/players'
 import { useTeamsStore } from '../stores/teams'
 import { useXgStore } from '../stores/xg'
-import { playerName, teamName, t } from '../utils/i18n'
+import { playerName, teamName, t, playerValue, formatPlayerValue, loadPlayerValues } from '../utils/i18n'
 import { buildCareer } from '../utils/career'
 import { useTransfersStore } from '../stores/transfers'
 import { XG_ENABLED } from '../utils/constants'
@@ -45,6 +45,7 @@ async function load() {
     await ensureLeague(league.value)
     await players.ensureIndex(league.value, season.value) // SearchBar 索引也确保就位
     await players.ensureProfile(league.value, playerId.value, season.value)
+    await loadPlayerValues()
     if (seq.value !== my) return
     // xG 后台并行加载，不阻塞主流程（合规舍弃：开关关时不加载，避免对已删数据发 404）
     if (XG_ENABLED) xg.ensure(league.value, season.value).catch(() => { /* xg 失败静默 */ })
@@ -63,6 +64,7 @@ const team = computed(() => (profile.value ? teams.teamById(league.value, profil
 const ready = computed(() => !players.loadingProfile[`${league.value}:${playerId.value}`] && !!profile.value)
 const xgRow = computed(() => (profile.value ? xg.byName(league.value, profile.value.displayName) : null))
 const career = computed(() => (profile.value ? buildCareer(transfers.forPlayer(league.value, playerId.value)) : []))
+const marketValueWan = computed(() => (profile.value ? playerValue(profile.value.displayName) : null))
 
 const displayName = computed(() => profile.value ? playerName(profile.value.displayName, app.lang) : '')
 const teamDisplay = computed(() => team.value ? teamName(team.value.name, app.lang) : '')
@@ -128,7 +130,7 @@ function back() {
       </div>
 
       <!-- 基础信息 -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
         <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
           <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('col.age', app.lang) }}</div>
           <div class="text-base text-white font-mono-d">{{ profile.age ?? '—' }}</div>
@@ -144,6 +146,10 @@ function back() {
         <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
           <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('player.born', app.lang) }}</div>
           <div class="text-base text-white font-mono-d">{{ fmtDob(profile.dateOfBirth) }}</div>
+        </div>
+        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
+          <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('player.marketValue', app.lang) }}</div>
+          <div class="text-base text-white font-mono-d">{{ marketValueWan != null ? formatPlayerValue(marketValueWan, app.lang) : '—' }}</div>
         </div>
       </div>
 

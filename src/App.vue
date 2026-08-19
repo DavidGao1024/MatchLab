@@ -9,7 +9,7 @@ import ConfirmDialog from './components/common/ConfirmDialog.vue'
 import { useAppStore } from './stores/app'
 import { useMatchesStore } from './stores/matches'
 import { useUserDataStore } from './stores/userData'
-import { loadPlayerNames } from './utils/i18n'
+import { loadPlayerNames, loadPlayerValues, loadTeamValues } from './utils/i18n'
 import { isLeagueSlug } from './utils/constants'
 
 const app = useAppStore()
@@ -24,6 +24,9 @@ app.loadLeagues().catch(() => {
 
 // 异步加载球员中文译名表（130KB，世界杯项目同款源；不阻塞首屏）
 loadPlayerNames()
+// 异步加载球员/球队身价映射（懂球帝一次性抓取存量；不阻塞首屏）
+loadPlayerValues()
+loadTeamValues()
 
 // 个人化数据 hydrate（订阅 + 收藏，localStorage 读取 + 多 tab 同步监听）
 onMounted(() => userStore.init())

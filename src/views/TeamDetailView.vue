@@ -12,7 +12,7 @@ import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { usePlayersStore } from '../stores/players'
 import { useTeamsStore } from '../stores/teams'
-import { cityName, teamName, t, venueName } from '../utils/i18n'
+import { cityName, teamName, t, venueName, teamValue, formatTeamValue, loadTeamValues } from '../utils/i18n'
 import type { LeagueSlug } from '../utils/constants'
 import { bannerTheme } from '../utils/teamColor'
 
@@ -35,6 +35,7 @@ async function load() {
   try {
     await ensureLeague(league.value)
     await players.ensureIndex(league.value, season.value)
+    await loadTeamValues()
     if (seq.value !== my) return
   } catch (e) {
     if (seq.value !== my) return
@@ -54,6 +55,7 @@ const squad = computed(() => {
 
 const displayName = computed(() => (team.value ? teamName(team.value.name, app.lang) : ''))
 const record = computed(() => team.value?.record ?? null)
+const squadValueMillion = computed(() => (team.value ? teamValue(team.value.name) : null))
 const teamSlug = computed(() => {
   const t = team.value
   if (!t) return String(teamId.value)
@@ -104,7 +106,7 @@ function back() {
           <div class="flag-id">
             <h1 class="flag-name">{{ displayName }}</h1>
             <p class="flag-sub">
-              {{ team.abbreviation }}<template v-if="team.venue?.name"> · {{ venueName(team.venue.name, app.lang) }}</template><template v-if="team.venue?.city"> · {{ cityName(team.venue.city, app.lang) }}</template>
+              {{ team.abbreviation }}<template v-if="team.venue?.name"> · {{ venueName(team.venue.name, app.lang) }}</template><template v-if="team.venue?.city"> · {{ cityName(team.venue.city, app.lang) }}</template><template v-if="squadValueMillion != null"> · {{ t('team.squadValue', app.lang) }} {{ formatTeamValue(squadValueMillion, app.lang) }}</template>
             </p>
           </div>
         </div>
