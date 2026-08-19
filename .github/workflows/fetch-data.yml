@@ -30,6 +30,11 @@ jobs:
       - name: Fetch ESPN core (teams/players/leaders)
         run: node scripts/fetch-espn-core.js
 
+      # 队徽本地化：core 生成 teams.json（含新赛季升班马）后补下载缺失队徽 PNG。
+      # fetch-logos.js 幂等，只补缺失、跳过已存在，赛季切换升班马自动补图。
+      - name: Fetch team logos (localize crests)
+        run: node scripts/fetch-logos.js
+
       # Understat (xG) 2026-08-18 合规舍弃：不再获取/展示 xG，链路保留（fetch-understat.js / build-team-map.js 文件未删）。
       # 恢复时重新启用下面两步即可：
       # - name: Fetch Understat (xG)
@@ -49,7 +54,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data
+          git add public/data public/logos
           if git diff --cached --quiet; then
             echo "数据无变化，跳过提交"
           else

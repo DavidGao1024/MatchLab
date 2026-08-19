@@ -1,11 +1,18 @@
 /**
  * 下载队徽到本地（零依赖，仅 Node 内置模块）
  *
- * 用途：把 teams.json 里 ESPN 盗链的 logo/logoDark 下载到 public/logos/{id}.png
- * 与 {id}-dark.png，替代 a.espncdn.com 热链。图片为静态资源，可 git add。
+ * 用途：按 teams.json 里每个 team 的 id 构造 ESPN CDN 地址下载队徽，
+ * 存到 public/logos/{id}.png 与 {id}-dark.png，替代 a.espncdn.com 热链。
+ * 图片为静态资源，可 git add。
  *
- * 用法：node scripts/fetch-logos.js（在 fetch-espn-core.js 改本地路径、数据重生前跑）
- * 幂等：已存在的图会覆盖重下；失败清单打印出来人工处理。
+ * URL 约定（2026-08-19 与 core API team 端点 logos.href 核对一致）：
+ *   明亮版 https://a.espncdn.com/i/teamlogos/soccer/500/{id}.png
+ *   深色版 https://a.espncdn.com/i/teamlogos/soccer/500-dark/{id}.png
+ * 某队若 core API 无 dark 版，teams.json 的 logoDark 为 null，自然跳过。
+ *
+ * 用法：node scripts/fetch-logos.js
+ * 幂等：已存在的图跳过（只补缺失）；要强制重下先删对应 public/logos/{id}*.png；
+ *       失败清单打印出来人工处理。
  */
 'use strict';
 
@@ -16,6 +23,7 @@ const path = require('path');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 const LOGO_DIR = path.join(__dirname, '..', 'public', 'logos');
+const CDN_BASE = 'https://a.espncdn.com/i/teamlogos/soccer';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
 const INTERVAL_MS = 100;
 
@@ -69,10 +77,16 @@ async function main() {
     const t = JSON.parse(fs.readFileSync(tf, 'utf8'));
     for (const team of t.teams || []) {
       const id = team.id;
-      if (seen.has(id)) continue;
+      if (id == null || seen.has(id)) continue;
       seen.add(id);
-      if (team.logo && team.logo.startsWith('http')) jobs.push({ id, url: team.logo, file: `${id}.png` });
-      if (team.logoDark && team.logoDark.startsWith('http')) jobs.push({ id, url: team.logoDark, file: `${id}-dark.png` });
+      // 只补 ESPN 标准路径 logos/{id}.png；覆盖路径（如 logos/chn.1/{id}.png）是手动图，跳过
+      // 已存在的文件跳过（只补缺失），避免每次全量重下浪费流量与无谓 diff
+      if (team.logo && /^logos\/\d+\.png$/.test(team.logo) && !fs.existsSync(path.join(LOGO_DIR, `${id}.png`))) {
+        jobs.push({ id, url: `${CDN_BASE}/500/${id}.png`, file: `${id}.png` });
+      }
+      if (team.logoDark && /^logos\/\d+-dark\.png$/.test(team.logoDark) && !fs.existsSync(path.join(LOGO_DIR, `${id}-dark.png`))) {
+        jobs.push({ id, url: `${CDN_BASE}/500-dark/${id}.png`, file: `${id}-dark.png` });
+      }
     }
   }
 
