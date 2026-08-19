@@ -24,13 +24,14 @@
 | 2026-08-12 | **（待总司令亲批晋升）** | 子项目 1.9「移动端卡片化第二批（收藏夹页重写）」完工 + 验收闭环（08-11 同会话九 commit：spec+样式稿入库 → 5 Task 计划 → 导出日历钮紧凑变体 → FavoriteRowCard 行卡（队徽/星标+联赛徽章+首字圆牌兜底+无编号降级）→ FavoritesView 暗色单行卡重写 → 英文模式横滑修复；08-10 同日先清 1.8 遗留：i18n 硬编码二批 + 顶行偏高 + 搜索层自动关 + 下拉悬停桥；08-12 任务 5 手测总司令亲批浏览器许可闭环：收藏夹 10 项全过（.ics 落盘 38 场 + toast 观察器实证）、桌面两档无破相、四页中英双语 375px 零溢出零残留无真问题；观察级两条只记不修（存量蓝色共享钮 / 英文长名狠截断）；234 单测全绿，typecheck/build 通过。**军衔待总司令亲批** |
 | 2026-08-05 | **（待总司令亲批晋升）** | 子项目 1.8「移动端卡片化方案 B（第一批）」代码完工待回归（同会话 8 Task subagent-driven-development，implementer + spec review + quality review 双关，8 subagent commit 在 main 本地未 push）：3 个新移动卡片组件（PlayerListCardMobile / LeaderRowCardMobile / ComparePlayerCardMobile）+ AppHeader 移动搜索图标 + Teleport 全屏搜索层 + PlayersView/LeadersView/CompareView 三 view 双 DOM 接入；双 DOM 模式（PC 表格 `hidden md:block` 包原样 / 移动卡片 `md:hidden`）保证 PC 端字节级零影响；新增 24 单测（原 148 → 172），typecheck/build 通过；375px 移动手测（4 处交互）+ i18n 双语手测（6 项）列入待回归清单（subagent 执行期间按项目约定禁用浏览器）；plan 与 spec 入库 `docs/superpowers/{plans,specs}/2026-08-05-mobile-cards*.md`，mockup 入库 `tmp/mockup/mobile-cards.html`。**军衔待总司令亲批** |
 | 2026-08-17 | **营长** | 总司令亲批「晋升」，合并 08-03/08-04×2/08-05/08-12 全部待批晋升 + 本日两仗：① 国籍国旗 Task 3–7 收尾（六展示位插旗 + 手测九项全过 + 数据还原）② 懂球帝补齐子项目（中超显旗 49%→98%、284 单测全绿、三提交落库）；另排 workflow 两坑（Node20 deprecated 升 @v7、Fetch Data 跑动中 push 撞车致 #26 红叉）。自此与协作模式「总司令下令→营长执行」对齐 |
+| 2026-08-18 | **（待总司令亲批晋升）** | 本日三连仗：① 合规六件套全落地（国旗开源 flagcdn 116 国本地化 + xG 舍弃链路保留 + 队徽 112 队本地化 + 页脚免责声明 + 降频每周一/四/六 + 停懂球帝）——ESPN 盗链三页实测清零、删 34MB 无授权 Understat 存量；② 新赛季切换（resolveSeasonsInPlace 赛程排定即切季 + computeStandings 季前完整榜单，英超/意甲/德甲/法甲季前即切 2026）；③ 球员履历新特性（fetch-transfers 抓 ESPN transactions → buildCareer 效力球队+年份区间 → 球员详情页中文履历 + TEAM_ZH 补录 86 知名球队）。289 单测全绿，typecheck 过。**军衔待总司令亲批** |
 
 ## 三、技术栈与架构偏好
 
 - Vite 6 + Vue 3（`<script setup>`）+ Pinia + Vue Router 4（hash mode）+ TypeScript strict + Tailwind 4 + MiniSearch
 - 环境钉版（2026-07-24 定）：Node ≥20.19（本地 20.19.6），`.nvmrc` / package.json engines / Actions setup-node 三处一致；Vite 钉 6（脚手架用 `npm create vite@6`，不用 latest）；vue-router 钉 `@4`（latest 已是 v5，要求 Vite 7/8，不兼容）
 - GitHub Pages 静态部署（base `/MatchLab/` = 仓库名）；数据管线 = GitHub Actions + 零依赖 Node 脚本 → 静态 JSON
-- 数据源定调：ESPN site.api 浏览器直连；ESPN core API 与 Understat 一律走 Actions；FBref / Transfermarkt 弃用；懂球帝用于球员中文译名表抓取（Actions 跑）
+- 数据源定调：ESPN site.api 浏览器直连；ESPN core API 走 Actions；**Understat xG 已舍弃（2026-08-18 合规，链路保留 XG_ENABLED=false）**；FBref / Transfermarkt 弃用；懂球帝译名表用存量、不再持续抓；转会履历走 ESPN transactions（Actions 跑）
 
 ## 四、项目工作流
 
@@ -49,7 +50,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概况
 
-五大联赛（英超/西甲/意甲/德甲/法甲）足球数据查询网站，**Phase 0–6 MVP + 子项目 1–1.9（个人化 + 移动端兼容系列）均完工**（线上部署 https://davidgao1024.github.io/MatchLab/）：Vite 6 + Vue 3 + TS strict + Tailwind 4 脚手架、hash 路由 + Pinia、部署工作流、数据管线（fetch-espn-core / fetch-understat / fetch-espn-scores / build-team-map / fetch-dqd-players 五个零依赖脚本 + 每日定时工作流）均已入库，`public/data/` 含六联赛静态数据（球队 96+ / 球员 2611 / 队名映射 26 条 / 球员中英译名 31393 变体）；前端积分榜 + 赛程 + 首页 + 比赛详情弹窗 + 球员/球队详情 + 排行榜 + 对比页 + 个人化（球队订阅 + 收藏夹 + iCal 导出 + 伤员端点 + 隐私模式 readOnly）齐上线（234 项单测全绿，typecheck/build 通过）。
+五大联赛（英超/西甲/意甲/德甲/法甲）足球数据查询网站，**Phase 0–6 MVP + 子项目 1–1.9（个人化 + 移动端兼容系列）均完工**（线上部署 https://davidgao1024.github.io/MatchLab/）：Vite 6 + Vue 3 + TS strict + Tailwind 4 脚手架、hash 路由 + Pinia、部署工作流、数据管线（fetch-espn-core / fetch-understat / fetch-espn-scores / build-team-map / fetch-dqd-players 五个零依赖脚本 + 每日定时工作流）均已入库，`public/data/` 含六联赛静态数据（球队 96+ / 球员 2611 / 队名映射 26 条 / 球员中英译名 31393 变体）；前端积分榜 + 赛程 + 首页 + 比赛详情弹窗 + 球员/球队详情（球员含**转会履历**）+ 排行榜 + 对比页 + 个人化（球队订阅 + 收藏夹 + iCal 导出 + 伤员端点 + 隐私模式 readOnly）齐上线（289 项单测全绿，typecheck/build 通过）；2026-08-18 合规收尾（国旗/队徽本地化 + xG 舍弃 + 免责声明 + 降频）+ 新赛季切换。
 
 动手写任何功能代码前，先读 `docs/implementation-plan.md`（施工图纸）——技术栈、目录结构、数据管线、Phase 0–6 分步计划与验收标准都在里面，按阶段执行，不要另起架构。
 
@@ -93,12 +94,20 @@ node scripts/handfill-player-zh.js                # 把 i18n.ts PLAYER_ZH 手填
 
 # FBref HTML 解析原型（URL 模式被 Cloudflare JS 挑战拦截，只能用浏览器手动保存的本地 HTML）
 node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
+
+# 国旗/队徽本地化（2026-08-18 合规，下载到本地替代 ESPN 盗链）
+node scripts/fetch-flags.js                         # flagcdn 国旗 → public/flags/{iso2}.png
+node scripts/fetch-logos.js                         # ESPN 队徽 → public/logos/{id}.png
+
+# 转会履历（ESPN athletes/{id}/transactions，联赛级汇总，2026-08-18）
+node scripts/fetch-transfers.js                     # 全 6 联赛 → public/data/{league}/transfers.json
+LEAGUE=eng.1 node scripts/fetch-transfers.js        # 单联赛；PLAYERS_LIMIT=N 冒烟
 ```
 
 - Understat 联赛参数：`EPL` / `La_liga` / `Serie_A` / `Bundesliga` / `Ligue_1`；`2025` 表示 2025–26 赛季
 - Understat 输出：`xg/standings.json`（积分榜 + xG/xGA/xpts + 每队逐场历史）、`xg/players.json`（全量球员 xG 统计）
 - 抓取脚本公共库：`scripts/lib/http.js`（UA/gzip/重试/比较写入）、`scripts/lib/espn-endpoints.js`（端点常量 + 联赛配置）
-- 定时抓取：`.github/workflows/fetch-data.yml`（每天 UTC 06:00，数据无变化不 commit）
+- 定时抓取：`.github/workflows/fetch-data.yml`（每周一/四/六 UTC 06:00，2026-08-18 降频；已含 fetch-transfers，数据无变化不 commit）
 - FBref 路径已被 Understat 取代（数据更干净、无反爬），脚本仅保留 HTML 解析逻辑备用
 - 新写抓取脚本沿用同一约定：纯 Node 内置模块（https/zlib/fs）、UA 设置（默认浏览器 UA；**服务端抓 site.api 必须用 curl UA**，见数据源结论关键事实）、gzip 解压、请求间隔（≥200ms）、数据无变化不 commit；脚本为 CommonJS（由 `scripts/package.json` 的 `type: commonjs` 隔离，不受根 package.json `type: module` 影响）
 - **空榜防线**（2026-08-10 增设）：`fetch-espn-scores.js` 全月份抓取失败时拒绝写榜并抛错，让工作流红灯——08-05 事故证明「静默用空数据覆写」比抓取失败本身危害更大；**Actions 红灯务必查看原因**，别只等第二天自动重跑
@@ -109,7 +118,7 @@ node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 
 浏览器只 fetch 两类东西：
 1. **ESPN site.api**（实时数据：比分/阵容/事件/H2H/伤病）——CORS 已验证，浏览器直连，**比分不进 Actions**
-2. **本站静态 JSON**（低频数据：球队/球员档案/统计/排行榜/xG）——由 Actions 预生成，按 联赛 → 球队 → 球员 懒加载
+2. **本站静态 JSON**（低频数据：球队/球员档案/统计/排行榜/转会履历）——由 Actions 预生成，按 联赛 → 球队 → 球员 懒加载
 
 **ESPN core API（sports.core.api.espn.com）和 Understat 绝不在浏览器调用**（CORS 未验证/大概率不通），一律走 Actions → 静态文件。全量数据约 100–150 MB，禁止整包加载；拆分策略与首屏预算见 implementation-plan.md §5。
 
@@ -119,10 +128,11 @@ node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 |---|---|---|
 | ESPN site.api | 赛程/比分/阵容/事件/28 项技术统计/H2H/伤病；联赛 slug：`eng.1` / `esp.1` / `ita.1` / `ger.1` / `fra.1` / `chn.1` | ✅ 浏览器可直连 |
 | ESPN core API | 球队（颜色/队徽/场馆）、球员档案 + 70+ 字段统计、12 项联赛排行榜、26 个历史赛季、220 个联赛元数据 | ✅ 走 Actions |
-| Understat | 五大联赛 xG/xA/npxG/xGChain/xGBuildup、球员逐场时间线、单场阵容细位置 | ✅ 免费无 Key，走 Actions |
+| Understat | 五大联赛 xG/xA/npxG/xGChain/xGBuildup、球员逐场时间线、单场阵容细位置 | ❌ 2026-08-18 合规舍弃（链路保留，`XG_ENABLED=false`） |
 | 懂球帝 | 球员中英文译名对照表（roster API + 球员详情页 NUXT vm 沙箱提取）；season_id 实测：英超=24646、西甲=24651、意甲=24596、德甲=24648、法甲=24652、中超=26322 | ✅ Actions 跑 `scripts/fetch-dqd-players.js` |
 | FBref | 射门坐标地图等 | ❌ Cloudflare JS 挑战，curl/Node/CF Worker 反代都过不了 |
-| Transfermarkt | 身价/转会 | ❌ API 全封，MVP 不做 |
+| Transfermarkt | 身价/转会 | ❌ 405 人机验证（CloudFront），且逆向爬违背合规；转会改用 ESPN transactions |
+| ESPN transactions | 球员转会履历（`athletes/{id}/transactions`，date/from/to/amount） | ✅ 走 Actions `fetch-transfers.js`；最新到 2024、无当季、金额仅 4.2% 覆盖 |
 
 **关键事实**：
 - ESPN core 的 team/athlete ID **跨赛事全局一致**（Arsenal=359 在 EPL/UCL 相同；Haaland=253989 跨赛事相同）——ESPN 内部合并无需映射表，数据模型按 `(entity_id, league_slug, season)` 三元组组织
@@ -135,6 +145,7 @@ node scripts/fetch-fbref.js tmp/fbref/overview.html data tmp/fbref/squads
 - 端点完整清单在 data-site-mvp-plan.md 的 2026-07-21 几篇调研记录里，写抓取脚本前先查
 - 球员中文译名：`public/data/mappings/players-zh.json`（31393 个变体，覆盖英超/西甲/意甲/德甲/法甲/中超六联赛全队 + 反序/去重音/撇号/单名兜底 + 中超外援+DOB匹配手填），App.vue 启动时 `loadPlayerNames()` 异步加载合并到 PLAYER_ZH；`playerName(name, lang)` 函数带去重音 + 大小写不敏感 + 撇号兜底 + 单名兜底 + 分词回退；中文模式命中显示译名，未命中显示 ESPN shortName。当前 ESPN 一线队命中率：英超 81.1% / 西甲 85.7% / 意甲 73.7% / 德甲 87.2% / 法甲 83.0% / 中超 **95.9%**（总计 83.7%）
 - 个人化数据（子项目 1）：订阅 + 收藏夹 localStorage 持久化（key=`matchlab:subscriptions` / `matchlab:favorites`，version=1，debounce 200ms 写盘），多 tab 同步走 `storage` event；隐私模式 localStorage 不可写 → store `readOnly=true` flag → SubscribeButton/FavoriteButton/ExportCalendarButton 三按钮 disabled，避免无效操作
+- 转会履历（2026-08-18）：ESPN core `athletes/{id}/transactions`（跨联赛、不带 league/season 前缀）；联盟级 `leagues/{slug}/transactions` 端点返回空，故逐球员遍历；数据**最新到 2024、无当季转会、金额约 4.2% 有值**（其余 Undisclosed）；五大联赛 ~6 成球员有履历，中超本土基本无（青训未转会）；前端 `buildCareer()` 把转会整合成「效力球队 + 年份区间」（同队多次租借合并、最新队标"至今"）
 
 ## 跨源 Join（ESPN ↔ Understat）
 

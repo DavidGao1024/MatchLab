@@ -27,9 +27,9 @@
 - [x] 两者的 CORS 表现与更新频率 ✅ 2026-07-24 线上 origin 实测：ESPN core/site 通，Understat 拦；低频数据 Actions 每日抓取（条件 commit），实时比分浏览器直连
 
 ### 身价 / 转会
-- [ ] **Transfermarkt** 是否有非官方 JSON 端点 ❌ 直接 API 不可用 2026-07-17
-- [ ] 或需要 HTML 解析（脆弱性评估）
-- [ ] 转会窗期间的数据新鲜度需求
+- [ ] **Transfermarkt** 是否有非官方 JSON 端点 ❌ 直接 API 不可用 2026-07-17；2026-08-18 复测网页 405「Human Verification」（CloudFront）——无 API + 反爬双重封死，且逆向爬违背合规
+- [x] **ESPN transactions 端点** ✅ `athletes/{id}/transactions` 提供球员转会履历（date/from/to/amount），2026-08-18 落地「球员履历」功能；局限：最新到 2024、无当季转会、金额 4.2% 覆盖（详见调研记录 2026-08-18）
+- [x] 转会窗新鲜度：ESPN 无当季转会 → 转向「历史履历」定位，当季转会待付费源（API-Football）
 
 ### 伤病
 - [ ] 英超官方 injury report 端点
@@ -175,6 +175,18 @@
 ## 调研记录
 
 > 按日期倒序记录每次调研进展，格式：`### YYYY-MM-DD`
+
+### 2026-08-18 — 转会数据源调研：德转 405 人机验证 + ESPN transactions 落地球员履历
+
+**背景**：总司令要「赛季前转会」展示，调研免费转会数据源。
+
+**结论**：
+- **德转（Transfermarkt）**：网页 405 + 「Human Verification」（CloudFront），curl/Node 直接抓被封；无公开 API。且逆向爬商业数据商违背当天刚做的合规降风险，放弃。
+- **TheSportsDB** `lookuptransfers.php` 端点 404（已废弃）。
+- **football-data.org / API-Football**：转会端点在付费层，违背「暂不花钱」。
+- **ESPN core** `athletes/{id}/transactions` ✅ 可用：球员转会履历（date/from/to/type/amount），跨联赛、不带 league/season 前缀；联盟级 `leagues/{slug}/transactions` 返回空，故逐球员遍历（→ `fetch-transfers.js`）。
+
+**落地**：因 ESPN 数据最新到 2024、无当季转会，改「球员履历」定位（效力球队 + 年份区间），球员详情页展示。全量 6 联赛 2786 条转会（英超 1040 / 西甲 417 / 意甲 582 / 德甲 317 / 法甲 386 / 中超 44）。金额 4.2% 有值（其余 Undisclosed）。`buildCareer()` 整合同队多次租借 + 最新队标「至今」。TEAM_ZH 补录 86 个跨联赛知名球队中文译名（覆盖 64%）。
 
 ### 2026-08-13 — 天津津门虎颜色纠偏滞留事故：撞车 + 部署断链 + 缓存滞留三连复盘
 
