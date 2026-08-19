@@ -20,6 +20,11 @@ const router = createRouter({
     { path: '/favorites', name: 'favorites', component: () => import('../views/FavoritesView.vue') },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
+  // 路由切换重置滚动：新导航回顶部，后退/前进恢复原位置（否则从滚动过的列表页
+  // 进入详情页会保留上一页滚动位置，表现为"进来就在中部"）
+  scrollBehavior(_to, _from, savedPosition) {
+    return savedPosition || { top: 0 }
+  },
 })
 
 // 联赛参数非法 → 打回首页（规格规则 6）。月份格式校验在 ScheduleView 内做（回落默认月份）
