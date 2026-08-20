@@ -15,7 +15,7 @@ import { useAppStore } from '../stores/app'
 import { usePlayersStore } from '../stores/players'
 import { useTeamsStore } from '../stores/teams'
 import { useXgStore } from '../stores/xg'
-import { playerName, teamName, t, playerValue, formatPlayerValue, loadPlayerValues } from '../utils/i18n'
+import { playerName, teamName, t, playerValue, formatPlayerValue, loadPlayerValues, countryName } from '../utils/i18n'
 import { buildCareer } from '../utils/career'
 import { useTransfersStore } from '../stores/transfers'
 import { XG_ENABLED } from '../utils/constants'
@@ -115,7 +115,7 @@ function back() {
         <TeamLogo :team="team" :size="56" />
         <div class="flex-1 min-w-0">
           <div class="flex items-center gap-3">
-            <h1 class="font-cond text-3xl font-semibold text-white truncate"><NationFlag :flag="profile.flag" :citizenship="profile.citizenship" :size="24" class="mr-1.5" />{{ displayName }}</h1>
+            <h1 class="font-cond text-3xl font-semibold text-white truncate">{{ displayName }}</h1>
             <FavoriteButton type="player" :id="playerId" :name="displayName" :league="league" />
           </div>
           <p class="text-sm text-slate-400 mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -130,7 +130,14 @@ function back() {
       </div>
 
       <!-- 基础信息 -->
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-3 mb-6">
+        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
+          <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('player.country', app.lang) }}</div>
+          <div class="text-base text-white font-mono-d flex items-center gap-1.5">
+            <NationFlag :flag="profile.flag" :citizenship="profile.citizenship" :size="16" />
+            <span>{{ countryName(profile.citizenship, app.lang) }}</span>
+          </div>
+        </div>
         <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
           <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('col.age', app.lang) }}</div>
           <div class="text-base text-white font-mono-d">{{ profile.age ?? '—' }}</div>
