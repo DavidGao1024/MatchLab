@@ -9,8 +9,13 @@ import { useTeamsStore } from '../../src/stores/teams'
 import { usePlayersStore } from '../../src/stores/players'
 import type { Team, PlayerSummary } from '../../src/types/models'
 
-// 数据全部预注入：发生任何网络请求都算异常
-const mockFetch = vi.fn().mockRejectedValue(new Error('no fetch expected'))
+// 数据全部预注入：除球队身价静态表外，发生任何网络请求都算异常
+const mockFetch = vi.fn((input: unknown) => {
+  if (String(input).includes('team-values.json')) {
+    return Promise.resolve({ ok: true, json: () => Promise.resolve({ teams: {} }) })
+  }
+  return Promise.reject(new Error('no fetch expected'))
+})
 globalThis.fetch = mockFetch as any
 
 beforeEach(() => {
@@ -65,11 +70,13 @@ async function setup(team: Team, squad: PlayerSummary[] = []) {
 }
 
 describe('球队详情页·主题上页', () => {
-  it('基本盘：挂载成功、队名出现、无网络请求', async () => {
+  it('基本盘：挂载成功、队名出现、无多余网络请求', async () => {
     const w = await setup(makeTeam())
     expect(w.text()).toContain('Arsenal')
     expect(w.text()).toContain('85')
-    expect(mockFetch).not.toHaveBeenCalled()
+    // 放行唯一合法请求：球队身价静态表；其余一律违规
+    const urls = mockFetch.mock.calls.map((c) => String(c[0]))
+    expect(urls.every((u) => u.includes('team-values.json'))).toBe(true)
   })
 
   it('球队主色上根容器：--flag-from 为主色，--accent 在位', async () => {
