@@ -3,6 +3,7 @@ import { onMounted, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import AppFooter from './components/layout/AppFooter.vue'
 import AppHeader from './components/layout/AppHeader.vue'
+import BackgroundParticles from './components/layout/BackgroundParticles.vue'
 import MatchModal from './components/matches/MatchModal.vue'
 import Toast from './components/common/Toast.vue'
 import ConfirmDialog from './components/common/ConfirmDialog.vue'
@@ -44,6 +45,7 @@ watchEffect(() => {
   <div class="relative min-h-screen flex flex-col">
     <div class="pitch-texture" aria-hidden="true"></div>
     <div class="league-glow" aria-hidden="true"></div>
+    <BackgroundParticles />
     <AppHeader />
     <main class="relative z-10 flex-1 flex flex-col w-full max-w-[1600px] mx-auto px-4">
       <router-view class="flex flex-col flex-1" />
