@@ -25,7 +25,7 @@ const LEAGUES = [
   { slug: 'esp.1', name: 'LALIGA', nameZh: '西甲', understatSlug: 'La_liga', country: 'Spain', teams: 20, color: '#EE8707', season: '2025', seasonType: 'european' },
   { slug: 'ita.1', name: 'Italian Serie A', nameZh: '意甲', understatSlug: 'Serie_A', country: 'Italy', teams: 20, color: '#008FD7', season: '2025', seasonType: 'european' },
   { slug: 'ger.1', name: 'Bundesliga', nameZh: '德甲', understatSlug: 'Bundesliga', country: 'Germany', teams: 18, color: '#D20100', season: '2025', seasonType: 'european' },
-  { slug: 'fra.1', name: 'French Ligue 1', nameZh: '法甲', understatSlug: 'Ligue_1', country: 'France', teams: 18, color: '#DAE1E6', season: '2025', seasonType: 'european' },
+  { slug: 'fra.1', name: 'French Ligue 1', nameZh: '法甲', understatSlug: 'Ligue_1', country: 'France', teams: 18, color: '#14213D', season: '2025', seasonType: 'european' },
   { slug: 'chn.1', name: 'Chinese Super League', nameZh: '中超', understatSlug: null, country: 'China', teams: 16, color: '#C8102E', season: '2026', seasonType: 'calendar',
     // 2026 赛季"假赌黑"专项整治扣分（赛季前固定扣除，不计入比赛结果）
     pointDeductions: { 977: 10, 8239: 10, 21910: 7, 7521: 6, 8240: 6, 21506: 5, 18203: 5, 15515: 5, 2052: 5 },
@@ -59,10 +59,57 @@ const site = {
  * color / alternateColor 用于修正 ESPN 返回占位色或错色的情况。
  */
 const TEAM_OVERRIDES = {
-  // 中超 chn.1（logo 路径相对于 public/，前端自动拼 BASE_URL）
-  131704: { logo: 'logos/chn.1/131704.png', color: '#C8102E' },  // 重庆铜梁龙
-  131705: { logo: 'logos/chn.1/131705.png', color: '#C8102E' },  // 辽宁铁人
-  8239:   { logo: 'logos/chn.1/8239.png', color: '#5B2D8B', alternateColor: '#FFFFFF' }, // 天津津门虎（ESPN logo 过旧；主场紫色，2026 赛季细节白色，ESPN 错给深红）
+  // ===== 英超（副色/主色修正，正确的队不动）=====
+  349: { color: '#DA291C', alternateColor: '#000000' },  // 伯恩茅斯（副紫→黑）
+  359: { color: '#EF0107', alternateColor: '#FFFFFF' },  // 阿森纳（副蓝→白）
+  362: { color: '#670E36', alternateColor: '#95BFE5' },  // 维拉（副黑→天蓝 #95BFE5）
+  331: { color: '#0057B8', alternateColor: '#FFFFFF' },  // 布莱顿（主亮蓝→蓝，副青→白）
+  364: { color: '#C8102E', alternateColor: '#FFFFFF' },  // 利物浦（主色微调）
+  363: { color: '#034694', alternateColor: '#FFFFFF' },  // 切尔西（主色校正）
+  384: { color: '#1B458F', alternateColor: '#C4122E' },  // 水晶宫（蓝红）
+  370: { color: '#FFFFFF', alternateColor: '#000000' },  // 富勒姆（副红→黑）
+  361: { color: '#241F20', alternateColor: '#FFFFFF' },  // 纽卡（副深蓝→白）
+  393: { color: '#DD0000', alternateColor: '#FFFFFF' },  // 森林（副绿→白）
+  366: { color: '#EB172B', alternateColor: '#FFFFFF' },  // 桑德兰（副粉→白）
+  // ===== 西甲 =====
+  96: { color: '#016FB9', alternateColor: '#FFFFFF' },   // 阿拉维斯（副粉→白）
+  93: { color: '#EE2523', alternateColor: '#FFFFFF' },   // 毕尔巴鄂（副黑→白）
+  83: { color: '#A50044', alternateColor: '#004D98' },   // 巴萨（blaugrana 红蓝，主深红副黄已改）
+  3751: { color: '#008F4C', alternateColor: '#FFFFFF' }, // 埃尔切（副紫→白）
+  1538: { color: '#A51931', alternateColor: '#004B93' }, // 莱万特（副黑→蓝）
+  99: { color: '#0098D3', alternateColor: '#FFFFFF' },   // 马拉加（主淡蓝副粉 → 蓝白）
+  86: { color: '#FFFFFF', alternateColor: '#FEBE10' },   // 皇马（副深绿→金）
+  // ===== 意甲 =====
+  103: { color: '#FB090B', alternateColor: '#000000' },  // AC 米兰（副白→黑）
+  110: { color: '#0068A8', alternateColor: '#000000' },  // 国米（副白→黑）
+  111: { color: '#000000', alternateColor: '#FFFFFF' },  // 尤文（副黄→白）
+  113: { color: '#EE2E2E', alternateColor: '#FFD700' },  // 莱切（副深蓝→黄）
+  115: { color: '#F3D02E', alternateColor: '#0056A0' },  // 帕尔马（主黑副黄 → 黄蓝）
+  118: { color: '#1B1B1B', alternateColor: '#FFFFFF' },  // 乌迪内斯（副黄→白）
+  // ===== 德甲 =====
+  10388: { color: '#008F4C', alternateColor: '#FFFFFF' }, // 埃尔弗斯贝格（主黑→绿白）
+  // ===== 法甲 =====
+  172: { color: '#002E5F', alternateColor: '#FFFFFF' },  // 欧塞尔（主白→蓝）
+  174: { color: '#E30613', alternateColor: '#FFFFFF' },  // 摩纳哥（副深绿→白）
+  175: { color: '#E30613', alternateColor: '#F0B100' },  // 朗斯（sang et or 红金：副深绿→金）
+  2502: { color: '#E30613', alternateColor: '#000000' }, // 尼斯（副粉→黑）
+  6851: { color: '#0D1F3D', alternateColor: '#FFFFFF' }, // 巴黎FC（主副黑→深蓝白）
+  // ===== 中超（占位色黑+红批量修正；球衣常识校填，仍建议人工复核）=====
+  21355: { color: '#C60000', alternateColor: '#FFFFFF' }, // 成都蓉城（主黑→红）
+  22537: { color: '#003F8A', alternateColor: '#FFFFFF' }, // 大连英博（主黑→蓝）
+  8240: { color: '#C60000', alternateColor: '#FFFFFF' },  // 河南（副红→白）
+  21910: { color: '#C60000', alternateColor: '#FFFFFF' }, // 青岛海牛（主黑→红）
+  22198: { color: '#003F8A', alternateColor: '#FFFFFF' }, // 青岛西海岸（主黑→蓝）
+  7521: { color: '#F37021', alternateColor: '#FFFFFF' },  // 山东泰山（主红→橙）
+  977: { color: '#2C5FA8', alternateColor: '#FFFFFF' },   // 上海申花（主红→蓝）
+  22199: { color: '#003F8A', alternateColor: '#FFFFFF' }, // 深圳新鹏城（主黑→蓝）
+  21506: { color: '#003F8A', alternateColor: '#FFFFFF' }, // 武汉三镇（主黑→蓝）
+  22536: { color: '#C60000', alternateColor: '#FFFFFF' }, // 云南玉昆（主黑→红）
+  18203: { color: '#008F4C', alternateColor: '#FFFFFF' }, // 浙江（主黑→绿白）
+  // logo 覆盖（路径相对于 public/，前端自动拼 BASE_URL）
+  131704: { logo: 'logos/chn.1/131704.png', color: '#C8102E', alternateColor: '#FFFFFF' },  // 重庆铜梁龙（副红→白）
+  131705: { logo: 'logos/chn.1/131705.png', color: '#C8102E', alternateColor: '#FFFFFF' },  // 辽宁铁人（副红→白）
+  8239: { logo: 'logos/chn.1/8239.png', color: '#5B2D8B', alternateColor: '#FFFFFF' }, // 天津津门虎（ESPN logo 过旧；主场紫色，2026 赛季细节白色，ESPN 错给深红）
 };
 
 /** 开赛月份：欧洲制 8 月开幕；自然年制 3 月开幕 */
