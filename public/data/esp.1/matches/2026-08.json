@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-18T09:53:51.916Z",
+  "updateTime": "2026-08-20T07:13:37.871Z",
   "league": "esp.1",
   "month": "2026-08",
   "count": 30,
@@ -139,17 +139,18 @@
       "eventId": "401882925",
       "date": "2026-08-19T19:00Z",
       "name": "Málaga at Atlético Madrid",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Riyadh Air Metropolitano",
       "home": {
         "id": 1068,
         "name": "Atlético Madrid",
         "abbreviation": "ATM",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 99,

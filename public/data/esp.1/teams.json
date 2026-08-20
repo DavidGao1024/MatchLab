@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-18T09:29:18.292Z",
+  "updateTime": "2026-08-20T06:48:40.193Z",
   "league": "esp.1",
   "season": "2026",
   "count": 20,
@@ -13,8 +13,8 @@
       "displayName": "Alavés",
       "shortDisplayName": "Alavés",
       "abbreviation": "ALA",
-      "color": "#0000ff",
-      "alternateColor": "#FFC0CB",
+      "color": "#016FB9",
+      "alternateColor": "#FFFFFF",
       "logo": "logos/96.png",
       "logoDark": "logos/96-dark.png",
       "venue": {
@@ -43,8 +43,8 @@
       "displayName": "Athletic Club",
       "shortDisplayName": "Athletic",
       "abbreviation": "ATH",
-      "color": "#C8142F",
-      "alternateColor": "#000000",
+      "color": "#EE2523",
+      "alternateColor": "#FFFFFF",
       "logo": "logos/93.png",
       "logoDark": "logos/93-dark.png",
       "venue": {
@@ -84,15 +84,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 0,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "played": 0,
-        "points": 0,
-        "goalDiff": 0,
-        "goalsFor": 0,
+        "played": 1,
+        "points": 3,
+        "goalDiff": 2,
+        "goalsFor": 2,
         "goalsAgainst": 0,
-        "summary": "0-0-0"
+        "summary": "1-0-0"
       }
     },
     {
@@ -104,8 +104,8 @@
       "displayName": "Barcelona",
       "shortDisplayName": "Barcelona",
       "abbreviation": "BAR",
-      "color": "#990000",
-      "alternateColor": "#FCE38A",
+      "color": "#A50044",
+      "alternateColor": "#004D98",
       "logo": "logos/83.png",
       "logoDark": "logos/83-dark.png",
       "venue": {
@@ -194,8 +194,8 @@
       "displayName": "Elche",
       "shortDisplayName": "Elche",
       "abbreviation": "ELC",
-      "color": "#288A00",
-      "alternateColor": "#4B2B67",
+      "color": "#008F4C",
+      "alternateColor": "#FFFFFF",
       "logo": "logos/3751.png",
       "logoDark": "logos/3751-dark.png",
       "venue": {
@@ -284,8 +284,8 @@
       "displayName": "Levante",
       "shortDisplayName": "Levante",
       "abbreviation": "LEV",
-      "color": "#C8142F",
-      "alternateColor": "#000000",
+      "color": "#A51931",
+      "alternateColor": "#004B93",
       "logo": "logos/1538.png",
       "logoDark": "logos/1538-dark.png",
       "venue": {
@@ -314,8 +314,8 @@
       "displayName": "Málaga",
       "shortDisplayName": "Málaga",
       "abbreviation": "MCF",
-      "color": "#b9e8f0",
-      "alternateColor": "#D19CA4",
+      "color": "#0098D3",
+      "alternateColor": "#FFFFFF",
       "logo": "logos/99.png",
       "logoDark": "logos/99-dark.png",
       "venue": {
@@ -327,13 +327,13 @@
       "record": {
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "played": 0,
+        "losses": 1,
+        "played": 1,
         "points": 0,
-        "goalDiff": 0,
+        "goalDiff": -2,
         "goalsFor": 0,
-        "goalsAgainst": 0,
-        "summary": "0-0-0"
+        "goalsAgainst": 2,
+        "summary": "0-0-1"
       }
     },
     {
@@ -464,8 +464,8 @@
       "displayName": "Real Madrid",
       "shortDisplayName": "Real Madrid",
       "abbreviation": "RMA",
-      "color": "#ffffff",
-      "alternateColor": "#1B4D3E",
+      "color": "#FFFFFF",
+      "alternateColor": "#FEBE10",
       "logo": "logos/86.png",
       "logoDark": "logos/86-dark.png",
       "venue": {
