@@ -13,7 +13,7 @@ const emit = defineEmits<{ (e: 'cta'): void }>()
     <p v-if="body" class="mt-2 text-sm text-slate-600 dark:text-slate-400">{{ body }}</p>
     <button
       v-if="ctaText"
-      class="mt-4 px-4 py-2 rounded bg-blue-600 text-white text-sm hover:opacity-80"
+      class="mt-4 px-4 py-2 rounded bg-slate-700 text-white text-sm hover:opacity-80"
       @click="emit('cta')"
     >
       {{ ctaText }}

@@ -55,7 +55,7 @@ async function onClick() {
     class="px-4 py-1.5 rounded text-sm font-medium transition-opacity"
     :class="subscribed
       ? 'bg-green-600 text-white hover:opacity-80'
-      : 'bg-blue-600 text-white hover:opacity-80 disabled:bg-slate-400 disabled:cursor-not-allowed'"
+      : 'bg-slate-700 text-white hover:opacity-80 disabled:bg-slate-400 disabled:cursor-not-allowed'"
     :disabled="atLimit"
     @click="onClick"
   >
