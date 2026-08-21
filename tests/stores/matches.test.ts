@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useMatchesStore } from '../../src/stores/matches'
 import { clearScoreCache } from '../../src/composables/useEspanFetch'
@@ -70,5 +70,51 @@ describe('loadTeamSchedule', () => {
     await store.loadTeamSchedule('eng.1', 359, '2025', 'european')
     const ids = store.teamSchedules['eng.1/359'].map((m) => m.eventId)
     expect(ids).toEqual(['sep'])
+  })
+})
+
+describe('loadTeamSchedule 直播分支', () => {
+  afterEach(() => { vi.useRealTimers() })
+
+  const espnEvent = (id: string) => ({
+    id,
+    date: '2025-09-10T14:00Z',
+    status: { type: { state: 'pre', completed: false }, displayClock: '0:00' },
+    competitions: [{
+      competitors: [
+        { homeAway: 'home', team: { id: '359', displayName: 'Arsenal', abbreviation: 'ARS', logo: '' }, score: '0', winner: false },
+        { homeAway: 'away', team: { id: '100', displayName: 'Everton', abbreviation: 'EVE', logo: '' }, score: '0', winner: false },
+      ],
+      venue: { fullName: 'Emirates Stadium' },
+    }],
+  })
+
+  it('当前月走直播通道', async () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2025-09-15T00:00:00Z'))
+    const store = useMatchesStore()
+    mockFetch.mockImplementation((input) => {
+      const url = String(input)
+      if (url.includes('espn')) return ok({ events: [espnEvent('live1')] })
+      return ok({ matches: [] })
+    })
+    await store.loadTeamSchedule('eng.1', 359, '2025', 'european')
+    const ids = store.teamSchedules['eng.1/359'].map((m) => m.eventId)
+    expect(ids).toEqual(['live1'])
+  })
+
+  it('直播失败回落静态快照', async () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2025-09-15T00:00:00Z'))
+    const store = useMatchesStore()
+    mockFetch.mockImplementation((input) => {
+      const url = String(input)
+      if (url.includes('espn')) return Promise.reject(new Error('espn down'))
+      if (url.includes('matches/2025-09.json')) return ok({ matches: [makeMatch({ eventId: 'snap', home: { id: 359, name: 'Arsenal' } })] })
+      return ok({ matches: [] })
+    })
+    await store.loadTeamSchedule('eng.1', 359, '2025', 'european')
+    const ids = store.teamSchedules['eng.1/359'].map((m) => m.eventId)
+    expect(ids).toEqual(['snap'])
   })
 })

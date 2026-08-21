@@ -65,9 +65,10 @@ export const useMatchesStore = defineStore('matches', {
       }
     },
     /**
-     * 加载某队整赛季赛程：跨季度 10 个月并行拉取，过滤出该队主/客场，按开球时间正序。
+     * 加载某队整赛季赛程：跨赛季月窗口（欧洲制 10 月 / 自然年 12 月）并行拉取，过滤出该队主/客场，按开球时间正序。
      * 不复用 loadMonth——它内置单月串行防过期计数（loadGen），并行调 10 次会互相丢数据。
      * 当月走直播直连（失败回落静态快照），其余月走静态 JSON；单月失败不连坐其余月。
+     * 本方法无防过期计数：调用方需自行做过期响应防护（如 seq 计数）。
      */
     async loadTeamSchedule(league: LeagueSlug, teamId: number, season: string, seasonType: 'european' | 'calendar' = 'european') {
       const k = `${league}/${teamId}`
