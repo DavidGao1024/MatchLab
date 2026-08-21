@@ -3,6 +3,7 @@ import { describe, it, expect, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { setActivePinia, createPinia } from 'pinia'
 import MatchCard from '../../../src/components/matches/MatchCard.vue'
+import MatchList from '../../../src/components/matches/MatchList.vue'
 
 const match = {
   eventId: 'e1', date: '2025-08-16T14:00Z', status: 'post', completed: true,
@@ -34,5 +35,12 @@ describe('MatchCard selfTeamId', () => {
     const w = mount(MatchCard, { props: { match, league: 'eng.1', selfTeamId: 100 } })
     expect(w.text()).toContain('客')
     expect(w.text()).not.toContain('主')
+  })
+})
+
+describe('MatchList 透传 selfTeamId', () => {
+  it('列表内本队名带"主"角标', () => {
+    const w = mount(MatchList, { props: { matches: [match], league: 'eng.1', selfTeamId: 359 } })
+    expect(w.text()).toContain('主')
   })
 })
