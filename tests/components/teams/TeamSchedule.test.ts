@@ -42,7 +42,7 @@ async function setup(matches: unknown[]) {
 }
 
 describe('TeamSchedule', () => {
-  it('显示全部赛程：已赛与未来都在列表', async () => {
+  it('显示全部赛程（已赛 + 未来）', async () => {
     const w = await setup([
       makeMatch({ eventId: 'last', date: '2025-08-10T14:00Z', status: 'post', completed: true, home: { id: 359, name: 'Arsenal', score: 2, winner: true }, away: { id: 100, name: 'Everton', score: 0, winner: false } }),
       makeMatch({ eventId: 'next', date: '2025-08-20T14:00Z', home: { id: 100, name: 'Everton' }, away: { id: 359, name: 'Arsenal' } }),
@@ -50,15 +50,17 @@ describe('TeamSchedule', () => {
     expect(w.findAll('.group').length).toBe(2)
   })
 
+  it('多场已赛与未来全显示（不裁剪）', async () => {
+    const w = await setup([
+      makeMatch({ eventId: 'early', date: '2025-08-01T14:00Z', status: 'post', completed: true, home: { id: 359, name: 'Arsenal', score: 1, winner: true }, away: { id: 100, name: 'Everton', score: 0, winner: false } }),
+      makeMatch({ eventId: 'last', date: '2025-08-10T14:00Z', status: 'post', completed: true, home: { id: 359, name: 'Arsenal', score: 2, winner: true }, away: { id: 100, name: 'Everton', score: 0, winner: false } }),
+      makeMatch({ eventId: 'next', date: '2025-08-20T14:00Z', home: { id: 100, name: 'Everton' }, away: { id: 359, name: 'Arsenal' } }),
+    ])
+    expect(w.findAll('.group').length).toBe(3)
+  })
+
   it('整季空赛程显示空态文案', async () => {
     const w = await setup([])
     expect(w.text()).toContain('暂无')
-  })
-
-  it('全已赛：列表仍显示已赛', async () => {
-    const w = await setup([
-      makeMatch({ eventId: 'only', status: 'post', completed: true, home: { id: 359, name: 'Arsenal', score: 1, winner: true }, away: { id: 100, name: 'Everton', score: 0, winner: false } }),
-    ])
-    expect(w.findAll('.group').length).toBe(1)
   })
 })

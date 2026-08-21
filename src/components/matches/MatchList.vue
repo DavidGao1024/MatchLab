@@ -28,7 +28,7 @@ const weekday = (utcDate: string) => {
         class="border-l-[3px] bg-white/[0.04] px-2.5 py-1 font-cond text-xs font-semibold uppercase tracking-[0.12em] text-slate-200"
         style="border-color: var(--league-color)"
       >{{ g.utcDate }} · {{ weekday(g.utcDate) }}</span>
-      <span class="text-[11px] text-slate-500">{{ g.matches.length }} {{ t('schedule.matchesUnit', app.lang) }}</span>
+      <span v-if="!plain" class="text-[11px] text-slate-500">{{ g.matches.length }} {{ t('schedule.matchesUnit', app.lang) }}</span>
     </div>
     <div class="grid grid-cols-1 gap-2 xl:grid-cols-2">
       <MatchCard

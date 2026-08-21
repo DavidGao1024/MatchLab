@@ -100,9 +100,9 @@ describe('球队详情页·主题上页', () => {
 })
 
 describe('球队详情页·点缀落位', () => {
-  it('战绩 7 格 class 化：积分格 stat-pts，胜绿负红语义类', async () => {
+  it('战绩 6 格 class 化：积分格 stat-pts，胜绿负红语义类', async () => {
     const w = await setup(makeTeam())
-    expect(w.findAll('.stat-cell').length).toBe(7)
+    expect(w.findAll('.stat-cell').length).toBe(6)
     expect(w.find('.stat-cell.stat-pts').exists()).toBe(true)
     expect(w.find('.stat-val.val-w').exists()).toBe(true)
     expect(w.find('.stat-val.val-l').exists()).toBe(true)

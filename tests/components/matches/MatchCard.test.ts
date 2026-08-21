@@ -42,4 +42,9 @@ describe('MatchList 透传 plain', () => {
     expect(names[0].classes()).toContain('text-white')
     expect(names[1].classes()).toContain('text-white')
   })
+
+  it('plain=true 隐藏场次计数', () => {
+    const w = mount(MatchList, { props: { matches: [match], league: 'eng.1', plain: true } })
+    expect(w.text()).not.toContain('1 场')
+  })
 })

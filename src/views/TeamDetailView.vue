@@ -131,7 +131,6 @@ function back() {
 
       <!-- 球队战绩（主色边条点缀，spec §3.4） -->
       <div v-if="record" class="record-grid">
-        <div class="stat-cell"><div class="stat-label">{{ t('team.played', app.lang) }}</div><div class="stat-val">{{ record.played }}</div></div>
         <div class="stat-cell"><div class="stat-label">{{ t('team.col.w', app.lang) }}</div><div class="stat-val val-w">{{ record.wins }}</div></div>
         <div class="stat-cell"><div class="stat-label">{{ t('team.col.d', app.lang) }}</div><div class="stat-val val-d">{{ record.draws }}</div></div>
         <div class="stat-cell"><div class="stat-label">{{ t('team.col.l', app.lang) }}</div><div class="stat-val val-l">{{ record.losses }}</div></div>
@@ -206,7 +205,7 @@ function back() {
 
 /* ===== 战绩格：主色边条 + 积分格强调（spec §3.4）===== */
 .record-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 24px; }
-@media (min-width: 768px) { .record-grid { grid-template-columns: repeat(7, 1fr); } }
+@media (min-width: 768px) { .record-grid { grid-template-columns: repeat(6, 1fr); } }
 .stat-cell {
   border: 1px solid rgba(255,255,255,0.1);
   border-left: 3px solid var(--accent);
