@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
-import MatchCard from '../matches/MatchCard.vue'
 import MatchList from '../matches/MatchList.vue'
 import DataError from '../common/DataError.vue'
 import DataLoading from '../common/DataLoading.vue'
@@ -54,9 +53,6 @@ watch([() => props.league, () => props.teamId, season, seasonType], load)
 
 const schedule = computed(() => store.teamSchedules[`${props.league}/${props.teamId}`] ?? [])
 
-// 下一场卡：第一场未赛
-const nextMatch = computed(() => schedule.value.find((m) => m.status !== 'post'))
-
 // 锚点：最后一场已赛（上一场），无已赛则第一场
 const anchorId = computed(() => {
   const played = schedule.value.filter((m) => m.status === 'post')
@@ -72,17 +68,6 @@ const anchorId = computed(() => {
     {{ t('team.scheduleEmpty', app.lang) }}
   </div>
   <template v-else>
-    <!-- 下一场 -->
-    <div v-if="nextMatch" class="mb-5 rounded-lg border border-white/10 bg-[#131a2b] p-3">
-      <div
-        class="mb-2 font-cond text-[10px] uppercase tracking-[0.14em]"
-        :style="{ color: 'var(--accent, var(--league-color))' }"
-      >
-        {{ t('team.nextMatch', app.lang) }}
-      </div>
-      <MatchCard :match="nextMatch" :league="league" plain />
-    </div>
-
     <!-- 完整列表（全部比赛） -->
     <MatchList :matches="schedule" :league="league" plain />
   </template>
