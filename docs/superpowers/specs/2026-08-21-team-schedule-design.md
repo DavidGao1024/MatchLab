@@ -117,12 +117,12 @@ Props：`league: LeagueSlug`、`teamId: number`。内部从 `useAppStore` 自行
 |---|---|---|---|
 | `team.lastMatch` | 上一场 | Last | 双卡「上一场」标签 |
 | `team.nextMatch` | 下一场 | Next | 双卡「下一场」标签 |
-| `team.finished` | 已结束 | FT | 上一场卡的完赛标注 |
+| `team.ha.home` | 主 | Home | 对阵角标本队主场 |
+| `team.ha.away` | 客 | Away | 对阵角标本队客场 |
 
 复用现有 key：
 
 - 页签「赛程」→ `nav.schedule`；「阵容」→ `team.squad`
-- 主/客角标 → `match.home` / `match.away`
 - 空态 → `schedule.noMatches`（或按球队语境微调文案）
 
 ## 七、错误与空态
