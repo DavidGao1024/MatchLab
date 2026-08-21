@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import MatchCard from '../matches/MatchCard.vue'
 import MatchList from '../matches/MatchList.vue'
 import DataError from '../common/DataError.vue'
@@ -31,7 +31,20 @@ async function load() {
     if (seq.value !== my) return
     error.value = e instanceof Error ? e.message : String(e)
   } finally {
-    if (seq.value === my) loading.value = false
+    if (seq.value === my) {
+      loading.value = false
+      await nextTick()
+      scrollToAnchor()
+    }
+  }
+}
+
+function scrollToAnchor() {
+  const id = anchorId.value
+  if (!id) return
+  const el = document.getElementById(id)
+  if (el && typeof el.scrollIntoView === 'function') {
+    el.scrollIntoView({ block: 'start' })
   }
 }
 
@@ -41,15 +54,21 @@ watch([() => props.league, () => props.teamId, season, seasonType], load)
 
 const schedule = computed(() => store.teamSchedules[`${props.league}/${props.teamId}`] ?? [])
 
-// 只显示未赛（未来）；已赛结果去掉。「下一场」取第一场未赛
-const upcoming = computed(() => schedule.value.filter((m) => m.status !== 'post'))
-const nextMatch = computed(() => upcoming.value[0])
+// 下一场卡：第一场未赛
+const nextMatch = computed(() => schedule.value.find((m) => m.status !== 'post'))
+
+// 锚点：最后一场已赛（上一场），无已赛则第一场
+const anchorId = computed(() => {
+  const played = schedule.value.filter((m) => m.status === 'post')
+  const target = played.length ? played[played.length - 1] : schedule.value[0]
+  return target ? `match-${target.eventId}` : ''
+})
 </script>
 
 <template>
   <DataError v-if="error" :message="error" @retry="load" />
   <DataLoading v-else-if="loading" kind="cards" />
-  <div v-else-if="upcoming.length === 0" class="my-10 text-center text-sm text-slate-500">
+  <div v-else-if="schedule.length === 0" class="my-10 text-center text-sm text-slate-500">
     {{ t('team.scheduleEmpty', app.lang) }}
   </div>
   <template v-else>
@@ -64,7 +83,7 @@ const nextMatch = computed(() => upcoming.value[0])
       <MatchCard :match="nextMatch" :league="league" plain />
     </div>
 
-    <!-- 完整列表（只未来） -->
-    <MatchList :matches="upcoming" :league="league" plain />
+    <!-- 完整列表（全部比赛） -->
+    <MatchList :matches="schedule" :league="league" plain />
   </template>
 </template>

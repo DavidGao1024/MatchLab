@@ -45,6 +45,7 @@ const scoreCls = computed(() => (tone.value.home === 'draw' && props.match.statu
 
 <template>
   <article
+    :id="`match-${match.eventId}`"
     class="group cursor-pointer rounded-lg border px-4 py-2.5 transition-all hover:translate-x-1"
     :class="featured ? 'border-[var(--league-color)] bg-[#191036]' : 'border-white/10 bg-[#131a2b] hover:border-[var(--league-color)] hover:bg-[#171f33]'"
     @click="open"
