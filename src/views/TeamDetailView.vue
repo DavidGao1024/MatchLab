@@ -6,6 +6,7 @@ import DataLoading from '../components/common/DataLoading.vue'
 import TeamLogo from '../components/common/TeamLogo.vue'
 import TeamSquad from '../components/teams/TeamSquad.vue'
 import TeamSchedule from '../components/teams/TeamSchedule.vue'
+import NextMatchCard from '../components/teams/NextMatchCard.vue'
 import SubscribeButton from '../components/teams/SubscribeButton.vue'
 import FavoriteButton from '../components/common/FavoriteButton.vue'
 import ExportCalendarButton from '../components/teams/ExportCalendarButton.vue'
@@ -13,6 +14,7 @@ import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { usePlayersStore } from '../stores/players'
 import { useTeamsStore } from '../stores/teams'
+import { useMatchesStore } from '../stores/matches'
 import { cityName, teamName, t, venueName, teamValue, formatTeamValue, loadTeamValues } from '../utils/i18n'
 import type { LeagueSlug } from '../utils/constants'
 import { bannerTheme } from '../utils/teamColor'
@@ -22,6 +24,7 @@ const router = useRouter()
 const app = useAppStore()
 const players = usePlayersStore()
 const teams = useTeamsStore()
+const matchesStore = useMatchesStore()
 
 const league = computed(() => route.params.league as LeagueSlug)
 const teamId = computed(() => Number(route.params.id))
@@ -54,6 +57,10 @@ const squad = computed(() => {
   return all.filter((p) => p.teamId === teamId.value)
 })
 const tab = ref<'schedule' | 'squad'>('schedule')
+const nextMatch = computed(() => {
+  const sched = matchesStore.teamSchedules[`${league.value}/${teamId.value}`] ?? []
+  return sched.find((m) => m.status !== 'post') ?? null
+})
 
 const displayName = computed(() => (team.value ? teamName(team.value.name, app.lang) : ''))
 const record = computed(() => team.value?.record ?? null)
@@ -82,8 +89,6 @@ const themeVars = computed((): Record<string, string> => {
     '--flag-from': th.from,
     '--flag-to': th.to,
     '--flag-stripe': th.stripe,
-    '--pin-from': th.pinFrom,
-    '--pin-to': th.pinTo,
     '--accent': th.accent,
     '--flag-text': th.darkText ? '#0f172a' : '#ffffff',
   }
@@ -115,7 +120,6 @@ function back() {
             </p>
           </div>
         </div>
-        <div class="pin"></div>
       </div>
       <div class="flex items-center gap-3 mt-3 mb-6">
         <SubscribeButton :league="league" :team-id="teamId" :team-name="displayName" />
@@ -129,7 +133,7 @@ function back() {
         />
       </div>
 
-      <!-- 球队战绩（主色边条点缀，spec §3.4） -->
+      <!-- 球队战绩 -->
       <div v-if="record" class="record-grid">
         <div class="stat-cell"><div class="stat-label">{{ t('team.col.w', app.lang) }}</div><div class="stat-val val-w">{{ record.wins }}</div></div>
         <div class="stat-cell"><div class="stat-label">{{ t('team.col.d', app.lang) }}</div><div class="stat-val val-d">{{ record.draws }}</div></div>
@@ -138,6 +142,8 @@ function back() {
         <div class="stat-cell"><div class="stat-label">{{ t('team.col.ga', app.lang) }}</div><div class="stat-val">{{ record.goalsAgainst }}</div></div>
         <div class="stat-cell stat-pts"><div class="stat-label">{{ t('team.col.pts', app.lang) }}</div><div class="stat-val val-pts">{{ record.points }}</div></div>
       </div>
+
+      <NextMatchCard v-if="nextMatch" :match="nextMatch" :league="league" />
 
       <!-- 页签栏：赛程 / 阵容 -->
       <div class="mt-6 flex gap-6 border-b border-white/10">
@@ -201,14 +207,12 @@ function back() {
 .flag-sub { font-size: 12px; letter-spacing: 0.12em; opacity: 0.85; margin-top: 3px; }
 .flag-value { font-weight: 600; letter-spacing: 0.12em; opacity: 1; }
 .team-flag.is-light .flag-name { text-shadow: none; }
-.pin { height: 3px; background: linear-gradient(90deg, var(--pin-from), var(--pin-to)); }
 
 /* ===== 战绩格：主色边条 + 积分格强调（spec §3.4）===== */
 .record-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 24px; }
 @media (min-width: 768px) { .record-grid { grid-template-columns: repeat(6, 1fr); } }
 .stat-cell {
   border: 1px solid rgba(255,255,255,0.1);
-  border-left: 3px solid var(--accent);
   border-radius: 4px; padding: 8px;
   background: rgba(255,255,255,0.02);
 }
@@ -220,7 +224,6 @@ function back() {
 .stat-pts {
   background: color-mix(in srgb, var(--accent) 13%, transparent);
   border-color: color-mix(in srgb, var(--accent) 42%, transparent);
-  border-left-color: var(--accent);
 }
 .val-pts { color: var(--accent); }
 

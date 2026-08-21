@@ -6,20 +6,45 @@ const pad = (n: number) => String(n).padStart(2, '0')
 const WEEKDAYS_ZH = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
 const WEEKDAYS_EN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const MONTHS_EN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+const WD_EN_SHORT = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
-/** 本地日期是否越过比赛的 UTC 日期（"次日"判定，规格 v1.4 标准） */
-export function isNextDay(iso: string): boolean {
-  const d = new Date(iso)
-  const localDate = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
-  return localDate !== iso.slice(0, 10)
+// 语言时区：中文→东八区（北京），英文→英国时间（伦敦，含夏令时）
+const ZONE_ZH = 'Asia/Shanghai'
+const ZONE_EN = 'Europe/London'
+function zoneOf(lang: Lang): string {
+  return lang === 'zh' ? ZONE_ZH : ZONE_EN
 }
 
-/** 本地时区开球时间；跨天加前缀（中"次日"/英 (+1d)） */
+/** 目标时区字段（年/月/日/时/分/星期索引） */
+function zoneFields(d: Date, lang: Lang) {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: zoneOf(lang),
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hourCycle: 'h23', weekday: 'short',
+  }).formatToParts(d)
+  const num = (t: string) => Number(parts.find((p) => p.type === t)?.value ?? 0)
+  const weekday = parts.find((p) => p.type === 'weekday')?.value ?? ''
+  return {
+    year: num('year'), month: num('month'), day: num('day'),
+    hour: num('hour'), minute: num('minute'),
+    wdIndex: Math.max(0, WD_EN_SHORT.indexOf(weekday)),
+  }
+}
+
+/** 目标时区开球时间；相对 UTC 跨天加前缀（中「次日」/ 英「(+1d)」） */
 export function formatKickoff(iso: string, lang: Lang): string {
-  const d = new Date(iso)
-  const hm = `${pad(d.getHours())}:${pad(d.getMinutes())}`
-  if (!isNextDay(iso)) return hm
-  return lang === 'zh' ? `次日 ${hm}` : `(+1d) ${hm}`
+  const z = zoneFields(new Date(iso), lang)
+  const hm = `${pad(z.hour)}:${pad(z.minute)}`
+  const zoneDate = `${z.year}-${pad(z.month)}-${pad(z.day)}`
+  return zoneDate === iso.slice(0, 10) ? hm : (lang === 'zh' ? `次日 ${hm}` : `(+1d) ${hm}`)
+}
+
+/** 目标时区比赛日期标签：中文「8月22日 · 周六」/ 英文「Aug 22 · Sat」 */
+export function formatMatchDate(iso: string, lang: Lang): string {
+  const z = zoneFields(new Date(iso), lang)
+  return lang === 'zh'
+    ? `${z.month}月${z.day}日 · ${WEEKDAYS_ZH[z.wdIndex]}`
+    : `${MONTHS_EN[z.month - 1]} ${z.day} · ${WEEKDAYS_EN[z.wdIndex]}`
 }
 
 /** UTC 日期组头标签："8月16日 · 周六" / "Aug 16 · Sat"（星期按 UTC 推，全球一致） */

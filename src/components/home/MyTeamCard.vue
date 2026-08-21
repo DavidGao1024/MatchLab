@@ -153,7 +153,6 @@ function formatDateLong(iso: string): string {
           <span class="of">/ {{ (standings.rows[subscription.league] ?? []).length || 20 }}</span>
         </div>
       </div>
-      <div class="pin"></div>
       <div class="data">
         <section v-if="live" class="match-block">
           <div class="match-label"><span class="live-dot"></span>{{ t('card.live', app.lang) }} · {{ live.clock ?? '—' }}</div>
@@ -238,13 +237,10 @@ function formatDateLong(iso: string): string {
 .flag.is-light .flag-rank .num,
 .flag.is-light .flag-rank .of { color: #0f172a; }
 
-.pin { height: 3px; background: linear-gradient(90deg, var(--pin-from), var(--pin-to)); }
-
 /* ===== 数据区 ===== */
 .data { display: flex; flex-direction: column; gap: 10px; padding: 12px 14px; }
 .match-block {
   background: rgba(255,255,255,0.045);
-  border-left: 3px solid var(--accent);
   border-radius: 8px; padding: 10px 13px;
 }
 .match-label {
@@ -302,7 +298,6 @@ function formatDateLong(iso: string): string {
   }
   .flag-id { flex: none; width: 100%; }
   .flag-rank { margin: 8px auto 0; }
-  .pin { width: 3px; height: auto; background: linear-gradient(180deg, var(--pin-from), var(--pin-to)); }
   .data { flex: 1; justify-content: center; padding: 16px 20px; }
 }
 </style>

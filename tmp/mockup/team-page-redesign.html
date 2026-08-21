@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>球队主页重设计 · 下一场海报卡（设计稿）</title>
+<style>
+  body { margin: 0; padding: 40px 16px; background: #141926; font-family: system-ui, -apple-system, sans-serif; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+  h1 { color: #e2e8f0; font-size: 15px; font-weight: 600; margin: 0; }
+  p.note { color: #94a3b8; font-size: 12px; max-width: 760px; text-align: center; line-height: 1.7; margin: 0; }
+  .stage { color: #64748b; font-size: 11px; letter-spacing: .1em; margin-top: 10px; }
+  .card { background: #0b0f1a; border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 18px; }
+  .fc { font-family: 'Arial Narrow', system-ui, sans-serif; }
+  .mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+  .crest { border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #fff; font-family: 'Arial Narrow', sans-serif; font-weight: 800; letter-spacing: .02em; }
+</style>
+</head>
+<body>
+<h1>球队主页重设计 · 下一场海报卡</h1>
+<p class="note">核心：把「下一场 vs 谁」提到页面顶部做 hero 焦点卡——主客队徽大对峙 + VS + 时间球场，一眼看到下一场踢谁。下方战绩格、页签、赛程列表顺序下移。</p>
+
+<!-- ===================== 桌面 ===================== -->
+<div class="stage">▼ 桌面（约 820px）</div>
+<div class="card" style="width:820px;max-width:100%;">
+
+  <!-- 旗面 -->
+  <div style="border-radius:14px;overflow:hidden;position:relative;">
+    <div style="position:relative;display:flex;align-items:center;gap:16px;padding:22px 24px;background:linear-gradient(112deg,#EF0107,#A70105);color:#fff;">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 26px,rgba(0,0,0,.12) 26px 50px);"></div>
+      <div style="position:relative;width:60px;height:60px;border-radius:50%;background:rgba(0,0,0,.22);border:2px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-family:'Arial Narrow',sans-serif;font-size:14px;font-weight:800;letter-spacing:.05em;flex:none;">ARS</div>
+      <div style="position:relative;flex:1;min-width:0;">
+        <div class="fc" style="font-size:27px;font-weight:800;letter-spacing:.05em;text-shadow:0 1px 4px rgba(0,0,0,.35);">阿森纳</div>
+        <div style="font-size:11px;letter-spacing:.12em;opacity:.85;margin-top:3px;">ARS · 酋长球场 · 伦敦</div>
+      </div>
+      <div style="position:relative;font-family:'Arial Narrow',sans-serif;font-size:12px;font-weight:700;opacity:.95;">总身价 12.3 亿欧</div>
+    </div>
+  </div>
+
+  <!-- 按钮行 -->
+  <div style="display:flex;align-items:center;gap:10px;margin:14px 0 0;">
+    <span style="padding:7px 16px;border-radius:8px;background:rgba(239,1,7,.16);border:1px solid rgba(239,1,7,.4);color:#fca5a5;font-size:13px;font-weight:600;">＋ 订阅</span>
+    <span style="padding:7px 16px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#cbd5e1;font-size:13px;">☆ 收藏</span>
+    <span style="padding:7px 16px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#cbd5e1;font-size:13px;">导出日历</span>
+  </div>
+
+  <!-- ============ 下一场海报卡（hero 焦点） ============ -->
+  <div style="margin-top:16px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#131a2b;position:relative;">
+    <!-- 顶部球队主色氛围线 -->
+    <!-- 顶部标签 -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px 0;">
+      <span class="fc" style="font-size:11px;font-weight:700;letter-spacing:.16em;color:#94a3b8;text-transform:uppercase;">下一场 · 英超 · 第 3 轮</span>
+      <span style="font-size:10px;color:#64748b;">8 月 22 日 · 周六</span>
+    </div>
+
+    <!-- 主客大对峙 -->
+    <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;padding:20px 24px;">
+      <!-- 主队 -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div class="crest" style="width:72px;height:72px;font-size:17px;background:#EF0107">ARS</div>
+        <div class="fc" style="font-size:20px;font-weight:800;letter-spacing:.04em;color:#fff;">阿森纳</div>
+              </div>
+
+      <!-- VS -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+        <div class="fc" style="font-size:26px;font-weight:800;font-style:italic;color:#475569;line-height:1;">VS</div>
+        <div class="mono" style="font-size:13px;color:#cbd5e1;font-weight:700;">20:00</div>
+      </div>
+
+      <!-- 客队 -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+        <div class="crest" style="width:72px;height:72px;font-size:16px;background:#6CABDD">MCI</div>
+        <div class="fc" style="font-size:20px;font-weight:800;letter-spacing:.04em;color:#fff;">曼城</div>
+              </div>
+    </div>
+
+    <!-- 底部球场 -->
+    <div style="border-top:1px dashed rgba(255,255,255,.1);padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:8px;">
+      <span class="mono" style="font-size:11px;color:#64748b;">酋长球场</span>
+      <span style="color:#334155;">·</span>
+      <span class="mono" style="font-size:11px;color:#64748b;">伦敦</span>
+    </div>
+  </div>
+
+  <!-- 战绩格 6 格 -->
+  <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:14px;">
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:9px 8px;background:rgba(255,255,255,.02);"><div class="mono" style="font-size:9px;text-transform:uppercase;color:#64748b;">胜</div><div class="mono" style="font-size:16px;color:#10b981;">1</div></div>
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:9px 8px;background:rgba(255,255,255,.02);"><div class="mono" style="font-size:9px;text-transform:uppercase;color:#64748b;">平</div><div class="mono" style="font-size:16px;color:#cbd5e1;">0</div></div>
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:9px 8px;background:rgba(255,255,255,.02);"><div class="mono" style="font-size:9px;text-transform:uppercase;color:#64748b;">负</div><div class="mono" style="font-size:16px;color:#ef4444;">0</div></div>
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:9px 8px;background:rgba(255,255,255,.02);"><div class="mono" style="font-size:9px;text-transform:uppercase;color:#64748b;">进</div><div class="mono" style="font-size:16px;color:#fff;">2</div></div>
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:9px 8px;background:rgba(255,255,255,.02);"><div class="mono" style="font-size:9px;text-transform:uppercase;color:#64748b;">失</div><div class="mono" style="font-size:16px;color:#fff;">0</div></div>
+    <div style="border:1px solid rgba(248,113,113,.42);border-radius:8px;padding:9px 8px;background:rgba(248,113,113,.13);"><div class="mono" style="font-size:9px;text-transform:uppercase;color:#64748b;">积分</div><div class="mono" style="font-size:16px;color:#f87171;">3</div></div>
+  </div>
+
+  <!-- 页签 -->
+  <div style="display:flex;gap:22px;margin-top:20px;border-bottom:1px solid rgba(255,255,255,.08);">
+    <div class="fc" style="font-size:16px;font-weight:700;color:#fff;padding-bottom:8px;border-bottom:2px solid #f87171;letter-spacing:.05em;">赛程</div>
+    <div class="fc" style="font-size:16px;color:#64748b;padding-bottom:8px;letter-spacing:.05em;">阵容 (24)</div>
+  </div>
+
+  <!-- 赛程列表示意 -->
+  <div style="margin-top:16px;display:grid;gap:8px;">
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 16px;background:#131a2b;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;">
+      <div style="display:flex;align-items:center;justify-content:flex-end;gap:5px;"><span class="fc" style="font-size:14px;color:#fff;">伯恩茅斯</span><div class="crest" style="width:20px;height:20px;font-size:6px;background:#DA291C;">BOU</div></div>
+      <div class="fc" style="font-size:15px;color:#64748b;">VS</div>
+      <div style="display:flex;align-items:center;gap:5px;"><div class="crest" style="width:20px;height:20px;font-size:6px;background:#EF0107;">ARS</div><span class="fc" style="font-size:14px;color:#fff;">阿森纳</span></div>
+    </div>
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 16px;background:#131a2b;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;">
+      <div style="display:flex;align-items:center;justify-content:flex-end;gap:5px;"><span class="fc" style="font-size:14px;color:#fff;">阿森纳</span><div class="crest" style="width:20px;height:20px;font-size:6px;background:#EF0107;">ARS</div></div>
+      <div class="fc" style="font-size:15px;color:#64748b;">VS</div>
+      <div style="display:flex;align-items:center;gap:5px;"><div class="crest" style="width:20px;height:20px;font-size:7px;background:#1a1a1a;">FUL</div><span class="fc" style="font-size:14px;color:#fff;">富勒姆</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 移动 ===================== -->
+<div class="stage">▼ 移动（375px）</div>
+<div class="card" style="width:375px;max-width:100%;">
+  <!-- 旗面 -->
+  <div style="border-radius:14px;overflow:hidden;position:relative;">
+    <div style="position:relative;display:flex;align-items:center;gap:12px;padding:16px;background:linear-gradient(112deg,#EF0107,#A70105);color:#fff;">
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 26px,rgba(0,0,0,.12) 26px 50px);"></div>
+      <div style="position:relative;width:46px;height:46px;border-radius:50%;background:rgba(0,0,0,.22);border:2px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-family:'Arial Narrow',sans-serif;font-size:11px;font-weight:800;flex:none;">ARS</div>
+      <div style="position:relative;flex:1;min-width:0;">
+        <div class="fc" style="font-size:21px;font-weight:800;letter-spacing:.05em;">阿森纳</div>
+        <div style="font-size:10px;letter-spacing:.1em;opacity:.85;margin-top:2px;">ARS · 酋长球场</div>
+        <div style="font-size:10px;font-weight:600;opacity:1;margin-top:2px;">总身价 12.3 亿欧</div>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;gap:8px;margin:12px 0 0;">
+    <span style="padding:6px 12px;border-radius:8px;background:rgba(239,1,7,.16);border:1px solid rgba(239,1,7,.4);color:#fca5a5;font-size:12px;font-weight:600;">＋ 订阅</span>
+    <span style="padding:6px 12px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#cbd5e1;font-size:12px;">☆ 收藏</span>
+    <span style="padding:6px 12px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#cbd5e1;font-size:12px;">日历</span>
+  </div>
+
+  <!-- 下一场海报卡（移动：竖排） -->
+  <div style="margin-top:12px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:#131a2b;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px 0;">
+      <span class="fc" style="font-size:10px;font-weight:700;letter-spacing:.16em;color:#94a3b8;">下一场 · 第 3 轮</span>
+      <span style="font-size:9px;color:#64748b;">周六</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px;padding:16px;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div class="crest" style="width:56px;height:56px;font-size:13px;background:#EF0107">ARS</div>
+        <div class="fc" style="font-size:15px;font-weight:800;color:#fff;">阿森纳</div>
+              </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+        <div class="fc" style="font-size:22px;font-weight:800;font-style:italic;color:#475569;">VS</div>
+        <div class="mono" style="font-size:12px;color:#cbd5e1;font-weight:700;">20:00</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div class="crest" style="width:56px;height:56px;font-size:12px;background:#6CABDD">MCI</div>
+        <div class="fc" style="font-size:15px;font-weight:800;color:#fff;">曼城</div>
+              </div>
+    </div>
+    <div style="border-top:1px dashed rgba(255,255,255,.1);padding:10px 16px;text-align:center;">
+      <span class="mono" style="font-size:10px;color:#64748b;">8 月 22 日 · 20:00 · 酋长球场</span>
+    </div>
+  </div>
+
+  <!-- 战绩格 6 格（移动 3 列） -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;">
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:7px 8px;"><div class="mono" style="font-size:9px;color:#64748b;">胜</div><div class="mono" style="font-size:15px;color:#10b981;">1</div></div>
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:7px 8px;"><div class="mono" style="font-size:9px;color:#64748b;">平</div><div class="mono" style="font-size:15px;color:#cbd5e1;">0</div></div>
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:7px 8px;"><div class="mono" style="font-size:9px;color:#64748b;">负</div><div class="mono" style="font-size:15px;color:#ef4444;">0</div></div>
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:7px 8px;"><div class="mono" style="font-size:9px;color:#64748b;">进</div><div class="mono" style="font-size:15px;color:#fff;">2</div></div>
+    <div style="border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:7px 8px;"><div class="mono" style="font-size:9px;color:#64748b;">失</div><div class="mono" style="font-size:15px;color:#fff;">0</div></div>
+    <div style="border:1px solid rgba(248,113,113,.42);border-radius:8px;padding:7px 8px;background:rgba(248,113,113,.13);"><div class="mono" style="font-size:9px;color:#64748b;">积分</div><div class="mono" style="font-size:15px;color:#f87171;">3</div></div>
+  </div>
+
+  <div style="display:flex;gap:22px;margin-top:16px;border-bottom:1px solid rgba(255,255,255,.08);">
+    <div class="fc" style="font-size:14px;font-weight:700;color:#fff;padding-bottom:7px;border-bottom:2px solid #f87171;">赛程</div>
+    <div class="fc" style="font-size:14px;color:#64748b;padding-bottom:7px;">阵容 (24)</div>
+  </div>
+</div>
+
+</body>
+</html>

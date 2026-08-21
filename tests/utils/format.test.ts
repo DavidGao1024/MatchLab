@@ -1,40 +1,30 @@
 import { describe, expect, it } from 'vitest'
 import {
   formatKickoff,
+  formatMatchDate,
   formatUtcDateLabel,
   groupMatchesByUtcDate,
-  isNextDay,
 } from '../../src/utils/format'
 import type { Match } from '../../src/types/models'
 
-const pad = (n: number) => String(n).padStart(2, '0')
-/** 用 Date API 推导本地 HH:mm，测试与实现同时区，断言永远自洽 */
-const localHM = (iso: string) => {
-  const d = new Date(iso)
-  return `${pad(d.getHours())}:${pad(d.getMinutes())}`
-}
-
-describe('isNextDay', () => {
-  it('本地日期与 UTC 日期一致 → false；跨天 → true（期望值现场推导）', () => {
-    const iso = '2025-08-16T16:30Z'
-    const d = new Date(iso)
-    const localDate = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
-    expect(isNextDay(iso)).toBe(localDate !== '2025-08-16')
+describe('formatKickoff', () => {
+  it('中文用东八区（UTC+8）', () => {
+    expect(formatKickoff('2025-01-15T11:30Z', 'zh')).toBe('19:30')
+  })
+  it('英文用英国时间（1 月冬令时 UTC+0）', () => {
+    expect(formatKickoff('2025-01-15T11:30Z', 'en')).toBe('11:30')
+  })
+  it('中文东八区跨天加「次日」前缀', () => {
+    expect(formatKickoff('2025-01-15T20:00Z', 'zh')).toBe('次日 04:00')
   })
 })
 
-describe('formatKickoff', () => {
-  it('不跨天：纯 HH:mm', () => {
-    const iso = '2025-08-16T11:30Z'
-    expect(formatKickoff(iso, 'zh')).toBe(isNextDay(iso) ? `次日 ${localHM(iso)}` : localHM(iso))
+describe('formatMatchDate', () => {
+  it('中文日期标签随东八区（跨天到 1/16）', () => {
+    expect(formatMatchDate('2025-01-15T20:00Z', 'zh')).toBe('1月16日 · 周四')
   })
-  it('跨天：中文加"次日"前缀，英文加 (+1d)', () => {
-    // 构造一个必然跨天的用例：UTC 深夜，东八区必跨天；若本机时区不跨天则期望值自动切换
-    const iso = '2025-08-16T16:30Z'
-    const out = formatKickoff(iso, 'zh')
-    expect(out.endsWith(localHM(iso))).toBe(true)
-    if (isNextDay(iso)) expect(out).toBe(`次日 ${localHM(iso)}`)
-    else expect(out).toBe(localHM(iso))
+  it('英文日期标签随伦敦时区（同日 1/15）', () => {
+    expect(formatMatchDate('2025-01-15T20:00Z', 'en')).toBe('Jan 15 · Wed')
   })
 })
 
