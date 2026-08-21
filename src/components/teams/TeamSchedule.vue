@@ -41,42 +41,30 @@ watch([() => props.league, () => props.teamId, season, seasonType], load)
 
 const schedule = computed(() => store.teamSchedules[`${props.league}/${props.teamId}`] ?? [])
 
-// schedule 已按 date 正序：最后一场已赛 = 上一场；第一场未赛 = 下一场
-const lastResult = computed(() => schedule.value.filter((m) => m.status === 'post').slice(-1)[0])
-const nextMatch = computed(() => schedule.value.find((m) => m.status !== 'post'))
+// 只显示未赛（未来）；已赛结果去掉。「下一场」取第一场未赛
+const upcoming = computed(() => schedule.value.filter((m) => m.status !== 'post'))
+const nextMatch = computed(() => upcoming.value[0])
 </script>
 
 <template>
   <DataError v-if="error" :message="error" @retry="load" />
   <DataLoading v-else-if="loading" kind="cards" />
-  <div v-else-if="schedule.length === 0" class="my-10 text-center text-sm text-slate-500">
+  <div v-else-if="upcoming.length === 0" class="my-10 text-center text-sm text-slate-500">
     {{ t('team.scheduleEmpty', app.lang) }}
   </div>
   <template v-else>
-    <!-- 双卡：上一场 / 下一场 -->
-    <div class="mb-5 grid grid-cols-1 gap-3 md:grid-cols-2">
-      <div v-if="lastResult" class="rounded-lg border border-white/10 bg-[#131a2b] p-3">
-        <div class="mb-2 font-cond text-[10px] uppercase tracking-[0.14em] text-slate-500">
-          {{ t('team.lastMatch', app.lang) }}
-        </div>
-        <MatchCard :match="lastResult" :league="league" plain />
-      </div>
+    <!-- 下一场 -->
+    <div v-if="nextMatch" class="mb-5 rounded-lg border border-white/10 bg-[#131a2b] p-3">
       <div
-        v-if="nextMatch"
-        class="rounded-lg border border-white/10 bg-[#131a2b] p-3"
-        :style="{ borderLeftWidth: '3px', borderLeftColor: 'var(--accent, var(--league-color))' }"
+        class="mb-2 font-cond text-[10px] uppercase tracking-[0.14em]"
+        :style="{ color: 'var(--accent, var(--league-color))' }"
       >
-        <div
-          class="mb-2 font-cond text-[10px] uppercase tracking-[0.14em]"
-          :style="{ color: 'var(--accent, var(--league-color))' }"
-        >
-          {{ t('team.nextMatch', app.lang) }}
-        </div>
-        <MatchCard :match="nextMatch" :league="league" plain />
+        {{ t('team.nextMatch', app.lang) }}
       </div>
+      <MatchCard :match="nextMatch" :league="league" plain />
     </div>
 
-    <!-- 完整列表（含双卡那两场） -->
-    <MatchList :matches="schedule" :league="league" plain />
+    <!-- 完整列表（只未来） -->
+    <MatchList :matches="upcoming" :league="league" plain />
   </template>
 </template>

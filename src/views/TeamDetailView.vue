@@ -108,7 +108,10 @@ function back() {
           <div class="flag-id">
             <h1 class="flag-name">{{ displayName }}</h1>
             <p class="flag-sub">
-              {{ team.abbreviation }}<template v-if="team.venue?.name"> · {{ venueName(team.venue.name, app.lang) }}</template><template v-if="team.venue?.city"> · {{ cityName(team.venue.city, app.lang) }}</template><template v-if="squadValueMillion != null"> · {{ t('team.squadValue', app.lang) }} {{ formatTeamValue(squadValueMillion, app.lang) }}</template>
+              {{ team.abbreviation }}<template v-if="team.venue?.name"> · {{ venueName(team.venue.name, app.lang) }}</template><template v-if="team.venue?.city"> · {{ cityName(team.venue.city, app.lang) }}</template>
+            </p>
+            <p v-if="squadValueMillion != null" class="flag-sub flag-value">
+              {{ t('team.squadValue', app.lang) }} {{ formatTeamValue(squadValueMillion, app.lang) }}
             </p>
           </div>
         </div>
@@ -197,6 +200,7 @@ function back() {
   overflow-wrap: anywhere;
 }
 .flag-sub { font-size: 12px; letter-spacing: 0.12em; opacity: 0.85; margin-top: 3px; }
+.flag-value { font-weight: 600; letter-spacing: 0.12em; opacity: 1; }
 .team-flag.is-light .flag-name { text-shadow: none; }
 .pin { height: 3px; background: linear-gradient(90deg, var(--pin-from), var(--pin-to)); }
 
