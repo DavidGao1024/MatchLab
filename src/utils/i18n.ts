@@ -421,8 +421,6 @@ const UI: Record<string, { zh: string; en: string }> = {
   'team.lastMatch': { zh: '上一场', en: 'Last' },
   'team.nextMatch': { zh: '下一场', en: 'Next' },
   'team.scheduleEmpty': { zh: '本赛季暂无赛程', en: 'No matches this season' },
-  'team.ha.home': { zh: '主', en: 'Home' },
-  'team.ha.away': { zh: '客', en: 'Away' },
   // ===== Phase 6：图表 + 高阶功能 =====
   'chart.xgTrend': { zh: 'xG 趋势', en: 'xG Trend' },
   'chart.careerCurve': { zh: '生涯曲线', en: 'Career Curve' },

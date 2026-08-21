@@ -14,33 +14,34 @@ const match = {
 
 beforeEach(() => {
   localStorage.clear()
-  localStorage.setItem('matchlab:lang', 'zh') // 中文角标"主/客"
+  localStorage.setItem('matchlab:lang', 'zh')
   setActivePinia(createPinia())
 })
 
 describe('MatchCard selfTeamId', () => {
-  it('不传 selfTeamId：无主客角标', () => {
+  it('不传 selfTeamId：本队名不高亮', () => {
     const w = mount(MatchCard, { props: { match, league: 'eng.1' } })
-    expect(w.text()).not.toContain('主')
-    expect(w.text()).not.toContain('客')
+    expect(w.findAll('span.font-bold').length).toBe(0)
   })
 
-  it('selfTeamId=主队：本队名旁有"主"角标，无"客"', () => {
+  it('selfTeamId=主队：主队名加粗 + accent 高亮', () => {
     const w = mount(MatchCard, { props: { match, league: 'eng.1', selfTeamId: 359 } })
-    expect(w.text()).toContain('主')
-    expect(w.text()).not.toContain('客')
+    const bold = w.findAll('span.font-bold')
+    expect(bold.length).toBe(1)
+    expect(bold[0].attributes('style')).toContain('var(--accent')
   })
 
-  it('selfTeamId=客队：本队名旁有"客"角标，无"主"', () => {
+  it('selfTeamId=客队：客队名加粗 + accent 高亮', () => {
     const w = mount(MatchCard, { props: { match, league: 'eng.1', selfTeamId: 100 } })
-    expect(w.text()).toContain('客')
-    expect(w.text()).not.toContain('主')
+    const bold = w.findAll('span.font-bold')
+    expect(bold.length).toBe(1)
+    expect(bold[0].attributes('style')).toContain('var(--accent')
   })
 })
 
 describe('MatchList 透传 selfTeamId', () => {
-  it('列表内本队名带"主"角标', () => {
+  it('列表内本队名加粗高亮', () => {
     const w = mount(MatchList, { props: { matches: [match], league: 'eng.1', selfTeamId: 359 } })
-    expect(w.text()).toContain('主')
+    expect(w.findAll('span.font-bold').length).toBe(1)
   })
 })

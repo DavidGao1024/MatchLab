@@ -61,7 +61,6 @@ const selfColor = 'var(--accent, var(--league-color))'
       <!-- 主队（右对齐） -->
       <div class="flex min-w-0 items-center justify-end gap-2.5">
         <span class="truncate font-cond text-[13px]" :class="isSelf('home') ? 'font-bold' : NAME_CLS[tone.home]" :style="isSelf('home') ? { color: selfColor } : undefined">{{ teamName(match.home.name, app.lang) }}</span>
-        <span v-if="isSelf('home')" class="rounded px-1 py-px font-cond text-[9px] font-semibold text-[#0b0f1a]" :style="{ background: selfColor }">{{ t('team.ha.home', app.lang) }}</span>
         <TeamLogo :team="homeTeam" :size="18" />
       </div>
 
@@ -87,7 +86,6 @@ const selfColor = 'var(--accent, var(--league-color))'
       <!-- 客队 -->
       <div class="flex min-w-0 items-center gap-2.5">
         <TeamLogo :team="awayTeam" :size="18" />
-        <span v-if="isSelf('away')" class="rounded px-1 py-px font-cond text-[9px] font-semibold text-[#0b0f1a]" :style="{ background: selfColor }">{{ t('team.ha.away', app.lang) }}</span>
         <span class="truncate font-cond text-[13px]" :class="isSelf('away') ? 'font-bold' : NAME_CLS[tone.away]" :style="isSelf('away') ? { color: selfColor } : undefined">{{ teamName(match.away.name, app.lang) }}</span>
       </div>
     </div>
