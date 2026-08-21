@@ -18,30 +18,28 @@ beforeEach(() => {
   setActivePinia(createPinia())
 })
 
-describe('MatchCard selfTeamId', () => {
-  it('不传 selfTeamId：本队名不高亮', () => {
+describe('MatchCard plain 模式', () => {
+  it('默认（非 plain）：队名按胜平负分色，负方用灰', () => {
     const w = mount(MatchCard, { props: { match, league: 'eng.1' } })
-    expect(w.findAll('span.font-bold').length).toBe(0)
+    const names = w.findAll('span.truncate.font-cond')
+    expect(names[0].classes()).toContain('text-white')
+    expect(names[1].classes()).toContain('text-slate-500')
   })
 
-  it('selfTeamId=主队：主队名加粗 + accent 高亮', () => {
-    const w = mount(MatchCard, { props: { match, league: 'eng.1', selfTeamId: 359 } })
-    const bold = w.findAll('span.font-bold')
-    expect(bold.length).toBe(1)
-    expect(bold[0].attributes('style')).toBeUndefined()
-  })
-
-  it('selfTeamId=客队：客队名加粗 + accent 高亮', () => {
-    const w = mount(MatchCard, { props: { match, league: 'eng.1', selfTeamId: 100 } })
-    const bold = w.findAll('span.font-bold')
-    expect(bold.length).toBe(1)
-    expect(bold[0].attributes('style')).toBeUndefined()
+  it('plain=true：两队名全白，不区分胜平负', () => {
+    const w = mount(MatchCard, { props: { match, league: 'eng.1', plain: true } })
+    const names = w.findAll('span.truncate.font-cond')
+    expect(names[0].classes()).toContain('text-white')
+    expect(names[1].classes()).toContain('text-white')
+    expect(names[1].classes()).not.toContain('text-slate-500')
   })
 })
 
-describe('MatchList 透传 selfTeamId', () => {
-  it('列表内本队名加粗高亮', () => {
-    const w = mount(MatchList, { props: { matches: [match], league: 'eng.1', selfTeamId: 359 } })
-    expect(w.findAll('span.font-bold').length).toBe(1)
+describe('MatchList 透传 plain', () => {
+  it('列表内 plain=true 队名全白', () => {
+    const w = mount(MatchList, { props: { matches: [match], league: 'eng.1', plain: true } })
+    const names = w.findAll('span.truncate.font-cond')
+    expect(names[0].classes()).toContain('text-white')
+    expect(names[1].classes()).toContain('text-white')
   })
 })

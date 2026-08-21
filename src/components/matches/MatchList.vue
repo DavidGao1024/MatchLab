@@ -7,7 +7,7 @@ import { t } from '../../utils/i18n'
 import { groupMatchesByUtcDate } from '../../utils/format'
 import MatchCard from './MatchCard.vue'
 
-const props = defineProps<{ matches: Match[]; league: LeagueSlug; selfTeamId?: number }>()
+const props = defineProps<{ matches: Match[]; league: LeagueSlug; plain?: boolean }>()
 const app = useAppStore()
 
 // 分组用数据日期（UTC），全球用户看到的一致、可分享（规格 v1.2）
@@ -36,7 +36,7 @@ const weekday = (utcDate: string) => {
         :key="m.eventId"
         :match="m"
         :league="league"
-        :self-team-id="selfTeamId"
+        :plain="plain"
         class="rise-in"
         :style="{ animationDelay: `${Math.min(gi * 60 + mi * 40, 400)}ms` }"
       />

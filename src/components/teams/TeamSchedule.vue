@@ -59,7 +59,7 @@ const nextMatch = computed(() => schedule.value.find((m) => m.status !== 'post')
         <div class="mb-2 font-cond text-[10px] uppercase tracking-[0.14em] text-slate-500">
           {{ t('team.lastMatch', app.lang) }}
         </div>
-        <MatchCard :match="lastResult" :league="league" :self-team-id="teamId" />
+        <MatchCard :match="lastResult" :league="league" plain />
       </div>
       <div
         v-if="nextMatch"
@@ -72,11 +72,11 @@ const nextMatch = computed(() => schedule.value.find((m) => m.status !== 'post')
         >
           {{ t('team.nextMatch', app.lang) }}
         </div>
-        <MatchCard :match="nextMatch" :league="league" :self-team-id="teamId" />
+        <MatchCard :match="nextMatch" :league="league" plain />
       </div>
     </div>
 
     <!-- 完整列表（含双卡那两场） -->
-    <MatchList :matches="schedule" :league="league" :self-team-id="teamId" />
+    <MatchList :matches="schedule" :league="league" plain />
   </template>
 </template>
