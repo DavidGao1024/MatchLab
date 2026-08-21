@@ -571,16 +571,9 @@ git commit -m "feat: 球队赛程组件 TeamSchedule——双卡置顶 + 整季�
 - Modify: `src/views/TeamDetailView.vue`
 - Modify: `tests/views/TeamDetailView.test.ts`
 
-- [ ] **Step 1: 先加 i18n key**
+- [x] **Step 1: i18n key（已在 Task 2 前提前完成）**
 
-Modify `src/utils/i18n.ts`，在 `'team.col.l': { zh: '负', en: 'L' },`（约第 420 行）之后插入：
-
-```ts
-  'team.lastMatch': { zh: '上一场', en: 'Last' },
-  'team.nextMatch': { zh: '下一场', en: 'Next' },
-  'team.ha.home': { zh: '主', en: 'Home' },
-  'team.ha.away': { zh: '客', en: 'Away' },
-```
+4 个 key（`team.lastMatch` / `team.nextMatch` / `team.ha.home` / `team.ha.away`）已提前加入 `src/utils/i18n.ts`——Task 2/4 的组件与测试依赖这些文案，原计划排在 Task 5 会导致 Task 2 测试断言失败，故执行时前移。本步骤跳过。
 
 - [ ] **Step 2: 改造 `TeamDetailView`**
 
