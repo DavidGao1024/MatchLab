@@ -25,6 +25,7 @@
 | 2026-08-05 | **（待总司令亲批晋升）** | 子项目 1.8「移动端卡片化方案 B（第一批）」代码完工待回归（同会话 8 Task subagent-driven-development，implementer + spec review + quality review 双关，8 subagent commit 在 main 本地未 push）：3 个新移动卡片组件（PlayerListCardMobile / LeaderRowCardMobile / ComparePlayerCardMobile）+ AppHeader 移动搜索图标 + Teleport 全屏搜索层 + PlayersView/LeadersView/CompareView 三 view 双 DOM 接入；双 DOM 模式（PC 表格 `hidden md:block` 包原样 / 移动卡片 `md:hidden`）保证 PC 端字节级零影响；新增 24 单测（原 148 → 172），typecheck/build 通过；375px 移动手测（4 处交互）+ i18n 双语手测（6 项）列入待回归清单（subagent 执行期间按项目约定禁用浏览器）；plan 与 spec 入库 `docs/superpowers/{plans,specs}/2026-08-05-mobile-cards*.md`，mockup 入库 `tmp/mockup/mobile-cards.html`。**军衔待总司令亲批** |
 | 2026-08-17 | **营长** | 总司令亲批「晋升」，合并 08-03/08-04×2/08-05/08-12 全部待批晋升 + 本日两仗：① 国籍国旗 Task 3–7 收尾（六展示位插旗 + 手测九项全过 + 数据还原）② 懂球帝补齐子项目（中超显旗 49%→98%、284 单测全绿、三提交落库）；另排 workflow 两坑（Node20 deprecated 升 @v7、Fetch Data 跑动中 push 撞车致 #26 红叉）。自此与协作模式「总司令下令→营长执行」对齐 |
 | 2026-08-18 | **（待总司令亲批晋升）** | 本日三连仗：① 合规六件套全落地（国旗开源 flagcdn 116 国本地化 + xG 舍弃链路保留 + 队徽 112 队本地化 + 页脚免责声明 + 降频每周一/四/六 + 停懂球帝）——ESPN 盗链三页实测清零、删 34MB 无授权 Understat 存量；② 新赛季切换（resolveSeasonsInPlace 赛程排定即切季 + computeStandings 季前完整榜单，英超/意甲/德甲/法甲季前即切 2026）；③ 球员履历新特性（fetch-transfers 抓 ESPN transactions → buildCareer 效力球队+年份区间 → 球员详情页中文履历 + TEAM_ZH 补录 86 知名球队）。289 单测全绿，typecheck 过。**军衔待总司令亲批** |
+| 2026-08-21 | **（待总司令亲批晋升）** | 球队主页「赛程」功能（子项目 2.0）落地：球队详情页加「赛程 / 阵容」页签（默认赛程），整赛季赛程纯列表（已赛+未来时间正序，对阵朴素 `plain`：队徽 + 白字 + VS/比分，不加粗、不标主客、不分胜平负）；matches store 新增 `loadTeamSchedule`（跨 10 月并行过滤 + `teamLoadGen` 代际防护 + 直播回落静态）；战绩格去「已赛」格改 6 格；旗面总身价另起一行。321 单测全绿，typecheck/build 过，已 push。**军衔待总司令亲批** |
 
 ## 三、技术栈与架构偏好
 
@@ -39,7 +40,7 @@
 - 计划文档统一放 `projectDoc/plan/`，一个任务一个文件
 - 数据结构与 API 接口不能变，UI 可大改
 - 抓取脚本永远零依赖（仅 Node 内置模块）
-- 开工须先获总司令明确指令，当前状态：✅ 子项目 1–1.9 全部完工（Phase 0–6 MVP 基线之上：个人化基础 + MyTeamCard 两轮重设计 + 积分榜移动端兼容 + 移动端卡片化两批含收藏夹页重写；2026-08-12 第二批验收闭环，234 单测全绿；待总司令批军衔 + 决定下一子项目方向）
+- 开工须先获总司令明确指令，当前状态：✅ 子项目 1–1.9 全部完工 + 子项目 2.0「球队主页赛程」完工（2026-08-21：赛程/阵容页签 + 整赛季纯列表 + 对阵朴素 plain + 战绩格 6 格 + 身价另起行；321 单测全绿；已 push；待总司令批军衔 + 决定下一子项目方向）
 - **数据提交约定**（避免和 daily Actions 冲突）：本地跑 fetch 脚本（fetch-espn-core/fetch-understat/fetch-espn-scores/build-team-map/fetch-dqd-players 等）只用来验证脚本能跑，**不要 `git add public/data/`**。数据文件由 `.github/workflows/fetch-data.yml` 每天 UTC 06:00 跑（或手动触发 workflow_dispatch）。本地代码改动 commit 时显式 `git add src/ scripts/ docs/ types/ package.json` 等代码路径，避开 `public/data/`，否则 push 时会和 daily Actions 的数据 commit 撞冲突。如要立即更新线上数据：到 GitHub Actions 页面手动触发 "Fetch Data" workflow。
 
 ---
