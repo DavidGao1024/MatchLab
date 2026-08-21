@@ -50,7 +50,7 @@ const nextMatch = computed(() => schedule.value.find((m) => m.status !== 'post')
   <DataError v-if="error" :message="error" @retry="load" />
   <DataLoading v-else-if="loading" kind="cards" />
   <div v-else-if="schedule.length === 0" class="my-10 text-center text-sm text-slate-500">
-    {{ t('schedule.noMatches', app.lang) }}
+    {{ t('team.scheduleEmpty', app.lang) }}
   </div>
   <template v-else>
     <!-- 双卡：上一场 / 下一场 -->

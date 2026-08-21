@@ -9,6 +9,8 @@ const STATIC_TTL = 60 * 60 * 1000
 const POLL_MS = 60 * 1000 // 有进行中比赛时每 60s 刷新（规格规则 1）
 // 代际计数：连续切月时丢弃过期请求的后续状态写入（规格 v1.5 过期响应防护的 store 层）
 let loadGen = 0
+// 团队赛程代际计数：深链二次调用（fallback 赛季→正确赛季）时丢弃过期写入
+let teamLoadGen = 0
 
 export const useMatchesStore = defineStore('matches', {
   state: () => ({
@@ -68,9 +70,10 @@ export const useMatchesStore = defineStore('matches', {
      * 加载某队整赛季赛程：跨赛季月窗口（欧洲制 10 月 / 自然年 12 月）并行拉取，过滤出该队主/客场，按开球时间正序。
      * 不复用 loadMonth——它内置单月串行防过期计数（loadGen），并行调 10 次会互相丢数据。
      * 当月走直播直连（失败回落静态快照），其余月走静态 JSON；单月失败不连坐其余月。
-     * 本方法无防过期计数：调用方需自行做过期响应防护（如 seq 计数）。
+     * 内置团队代际防护：并发调用时旧请求不覆盖新请求。
      */
     async loadTeamSchedule(league: LeagueSlug, teamId: number, season: string, seasonType: 'european' | 'calendar' = 'european') {
+      const gen = ++teamLoadGen
       const k = `${league}/${teamId}`
       const months = seasonMonths(season, seasonType)
       const results = await Promise.all(months.map(async (m) => {
@@ -83,6 +86,7 @@ export const useMatchesStore = defineStore('matches', {
           return f.matches
         } catch { return [] } // 月文件不存在（休赛期当月等）→ 空
       }))
+      if (gen !== teamLoadGen) return // 过期请求：期间有新调用接管，丢弃本次结果
       this.teamSchedules[k] = results
         .flat()
         .filter((m) => m.home.id === teamId || m.away.id === teamId)

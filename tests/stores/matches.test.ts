@@ -36,6 +36,8 @@ beforeEach(() => {
 })
 
 describe('loadTeamSchedule', () => {
+  afterEach(() => { vi.useRealTimers() })
+
   it('只保留该队主/客场比赛', async () => {
     const store = useMatchesStore()
     mockMonth('2025-08', [
@@ -70,6 +72,32 @@ describe('loadTeamSchedule', () => {
     await store.loadTeamSchedule('eng.1', 359, '2025', 'european')
     const ids = store.teamSchedules['eng.1/359'].map((m) => m.eventId)
     expect(ids).toEqual(['sep'])
+  })
+
+  it('并发调用时旧请求不覆盖新请求（代际防护）', async () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2024-06-15T00:00:00Z')) // 让 currentMonth 落在任何赛季之外，全走静态
+    const store = useMatchesStore()
+    let releaseOld: (() => void) | null = null
+    mockFetch.mockImplementation((input) => {
+      const url = String(input)
+      if (url.includes('matches/2025-08.json')) {
+        return new Promise((resolve) => { releaseOld = () => resolve(ok({ matches: [makeMatch({ eventId: 'old', home: { id: 359, name: 'Arsenal' } })] })) })
+      }
+      if (url.includes('matches/2026-08.json')) {
+        return ok({ matches: [makeMatch({ eventId: 'new', home: { id: 359, name: 'Arsenal' } })] })
+      }
+      return ok({ matches: [] })
+    })
+
+    const pOld = store.loadTeamSchedule('eng.1', 359, '2025', 'european')
+    const pNew = store.loadTeamSchedule('eng.1', 359, '2026', 'european')
+    await pNew // 新请求（2026 赛季）先完成
+    releaseOld!() // 旧请求（2025 赛季）的慢月份之后才完成
+    await pOld
+
+    const ids = store.teamSchedules['eng.1/359'].map((m) => m.eventId)
+    expect(ids).toEqual(['new']) // 不被旧请求覆盖为 'old'
   })
 })
 
