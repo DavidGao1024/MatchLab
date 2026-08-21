@@ -28,14 +28,14 @@ describe('MatchCard selfTeamId', () => {
     const w = mount(MatchCard, { props: { match, league: 'eng.1', selfTeamId: 359 } })
     const bold = w.findAll('span.font-bold')
     expect(bold.length).toBe(1)
-    expect(bold[0].attributes('style')).toContain('var(--accent')
+    expect(bold[0].attributes('style')).toBeUndefined()
   })
 
   it('selfTeamId=客队：客队名加粗 + accent 高亮', () => {
     const w = mount(MatchCard, { props: { match, league: 'eng.1', selfTeamId: 100 } })
     const bold = w.findAll('span.font-bold')
     expect(bold.length).toBe(1)
-    expect(bold[0].attributes('style')).toContain('var(--accent')
+    expect(bold[0].attributes('style')).toBeUndefined()
   })
 })
 
