@@ -10,7 +10,7 @@ import { t, teamName, venueName } from '../../utils/i18n'
 import type { Team } from '../../types/models'
 import TeamLogo from '../common/TeamLogo.vue'
 
-const props = withDefaults(defineProps<{ match: Match; league: LeagueSlug; featured?: boolean }>(), { featured: false })
+const props = withDefaults(defineProps<{ match: Match; league: LeagueSlug; featured?: boolean; selfTeamId?: number }>(), { featured: false, selfTeamId: undefined })
 const app = useAppStore()
 const tz = useTimezone()
 const teams = useTeamsStore()
@@ -41,6 +41,9 @@ const tone = computed<{ home: Tone; away: Tone }>(() => {
 })
 const NAME_CLS: Record<Tone, string> = { win: 'text-white', draw: 'text-slate-300', lose: 'text-slate-500' }
 const scoreCls = computed(() => (tone.value.home === 'draw' && props.match.status === 'post' ? 'text-slate-400' : 'text-white'))
+const isSelf = (side: 'home' | 'away') =>
+  props.selfTeamId != null && props.match[side].id === props.selfTeamId
+const selfColor = 'var(--accent, var(--league-color))'
 </script>
 
 <template>
@@ -57,7 +60,8 @@ const scoreCls = computed(() => (tone.value.home === 'draw' && props.match.statu
     <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-3">
       <!-- 主队（右对齐） -->
       <div class="flex min-w-0 items-center justify-end gap-2.5">
-        <span class="truncate font-cond text-[13px]" :class="NAME_CLS[tone.home]">{{ teamName(match.home.name, app.lang) }}</span>
+        <span class="truncate font-cond text-[13px]" :class="isSelf('home') ? 'font-bold' : NAME_CLS[tone.home]" :style="isSelf('home') ? { color: selfColor } : undefined">{{ teamName(match.home.name, app.lang) }}</span>
+        <span v-if="isSelf('home')" class="rounded px-1 py-px font-cond text-[9px] font-semibold text-[#0b0f1a]" :style="{ background: selfColor }">{{ t('team.ha.home', app.lang) }}</span>
         <TeamLogo :team="homeTeam" :size="18" />
       </div>
 
@@ -83,7 +87,8 @@ const scoreCls = computed(() => (tone.value.home === 'draw' && props.match.statu
       <!-- 客队 -->
       <div class="flex min-w-0 items-center gap-2.5">
         <TeamLogo :team="awayTeam" :size="18" />
-        <span class="truncate font-cond text-[13px]" :class="NAME_CLS[tone.away]">{{ teamName(match.away.name, app.lang) }}</span>
+        <span v-if="isSelf('away')" class="rounded px-1 py-px font-cond text-[9px] font-semibold text-[#0b0f1a]" :style="{ background: selfColor }">{{ t('team.ha.away', app.lang) }}</span>
+        <span class="truncate font-cond text-[13px]" :class="isSelf('away') ? 'font-bold' : NAME_CLS[tone.away]" :style="isSelf('away') ? { color: selfColor } : undefined">{{ teamName(match.away.name, app.lang) }}</span>
       </div>
     </div>
 
