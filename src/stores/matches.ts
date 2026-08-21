@@ -3,7 +3,7 @@ import { fetchJsonCached } from '../composables/useJsonFetch'
 import { fetchLiveScores } from '../composables/useEspanFetch'
 import type { Match } from '../types/models'
 import type { MatchesFile } from '../types/static'
-import { currentMonth, type LeagueSlug } from '../utils/constants'
+import { currentMonth, seasonMonths, type LeagueSlug } from '../utils/constants'
 
 const STATIC_TTL = 60 * 60 * 1000
 const POLL_MS = 60 * 1000 // 有进行中比赛时每 60s 刷新（规格规则 1）
@@ -17,6 +17,7 @@ export const useMatchesStore = defineStore('matches', {
     fallback: false,   // 直播断线已退回快照（挂提示用）
     empty: false,      // 当月/该月无联赛比赛（空场/休赛期状态用）
     timer: null as ReturnType<typeof setInterval> | null,
+    teamSchedules: {} as Record<string, Match[]>, // key: `${league}/${teamId}`
     // Phase 3：全局比赛详情弹窗
     activeMatch: null as { match: Match; league: LeagueSlug } | null,
   }),
@@ -62,6 +63,29 @@ export const useMatchesStore = defineStore('matches', {
         this.months[k] = []
         this.empty = true // 文件不存在（如休赛期当月）→ 空场提示 + 引导跳月
       }
+    },
+    /**
+     * 加载某队整赛季赛程：跨季度 10 个月并行拉取，过滤出该队主/客场，按开球时间正序。
+     * 不复用 loadMonth——它内置单月串行防过期计数（loadGen），并行调 10 次会互相丢数据。
+     * 当月走直播直连（失败回落静态快照），其余月走静态 JSON；单月失败不连坐其余月。
+     */
+    async loadTeamSchedule(league: LeagueSlug, teamId: number, season: string, seasonType: 'european' | 'calendar' = 'european') {
+      const k = `${league}/${teamId}`
+      const months = seasonMonths(season, seasonType)
+      const results = await Promise.all(months.map(async (m) => {
+        if (m === currentMonth()) {
+          try { return await fetchLiveScores(league, m) }
+          catch { /* 直播失败 → 回落下面的静态快照 */ }
+        }
+        try {
+          const f = await fetchJsonCached<MatchesFile>(`data/${league}/matches/${m}.json`, STATIC_TTL, season)
+          return f.matches
+        } catch { return [] } // 月文件不存在（休赛期当月等）→ 空
+      }))
+      this.teamSchedules[k] = results
+        .flat()
+        .filter((m) => m.home.id === teamId || m.away.id === teamId)
+        .sort((a, b) => a.date.localeCompare(b.date))
     },
     /** 手动刷新：直播态才生效（MonthStrip 的刷新按钮用） */
     async refresh(league: LeagueSlug, month: string) {
