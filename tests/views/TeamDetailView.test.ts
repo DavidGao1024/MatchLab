@@ -11,8 +11,12 @@ import type { Team, PlayerSummary } from '../../src/types/models'
 
 // 数据全部预注入：除球队身价静态表外，发生任何网络请求都算异常
 const mockFetch = vi.fn((input: unknown) => {
-  if (String(input).includes('team-values.json')) {
+  const url = String(input)
+  if (url.includes('team-values.json')) {
     return Promise.resolve({ ok: true, json: () => Promise.resolve({ teams: {} }) })
+  }
+  if (url.includes('/matches/')) {
+    return Promise.resolve({ ok: true, json: () => Promise.resolve({ matches: [] }) })
   }
   return Promise.reject(new Error('no fetch expected'))
 })
@@ -76,7 +80,7 @@ describe('球队详情页·主题上页', () => {
     expect(w.text()).toContain('85')
     // 放行唯一合法请求：球队身价静态表；其余一律违规
     const urls = mockFetch.mock.calls.map((c) => String(c[0]))
-    expect(urls.every((u) => u.includes('team-values.json'))).toBe(true)
+    expect(urls.every((u) => u.includes('team-values.json') || u.includes('/matches/'))).toBe(true)
   })
 
   it('球队主色上根容器：--flag-from 为主色，--accent 在位', async () => {
@@ -106,11 +110,13 @@ describe('球队详情页·点缀落位', () => {
 
   it('阵容总标题挂 squad-title（主色下划线由 CSS 变量承接）', async () => {
     const w = await setup(makeTeam(), [makePlayer()])
+    await w.find('[data-tab="squad"]').trigger('click')
     expect(w.find('.squad-title').exists()).toBe(true)
   })
 
   it('位置分组小标题吃到 --accent（CSS 变量自 section 级联）', async () => {
     const w = await setup(makeTeam(), [makePlayer()])
+    await w.find('[data-tab="squad"]').trigger('click')
     const h3 = w.find('h3')
     expect(h3.exists()).toBe(true)
     expect(h3.attributes('style') ?? '').toContain('var(--accent')
@@ -120,9 +126,24 @@ describe('球队详情页·点缀落位', () => {
 describe('球队阵容·国旗', () => {
   it('阵容球员有国籍时名字前渲染国旗', async () => {
     const w = await setup(makeTeam(), [makePlayer({ citizenship: 'England', flag: 'https://a.espncdn.com/i/teamlogos/countries/500/eng.png' })])
+    await w.find('[data-tab="squad"]').trigger('click')
     const img = w.find('img[src*="eng.png"]')
     expect(img.exists()).toBe(true)
     expect(img.attributes('title')).toBe('England')
     expect(img.attributes('width')).toBe('16')
+  })
+})
+
+describe('球队详情页·赛程页签', () => {
+  it('默认停在赛程页签，赛程空态可见', async () => {
+    const w = await setup(makeTeam())
+    expect(w.text()).toContain('No matches this season')
+  })
+
+  it('点击阵容页签切到阵容，赛程区隐藏', async () => {
+    const w = await setup(makeTeam(), [makePlayer()])
+    await w.find('[data-tab="squad"]').trigger('click')
+    expect(w.find('.squad-title').exists()).toBe(true)
+    expect(w.text()).not.toContain('No matches this season')
   })
 })

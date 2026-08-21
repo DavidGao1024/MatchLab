@@ -5,6 +5,7 @@ import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
 import TeamLogo from '../components/common/TeamLogo.vue'
 import TeamSquad from '../components/teams/TeamSquad.vue'
+import TeamSchedule from '../components/teams/TeamSchedule.vue'
 import SubscribeButton from '../components/teams/SubscribeButton.vue'
 import FavoriteButton from '../components/common/FavoriteButton.vue'
 import ExportCalendarButton from '../components/teams/ExportCalendarButton.vue'
@@ -52,6 +53,7 @@ const squad = computed(() => {
   const all = players.indexes[league.value] ?? []
   return all.filter((p) => p.teamId === teamId.value)
 })
+const tab = ref<'schedule' | 'squad'>('schedule')
 
 const displayName = computed(() => (team.value ? teamName(team.value.name, app.lang) : ''))
 const record = computed(() => team.value?.record ?? null)
@@ -135,8 +137,31 @@ function back() {
         <div class="stat-cell stat-pts"><div class="stat-label">{{ t('team.col.pts', app.lang) }}</div><div class="stat-val val-pts">{{ record.points }}</div></div>
       </div>
 
-      <!-- 阵容（按位置分组） -->
-      <div class="mt-6">
+      <!-- 页签栏：赛程 / 阵容 -->
+      <div class="mt-6 flex gap-6 border-b border-white/10">
+        <button
+          type="button"
+          class="pb-2 font-cond text-lg tracking-[0.05em]"
+          :class="tab === 'schedule' ? 'border-b-2 font-bold text-white' : 'text-slate-500'"
+          :style="tab === 'schedule' ? { borderColor: 'var(--accent)' } : undefined"
+          data-tab="schedule"
+          @click="tab = 'schedule'"
+        >{{ t('nav.schedule', app.lang) }}</button>
+        <button
+          type="button"
+          class="pb-2 font-cond text-lg tracking-[0.05em]"
+          :class="tab === 'squad' ? 'border-b-2 font-bold text-white' : 'text-slate-500'"
+          :style="tab === 'squad' ? { borderColor: 'var(--accent)' } : undefined"
+          data-tab="squad"
+          @click="tab = 'squad'"
+        >{{ t('team.squad', app.lang) }} ({{ squad.length }})</button>
+      </div>
+
+      <!-- 赛程页签 -->
+      <TeamSchedule v-if="tab === 'schedule'" :league="league" :team-id="teamId" />
+
+      <!-- 阵容页签 -->
+      <div v-else class="mt-6">
         <h2 class="squad-title">
           {{ t('team.squad', app.lang) }}
           <span class="squad-count">({{ squad.length }})</span>
