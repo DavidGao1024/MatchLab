@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-20T07:04:24.559Z",
+  "updateTime": "2026-08-22T06:56:50.192Z",
   "league": "ger.1",
   "season": "2026",
-  "count": 576,
+  "count": 553,
   "players": [
     {
       "id": 384380,
@@ -28,18 +28,6 @@
       "citizenship": "Denmark",
       "flag": "flags/dk.png",
       "team": "TSG Hoffenheim"
-    },
-    {
-      "id": 410638,
-      "name": "Adam El-Chaar",
-      "teamId": 132,
-      "position": "D",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "Bayern Munich"
     },
     {
       "id": 292169,
@@ -147,18 +135,6 @@
       "assists": null,
       "citizenship": "Spain",
       "flag": "flags/es.png",
-      "team": "Bayer Leverkusen"
-    },
-    {
-      "id": 407628,
-      "name": "Aleksa Damjanovic",
-      "teamId": 131,
-      "position": "F",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Serbia",
-      "flag": "flags/rs.png",
       "team": "Bayer Leverkusen"
     },
     {
@@ -606,18 +582,6 @@
       "team": "Bayer Leverkusen"
     },
     {
-      "id": 298348,
-      "name": "Ayman Azhil",
-      "teamId": 124,
-      "position": "M",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Morocco",
-      "flag": "flags/ma.png",
-      "team": "Borussia Dortmund"
-    },
-    {
       "id": 380942,
       "name": "Ayodele Thomas",
       "teamId": 11420,
@@ -687,18 +651,6 @@
       "assists": null,
       "citizenship": "Senegal",
       "flag": "flags/sn.png",
-      "team": "Bayern Munich"
-    },
-    {
-      "id": 422013,
-      "name": "Bastian Assomo",
-      "teamId": 132,
-      "position": "F",
-      "age": 16,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
       "team": "Bayern Munich"
     },
     {
@@ -810,18 +762,6 @@
       "team": "Schalke 04"
     },
     {
-      "id": 311571,
-      "name": "Bryan Zaragoza",
-      "teamId": 132,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Bayern Munich"
-    },
-    {
       "id": 407682,
       "name": "Cajetan Lenz",
       "teamId": 7911,
@@ -880,18 +820,6 @@
       "citizenship": "Austria",
       "flag": "flags/at.png",
       "team": "Borussia Dortmund"
-    },
-    {
-      "id": 405586,
-      "name": "Cassiano Kiala",
-      "teamId": 132,
-      "position": "D",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "Bayern Munich"
     },
     {
       "id": 319100,
@@ -1182,6 +1110,18 @@
       "team": "Werder Bremen"
     },
     {
+      "id": 405585,
+      "name": "David Daiber",
+      "teamId": 132,
+      "position": "M",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "team": "Bayern Munich"
+    },
+    {
       "id": 345873,
       "name": "David Herold",
       "teamId": 268,
@@ -1204,18 +1144,6 @@
       "citizenship": "France",
       "flag": "flags/fr.png",
       "team": "SV Elversberg"
-    },
-    {
-      "id": 3110056,
-      "name": "David Podar-Stiube",
-      "teamId": 132,
-      "position": "G",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Bayern Munich"
     },
     {
       "id": 249548,
@@ -1338,28 +1266,28 @@
       "team": "SC Freiburg"
     },
     {
-      "id": 386460,
-      "name": "Dmytro Bohdanov",
-      "teamId": 598,
-      "position": "F",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Ukraine",
-      "flag": "flags/ua.png",
-      "team": "1. FC Union Berlin"
-    },
-    {
       "id": 172997,
       "name": "Dominik Kohr",
       "teamId": 2950,
-      "position": "M",
+      "position": "D",
       "age": 32,
       "goals": null,
       "assists": null,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "team": "Mainz"
+    },
+    {
+      "id": 413775,
+      "name": "Duje Sliskovic",
+      "teamId": 598,
+      "position": "M",
+      "age": 18,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Croatia",
+      "flag": "flags/hr.png",
+      "team": "1. FC Union Berlin"
     },
     {
       "id": 386117,
@@ -1551,6 +1479,18 @@
       "assists": null,
       "citizenship": "Germany",
       "flag": "flags/de.png",
+      "team": "Borussia Dortmund"
+    },
+    {
+      "id": 401450,
+      "name": "Enzo De Pina Duarte Dos Santos",
+      "teamId": 124,
+      "position": "M",
+      "age": 17,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Luxembourg",
+      "flag": "flags/lu.png",
       "team": "Borussia Dortmund"
     },
     {
@@ -1758,18 +1698,6 @@
       "team": "Eintracht Frankfurt"
     },
     {
-      "id": 365357,
-      "name": "Farid Alfa-Ruprecht",
-      "teamId": 131,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "Bayer Leverkusen"
-    },
-    {
       "id": 372029,
       "name": "Fayssal Harchaoui",
       "teamId": 122,
@@ -1864,18 +1792,6 @@
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "team": "SV Elversberg"
-    },
-    {
-      "id": 420811,
-      "name": "Filip Pavic",
-      "teamId": 132,
-      "position": "D",
-      "age": 16,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Croatia",
-      "flag": "flags/hr.png",
-      "team": "Bayern Munich"
     },
     {
       "id": 387437,
@@ -2070,6 +1986,18 @@
       "team": "Borussia Mönchengladbach"
     },
     {
+      "id": 3131188,
+      "name": "Fritz Gagzow",
+      "teamId": 598,
+      "position": "G",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "team": "1. FC Union Berlin"
+    },
+    {
       "id": 323936,
       "name": "Gabriel Vidovic",
       "teamId": 3307,
@@ -2140,18 +2068,6 @@
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "team": "VfB Stuttgart"
-    },
-    {
-      "id": 379223,
-      "name": "Guido Rovere",
-      "teamId": 132,
-      "position": "M",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Bayern Munich"
     },
     {
       "id": 282885,
@@ -2454,18 +2370,6 @@
       "team": "FC Cologne"
     },
     {
-      "id": 3102556,
-      "name": "Jan-Luca Riedl",
-      "teamId": 124,
-      "position": "D",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Borussia Dortmund"
-    },
-    {
       "id": 205916,
       "name": "Janik Bachmann",
       "teamId": 133,
@@ -2670,6 +2574,18 @@
       "team": "1. FC Union Berlin"
     },
     {
+      "id": 406374,
+      "name": "Jeremiaha Maluze",
+      "teamId": 125,
+      "position": "D",
+      "age": 21,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "team": "Eintracht Frankfurt"
+    },
+    {
       "id": 367725,
       "name": "Jeremy Arévalo",
       "teamId": 134,
@@ -2692,18 +2608,6 @@
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "team": "Eintracht Frankfurt"
-    },
-    {
-      "id": 224144,
-      "name": "João Palhinha",
-      "teamId": 132,
-      "position": "M",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "team": "Bayern Munich"
     },
     {
       "id": 324820,
@@ -2806,7 +2710,7 @@
       "name": "Jonas Hofmann",
       "teamId": 131,
       "position": "M",
-      "age": 29,
+      "age": 34,
       "goals": null,
       "assists": null,
       "citizenship": "Germany",
@@ -2944,6 +2848,18 @@
       "citizenship": "Belgium",
       "flag": "flags/be.png",
       "team": "RB Leipzig"
+    },
+    {
+      "id": 408339,
+      "name": "Julian Etse",
+      "teamId": 125,
+      "position": "D",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "team": "Eintracht Frankfurt"
     },
     {
       "id": 309487,
@@ -3342,6 +3258,18 @@
       "team": "Borussia Dortmund"
     },
     {
+      "id": 238033,
+      "name": "Kou Itakura",
+      "teamId": 268,
+      "position": "D",
+      "age": 29,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Japan",
+      "flag": "flags/jp.png",
+      "team": "Borussia Mönchengladbach"
+    },
+    {
       "id": 371500,
       "name": "Kouakou Gadou",
       "teamId": 124,
@@ -3486,18 +3414,6 @@
       "team": "TSG Hoffenheim"
     },
     {
-      "id": 388141,
-      "name": "Leon Klanac",
-      "teamId": 132,
-      "position": "G",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "Bayern Munich"
-    },
-    {
       "id": 285866,
       "name": "Leonidas Stergiou",
       "teamId": 134,
@@ -3628,18 +3544,6 @@
       "citizenship": "Sweden",
       "flag": "flags/se.png",
       "team": "Eintracht Frankfurt"
-    },
-    {
-      "id": 3106917,
-      "name": "Luca Höcker",
-      "teamId": 137,
-      "position": "D",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Werder Bremen"
     },
     {
       "id": 332574,
@@ -4290,18 +4194,6 @@
       "team": "Borussia Dortmund"
     },
     {
-      "id": 419946,
-      "name": "Mats Heitmann",
-      "teamId": 137,
-      "position": "D",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "Werder Bremen"
-    },
-    {
       "id": 359744,
       "name": "Mats Rots",
       "teamId": 7911,
@@ -4446,6 +4338,18 @@
       "team": "SC Freiburg"
     },
     {
+      "id": 341950,
+      "name": "Maximilian Kinzig",
+      "teamId": 2950,
+      "position": "G",
+      "age": 22,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "team": "Mainz"
+    },
+    {
       "id": 216225,
       "name": "Maximilian Mittelstädt",
       "teamId": 134,
@@ -4480,18 +4384,6 @@
       "citizenship": "Austria",
       "flag": "flags/at.png",
       "team": "Schalke 04"
-    },
-    {
-      "id": 417373,
-      "name": "Maycon Cardozo",
-      "teamId": 132,
-      "position": "M",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "team": "Bayern Munich"
     },
     {
       "id": 3113344,
@@ -4540,18 +4432,6 @@
       "citizenship": "Austria",
       "flag": "flags/at.png",
       "team": "FC Augsburg"
-    },
-    {
-      "id": 3110058,
-      "name": "Michael Matošević",
-      "teamId": 132,
-      "position": "M",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Bayern Munich"
     },
     {
       "id": 286831,
@@ -4794,18 +4674,6 @@
       "team": "TSG Hoffenheim"
     },
     {
-      "id": 404386,
-      "name": "Ndjicoura Bomba",
-      "teamId": 131,
-      "position": "F",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Mali",
-      "flag": "flags/ml.png",
-      "team": "Bayer Leverkusen"
-    },
-    {
       "id": 322693,
       "name": "Nediljko Labrovic",
       "teamId": 3841,
@@ -4852,18 +4720,6 @@
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "team": "Werder Bremen"
-    },
-    {
-      "id": 212237,
-      "name": "Nico Elvedi",
-      "teamId": 268,
-      "position": "D",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Switzerland",
-      "flag": "flags/ch.png",
-      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 286828,
@@ -5152,18 +5008,6 @@
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "team": "1. FC Union Berlin"
-    },
-    {
-      "id": 3104227,
-      "name": "Oluwaseyi Wilson",
-      "teamId": 132,
-      "position": "F",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Bayern Munich"
     },
     {
       "id": 193610,
@@ -5514,18 +5358,6 @@
       "team": "Eintracht Frankfurt"
     },
     {
-      "id": 403935,
-      "name": "Raphael Pavlic",
-      "teamId": 132,
-      "position": "D",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "Bayern Munich"
-    },
-    {
       "id": 306161,
       "name": "Rav van den Berg",
       "teamId": 122,
@@ -5560,18 +5392,6 @@
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "team": "FC Cologne"
-    },
-    {
-      "id": 3110059,
-      "name": "Richard Ajayi Oluwaseyi",
-      "teamId": 132,
-      "position": "D",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Bayern Munich"
     },
     {
       "id": 258963,
@@ -5730,18 +5550,6 @@
       "team": "FC Augsburg"
     },
     {
-      "id": 403803,
-      "name": "Roko Mijatovic",
-      "teamId": 132,
-      "position": "D",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Croatia",
-      "flag": "flags/hr.png",
-      "team": "Bayern Munich"
-    },
-    {
       "id": 324766,
       "name": "Rômulo",
       "teamId": 11420,
@@ -5800,18 +5608,6 @@
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "team": "SC Paderborn 07"
-    },
-    {
-      "id": 287225,
-      "name": "Sacha Boey",
-      "teamId": 132,
-      "position": "D",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Bayern Munich"
     },
     {
       "id": 380795,
@@ -6078,18 +5874,6 @@
       "team": "Mainz"
     },
     {
-      "id": 3104162,
-      "name": "Simon Schaff",
-      "teamId": 132,
-      "position": "M",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Bayern Munich"
-    },
-    {
       "id": 330964,
       "name": "Skelly Alvero",
       "teamId": 137,
@@ -6100,18 +5884,6 @@
       "citizenship": "France",
       "flag": "flags/fr.png",
       "team": "Werder Bremen"
-    },
-    {
-      "id": 3110057,
-      "name": "Skender Nuraj",
-      "teamId": 132,
-      "position": "F",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Bayern Munich"
     },
     {
       "id": 333646,
@@ -6270,18 +6042,6 @@
       "team": "Bayern Munich"
     },
     {
-      "id": 410768,
-      "name": "Takato Yamamoto",
-      "teamId": 124,
-      "position": "M",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Japan",
-      "flag": "flags/jp.png",
-      "team": "Borussia Dortmund"
-    },
-    {
       "id": 266280,
       "name": "Thijs Dallinga",
       "teamId": 122,
@@ -6328,18 +6088,6 @@
       "citizenship": "France",
       "flag": "flags/fr.png",
       "team": "RB Leipzig"
-    },
-    {
-      "id": 3104151,
-      "name": "Tim Binder",
-      "teamId": 132,
-      "position": "M",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Bayern Munich"
     },
     {
       "id": 3113345,
@@ -6666,18 +6414,6 @@
       "team": "RB Leipzig"
     },
     {
-      "id": 388224,
-      "name": "Vincent Manuba",
-      "teamId": 132,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "Bayern Munich"
-    },
-    {
       "id": 179571,
       "name": "Vincenzo Grifo",
       "teamId": 126,
@@ -6772,18 +6508,6 @@
       "citizenship": "Denmark",
       "flag": "flags/dk.png",
       "team": "Mainz"
-    },
-    {
-      "id": 399864,
-      "name": "Wisdom Mike",
-      "teamId": 132,
-      "position": "F",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "Bayern Munich"
     },
     {
       "id": 274860,

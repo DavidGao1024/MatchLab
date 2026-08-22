@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-20T07:09:05.483Z",
+  "updateTime": "2026-08-22T07:01:28.463Z",
   "league": "fra.1",
   "season": "2026",
-  "count": 522,
+  "count": 517,
   "players": [
     {
       "id": 340239,
@@ -306,27 +306,15 @@
       "team": "AJ Auxerre"
     },
     {
-      "id": 406934,
-      "name": "Amadou Diakité",
-      "teamId": 170,
-      "position": "F",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Troyes"
-    },
-    {
       "id": 145229,
       "name": "Amadou Diallo",
       "teamId": 169,
       "position": "F",
-      "age": 20,
+      "age": 23,
       "goals": null,
       "assists": null,
-      "citizenship": "Guinea",
-      "flag": "flags/gn.png",
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
       "team": "Stade Rennais"
     },
     {
@@ -340,18 +328,6 @@
       "citizenship": "Mali",
       "flag": "flags/ml.png",
       "team": "Lens"
-    },
-    {
-      "id": 330550,
-      "name": "Amar Ahmed",
-      "teamId": 170,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Sweden",
-      "flag": "flags/se.png",
-      "team": "Troyes"
     },
     {
       "id": 301262,
@@ -436,18 +412,6 @@
       "citizenship": "Montenegro",
       "flag": "flags/me.png",
       "team": "Lens"
-    },
-    {
-      "id": 346518,
-      "name": "Andy Logbo",
-      "teamId": 3236,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Le Havre AC"
     },
     {
       "id": 256773,
@@ -1242,6 +1206,18 @@
       "team": "Marseille"
     },
     {
+      "id": 323058,
+      "name": "Dermane Karim",
+      "teamId": 170,
+      "position": "M",
+      "age": 22,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Togo",
+      "flag": "flags/tg.png",
+      "team": "Troyes"
+    },
+    {
       "id": 336388,
       "name": "Désiré Doué",
       "teamId": 160,
@@ -1264,18 +1240,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Paris FC"
-    },
-    {
-      "id": 340678,
-      "name": "Diego Moreira",
-      "teamId": 180,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Belgium",
-      "flag": "flags/be.png",
-      "team": "Strasbourg"
     },
     {
       "id": 368325,
@@ -1384,6 +1348,18 @@
       "citizenship": "Norway",
       "flag": "flags/no.png",
       "team": "Brest"
+    },
+    {
+      "id": 329755,
+      "name": "Elias Jelert",
+      "teamId": 3236,
+      "position": "D",
+      "age": 23,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Denmark",
+      "flag": "flags/dk.png",
+      "team": "Le Havre AC"
     },
     {
       "id": 415193,
@@ -1786,11 +1762,11 @@
       "name": "Formose Mendy",
       "teamId": 273,
       "position": "D",
-      "age": 32,
+      "age": 25,
       "goals": null,
       "assists": null,
-      "citizenship": "Guinea-Bissau",
-      "flag": "flags/gw.png",
+      "citizenship": "Senegal",
+      "flag": "flags/sn.png",
       "team": "Lorient"
     },
     {
@@ -1840,18 +1816,6 @@
       "citizenship": "France",
       "flag": "flags/fr.png",
       "team": "Lorient"
-    },
-    {
-      "id": 398444,
-      "name": "Gabin Capuano",
-      "teamId": 175,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Lens"
     },
     {
       "id": 408136,
@@ -2274,6 +2238,18 @@
       "team": "Paris FC"
     },
     {
+      "id": 411027,
+      "name": "Ilane Touré",
+      "teamId": 174,
+      "position": "M",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "AS Monaco"
+    },
+    {
       "id": 304503,
       "name": "Illia Zabarnyi",
       "teamId": 160,
@@ -2598,18 +2574,6 @@
       "team": "Strasbourg"
     },
     {
-      "id": 324932,
-      "name": "Joel Mvuka",
-      "teamId": 273,
-      "position": "M",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Norway",
-      "flag": "flags/no.png",
-      "team": "Lorient"
-    },
-    {
       "id": 232089,
       "name": "Jonathan Clauss",
       "teamId": 2502,
@@ -2644,18 +2608,6 @@
       "citizenship": "France",
       "flag": "flags/fr.png",
       "team": "Paris FC"
-    },
-    {
-      "id": 97867,
-      "name": "Jordan James",
-      "teamId": 169,
-      "position": "M",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Wales",
-      "flag": "flags/gb-wls.png",
-      "team": "Stade Rennais"
     },
     {
       "id": 191712,
@@ -2740,6 +2692,18 @@
       "citizenship": "Haiti",
       "flag": "flags/ht.png",
       "team": "AJ Auxerre"
+    },
+    {
+      "id": 3130908,
+      "name": "Jules Bouffandeau",
+      "teamId": 7868,
+      "position": "M",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "team": "Angers"
     },
     {
       "id": 388329,
@@ -2860,6 +2824,30 @@
       "citizenship": "Guinea",
       "flag": "flags/gn.png",
       "team": "Troyes"
+    },
+    {
+      "id": 224074,
+      "name": "Karim Coulibaly",
+      "teamId": 180,
+      "position": "D",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "team": "Strasbourg"
+    },
+    {
+      "id": 422095,
+      "name": "Kelyann Bezahaf",
+      "teamId": 176,
+      "position": "D",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Algeria",
+      "flag": "flags/dz.png",
+      "team": "Marseille"
     },
     {
       "id": 164187,
@@ -3450,6 +3438,18 @@
       "team": "AS Monaco"
     },
     {
+      "id": 3130907,
+      "name": "Mamadou Diallo",
+      "teamId": 7868,
+      "position": "F",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "team": "Angers"
+    },
+    {
       "id": 345926,
       "name": "Mamadou Diop",
       "teamId": 172,
@@ -3510,18 +3510,6 @@
       "team": "AJ Auxerre"
     },
     {
-      "id": 167905,
-      "name": "Marc-Aurele Caillard",
-      "teamId": 166,
-      "position": "G",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Lille"
-    },
-    {
       "id": 322205,
       "name": "Mario Sauer",
       "teamId": 179,
@@ -3532,18 +3520,6 @@
       "citizenship": "Slovakia",
       "flag": "flags/sk.png",
       "team": "Toulouse"
-    },
-    {
-      "id": 323173,
-      "name": "Marius Broholm",
-      "teamId": 166,
-      "position": "F",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Norway",
-      "flag": "flags/no.png",
-      "team": "Lille"
     },
     {
       "id": 394476,
@@ -4270,7 +4246,7 @@
       "name": "Nathaniel Adjei",
       "teamId": 273,
       "position": "D",
-      "age": 23,
+      "age": 24,
       "goals": null,
       "assists": null,
       "citizenship": "Ghana",
@@ -4420,6 +4396,18 @@
       "citizenship": "Guadeloupe",
       "flag": "flags/gp.png",
       "team": "Lorient"
+    },
+    {
+      "id": 414398,
+      "name": "Noah Donkor",
+      "teamId": 170,
+      "position": "D",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Troyes"
     },
     {
       "id": 367360,
@@ -4614,18 +4602,6 @@
       "team": "Paris Saint-Germain"
     },
     {
-      "id": 366905,
-      "name": "Ousmane Touré",
-      "teamId": 166,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Lille"
-    },
-    {
       "id": 334359,
       "name": "Pablo Pagis",
       "teamId": 6851,
@@ -4756,18 +4732,6 @@
       "citizenship": "France",
       "flag": "flags/fr.png",
       "team": "AJ Auxerre"
-    },
-    {
-      "id": 138860,
-      "name": "Paul Pogba",
-      "teamId": 174,
-      "position": "M",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "AS Monaco"
     },
     {
       "id": 305545,
@@ -5778,18 +5742,6 @@
       "team": "AJ Auxerre"
     },
     {
-      "id": 3129024,
-      "name": "Timéo Raffourt",
-      "teamId": 180,
-      "position": "G",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Strasbourg"
-    },
-    {
       "id": 297167,
       "name": "Timothee Pembélé",
       "teamId": 3236,
@@ -5824,18 +5776,6 @@
       "citizenship": "Nigeria",
       "flag": "flags/ng.png",
       "team": "Marseille"
-    },
-    {
-      "id": 388240,
-      "name": "Tom Akpakoun",
-      "teamId": 170,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Troyes"
     },
     {
       "id": 258100,

@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-20T06:42:48.572Z",
+  "updateTime": "2026-08-22T06:36:46.017Z",
   "league": "eng.1",
   "season": "2026",
   "count": 20,
@@ -56,15 +56,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 0,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "played": 0,
-        "points": 0,
-        "goalDiff": 0,
-        "goalsFor": 0,
+        "played": 1,
+        "points": 3,
+        "goalDiff": 3,
+        "goalsFor": 3,
         "goalsAgainst": 0,
-        "summary": "0-0-0"
+        "summary": "1-0-0"
       }
     },
     {
@@ -213,13 +213,13 @@
       "record": {
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "played": 0,
+        "losses": 1,
+        "played": 1,
         "points": 0,
-        "goalDiff": 0,
+        "goalDiff": -3,
         "goalsFor": 0,
-        "goalsAgainst": 0,
-        "summary": "0-0-0"
+        "goalsAgainst": 3,
+        "summary": "0-0-1"
       }
     },
     {
@@ -480,7 +480,7 @@
       "shortDisplayName": "Man United",
       "abbreviation": "MAN",
       "color": "#da020e",
-      "alternateColor": "#FFFFFF",
+      "alternateColor": "#4169E1",
       "logo": "logos/360.png",
       "logoDark": "logos/360-dark.png",
       "venue": {
