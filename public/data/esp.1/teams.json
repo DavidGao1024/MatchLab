@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-22T06:42:11.547Z",
+  "updateTime": "2026-08-24T06:57:04.301Z",
   "league": "esp.1",
   "season": "2026",
   "count": 20,
@@ -56,13 +56,13 @@
       "record": {
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "played": 0,
+        "losses": 1,
+        "played": 1,
         "points": 0,
-        "goalDiff": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "summary": "0-0-0"
+        "goalDiff": -2,
+        "goalsFor": 1,
+        "goalsAgainst": 3,
+        "summary": "0-0-1"
       }
     },
     {
@@ -78,21 +78,21 @@
       "logo": "logos/1068.png",
       "logoDark": "logos/1068-dark.png",
       "venue": {
-        "name": "Riyadh Air Metropolitano",
+        "name": "Cerro del Espino",
         "city": "Madrid",
         "country": "Spain"
       },
       "isActive": true,
       "record": {
         "wins": 1,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "played": 1,
-        "points": 3,
+        "played": 2,
+        "points": 4,
         "goalDiff": 2,
-        "goalsFor": 2,
-        "goalsAgainst": 0,
-        "summary": "1-0-0"
+        "goalsFor": 4,
+        "goalsAgainst": 2,
+        "summary": "1-1-0"
       }
     },
     {
@@ -115,15 +115,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 0,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "played": 0,
-        "points": 0,
-        "goalDiff": 0,
-        "goalsFor": 0,
+        "played": 1,
+        "points": 3,
+        "goalDiff": 5,
+        "goalsFor": 5,
         "goalsAgainst": 0,
-        "summary": "0-0-0"
+        "summary": "1-0-0"
       }
     },
     {
@@ -146,14 +146,14 @@
       "isActive": true,
       "record": {
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "played": 0,
-        "points": 0,
+        "played": 1,
+        "points": 1,
         "goalDiff": 0,
         "goalsFor": 0,
         "goalsAgainst": 0,
-        "summary": "0-0-0"
+        "summary": "0-1-0"
       }
     },
     {
@@ -199,21 +199,21 @@
       "logo": "logos/3751.png",
       "logoDark": "logos/3751-dark.png",
       "venue": {
-        "name": "Estadio Martínez Valero",
-        "city": "Elche",
+        "name": "Pinatar Arena",
+        "city": "Murcia",
         "country": "Spain"
       },
       "isActive": true,
       "record": {
         "wins": 0,
         "draws": 1,
-        "losses": 0,
-        "played": 1,
+        "losses": 1,
+        "played": 2,
         "points": 1,
-        "goalDiff": 0,
+        "goalDiff": -5,
         "goalsFor": 1,
-        "goalsAgainst": 1,
-        "summary": "0-1-0"
+        "goalsAgainst": 6,
+        "summary": "0-1-1"
       }
     },
     {
@@ -237,13 +237,13 @@
       "record": {
         "wins": 1,
         "draws": 0,
-        "losses": 0,
-        "played": 1,
+        "losses": 1,
+        "played": 2,
         "points": 3,
-        "goalDiff": 3,
-        "goalsFor": 3,
-        "goalsAgainst": 0,
-        "summary": "1-0-0"
+        "goalDiff": 2,
+        "goalsFor": 4,
+        "goalsAgainst": 2,
+        "summary": "1-0-1"
       }
     },
     {
@@ -265,15 +265,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 0,
+        "wins": 1,
         "draws": 0,
         "losses": 1,
-        "played": 1,
-        "points": 0,
-        "goalDiff": -3,
-        "goalsFor": 0,
+        "played": 2,
+        "points": 3,
+        "goalDiff": -2,
+        "goalsFor": 1,
         "goalsAgainst": 3,
-        "summary": "0-0-1"
+        "summary": "1-0-1"
       }
     },
     {
@@ -319,7 +319,7 @@
       "logo": "logos/99.png",
       "logoDark": "logos/99-dark.png",
       "venue": {
-        "name": "La Rosaleda",
+        "name": "Marbella Football Center",
         "city": "Malaga",
         "country": "Spain"
       },
@@ -379,21 +379,21 @@
       "logo": "logos/87.png",
       "logoDark": "logos/87-dark.png",
       "venue": {
-        "name": "El Sardineros",
-        "city": "Santander",
+        "name": "Campo de Fútbol Municipal La Planchada",
+        "city": "Astillero",
         "country": "Spain"
       },
       "isActive": true,
       "record": {
         "wins": 0,
         "draws": 1,
-        "losses": 0,
-        "played": 1,
+        "losses": 1,
+        "played": 2,
         "points": 1,
-        "goalDiff": 0,
+        "goalDiff": -1,
         "goalsFor": 2,
-        "goalsAgainst": 2,
-        "summary": "0-1-0"
+        "goalsAgainst": 3,
+        "summary": "0-1-1"
       }
     },
     {
@@ -468,22 +468,18 @@
       "alternateColor": "#FEBE10",
       "logo": "logos/86.png",
       "logoDark": "logos/86-dark.png",
-      "venue": {
-        "name": "Santiago Bernabéu",
-        "city": "Madrid",
-        "country": "Spain"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
-        "wins": 0,
+        "wins": 1,
         "draws": 0,
         "losses": 0,
-        "played": 0,
-        "points": 0,
-        "goalDiff": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "summary": "0-0-0"
+        "played": 1,
+        "points": 3,
+        "goalDiff": 1,
+        "goalsFor": 2,
+        "goalsAgainst": 1,
+        "summary": "1-0-0"
       }
     },
     {
@@ -535,15 +531,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 1,
+        "wins": 2,
         "draws": 0,
         "losses": 0,
-        "played": 1,
-        "points": 3,
-        "goalDiff": 1,
-        "goalsFor": 2,
-        "goalsAgainst": 1,
-        "summary": "1-0-0"
+        "played": 2,
+        "points": 6,
+        "goalDiff": 3,
+        "goalsFor": 5,
+        "goalsAgainst": 2,
+        "summary": "2-0-0"
       }
     },
     {
@@ -566,14 +562,14 @@
       "isActive": true,
       "record": {
         "wins": 0,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "played": 0,
-        "points": 0,
+        "played": 1,
+        "points": 1,
         "goalDiff": 0,
         "goalsFor": 0,
         "goalsAgainst": 0,
-        "summary": "0-0-0"
+        "summary": "0-1-0"
       }
     },
     {
@@ -596,14 +592,14 @@
       "isActive": true,
       "record": {
         "wins": 0,
-        "draws": 1,
+        "draws": 2,
         "losses": 0,
-        "played": 1,
-        "points": 1,
+        "played": 2,
+        "points": 2,
         "goalDiff": 0,
-        "goalsFor": 2,
-        "goalsAgainst": 2,
-        "summary": "0-1-0"
+        "goalsFor": 4,
+        "goalsAgainst": 4,
+        "summary": "0-2-0"
       }
     }
   ]

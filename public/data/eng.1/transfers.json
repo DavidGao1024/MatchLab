@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-08-22T07:12:28.344Z",
+  "updateTime": "2026-08-24T07:25:06.703Z",
   "league": "eng.1",
-  "playersScanned": 589,
-  "count": 1206,
+  "playersScanned": 591,
+  "count": 1207,
   "transfers": [
     {
       "playerId": 102053,
@@ -9918,18 +9918,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 282585,
-      "playerName": "Benoît Badiashile",
-      "date": "2023-01-05T08:00Z",
-      "fromTeamId": 174,
-      "fromTeam": "AS Monaco",
-      "toTeamId": 363,
-      "toTeam": "Chelsea",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 282645,
       "playerName": "Danny Ballard",
       "date": "2019-07-03T07:00Z",
@@ -13297,6 +13285,30 @@
       "fromTeam": "Aston Villa",
       "toTeamId": 18066,
       "toTeam": "Annecy",
+      "type": "Loan",
+      "amount": 0,
+      "displayAmount": "Loan"
+    },
+    {
+      "playerId": 350661,
+      "playerName": "Lewis Koumas",
+      "date": "2024-08-10T07:00Z",
+      "fromTeamId": 364,
+      "fromTeam": "Liverpool",
+      "toTeamId": 336,
+      "toTeam": "Stoke City",
+      "type": "Loan",
+      "amount": 0,
+      "displayAmount": "Loan"
+    },
+    {
+      "playerId": 350661,
+      "playerName": "Lewis Koumas",
+      "date": "2025-08-22T07:00Z",
+      "fromTeamId": 364,
+      "fromTeam": "Liverpool",
+      "toTeamId": 392,
+      "toTeam": "Birmingham City",
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"

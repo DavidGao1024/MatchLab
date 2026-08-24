@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-08-22T07:22:12.097Z",
+  "updateTime": "2026-08-24T07:34:01.728Z",
   "league": "fra.1",
-  "playersScanned": 518,
-  "count": 328,
+  "playersScanned": 520,
+  "count": 326,
   "transfers": [
     {
       "playerId": 10767,
@@ -1312,18 +1312,6 @@
       "type": "Free",
       "amount": 0,
       "displayAmount": "Free"
-    },
-    {
-      "playerId": 193448,
-      "playerName": "Hans Hateboer",
-      "date": "2017-01-30T08:00Z",
-      "fromTeamId": 145,
-      "fromTeam": "FC Groningen",
-      "toTeamId": 105,
-      "toTeam": "Atalanta",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 195501,
@@ -2701,18 +2689,6 @@
       "fromTeam": "Juventus",
       "toTeamId": 176,
       "toTeam": "Marseille",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 266057,
-      "playerName": "Elisha Owusu",
-      "date": "2018-07-01T07:00Z",
-      "fromTeamId": 166,
-      "fromTeam": "Lille",
-      "toTeamId": 272,
-      "toTeam": "Sochaux",
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
