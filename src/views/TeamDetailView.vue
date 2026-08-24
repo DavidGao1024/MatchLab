@@ -15,6 +15,7 @@ import { useAppStore } from '../stores/app'
 import { usePlayersStore } from '../stores/players'
 import { useTeamsStore } from '../stores/teams'
 import { useMatchesStore } from '../stores/matches'
+import { useStandingsStore } from '../stores/standings'
 import { cityName, teamName, t, venueName, teamValue, formatTeamValue, loadTeamValues } from '../utils/i18n'
 import type { LeagueSlug } from '../utils/constants'
 import { bannerTheme } from '../utils/teamColor'
@@ -25,6 +26,7 @@ const app = useAppStore()
 const players = usePlayersStore()
 const teams = useTeamsStore()
 const matchesStore = useMatchesStore()
+const standingsStore = useStandingsStore()
 
 const league = computed(() => route.params.league as LeagueSlug)
 const teamId = computed(() => Number(route.params.id))
@@ -40,6 +42,11 @@ async function load() {
     await ensureLeague(league.value)
     await players.ensureIndex(league.value, season.value)
     await loadTeamValues()
+    // 战绩格走实时积分榜（当月直播+历史月静态前端算），不再读低频 teams.json 的 record
+    standingsStore.load(league.value, season.value, {
+      seasonType: app.leagueInfo(league.value)?.seasonType ?? 'european',
+      withForm: false,
+    }).catch(() => {})
     if (seq.value !== my) return
   } catch (e) {
     if (seq.value !== my) return
@@ -63,7 +70,22 @@ const nextMatch = computed(() => {
 })
 
 const displayName = computed(() => (team.value ? teamName(team.value.name, app.lang) : ''))
-const record = computed(() => team.value?.record ?? null)
+const record = computed(() => {
+  const row = standingsStore.rows[league.value]?.find((r) => r.teamId === teamId.value)
+  if (row) {
+    return {
+      wins: row.won,
+      draws: row.drawn,
+      losses: row.lost,
+      played: row.played,
+      points: row.points,
+      goalDiff: row.goalDiff,
+      goalsFor: row.goalsFor,
+      goalsAgainst: row.goalsAgainst,
+    }
+  }
+  return team.value?.record ?? null
+})
 const squadValueMillion = computed(() => (team.value ? teamValue(team.value.name) : null))
 const teamSlug = computed(() => {
   const t = team.value
