@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-08-22T07:15:03.582Z",
+  "updateTime": "2026-08-24T07:27:32.074Z",
   "league": "esp.1",
-  "playersScanned": 557,
-  "count": 482,
+  "playersScanned": 573,
+  "count": 478,
   "transfers": [
     {
       "playerId": 119620,
@@ -798,30 +798,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 145600,
-      "playerName": "Matías Vecino",
-      "date": "2017-08-02T07:00Z",
-      "fromTeamId": 109,
-      "fromTeam": "Fiorentina",
-      "toTeamId": 110,
-      "toTeam": "Internazionale",
-      "type": "Fee",
-      "amount": 24000000,
-      "displayAmount": "24000000"
-    },
-    {
-      "playerId": 145600,
-      "playerName": "Matías Vecino",
-      "date": "2022-08-01T07:00Z",
-      "fromTeamId": 110,
-      "fromTeam": "Internazionale",
-      "toTeamId": 112,
-      "toTeam": "Lazio",
-      "type": "Free",
-      "amount": 0,
-      "displayAmount": "Free"
-    },
-    {
       "playerId": 146127,
       "playerName": "Marcos Alonso",
       "date": "2010-07-27T07:00Z",
@@ -1135,7 +1111,7 @@
     },
     {
       "playerId": 16340,
-      "playerName": "Javi Guerra",
+      "playerName": "Javier Guerra",
       "date": "2015-01-15T08:00Z",
       "fromTeamId": 347,
       "fromTeam": "Cardiff City",
@@ -1879,7 +1855,7 @@
     },
     {
       "playerId": 198832,
-      "playerName": "Mariano",
+      "playerName": "Mariano Díaz",
       "date": "2017-07-01T07:00Z",
       "fromTeamId": 86,
       "fromTeam": "Real Madrid",
@@ -1891,7 +1867,7 @@
     },
     {
       "playerId": 198832,
-      "playerName": "Mariano",
+      "playerName": "Mariano Díaz",
       "date": "2018-08-29T07:00Z",
       "fromTeamId": 167,
       "fromTeam": "Lyon",
@@ -3877,30 +3853,6 @@
       "fromTeam": "Brighton & Hove Albion",
       "toTeamId": 363,
       "toTeam": "Chelsea",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 260554,
-      "playerName": "Kervin Arriaga",
-      "date": "2022-02-16T08:00Z",
-      "fromTeamId": 7249,
-      "fromTeam": "Club Deportivo Marathón",
-      "toTeamId": 17362,
-      "toTeam": "Minnesota United FC",
-      "type": "Allocation",
-      "amount": 0,
-      "displayAmount": "Allocation"
-    },
-    {
-      "playerId": 260554,
-      "playerName": "Kervin Arriaga",
-      "date": "2024-07-01T07:00Z",
-      "fromTeamId": 17362,
-      "fromTeam": "Minnesota United FC",
-      "toTeamId": null,
-      "toTeam": null,
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"

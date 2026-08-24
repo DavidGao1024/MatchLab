@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-22T06:56:50.192Z",
+  "updateTime": "2026-08-24T07:10:53.945Z",
   "league": "ger.1",
   "season": "2026",
-  "count": 553,
+  "count": 554,
   "players": [
     {
       "id": 384380,
@@ -355,9 +355,9 @@
     },
     {
       "id": 341441,
-      "name": "Andrej Ilic",
+      "name": "Andrej Ilić",
       "teamId": 598,
-      "position": "F",
+      "position": "M",
       "age": 26,
       "goals": null,
       "assists": null,
@@ -778,7 +778,7 @@
       "name": "Calvin Brackelmann",
       "teamId": 3841,
       "position": "D",
-      "age": 26,
+      "age": 27,
       "goals": null,
       "assists": null,
       "citizenship": "Germany",
@@ -1412,14 +1412,14 @@
     {
       "id": 209595,
       "name": "Ellyes Skhiri",
-      "teamId": 125,
+      "teamId": 122,
       "position": "M",
       "age": 31,
       "goals": null,
       "assists": null,
       "citizenship": "Tunisia",
       "flag": "flags/tn.png",
-      "team": "Eintracht Frankfurt"
+      "team": "FC Cologne"
     },
     {
       "id": 311118,
@@ -1696,18 +1696,6 @@
       "citizenship": "Algeria",
       "flag": "flags/dz.png",
       "team": "Eintracht Frankfurt"
-    },
-    {
-      "id": 372029,
-      "name": "Fayssal Harchaoui",
-      "teamId": 122,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "FC Cologne"
     },
     {
       "id": 408344,
@@ -2710,7 +2698,7 @@
       "name": "Jonas Hofmann",
       "teamId": 131,
       "position": "M",
-      "age": 34,
+      "age": 29,
       "goals": null,
       "assists": null,
       "citizenship": "Germany",
@@ -3822,18 +3810,6 @@
       "team": "SV Elversberg"
     },
     {
-      "id": 264828,
-      "name": "Lutsharel Geertruida",
-      "teamId": 11420,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Netherlands",
-      "flag": "flags/nl.png",
-      "team": "RB Leipzig"
-    },
-    {
       "id": 277377,
       "name": "Maarten Vandevoordt",
       "teamId": 11420,
@@ -4384,6 +4360,18 @@
       "citizenship": "Austria",
       "flag": "flags/at.png",
       "team": "Schalke 04"
+    },
+    {
+      "id": 417373,
+      "name": "Maycon Cardozo",
+      "teamId": 132,
+      "position": "M",
+      "age": 17,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "team": "Bayern Munich"
     },
     {
       "id": 3113344,
@@ -5262,6 +5250,18 @@
       "team": "Mainz"
     },
     {
+      "id": 3121808,
+      "name": "Rael-Tshimbela Nakuzola",
+      "teamId": 2950,
+      "position": "D",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "team": "Mainz"
+    },
+    {
       "id": 255355,
       "name": "Ragnar Ache",
       "teamId": 122,
@@ -5602,7 +5602,7 @@
       "name": "Ruben Müller",
       "teamId": 3307,
       "position": "F",
-      "age": 20,
+      "age": 21,
       "goals": null,
       "assists": null,
       "citizenship": "Germany",
@@ -5926,7 +5926,7 @@
       "name": "Stefan Bell",
       "teamId": 2950,
       "position": "D",
-      "age": 34,
+      "age": 35,
       "goals": null,
       "assists": null,
       "citizenship": "Germany",
@@ -6354,6 +6354,18 @@
       "team": "Schalke 04"
     },
     {
+      "id": 3111131,
+      "name": "Tristan Spranger",
+      "teamId": 7911,
+      "position": "D",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "team": "TSG Hoffenheim"
+    },
+    {
       "id": 401325,
       "name": "Tristan Zobel",
       "teamId": 3307,
@@ -6442,7 +6454,7 @@
       "name": "Vladimír Coufal",
       "teamId": 7911,
       "position": "D",
-      "age": 33,
+      "age": 34,
       "goals": null,
       "assists": null,
       "citizenship": "Czechia",

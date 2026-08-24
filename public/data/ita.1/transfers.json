@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-08-22T07:18:17.284Z",
+  "updateTime": "2026-08-24T07:30:36.339Z",
   "league": "ita.1",
-  "playersScanned": 623,
-  "count": 601,
+  "playersScanned": 627,
+  "count": 606,
   "transfers": [
     {
       "playerId": 108482,
@@ -3030,6 +3030,54 @@
       "displayAmount": "Undisclosed"
     },
     {
+      "playerId": 237435,
+      "playerName": "Eljif Elmas",
+      "date": "2019-07-24T07:00Z",
+      "fromTeamId": 436,
+      "fromTeam": "Fenerbahce",
+      "toTeamId": 114,
+      "toTeam": "Napoli",
+      "type": "Undisclosed",
+      "amount": 0,
+      "displayAmount": "Undisclosed"
+    },
+    {
+      "playerId": 237435,
+      "playerName": "Eljif Elmas",
+      "date": "2024-01-01T08:00Z",
+      "fromTeamId": 114,
+      "fromTeam": "Napoli",
+      "toTeamId": 11420,
+      "toTeam": "RB Leipzig",
+      "type": "Undisclosed",
+      "amount": 0,
+      "displayAmount": "Undisclosed"
+    },
+    {
+      "playerId": 237435,
+      "playerName": "Eljif Elmas",
+      "date": "2025-01-29T08:00Z",
+      "fromTeamId": 11420,
+      "fromTeam": "RB Leipzig",
+      "toTeamId": 239,
+      "toTeam": "Torino",
+      "type": "Loan",
+      "amount": 0,
+      "displayAmount": "Loan"
+    },
+    {
+      "playerId": 237435,
+      "playerName": "Eljif Elmas",
+      "date": "2025-09-01T07:00Z",
+      "fromTeamId": 11420,
+      "fromTeam": "RB Leipzig",
+      "toTeamId": 114,
+      "toTeam": "Napoli",
+      "type": "Loan",
+      "amount": 0,
+      "displayAmount": "Loan"
+    },
+    {
       "playerId": 238407,
       "playerName": "Jens Odgaard",
       "date": "2018-06-30T07:00Z",
@@ -3964,18 +4012,6 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
-    },
-    {
-      "playerId": 257211,
-      "playerName": "Adam Buksa",
-      "date": "2022-07-01T07:00Z",
-      "fromTeamId": 189,
-      "fromTeam": "New England Revolution",
-      "toTeamId": 175,
-      "toTeam": "Lens",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 258307,
@@ -5082,6 +5118,18 @@
       "displayAmount": "Loan"
     },
     {
+      "playerId": 282585,
+      "playerName": "Benoît Badiashile",
+      "date": "2023-01-05T08:00Z",
+      "fromTeamId": 174,
+      "fromTeam": "AS Monaco",
+      "toTeamId": 363,
+      "toTeam": "Chelsea",
+      "type": "Undisclosed",
+      "amount": 0,
+      "displayAmount": "Undisclosed"
+    },
+    {
       "playerId": 282642,
       "playerName": "Faustino Anjorin",
       "date": "2021-09-02T07:00Z",
@@ -6184,6 +6232,18 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
+    },
+    {
+      "playerId": 305552,
+      "playerName": "Josip Sutalo",
+      "date": "2023-08-20T07:00Z",
+      "fromTeamId": null,
+      "fromTeam": null,
+      "toTeamId": 139,
+      "toTeam": "Ajax Amsterdam",
+      "type": "Fee",
+      "amount": 20500000,
+      "displayAmount": "20500000"
     },
     {
       "playerId": 305589,

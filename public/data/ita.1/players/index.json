@@ -1,18 +1,138 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-22T06:52:04.516Z",
+  "updateTime": "2026-08-24T07:06:30.122Z",
   "league": "ita.1",
   "season": "2026",
-  "count": 622,
+  "count": 626,
   "players": [
+    {
+      "id": 6729,
+      "name": "Alessandro Romano",
+      "teamId": 2925,
+      "position": "M",
+      "age": 20,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Switzerland",
+      "flag": "flags/ch.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 262071,
+      "name": "Anastasios Douvikas",
+      "teamId": 2572,
+      "position": "F",
+      "age": 27,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Greece",
+      "flag": "flags/gr.png",
+      "team": "Como"
+    },
+    {
+      "id": 332411,
+      "name": "Antonio Vergara",
+      "teamId": 114,
+      "position": "M",
+      "age": 23,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 384482,
+      "name": "Gustavo Varela",
+      "teamId": 4007,
+      "position": "F",
+      "age": 21,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "team": "Monza"
+    },
+    {
+      "id": 170785,
+      "name": "Hakan Çalhanoglu",
+      "teamId": 110,
+      "position": "M",
+      "age": 32,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Türkiye",
+      "flag": "flags/tr.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 193919,
+      "name": "Hassane Kamara",
+      "teamId": 118,
+      "position": "D",
+      "age": 32,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Ivory Coast",
+      "flag": "flags/ci.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 134947,
+      "name": "Kevin De Bruyne",
+      "teamId": 114,
+      "position": "M",
+      "age": 35,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "Belgium",
+      "flag": "flags/be.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 362674,
+      "name": "Pio Esposito",
+      "teamId": 110,
+      "position": "F",
+      "age": 21,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 177782,
+      "name": "Piotr Zielinski",
+      "teamId": 110,
+      "position": "M",
+      "age": 32,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Poland",
+      "flag": "flags/pl.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 266660,
+      "name": "Yann Bisseck",
+      "teamId": 110,
+      "position": "D",
+      "age": 25,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "team": "Internazionale"
+    },
     {
       "id": 242007,
       "name": "Aarón Martín",
       "teamId": 3263,
       "position": "D",
       "age": 29,
-      "goals": null,
-      "assists": null,
+      "goals": 0,
+      "assists": 0,
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "team": "Genoa"
@@ -23,23 +143,11 @@
       "teamId": 115,
       "position": "M",
       "age": 19,
-      "goals": null,
-      "assists": null,
+      "goals": 0,
+      "assists": 0,
       "citizenship": "Senegal",
       "flag": "flags/sn.png",
       "team": "Parma"
-    },
-    {
-      "id": 400788,
-      "name": "Abdoulaye Camara",
-      "teamId": 118,
-      "position": "M",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Udinese"
     },
     {
       "id": 288540,
@@ -47,8 +155,8 @@
       "teamId": 115,
       "position": "D",
       "age": 24,
-      "goals": null,
-      "assists": null,
+      "goals": 0,
+      "assists": 0,
       "citizenship": "Senegal",
       "flag": "flags/sn.png",
       "team": "Parma"
@@ -59,23 +167,2159 @@
       "teamId": 4007,
       "position": "D",
       "age": 20,
-      "goals": null,
-      "assists": null,
+      "goals": 0,
+      "assists": 0,
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Monza"
     },
     {
-      "id": 257211,
-      "name": "Adam Buksa",
+      "id": 322913,
+      "name": "Adam Obert",
+      "teamId": 2925,
+      "position": "D",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Slovakia",
+      "flag": "flags/sk.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 3118700,
+      "name": "Adam Žulevič",
+      "teamId": 3263,
+      "position": "F",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "team": "Genoa"
+    },
+    {
+      "id": 276653,
+      "name": "Adrián Bernabé",
+      "teamId": 115,
+      "position": "M",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Parma"
+    },
+    {
+      "id": 380970,
+      "name": "Adrian Lahdo",
+      "teamId": 2572,
+      "position": "M",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Sweden",
+      "flag": "flags/se.png",
+      "team": "Como"
+    },
+    {
+      "id": 252372,
+      "name": "Alberto Dossena",
+      "teamId": 2572,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Como"
+    },
+    {
+      "id": 240109,
+      "name": "Aleksandar Stankovic",
+      "teamId": 110,
+      "position": "M",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Serbia",
+      "flag": "flags/rs.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 3131891,
+      "name": "Aleksandr Ballabio",
+      "teamId": 4007,
+      "position": "G",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "team": "Monza"
+    },
+    {
+      "id": 306210,
+      "name": "Alen Sherri",
+      "teamId": 2925,
+      "position": "G",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Albania",
+      "flag": "flags/al.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 249280,
+      "name": "Alessandro Bastoni",
+      "teamId": 110,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 186437,
+      "name": "Alessandro Deiola",
+      "teamId": 2925,
+      "position": "M",
+      "age": 31,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 364761,
+      "name": "Alessandro Marcandalli",
+      "teamId": 3263,
+      "position": "D",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 423017,
+      "name": "Alessandro Mazzocchi",
+      "teamId": 115,
+      "position": "G",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Parma"
+    },
+    {
+      "id": 209746,
+      "name": "Alex Meret",
+      "teamId": 114,
+      "position": "G",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 192146,
+      "name": "Álex Valle",
+      "teamId": 2572,
+      "position": "D",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Como"
+    },
+    {
+      "id": 358445,
+      "name": "Alexsandro Amorim",
+      "teamId": 3263,
+      "position": "M",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 324705,
+      "name": "Alieu Fadera",
+      "teamId": 2925,
+      "position": "F",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Gambia",
+      "flag": "flags/gm.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 319697,
+      "name": "Alisson Santos",
+      "teamId": 114,
+      "position": "F",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 409565,
+      "name": "Aljaz Strajnar",
+      "teamId": 4007,
+      "position": "G",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Slovenia",
+      "flag": "flags/si.png",
+      "team": "Monza"
+    },
+    {
+      "id": 154446,
+      "name": "Álvaro Morata",
+      "teamId": 2572,
+      "position": "F",
+      "age": 33,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Como"
+    },
+    {
+      "id": 205576,
+      "name": "Amir Rrahmani",
+      "teamId": 114,
+      "position": "D",
+      "age": 32,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Kosovo",
+      "flag": "flags/xk.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 301278,
+      "name": "Andrea Carboni",
+      "teamId": 4007,
+      "position": "D",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Monza"
+    },
+    {
+      "id": 272892,
+      "name": "Andrea Colpani",
+      "teamId": 4007,
+      "position": "M",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Monza"
+    },
+    {
+      "id": 319167,
+      "name": "Andy Diouf",
+      "teamId": 110,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": 2,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 309185,
+      "name": "Ange-Yoan Bonny",
+      "teamId": 110,
+      "position": "F",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Ivory Coast",
+      "flag": "flags/ci.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 364742,
+      "name": "Assane Diao",
+      "teamId": 2572,
+      "position": "F",
+      "age": 20,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Senegal",
+      "flag": "flags/sn.png",
+      "team": "Como"
+    },
+    {
+      "id": 263508,
+      "name": "Bayo Youssouf",
       "teamId": 118,
       "position": "F",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Ivory Coast",
+      "flag": "flags/ci.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 356358,
+      "name": "Benjamin Cremaschi",
+      "teamId": 115,
+      "position": "M",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "USA",
+      "flag": "flags/us.png",
+      "team": "Parma"
+    },
+    {
+      "id": 215378,
+      "name": "Benjamin Pavard",
+      "teamId": 110,
+      "position": "D",
       "age": 30,
-      "goals": null,
-      "assists": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 274217,
+      "name": "Billy Gilmour",
+      "teamId": 114,
+      "position": "M",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Scotland",
+      "flag": "flags/gb-sct.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 224187,
+      "name": "Boris Radunovic",
+      "teamId": 2925,
+      "position": "G",
+      "age": 30,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Serbia",
+      "flag": "flags/rs.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 406061,
+      "name": "Branimir Mlacic",
+      "teamId": 118,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Croatia",
+      "flag": "flags/hr.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 311173,
+      "name": "Brooke Norton-Cuffy",
+      "teamId": 3263,
+      "position": "D",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 271769,
+      "name": "Carlos Augusto",
+      "teamId": 110,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 418210,
+      "name": "Christian Garofalo",
+      "teamId": 114,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 339198,
+      "name": "Christian Ordoñez",
+      "teamId": 115,
+      "position": "M",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "team": "Parma"
+    },
+    {
+      "id": 346622,
+      "name": "Costantino Favasuli",
+      "teamId": 114,
+      "position": "D",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 290545,
+      "name": "Daniel Maldini",
+      "teamId": 2925,
+      "position": "F",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 93816,
+      "name": "Daniele Padelli",
+      "teamId": 118,
+      "position": "G",
+      "age": 40,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 210391,
+      "name": "Daniele Sommariva",
+      "teamId": 3263,
+      "position": "G",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 245637,
+      "name": "David Neres",
+      "teamId": 114,
+      "position": "F",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 367445,
+      "name": "David Pejicic",
+      "teamId": 118,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Slovenia",
+      "flag": "flags/si.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 386505,
+      "name": "David Puczka",
+      "teamId": 3263,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Austria",
+      "flag": "flags/at.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 222446,
+      "name": "Djibril Sow",
+      "teamId": 3263,
+      "position": "M",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Switzerland",
+      "flag": "flags/ch.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 417783,
+      "name": "Dominik Drobnic",
+      "teamId": 115,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Slovenia",
+      "flag": "flags/si.png",
+      "team": "Parma"
+    },
+    {
+      "id": 390673,
+      "name": "Eddy Kouadio",
+      "teamId": 4007,
+      "position": "D",
+      "age": 20,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Monza"
+    },
+    {
+      "id": 290792,
+      "name": "Edoardo Corvi",
+      "teamId": 115,
+      "position": "G",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Parma"
+    },
+    {
+      "id": 181060,
+      "name": "Edoardo Goldaniga",
+      "teamId": 2572,
+      "position": "D",
+      "age": 32,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Como"
+    },
+    {
+      "id": 318762,
+      "name": "Edoardo Piana",
+      "teamId": 118,
+      "position": "G",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 287430,
+      "name": "El Bilal Toure",
+      "teamId": 115,
+      "position": "F",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Mali",
+      "flag": "flags/ml.png",
+      "team": "Parma"
+    },
+    {
+      "id": 278987,
+      "name": "Elia Caprile",
+      "teamId": 2925,
+      "position": "G",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 261274,
+      "name": "Emanuele Valeri",
+      "teamId": 115,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Parma"
+    },
+    {
+      "id": 207834,
+      "name": "Emil Audero",
+      "teamId": 2572,
+      "position": "G",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Indonesia",
+      "flag": "flags/id.png",
+      "team": "Como"
+    },
+    {
+      "id": 272694,
+      "name": "Enrico Del Prato",
+      "teamId": 115,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Parma"
+    },
+    {
+      "id": 242601,
+      "name": "Enzo Ebosse",
+      "teamId": 118,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Cameroon",
+      "flag": "flags/cm.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 406191,
+      "name": "Ethan Meichtry",
+      "teamId": 3263,
+      "position": "M",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Switzerland",
+      "flag": "flags/ch.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 194748,
+      "name": "Federico Dimarco",
+      "teamId": 110,
+      "position": "D",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 250672,
+      "name": "Filippo Delli Carri",
+      "teamId": 4007,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Monza"
+    },
+    {
+      "id": 308939,
+      "name": "Franco Carboni",
+      "teamId": 115,
+      "position": "D",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "team": "Parma"
+    },
+    {
+      "id": 215721,
+      "name": "Frank Anguissa",
+      "teamId": 114,
+      "position": "M",
+      "age": 30,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Cameroon",
+      "flag": "flags/cm.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 341773,
+      "name": "Franz Stolz",
+      "teamId": 3263,
+      "position": "G",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Austria",
+      "flag": "flags/at.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 275943,
+      "name": "Gabriele Zappa",
+      "teamId": 2925,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 286948,
+      "name": "Gennaro Borrelli",
+      "teamId": 2925,
+      "position": "F",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 339953,
+      "name": "Giovane",
+      "teamId": 114,
+      "position": "F",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 366510,
+      "name": "Giovanni Daffara",
+      "teamId": 115,
+      "position": "G",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Parma"
+    },
+    {
+      "id": 155904,
+      "name": "Giovanni Di Lorenzo",
+      "teamId": 114,
+      "position": "D",
+      "age": 33,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 408146,
+      "name": "Giulio Vinciati",
+      "teamId": 118,
+      "position": "F",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 303910,
+      "name": "Giuseppe Aurelio",
+      "teamId": 2925,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 202332,
+      "name": "Harry Winks",
+      "teamId": 2925,
+      "position": "M",
+      "age": 30,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 377170,
+      "name": "Idrissa Gueye",
+      "teamId": 118,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Senegal",
+      "flag": "flags/sn.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 181836,
+      "name": "Ivan Provedel",
+      "teamId": 110,
+      "position": "G",
+      "age": 32,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 323273,
+      "name": "Ivan Smolcic",
+      "teamId": 2572,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Croatia",
+      "flag": "flags/hr.png",
+      "team": "Como"
+    },
+    {
+      "id": 407932,
+      "name": "Ivan Sulev",
+      "teamId": 2925,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Bulgaria",
+      "flag": "flags/bg.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 380318,
+      "name": "Jacobo Ramón",
+      "teamId": 2572,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Como"
+    },
+    {
+      "id": 333938,
+      "name": "Jacopo Fazzini",
+      "teamId": 2925,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 276267,
+      "name": "Jakub Piotrowski",
+      "teamId": 118,
+      "position": "M",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
       "citizenship": "Poland",
       "flag": "flags/pl.png",
       "team": "Udinese"
+    },
+    {
+      "id": 410613,
+      "name": "Jamal Iddrissou",
+      "teamId": 110,
+      "position": "F",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 342837,
+      "name": "James Abankwah",
+      "teamId": 118,
+      "position": "D",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "team": "Udinese"
+    },
+    {
+      "id": 355359,
+      "name": "Jay Robinson",
+      "teamId": 4007,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "team": "Monza"
+    },
+    {
+      "id": 214740,
+      "name": "Jean Butez",
+      "teamId": 2572,
+      "position": "G",
+      "age": 31,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Como"
+    },
+    {
+      "id": 237055,
+      "name": "Jesper Karlström",
+      "teamId": 118,
+      "position": "M",
+      "age": 31,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Sweden",
+      "flag": "flags/se.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 387491,
+      "name": "Jesús Rodriguez",
+      "teamId": 2572,
+      "position": "F",
+      "age": 20,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Como"
+    },
+    {
+      "id": 259975,
+      "name": "Johan Vásquez",
+      "teamId": 3263,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Mexico",
+      "flag": "flags/mx.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 157974,
+      "name": "John Stones",
+      "teamId": 110,
+      "position": "D",
+      "age": 32,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 301980,
+      "name": "José Romero",
+      "teamId": 115,
+      "position": "F",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "team": "Parma"
+    },
+    {
+      "id": 240533,
+      "name": "Josep Martínez",
+      "teamId": 110,
+      "position": "G",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 407930,
+      "name": "Joseph Liteta",
+      "teamId": 2925,
+      "position": "M",
+      "age": 20,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Zambia",
+      "flag": "flags/zm.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 360207,
+      "name": "Juan David Arizala",
+      "teamId": 118,
+      "position": "M",
+      "age": 20,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Colombia",
+      "flag": "flags/co.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 361506,
+      "name": "Juan Rodríguez",
+      "teamId": 2925,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Uruguay",
+      "flag": "flags/uy.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 261054,
+      "name": "Junior Messias",
+      "teamId": 3263,
+      "position": "F",
+      "age": 35,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 270817,
+      "name": "Jurgen Ekkelenkamp",
+      "teamId": 118,
+      "position": "M",
+      "age": 26,
+      "goals": 0,
+      "assists": 1,
+      "citizenship": "Netherlands",
+      "flag": "flags/nl.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 205653,
+      "name": "Justin Bijlow",
+      "teamId": 3263,
+      "position": "G",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Netherlands",
+      "flag": "flags/nl.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 317233,
+      "name": "Kaiki",
+      "teamId": 2572,
+      "position": "D",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "team": "Como"
+    },
+    {
+      "id": 304151,
+      "name": "Kevin Carlos",
+      "teamId": 2925,
+      "position": "F",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 368312,
+      "name": "Kingstone Mutandwa",
+      "teamId": 2925,
+      "position": "F",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Zambia",
+      "flag": "flags/zm.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 219713,
+      "name": "Lautaro Martínez",
+      "teamId": 110,
+      "position": "F",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 281590,
+      "name": "Lautaro Valenti",
+      "teamId": 115,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "team": "Parma"
+    },
+    {
+      "id": 347009,
+      "name": "Lennon Miller",
+      "teamId": 118,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Scotland",
+      "flag": "flags/gb-sct.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 281736,
+      "name": "Leo Østigard",
+      "teamId": 3263,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Norway",
+      "flag": "flags/no.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 403808,
+      "name": "Leonardo Bovio",
+      "teamId": 110,
+      "position": "D",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 148974,
+      "name": "Leonardo Spinazzola",
+      "teamId": 114,
+      "position": "D",
+      "age": 33,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 297220,
+      "name": "Lorenzo Colombo",
+      "teamId": 3263,
+      "position": "F",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 282564,
+      "name": "Lorenzo Lucca",
+      "teamId": 114,
+      "position": "F",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 367635,
+      "name": "Lorenzo Lucchesi",
+      "teamId": 4007,
+      "position": "D",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Monza"
+    },
+    {
+      "id": 291285,
+      "name": "Lucas Da Cunha",
+      "teamId": 2572,
+      "position": "M",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Como"
+    },
+    {
+      "id": 286369,
+      "name": "Luis Henrique",
+      "teamId": 110,
+      "position": "F",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 264211,
+      "name": "Luis Milla",
+      "teamId": 2572,
+      "position": "M",
+      "age": 31,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Como"
+    },
+    {
+      "id": 295476,
+      "name": "Maduka Okoye",
+      "teamId": 118,
+      "position": "G",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Nigeria",
+      "flag": "flags/ng.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 419268,
+      "name": "Mamedi Doucouré",
+      "teamId": 3263,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 316609,
+      "name": "Mandela Keita",
+      "teamId": 115,
+      "position": "M",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Belgium",
+      "flag": "flags/be.png",
+      "team": "Parma"
+    },
+    {
+      "id": 376261,
+      "name": "Manga Foe Ondoa",
+      "teamId": 4007,
+      "position": "M",
+      "age": 20,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Monza"
+    },
+    {
+      "id": 214562,
+      "name": "Manuel Akanji",
+      "teamId": 110,
+      "position": "D",
+      "age": 31,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Switzerland",
+      "flag": "flags/ch.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 175887,
+      "name": "Marc-Oliver Kempf",
+      "teamId": 2572,
+      "position": "D",
+      "age": 31,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "team": "Como"
+    },
+    {
+      "id": 217331,
+      "name": "Marcus Thuram",
+      "teamId": 110,
+      "position": "F",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 366526,
+      "name": "Mariano Troilo",
+      "teamId": 115,
+      "position": "D",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "team": "Parma"
+    },
+    {
+      "id": 306935,
+      "name": "Mario Mitaj",
+      "teamId": 3263,
+      "position": "D",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Albania",
+      "flag": "flags/al.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 311475,
+      "name": "Martin Baturina",
+      "teamId": 2572,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Croatia",
+      "flag": "flags/hr.png",
+      "team": "Como"
+    },
+    {
+      "id": 234881,
+      "name": "Mathías Olivera",
+      "teamId": 114,
+      "position": "D",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Uruguay",
+      "flag": "flags/uy.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 416515,
+      "name": "Mathis Mout",
+      "teamId": 4007,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": 1,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Monza"
+    },
+    {
+      "id": 310860,
+      "name": "Matija Frigan",
+      "teamId": 115,
+      "position": "F",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Croatia",
+      "flag": "flags/hr.png",
+      "team": "Parma"
+    },
+    {
+      "id": 384519,
+      "name": "Matteo Palma",
+      "teamId": 118,
+      "position": "D",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 188306,
+      "name": "Matteo Politano",
+      "teamId": 114,
+      "position": "F",
+      "age": 33,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 107960,
+      "name": "Matteo Prati",
+      "teamId": 2925,
+      "position": "M",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 285937,
+      "name": "Mattia Felici",
+      "teamId": 2925,
+      "position": "F",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 387723,
+      "name": "Mattia Liberali",
+      "teamId": 2572,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Como"
+    },
+    {
+      "id": 115025,
+      "name": "Mauro Vigorito",
+      "teamId": 2572,
+      "position": "G",
+      "age": 36,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Como"
+    },
+    {
+      "id": 265912,
+      "name": "Maxence Caqueret",
+      "teamId": 2572,
+      "position": "M",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Como"
+    },
+    {
+      "id": 309241,
+      "name": "Máximo Perrone",
+      "teamId": 2572,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "team": "Como"
+    },
+    {
+      "id": 221436,
+      "name": "Mërgim Vojvoda",
+      "teamId": 118,
+      "position": "D",
+      "age": 31,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Kosovo",
+      "flag": "flags/xk.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 272745,
+      "name": "Michel Adopo",
+      "teamId": 2925,
+      "position": "M",
+      "age": 26,
+      "goals": 0,
+      "assists": 1,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 324256,
+      "name": "Mikael Ellertsson",
+      "teamId": 3263,
+      "position": "M",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Iceland",
+      "flag": "flags/is.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 270884,
+      "name": "Morten Frendrup",
+      "teamId": 3263,
+      "position": "M",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Denmark",
+      "flag": "flags/dk.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 361749,
+      "name": "Nesta Elphege",
+      "teamId": 115,
+      "position": "F",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Parma"
+    },
+    {
+      "id": 337970,
+      "name": "Nico Paz",
+      "teamId": 2572,
+      "position": "M",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "team": "Como"
+    },
+    {
+      "id": 308288,
+      "name": "Nicolas Galazzi",
+      "teamId": 4007,
+      "position": "M",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Monza"
+    },
+    {
+      "id": 204441,
+      "name": "Nicolò Barella",
+      "teamId": 110,
+      "position": "M",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 319437,
+      "name": "Nicolò Bertola",
+      "teamId": 118,
+      "position": "D",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 325527,
+      "name": "Nicolò Cavuoti",
+      "teamId": 2925,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 251388,
+      "name": "Nicolò Zaniolo",
+      "teamId": 118,
+      "position": "M",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 198082,
+      "name": "Nikita Contini",
+      "teamId": 114,
+      "position": "G",
+      "age": 30,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 255344,
+      "name": "Noa Lang",
+      "teamId": 114,
+      "position": "F",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Netherlands",
+      "flag": "flags/nl.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 301377,
+      "name": "Noel Törnqvist",
+      "teamId": 2572,
+      "position": "G",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Sweden",
+      "flag": "flags/se.png",
+      "team": "Como"
+    },
+    {
+      "id": 306579,
+      "name": "Oier Zarraga",
+      "teamId": 118,
+      "position": "M",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 297751,
+      "name": "Oliver Sørensen",
+      "teamId": 115,
+      "position": "M",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Denmark",
+      "flag": "flags/dk.png",
+      "team": "Parma"
+    },
+    {
+      "id": 325554,
+      "name": "Omari Forson",
+      "teamId": 4007,
+      "position": "F",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "team": "Monza"
+    },
+    {
+      "id": 261066,
+      "name": "Oumar Solet",
+      "teamId": 118,
+      "position": "D",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 194718,
+      "name": "Ousmane Diallo",
+      "teamId": 115,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Parma"
+    },
+    {
+      "id": 238885,
+      "name": "Patrick Cutrone",
+      "teamId": 4007,
+      "position": "F",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Monza"
+    },
+    {
+      "id": 418819,
+      "name": "Paul Mendy",
+      "teamId": 2925,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Senegal",
+      "flag": "flags/sn.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 341494,
+      "name": "Petar Sucic",
+      "teamId": 110,
+      "position": "M",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Croatia",
+      "flag": "flags/hr.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 253569,
+      "name": "Pontus Almqvist",
+      "teamId": 115,
+      "position": "F",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Sweden",
+      "flag": "flags/se.png",
+      "team": "Parma"
+    },
+    {
+      "id": 365697,
+      "name": "Rachid Kouda",
+      "teamId": 115,
+      "position": "M",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Parma"
+    },
+    {
+      "id": 297360,
+      "name": "Rafa Marín",
+      "teamId": 114,
+      "position": "D",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 181322,
+      "name": "Raffaele Di Gennaro",
+      "teamId": 110,
+      "position": "G",
+      "age": 32,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Internazionale"
+    },
+    {
+      "id": 346596,
+      "name": "Raphael Kofler",
+      "teamId": 2925,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 309273,
+      "name": "Rasmus Højlund",
+      "teamId": 114,
+      "position": "F",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Denmark",
+      "flag": "flags/dk.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 259871,
+      "name": "Ricardo Mangas",
+      "teamId": 4007,
+      "position": "D",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "team": "Monza"
+    },
+    {
+      "id": 422244,
+      "name": "Riccardo Cassano",
+      "teamId": 2572,
+      "position": "M",
+      "age": 17,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Como"
+    },
+    {
+      "id": 363886,
+      "name": "Saba Goglichidze",
+      "teamId": 118,
+      "position": "D",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Georgia",
+      "flag": "flags/ge.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 261594,
+      "name": "Sam Beukema",
+      "teamId": 114,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Netherlands",
+      "flag": "flags/nl.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 418840,
+      "name": "Samuel Wiafe",
+      "teamId": 3263,
+      "position": "M",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 248440,
+      "name": "Samuele Birindelli",
+      "teamId": 4007,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Monza"
+    },
+    {
+      "id": 219725,
+      "name": "Sandi Lovric",
+      "teamId": 118,
+      "position": "M",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Slovenia",
+      "flag": "flags/si.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 255850,
+      "name": "Scott McTominay",
+      "teamId": 114,
+      "position": "M",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Scotland",
+      "flag": "flags/gb-sct.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 350205,
+      "name": "Sebastian Otoa",
+      "teamId": 3263,
+      "position": "D",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Denmark",
+      "flag": "flags/dk.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 270186,
+      "name": "Semuel Pizzignacco",
+      "teamId": 4007,
+      "position": "G",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Monza"
+    },
+    {
+      "id": 413818,
+      "name": "Simone Lontani",
+      "teamId": 115,
+      "position": "F",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Parma"
+    },
+    {
+      "id": 397386,
+      "name": "Solomon Loubao",
+      "teamId": 4007,
+      "position": "F",
+      "age": 20,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "Monza"
+    },
+    {
+      "id": 188412,
+      "name": "Stanislav Lobotka",
+      "teamId": 114,
+      "position": "M",
+      "age": 31,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Slovakia",
+      "flag": "flags/sk.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 177862,
+      "name": "Stefano Sabelli",
+      "teamId": 3263,
+      "position": "D",
+      "age": 33,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 402608,
+      "name": "Thomás De Martis",
+      "teamId": 115,
+      "position": "F",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "team": "Parma"
+    },
+    {
+      "id": 309518,
+      "name": "Tommaso Baldanzi",
+      "teamId": 3263,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 227784,
+      "name": "Trevoh Chalobah",
+      "teamId": 2572,
+      "position": "D",
+      "age": 27,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "team": "Como"
+    },
+    {
+      "id": 362376,
+      "name": "Unai Gómez",
+      "teamId": 118,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "team": "Udinese"
+    },
+    {
+      "id": 274733,
+      "name": "Valentin Antov",
+      "teamId": 4007,
+      "position": "D",
+      "age": 25,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Bulgaria",
+      "flag": "flags/bg.png",
+      "team": "Monza"
+    },
+    {
+      "id": 219531,
+      "name": "Vanja Milinkovic-Savic",
+      "teamId": 114,
+      "position": "G",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Serbia",
+      "flag": "flags/rs.png",
+      "team": "Napoli"
+    },
+    {
+      "id": 403234,
+      "name": "Vitinha",
+      "teamId": 3263,
+      "position": "F",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "team": "Genoa"
+    },
+    {
+      "id": 297084,
+      "name": "Yan Couto",
+      "teamId": 2572,
+      "position": "D",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "team": "Como"
+    },
+    {
+      "id": 196901,
+      "name": "Yerry Mina",
+      "teamId": 2925,
+      "position": "D",
+      "age": 31,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Colombia",
+      "flag": "flags/co.png",
+      "team": "Cagliari"
+    },
+    {
+      "id": 332684,
+      "name": "Zé Pedro",
+      "teamId": 2925,
+      "position": "D",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "team": "Cagliari"
     },
     {
       "id": 218105,
@@ -90,42 +2334,6 @@
       "team": "Lazio"
     },
     {
-      "id": 322913,
-      "name": "Adam Obert",
-      "teamId": 2925,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Slovakia",
-      "flag": "flags/sk.png",
-      "team": "Cagliari"
-    },
-    {
-      "id": 3118700,
-      "name": "Adam Žulevič",
-      "teamId": 3263,
-      "position": "F",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Genoa"
-    },
-    {
-      "id": 276653,
-      "name": "Adrián Bernabé",
-      "teamId": 115,
-      "position": "M",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Parma"
-    },
-    {
       "id": 239120,
       "name": "Adrian Ismajli",
       "teamId": 239,
@@ -136,18 +2344,6 @@
       "citizenship": "Albania",
       "flag": "flags/al.png",
       "team": "Torino"
-    },
-    {
-      "id": 380970,
-      "name": "Adrian Lahdo",
-      "teamId": 2572,
-      "position": "M",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Sweden",
-      "flag": "flags/se.png",
-      "team": "Como"
     },
     {
       "id": 364224,
@@ -222,18 +2418,6 @@
       "team": "Fiorentina"
     },
     {
-      "id": 252372,
-      "name": "Alberto Dossena",
-      "teamId": 2572,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Como"
-    },
-    {
       "id": 377831,
       "name": "Alberto Manzoni",
       "teamId": 105,
@@ -306,42 +2490,6 @@
       "team": "Frosinone"
     },
     {
-      "id": 240109,
-      "name": "Aleksandar Stankovic",
-      "teamId": 110,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Serbia",
-      "flag": "flags/rs.png",
-      "team": "Internazionale"
-    },
-    {
-      "id": 306210,
-      "name": "Alen Sherri",
-      "teamId": 2925,
-      "position": "G",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Albania",
-      "flag": "flags/al.png",
-      "team": "Cagliari"
-    },
-    {
-      "id": 249280,
-      "name": "Alessandro Bastoni",
-      "teamId": 110,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Internazionale"
-    },
-    {
       "id": 382808,
       "name": "Alessandro Berretta",
       "teamId": 4007,
@@ -366,18 +2514,6 @@
       "team": "Napoli"
     },
     {
-      "id": 186437,
-      "name": "Alessandro Deiola",
-      "teamId": 2925,
-      "position": "M",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Cagliari"
-    },
-    {
       "id": 3101737,
       "name": "Alessandro Di Bitonto",
       "teamId": 3997,
@@ -388,42 +2524,6 @@
       "citizenship": null,
       "flag": null,
       "team": "Sassuolo"
-    },
-    {
-      "id": 364761,
-      "name": "Alessandro Marcandalli",
-      "teamId": 3263,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Genoa"
-    },
-    {
-      "id": 423017,
-      "name": "Alessandro Mazzocchi",
-      "teamId": 115,
-      "position": "G",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Parma"
-    },
-    {
-      "id": 6729,
-      "name": "Alessandro Romano",
-      "teamId": 2925,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Switzerland",
-      "flag": "flags/ch.png",
-      "team": "Cagliari"
     },
     {
       "id": 270010,
@@ -522,30 +2622,6 @@
       "team": "Fiorentina"
     },
     {
-      "id": 209746,
-      "name": "Alex Meret",
-      "teamId": 114,
-      "position": "G",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Napoli"
-    },
-    {
-      "id": 192146,
-      "name": "Álex Valle",
-      "teamId": 2572,
-      "position": "D",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Como"
-    },
-    {
       "id": 271132,
       "name": "Alexis Saelemaekers",
       "teamId": 103,
@@ -556,18 +2632,6 @@
       "citizenship": "Belgium",
       "flag": "flags/be.png",
       "team": "AC Milan"
-    },
-    {
-      "id": 358445,
-      "name": "Alexsandro Amorim",
-      "teamId": 3263,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "team": "Genoa"
     },
     {
       "id": 218439,
@@ -606,18 +2670,6 @@
       "team": "Torino"
     },
     {
-      "id": 324705,
-      "name": "Alieu Fadera",
-      "teamId": 2925,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Gambia",
-      "flag": "flags/gm.png",
-      "team": "Cagliari"
-    },
-    {
       "id": 367743,
       "name": "Alieu Njie",
       "teamId": 239,
@@ -628,30 +2680,6 @@
       "citizenship": "Sweden",
       "flag": "flags/se.png",
       "team": "Torino"
-    },
-    {
-      "id": 319697,
-      "name": "Alisson Santos",
-      "teamId": 114,
-      "position": "F",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "team": "Napoli"
-    },
-    {
-      "id": 409565,
-      "name": "Aljaz Strajnar",
-      "teamId": 4007,
-      "position": "G",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Slovenia",
-      "flag": "flags/si.png",
-      "team": "Monza"
     },
     {
       "id": 359754,
@@ -666,30 +2694,6 @@
       "team": "AC Milan"
     },
     {
-      "id": 154446,
-      "name": "Álvaro Morata",
-      "teamId": 2572,
-      "position": "F",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Como"
-    },
-    {
-      "id": 205576,
-      "name": "Amir Rrahmani",
-      "teamId": 114,
-      "position": "D",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Kosovo",
-      "flag": "flags/xk.png",
-      "team": "Napoli"
-    },
-    {
       "id": 297296,
       "name": "Anass Salah-Eddine",
       "teamId": 104,
@@ -700,18 +2704,6 @@
       "citizenship": "Morocco",
       "flag": "flags/ma.png",
       "team": "AS Roma"
-    },
-    {
-      "id": 262071,
-      "name": "Anastasios Douvikas",
-      "teamId": 2572,
-      "position": "F",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Greece",
-      "flag": "flags/gr.png",
-      "team": "Como"
     },
     {
       "id": 286317,
@@ -750,30 +2742,6 @@
       "team": "Juventus"
     },
     {
-      "id": 301278,
-      "name": "Andrea Carboni",
-      "teamId": 4007,
-      "position": "D",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Monza"
-    },
-    {
-      "id": 272892,
-      "name": "Andrea Colpani",
-      "teamId": 4007,
-      "position": "M",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Monza"
-    },
-    {
       "id": 288788,
       "name": "Andrea Ghion",
       "teamId": 3997,
@@ -808,30 +2776,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Sassuolo"
-    },
-    {
-      "id": 319167,
-      "name": "Andy Diouf",
-      "teamId": 110,
-      "position": "M",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Internazionale"
-    },
-    {
-      "id": 309185,
-      "name": "Ange-Yoan Bonny",
-      "teamId": 110,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Ivory Coast",
-      "flag": "flags/ci.png",
-      "team": "Internazionale"
     },
     {
       "id": 324433,
@@ -894,18 +2838,6 @@
       "team": "AS Roma"
     },
     {
-      "id": 331786,
-      "name": "Antonio Casas",
-      "teamId": 17530,
-      "position": "F",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Venezia"
-    },
-    {
       "id": 319265,
       "name": "Antonio Raimondo",
       "teamId": 4057,
@@ -916,18 +2848,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Frosinone"
-    },
-    {
-      "id": 332411,
-      "name": "Antonio Vergara",
-      "teamId": 114,
-      "position": "M",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Napoli"
     },
     {
       "id": 303973,
@@ -1014,18 +2934,6 @@
       "team": "Fiorentina"
     },
     {
-      "id": 364742,
-      "name": "Assane Diao",
-      "teamId": 2572,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Senegal",
-      "flag": "flags/sn.png",
-      "team": "Como"
-    },
-    {
       "id": 291405,
       "name": "Bartol Franjic",
       "teamId": 17530,
@@ -1036,18 +2944,6 @@
       "citizenship": "Croatia",
       "flag": "flags/hr.png",
       "team": "Venezia"
-    },
-    {
-      "id": 263508,
-      "name": "Bayo Youssouf",
-      "teamId": 118,
-      "position": "F",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Ivory Coast",
-      "flag": "flags/ci.png",
-      "team": "Udinese"
     },
     {
       "id": 268870,
@@ -1062,18 +2958,6 @@
       "team": "Frosinone"
     },
     {
-      "id": 356358,
-      "name": "Benjamin Cremaschi",
-      "teamId": 115,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "USA",
-      "flag": "flags/us.png",
-      "team": "Parma"
-    },
-    {
       "id": 331231,
       "name": "Benjamín Domínguez",
       "teamId": 3997,
@@ -1086,40 +2970,16 @@
       "team": "Sassuolo"
     },
     {
-      "id": 215378,
-      "name": "Benjamin Pavard",
-      "teamId": 110,
+      "id": 282585,
+      "name": "Benoît Badiashile",
+      "teamId": 114,
       "position": "D",
-      "age": 30,
+      "age": 25,
       "goals": null,
       "assists": null,
       "citizenship": "France",
       "flag": "flags/fr.png",
-      "team": "Internazionale"
-    },
-    {
-      "id": 274217,
-      "name": "Billy Gilmour",
-      "teamId": 114,
-      "position": "M",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Scotland",
-      "flag": "flags/gb-sct.png",
       "team": "Napoli"
-    },
-    {
-      "id": 224187,
-      "name": "Boris Radunovic",
-      "teamId": 2925,
-      "position": "G",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Serbia",
-      "flag": "flags/rs.png",
-      "team": "Cagliari"
     },
     {
       "id": 282381,
@@ -1146,18 +3006,6 @@
       "team": "Fiorentina"
     },
     {
-      "id": 406061,
-      "name": "Branimir Mlacic",
-      "teamId": 118,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Croatia",
-      "flag": "flags/hr.png",
-      "team": "Udinese"
-    },
-    {
       "id": 258307,
       "name": "Bremer",
       "teamId": 111,
@@ -1168,18 +3016,6 @@
       "citizenship": "Brazil",
       "flag": "flags/br.png",
       "team": "Juventus"
-    },
-    {
-      "id": 311173,
-      "name": "Brooke Norton-Cuffy",
-      "teamId": 3263,
-      "position": "D",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "team": "Genoa"
     },
     {
       "id": 3102821,
@@ -1228,18 +3064,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Juventus"
-    },
-    {
-      "id": 271769,
-      "name": "Carlos Augusto",
-      "teamId": 110,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "team": "Internazionale"
     },
     {
       "id": 291729,
@@ -1326,18 +3150,6 @@
       "team": "AC Milan"
     },
     {
-      "id": 418210,
-      "name": "Christian Garofalo",
-      "teamId": 114,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Napoli"
-    },
-    {
       "id": 150081,
       "name": "Christian Kabasele",
       "teamId": 118,
@@ -1360,18 +3172,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Lecce"
-    },
-    {
-      "id": 339198,
-      "name": "Christian Ordoñez",
-      "teamId": 115,
-      "position": "M",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "team": "Parma"
     },
     {
       "id": 225607,
@@ -1434,18 +3234,6 @@
       "team": "Lecce"
     },
     {
-      "id": 346622,
-      "name": "Costantino Favasuli",
-      "teamId": 114,
-      "position": "D",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Napoli"
-    },
-    {
       "id": 330259,
       "name": "Cristian Volpato",
       "teamId": 3997,
@@ -1506,18 +3294,6 @@
       "team": "Sassuolo"
     },
     {
-      "id": 290545,
-      "name": "Daniel Maldini",
-      "teamId": 2925,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Cagliari"
-    },
-    {
       "id": 340705,
       "name": "Daniele Ghilardi",
       "teamId": 104,
@@ -1530,18 +3306,6 @@
       "team": "AS Roma"
     },
     {
-      "id": 93816,
-      "name": "Daniele Padelli",
-      "teamId": 118,
-      "position": "G",
-      "age": 40,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Udinese"
-    },
-    {
       "id": 181673,
       "name": "Daniele Rugani",
       "teamId": 111,
@@ -1552,18 +3316,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Juventus"
-    },
-    {
-      "id": 210391,
-      "name": "Daniele Sommariva",
-      "teamId": 3263,
-      "position": "G",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Genoa"
     },
     {
       "id": 233622,
@@ -1638,42 +3390,6 @@
       "team": "Fiorentina"
     },
     {
-      "id": 245637,
-      "name": "David Neres",
-      "teamId": 114,
-      "position": "F",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "team": "Napoli"
-    },
-    {
-      "id": 367445,
-      "name": "David Pejicic",
-      "teamId": 118,
-      "position": "M",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Slovenia",
-      "flag": "flags/si.png",
-      "team": "Udinese"
-    },
-    {
-      "id": 386505,
-      "name": "David Puczka",
-      "teamId": 3263,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Austria",
-      "flag": "flags/at.png",
-      "team": "Genoa"
-    },
-    {
       "id": 345637,
       "name": "Davide Bartesaghi",
       "teamId": 103,
@@ -1725,12 +3441,12 @@
       "id": 250460,
       "name": "Demba Thiam",
       "teamId": 4007,
-      "position": "G",
-      "age": 28,
+      "position": "D",
+      "age": 36,
       "goals": null,
       "assists": null,
-      "citizenship": "Senegal",
-      "flag": "flags/sn.png",
+      "citizenship": "France",
+      "flag": "flags/fr.png",
       "team": "Monza"
     },
     {
@@ -1818,18 +3534,6 @@
       "team": "Internazionale"
     },
     {
-      "id": 222446,
-      "name": "Djibril Sow",
-      "teamId": 3263,
-      "position": "M",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Switzerland",
-      "flag": "flags/ch.png",
-      "team": "Genoa"
-    },
-    {
       "id": 168453,
       "name": "Dodô",
       "teamId": 109,
@@ -1852,18 +3556,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Sassuolo"
-    },
-    {
-      "id": 417783,
-      "name": "Dominik Drobnic",
-      "teamId": 115,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Slovenia",
-      "flag": "flags/si.png",
-      "team": "Parma"
     },
     {
       "id": 259481,
@@ -1914,18 +3606,6 @@
       "team": "Monza"
     },
     {
-      "id": 390673,
-      "name": "Eddy Kouadio",
-      "teamId": 4007,
-      "position": "D",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Monza"
-    },
-    {
       "id": 278210,
       "name": "Éderson",
       "teamId": 105,
@@ -1936,30 +3616,6 @@
       "citizenship": "Brazil",
       "flag": "flags/br.png",
       "team": "Atalanta"
-    },
-    {
-      "id": 290792,
-      "name": "Edoardo Corvi",
-      "teamId": 115,
-      "position": "G",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Parma"
-    },
-    {
-      "id": 181060,
-      "name": "Edoardo Goldaniga",
-      "teamId": 2572,
-      "position": "D",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Como"
     },
     {
       "id": 307969,
@@ -1984,18 +3640,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Lazio"
-    },
-    {
-      "id": 318762,
-      "name": "Edoardo Piana",
-      "teamId": 118,
-      "position": "G",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Udinese"
     },
     {
       "id": 333925,
@@ -2034,30 +3678,6 @@
       "team": "Bologna"
     },
     {
-      "id": 287430,
-      "name": "El Bilal Toure",
-      "teamId": 115,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Mali",
-      "flag": "flags/ml.png",
-      "team": "Parma"
-    },
-    {
-      "id": 278987,
-      "name": "Elia Caprile",
-      "teamId": 2925,
-      "position": "G",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Cagliari"
-    },
-    {
       "id": 329489,
       "name": "Elias Havel",
       "teamId": 3263,
@@ -2068,6 +3688,18 @@
       "citizenship": "Austria",
       "flag": "flags/at.png",
       "team": "Genoa"
+    },
+    {
+      "id": 237435,
+      "name": "Eljif Elmas",
+      "teamId": 105,
+      "position": "M",
+      "age": 26,
+      "goals": null,
+      "assists": null,
+      "citizenship": "North Macedonia",
+      "flag": "flags/mk.png",
+      "team": "Atalanta"
     },
     {
       "id": 403581,
@@ -2094,30 +3726,6 @@
       "team": "AS Roma"
     },
     {
-      "id": 261274,
-      "name": "Emanuele Valeri",
-      "teamId": 115,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Parma"
-    },
-    {
-      "id": 207834,
-      "name": "Emil Audero",
-      "teamId": 2572,
-      "position": "G",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Indonesia",
-      "flag": "flags/id.png",
-      "team": "Como"
-    },
-    {
       "id": 229972,
       "name": "Emil Bohinen",
       "teamId": 17530,
@@ -2142,18 +3750,6 @@
       "team": "Torino"
     },
     {
-      "id": 272694,
-      "name": "Enrico Del Prato",
-      "teamId": 115,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Parma"
-    },
-    {
       "id": 276636,
       "name": "Enrique Perez",
       "teamId": 17530,
@@ -2164,18 +3760,6 @@
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "team": "Venezia"
-    },
-    {
-      "id": 242601,
-      "name": "Enzo Ebosse",
-      "teamId": 118,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Cameroon",
-      "flag": "flags/cm.png",
-      "team": "Udinese"
     },
     {
       "id": 231697,
@@ -2199,18 +3783,6 @@
       "assists": null,
       "citizenship": "Lithuania",
       "flag": "flags/lt.png",
-      "team": "Genoa"
-    },
-    {
-      "id": 406191,
-      "name": "Ethan Meichtry",
-      "teamId": 3263,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Switzerland",
-      "flag": "flags/ch.png",
       "team": "Genoa"
     },
     {
@@ -2346,18 +3918,6 @@
       "team": "Fiorentina"
     },
     {
-      "id": 194748,
-      "name": "Federico Dimarco",
-      "teamId": 110,
-      "position": "D",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Internazionale"
-    },
-    {
       "id": 323147,
       "name": "Federico Gatti",
       "teamId": 111,
@@ -2416,18 +3976,6 @@
       "citizenship": "Brazil",
       "flag": "flags/br.png",
       "team": "Lazio"
-    },
-    {
-      "id": 250672,
-      "name": "Filippo Delli Carri",
-      "teamId": 4007,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Monza"
     },
     {
       "id": 396888,
@@ -2562,18 +4110,6 @@
       "team": "Lecce"
     },
     {
-      "id": 308939,
-      "name": "Franco Carboni",
-      "teamId": 115,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "team": "Parma"
-    },
-    {
       "id": 271445,
       "name": "Franco Israel",
       "teamId": 239,
@@ -2596,30 +4132,6 @@
       "citizenship": "Argentina",
       "flag": "flags/ar.png",
       "team": "Fiorentina"
-    },
-    {
-      "id": 215721,
-      "name": "Frank Anguissa",
-      "teamId": 114,
-      "position": "M",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Cameroon",
-      "flag": "flags/cm.png",
-      "team": "Napoli"
-    },
-    {
-      "id": 341773,
-      "name": "Franz Stolz",
-      "teamId": 3263,
-      "position": "G",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Austria",
-      "flag": "flags/at.png",
-      "team": "Genoa"
     },
     {
       "id": 3129533,
@@ -2682,18 +4194,6 @@
       "team": "Parma"
     },
     {
-      "id": 275943,
-      "name": "Gabriele Zappa",
-      "teamId": 2925,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Cagliari"
-    },
-    {
       "id": 346283,
       "name": "Gaby Jean",
       "teamId": 113,
@@ -2716,18 +4216,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Torino"
-    },
-    {
-      "id": 286948,
-      "name": "Gennaro Borrelli",
-      "teamId": 2925,
-      "position": "F",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Cagliari"
     },
     {
       "id": 236038,
@@ -2886,42 +4374,6 @@
       "team": "Sassuolo"
     },
     {
-      "id": 339953,
-      "name": "Giovane",
-      "teamId": 114,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "team": "Napoli"
-    },
-    {
-      "id": 366510,
-      "name": "Giovanni Daffara",
-      "teamId": 115,
-      "position": "G",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Parma"
-    },
-    {
-      "id": 155904,
-      "name": "Giovanni Di Lorenzo",
-      "teamId": 114,
-      "position": "D",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Napoli"
-    },
-    {
       "id": 323118,
       "name": "Giovanni Fabbian",
       "teamId": 109,
@@ -2944,30 +4396,6 @@
       "citizenship": "Argentina",
       "flag": "flags/ar.png",
       "team": "Torino"
-    },
-    {
-      "id": 408146,
-      "name": "Giulio Vinciati",
-      "teamId": 118,
-      "position": "F",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Udinese"
-    },
-    {
-      "id": 303910,
-      "name": "Giuseppe Aurelio",
-      "teamId": 2925,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Cagliari"
     },
     {
       "id": 288896,
@@ -3006,18 +4434,6 @@
       "team": "Lazio"
     },
     {
-      "id": 384482,
-      "name": "Gustavo Varela",
-      "teamId": 4007,
-      "position": "F",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "team": "Monza"
-    },
-    {
       "id": 338266,
       "name": "Gvidas Gineitis",
       "teamId": 239,
@@ -3028,18 +4444,6 @@
       "citizenship": "Lithuania",
       "flag": "flags/lt.png",
       "team": "Torino"
-    },
-    {
-      "id": 170785,
-      "name": "Hakan Çalhanoglu",
-      "teamId": 110,
-      "position": "M",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Türkiye",
-      "flag": "flags/tr.png",
-      "team": "Internazionale"
     },
     {
       "id": 257058,
@@ -3064,30 +4468,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Parma"
-    },
-    {
-      "id": 202332,
-      "name": "Harry Winks",
-      "teamId": 2925,
-      "position": "M",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "team": "Cagliari"
-    },
-    {
-      "id": 193919,
-      "name": "Hassane Kamara",
-      "teamId": 118,
-      "position": "D",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Ivory Coast",
-      "flag": "flags/ci.png",
-      "team": "Udinese"
     },
     {
       "id": 147625,
@@ -3124,18 +4504,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Atalanta"
-    },
-    {
-      "id": 377170,
-      "name": "Idrissa Gueye",
-      "teamId": 118,
-      "position": "F",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Senegal",
-      "flag": "flags/sn.png",
-      "team": "Udinese"
     },
     {
       "id": 234951,
@@ -3234,90 +4602,6 @@
       "team": "Torino"
     },
     {
-      "id": 181836,
-      "name": "Ivan Provedel",
-      "teamId": 110,
-      "position": "G",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Internazionale"
-    },
-    {
-      "id": 323273,
-      "name": "Ivan Smolcic",
-      "teamId": 2572,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Croatia",
-      "flag": "flags/hr.png",
-      "team": "Como"
-    },
-    {
-      "id": 407932,
-      "name": "Ivan Sulev",
-      "teamId": 2925,
-      "position": "M",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Bulgaria",
-      "flag": "flags/bg.png",
-      "team": "Cagliari"
-    },
-    {
-      "id": 380318,
-      "name": "Jacobo Ramón",
-      "teamId": 2572,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Como"
-    },
-    {
-      "id": 333938,
-      "name": "Jacopo Fazzini",
-      "teamId": 2925,
-      "position": "M",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Cagliari"
-    },
-    {
-      "id": 276267,
-      "name": "Jakub Piotrowski",
-      "teamId": 118,
-      "position": "M",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Poland",
-      "flag": "flags/pl.png",
-      "team": "Udinese"
-    },
-    {
-      "id": 342837,
-      "name": "James Abankwah",
-      "teamId": 118,
-      "position": "D",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "team": "Udinese"
-    },
-    {
       "id": 307391,
       "name": "Jamil Siebert",
       "teamId": 113,
@@ -3354,18 +4638,6 @@
       "team": "Sassuolo"
     },
     {
-      "id": 355359,
-      "name": "Jay Robinson",
-      "teamId": 4007,
-      "position": "F",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "team": "Monza"
-    },
-    {
       "id": 337858,
       "name": "Jayden Addai",
       "teamId": 2572,
@@ -3375,18 +4647,6 @@
       "assists": null,
       "citizenship": "Netherlands",
       "flag": "flags/nl.png",
-      "team": "Como"
-    },
-    {
-      "id": 214740,
-      "name": "Jean Butez",
-      "teamId": 2572,
-      "position": "G",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
       "team": "Como"
     },
     {
@@ -3450,18 +4710,6 @@
       "team": "Frosinone"
     },
     {
-      "id": 237055,
-      "name": "Jesper Karlström",
-      "teamId": 118,
-      "position": "M",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Sweden",
-      "flag": "flags/se.png",
-      "team": "Udinese"
-    },
-    {
       "id": 278822,
       "name": "Jesper Lindstrom",
       "teamId": 114,
@@ -3472,18 +4720,6 @@
       "citizenship": "Denmark",
       "flag": "flags/dk.png",
       "team": "Napoli"
-    },
-    {
-      "id": 387491,
-      "name": "Jesús Rodriguez",
-      "teamId": 2572,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Como"
     },
     {
       "id": 227697,
@@ -3520,30 +4756,6 @@
       "citizenship": "Belgium",
       "flag": "flags/be.png",
       "team": "Venezia"
-    },
-    {
-      "id": 259975,
-      "name": "Johan Vásquez",
-      "teamId": 3263,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Mexico",
-      "flag": "flags/mx.png",
-      "team": "Genoa"
-    },
-    {
-      "id": 157974,
-      "name": "John Stones",
-      "teamId": 110,
-      "position": "D",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "team": "Internazionale"
     },
     {
       "id": 265926,
@@ -3594,42 +4806,6 @@
       "team": "Juventus"
     },
     {
-      "id": 301980,
-      "name": "José Romero",
-      "teamId": 115,
-      "position": "F",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "team": "Parma"
-    },
-    {
-      "id": 240533,
-      "name": "Josep Martínez",
-      "teamId": 110,
-      "position": "G",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Internazionale"
-    },
-    {
-      "id": 407930,
-      "name": "Joseph Liteta",
-      "teamId": 2925,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Zambia",
-      "flag": "flags/zm.png",
-      "team": "Cagliari"
-    },
-    {
       "id": 290418,
       "name": "Josh Doig",
       "teamId": 3997,
@@ -3640,6 +4816,18 @@
       "citizenship": "Scotland",
       "flag": "flags/gb-sct.png",
       "team": "Sassuolo"
+    },
+    {
+      "id": 305552,
+      "name": "Josip Sutalo",
+      "teamId": 112,
+      "position": "D",
+      "age": 26,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Croatia",
+      "flag": "flags/hr.png",
+      "team": "Lazio"
     },
     {
       "id": 24412,
@@ -3654,18 +4842,6 @@
       "team": "Juventus"
     },
     {
-      "id": 360207,
-      "name": "Juan David Arizala",
-      "teamId": 118,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Colombia",
-      "flag": "flags/co.png",
-      "team": "Udinese"
-    },
-    {
       "id": 261616,
       "name": "Juan Miranda",
       "teamId": 107,
@@ -3676,66 +4852,6 @@
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "team": "Bologna"
-    },
-    {
-      "id": 361506,
-      "name": "Juan Rodríguez",
-      "teamId": 2925,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Uruguay",
-      "flag": "flags/uy.png",
-      "team": "Cagliari"
-    },
-    {
-      "id": 261054,
-      "name": "Junior Messias",
-      "teamId": 3263,
-      "position": "F",
-      "age": 35,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "team": "Genoa"
-    },
-    {
-      "id": 270817,
-      "name": "Jurgen Ekkelenkamp",
-      "teamId": 118,
-      "position": "M",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Netherlands",
-      "flag": "flags/nl.png",
-      "team": "Udinese"
-    },
-    {
-      "id": 205653,
-      "name": "Justin Bijlow",
-      "teamId": 3263,
-      "position": "G",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Netherlands",
-      "flag": "flags/nl.png",
-      "team": "Genoa"
-    },
-    {
-      "id": 317233,
-      "name": "Kaiki",
-      "teamId": 2572,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "team": "Como"
     },
     {
       "id": 303115,
@@ -3834,30 +4950,6 @@
       "team": "Frosinone"
     },
     {
-      "id": 304151,
-      "name": "Kevin Carlos",
-      "teamId": 2925,
-      "position": "F",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Cagliari"
-    },
-    {
-      "id": 134947,
-      "name": "Kevin De Bruyne",
-      "teamId": 114,
-      "position": "M",
-      "age": 35,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Belgium",
-      "flag": "flags/be.png",
-      "team": "Napoli"
-    },
-    {
       "id": 197764,
       "name": "Kevin Martins",
       "teamId": 4007,
@@ -3916,18 +5008,6 @@
       "citizenship": "Scotland",
       "flag": "flags/gb-sct.png",
       "team": "Sassuolo"
-    },
-    {
-      "id": 368312,
-      "name": "Kingstone Mutandwa",
-      "teamId": 2925,
-      "position": "F",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Zambia",
-      "flag": "flags/zm.png",
-      "team": "Cagliari"
     },
     {
       "id": 286582,
@@ -4050,30 +5130,6 @@
       "team": "Sassuolo"
     },
     {
-      "id": 219713,
-      "name": "Lautaro Martínez",
-      "teamId": 110,
-      "position": "F",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "team": "Internazionale"
-    },
-    {
-      "id": 281590,
-      "name": "Lautaro Valenti",
-      "teamId": 115,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "team": "Parma"
-    },
-    {
       "id": 303296,
       "name": "Lazar Samardzic",
       "teamId": 105,
@@ -4086,28 +5142,16 @@
       "team": "Atalanta"
     },
     {
-      "id": 347009,
-      "name": "Lennon Miller",
-      "teamId": 118,
-      "position": "M",
-      "age": 19,
+      "id": 403839,
+      "name": "Léo-Paul Bouyer",
+      "teamId": 103,
+      "position": "G",
+      "age": 18,
       "goals": null,
       "assists": null,
-      "citizenship": "Scotland",
-      "flag": "flags/gb-sct.png",
-      "team": "Udinese"
-    },
-    {
-      "id": 281736,
-      "name": "Leo Østigard",
-      "teamId": 3263,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Norway",
-      "flag": "flags/no.png",
-      "team": "Genoa"
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "team": "AC Milan"
     },
     {
       "id": 353013,
@@ -4122,23 +5166,11 @@
       "team": "Monza"
     },
     {
-      "id": 148974,
-      "name": "Leonardo Spinazzola",
-      "teamId": 114,
-      "position": "D",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Napoli"
-    },
-    {
       "id": 202429,
       "name": "Lewis Ferguson",
       "teamId": 107,
       "position": "M",
-      "age": 26,
+      "age": 27,
       "goals": null,
       "assists": null,
       "citizenship": "Scotland",
@@ -4194,18 +5226,6 @@
       "team": "Atalanta"
     },
     {
-      "id": 297220,
-      "name": "Lorenzo Colombo",
-      "teamId": 3263,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Genoa"
-    },
-    {
       "id": 68070,
       "name": "Lorenzo De Silvestri",
       "teamId": 107,
@@ -4216,30 +5236,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Bologna"
-    },
-    {
-      "id": 282564,
-      "name": "Lorenzo Lucca",
-      "teamId": 114,
-      "position": "F",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Napoli"
-    },
-    {
-      "id": 367635,
-      "name": "Lorenzo Lucchesi",
-      "teamId": 4007,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Monza"
     },
     {
       "id": 184737,
@@ -4374,18 +5370,6 @@
       "team": "Fiorentina"
     },
     {
-      "id": 291285,
-      "name": "Lucas Da Cunha",
-      "teamId": 2572,
-      "position": "M",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Como"
-    },
-    {
       "id": 364685,
       "name": "Luis Hasa",
       "teamId": 4057,
@@ -4396,30 +5380,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Frosinone"
-    },
-    {
-      "id": 286369,
-      "name": "Luis Henrique",
-      "teamId": 110,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "team": "Internazionale"
-    },
-    {
-      "id": 264211,
-      "name": "Luis Milla",
-      "teamId": 2572,
-      "position": "M",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Como"
     },
     {
       "id": 76762,
@@ -4458,54 +5418,6 @@
       "team": "Bologna"
     },
     {
-      "id": 295476,
-      "name": "Maduka Okoye",
-      "teamId": 118,
-      "position": "G",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Nigeria",
-      "flag": "flags/ng.png",
-      "team": "Udinese"
-    },
-    {
-      "id": 419268,
-      "name": "Mamedi Doucouré",
-      "teamId": 3263,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Genoa"
-    },
-    {
-      "id": 316609,
-      "name": "Mandela Keita",
-      "teamId": 115,
-      "position": "M",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Belgium",
-      "flag": "flags/be.png",
-      "team": "Parma"
-    },
-    {
-      "id": 376261,
-      "name": "Manga Foe Ondoa",
-      "teamId": 4007,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Monza"
-    },
-    {
       "id": 285226,
       "name": "Manu Koné",
       "teamId": 104,
@@ -4516,18 +5428,6 @@
       "citizenship": "France",
       "flag": "flags/fr.png",
       "team": "AS Roma"
-    },
-    {
-      "id": 214562,
-      "name": "Manuel Akanji",
-      "teamId": 110,
-      "position": "D",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Switzerland",
-      "flag": "flags/ch.png",
-      "team": "Internazionale"
     },
     {
       "id": 3131323,
@@ -4564,18 +5464,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Juventus"
-    },
-    {
-      "id": 175887,
-      "name": "Marc-Oliver Kempf",
-      "teamId": 2572,
-      "position": "D",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "Como"
     },
     {
       "id": 3098553,
@@ -4662,30 +5550,6 @@
       "team": "Torino"
     },
     {
-      "id": 217331,
-      "name": "Marcus Thuram",
-      "teamId": 110,
-      "position": "F",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Internazionale"
-    },
-    {
-      "id": 366526,
-      "name": "Mariano Troilo",
-      "teamId": 115,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "team": "Parma"
-    },
-    {
       "id": 255650,
       "name": "Marin Pongracic",
       "teamId": 109,
@@ -4732,18 +5596,6 @@
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "team": "AS Roma"
-    },
-    {
-      "id": 306935,
-      "name": "Mario Mitaj",
-      "teamId": 3263,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Albania",
-      "flag": "flags/al.png",
-      "team": "Genoa"
     },
     {
       "id": 189668,
@@ -4794,18 +5646,6 @@
       "team": "Atalanta"
     },
     {
-      "id": 311475,
-      "name": "Martin Baturina",
-      "teamId": 2572,
-      "position": "M",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Croatia",
-      "flag": "flags/hr.png",
-      "team": "Como"
-    },
-    {
       "id": 309110,
       "name": "Martin Vitík",
       "teamId": 107,
@@ -4842,30 +5682,6 @@
       "team": "Fiorentina"
     },
     {
-      "id": 234881,
-      "name": "Mathías Olivera",
-      "teamId": 114,
-      "position": "D",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Uruguay",
-      "flag": "flags/uy.png",
-      "team": "Napoli"
-    },
-    {
-      "id": 416515,
-      "name": "Mathis Mout",
-      "teamId": 4007,
-      "position": "M",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Monza"
-    },
-    {
       "id": 186457,
       "name": "Matías Moreno",
       "teamId": 17530,
@@ -4888,18 +5704,6 @@
       "citizenship": "Argentina",
       "flag": "flags/ar.png",
       "team": "AS Roma"
-    },
-    {
-      "id": 310860,
-      "name": "Matija Frigan",
-      "teamId": 115,
-      "position": "F",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Croatia",
-      "flag": "flags/hr.png",
-      "team": "Parma"
     },
     {
       "id": 308944,
@@ -4974,18 +5778,6 @@
       "team": "Internazionale"
     },
     {
-      "id": 384519,
-      "name": "Matteo Palma",
-      "teamId": 118,
-      "position": "D",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "Udinese"
-    },
-    {
       "id": 224455,
       "name": "Matteo Pessina",
       "teamId": 4007,
@@ -5020,54 +5812,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Atalanta"
-    },
-    {
-      "id": 188306,
-      "name": "Matteo Politano",
-      "teamId": 114,
-      "position": "F",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Napoli"
-    },
-    {
-      "id": 107960,
-      "name": "Matteo Prati",
-      "teamId": 2925,
-      "position": "M",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Cagliari"
-    },
-    {
-      "id": 285937,
-      "name": "Mattia Felici",
-      "teamId": 2925,
-      "position": "F",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Cagliari"
-    },
-    {
-      "id": 387723,
-      "name": "Mattia Liberali",
-      "teamId": 2572,
-      "position": "M",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Como"
     },
     {
       "id": 409051,
@@ -5118,42 +5862,6 @@
       "team": "Lazio"
     },
     {
-      "id": 115025,
-      "name": "Mauro Vigorito",
-      "teamId": 2572,
-      "position": "G",
-      "age": 36,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Como"
-    },
-    {
-      "id": 265912,
-      "name": "Maxence Caqueret",
-      "teamId": 2572,
-      "position": "M",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Como"
-    },
-    {
-      "id": 309241,
-      "name": "Máximo Perrone",
-      "teamId": 2572,
-      "position": "M",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "team": "Como"
-    },
-    {
       "id": 341756,
       "name": "Medon Berisha",
       "teamId": 113,
@@ -5164,18 +5872,6 @@
       "citizenship": "Albania",
       "flag": "flags/al.png",
       "team": "Lecce"
-    },
-    {
-      "id": 221436,
-      "name": "Mërgim Vojvoda",
-      "teamId": 118,
-      "position": "D",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Kosovo",
-      "flag": "flags/xk.png",
-      "team": "Udinese"
     },
     {
       "id": 252385,
@@ -5190,18 +5886,6 @@
       "team": "Napoli"
     },
     {
-      "id": 272745,
-      "name": "Michel Adopo",
-      "teamId": 2925,
-      "position": "M",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Cagliari"
-    },
-    {
       "id": 240055,
       "name": "Michele Di Gregorio",
       "teamId": 111,
@@ -5212,18 +5896,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Juventus"
-    },
-    {
-      "id": 324256,
-      "name": "Mikael Ellertsson",
-      "teamId": 3263,
-      "position": "M",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Iceland",
-      "flag": "flags/is.png",
-      "team": "Genoa"
     },
     {
       "id": 189026,
@@ -5277,7 +5949,7 @@
       "id": 223292,
       "name": "Mohamed Kaba",
       "teamId": 113,
-      "position": "M",
+      "position": "F",
       "age": 24,
       "goals": null,
       "assists": null,
@@ -5308,18 +5980,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Fiorentina"
-    },
-    {
-      "id": 270884,
-      "name": "Morten Frendrup",
-      "teamId": 3263,
-      "position": "M",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Denmark",
-      "flag": "flags/dk.png",
-      "team": "Genoa"
     },
     {
       "id": 411234,
@@ -5382,18 +6042,6 @@
       "team": "Sassuolo"
     },
     {
-      "id": 361749,
-      "name": "Nesta Elphege",
-      "teamId": 115,
-      "position": "F",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Parma"
-    },
-    {
       "id": 290074,
       "name": "Niccolò Corrado",
       "teamId": 4057,
@@ -5454,18 +6102,6 @@
       "team": "Juventus"
     },
     {
-      "id": 337970,
-      "name": "Nico Paz",
-      "teamId": 2572,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "team": "Como"
-    },
-    {
       "id": 411232,
       "name": "Nicola Grandu",
       "teamId": 2925,
@@ -5490,18 +6126,6 @@
       "team": "Atalanta"
     },
     {
-      "id": 308288,
-      "name": "Nicolas Galazzi",
-      "teamId": 4007,
-      "position": "M",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Monza"
-    },
-    {
       "id": 260262,
       "name": "Nicolas Kühn",
       "teamId": 2572,
@@ -5512,30 +6136,6 @@
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "team": "Como"
-    },
-    {
-      "id": 204441,
-      "name": "Nicolò Barella",
-      "teamId": 110,
-      "position": "M",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Internazionale"
-    },
-    {
-      "id": 319437,
-      "name": "Nicolò Bertola",
-      "teamId": 118,
-      "position": "D",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Udinese"
     },
     {
       "id": 287790,
@@ -5562,18 +6162,6 @@
       "team": "Bologna"
     },
     {
-      "id": 325527,
-      "name": "Nicolò Cavuoti",
-      "teamId": 2925,
-      "position": "M",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Cagliari"
-    },
-    {
       "id": 276254,
       "name": "Nicolò Fagioli",
       "teamId": 109,
@@ -5596,30 +6184,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Lazio"
-    },
-    {
-      "id": 251388,
-      "name": "Nicolò Zaniolo",
-      "teamId": 118,
-      "position": "M",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Udinese"
-    },
-    {
-      "id": 198082,
-      "name": "Nikita Contini",
-      "teamId": 114,
-      "position": "G",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Napoli"
     },
     {
       "id": 391033,
@@ -5682,30 +6246,6 @@
       "team": "Torino"
     },
     {
-      "id": 255344,
-      "name": "Noa Lang",
-      "teamId": 114,
-      "position": "F",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Netherlands",
-      "flag": "flags/nl.png",
-      "team": "Napoli"
-    },
-    {
-      "id": 301377,
-      "name": "Noel Törnqvist",
-      "teamId": 2572,
-      "position": "G",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Sweden",
-      "flag": "flags/se.png",
-      "team": "Como"
-    },
-    {
       "id": 368592,
       "name": "Nosa Obaretin",
       "teamId": 114,
@@ -5740,18 +6280,6 @@
       "citizenship": "Ivory Coast",
       "flag": "flags/ci.png",
       "team": "Atalanta"
-    },
-    {
-      "id": 306579,
-      "name": "Oier Zarraga",
-      "teamId": 118,
-      "position": "M",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Udinese"
     },
     {
       "id": 340139,
@@ -5802,18 +6330,6 @@
       "team": "Lazio"
     },
     {
-      "id": 297751,
-      "name": "Oliver Sørensen",
-      "teamId": 115,
-      "position": "M",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Denmark",
-      "flag": "flags/dk.png",
-      "team": "Parma"
-    },
-    {
       "id": 368011,
       "name": "Omar Fayed",
       "teamId": 4057,
@@ -5824,18 +6340,6 @@
       "citizenship": "Egypt",
       "flag": "flags/eg.png",
       "team": "Frosinone"
-    },
-    {
-      "id": 325554,
-      "name": "Omari Forson",
-      "teamId": 4007,
-      "position": "F",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "team": "Monza"
     },
     {
       "id": 326642,
@@ -5860,30 +6364,6 @@
       "citizenship": "Mauritania",
       "flag": "flags/mr.png",
       "team": "Lecce"
-    },
-    {
-      "id": 261066,
-      "name": "Oumar Solet",
-      "teamId": 118,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Udinese"
-    },
-    {
-      "id": 194718,
-      "name": "Ousmane Diallo",
-      "teamId": 115,
-      "position": "F",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Parma"
     },
     {
       "id": 320947,
@@ -5958,18 +6438,6 @@
       "team": "Monza"
     },
     {
-      "id": 238885,
-      "name": "Patrick Cutrone",
-      "teamId": 4007,
-      "position": "F",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Monza"
-    },
-    {
       "id": 346850,
       "name": "Patrick Nuamah",
       "teamId": 3997,
@@ -5992,18 +6460,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Frosinone"
-    },
-    {
-      "id": 418819,
-      "name": "Paul Mendy",
-      "teamId": 2925,
-      "position": "F",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Senegal",
-      "flag": "flags/sn.png",
-      "team": "Cagliari"
     },
     {
       "id": 164839,
@@ -6040,18 +6496,6 @@
       "citizenship": "Serbia",
       "flag": "flags/rs.png",
       "team": "Lazio"
-    },
-    {
-      "id": 341494,
-      "name": "Petar Sucic",
-      "teamId": 110,
-      "position": "M",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Croatia",
-      "flag": "flags/hr.png",
-      "team": "Internazionale"
     },
     {
       "id": 206587,
@@ -6114,30 +6558,6 @@
       "team": "AC Milan"
     },
     {
-      "id": 362674,
-      "name": "Pio Esposito",
-      "teamId": 110,
-      "position": "F",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Internazionale"
-    },
-    {
-      "id": 177782,
-      "name": "Piotr Zielinski",
-      "teamId": 110,
-      "position": "M",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Poland",
-      "flag": "flags/pl.png",
-      "team": "Internazionale"
-    },
-    {
       "id": 409073,
       "name": "Plamen Penev",
       "teamId": 113,
@@ -6150,30 +6570,6 @@
       "team": "Lecce"
     },
     {
-      "id": 253569,
-      "name": "Pontus Almqvist",
-      "teamId": 115,
-      "position": "F",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Sweden",
-      "flag": "flags/se.png",
-      "team": "Parma"
-    },
-    {
-      "id": 365697,
-      "name": "Rachid Kouda",
-      "teamId": 115,
-      "position": "M",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Parma"
-    },
-    {
       "id": 310216,
       "name": "Radu Dragusin",
       "teamId": 109,
@@ -6184,18 +6580,6 @@
       "citizenship": "Romania",
       "flag": "flags/ro.png",
       "team": "Fiorentina"
-    },
-    {
-      "id": 297360,
-      "name": "Rafa Marín",
-      "teamId": 114,
-      "position": "D",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Napoli"
     },
     {
       "id": 258917,
@@ -6220,18 +6604,6 @@
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "team": "Sassuolo"
-    },
-    {
-      "id": 181322,
-      "name": "Raffaele Di Gennaro",
-      "teamId": 110,
-      "position": "G",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Internazionale"
     },
     {
       "id": 331770,
@@ -6268,30 +6640,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Atalanta"
-    },
-    {
-      "id": 346596,
-      "name": "Raphael Kofler",
-      "teamId": 2925,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Cagliari"
-    },
-    {
-      "id": 309273,
-      "name": "Rasmus Højlund",
-      "teamId": 114,
-      "position": "F",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Denmark",
-      "flag": "flags/dk.png",
-      "team": "Napoli"
     },
     {
       "id": 345323,
@@ -6340,30 +6688,6 @@
       "citizenship": null,
       "flag": null,
       "team": "Lazio"
-    },
-    {
-      "id": 259871,
-      "name": "Ricardo Mangas",
-      "teamId": 4007,
-      "position": "D",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "team": "Monza"
-    },
-    {
-      "id": 422244,
-      "name": "Riccardo Cassano",
-      "teamId": 2572,
-      "position": "M",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Como"
     },
     {
       "id": 307860,
@@ -6534,18 +6858,6 @@
       "team": "Venezia"
     },
     {
-      "id": 363886,
-      "name": "Saba Goglichidze",
-      "teamId": 118,
-      "position": "D",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Georgia",
-      "flag": "flags/ge.png",
-      "team": "Udinese"
-    },
-    {
       "id": 324661,
       "name": "Sadik Fofana",
       "teamId": 113,
@@ -6556,18 +6868,6 @@
       "citizenship": "Togo",
       "flag": "flags/tg.png",
       "team": "Lecce"
-    },
-    {
-      "id": 261594,
-      "name": "Sam Beukema",
-      "teamId": 114,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Netherlands",
-      "flag": "flags/nl.png",
-      "team": "Napoli"
     },
     {
       "id": 228298,
@@ -6594,30 +6894,6 @@
       "team": "Lazio"
     },
     {
-      "id": 418840,
-      "name": "Samuel Wiafe",
-      "teamId": 3263,
-      "position": "M",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Genoa"
-    },
-    {
-      "id": 248440,
-      "name": "Samuele Birindelli",
-      "teamId": 4007,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Monza"
-    },
-    {
       "id": 276822,
       "name": "Samuele Ricci",
       "teamId": 103,
@@ -6628,18 +6904,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "AC Milan"
-    },
-    {
-      "id": 219725,
-      "name": "Sandi Lovric",
-      "teamId": 118,
-      "position": "M",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Slovenia",
-      "flag": "flags/si.png",
-      "team": "Udinese"
     },
     {
       "id": 245538,
@@ -6726,18 +6990,6 @@
       "team": "Torino"
     },
     {
-      "id": 255850,
-      "name": "Scott McTominay",
-      "teamId": 114,
-      "position": "M",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Scotland",
-      "flag": "flags/gb-sct.png",
-      "team": "Napoli"
-    },
-    {
       "id": 170553,
       "name": "Sead Kolasinac",
       "teamId": 105,
@@ -6748,18 +7000,6 @@
       "citizenship": "Bosnia and Herzegovina",
       "flag": "flags/ba.png",
       "team": "Atalanta"
-    },
-    {
-      "id": 350205,
-      "name": "Sebastian Otoa",
-      "teamId": 3263,
-      "position": "D",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Denmark",
-      "flag": "flags/dk.png",
-      "team": "Genoa"
     },
     {
       "id": 288483,
@@ -6810,18 +7050,6 @@
       "team": "Cagliari"
     },
     {
-      "id": 270186,
-      "name": "Semuel Pizzignacco",
-      "teamId": 4007,
-      "position": "G",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Monza"
-    },
-    {
       "id": 387841,
       "name": "Sergej Levak",
       "teamId": 105,
@@ -6870,18 +7098,6 @@
       "team": "Sassuolo"
     },
     {
-      "id": 413818,
-      "name": "Simone Lontani",
-      "teamId": 115,
-      "position": "F",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Parma"
-    },
-    {
       "id": 297233,
       "name": "Simone Panada",
       "teamId": 17530,
@@ -6892,42 +7108,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Venezia"
-    },
-    {
-      "id": 397386,
-      "name": "Solomon Loubao",
-      "teamId": 4007,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "team": "Monza"
-    },
-    {
-      "id": 188412,
-      "name": "Stanislav Lobotka",
-      "teamId": 114,
-      "position": "M",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Slovakia",
-      "flag": "flags/sk.png",
-      "team": "Napoli"
-    },
-    {
-      "id": 177862,
-      "name": "Stefano Sabelli",
-      "teamId": 3263,
-      "position": "D",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Genoa"
     },
     {
       "id": 261399,
@@ -6990,18 +7170,6 @@
       "team": "Venezia"
     },
     {
-      "id": 402608,
-      "name": "Thomás De Martis",
-      "teamId": 115,
-      "position": "F",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "team": "Parma"
-    },
-    {
       "id": 99909,
       "name": "Thomas Kristensen",
       "teamId": 105,
@@ -7060,18 +7228,6 @@
       "citizenship": "Croatia",
       "flag": "flags/hr.png",
       "team": "Venezia"
-    },
-    {
-      "id": 309518,
-      "name": "Tommaso Baldanzi",
-      "teamId": 3263,
-      "position": "M",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "team": "Genoa"
     },
     {
       "id": 334283,
@@ -7134,18 +7290,6 @@
       "team": "Bologna"
     },
     {
-      "id": 227784,
-      "name": "Trevoh Chalobah",
-      "teamId": 2572,
-      "position": "D",
-      "age": 27,
-      "goals": null,
-      "assists": null,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "team": "Como"
-    },
-    {
       "id": 410822,
       "name": "Ukko Happonen",
       "teamId": 107,
@@ -7158,30 +7302,6 @@
       "team": "Bologna"
     },
     {
-      "id": 362376,
-      "name": "Unai Gómez",
-      "teamId": 118,
-      "position": "M",
-      "age": 23,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "team": "Udinese"
-    },
-    {
-      "id": 274733,
-      "name": "Valentin Antov",
-      "teamId": 4007,
-      "position": "D",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Bulgaria",
-      "flag": "flags/bg.png",
-      "team": "Monza"
-    },
-    {
       "id": 411164,
       "name": "Valerio Farcomeni",
       "teamId": 112,
@@ -7192,18 +7312,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "team": "Lazio"
-    },
-    {
-      "id": 219531,
-      "name": "Vanja Milinkovic-Savic",
-      "teamId": 114,
-      "position": "G",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Serbia",
-      "flag": "flags/rs.png",
-      "team": "Napoli"
     },
     {
       "id": 344917,
@@ -7240,18 +7348,6 @@
       "citizenship": "Brazil",
       "flag": "flags/br.png",
       "team": "Fiorentina"
-    },
-    {
-      "id": 403234,
-      "name": "Vitinha",
-      "teamId": 3263,
-      "position": "F",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "team": "Genoa"
     },
     {
       "id": 292241,
@@ -7338,30 +7434,6 @@
       "team": "Cagliari"
     },
     {
-      "id": 297084,
-      "name": "Yan Couto",
-      "teamId": 2572,
-      "position": "D",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "team": "Como"
-    },
-    {
-      "id": 266660,
-      "name": "Yann Bisseck",
-      "teamId": 110,
-      "position": "D",
-      "age": 25,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "team": "Internazionale"
-    },
-    {
       "id": 333924,
       "name": "Yeferson Paz",
       "teamId": 3997,
@@ -7374,23 +7446,11 @@
       "team": "Sassuolo"
     },
     {
-      "id": 196901,
-      "name": "Yerry Mina",
-      "teamId": 2925,
-      "position": "D",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Colombia",
-      "flag": "flags/co.png",
-      "team": "Cagliari"
-    },
-    {
       "id": 241405,
       "name": "Youssef Maleh",
       "teamId": 113,
       "position": "M",
-      "age": 27,
+      "age": 28,
       "goals": null,
       "assists": null,
       "citizenship": "Morocco",
@@ -7444,18 +7504,6 @@
       "citizenship": "Hungary",
       "flag": "flags/hu.png",
       "team": "Torino"
-    },
-    {
-      "id": 332684,
-      "name": "Zé Pedro",
-      "teamId": 2925,
-      "position": "D",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "team": "Cagliari"
     },
     {
       "id": 271873,
