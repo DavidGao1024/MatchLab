@@ -32,6 +32,7 @@ const { SEASON, LEAGUES, core, TEAM_OVERRIDES, resolveSeasonsInPlace } = require
 const { resolveFill } = require('./lib/nationality-fill');
 const { COUNTRY_MAP } = require('./lib/country-map');
 const { localFlagPath } = require('./lib/flag-map');
+const { fetchLeaders } = require('./lib/fetch-leaders');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 
@@ -75,12 +76,6 @@ async function collectList(firstUrl) {
   }
   return { count, items };
 }
-
-const idFromRef = (ref) => {
-  if (!ref) return null;
-  const m = String(ref).match(/\/(\d+)(?:\?|$)/);
-  return m ? Number(m[1]) : null;
-};
 
 // ========== 1. meta.json ==========
 
@@ -374,63 +369,6 @@ async function fetchPlayers(league, rosterMap) {
   return index;
 }
 
-// ========== 4. leaders.json（12 项排行榜，球员名从索引解析） ==========
-
-/** leaders 响应实测结构（2026-07-24 验证）：顶层 categories[]，每类内层 leaders[]，team/athlete 只有 $ref 无名字 */
-async function fetchLeaders(league, index, teamsById) {
-  const season = league.season || SEASON;
-  const nameById = new Map(index.map((p) => [Number(p.id), p]));
-  const raw = await getJson(core.leaders(league.slug, season));
-  const categories = [];
-
-  for (const cat of raw.categories || []) {
-    const entries = [];
-    for (const row of cat.leaders || cat.leaderList || []) {
-      const athleteId = idFromRef(row.athlete && (row.athlete.$ref || row.athlete.href)) ?? (row.athlete && row.athlete.id) ?? null;
-      const known = athleteId != null ? nameById.get(Number(athleteId)) : null;
-      let athleteName =
-        (row.athlete && (row.athlete.displayName || row.athlete.fullName)) ||
-        (known && known.name) ||
-        null;
-
-      // 索引里没有（罕见：该球员本季无其他数据）→ 单独补拉档案
-      if (!athleteName && athleteId != null) {
-        try {
-          const p = await getJson(core.athlete(league.slug, athleteId));
-          athleteName = p.displayName || p.fullName;
-        } catch (e) {
-          /* 留空名，前端按 ID 展示 */
-        }
-      }
-
-      const teamId = (known && known.teamId) ?? idFromRef(row.team && (row.team.$ref || row.team.href)) ?? null;
-      entries.push({
-        rank: entries.length + 1,
-        value: row.value ?? Number(row.displayValue) ?? null,
-        displayValue: row.displayValue ?? (row.value != null ? String(row.value) : null),
-        athleteId: athleteId != null ? Number(athleteId) : null,
-        athleteName,
-        teamId: teamId != null ? Number(teamId) : null,
-        teamName: (teamsById.get(Number(teamId)) || {}).displayName ?? null,
-      });
-    }
-    categories.push({
-      name: cat.name,
-      displayName: cat.displayName,
-      abbreviation: cat.abbreviation,
-      entries,
-    });
-  }
-
-  return {
-    source: 'sports.core.api.espn.com',
-    updateTime: new Date().toISOString(),
-    league: league.slug,
-    season,
-    categories,
-  };
-}
-
 // ========== 主流程 ==========
 
 async function fetchSeasons(league) {
@@ -510,7 +448,7 @@ async function processLeague(league) {
   });
   console.log(`  · index 完成（${indexWithName.length} 人）`);
 
-  const leaders = await fetchLeaders(league, indexWithName, teamsById);
+  const leaders = await fetchLeaders(getJson, core, league, season, indexWithName, teamsById);
   writeJsonIfChanged(path.join(leagueDir, 'leaders.json'), leaders);
   console.log(`  · leaders 完成（${leaders.categories.length} 项）`);
 
