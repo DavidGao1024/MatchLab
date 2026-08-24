@@ -1,21 +1,13 @@
 import { defineStore } from 'pinia'
 import { fetchJsonCached } from '../composables/useJsonFetch'
+import { fetchLiveScores } from '../composables/useEspanFetch'
 import type { Match, StandingRow } from '../types/models'
-import type { MatchesFile, RawStanding, StandingsFile, TeamNameMapFile, XgFile } from '../types/static'
-import { applyForm, mergeStandings } from '../utils/standings'
+import type { MatchesFile, RawStanding, TeamNameMapFile, XgFile } from '../types/static'
+import { applyForm, computeStandings, mergeStandings, POINT_DEDUCTIONS } from '../utils/standings'
 import { currentMonth, seasonMonths, type LeagueSlug } from '../utils/constants'
 
-const STANDINGS_TTL = 5 * 60 * 1000
+const MATCHES_TTL = 60 * 60 * 1000
 const XG_TTL = 24 * 60 * 60 * 1000
-
-/** 形势列回看窗口：当前月之前（含当月）的最后两个月份文件；赛季初不足两个用实际数量 */
-export function formMonths(season: string, seasonType: 'european' | 'calendar' = 'european', now: Date = new Date()): string[] {
-  const months = seasonMonths(season, seasonType)
-  const cur = currentMonth(now)
-  const past = months.filter((m) => m <= cur)
-  const list = past.length ? past : months
-  return list.slice(-2)
-}
 
 export const useStandingsStore = defineStore('standings', {
   state: () => ({
@@ -41,25 +33,34 @@ export const useStandingsStore = defineStore('standings', {
       const merged = mergeStandings(raw, league, xg?.standings ?? null, this.teamNameMap)
       this.rows[league] = applyForm(merged, this.formMatches[league] ?? [])
     },
+    /** 某月比分：当月走直播直连（失败回落静态快照），历史月走静态缓存（文件缺失返回空） */
+    async fetchMonthMatches(league: LeagueSlug, month: string, season: string, isCurrent: boolean): Promise<Match[]> {
+      if (isCurrent) {
+        try {
+          return await fetchLiveScores(league, month)
+        } catch {
+          // 直播断线 → 回落该月静态快照
+        }
+      }
+      try {
+        return (await fetchJsonCached<MatchesFile>(`data/${league}/matches/${month}.json`, MATCHES_TTL, season)).matches
+      } catch {
+        return [] // 文件不存在（休赛期/未来月）→ 空
+      }
+    },
     async load(league: LeagueSlug, season: string, opts: { withForm?: boolean; seasonType?: 'european' | 'calendar'; forceFresh?: boolean } = {}) {
       const withForm = opts.withForm ?? true
       const sType = opts.seasonType ?? 'european'
       this.loading[league] = true
       try {
-        const sf = await fetchJsonCached<StandingsFile>(`data/${league}/standings.json`, STANDINGS_TTL, season, { forceFresh: opts.forceFresh })
-        this.raw[league] = sf.standings
-        if (withForm) {
-          const months = formMonths(season, sType)
-          const files = await Promise.all(
-            months.map((m) =>
-              fetchJsonCached<MatchesFile>(`data/${league}/matches/${m}.json`, STANDINGS_TTL, season, { forceFresh: opts.forceFresh }).catch(() => null),
-            ),
-          )
-          this.formMatches[league] = files.flatMap((f) => f?.matches ?? [])
-        } else {
-          this.formMatches[league] = []
-        }
-        this.updateTime[league] = sf.updateTime
+        // 整赛季比分 → 本地算积分榜：当月实时 + 历史月静态
+        const cur = currentMonth()
+        const months = seasonMonths(season, sType)
+        const files = await Promise.all(months.map((m) => this.fetchMonthMatches(league, m, season, m === cur)))
+        const allMatches = files.flat()
+        this.formMatches[league] = withForm ? allMatches : []
+        this.raw[league] = computeStandings(allMatches, POINT_DEDUCTIONS[league] ?? {})
+        this.updateTime[league] = new Date().toISOString()
         this.rebuild(league, null)
         if (this.xgOn[league]) {
           // 刷新后保持开关状态；xG 失败则开关自动关（规格 §七）

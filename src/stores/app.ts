@@ -20,7 +20,6 @@ export const useAppStore = defineStore('app', {
     currentLeague: FOCUS_LEAGUE as LeagueSlug,
     lang: savedLang(),
     leagues: [] as LeagueInfo[],
-    leaguesUpdateTime: '',
   }),
   getters: {
     leagueInfo: (s) => (slug: LeagueSlug): LeagueInfo | undefined => s.leagues.find((l) => l.slug === slug),
@@ -30,7 +29,6 @@ export const useAppStore = defineStore('app', {
       if (this.leagues.length) return
       const f = await fetchJsonCached<LeaguesFile>('data/leagues.json', 60 * 60 * 1000, 'boot')
       this.leagues = f.leagues
-      this.leaguesUpdateTime = f.updateTime
     },
     setLeague(l: LeagueSlug) {
       this.currentLeague = l

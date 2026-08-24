@@ -67,15 +67,6 @@ export interface RawStanding {
   deduction?: number
 }
 
-export interface StandingsFile {
-  source: string
-  updateTime: string
-  league: string
-  season: string
-  matchesCounted: number
-  count: number
-  standings: RawStanding[]
-}
 
 export interface MatchesFile {
   source: string

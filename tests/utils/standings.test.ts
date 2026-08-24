@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { applyForm, mergeStandings } from '../../src/utils/standings'
+import { applyForm, computeStandings, mergeStandings } from '../../src/utils/standings'
 import type { RawStanding, RawXgStanding } from '../../src/types/static'
+import type { Match } from '../../src/types/models'
 
 const raw: RawStanding[] = [
   { rank: 1, teamId: 359, team: 'Arsenal', played: 38, won: 26, drawn: 7, lost: 5, goalsFor: 71, goalsAgainst: 27, goalDiff: 44, points: 85 },
@@ -58,5 +59,87 @@ describe('applyForm', () => {
     const out = applyForm(rows, matches)
     expect(out[0].form).toEqual(['W'])
     expect(out[1].form).toEqual(['L'])
+  })
+})
+
+describe('computeStandings', () => {
+  function makeMatch(over: Partial<Match> = {}): Match {
+    return {
+      eventId: 'e1',
+      date: '2026-08-15T14:00Z',
+      status: 'post',
+      completed: true,
+      venue: 'Stadium',
+      home: { id: 1, name: 'Team A', abbreviation: 'A', logo: '', score: 0, winner: null },
+      away: { id: 2, name: 'Team B', abbreviation: 'B', logo: '', score: 0, winner: null },
+      ...over,
+    }
+  }
+
+  it('空输入返回空数组', () => {
+    expect(computeStandings([])).toEqual([])
+  })
+
+  it('胜平负/进失球/积分累积正确', () => {
+    const matches = [
+      makeMatch({ eventId: '1', home: { id: 1, name: 'A', abbreviation: 'A', logo: '', score: 3, winner: true }, away: { id: 2, name: 'B', abbreviation: 'B', logo: '', score: 0, winner: null } }),
+    ]
+    const rows = computeStandings(matches)
+    const a = rows.find((r) => r.teamId === 1)!
+    const b = rows.find((r) => r.teamId === 2)!
+    expect(a).toMatchObject({ played: 1, won: 1, drawn: 0, lost: 0, goalsFor: 3, goalsAgainst: 0, goalDiff: 3, points: 3 })
+    expect(b).toMatchObject({ played: 1, won: 0, drawn: 0, lost: 1, goalsFor: 0, goalsAgainst: 3, goalDiff: -3, points: 0 })
+  })
+
+  it('平局各 1 分', () => {
+    const matches = [
+      makeMatch({ home: { id: 1, name: 'A', abbreviation: 'A', logo: '', score: 1, winner: null }, away: { id: 2, name: 'B', abbreviation: 'B', logo: '', score: 1, winner: null } }),
+    ]
+    const rows = computeStandings(matches)
+    expect(rows.find((r) => r.teamId === 1)!.points).toBe(1)
+    expect(rows.find((r) => r.teamId === 2)!.points).toBe(1)
+  })
+
+  it('扣分从积分中减去', () => {
+    const matches = [
+      makeMatch({ home: { id: 1, name: 'A', abbreviation: 'A', logo: '', score: 2, winner: true }, away: { id: 2, name: 'B', abbreviation: 'B', logo: '', score: 0, winner: null } }),
+    ]
+    const rows = computeStandings(matches, { 1: 3 })
+    expect(rows.find((r) => r.teamId === 1)!.points).toBe(0) // 3 - 3
+    expect(rows.find((r) => r.teamId === 1)!.deduction).toBe(3)
+  })
+
+  it('同一对手两回合累积后按积分排', () => {
+    const rows = computeStandings([
+      // A 2-0 X、A 3-1 X → A 6 分 gd+4；X 0 分
+      makeMatch({ eventId: '1', home: { id: 11, name: 'A', abbreviation: 'A', logo: '', score: 2, winner: true }, away: { id: 22, name: 'X', abbreviation: 'X', logo: '', score: 0, winner: null } }),
+      makeMatch({ eventId: '2', home: { id: 22, name: 'X', abbreviation: 'X', logo: '', score: 1, winner: null }, away: { id: 11, name: 'A', abbreviation: 'A', logo: '', score: 3, winner: true } }),
+    ])
+    const ids = rows.map((r) => r.teamId)
+    expect(ids).toEqual([11, 22])
+    expect(rows[0].points).toBe(6)
+    expect(rows[0].goalDiff).toBe(4)
+  })
+
+  it('积分相同按净胜球，再按进球，再按队名字母', () => {
+    const mk2 = (id: number, name: string) => (score: number) =>
+      makeMatch({ home: { id, name, abbreviation: name, logo: '', score, winner: score > 0 ? true : null }, away: { id: 999, name: 'Fodder', abbreviation: 'F', logo: '', score: 0, winner: null } })
+    // 三队各胜 Fodder 一场：积分都 3，靠净胜球（=进球）区分
+    const rows = computeStandings([
+      mk2(3, 'Beta')(1),   // gd +1
+      mk2(1, 'Alpha')(3),  // gd +3
+      mk2(2, 'Alpha2')(2), // gd +2
+    ])
+    const ids = rows.map((r) => r.teamId)
+    expect(ids.slice(0, 3)).toEqual([1, 2, 3]) // Alpha(+3) > Alpha2(+2) > Beta(+1)；Fodder 0 分垫底
+  })
+
+  it('未完赛比赛也收录球队（played=0 保留完整榜单）', () => {
+    const rows = computeStandings([
+      makeMatch({ status: 'pre', completed: false, home: { id: 5, name: 'C', abbreviation: 'C', logo: '', score: null, winner: null }, away: { id: 6, name: 'D', abbreviation: 'D', logo: '', score: null, winner: null } }),
+    ])
+    expect(rows).toHaveLength(2)
+    expect(rows.find((r) => r.teamId === 5)).toMatchObject({ played: 0, points: 0 })
+    expect(rows.find((r) => r.teamId === 6)).toMatchObject({ played: 0, points: 0 })
   })
 })
