@@ -63,7 +63,12 @@ const profile = computed(() => players.profiles[`${league.value}:${playerId.valu
 const team = computed(() => (profile.value ? teams.teamById(league.value, profile.value.teamId) : undefined))
 const ready = computed(() => !players.loadingProfile[`${league.value}:${playerId.value}`] && !!profile.value)
 const xgRow = computed(() => (profile.value ? xg.byName(league.value, profile.value.displayName) : null))
-const career = computed(() => (profile.value ? buildCareer(transfers.forPlayer(league.value, playerId.value)) : []))
+const career = computed(() => (profile.value
+  ? buildCareer(
+      transfers.forPlayer(league.value, playerId.value),
+      { teamId: profile.value.teamId, team: team.value?.name ?? null },
+    )
+  : []))
 const marketValueWan = computed(() => (profile.value ? playerValue(profile.value.displayName) : null))
 
 const displayName = computed(() => profile.value ? playerName(profile.value.displayName, app.lang) : '')

@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi, afterEach } from 'vitest'
 import { buildCareer } from '../../src/utils/career'
 import type { TransferEntry } from '../../src/types/static'
 
@@ -53,5 +53,45 @@ describe('buildCareer', () => {
     ])
     const froms = career.map((c) => c.from)
     expect(froms).toEqual([...froms].sort((a, b) => a - b))
+  })
+})
+
+describe('buildCareer 当前队兜底（ESPN transactions 滞后）', () => {
+  afterEach(() => { vi.useRealTimers() })
+
+  it('当前队 ≠ 最后转入队 → 追加当前队至今，原队收尾当前年', () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2026-08-24T00:00:00Z'))
+    const career = buildCareer(
+      [tr({ date: '2023-07-08', fromTeamId: 84, fromTeam: 'Mallorca', toTeamId: 160, toTeam: 'Paris Saint-Germain' })],
+      { teamId: 1068, team: 'Atlético Madrid' },
+    )
+    expect(career).toEqual([
+      { teamId: 84, team: 'Mallorca', from: 2023, to: 2023 },
+      { teamId: 160, team: 'Paris Saint-Germain', from: 2023, to: 2026 },
+      { teamId: 1068, team: 'Atlético Madrid', from: 2026, to: null },
+    ])
+  })
+
+  it('当前队 = 最后转入队 → 不兜底，行为同原来', () => {
+    const career = buildCareer(
+      [tr({ date: '2023-07-08', fromTeamId: 84, fromTeam: 'Mallorca', toTeamId: 160, toTeam: 'Paris Saint-Germain' })],
+      { teamId: 160, team: 'Paris Saint-Germain' },
+    )
+    expect(career.map((c) => [c.teamId, c.to])).toEqual([[84, 2023], [160, null]])
+  })
+
+  it('未传当前队 → 行为同原来（最后一笔转入队至今）', () => {
+    const career = buildCareer([
+      tr({ date: '2023-07-08', fromTeamId: 84, fromTeam: 'Mallorca', toTeamId: 160, toTeam: 'Paris Saint-Germain' }),
+    ])
+    expect(career.map((c) => [c.teamId, c.to])).toEqual([[84, 2023], [160, null]])
+  })
+
+  it('空转会但有当前队 → 仍出当前队至今一行', () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2026-08-24T00:00:00Z'))
+    const career = buildCareer([], { teamId: 1068, team: 'Atlético Madrid' })
+    expect(career).toEqual([{ teamId: 1068, team: 'Atlético Madrid', from: 2026, to: null }])
   })
 })

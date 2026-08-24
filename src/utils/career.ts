@@ -13,7 +13,7 @@ export interface CareerStage {
  * 同队的多次记录（含租借）合并为一个区间（取最早 ~ 最晚年份）；
  * 最新一笔转会的转入队 to 置 null（= 至今）。
  */
-export function buildCareer(transfers: TransferEntry[]): CareerStage[] {
+export function buildCareer(transfers: TransferEntry[], currentTeam?: { teamId: number; team: string | null }): CareerStage[] {
   const sorted = transfers
     .filter((t) => t.date)
     .sort((a, b) => String(a.date).localeCompare(String(b.date)))
@@ -38,10 +38,19 @@ export function buildCareer(transfers: TransferEntry[]): CareerStage[] {
     touch(t.toTeamId, t.toTeam, year)
   }
 
-  // 最新一笔转会的转入队 = 当前队，to 置 null（至今）
   const last = sorted[sorted.length - 1]
-  if (last && last.toTeamId != null && byTeam.has(last.toTeamId)) {
-    byTeam.get(last.toTeamId)!.to = null
+  const lastToId = last && last.toTeamId != null ? last.toTeamId : null
+
+  if (currentTeam && currentTeam.teamId != null && currentTeam.teamId !== lastToId) {
+    // 兜底：ESPN transactions 滞后，当前队 ≠ 最后转入队 → 追加当前队至今，原队收尾当前年
+    const currentYear = new Date().getFullYear()
+    if (lastToId != null && byTeam.has(lastToId)) {
+      byTeam.get(lastToId)!.to = currentYear
+    }
+    touch(currentTeam.teamId, currentTeam.team, currentYear)
+    byTeam.get(currentTeam.teamId)!.to = null
+  } else if (last && lastToId != null && byTeam.has(lastToId)) {
+    byTeam.get(lastToId)!.to = null
   }
 
   return [...byTeam.values()].sort((a, b) => a.from - b.from)
