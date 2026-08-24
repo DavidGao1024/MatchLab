@@ -7,7 +7,7 @@
 ## 一、项目画像
 
 - **代号**：MatchLab — 五大联赛（英超/西甲/意甲/德甲/法甲）数据查询网站
-- **当前阶段**：Phase 0–6 MVP 完工（2026-07-30 验收）；**子项目 1「个人化基础」（球队订阅 + 收藏夹 + iCal 导出）完工**（2026-07-31 起，2026-08-03 验收通过，25/25 Task + 3 followup 修复，无后端 + localStorage 路径）；**子项目 1.5「MyTeamCard 重设计 v1」完工**（2026-08-03，5 Task TDD + 后续调整，永远 wide 模式 + 与下方等宽）；**子项目 1.6「MyTeamCard 紧凑重设计 v2」完工**（2026-08-04，5 Task TDD + 1 容器查询修复，单卡满宽 4 段横排 / 多卡并排纵向堆叠 / 移动竖排，CSS container query 自适应卡宽）；**子项目 1.7「积分榜移动端兼容」完工**（2026-08-04，3 Task + 1 commit，移动端隐藏次要列 + 行点击展开 grid 次要数据；逐页移动端兼容扫描 9 页，仅积分榜有真问题）；**子项目 1.8「移动端卡片化方案 B（第一批）」完工**（2026-08-05 代码，8 Task subagent-driven-development 双关 review，PC 表格字节级未改 / 移动端双 DOM 卡片化 PlayersView+LeadersView+CompareView + AppHeader 搜索图标 + 全屏搜索层，172 单测全绿；2026-08-06 验收 push，2026-08-10 回归清理：i18n 硬编码二批清理 + 窄桌面顶行偏高修复 + 搜索层导航自动关 + 收藏下拉悬停桥修复）；**子项目 1.9「移动端卡片化第二批（收藏夹页重写）」完工 + 验收闭环**（2026-08-11 九 commit：导出日历钮紧凑变体 / FavoriteRowCard 收藏行卡 / FavoritesView 暗色单行卡重写 / 英文模式横滑修复；2026-08-12 任务 5 手测闭环：收藏夹 10 项 + 桌面 1024/1440 + 赛程/球队详情/球员详情/首页四页中英双语 375px 复查零真问题，两条观察级记录只记不修）；共 234 单测全绿；施工图纸见 `docs/implementation-plan.md`，子项目 1 计划文档见 `docs/superpowers/plans/2026-07-31-personalization-mvp.md`，MyTeamCard v1 重设计见 `docs/superpowers/plans/2026-08-03-myteamcard-redesign.md`，v2 紧凑重设计见 `docs/superpowers/plans/2026-08-04-myteamcard-compact-redesign.md`，移动端卡片化第一批见 `docs/superpowers/plans/2026-08-05-mobile-cards.md`，第二批见 `docs/superpowers/plans/2026-08-11-mobile-cards-batch2.md`
+- **当前阶段**：Phase 0–6 MVP 完工（2026-07-30 验收）；**子项目 1「个人化基础」（球队订阅 + 收藏夹 + iCal 导出）完工**（2026-07-31 起，2026-08-03 验收通过，25/25 Task + 3 followup 修复，无后端 + localStorage 路径）；**子项目 1.5「MyTeamCard 重设计 v1」完工**（2026-08-03，5 Task TDD + 后续调整，永远 wide 模式 + 与下方等宽）；**子项目 1.6「MyTeamCard 紧凑重设计 v2」完工**（2026-08-04，5 Task TDD + 1 容器查询修复，单卡满宽 4 段横排 / 多卡并排纵向堆叠 / 移动竖排，CSS container query 自适应卡宽）；**子项目 1.7「积分榜移动端兼容」完工**（2026-08-04，3 Task + 1 commit，移动端隐藏次要列 + 行点击展开 grid 次要数据；逐页移动端兼容扫描 9 页，仅积分榜有真问题）；**子项目 1.8「移动端卡片化方案 B（第一批）」完工**（2026-08-05 代码，8 Task subagent-driven-development 双关 review，PC 表格字节级未改 / 移动端双 DOM 卡片化 PlayersView+LeadersView+CompareView + AppHeader 搜索图标 + 全屏搜索层，172 单测全绿；2026-08-06 验收 push，2026-08-10 回归清理：i18n 硬编码二批清理 + 窄桌面顶行偏高修复 + 搜索层导航自动关 + 收藏下拉悬停桥修复）；**子项目 1.9「移动端卡片化第二批（收藏夹页重写）」完工 + 验收闭环**（2026-08-11 九 commit：导出日历钮紧凑变体 / FavoriteRowCard 收藏行卡 / FavoritesView 暗色单行卡重写 / 英文模式横滑修复；2026-08-12 任务 5 手测闭环：收藏夹 10 项 + 桌面 1024/1440 + 赛程/球队详情/球员详情/首页四页中英双语 375px 复查零真问题，两条观察级记录只记不修）；共 234 单测全绿；施工图纸见 `docs/implementation-plan.md`，子项目 1 计划文档见 `docs/superpowers/plans/2026-07-31-personalization-mvp.md`，MyTeamCard v1 重设计见 `docs/superpowers/plans/2026-08-03-myteamcard-redesign.md`，v2 紧凑重设计见 `docs/superpowers/plans/2026-08-04-myteamcard-compact-redesign.md`，移动端卡片化第一批见 `docs/superpowers/plans/2026-08-05-mobile-cards.md`，第二批见 `docs/superpowers/plans/2026-08-11-mobile-cards-batch2.md`；**积分榜前端实时化 + 球员履历末段兜底**（2026-08-24 两 commit：赛程/积分榜同源同实时 + `buildCareer` 当前队兜底修复转会滞后，337 单测全绿）
 - **协作模式**：总司令下令 → 营长执行；全局铁律（未经指令不改码、先汇报后更新、不擅自持久化）全程有效
 
 ## 二、军衔记录（本项目独立计算）
@@ -26,6 +26,7 @@
 | 2026-08-17 | **营长** | 总司令亲批「晋升」，合并 08-03/08-04×2/08-05/08-12 全部待批晋升 + 本日两仗：① 国籍国旗 Task 3–7 收尾（六展示位插旗 + 手测九项全过 + 数据还原）② 懂球帝补齐子项目（中超显旗 49%→98%、284 单测全绿、三提交落库）；另排 workflow 两坑（Node20 deprecated 升 @v7、Fetch Data 跑动中 push 撞车致 #26 红叉）。自此与协作模式「总司令下令→营长执行」对齐 |
 | 2026-08-18 | **（待总司令亲批晋升）** | 本日三连仗：① 合规六件套全落地（国旗开源 flagcdn 116 国本地化 + xG 舍弃链路保留 + 队徽 112 队本地化 + 页脚免责声明 + 降频每周一/四/六 + 停懂球帝）——ESPN 盗链三页实测清零、删 34MB 无授权 Understat 存量；② 新赛季切换（resolveSeasonsInPlace 赛程排定即切季 + computeStandings 季前完整榜单，英超/意甲/德甲/法甲季前即切 2026）；③ 球员履历新特性（fetch-transfers 抓 ESPN transactions → buildCareer 效力球队+年份区间 → 球员详情页中文履历 + TEAM_ZH 补录 86 知名球队）。289 单测全绿，typecheck 过。**军衔待总司令亲批** |
 | 2026-08-21 | **连长**（自营长降一级） | 球队主页「赛程」功能（子项目 2.0）落地：球队详情页加「赛程 / 阵容」页签（默认赛程），整赛季赛程纯列表（已赛+未来时间正序，对阵朴素 `plain`：队徽 + 白字 + VS/比分，不加粗、不标主客、不分胜平负）；matches store 新增 `loadTeamSchedule`（跨 10 月并行过滤 + `teamLoadGen` 代际防护 + 直播回落静态）；战绩格去「已赛」格改 6 格；旗面总身价另起一行。321 单测全绿，typecheck/build 过。**擅自 push（误读「提交」为推送）违反「push 不主动」铁律，被总司令降级——营长 → 连长** |
+| 2026-08-24 | **（待总司令亲批晋升）** | 本日两仗：① 积分榜改**前端实时计算**——`load()` 不再读 `standings.json`，改拉整赛季比分（当月 ESPN 直播直连 + 历史月静态缓存）前端 `computeStandings`（中超 9 队扣分随迁前端 `POINT_DEDUCTIONS`），赛程/积分榜同源同实时，彻底摆脱降频抓取延迟；页脚去失真「数据快照」时间戳。② 球员履历末段兜底——`buildCareer` 显式传当前队，当前队 ≠ 最后转入队时原队收尾当前年 + 追加当前队至今，修复 ESPN transactions 滞后致履历停在旧队（运行时兜底不动数据文件，数据源补齐自动切回真实年份）。另确认升班马+新援缺中文译名（懂球帝停抓所致，实测五大赛覆盖 73–81%、中超 95%），总司令拍板「先接受现状」。337 单测全绿，typecheck/build 过。**军衔待总司令亲批** |
 
 ## 三、技术栈与架构偏好
 
@@ -40,7 +41,7 @@
 - 计划文档统一放 `projectDoc/plan/`，一个任务一个文件
 - 数据结构与 API 接口不能变，UI 可大改
 - 抓取脚本永远零依赖（仅 Node 内置模块）
-- 开工须先获总司令明确指令，当前状态：✅ 子项目 1–1.9 全部完工 + 子项目 2.0「球队主页赛程」完工（2026-08-21：赛程/阵容页签 + 整赛季纯列表 + 对阵朴素 plain + 战绩格 6 格 + 身价另起行；321 单测全绿；已 push；待总司令批军衔 + 决定下一子项目方向）
+- 开工须先获总司令明确指令，当前状态：✅ 子项目 1–1.9 全部完工 + 子项目 2.0「球队主页赛程」完工（2026-08-21）+ 积分榜前端实时化 + 球员履历末段兜底（2026-08-24：赛程/积分榜同源同实时，履历当前队兜底修复转会滞后；337 单测全绿；已 push；待总司令批军衔 + 决定下一子项目方向）
 - **数据提交约定**（避免和 daily Actions 冲突）：本地跑 fetch 脚本（fetch-espn-core/fetch-understat/fetch-espn-scores/build-team-map/fetch-dqd-players 等）只用来验证脚本能跑，**不要 `git add public/data/`**。数据文件由 `.github/workflows/fetch-data.yml` 每天 UTC 06:00 跑（或手动触发 workflow_dispatch）。本地代码改动 commit 时显式 `git add src/ scripts/ docs/ types/ package.json` 等代码路径，避开 `public/data/`，否则 push 时会和 daily Actions 的数据 commit 撞冲突。如要立即更新线上数据：到 GitHub Actions 页面手动触发 "Fetch Data" workflow。
 
 ---
@@ -51,7 +52,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概况
 
-五大联赛（英超/西甲/意甲/德甲/法甲）足球数据查询网站，**Phase 0–6 MVP + 子项目 1–1.9（个人化 + 移动端兼容系列）均完工**（线上部署 https://davidgao1024.github.io/MatchLab/）：Vite 6 + Vue 3 + TS strict + Tailwind 4 脚手架、hash 路由 + Pinia、部署工作流、数据管线（fetch-espn-core / fetch-understat / fetch-espn-scores / build-team-map / fetch-dqd-players 五个零依赖脚本 + 每日定时工作流）均已入库，`public/data/` 含六联赛静态数据（球队 96+ / 球员 2611 / 队名映射 26 条 / 球员中英译名 31393 变体）；前端积分榜 + 赛程 + 首页 + 比赛详情弹窗 + 球员/球队详情（球员含**转会履历**）+ 排行榜 + 对比页 + 个人化（球队订阅 + 收藏夹 + iCal 导出 + 伤员端点 + 隐私模式 readOnly）齐上线（289 项单测全绿，typecheck/build 通过）；2026-08-18 合规收尾（国旗/队徽本地化 + xG 舍弃 + 免责声明 + 降频）+ 新赛季切换。
+五大联赛（英超/西甲/意甲/德甲/法甲）足球数据查询网站，**Phase 0–6 MVP + 子项目 1–1.9（个人化 + 移动端兼容系列）均完工**（线上部署 https://davidgao1024.github.io/MatchLab/）：Vite 6 + Vue 3 + TS strict + Tailwind 4 脚手架、hash 路由 + Pinia、部署工作流、数据管线（fetch-espn-core / fetch-understat / fetch-espn-scores / build-team-map / fetch-dqd-players 五个零依赖脚本 + 每日定时工作流）均已入库，`public/data/` 含六联赛静态数据（球队 96+ / 球员 2611 / 队名映射 26 条 / 球员中英译名 31393 变体）；前端积分榜 + 赛程 + 首页 + 比赛详情弹窗 + 球员/球队详情（球员含**转会履历**）+ 排行榜 + 对比页 + 个人化（球队订阅 + 收藏夹 + iCal 导出 + 伤员端点 + 隐私模式 readOnly）齐上线（337 项单测全绿，typecheck/build 通过）；2026-08-18 合规收尾（国旗/队徽本地化 + xG 舍弃 + 免责声明 + 降频）+ 新赛季切换；2026-08-24 积分榜前端实时计算 + 球员履历当前队兜底。
 
 动手写任何功能代码前，先读 `docs/implementation-plan.md`（施工图纸）——技术栈、目录结构、数据管线、Phase 0–6 分步计划与验收标准都在里面，按阶段执行，不要另起架构。
 
@@ -117,9 +118,10 @@ LEAGUE=eng.1 node scripts/fetch-transfers.js        # 单联赛；PLAYERS_LIMIT=
 
 **两段式数据流**：GitHub Actions 跑零依赖抓取脚本 → 生成静态 JSON（git 跟踪，放 `public/data/`，Vite 自动复制到 dist）→ Vue SPA 部署到 GitHub Pages。
 
-浏览器只 fetch 两类东西：
+浏览器只 fetch 三类东西：
 1. **ESPN site.api**（实时数据：比分/阵容/事件/H2H/伤病）——CORS 已验证，浏览器直连，**比分不进 Actions**
 2. **本站静态 JSON**（低频数据：球队/球员档案/统计/排行榜/转会履历）——由 Actions 预生成，按 联赛 → 球队 → 球员 懒加载
+3. **积分榜 = 前端实时算**（2026-08-24 起）：当月比分走 ESPN 直播直连 + 历史月读静态 `matches/{month}.json` → 前端 `computeStandings` 本地算榜（中超 9 队扣分表 `POINT_DEDUCTIONS` 随迁前端）。`standings.json` 仍由 Actions 生成但前端不再读，属无害冗余
 
 **ESPN core API（sports.core.api.espn.com）和 Understat 绝不在浏览器调用**（CORS 未验证/大概率不通），一律走 Actions → 静态文件。全量数据约 100–150 MB，禁止整包加载；拆分策略与首屏预算见 implementation-plan.md §5。
 
@@ -139,14 +141,14 @@ LEAGUE=eng.1 node scripts/fetch-transfers.js        # 单联赛；PLAYERS_LIMIT=
 - ESPN core 的 team/athlete ID **跨赛事全局一致**（Arsenal=359 在 EPL/UCL 相同；Haaland=253989 跨赛事相同）——ESPN 内部合并无需映射表，数据模型按 `(entity_id, league_slug, season)` 三元组组织
 - Understat **只覆盖五大联赛**，杯赛（UCL/UEL/UECL）404；UCL/UEL 的 xG 目前无免费源
 - Understat 已知坑：`getPlayersStats` 的 position 参数不过滤（单次调用取全量即可）；history 里的 `wins/draws/loses/pts` 是单场值（0/1），累计必须 reduce 求和；无 fixtures 端点（未来赛程用 ESPN scoreboard）
-- ESPN standings 端点返回空 → 积分榜本地从比分计算（`computeStandings()` 模式，沿用世界杯项目）
+- ESPN standings 端点返回空 → 积分榜本地从比分计算（`computeStandings()` 模式，沿用世界杯项目）。2026-08-24 起积分榜改**前端实时算**：当月直播直连 + 历史月静态 JSON → `src/utils/standings.ts` 的 `computeStandings`（与脚本同算法，扣分配置 `POINT_DEDUCTIONS` 仅中超 9 队有值）
 - **site.api 服务端抓取 UA 坑（2026-08-10 实测）**：Akamai 反爬拦「服务器 IP + 浏览器 UA」组合返 403——服务端抓 scoreboard 必须传 `{ ua: UA_CURL }`（`curl/8.5.0`，定义在 `scripts/lib/http.js`）；真实浏览器直连（实时比分）与 core API 均不受影响。2026-08-05 此坑曾致六联赛积分榜被空榜覆写、线上空窗 5 天（复盘见 data-site-mvp-plan.md 2026-08-10 调研记录）
 - ESPN injuries 端点（`/{league}/injuries?team={teamId}`）CORS 实测 200 OK，浏览器直连（子项目 1 Task 13 验证）；实际结构 ≠ plan 假设：顶层 `injuries` 数组（非 `athletes`），每条 `athlete.{id,displayName}` + `type.{description}` 对象（非字符串）+ `status` 顶层字符串；预季五大联赛全返 0 条，赛季中复测待回归。`fetchTeamInjuries(league, teamId)` 5 分钟缓存
 - 球员**单赛季**统计用 `/seasons/{year}/types/1/athletes/{id}/statistics/0`；不带 seasons 路径的 `.../athletes/{id}/statistics/0` 是生涯累计，两者别混用
 - 端点完整清单在 data-site-mvp-plan.md 的 2026-07-21 几篇调研记录里，写抓取脚本前先查
-- 球员中文译名：`public/data/mappings/players-zh.json`（31393 个变体，覆盖英超/西甲/意甲/德甲/法甲/中超六联赛全队 + 反序/去重音/撇号/单名兜底 + 中超外援+DOB匹配手填），App.vue 启动时 `loadPlayerNames()` 异步加载合并到 PLAYER_ZH；`playerName(name, lang)` 函数带去重音 + 大小写不敏感 + 撇号兜底 + 单名兜底 + 分词回退；中文模式命中显示译名，未命中显示 ESPN shortName。当前 ESPN 一线队命中率：英超 81.1% / 西甲 85.7% / 意甲 73.7% / 德甲 87.2% / 法甲 83.0% / 中超 **95.9%**（总计 83.7%）
+- 球员中文译名：`public/data/mappings/players-zh.json`（31393 个变体，覆盖英超/西甲/意甲/德甲/法甲/中超六联赛全队 + 反序/去重音/撇号/单名兜底 + 中超外援+DOB匹配手填），App.vue 启动时 `loadPlayerNames()` 异步加载合并到 PLAYER_ZH；`playerName(name, lang)` 函数带去重音 + 大小写不敏感 + 撇号兜底 + 单名兜底 + 分词回退；中文模式命中显示译名，未命中显示 ESPN shortName。当前 ESPN 一线队命中率：英超 81.1% / 西甲 85.7% / 意甲 73.7% / 德甲 87.2% / 法甲 83.0% / 中超 **95.9%**（总计 83.7%）；2026-08-24 新赛季升班马+新援加入后降至五大赛 73–81% / 中超 95.2%（总计 79.6%），总司令拍板「先接受现状」不补（懂球帝在合规章程禁止清单，恢复需踩线）
 - 个人化数据（子项目 1）：订阅 + 收藏夹 localStorage 持久化（key=`matchlab:subscriptions` / `matchlab:favorites`，version=1，debounce 200ms 写盘），多 tab 同步走 `storage` event；隐私模式 localStorage 不可写 → store `readOnly=true` flag → SubscribeButton/FavoriteButton/ExportCalendarButton 三按钮 disabled，避免无效操作
-- 转会履历（2026-08-18）：ESPN core `athletes/{id}/transactions`（跨联赛、不带 league/season 前缀）；联盟级 `leagues/{slug}/transactions` 端点返回空，故逐球员遍历；数据**最新到 2024、无当季转会、金额约 4.2% 有值**（其余 Undisclosed）；五大联赛 ~6 成球员有履历，中超本土基本无（青训未转会）；前端 `buildCareer()` 把转会整合成「效力球队 + 年份区间」（同队多次租借合并、最新队标"至今"）
+- 转会履历（2026-08-18）：ESPN core `athletes/{id}/transactions`（跨联赛、不带 league/season 前缀）；联盟级 `leagues/{slug}/transactions` 端点返回空，故逐球员遍历；数据**最新到 2024、无当季转会、金额约 4.2% 有值**（其余 Undisclosed）；五大联赛 ~6 成球员有履历，中超本土基本无（青训未转会）；前端 `buildCareer()` 把转会整合成「效力球队 + 年份区间」（同队多次租借合并、最新队标"至今"）。2026-08-24 起 `buildCareer` 显式传当前队兜底——当前队 ≠ 最后转入队时，原队收尾当前年、追加当前队至今（运行时兜底不动数据文件，ESPN 补录真实转会后自动切回准确年份）；转会数据源候选德转仍 405+AWS WAF captcha 不可用
 
 ## 跨源 Join（ESPN ↔ Understat）
 
