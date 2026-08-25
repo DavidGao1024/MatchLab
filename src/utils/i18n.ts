@@ -724,6 +724,7 @@ export function loadPlayerNames(): Promise<void> {
         const data = await res.json()
         if (data?.players && typeof data.players === 'object') {
           PLAYER_ZH = { ...data.players, ...PLAYER_ZH }
+          playerNameIndex = null
         }
       } catch {
         // 静默失败，不影响应用启动
@@ -736,6 +737,49 @@ export function loadPlayerNames(): Promise<void> {
 /** 仅供测试：重置记忆化 Promise */
 export function __resetPlayerNames(): void {
   playerNamesPromise = null
+}
+
+// ===== playerName 派生索引：把 Object.keys 线性扫描换成 O(1) Map 查询 =====
+interface PlayerNameIndex {
+  /** ② 大小写不敏感：lowercase(key) → 中文名（保留遍历顺序首个键） */
+  lower: Map<string, string>
+  /** ④ 撇号兜底：去撇号 + lowercase(key) → 中文名（保留遍历顺序首个键） */
+  noApos: Map<string, string>
+  /** ⑥ 单名词：长度≥2 的 name 片段(lowercase，不去重音) → 中文名（按遍历顺序收集，可能多值） */
+  word: Map<string, string[]>
+}
+
+let playerNameIndex: PlayerNameIndex | null = null
+
+function buildPlayerNameIndex(): PlayerNameIndex {
+  const lower = new Map<string, string>()
+  const noApos = new Map<string, string>()
+  const word = new Map<string, string[]>()
+  for (const k of Object.keys(PLAYER_ZH)) {
+    const cn = PLAYER_ZH[k]
+    const lk = k.toLowerCase()
+    if (!lower.has(lk)) lower.set(lk, cn)
+    const nk = k.replace(/['\u2019]/g, '').toLowerCase()
+    if (!noApos.has(nk)) noApos.set(nk, cn)
+    const kParts = k.split(/[\s.\-]+/).filter((p) => p.length >= 2)
+    if (kParts.length >= 2) {
+      for (const p of kParts) {
+        const pk = p.toLowerCase()
+        let arr = word.get(pk)
+        if (!arr) {
+          arr = []
+          word.set(pk, arr)
+        }
+        arr.push(cn)
+      }
+    }
+  }
+  return { lower, noApos, word }
+}
+
+function ensurePlayerNameIndex(): PlayerNameIndex {
+  if (!playerNameIndex) playerNameIndex = buildPlayerNameIndex()
+  return playerNameIndex
 }
 
 // ===== 球员/球队身价映射（懂球帝一次性抓取，启动时加载） =====
@@ -1063,19 +1107,17 @@ export function leadersCatName(name: string, displayName: string, lang: Lang): s
 export function playerName(name: string, lang: Lang): string {
   if (!name || lang !== 'zh') return name
   if (PLAYER_ZH[name]) return PLAYER_ZH[name]
+  const idx = ensurePlayerNameIndex()
   const lower = name.toLowerCase()
-  for (const k of Object.keys(PLAYER_ZH)) {
-    if (k.toLowerCase() === lower) return PLAYER_ZH[k]
-  }
+  const hitLower = idx.lower.get(lower)
+  if (hitLower) return hitLower
   const norm = normalizeAccents(name)
   if (norm !== name && PLAYER_ZH[norm]) return PLAYER_ZH[norm]
   // 撇号兜底：外援名 N'Kololo / N'Guessan 等，dongqiudi 存 "Nkololo"，ESPN 存 "N'Kololo"
   const noApos = name.replace(/['\u2019]/g, '')
   if (noApos !== name) {
-    const noAposLower = noApos.toLowerCase()
-    for (const k of Object.keys(PLAYER_ZH)) {
-      if (k.replace(/['\u2019]/g, '').toLowerCase() === noAposLower) return PLAYER_ZH[k]
-    }
+    const hitNoApos = idx.noApos.get(noApos.toLowerCase())
+    if (hitNoApos) return hitNoApos
   }
   const parts = name.split(/\s+/)
   if (parts.length > 1) {
@@ -1090,21 +1132,23 @@ export function playerName(name: string, lang: Lang): string {
   if (parts.length === 1) {
     const inputLower = lower
     const inputDeAcc = normalizeAccents(name).toLowerCase()
-    let uniqueCn: string | null = null
-    let conflict = false
-    for (const k of Object.keys(PLAYER_ZH)) {
-      const kParts = k.split(/[\s.\-]+/).filter(p => p.length >= 2)
-      if (kParts.length < 2) continue
-      if (kParts.some(p => {
-        const lp = p.toLowerCase()
-        return lp === inputLower || lp === inputDeAcc
-      })) {
-        const cn = PLAYER_ZH[k]
-        if (uniqueCn && uniqueCn !== cn) { conflict = true; break }
-        uniqueCn = cn
-      }
-    }
-    if (!conflict && uniqueCn) return uniqueCn
+    const seen = new Set<string>()
+    const a1 = idx.word.get(inputLower)
+    if (a1) for (const cn of a1) seen.add(cn)
+    const a2 = idx.word.get(inputDeAcc)
+    if (a2) for (const cn of a2) seen.add(cn)
+    if (seen.size === 1) return seen.values().next().value as string
   }
   return name
+}
+
+/** 仅供测试：注入球员译名表（替代手填区 + players-zh.json，用于特征测试锁定各分支行为） */
+export function __setPlayerZh(map: Record<string, string>): void {
+  PLAYER_ZH = map
+  playerNameIndex = null
+}
+
+/** 仅供测试：读取当前译名表（供全量等价性 diff 的旧算法参考用） */
+export function __getPlayerZh(): Record<string, string> {
+  return PLAYER_ZH
 }
