@@ -44,7 +44,14 @@ watchEffect(() => {
 <template>
   <div class="relative min-h-screen flex flex-col">
     <div class="pitch-texture" aria-hidden="true"></div>
-    <div class="league-glow" aria-hidden="true"></div>
+    <div class="bg-glow-field" aria-hidden="true">
+      <span class="glow-blob glow-b1"></span>
+      <span class="glow-blob glow-b2"></span>
+      <span class="glow-blob glow-b3"></span>
+      <span class="glow-blob glow-b4"></span>
+      <span class="glow-blob glow-b5"></span>
+      <span class="glow-blob glow-b6"></span>
+    </div>
     <BackgroundParticles />
     <AppHeader />
     <main class="relative z-10 flex-1 flex flex-col w-full max-w-[1600px] mx-auto px-4">

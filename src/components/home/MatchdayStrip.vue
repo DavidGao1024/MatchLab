@@ -25,8 +25,7 @@ const leagueName = () => {
 <template>
   <!-- 开场即比赛日：上轮战报转播带（首页第一段，规格 §四） -->
   <section
-    class="relative overflow-hidden rounded-xl border border-white/10 p-5"
-    style="background: linear-gradient(180deg, color-mix(in srgb, var(--league-color) 18%, #10152a), #10152a)"
+    class="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.10] to-white/[0.03] backdrop-blur-xl p-5"
   >
     <div class="flex flex-wrap items-baseline gap-x-3 gap-y-2">
       <span class="rounded border px-2 py-0.5 font-mono-d text-[10px] tracking-[0.22em]" style="border-color: color-mix(in srgb, var(--league-color) 60%, transparent); color: color-mix(in srgb, var(--league-color) 70%, white)">

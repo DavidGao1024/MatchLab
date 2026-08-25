@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>首页重设计 · 玻璃拟态（设计稿）</title>
+<style>
+  * { box-sizing: border-box; }
+
+  /* ===== 玻璃拟态主题（唯一方案） ===== */
+  body {
+    --bg: #0a0e15; --bg-elev: #10141c; --card: rgba(255,255,255,.055); --card-hover: rgba(255,255,255,.085);
+    --border: rgba(255,255,255,.13); --border-strong: rgba(255,255,255,.2);
+    --text: #f4f7fb; --text-dim: #b6c2d0; --text-faint: #8a97a8;
+    --header-bg: rgba(10,14,21,.6);
+    --chip-bg: rgba(255,255,255,.08);
+    --shadow: none;
+  }
+
+  body {
+    margin: 0; padding: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased; transition: background .25s, color .25s;
+  }
+  .fc { font-family: "Arial Narrow", "DIN Condensed", sans-serif; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+
+  /* 玻璃景深：六色联赛光斑（慢速微漂移，为毛玻璃提供折射层次） */
+  .bg-glow {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+  }
+  .blob { position: absolute; border-radius: 50%; filter: blur(52px); will-change: transform; }
+  .b1 { width: 52vw; height: 52vw; left: -14%; top: -22%; background: radial-gradient(circle, rgba(124,92,255,.32), transparent 64%); animation: drift1 26s ease-in-out infinite; }
+  .b2 { width: 42vw; height: 42vw; right: -12%; top: -8%; background: radial-gradient(circle, rgba(61,141,253,.28), transparent 64%); animation: drift2 32s ease-in-out infinite; }
+  .b3 { width: 44vw; height: 44vw; left: 16%; top: 44%; background: radial-gradient(circle, rgba(209,80,80,.20), transparent 64%); animation: drift3 38s ease-in-out infinite; }
+  .b4 { width: 38vw; height: 38vw; right: 6%; top: 54%; background: radial-gradient(circle, rgba(46,160,67,.18), transparent 64%); animation: drift4 30s ease-in-out infinite; }
+  .b5 { width: 34vw; height: 34vw; left: 46%; top: -20%; background: radial-gradient(circle, rgba(238,135,7,.16), transparent 62%); animation: drift2 36s ease-in-out infinite; }
+  .b6 { width: 30vw; height: 30vw; left: -6%; bottom: -14%; background: radial-gradient(circle, rgba(0,143,215,.16), transparent 62%); animation: drift1 42s ease-in-out infinite; }
+  @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(7%,9%) scale(1.14); } }
+  @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-8%,6%) scale(1.10); } }
+  @keyframes drift3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(5%,-8%) scale(1.16); } }
+  @keyframes drift4 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-6%,-7%) scale(1.12); } }
+
+  /* 金色光点粒子：canvas 绘制，大小/速度/透明度对齐真实页面 BackgroundParticles */
+  #gold-particles {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  }
+
+  .wrap { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; }
+
+  /* ===== 顶栏 ===== */
+  header {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--header-bg); backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    border-bottom: 1px solid var(--border);
+  }
+  body header { background: rgba(10,14,21,.45); box-shadow: inset 0 -1px 0 rgba(255,255,255,.05); }
+  .header-in { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 56px;
+    display: flex; align-items: center; gap: 24px; }
+  .logo { display: flex; align-items: center; gap: 9px; }
+  .logo-m { width: 26px; height: 26px; border-radius: 7px;
+    background: linear-gradient(135deg, #7c5cff, #3d8bfd); display: grid; place-items: center; }
+  .logo-m::after { content: "⚽"; font-size: 13px; }
+  .logo-t { font-family: "Arial Narrow", sans-serif; font-weight: 800; font-size: 17px; letter-spacing: .03em; }
+  nav { display: flex; gap: 4px; margin-left: 8px; }
+  nav span { padding: 6px 13px; border-radius: 8px; font-size: 13px; color: var(--text-dim); }
+  nav span.on { background: var(--chip-bg); color: var(--text); }
+  .header-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+  .search { padding: 6px 14px; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--chip-bg); color: var(--text-faint); font-size: 12px; min-width: 180px; }
+  .lang { padding: 6px 12px; border-radius: 8px; border: 1px solid var(--border); font-size: 12px; color: var(--text-dim); }
+
+  /* ===== 区块标题 ===== */
+  .sec-head { display: flex; align-items: baseline; gap: 10px; margin: 30px 0 14px; }
+  .sec-title { font-family: "Arial Narrow", sans-serif; font-size: 18px; font-weight: 800; letter-spacing: .04em; }
+  .sec-sub { font-size: 12px; color: var(--text-faint); }
+
+  /* ===== 卡片通用 ===== */
+  .glass-blur { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+
+  /* ===== 订阅卡 ===== */
+  .subs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .sub-card {
+    border: 1px solid var(--border); border-radius: 13px; overflow: hidden;
+    background: var(--card); box-shadow: var(--shadow);
+    transition: border-color .15s, transform .15s;
+  }
+  .sub-card:hover { border-color: var(--border-strong); transform: translateY(-1px); }
+  body .sub-card {
+    background: linear-gradient(160deg, rgba(255,255,255,.11), rgba(255,255,255,.03) 55%);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border-color: rgba(255,255,255,.17);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 10px 34px rgba(0,0,0,.34);
+  }
+  body .sub-card:hover { border-color: rgba(255,255,255,.28); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 14px 42px rgba(0,0,0,.42); }
+  .sub-flag { position: relative; display: flex; align-items: center; gap: 11px; padding: 13px 15px; }
+  .sub-flag::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(115deg, transparent 0 20px, rgba(0,0,0,.10) 20px 40px); }
+  .sub-flag > * { position: relative; }
+  .crest { border-radius: 50%; display: grid; place-items: center; color: #fff; font-family: "Arial Narrow", sans-serif; font-weight: 800; flex: none; }
+  .sub-name { font-family: "Arial Narrow", sans-serif; font-size: 22px; font-weight: 800; letter-spacing: .05em; color: #fff; }
+  .sub-league { font-size: 10px; letter-spacing: .12em; opacity: .8; margin-top: 1px; }
+  .sub-rank { margin-left: auto; display: flex; align-items: baseline; gap: 4px; background: rgba(0,0,0,.34); border: 1px solid rgba(255,255,255,.28); border-radius: 9px; padding: 5px 11px; flex: none; }
+  .sub-rank .n { font-family: "Arial Narrow", sans-serif; font-size: 18px; font-weight: 800; color: #fff; }
+  .sub-rank .o { font-size: 10px; color: rgba(255,255,255,.75); }
+  .sub-next { margin: 0 14px 14px; padding: 10px 13px; background: rgba(255,255,255,.045); border-radius: 8px; }
+  .sub-next-label { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--text-faint); }
+  .sub-next-row { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+  .sub-next-row .t { flex: 1; font-size: 13px; font-weight: 600; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .sub-next-row .t.r { text-align: right; }
+  .sub-next-row .vs { font-size: 10px; color: var(--text-faint); }
+  .sub-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 12px 14px; border-top: 1px solid var(--border); }
+  .sub-stats div { padding: 7px 4px; text-align: center; background: rgba(255,255,255,.045); border-radius: 8px; }
+  .sub-stats .k { font-size: 9px; letter-spacing: .16em; color: var(--text-faint); text-transform: uppercase; font-family: ui-monospace, monospace; }
+  .sub-stats .v { font-family: "Arial Narrow", sans-serif; font-size: 16px; font-weight: 800; margin-top: 1px; color: #fff; }
+  .sub-stats div:nth-child(1) .v { color: #10b981; }
+  .sub-stats div:nth-child(3) .v { color: #ef4444; }
+  .sub-stats div:nth-child(4) { background: rgba(124,92,255,.13); border: 1px solid rgba(124,92,255,.4); }
+  .sub-stats div:nth-child(4) .v { color: #b7a6ff; }
+  .sub-next-venue { font-size: 10px; color: var(--text-faint); margin-top: 5px; font-family: ui-monospace, monospace; letter-spacing: .06em; }
+
+  /* ===== 战报带 ===== */
+  .strip { border: 1px solid var(--border); border-radius: 13px; background: var(--card); padding: 15px 18px; box-shadow: var(--shadow); }
+  body .strip {
+    background: linear-gradient(160deg, rgba(255,255,255,.10), rgba(255,255,255,.03) 55%);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border-color: rgba(255,255,255,.16);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 10px 34px rgba(0,0,0,.32);
+  }
+  .strip-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .strip-head .l { display: flex; align-items: center; gap: 8px; font-family: "Arial Narrow", sans-serif; font-size: 15px; font-weight: 800; }
+  .strip-badge { font-size: 9px; letter-spacing: .18em; padding: 3px 9px; border: 1px solid rgba(124,92,255,.5); border-radius: 4px; color: #b7a6ff; font-family: ui-monospace, monospace; }
+  .strip-link { margin-left: auto; font-size: 11px; color: var(--text-faint); text-decoration: none; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; }
+  body .dot { box-shadow: 0 0 10px rgba(255,255,255,.22); }
+  .strip-head .d { font-size: 11px; color: var(--text-faint); }
+  .strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .m-card { border: 1px solid var(--border); border-radius: 10px; padding: 11px 12px; background: var(--chip-bg); }
+  .m-card.feat { border-color: rgba(124,92,255,.4); background: rgba(124,92,255,.06); }
+  .m-teams { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; }
+  .m-teams .t { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .m-teams .t.r { text-align: right; }
+  .m-score { text-align: center; font-family: "Arial Narrow", sans-serif; font-size: 19px; font-weight: 800; margin-top: 6px; }
+  .m-score .vs { font-size: 11px; color: var(--text-faint); font-weight: 400; }
+  .m-time { text-align: center; font-size: 10px; color: var(--text-faint); margin-top: 4px; font-family: ui-monospace, monospace; }
+
+  /* ===== 联赛板块 ===== */
+  .leagues { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 12px; margin-top: 6px; }
+  .lg-card { border: 1px solid var(--border); border-radius: 13px; background: var(--card); overflow: hidden; box-shadow: var(--shadow); }
+  body .lg-card {
+    background: linear-gradient(160deg, rgba(255,255,255,.10), rgba(255,255,255,.03) 55%);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border-color: rgba(255,255,255,.16);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 10px 34px rgba(0,0,0,.32);
+  }
+  body .lg-card:hover { border-color: rgba(255,255,255,.26); box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 14px 42px rgba(0,0,0,.4); }
+  .lg-card.feat { grid-row: span 2; }
+  .lg-head { display: flex; align-items: center; gap: 8px; padding: 12px 15px; border-bottom: 1px solid var(--border); }
+  .lg-head .dot { width: 9px; height: 9px; }
+  .lg-head .name { font-family: "Arial Narrow", sans-serif; font-size: 15px; font-weight: 800; letter-spacing: .03em; }
+  .lg-head .full { font-size: 10px; color: var(--text-faint); }
+  .lg-body { padding: 8px 0; }
+  .row { display: flex; align-items: center; gap: 8px; padding: 7px 15px; font-size: 13px; border-left: 2px solid transparent; }
+  .row.ucl { border-left-color: rgba(61,141,253,.7); }
+  .row .pos { width: 16px; text-align: center; font-size: 11px; color: var(--text-faint); font-family: ui-monospace, monospace; }
+  .row .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .row .won, .row .drawn, .row .lost { width: 16px; text-align: center; font-size: 11px; color: var(--text-faint); font-family: ui-monospace, monospace; }
+  .row .pts { font-family: ui-monospace, monospace; font-size: 12px; font-weight: 700; color: var(--text-dim); }
+  .lg-card.feat .row { padding: 8px 16px; font-size: 14px; }
+  .lg-card.feat .row .pts { font-size: 13px; }
+  .lg-foot { padding: 9px 15px; border-top: 1px solid var(--border); font-size: 10px; color: var(--text-faint); font-family: ui-monospace, monospace; }
+  .lg-featured { padding: 12px 16px 0; font-size: 9px; letter-spacing: .24em; color: #9d8cff; font-family: ui-monospace, monospace; }
+  .lg-enter { padding: 0 16px 12px; font-size: 12px; letter-spacing: .08em; color: #9d8cff; }
+
+  h1.m { font-size: 15px; font-weight: 600; color: var(--text-dim); text-align: center; margin: 34px 0 6px; }
+  p.note { font-size: 12px; color: var(--text-faint); text-align: center; line-height: 1.7; max-width: 760px; margin: 0 auto; }
+
+  /* ===== 响应式（移动端兼容） ===== */
+  @media (max-width: 1024px) {
+    .leagues { grid-template-columns: 1fr 1fr; }
+    .lg-card.feat { grid-row: auto; }
+  }
+  @media (max-width: 768px) {
+    .leagues { grid-template-columns: 1fr; }
+    .subs { grid-template-columns: 1fr; }
+    .strip-grid { grid-template-columns: 1fr 1fr; }
+    nav { display: none; }
+    .search { display: none; }
+  }
+  @media (max-width: 480px) {
+    .strip-grid { grid-template-columns: 1fr; }
+    .wrap { padding: 0 14px 40px; }
+    .header-in { padding: 0 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="bg-glow">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <span class="blob b4"></span><span class="blob b5"></span><span class="blob b6"></span>
+</div>
+<canvas id="gold-particles" aria-hidden="true"></canvas>
+
+<h1 class="m">首页重设计 · 玻璃拟态</h1>
+<p class="note">布局：订阅卡 → 上轮战报 → 联赛板块（1 大 + 5 小）；联赛主色收敛为小圆点/hover 点缀。背景为六色联赛光斑漂移动画。</p>
+
+<header style="margin-top: 6px;">
+  <div class="header-in">
+    <div class="logo"><span class="logo-m"></span><span class="logo-t">MatchLab</span></div>
+    <nav><span class="on">联赛</span><span class="on">积分榜</span><span class="on">赛程</span><span>球员</span><span>排行</span><span>对比</span></nav>
+    <div class="header-right"><span class="search">搜索球员 / 球队…</span><span class="lang">中文 ▼</span></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- 订阅区 -->
+  <div class="sec-head"><span class="sec-title">我的球队</span><span class="sec-sub">1 支订阅</span></div>
+  <div class="subs">
+    <div class="sub-card">
+      <div class="sub-flag" style="background: linear-gradient(112deg,#EF0107,#A70105);">
+        <span class="crest" style="width:52px;height:52px;font-size:16px;background:rgba(0,0,0,.22);">ARS</span>
+        <div>
+          <div class="sub-name">阿森纳</div>
+          <div class="sub-league">英超 · Premier League</div>
+        </div>
+        <div class="sub-rank"><span class="n">2</span><span class="o">/ 20</span></div>
+      </div>
+      <div class="sub-stats">
+        <div><div class="k">胜</div><div class="v">1</div></div>
+        <div><div class="k">平</div><div class="v">0</div></div>
+        <div><div class="k">负</div><div class="v">0</div></div>
+        <div><div class="k">积分</div><div class="v">3</div></div>
+      </div>
+      <div class="sub-next">
+        <div class="sub-next-label">下一场 · 8/23 周六 20:00</div>
+        <div class="sub-next-row"><span class="t r">埃弗顿</span><span class="vs">VS</span><span class="t">阿森纳</span></div>
+        <div class="sub-next-venue">◉ 酋长球场</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 上轮战报 -->
+  <div class="strip">
+    <div class="strip-head"><span class="l"><span class="strip-badge">上轮战报</span><span class="dot" style="background:#7c5cff"></span>英超 · 8 月 16 日 · 周六</span><a class="strip-link">查看完整赛程 →</a></div>
+    <div class="strip-grid">
+      <div class="m-card feat">
+        <div class="m-teams"><span class="t r">阿森纳</span><span class="crest" style="width:18px;height:18px;font-size:5px;background:#EF0107;">ARS</span></div>
+        <div class="m-score">2 - 0</div>
+        <div class="m-teams"><span class="crest" style="width:18px;height:18px;font-size:5px;background:#003399;">EVE</span><span class="t">埃弗顿</span></div>
+        <div class="m-time">已结束</div>
+      </div>
+      <div class="m-card">
+        <div class="m-teams"><span class="t r">曼城</span><span class="crest" style="width:18px;height:18px;font-size:5px;background:#6CABDD;">MCI</span></div>
+        <div class="m-score"><span class="vs">VS</span></div>
+        <div class="m-teams"><span class="crest" style="width:18px;height:18px;font-size:5px;background:#13294B;">TOT</span><span class="t">热刺</span></div>
+        <div class="m-time">周六 20:00</div>
+      </div>
+      <div class="m-card">
+        <div class="m-teams"><span class="t r">利物浦</span><span class="crest" style="width:18px;height:18px;font-size:5px;background:#C8102E;">LIV</span></div>
+        <div class="m-score"><span class="vs">VS</span></div>
+        <div class="m-teams"><span class="crest" style="width:18px;height:18px;font-size:6px;background:#1a1a1a;">CHE</span><span class="t">切尔西</span></div>
+        <div class="m-time">周六 22:00</div>
+      </div>
+      <div class="m-card">
+        <div class="m-teams"><span class="t r">曼联</span><span class="crest" style="width:18px;height:18px;font-size:5px;background:#DA291C;">MUN</span></div>
+        <div class="m-score"><span class="vs">VS</span></div>
+        <div class="m-teams"><span class="crest" style="width:18px;height:18px;font-size:5px;background:#0053A0;">NEW</span><span class="t">纽卡斯尔</span></div>
+        <div class="m-time">周日 23:30</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 联赛板块 -->
+  <div class="sec-head"><span class="sec-title">联赛</span><span class="sec-sub">五大联赛 + 中超</span></div>
+  <div class="leagues">
+    <div class="lg-card feat">
+      <div class="lg-featured">FEATURED</div>
+      <div class="lg-head"><span class="name">英超</span><span class="full">Premier League</span></div>
+      <div class="lg-body">
+        <div class="row ucl"><span class="pos">1</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#6CABDD;">MCI</span><span class="nm">曼城</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+        <div class="row ucl"><span class="pos">2</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#EF0107;">ARS</span><span class="nm">阿森纳</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+        <div class="row ucl"><span class="pos">3</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#C8102E;">LIV</span><span class="nm">利物浦</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+        <div class="row ucl"><span class="pos">4</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#034694;">CHE</span><span class="nm">切尔西</span><span class="won">0</span><span class="drawn">1</span><span class="lost">0</span><span class="pts">1</span></div>
+        <div class="row"><span class="pos">5</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#13294B;">TOT</span><span class="nm">热刺</span><span class="won">0</span><span class="drawn">1</span><span class="lost">0</span><span class="pts">1</span></div>
+      </div>
+      <div class="lg-foot">20 队 · 500 球员</div>
+      <div class="lg-enter">进入英超 →</div>
+    </div>
+    <div class="lg-card">
+      <div class="lg-head"><span class="name">西甲</span><span class="full">LaLiga</span></div>
+      <div class="lg-body">
+        <div class="row ucl"><span class="pos">1</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#FEBE10;">RMA</span><span class="nm">皇家马德里</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+        <div class="row ucl"><span class="pos">2</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#A50044;">BAR</span><span class="nm">巴塞罗那</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+        <div class="row ucl"><span class="pos">3</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#CB3524;">ATM</span><span class="nm">马竞</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+      </div>
+      <div class="lg-foot">20 队 · 480 球员</div>
+    </div>
+    <div class="lg-card">
+      <div class="lg-head"><span class="name">意甲</span><span class="full">Serie A</span></div>
+      <div class="lg-body">
+        <div class="row ucl"><span class="pos">1</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#0068A8;">INT</span><span class="nm">国际米兰</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+        <div class="row ucl"><span class="pos">2</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#0A0A0A;">JUV</span><span class="nm">尤文图斯</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+        <div class="row ucl"><span class="pos">3</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#FB090B;">MIL</span><span class="nm">AC米兰</span><span class="won">0</span><span class="drawn">1</span><span class="lost">0</span><span class="pts">1</span></div>
+      </div>
+      <div class="lg-foot">20 队 · 520 球员</div>
+    </div>
+    <div class="lg-card">
+      <div class="lg-head"><span class="name">德甲</span><span class="full">Bundesliga</span></div>
+      <div class="lg-body">
+        <div class="row ucl"><span class="pos">1</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#DC052D;">FCB</span><span class="nm">拜仁慕尼黑</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+        <div class="row ucl"><span class="pos">2</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#FDE100;">BVB</span><span class="nm">多特蒙德</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+        <div class="row ucl"><span class="pos">3</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#E32221;">B04</span><span class="nm">勒沃库森</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+      </div>
+      <div class="lg-foot">18 队 · 460 球员</div>
+    </div>
+    <div class="lg-card">
+      <div class="lg-head"><span class="name">法甲</span><span class="full">Ligue 1</span></div>
+      <div class="lg-body">
+        <div class="row ucl"><span class="pos">1</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#004170;">PSG</span><span class="nm">巴黎圣日耳曼</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+        <div class="row ucl"><span class="pos">2</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#EE1C23;">ASM</span><span class="nm">摩纳哥</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+        <div class="row ucl"><span class="pos">3</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#2FAEE0;">OM</span><span class="nm">马赛</span><span class="won">1</span><span class="drawn">0</span><span class="lost">0</span><span class="pts">3</span></div>
+      </div>
+      <div class="lg-foot">18 队 · 440 球员</div>
+    </div>
+    <div class="lg-card">
+      <div class="lg-head"><span class="name">中超</span><span class="full">CSL</span></div>
+      <div class="lg-body">
+        <div class="row ucl"><span class="pos">1</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#E60012;">SHP</span><span class="nm">上海海港</span><span class="won">13</span><span class="drawn">5</span><span class="lost">4</span><span class="pts">44</span></div>
+        <div class="row ucl"><span class="pos">2</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#003C8F;">SHS</span><span class="nm">上海申花</span><span class="won">12</span><span class="drawn">5</span><span class="lost">5</span><span class="pts">41</span></div>
+        <div class="row ucl"><span class="pos">3</span><span class="crest" style="width:16px;height:16px;font-size:6px;background:#B1001F;">CDR</span><span class="nm">成都蓉城</span><span class="won">11</span><span class="drawn">4</span><span class="lost">7</span><span class="pts">37</span></div>
+      </div>
+      <div class="lg-foot">16 队 · 430 球员</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const gcanvas = document.getElementById('gold-particles');
+  const gctx = gcanvas.getContext('2d');
+  function gresize() { gcanvas.width = innerWidth; gcanvas.height = innerHeight; }
+  gresize();
+  addEventListener('resize', gresize);
+  const N = innerWidth < 768 ? 55 : 120;
+  const gps = Array.from({ length: N }, () => ({
+    x: Math.random() * innerWidth, y: Math.random() * innerHeight,
+    r: Math.random() * 1.5 + 0.5,
+    vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
+    a: Math.random() * 0.4 + 0.2,
+    ph: Math.random() * Math.PI * 2,
+  }));
+  function gdraw() {
+    gctx.clearRect(0, 0, gcanvas.width, gcanvas.height);
+    for (const p of gps) {
+      p.x += p.vx; p.y += p.vy; p.ph += 0.02;
+      if (p.x < 0) p.x = gcanvas.width; else if (p.x > gcanvas.width) p.x = 0;
+      if (p.y < 0) p.y = gcanvas.height; else if (p.y > gcanvas.height) p.y = 0;
+      const al = Math.max(0, Math.min(1, p.a + Math.sin(p.ph) * 0.15));
+      gctx.beginPath();
+      gctx.arc(p.x, p.y, p.r, 0, 6.283);
+      gctx.fillStyle = 'rgba(255,215,0,' + al.toFixed(3) + ')';
+      gctx.fill();
+    }
+    requestAnimationFrame(gdraw);
+  }
+  gdraw();
+</script>
+</body>
+</html>

@@ -50,27 +50,32 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cpath d='M130 0v260M0 130h260' stroke='%23ffffff' stroke-width='1'/%3E%3Ccircle cx='130' cy='130' r='82' fill='none' stroke='%23ffffff'/%3E%3Ccircle cx='130' cy='130' r='4' fill='%23ffffff'/%3E%3C/svg%3E");
 }
 
-/* 背景三层之三：顶部联赛光晕。用 background-color + 静态 mask，
-   切联赛时颜色能真正 transition 平滑过渡（gradient 本身不可过渡） */
-.league-glow {
+/* 背景第四层：六色联赛光斑漂移（玻璃拟态背景，2026-08-25 首页重设计落地）
+   六团联赛色光斑（紫/蓝/红/绿/橙/青）缓慢漂移，营造玻璃拟态景深；
+   prefers-reduced-motion 下动画被全局规则禁用，退化为静态光斑 */
+.bg-glow-field {
   position: fixed;
-  top: -25vh;
-  left: 50%;
-  translate: -50% 0;
-  width: 140vw;
-  height: 60vh;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-color: var(--league-color);
-  opacity: 0.22;
-  filter: blur(70px);
-  -webkit-mask-image: radial-gradient(closest-side, black, transparent);
-  mask-image: radial-gradient(closest-side, black, transparent);
-  transition: background-color 0.8s ease;
-  /* 提升为独立合成层，避免整页滚动反复光栅化大模糊（规格 §六性能预算） */
-  will-change: background-color;
-  transform: translateZ(0);
+  overflow: hidden;
 }
+.glow-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  will-change: transform;
+}
+.glow-b1 { width: 52vw; height: 52vw; left: -14%; top: -22%; background: radial-gradient(circle, rgba(124,92,255,.5), transparent 64%); animation: glow-drift1 26s ease-in-out infinite; }
+.glow-b2 { width: 42vw; height: 42vw; right: -12%; top: -8%; background: radial-gradient(circle, rgba(61,141,253,.42), transparent 64%); animation: glow-drift2 32s ease-in-out infinite; }
+.glow-b3 { width: 44vw; height: 44vw; left: 16%; top: 44%; background: radial-gradient(circle, rgba(209,80,80,.32), transparent 64%); animation: glow-drift3 38s ease-in-out infinite; }
+.glow-b4 { width: 38vw; height: 38vw; right: 6%; top: 54%; background: radial-gradient(circle, rgba(46,160,67,.28), transparent 64%); animation: glow-drift4 30s ease-in-out infinite; }
+.glow-b5 { width: 34vw; height: 34vw; left: 46%; top: -20%; background: radial-gradient(circle, rgba(238,135,7,.25), transparent 62%); animation: glow-drift2 36s ease-in-out infinite; }
+.glow-b6 { width: 30vw; height: 30vw; left: -6%; bottom: -14%; background: radial-gradient(circle, rgba(0,143,215,.25), transparent 62%); animation: glow-drift1 42s ease-in-out infinite; }
+@keyframes glow-drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(7%,9%) scale(1.14); } }
+@keyframes glow-drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-8%,6%) scale(1.10); } }
+@keyframes glow-drift3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(5%,-8%) scale(1.16); } }
+@keyframes glow-drift4 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-6%,-7%) scale(1.12); } }
 
 /* 无障碍基线：焦点环走联赛色（规格 §七） */
 :focus-visible {

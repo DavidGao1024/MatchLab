@@ -142,12 +142,9 @@ const featuredId = computed(() => {
         :featured-id="featuredId"
       />
 
-      <!-- ② 联赛板块：焦点大卡 + 小卡网格（6 联赛：1+5） -->
-      <div class="mt-6 grid gap-4 lg:grid-cols-12 flex-1">
-        <LeagueCard :league="focus" featured class="lg:col-span-7 xl:col-span-5 2xl:col-span-4" />
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 lg:col-span-5 xl:col-span-7 2xl:col-span-8">
-          <LeagueCard v-for="l in others" :key="l" :league="l" />
-        </div>
+      <!-- ② 联赛板块：六联赛等宽卡（3 列） -->
+      <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 flex-1">
+        <LeagueCard v-for="l in LEAGUE_SLUGS" :key="l" :league="l" />
       </div>
     </template>
   </div>

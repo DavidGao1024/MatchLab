@@ -191,8 +191,11 @@ function formatDateLong(iso: string): string {
   container-type: inline-size;
   border-radius: 14px;
   overflow: hidden;
-  background: #10152a;
-  border: 1px solid rgba(255,255,255,0.07);
+  background: linear-gradient(160deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03) 55%);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 10px 34px rgba(0,0,0,0.32);
 }
 .state-pad { padding: 16px; font-size: 14px; color: #64748b; }
 .state-err { color: #f87171; }
