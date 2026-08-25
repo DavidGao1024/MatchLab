@@ -11,6 +11,7 @@ import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { t } from '../utils/i18n'
 import { useStandingsStore } from '../stores/standings'
+import { useTeamsStore } from '../stores/teams'
 import { useUserDataStore } from '../stores/userData'
 import type { Match } from '../types/models'
 import type { MatchesFile } from '../types/static'
@@ -19,6 +20,7 @@ import { lastCompletedMatchday, selectStripMatches } from '../utils/matches'
 
 const app = useAppStore()
 const standings = useStandingsStore()
+const teams = useTeamsStore()
 const userStore = useUserDataStore()
 
 onMounted(() => userStore.init())
@@ -54,9 +56,10 @@ async function load() {
     const focusInfo = app.leagueInfo(focus)
     const season = focusInfo?.season ?? '2025'
     const sType = focusInfo?.seasonType ?? 'european'
-    // 并行：焦点联赛档案 + 各联赛正榜（每联赛用自己赛季号，守 53KB 首访账本）
+    // 并行：焦点联赛档案 + 其余联赛 teams 档案预热（队徽/队色就位）+ 各联赛正榜
     await Promise.all([
       ensureLeague(focus),
+      ...others.map((l) => teams.ensure(l).catch(() => null)),
       ...LEAGUE_SLUGS.map((l) => {
         const li = app.leagueInfo(l)
         const ls = li?.season ?? season
