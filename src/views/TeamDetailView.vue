@@ -109,7 +109,7 @@ const themeVars = computed((): Record<string, string> => {
   if (!th) return {}
   return {
     '--flag-from': th.from,
-    '--flag-to': th.to,
+    '--flag-alt': th.pinFrom,
     '--flag-stripe': th.stripe,
     '--accent': th.accent,
     '--flag-text': th.darkText ? '#0f172a' : '#ffffff',
@@ -209,13 +209,18 @@ function back() {
   position: relative;
   display: flex; align-items: center; gap: 16px;
   padding: 20px;
-  background: linear-gradient(112deg, var(--flag-from), var(--flag-to));
+  background: repeating-linear-gradient(115deg, var(--flag-from) 0 26px, var(--flag-alt) 26px 52px);
   color: var(--flag-text);
 }
+/* 条纹上盖一层半透明遮罩，保白字可读：深色队压暗、浅色队压亮 */
 .team-flag::before {
   content: '';
   position: absolute; inset: 0;
-  background: repeating-linear-gradient(115deg, transparent 0 26px, var(--flag-stripe) 26px 50px);
+  background: linear-gradient(120deg, rgba(0,0,0,0.48), rgba(0,0,0,0.26));
+  pointer-events: none;
+}
+.team-flag.is-light::before {
+  background: linear-gradient(120deg, rgba(255,255,255,0.48), rgba(255,255,255,0.26));
 }
 .team-flag > * { position: relative; }
 .flag-id { flex: 1; min-width: 0; }
