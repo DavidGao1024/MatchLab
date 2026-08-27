@@ -25,7 +25,7 @@ function enter() {
   <article
     role="link"
     tabindex="0"
-    class="group cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.10] to-white/[0.03] backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-white/20 hover:shadow-[0_14px_30px_-14px_rgba(0,0,0,0.9)] h-full flex flex-col"
+    class="group cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-[#131a2b] transition-all hover:-translate-y-0.5 hover:border-white/20 hover:shadow-[0_14px_30px_-14px_rgba(0,0,0,0.9)] h-full flex flex-col"
     @click="enter"
     @keydown.enter="enter"
   >

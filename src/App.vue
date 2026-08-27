@@ -45,12 +45,10 @@ watchEffect(() => {
   <div class="relative min-h-screen flex flex-col">
     <div class="pitch-texture" aria-hidden="true"></div>
     <div class="bg-glow-field" aria-hidden="true">
-      <span class="glow-blob glow-b1"></span>
-      <span class="glow-blob glow-b2"></span>
-      <span class="glow-blob glow-b3"></span>
-      <span class="glow-blob glow-b4"></span>
-      <span class="glow-blob glow-b5"></span>
-      <span class="glow-blob glow-b6"></span>
+      <span class="glow-blob glow-green"></span>
+      <span class="glow-blob glow-gold"></span>
+      <span class="flood flood-l"></span>
+      <span class="flood flood-r"></span>
     </div>
     <BackgroundParticles />
     <AppHeader />

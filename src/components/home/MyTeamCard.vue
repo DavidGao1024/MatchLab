@@ -154,6 +154,12 @@ function formatDateLong(iso: string): string {
         </div>
       </div>
       <div class="data">
+        <div class="stat-row">
+          <div class="stat-cell"><div class="stat-label">{{ t('col.won', app.lang) }}</div><div class="stat-val val-w">{{ standing ? standing.won : '–' }}</div></div>
+          <div class="stat-cell"><div class="stat-label">{{ t('col.drawn', app.lang) }}</div><div class="stat-val val-d">{{ standing ? standing.drawn : '–' }}</div></div>
+          <div class="stat-cell"><div class="stat-label">{{ t('col.lost', app.lang) }}</div><div class="stat-val val-l">{{ standing ? standing.lost : '–' }}</div></div>
+          <div class="stat-cell stat-pts"><div class="stat-label">{{ t('col.pts', app.lang) }}</div><div class="stat-val val-pts">{{ standing ? standing.points : '–' }}</div></div>
+        </div>
         <section v-if="live" class="match-block">
           <div class="match-label"><span class="live-dot"></span>{{ t('card.live', app.lang) }} · {{ live.clock ?? '—' }}</div>
           <div class="score-line">
@@ -175,12 +181,6 @@ function formatDateLong(iso: string): string {
         <section v-else class="match-block">
           <div class="se-line">{{ t('card.seOver', app.lang) }}<template v-if="finalRankText"> · {{ finalRankText }}</template></div>
         </section>
-        <div class="stat-row">
-          <div class="stat-cell"><div class="stat-label">{{ t('col.won', app.lang) }}</div><div class="stat-val val-w">{{ standing ? standing.won : '–' }}</div></div>
-          <div class="stat-cell"><div class="stat-label">{{ t('col.drawn', app.lang) }}</div><div class="stat-val val-d">{{ standing ? standing.drawn : '–' }}</div></div>
-          <div class="stat-cell"><div class="stat-label">{{ t('col.lost', app.lang) }}</div><div class="stat-val val-l">{{ standing ? standing.lost : '–' }}</div></div>
-          <div class="stat-cell stat-pts"><div class="stat-label">{{ t('col.pts', app.lang) }}</div><div class="stat-val val-pts">{{ standing ? standing.points : '–' }}</div></div>
-        </div>
       </div>
     </div>
   </article>

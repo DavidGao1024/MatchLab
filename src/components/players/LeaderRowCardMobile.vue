@@ -18,11 +18,9 @@ defineEmits<{ click: [] }>()
 
 <template>
   <div
-    class="mb-2 rounded-lg border border-white/10 p-3 flex items-center gap-3 cursor-pointer hover:bg-white/[0.04] transition-colors"
-    :style="{ background: team?.color ? `${team.color}0d` : 'rgba(255,255,255,0.02)' }"
+    class="mb-2 rounded-lg border border-white/10 p-3 flex items-center gap-3 cursor-pointer bg-[#131a2b] hover:bg-[#171f33] transition-colors"
     @click="$emit('click')"
   >
-    <!-- `0d` 是 5% alpha 的 hex 表示（#RRGGBB + 0d → rgba 5%）；team.color 空串兜底 -->
     <span class="text-slate-500 font-mono-d text-lg w-6 text-center">{{ entry.rank }}</span>
     <TeamLogo :team="team" :size="24" />
     <div class="flex-1 min-w-0">

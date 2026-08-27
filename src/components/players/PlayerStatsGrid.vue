@@ -167,7 +167,7 @@ const sections = computed<Section[]>(() => {
       v-for="sec in sections"
       :key="sec.key"
       :open="sec.key === 'general' || sec.key === 'offensive'"
-      class="group border border-white/10 rounded-lg overflow-hidden bg-white/[0.02]"
+      class="group border border-white/10 rounded-lg overflow-hidden bg-[#131a2b]"
     >
       <summary class="cursor-pointer px-4 py-2.5 flex items-center justify-between hover:bg-white/5 transition-colors list-none">
         <span class="font-cond tracking-wider text-sm text-white">{{ t(sec.titleKey, app.lang) }}</span>

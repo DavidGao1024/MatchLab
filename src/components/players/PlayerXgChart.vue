@@ -121,7 +121,7 @@ const hasData = computed(() => (history.value?.history ?? []).length > 0)
 </script>
 
 <template>
-  <div v-if="props.understatPlayerId" class="border border-white/10 rounded-lg p-4 mb-6 bg-white/[0.02]">
+  <div v-if="props.understatPlayerId" class="border border-white/10 rounded-lg p-4 mb-6 bg-[#131a2b]">
     <h2 class="font-cond text-sm tracking-wider text-white mb-3">{{ t('chart.xgTrend', app.lang) }}</h2>
     <div v-if="loading" class="text-slate-500 text-xs py-8 text-center">…</div>
     <div v-else-if="error || !hasData" class="text-slate-500 text-xs py-8 text-center">{{ t('chart.xgEmpty', app.lang) }}</div>

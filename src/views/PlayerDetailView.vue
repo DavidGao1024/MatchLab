@@ -136,37 +136,37 @@ function back() {
 
       <!-- 基础信息 -->
       <div class="grid grid-cols-2 md:grid-cols-6 gap-3 mb-6">
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
+        <div class="border border-white/10 rounded p-2 bg-[#131a2b]">
           <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('player.country', app.lang) }}</div>
           <div class="text-base text-white font-mono-d flex items-center gap-1.5">
             <NationFlag :flag="profile.flag" :citizenship="profile.citizenship" :size="16" />
             <span>{{ countryName(profile.citizenship, app.lang) }}</span>
           </div>
         </div>
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
+        <div class="border border-white/10 rounded p-2 bg-[#131a2b]">
           <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('col.age', app.lang) }}</div>
           <div class="text-base text-white font-mono-d">{{ profile.age ?? '—' }}</div>
         </div>
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
+        <div class="border border-white/10 rounded p-2 bg-[#131a2b]">
           <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('player.height', app.lang) }}</div>
           <div class="text-base text-white font-mono-d">{{ fmtHeight(profile.height) }}</div>
         </div>
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
+        <div class="border border-white/10 rounded p-2 bg-[#131a2b]">
           <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('player.weight', app.lang) }}</div>
           <div class="text-base text-white font-mono-d">{{ fmtWeight(profile.weight) }}</div>
         </div>
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
+        <div class="border border-white/10 rounded p-2 bg-[#131a2b]">
           <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('player.born', app.lang) }}</div>
           <div class="text-base text-white font-mono-d">{{ fmtDob(profile.dateOfBirth) }}</div>
         </div>
-        <div class="border border-white/10 rounded p-2 bg-white/[0.02]">
+        <div class="border border-white/10 rounded p-2 bg-[#131a2b]">
           <div class="text-[10px] uppercase text-slate-500 font-mono-d">{{ t('player.marketValue', app.lang) }}</div>
           <div class="text-base text-white font-mono-d">{{ marketValueWan != null ? formatPlayerValue(marketValueWan, app.lang) : '—' }}</div>
         </div>
       </div>
 
       <!-- 球员履历（效力球队 + 年份区间，数据源 ESPN transactions） -->
-      <div v-if="career.length" class="border border-white/10 rounded-lg p-4 mb-6 bg-white/[0.02]">
+      <div v-if="career.length" class="border border-white/10 rounded-lg p-4 mb-6 bg-[#131a2b]">
         <h2 class="font-cond text-sm tracking-wider text-white mb-3">{{ t('player.career', app.lang) }}</h2>
         <ol class="space-y-1.5">
           <li v-for="(c, i) in career" :key="i" class="flex items-center gap-3 text-sm">
@@ -177,7 +177,7 @@ function back() {
       </div>
 
       <!-- xG 数据区块 -->
-      <div v-if="XG_ENABLED && xgRow" class="border border-white/10 rounded-lg p-4 mb-6 bg-white/[0.02]">
+      <div v-if="XG_ENABLED && xgRow" class="border border-white/10 rounded-lg p-4 mb-6 bg-[#131a2b]">
         <div class="flex items-center justify-between mb-3">
           <h2 class="font-cond text-sm tracking-wider text-white">{{ t('player.xgSection', app.lang) }}</h2>
           <SeasonSelector v-if="season !== selectedSeason" :league="league" :model-value="selectedSeason" @update:model-value="(v) => router.replace({ query: { ...route.query, season: v } })" />

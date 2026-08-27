@@ -82,7 +82,7 @@ function teamFor(id: number) {
         </button>
       </div>
 
-      <div v-if="current" class="hidden md:block overflow-x-auto">
+      <div v-if="current" class="hidden md:block overflow-x-auto rounded-lg border border-white/10 bg-[#131a2b]">
         <table class="w-full text-sm">
           <thead class="text-[10px] uppercase tracking-wider text-slate-500 font-mono-d border-b border-white/10">
             <tr>

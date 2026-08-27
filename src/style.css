@@ -3,7 +3,7 @@
 :root {
   /* 联赛主题色：App.vue 切联赛时写入（默认英超紫） */
   --league-color: #3D195B;
-  --base: #0c101b;
+  --base: #0d1a13;
   /* 字体变量：scoped style 里 var(--font-cond)/var(--font-mono-d) 的消费端
      （MyTeamCard、TeamDetailView）依赖；字体栈与同名 class 保持一致 */
   --font-cond: 'Oswald', 'Microsoft YaHei', 'PingFang SC', sans-serif;
@@ -46,36 +46,60 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.03;
+  opacity: 0.10;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cpath d='M130 0v260M0 130h260' stroke='%23ffffff' stroke-width='1'/%3E%3Ccircle cx='130' cy='130' r='82' fill='none' stroke='%23ffffff'/%3E%3Ccircle cx='130' cy='130' r='4' fill='%23ffffff'/%3E%3C/svg%3E");
 }
 
-/* 背景第四层：六色联赛光斑漂移（玻璃拟态背景，2026-08-25 首页重设计落地）
-   六团联赛色光斑（紫/蓝/红/绿/橙/青）缓慢漂移，营造玻璃拟态景深；
-   prefers-reduced-motion 下动画被全局规则禁用，退化为静态光斑 */
+/* 背景：夜场球场绿（2026-08-27 首页重设计·全局背景落地）
+   取代原六色光斑玻璃拟态：顶部绿色光晕 + 草皮渐变（上淡下浓）+ 金色光点 + 聚光灯两束；
+   仅金色光点保留缓慢漂移动画，其余静态 */
 .bg-glow-field {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
+  background:
+    radial-gradient(130% 60% at 50% 0%, rgba(74,222,128,.16) 0%, rgba(74,222,128,.05) 42%, transparent 62%),
+    linear-gradient(180deg, #12251b 0%, #0d1a13 50%, #0a120e 100%);
+}
+.bg-glow-field::before { /* 草皮：亮绿，上淡下浓 */
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 30%; bottom: 0;
+  background: linear-gradient(180deg, rgba(74,222,128,0) 0%, rgba(74,222,128,.10) 55%, rgba(74,222,128,.22) 100%);
 }
 .glow-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(70px);
   will-change: transform;
 }
-.glow-b1 { width: 52vw; height: 52vw; left: -14%; top: -22%; background: radial-gradient(circle, rgba(124,92,255,.5), transparent 64%); animation: glow-drift1 26s ease-in-out infinite; }
-.glow-b2 { width: 42vw; height: 42vw; right: -12%; top: -8%; background: radial-gradient(circle, rgba(61,141,253,.42), transparent 64%); animation: glow-drift2 32s ease-in-out infinite; }
-.glow-b3 { width: 44vw; height: 44vw; left: 16%; top: 44%; background: radial-gradient(circle, rgba(209,80,80,.32), transparent 64%); animation: glow-drift3 38s ease-in-out infinite; }
-.glow-b4 { width: 38vw; height: 38vw; right: 6%; top: 54%; background: radial-gradient(circle, rgba(46,160,67,.28), transparent 64%); animation: glow-drift4 30s ease-in-out infinite; }
-.glow-b5 { width: 34vw; height: 34vw; left: 46%; top: -20%; background: radial-gradient(circle, rgba(238,135,7,.25), transparent 62%); animation: glow-drift2 36s ease-in-out infinite; }
-.glow-b6 { width: 30vw; height: 30vw; left: -6%; bottom: -14%; background: radial-gradient(circle, rgba(0,143,215,.25), transparent 62%); animation: glow-drift1 42s ease-in-out infinite; }
-@keyframes glow-drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(7%,9%) scale(1.14); } }
-@keyframes glow-drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-8%,6%) scale(1.10); } }
-@keyframes glow-drift3 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(5%,-8%) scale(1.16); } }
-@keyframes glow-drift4 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-6%,-7%) scale(1.12); } }
+/* 绿色光晕（左下）：球场夜场的绿色灯光光斑，明亮克制 */
+.glow-green {
+  width: 42vw; height: 42vw; left: -10%; bottom: -16%;
+  background: radial-gradient(circle, rgba(34,197,94,.34), transparent 62%);
+}
+/* 金色光点（保留）：右上金色光晕，缓慢漂移 */
+.glow-gold {
+  width: 30vw; height: 30vw; right: -6%; top: -4%;
+  background: radial-gradient(circle, rgba(251,191,36,.32), transparent 62%);
+  animation: gold-drift 36s ease-in-out infinite;
+}
+/* 聚光灯两束（顶部往下斜扫） */
+.flood {
+  position: absolute;
+  top: -60px;
+  width: 22%; height: 90px;
+  background: linear-gradient(to bottom, rgba(248,250,252,.16), transparent);
+  filter: blur(8px);
+}
+.flood-l { left: 16%; transform: rotate(-12deg); }
+.flood-r { right: 16%; transform: rotate(12deg); }
+@keyframes gold-drift {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-6%,8%) scale(1.12); }
+}
 
 /* 无障碍基线：焦点环走联赛色（规格 §七） */
 :focus-visible {

@@ -236,7 +236,7 @@ function back() {
 .stat-cell {
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 4px; padding: 8px;
-  background: rgba(255,255,255,0.02);
+  background: #131a2b;
 }
 .stat-label { font-family: var(--font-mono-d, monospace); font-size: 10px; text-transform: uppercase; color: #64748b; }
 .stat-val { font-family: var(--font-mono-d, monospace); font-size: 16px; color: #ffffff; }
@@ -244,8 +244,8 @@ function back() {
 .val-d { color: #cbd5e1; }
 .val-l { color: #ef4444; }
 .stat-pts {
-  background: color-mix(in srgb, var(--accent) 13%, transparent);
-  border-color: color-mix(in srgb, var(--accent) 42%, transparent);
+  background: #131a2b;
+  border-color: rgba(255,255,255,0.1);
 }
 .val-pts { color: var(--accent); }
 

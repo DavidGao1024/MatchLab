@@ -131,7 +131,7 @@ function posLabel(p: string): string {
       <div v-if="filtered.length === 0" class="text-center text-slate-500 py-12 text-sm">
         {{ t('players.empty', app.lang) }}
       </div>
-      <div v-else class="hidden md:block overflow-x-auto">
+      <div v-else class="hidden md:block overflow-x-auto rounded-lg border border-white/10 bg-[#131a2b]">
         <table class="w-full text-sm">
           <thead class="text-[10px] uppercase tracking-wider text-slate-500 font-mono-d border-b border-white/10">
             <tr>

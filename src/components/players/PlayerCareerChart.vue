@@ -164,7 +164,7 @@ const hasData = computed(() => data.value.some((d) => d.goals !== null || d.assi
 </script>
 
 <template>
-  <div class="border border-white/10 rounded-lg p-4 mb-6 bg-white/[0.02]">
+  <div class="border border-white/10 rounded-lg p-4 mb-6 bg-[#131a2b]">
     <h2 class="font-cond text-sm tracking-wider text-white mb-3">{{ t('chart.careerCurve', app.lang) }}</h2>
     <div v-if="loading" class="text-slate-500 text-xs py-8 text-center">{{ t('chart.careerLoading', app.lang) }}</div>
     <div v-else-if="error" class="text-amber-400/80 text-xs py-8 text-center">{{ error }}</div>

@@ -14,7 +14,7 @@ const th = 'px-1 py-2 text-center font-cond text-[10px] font-medium uppercase tr
 
 <template>
   <!-- 语义表格 + 窄视口整体横滑（规格 §四交互 / §七无障碍）；移动端隐藏次要列 + 行展开（移动兼容 §1） -->
-  <div class="overflow-x-auto rounded-lg border border-white/10">
+  <div class="overflow-x-auto rounded-lg border border-white/10 bg-[#131a2b]">
     <table class="w-full md:min-w-[760px] border-collapse">
       <thead class="bg-[#0e1424] text-slate-500">
         <tr>
