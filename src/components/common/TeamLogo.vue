@@ -48,7 +48,7 @@ function onError() {
     loading="lazy"
     :width="size"
     :height="size"
-    class="rounded-full object-contain shrink-0"
+    class="object-contain shrink-0"
     @error="onError"
   />
   <!-- 全部版本加载失败 → 主色圆牌 + 首字母（规格 §七） -->
