@@ -1,30 +1,19 @@
-// 旗面颜色兜底（子项目 2.0 设计稿 §3.3）
-// 近黑主色（明度<0.16）会与深蓝卡底融为一体、旗子丢轮廓 → 提亮到约 0.20；
-// 白主色（明度>0.85）→ 深字模式；其余原色直上。
-// 阈值依据：粗大白字只需 3:1 对比，提亮不是为文字可读而是为旗子轮廓，见设计稿。
+// 旗面真彩主题（设计稿 docs/superpowers/specs/2026-08-28-team-flag-realcolor-design.md）
+// 主色实底 + 副色细针纹 + 渐变副色边框；文字对比只看主色（明度 > 0.55 → 深字），
+// 副色只管纹与边；副色缺失或与主色太近时纹/边退回半透明白。
 
-export interface BannerTheme {
-  /** 旗面渐变起点（主色或调整后） */
-  from: string
-  /** 渐变终点（起点混 30% 黑） */
-  to: string
-  /** 斜纹 rgba 色 */
-  stripe: string
-  /** 下缘细线起点（副色，缺失退回强调色） */
-  pinFrom: string
-  /** 下缘细线终点 */
-  pinTo: string
-  /** 白底旗 → 深字模式 */
+export interface FlagTheme {
+  /** 主色明度 > 0.55，深字模式 */
   darkText: boolean
-  /** 深色数据区用的亮主色（比赛块左条 / 积分格） */
-  accent: string
+  /** 细针纹 rgba 色串（3px 宽 / 22px 周期 / 116deg 层） */
+  stripe: string
+  /** 边框纯色（真副色 100%；副色缺失/太近退回纯白） */
+  border: string
 }
 
-const DARK_FLOOR = 0.16
-const LIGHT_CEIL = 0.85
-const DARK_TARGET = 0.2
-const ACCENT_FLOOR = 0.45   // 主色明度低于此值时作深底强调色太暗，需提亮
-const ACCENT_TARGET = 0.6   // 强调色提亮目标明度
+const TEXT_LIGHT_CEIL = 0.55
+const PIN_OP_LIGHT = 0.55 // 浅主色队针纹不透明度（深字压得住）
+const PIN_OP_DARK = 0.35
 
 export function hexToRgb(hex: string): [number, number, number] {
   const h = hex.replace('#', '')
@@ -65,28 +54,14 @@ function altDistinct(main: string, alt: string): boolean {
   return Math.max(Math.abs(r1 - r2), Math.abs(g1 - g2), Math.abs(b1 - b2)) >= 24
 }
 
-export function bannerTheme(color: string, altColor: string): BannerTheme {
-  const lum = luminance(color)
-  let from = color
-  if (lum < DARK_FLOOR) {
-    // 明度对混色比例是线性的，一步解出混白比例
-    from = mix(color, '#ffffff', (DARK_TARGET - lum) / (1 - lum))
-  }
-  const darkText = lum > LIGHT_CEIL
-  const accent = lum >= ACCENT_FLOOR || darkText
-    ? color
-    : mix(color, '#ffffff', (ACCENT_TARGET - lum) / (1 - lum))
+export function flagTheme(color: string, altColor: string): FlagTheme {
+  const darkText = luminance(color) > TEXT_LIGHT_CEIL
   const useAlt = altDistinct(color, altColor)
-  const stripe = useAlt
-    ? rgba(altColor, 0.15)
-    : darkText ? rgba(mix(color, '#000000', 0.6), 0.15) : 'rgba(0,0,0,0.12)'
+  const pinHex = useAlt ? altColor : '#ffffff'
+  const pinOp = darkText ? PIN_OP_LIGHT : PIN_OP_DARK
   return {
-    from,
-    to: mix(from, '#000000', 0.3),
-    stripe,
-    pinFrom: useAlt ? altColor : accent,
-    pinTo: from,
     darkText,
-    accent,
+    stripe: rgba(pinHex, pinOp),
+    border: useAlt ? altColor : '#ffffff',
   }
 }

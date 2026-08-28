@@ -83,12 +83,12 @@ describe('球队详情页·主题上页', () => {
     expect(urls.every((u) => u.includes('team-values.json') || u.includes('/matches/'))).toBe(true)
   })
 
-  it('球队主色上根容器：--flag-from 为主色，--accent 在位', async () => {
+  it('球队主色上根容器：--flag-main 为主色，--accent 已收', async () => {
     const w = await setup(makeTeam({ color: '#EF0107' }))
     const style = w.find('section').attributes('style') ?? ''
-    expect(style).toContain('--flag-from')
+    expect(style).toContain('--flag-main')
     expect(style).toContain('#EF0107')
-    expect(style).toContain('--accent')
+    expect(style).not.toContain('--accent')
   })
 
   it('白主色 → 旗面深字（防白底白字）', async () => {
@@ -108,18 +108,18 @@ describe('球队详情页·点缀落位', () => {
     expect(w.find('.stat-val.val-l').exists()).toBe(true)
   })
 
-  it('阵容总标题挂 squad-title（主色下划线由 CSS 变量承接）', async () => {
+  it('阵容总标题挂 squad-title（朴素下划线）', async () => {
     const w = await setup(makeTeam(), [makePlayer()])
     await w.find('[data-tab="squad"]').trigger('click')
     expect(w.find('.squad-title').exists()).toBe(true)
   })
 
-  it('位置分组小标题吃到 --accent（CSS 变量自 section 级联）', async () => {
+  it('位置分组小标题回朴素（无 --accent 内联色）', async () => {
     const w = await setup(makeTeam(), [makePlayer()])
     await w.find('[data-tab="squad"]').trigger('click')
     const h3 = w.find('h3')
     expect(h3.exists()).toBe(true)
-    expect(h3.attributes('style') ?? '').toContain('var(--accent')
+    expect(h3.attributes('style')).toBeUndefined()
   })
 })
 

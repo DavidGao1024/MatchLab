@@ -42,7 +42,7 @@ function fmtNum(n: number | null): string {
 <template>
   <div class="space-y-4">
     <section v-for="g in groups" :key="g.key">
-      <h3 class="font-cond text-sm tracking-wider mb-2 pb-1 border-b border-white/10" :style="{ color: 'var(--accent, #94a3b8)' }">
+      <h3 class="font-cond text-sm tracking-wider mb-2 pb-1 border-b border-white/10 text-slate-400">
         {{ t(g.labelKey, app.lang) }}
         <span class="text-slate-600 font-mono-d text-xs ml-1">({{ g.list.length }})</span>
       </h3>

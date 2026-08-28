@@ -6,7 +6,7 @@ import { useStandingsStore } from '../../stores/standings'
 import { useTeamsStore } from '../../stores/teams'
 import { useAppStore } from '../../stores/app'
 import { teamName, t, venueName } from '../../utils/i18n'
-import { bannerTheme } from '../../utils/teamColor'
+import { flagTheme } from '../../utils/teamColor'
 import TeamLogo from '../common/TeamLogo.vue'
 import type { Subscription } from '../../types/user-data'
 import type { Match, StandingRow, Team } from '../../types/models'
@@ -34,14 +34,12 @@ const flagTeam = computed<Team>(() => team.value ?? {
   logo: '',
   logoDark: '',
 })
-const theme = computed(() => bannerTheme(flagTeam.value.color, flagTeam.value.alternateColor))
+// 真彩旗面主题（设计稿 2026-08-28，与详情页同一套 flagTheme）
+const theme = computed(() => flagTheme(flagTeam.value.color, flagTeam.value.alternateColor))
 const themeVars = computed(() => ({
-  '--flag-from': theme.value.from,
-  '--flag-to': theme.value.to,
+  '--flag-main': flagTeam.value.color,
   '--flag-stripe': theme.value.stripe,
-  '--pin-from': theme.value.pinFrom,
-  '--pin-to': theme.value.pinTo,
-  '--accent': theme.value.accent,
+  '--flag-border': theme.value.border,
   '--flag-text': theme.value.darkText ? '#0f172a' : '#ffffff',
 }))
 const standing = computed<StandingRow | undefined>(() => {
@@ -207,14 +205,17 @@ function formatDateLong(iso: string): string {
   position: relative;
   display: flex; align-items: center; gap: 12px;
   padding: 16px;
-  background: linear-gradient(112deg, var(--flag-from), var(--flag-to));
+  border-bottom: 2px solid var(--flag-border);
+  background: var(--flag-main);
   color: var(--flag-text);
   cursor: pointer;
 }
+/* 副色细针纹：3px 宽 / 22px 周期 / 116deg */
 .flag::before {
   content: '';
   position: absolute; inset: 0;
-  background: repeating-linear-gradient(115deg, transparent 0 26px, var(--flag-stripe) 26px 50px);
+  background: repeating-linear-gradient(116deg, transparent 0 22px, var(--flag-stripe) 22px 25px);
+  pointer-events: none;
 }
 .flag > * { position: relative; }
 .flag-id { flex: 1; min-width: 0; }
@@ -222,11 +223,21 @@ function formatDateLong(iso: string): string {
   font-family: var(--font-cond, sans-serif);
   font-size: 22px; font-weight: 800; letter-spacing: 0.05em;
   margin: 0; color: var(--flag-text);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.35);
+  -webkit-text-stroke: 0.8px rgba(0,0,0,0.55);
+  paint-order: stroke fill;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.45);
   overflow-wrap: anywhere;
 }
-.flag-sub { font-size: 11px; letter-spacing: 0.14em; opacity: 0.85; margin-top: 2px; }
-.flag.is-light .flag-name { text-shadow: none; }
+.flag-sub {
+  font-size: 11px; letter-spacing: 0.14em; opacity: 0.85; margin-top: 2px;
+  -webkit-text-stroke: 0.6px rgba(0,0,0,0.5);
+  paint-order: stroke fill;
+}
+.flag.is-light .flag-name {
+  -webkit-text-stroke: 0.8px rgba(255,255,255,0.55);
+  text-shadow: 0 1px 3px rgba(255,255,255,0.5);
+}
+.flag.is-light .flag-sub { -webkit-text-stroke: 0.6px rgba(255,255,255,0.5); }
 .flag-rank {
   background: rgba(0,0,0,0.34);
   border: 1px solid rgba(255,255,255,0.28);
@@ -272,7 +283,7 @@ function formatDateLong(iso: string): string {
 }
 .score-line { display: flex; align-items: baseline; gap: 10px; margin-top: 5px; flex-wrap: wrap; }
 .score-side { font-family: var(--font-cond, sans-serif); font-size: 15px; font-weight: 700; color: #fff; }
-.score-num { font-family: var(--font-cond, sans-serif); font-size: 26px; font-weight: 800; color: var(--accent); }
+.score-num { font-family: var(--font-cond, sans-serif); font-size: 26px; font-weight: 800; color: #fff; }
 .se-line { font-family: var(--font-cond, sans-serif); font-size: 15px; color: #cbd5e1; }
 
 .stat-row { display: flex; gap: 6px; }
@@ -285,11 +296,7 @@ function formatDateLong(iso: string): string {
 .val-w { color: #10b981; }
 .val-d { color: #cbd5e1; }
 .val-l { color: #ef4444; }
-.stat-pts {
-  background: color-mix(in srgb, var(--accent) 13%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent) 42%, transparent);
-}
-.val-pts { color: var(--accent); }
+.val-pts { color: #fff; }
 
 /* ===== 宽形态：单卡通栏，左旗右数（设计稿 §3.2，断点 640px）===== */
 @container (min-width: 640px) {

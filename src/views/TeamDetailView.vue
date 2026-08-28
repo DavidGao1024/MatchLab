@@ -18,7 +18,7 @@ import { useMatchesStore } from '../stores/matches'
 import { useStandingsStore } from '../stores/standings'
 import { cityName, teamName, t, venueName, teamValue, formatTeamValue, loadTeamValues } from '../utils/i18n'
 import type { LeagueSlug } from '../utils/constants'
-import { bannerTheme } from '../utils/teamColor'
+import { flagTheme } from '../utils/teamColor'
 
 const route = useRoute()
 const router = useRouter()
@@ -97,21 +97,21 @@ const seasonStart = computed(() => {
   const now = new Date()
   return now.getMonth() >= 7 ? now.getFullYear() : now.getFullYear() - 1
 })
-// 主副色主题（与订阅卡同一套 bannerTheme：近黑提亮/白主色深字/副色兜底全在函数里）
+// 真彩旗面主题（设计稿 2026-08-28：主色实底 + 副色针纹 + 渐变副色边框，文字只看主色）
 const theme = computed(() => {
   const tm = team.value
   if (!tm) return null
   const main = tm.color || app.leagueInfo(league.value)?.color || '#3D195B'
-  return bannerTheme(main, tm.alternateColor || '')
+  return { main, ...flagTheme(main, tm.alternateColor || '') }
 })
+const isLight = computed(() => theme.value?.darkText ?? false)
 const themeVars = computed((): Record<string, string> => {
   const th = theme.value
   if (!th) return {}
   return {
-    '--flag-from': th.from,
-    '--flag-alt': th.pinFrom,
+    '--flag-main': th.main,
     '--flag-stripe': th.stripe,
-    '--accent': th.accent,
+    '--flag-border': th.border,
     '--flag-text': th.darkText ? '#0f172a' : '#ffffff',
   }
 })
@@ -128,9 +128,9 @@ function back() {
     <DataError v-if="error" :message="error" @retry="load" />
     <DataLoading v-else-if="!ready" kind="cards" />
     <template v-else-if="team">
-      <!-- 页头：队旗面（主色渐变 + 副色斜纹，与订阅卡同一视觉语言，spec §3.2） -->
+      <!-- 页头：队旗面（真彩：主色实底 + 副色针纹 + 渐变副色边框，设计稿 2026-08-28） -->
       <div class="team-banner">
-        <div class="team-flag" :class="{ 'is-light': theme?.darkText }">
+        <div class="team-flag" :class="{ 'is-light': isLight }">
           <TeamLogo :team="team" :size="64" />
           <div class="flag-id">
             <h1 class="flag-name">{{ displayName }}</h1>
@@ -173,7 +173,7 @@ function back() {
           type="button"
           class="pb-2 font-cond text-lg tracking-[0.05em]"
           :class="tab === 'schedule' ? 'border-b-2 font-bold text-white' : 'text-slate-500'"
-          :style="tab === 'schedule' ? { borderColor: 'var(--accent)' } : undefined"
+          :style="tab === 'schedule' ? { borderColor: 'rgba(255,255,255,0.35)' } : undefined"
           data-tab="schedule"
           @click="tab = 'schedule'"
         >{{ t('nav.schedule', app.lang) }}</button>
@@ -181,7 +181,7 @@ function back() {
           type="button"
           class="pb-2 font-cond text-lg tracking-[0.05em]"
           :class="tab === 'squad' ? 'border-b-2 font-bold text-white' : 'text-slate-500'"
-          :style="tab === 'squad' ? { borderColor: 'var(--accent)' } : undefined"
+          :style="tab === 'squad' ? { borderColor: 'rgba(255,255,255,0.35)' } : undefined"
           data-tab="squad"
           @click="tab = 'squad'"
         >{{ t('team.squad', app.lang) }} ({{ squad.length }})</button>
@@ -209,18 +209,17 @@ function back() {
   position: relative;
   display: flex; align-items: center; gap: 16px;
   padding: 20px;
-  background: repeating-linear-gradient(115deg, var(--flag-from) 0 26px, var(--flag-alt) 26px 52px);
+  border: 1px solid var(--flag-border);
+  border-radius: 14px;
+  background: var(--flag-main);
   color: var(--flag-text);
 }
-/* 条纹上盖一层半透明遮罩，保白字可读：深色队压暗、浅色队压亮 */
+/* 副色细针纹：3px 宽 / 22px 周期 / 116deg */
 .team-flag::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(120deg, rgba(0,0,0,0.48), rgba(0,0,0,0.26));
+  background: repeating-linear-gradient(116deg, transparent 0 22px, var(--flag-stripe) 22px 25px);
   pointer-events: none;
-}
-.team-flag.is-light::before {
-  background: linear-gradient(120deg, rgba(255,255,255,0.48), rgba(255,255,255,0.26));
 }
 .team-flag > * { position: relative; }
 .flag-id { flex: 1; min-width: 0; }
@@ -228,14 +227,21 @@ function back() {
   font-family: var(--font-cond, sans-serif);
   font-size: 28px; font-weight: 800; letter-spacing: 0.05em;
   margin: 0; color: var(--flag-text);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.35);
+  -webkit-text-stroke: 1px rgba(0,0,0,0.55);
+  paint-order: stroke fill;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.45);
   overflow-wrap: anywhere;
 }
-.flag-sub { font-size: 12px; letter-spacing: 0.12em; opacity: 0.85; margin-top: 3px; }
-.flag-value { font-weight: 600; letter-spacing: 0.12em; opacity: 1; }
-.team-flag.is-light .flag-name { text-shadow: none; }
+.flag-sub { font-size: 12px; letter-spacing: 0.12em; opacity: 0.92; margin-top: 3px; -webkit-text-stroke: 0.6px rgba(0,0,0,0.5); paint-order: stroke fill; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+.flag-value { font-weight: 600; letter-spacing: 0.12em; opacity: 1; -webkit-text-stroke: 0.6px rgba(0,0,0,0.55); paint-order: stroke fill; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+.team-flag.is-light .flag-name {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.55);
+  text-shadow: 0 1px 3px rgba(255,255,255,0.5);
+}
+.team-flag.is-light .flag-sub,
+.team-flag.is-light .flag-value { -webkit-text-stroke: 0.6px rgba(255,255,255,0.55); text-shadow: 0 1px 3px rgba(255,255,255,0.5); }
 
-/* ===== 战绩格：主色边条 + 积分格强调（spec §3.4）===== */
+/* ===== 战绩格 ===== */
 .record-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 24px; }
 @media (min-width: 768px) { .record-grid { grid-template-columns: repeat(6, 1fr); } }
 .stat-cell {
@@ -252,14 +258,14 @@ function back() {
   background: #131a2b;
   border-color: rgba(255,255,255,0.1);
 }
-.val-pts { color: var(--accent); }
+.val-pts { color: #ffffff; }
 
-/* ===== 阵容标题：主色下划线 ===== */
+/* ===== 阵容标题：朴素下划线 ===== */
 .squad-title {
   font-family: var(--font-cond, sans-serif);
   font-size: 18px; letter-spacing: 0.05em; color: #ffffff;
   margin-bottom: 12px; padding-bottom: 4px;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid rgba(255,255,255,0.35);
 }
 .squad-count { font-family: var(--font-mono-d, monospace); font-size: 12px; color: #475569; margin-left: 8px; }
 </style>

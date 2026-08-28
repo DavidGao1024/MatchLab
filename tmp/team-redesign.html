@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>球队主页 · 真彩定稿（V2：主色实底 + 副色针纹 + 副色边框）</title>
+<style>
+  :root {
+    --main: #EF0107;
+    --alt: #FFFFFF;
+    --bg: #0a0f16;
+    --panel: #131a2b;
+    --line: rgba(255,255,255,0.09);
+    --t0: #e8ecf5;
+    --t1: #94a3b8;
+    --t2: #64748b;
+    --win: #10b981;
+    --draw: #cbd5e1;
+    --lose: #ef4444;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--t0);
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+    display: flex; justify-content: center; padding: 28px 16px;
+  }
+  .page { width: 100%; max-width: 860px; }
+  .cap { text-align: center; color: var(--t2); font-size: 12px; letter-spacing: 0.14em; margin-bottom: 18px; line-height: 1.8; }
+  .cap b { color: var(--t0); }
+  .group-title { font-size: 13px; color: #94a3b8; margin: 26px 0 10px; letter-spacing: 0.06em; }
+  .group-title b { color: #e8ecf5; }
+
+  /* ===== Hero 旗面（V2 定稿）：主色实底 + 副色细针纹 + 纯色副色边框 1px ===== */
+  .hero {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  }
+  .hero .pin {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+  .hero-inner {
+    position: relative;
+    display: flex; align-items: center; gap: 18px;
+    padding: 22px 24px;
+  }
+  .crest {
+    width: 56px; height: 56px; flex: 0 0 auto; border-radius: 50%;
+    background: #fff; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 19px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+  }
+  .hero-id { flex: 1; min-width: 0; }
+  .hero-name { font-size: 26px; font-weight: 900; letter-spacing: 0.02em; }
+  .hero-sub { font-size: 12px; letter-spacing: 0.16em; margin-top: 4px; }
+
+  /* ===== 订阅卡（V2 定稿）：卡内旗面 = 主色实底 + 针纹 + 纯色副色底线 ===== */
+  .card {
+    border-radius: 14px; overflow: hidden;
+    background: linear-gradient(160deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03) 55%);
+    border: 1px solid rgba(255,255,255,0.16);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 10px 34px rgba(0,0,0,0.32);
+    margin-bottom: 10px;
+  }
+  .card .flag { position: relative; display: flex; align-items: center; gap: 12px; padding: 16px; }
+  .card .flag .pin { position: absolute; inset: 0; pointer-events: none; }
+  .card .flag > * { position: relative; }
+  .card .crest { width: 44px; height: 44px; font-size: 16px; }
+  .card .hero-name { font-size: 20px; }
+  .card .hero-sub { font-size: 10.5px; }
+  .card .rank {
+    margin-left: auto; background: rgba(0,0,0,0.34); border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 9px; padding: 5px 11px; display: flex; align-items: baseline; gap: 4px;
+  }
+  .card .rank .num { font-size: 18px; font-weight: 800; color: #fff; }
+  .card .rank .of { font-size: 10px; color: rgba(255,255,255,0.75); }
+  .card .rank.light { background: rgba(15,23,42,0.08); border-color: rgba(15,23,42,0.35); }
+  .card .rank.light .num { color: #0f172a; }
+  .card .rank.light .of { color: #0f172a; }
+  .card .data { display: flex; gap: 8px; padding: 12px 14px; }
+  .card .st { flex: 1; text-align: center; background: rgba(255,255,255,0.045); border-radius: 8px; padding: 8px 4px; }
+  .card .st .lb { font-size: 9px; letter-spacing: 0.18em; color: var(--t2); }
+  .card .st .vl { font-size: 16px; font-weight: 800; margin-top: 2px; color: #fff; }
+  .cards2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .cards2 .card { margin-bottom: 0; }
+
+  /* ===== 整页示例 ===== */
+  .full .hero {
+    border: 1px solid var(--alt);
+    background: var(--main);
+  }
+  .full .hero::before {
+    content: '';
+    position: absolute; inset: 0; pointer-events: none;
+    background: repeating-linear-gradient(116deg, transparent 0 22px, rgba(255,255,255,0.35) 22px 25px);
+  }
+  .full .hero-inner { color: #fff; }
+  .full .hero-name {
+    font-size: 34px;
+    -webkit-text-stroke: 1px rgba(0,0,0,0.55);
+    paint-order: stroke fill;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.45);
+  }
+  .full .hero-sub {
+    opacity: 0.92;
+    -webkit-text-stroke: 0.6px rgba(0,0,0,0.5);
+    paint-order: stroke fill;
+  }
+  .full .hero-value { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; margin-top: 8px; }
+  .full .crest { width: 66px; height: 66px; font-size: 22px; color: var(--main); }
+
+  .actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+  .btn {
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 8px 18px; font-size: 13px; cursor: pointer;
+    background: var(--panel); color: var(--t0); transition: .15s;
+  }
+  .btn.primary { color: #fff; font-weight: 700; border-color: rgba(255,255,255,0.24); }
+
+  .record { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 18px; }
+  .rc { border: 1px solid var(--line); border-radius: 10px; padding: 12px 6px; text-align: center; background: var(--panel); }
+  .rc .lb { font-size: 9px; letter-spacing: 0.2em; color: var(--t2); text-transform: uppercase; }
+  .rc .vl { font-size: 20px; font-weight: 800; margin-top: 3px; color: #fff; }
+  .rc.w .vl { color: var(--win); }
+  .rc.d .vl { color: var(--draw); }
+  .rc.l .vl { color: var(--lose); }
+
+  .next { margin-top: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); padding: 18px 22px; }
+  .next-label { font-size: 10px; letter-spacing: 0.22em; color: var(--t2); text-transform: uppercase; }
+  .next-body { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; margin-top: 12px; }
+  .side { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .side .dot { width: 48px; height: 48px; border-radius: 50%; background: #fff; box-shadow: inset 0 0 0 1px var(--line); }
+  .side .nm { font-size: 16px; font-weight: 800; }
+  .mid-vs { font-size: 30px; font-weight: 900; font-style: italic; color: #475569; }
+  .mid-time { font-size: 12px; color: var(--t1); text-align: center; margin-top: 2px; }
+  .next-foot { margin-top: 14px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 11px; color: var(--t2); text-align: center; }
+
+  .tabs { display: flex; gap: 22px; margin-top: 22px; border-bottom: 1px solid var(--line); }
+  .tab { padding-bottom: 10px; font-size: 16px; font-weight: 700; cursor: pointer; color: var(--t2); position: relative; }
+  .tab.active { color: #fff; }
+  .tab.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: rgba(255,255,255,0.35); border-radius: 2px; }
+
+  .sched { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+  .row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }
+  .row .t { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; }
+  .row .t.right { justify-content: flex-end; text-align: right; }
+  .row .d { width: 9px; height: 9px; border-radius: 50%; }
+  .row .mid { display: flex; flex-direction: column; align-items: center; }
+  .row .sc { font-size: 17px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .row .tm { font-size: 10px; color: var(--t2); }
+  .row .vs { color: var(--t2); font-size: 12px; }
+  .legend { margin-top: 18px; font-size: 11px; color: var(--t2); line-height: 1.9; }
+  .legend b { color: #94a3b8; }
+  @media (max-width: 700px) { .cards2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <p class="cap">球队主页 · 真彩定稿 <b>V2</b><br>主色实底 + 副色细针纹（3px / 22px 间距）+ 纯色副色边框 100% · 文字只看主色 · 详情页与订阅卡同步</p>
+
+  <div class="group-title">一、详情页 Hero × 六队</div>
+  <div id="heroes"></div>
+
+  <div class="group-title">二、订阅卡旗面 × 六队（卡外框仍中性 hairline，副色交给旗面纯色底线）</div>
+  <div class="cards2" id="cards"></div>
+
+  <div class="group-title">三、整页示例（阿森纳 · 队色只留 Hero，其余朴素深色）</div>
+  <div class="full">
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="crest">兵</div>
+        <div class="hero-id">
+          <h1 class="hero-name">阿森纳</h1>
+          <p class="hero-sub">ARS · 酋长球场 · 伦敦</p>
+          <p class="hero-value">全队身价 €1.22 亿</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn primary">＋ 订阅</button>
+      <button class="btn">☆ 收藏</button>
+      <button class="btn">⤓ 导出日历</button>
+    </div>
+
+    <div class="record">
+      <div class="rc w"><div class="lb">胜</div><div class="vl">22</div></div>
+      <div class="rc d"><div class="lb">平</div><div class="vl">6</div></div>
+      <div class="rc l"><div class="lb">负</div><div class="vl">4</div></div>
+      <div class="rc"><div class="lb">进</div><div class="vl">74</div></div>
+      <div class="rc"><div class="lb">失</div><div class="vl">29</div></div>
+      <div class="rc"><div class="lb">积分</div><div class="vl">72</div></div>
+    </div>
+
+    <div class="next">
+      <div class="next-label">下一场比赛</div>
+      <div class="next-body">
+        <div class="side"><div class="dot"></div><div class="nm">阿森纳</div></div>
+        <div class="mid"><div class="mid-vs">VS</div><div class="mid-time">周日 00:30</div></div>
+        <div class="side"><div class="dot"></div><div class="nm">利物浦</div></div>
+      </div>
+      <div class="next-foot">酋长球场 · Emirates Stadium</div>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active">赛程</div>
+      <div class="tab">阵容</div>
+    </div>
+
+    <div class="sched">
+      <div class="row">
+        <div class="t"><span class="d" style="background:#EF0107"></span>阿森纳</div>
+        <div class="mid"><div class="sc" style="color:#10b981">3 - 1</div><div class="tm">已赛</div></div>
+        <div class="t right">热刺 <span class="d" style="background:#132257"></span></div>
+      </div>
+      <div class="row">
+        <div class="t"><span class="d" style="background:#DA291C"></span>曼联</div>
+        <div class="mid"><div class="sc">2 - 2</div><div class="tm">已赛</div></div>
+        <div class="t right">阿森纳 <span class="d" style="background:#EF0107"></span></div>
+      </div>
+      <div class="row">
+        <div class="t"><span class="d" style="background:#6CABDD"></span>曼城</div>
+        <div class="mid"><div class="vs">VS</div><div class="tm">周六 22:00</div></div>
+        <div class="t right">阿森纳 <span class="d" style="background:#EF0107"></span></div>
+      </div>
+    </div>
+
+    <p class="legend">
+      <b>旗面公式（V2）</b>：背景 = 真主色实底；针纹 = 真副色 3px 宽 / 22px 间距斜纹（浅主色队 55% 不透明、深主色队 35%，避免针纹抢字）；边框 = 纯色副色 100%（详情页 1px 全圈带圆角 / 订阅卡 2px 底线）。<br>
+      <b>文字规则</b>：只看主色——主色明度 &gt; 0.55 用深字 #0f172a + 白描边，其余白字 + 深描边 + 轻阴影（描边突出队名）；副色不参与文字对比。<br>
+      <b>边框兜底</b>：副色缺失或与主色太接近（最大通道差 &lt; 24）时，针纹退回半透明白、边框退回纯白。<br>
+      <b>订阅卡差异</b>：卡外框保持中性 hairline（首页多卡并排不花），副色交给旗面下缘纯色底线 + 针纹。<br>
+      <b>队色范围</b>：队色只留旗面；战绩 / 下一场 / 页签 / 赛程全朴素深色（页签底线与积分格的 accent 主色是否保留，待定——本稿未用）。
+    </p>
+  </div>
+</div>
+
+<script>
+  function hexToRgb(hex) {
+    const h = hex.replace('#','');
+    const full = h.length === 3 ? h.split('').map(c => c+c).join('') : h;
+    if (!/^[0-9a-fA-F]{6}$/.test(full)) return [0,0,0];
+    const n = parseInt(full, 16);
+    return [(n>>16)&255, (n>>8)&255, n&255];
+  }
+  function lum(hex) {
+    const [r,g,b] = hexToRgb(hex);
+    return (0.2126*r + 0.7152*g + 0.0722*b) / 255;
+  }
+  function rgba(hex, a) {
+    const [r,g,b] = hexToRgb(hex);
+    return `rgba(${r},${g},${b},${a})`;
+  }
+
+  const teams = [
+    { id:'皇', name:'皇家马德里', code:'RMA · 伯纳乌',     main:'#FFFFFF', alt:'#FEBE10', rank:1 },
+    { id:'尤', name:'尤文图斯',   code:'JUV · 安联球场',   main:'#000000', alt:'#FFFFFF', rank:3 },
+    { id:'拜', name:'拜仁慕尼黑', code:'BAY · 安联竞技场', main:'#DC052D', alt:'#FFFFFF', rank:1 },
+    { id:'城', name:'曼彻斯特城', code:'MCI · 伊蒂哈德',   main:'#6CABDD', alt:'#FFFFFF', rank:4 },
+    { id:'厂', name:'阿森纳',     code:'ARS · 酋长球场',   main:'#EF0107', alt:'#FFFFFF', rank:2 },
+    { id:'茅', name:'伯恩茅斯',   code:'BOU · 活力球场',   main:'#DA291C', alt:'#000000', rank:8 },
+  ];
+
+  function pinLayer(alt, mainLight) {
+    const el = document.createElement('div');
+    el.className = 'pin';
+    el.style.background = `repeating-linear-gradient(116deg, transparent 0 22px, ${rgba(alt, mainLight ? 0.55 : 0.35)} 22px 25px)`;
+    return el;
+  }
+
+  function makeHero(t) {
+    const mainLight = lum(t.main) > 0.55;
+    const textColor = mainLight ? '#0f172a' : '#ffffff';
+    const el = document.createElement('div');
+    el.className = 'hero';
+    el.style.border = `1px solid ${t.alt}`;
+    el.style.background = t.main;
+    el.style.marginBottom = '10px';
+    el.appendChild(pinLayer(t.alt, mainLight));
+
+    const inner = document.createElement('div');
+    inner.className = 'hero-inner';
+    inner.style.color = textColor;
+    const crest = document.createElement('div');
+    crest.className = 'crest';
+    crest.textContent = t.id;
+    crest.style.color = mainLight ? '#0f172a' : t.main;
+    inner.appendChild(crest);
+    const idb = document.createElement('div');
+    idb.className = 'hero-id';
+    const nm = document.createElement('div');
+    nm.className = 'hero-name';
+    nm.textContent = t.name;
+    if (mainLight) {
+      nm.style.webkitTextStroke = '1px rgba(255,255,255,0.55)';
+      nm.style.paintOrder = 'stroke fill';
+      nm.style.textShadow = '0 1px 3px rgba(255,255,255,0.5)';
+    } else {
+      nm.style.webkitTextStroke = '1px rgba(0,0,0,0.55)';
+      nm.style.paintOrder = 'stroke fill';
+      nm.style.textShadow = '0 1px 4px rgba(0,0,0,0.45)';
+    }
+    idb.appendChild(nm);
+    const sb = document.createElement('div');
+    sb.className = 'hero-sub';
+    sb.textContent = `${t.code} · 主 ${t.main} 副 ${t.alt}`;
+    sb.style.opacity = mainLight ? 0.72 : 0.92;
+    sb.style.webkitTextStroke = mainLight ? '0.6px rgba(255,255,255,0.5)' : '0.6px rgba(0,0,0,0.5)';
+    sb.style.paintOrder = 'stroke fill';
+    idb.appendChild(sb);
+    inner.appendChild(idb);
+    el.appendChild(inner);
+    return el;
+  }
+
+  function makeCard(t) {
+    const mainLight = lum(t.main) > 0.55;
+    const textColor = mainLight ? '#0f172a' : '#ffffff';
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const flag = document.createElement('div');
+    flag.className = 'flag';
+    flag.style.borderBottom = `2px solid ${t.alt}`;
+    flag.style.background = t.main;
+    flag.appendChild(pinLayer(t.alt, mainLight));
+
+    const crest = document.createElement('div');
+    crest.className = 'crest';
+    crest.textContent = t.id;
+    crest.style.color = mainLight ? '#0f172a' : t.main;
+    flag.appendChild(crest);
+
+    const idb = document.createElement('div');
+    idb.className = 'hero-id';
+    const nm = document.createElement('div');
+    nm.className = 'hero-name';
+    nm.textContent = t.name;
+    nm.style.color = textColor;
+    if (mainLight) {
+      nm.style.webkitTextStroke = '0.8px rgba(255,255,255,0.55)';
+      nm.style.paintOrder = 'stroke fill';
+    } else {
+      nm.style.webkitTextStroke = '0.8px rgba(0,0,0,0.55)';
+      nm.style.paintOrder = 'stroke fill';
+      nm.style.textShadow = '0 1px 4px rgba(0,0,0,0.45)';
+    }
+    idb.appendChild(nm);
+    const sb = document.createElement('div');
+    sb.className = 'hero-sub';
+    sb.textContent = t.code;
+    sb.style.color = textColor;
+    sb.style.opacity = mainLight ? 0.72 : 0.9;
+    idb.appendChild(sb);
+    flag.appendChild(idb);
+
+    const rank = document.createElement('div');
+    rank.className = 'rank' + (mainLight ? ' light' : '');
+    rank.innerHTML = `<span class="num">${t.rank}</span><span class="of">/ 20</span>`;
+    flag.appendChild(rank);
+    card.appendChild(flag);
+
+    const data = document.createElement('div');
+    data.className = 'data';
+    [['胜','12'],['平','4'],['负','3'],['积分','40']].forEach(([lb, vl]) => {
+      const st = document.createElement('div');
+      st.className = 'st';
+      st.innerHTML = `<div class="lb">${lb}</div><div class="vl">${vl}</div>`;
+      data.appendChild(st);
+    });
+    card.appendChild(data);
+    return card;
+  }
+
+  const heroBox = document.getElementById('heroes');
+  teams.forEach(t => heroBox.appendChild(makeHero(t)));
+  const cardBox = document.getElementById('cards');
+  teams.forEach(t => cardBox.appendChild(makeCard(t)));
+</script>
+</body>
+</html>

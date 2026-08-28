@@ -114,14 +114,14 @@ describe('队旗卡·结构', () => {
     expect(w.findAll('.stat-cell').length).toBe(4)
   })
 
-  it('球队主色上根节点：--flag-from 含 team.color，--accent 在位', async () => {
+  it('球队主色上根节点：--flag-main 含 team.color，--accent 已收', async () => {
     injectStoreData({ team: makeTeam({ color: '#EF0107' }) })
     mockEmptyEvents()
     const w = await mountCard()
     const style = w.find('article').attributes('style') ?? ''
-    expect(style).toContain('--flag-from')
+    expect(style).toContain('--flag-main')
     expect(style).toContain('#EF0107')
-    expect(style).toContain('--accent')
+    expect(style).not.toContain('--accent')
   })
 })
 
