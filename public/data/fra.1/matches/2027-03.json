@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-24T07:19:14.742Z",
+  "updateTime": "2026-08-29T03:59:47.869Z",
   "league": "fra.1",
   "month": "2027-03",
   "count": 27,
@@ -158,24 +158,24 @@
     {
       "eventId": "401876289",
       "date": "2027-03-06T20:00Z",
-      "name": "Paris Saint-Germain at Stade Rennais",
+      "name": "Stade Rennais at Paris Saint-Germain",
       "status": "pre",
       "completed": false,
       "clock": "0'",
-      "venue": "Roazhon Park",
+      "venue": "Parc des Princes",
       "home": {
-        "id": 169,
-        "name": "Stade Rennais",
-        "abbreviation": "REN",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
-        "score": 0,
-        "winner": null
-      },
-      "away": {
         "id": 160,
         "name": "Paris Saint-Germain",
         "abbreviation": "PSG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 169,
+        "name": "Stade Rennais",
+        "abbreviation": "REN",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
         "score": 0,
         "winner": null
       }

@@ -1,13 +1,26 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-08-24T07:19:12.512Z",
+  "updateTime": "2026-08-29T03:59:45.551Z",
   "league": "ger.1",
   "season": "2026",
-  "matchesCounted": 0,
+  "matchesCounted": 1,
   "count": 18,
   "standings": [
     {
       "rank": 1,
+      "teamId": 132,
+      "team": "Bayern Munich",
+      "played": 1,
+      "won": 1,
+      "drawn": 0,
+      "lost": 0,
+      "goalsFor": 5,
+      "goalsAgainst": 1,
+      "goalDiff": 4,
+      "points": 3
+    },
+    {
+      "rank": 2,
       "teamId": 598,
       "team": "1. FC Union Berlin",
       "played": 0,
@@ -20,22 +33,9 @@
       "points": 0
     },
     {
-      "rank": 2,
+      "rank": 3,
       "teamId": 131,
       "team": "Bayer Leverkusen",
-      "played": 0,
-      "won": 0,
-      "drawn": 0,
-      "lost": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "goalDiff": 0,
-      "points": 0
-    },
-    {
-      "rank": 3,
-      "teamId": 132,
-      "team": "Bayern Munich",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -191,7 +191,7 @@
     {
       "rank": 15,
       "teamId": 10388,
-      "team": "SV Elversberg",
+      "team": "SV ELVERSBERG",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -216,8 +216,8 @@
     },
     {
       "rank": 17,
-      "teamId": 134,
-      "team": "VfB Stuttgart",
+      "teamId": 137,
+      "team": "Werder Bremen",
       "played": 0,
       "won": 0,
       "drawn": 0,
@@ -229,15 +229,15 @@
     },
     {
       "rank": 18,
-      "teamId": 137,
-      "team": "Werder Bremen",
-      "played": 0,
+      "teamId": 134,
+      "team": "VfB Stuttgart",
+      "played": 1,
       "won": 0,
       "drawn": 0,
-      "lost": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "goalDiff": 0,
+      "lost": 1,
+      "goalsFor": 1,
+      "goalsAgainst": 5,
+      "goalDiff": -4,
       "points": 0
     }
   ]

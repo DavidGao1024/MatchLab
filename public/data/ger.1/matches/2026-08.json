@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-24T07:19:09.944Z",
+  "updateTime": "2026-08-29T03:59:42.973Z",
   "league": "ger.1",
   "month": "2026-08",
   "count": 9,
@@ -9,24 +9,25 @@
       "eventId": "401884817",
       "date": "2026-08-28T18:30Z",
       "name": "VfB Stuttgart at Bayern Munich",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Allianz Arena",
       "home": {
         "id": 132,
         "name": "Bayern Munich",
         "abbreviation": "MUN",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
-        "score": 0,
-        "winner": null
+        "score": 5,
+        "winner": true
       },
       "away": {
         "id": 134,
         "name": "VfB Stuttgart",
         "abbreviation": "VFB",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -133,15 +134,15 @@
     {
       "eventId": "401884809",
       "date": "2026-08-29T13:30Z",
-      "name": "Bayer Leverkusen at SV Elversberg",
+      "name": "Bayer Leverkusen at SV ELVERSBERG",
       "status": "pre",
       "completed": false,
       "clock": "0'",
       "venue": "URSAPHARM-Arena an der Kaiserlinde",
       "home": {
         "id": 10388,
-        "name": "SV Elversberg",
-        "abbreviation": "ELV",
+        "name": "SV ELVERSBERG",
+        "abbreviation": "Sv Elversberg",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10388.png",
         "score": 0,
         "winner": null

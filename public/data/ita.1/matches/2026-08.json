@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-24T07:19:06.909Z",
+  "updateTime": "2026-08-29T03:59:39.752Z",
   "league": "ita.1",
   "month": "2026-08",
   "count": 20,
@@ -217,9 +217,10 @@
       "eventId": "401874927",
       "date": "2026-08-24T16:30Z",
       "name": "Lazio at Bologna",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Renato Dall'Ara",
       "home": {
         "id": 107,
@@ -234,25 +235,26 @@
         "name": "Lazio",
         "abbreviation": "LAZ",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
-        "score": 0,
-        "winner": null
+        "score": 1,
+        "winner": true
       }
     },
     {
       "eventId": "401874928",
       "date": "2026-08-24T18:45Z",
       "name": "Fiorentina at AS Roma",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+2'",
+      "period": 2,
       "venue": "Olimpico",
       "home": {
         "id": 104,
         "name": "AS Roma",
         "abbreviation": "ROMA",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
-        "score": 0,
-        "winner": null
+        "score": 4,
+        "winner": true
       },
       "away": {
         "id": 109,
@@ -267,17 +269,18 @@
       "eventId": "401874758",
       "date": "2026-08-28T18:45Z",
       "name": "Venezia at AC Milan",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
       "venue": "San Siro",
       "home": {
         "id": 103,
         "name": "AC Milan",
         "abbreviation": "MIL",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 17530,

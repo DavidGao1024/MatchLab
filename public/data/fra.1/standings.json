@@ -1,13 +1,26 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-08-24T07:19:15.494Z",
+  "updateTime": "2026-08-29T03:59:48.639Z",
   "league": "fra.1",
   "season": "2026",
-  "matchesCounted": 9,
+  "matchesCounted": 10,
   "count": 18,
   "standings": [
     {
       "rank": 1,
+      "teamId": 166,
+      "team": "Lille",
+      "played": 2,
+      "won": 1,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 4,
+      "goalsAgainst": 2,
+      "goalDiff": 2,
+      "points": 4
+    },
+    {
+      "rank": 2,
       "teamId": 176,
       "team": "Marseille",
       "played": 1,
@@ -20,7 +33,7 @@
       "points": 3
     },
     {
-      "rank": 2,
+      "rank": 3,
       "teamId": 175,
       "team": "Lens",
       "played": 1,
@@ -30,19 +43,6 @@
       "goalsFor": 5,
       "goalsAgainst": 2,
       "goalDiff": 3,
-      "points": 3
-    },
-    {
-      "rank": 3,
-      "teamId": 166,
-      "team": "Lille",
-      "played": 1,
-      "won": 1,
-      "drawn": 0,
-      "lost": 0,
-      "goalsFor": 2,
-      "goalsAgainst": 0,
-      "goalDiff": 2,
       "points": 3
     },
     {
@@ -73,6 +73,19 @@
     },
     {
       "rank": 6,
+      "teamId": 160,
+      "team": "Paris Saint-Germain",
+      "played": 2,
+      "won": 0,
+      "drawn": 2,
+      "lost": 0,
+      "goalsFor": 4,
+      "goalsAgainst": 4,
+      "goalDiff": 0,
+      "points": 2
+    },
+    {
+      "rank": 7,
       "teamId": 6997,
       "team": "Brest",
       "played": 1,
@@ -85,22 +98,9 @@
       "points": 1
     },
     {
-      "rank": 7,
+      "rank": 8,
       "teamId": 2697,
       "team": "Le Mans",
-      "played": 1,
-      "won": 0,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 2,
-      "goalsAgainst": 2,
-      "goalDiff": 0,
-      "points": 1
-    },
-    {
-      "rank": 8,
-      "teamId": 160,
-      "team": "Paris Saint-Germain",
       "played": 1,
       "won": 0,
       "drawn": 1,
