@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-29T03:59:36.523Z",
+  "updateTime": "2026-08-30T00:56:18.786Z",
   "league": "esp.1",
   "month": "2026-08",
   "count": 30,
@@ -581,24 +581,25 @@
       "eventId": "401882902",
       "date": "2026-08-29T15:00Z",
       "name": "Real Betis at Levante",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Estadi Ciutat de València",
       "home": {
         "id": 1538,
         "name": "Levante",
         "abbreviation": "LEV",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
-        "score": 0,
-        "winner": null
+        "score": 5,
+        "winner": true
       },
       "away": {
         "id": 244,
         "name": "Real Betis",
         "abbreviation": "BET",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       }
     },
@@ -606,24 +607,25 @@
       "eventId": "401882898",
       "date": "2026-08-29T17:00Z",
       "name": "Espanyol at Real Sociedad",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Reale Arena",
       "home": {
         "id": 89,
         "name": "Real Sociedad",
         "abbreviation": "RSO",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 88,
         "name": "Espanyol",
         "abbreviation": "ESP",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/88.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -631,16 +633,17 @@
       "eventId": "401882897",
       "date": "2026-08-29T19:30Z",
       "name": "Atlético Madrid at Sevilla",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Ramón Sánchez Pizjuán Stadium",
       "home": {
         "id": 243,
         "name": "Sevilla",
         "abbreviation": "SEV",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -648,8 +651,8 @@
         "name": "Atlético Madrid",
         "abbreviation": "ATM",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       }
     },
     {

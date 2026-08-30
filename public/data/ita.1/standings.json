@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-08-29T03:59:42.433Z",
+  "updateTime": "2026-08-30T00:56:25.233Z",
   "league": "ita.1",
   "season": "2026",
-  "matchesCounted": 11,
+  "matchesCounted": 15,
   "count": 20,
   "standings": [
     {
@@ -21,6 +21,32 @@
     },
     {
       "rank": 2,
+      "teamId": 111,
+      "team": "Juventus",
+      "played": 2,
+      "won": 2,
+      "drawn": 0,
+      "lost": 0,
+      "goalsFor": 3,
+      "goalsAgainst": 0,
+      "goalDiff": 3,
+      "points": 6
+    },
+    {
+      "rank": 3,
+      "teamId": 118,
+      "team": "Udinese",
+      "played": 2,
+      "won": 1,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 4,
+      "goalsAgainst": 3,
+      "goalDiff": 1,
+      "points": 4
+    },
+    {
+      "rank": 4,
       "teamId": 104,
       "team": "AS Roma",
       "played": 1,
@@ -33,7 +59,7 @@
       "points": 3
     },
     {
-      "rank": 3,
+      "rank": 5,
       "teamId": 110,
       "team": "Internazionale",
       "played": 1,
@@ -46,7 +72,20 @@
       "points": 3
     },
     {
-      "rank": 4,
+      "rank": 6,
+      "teamId": 4057,
+      "team": "Frosinone",
+      "played": 2,
+      "won": 1,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "goalDiff": 2,
+      "points": 3
+    },
+    {
+      "rank": 7,
       "teamId": 113,
       "team": "Lecce",
       "played": 1,
@@ -59,7 +98,7 @@
       "points": 3
     },
     {
-      "rank": 5,
+      "rank": 8,
       "teamId": 114,
       "team": "Napoli",
       "played": 1,
@@ -72,7 +111,7 @@
       "points": 3
     },
     {
-      "rank": 6,
+      "rank": 9,
       "teamId": 105,
       "team": "Atalanta",
       "played": 1,
@@ -85,7 +124,7 @@
       "points": 3
     },
     {
-      "rank": 7,
+      "rank": 10,
       "teamId": 2925,
       "team": "Cagliari",
       "played": 1,
@@ -98,20 +137,7 @@
       "points": 3
     },
     {
-      "rank": 8,
-      "teamId": 111,
-      "team": "Juventus",
-      "played": 1,
-      "won": 1,
-      "drawn": 0,
-      "lost": 0,
-      "goalsFor": 1,
-      "goalsAgainst": 0,
-      "goalDiff": 1,
-      "points": 3
-    },
-    {
-      "rank": 9,
+      "rank": 11,
       "teamId": 112,
       "team": "Lazio",
       "played": 1,
@@ -124,7 +150,20 @@
       "points": 3
     },
     {
-      "rank": 10,
+      "rank": 12,
+      "teamId": 3997,
+      "team": "Sassuolo",
+      "played": 2,
+      "won": 1,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 3,
+      "goalsAgainst": 3,
+      "goalDiff": 0,
+      "points": 3
+    },
+    {
+      "rank": 13,
       "teamId": 2572,
       "team": "Como",
       "played": 1,
@@ -135,45 +174,6 @@
       "goalsAgainst": 1,
       "goalDiff": 0,
       "points": 1
-    },
-    {
-      "rank": 11,
-      "teamId": 118,
-      "team": "Udinese",
-      "played": 1,
-      "won": 0,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 1,
-      "goalsAgainst": 1,
-      "goalDiff": 0,
-      "points": 1
-    },
-    {
-      "rank": 12,
-      "teamId": 3997,
-      "team": "Sassuolo",
-      "played": 1,
-      "won": 0,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 1,
-      "goalsAgainst": 2,
-      "goalDiff": -1,
-      "points": 0
-    },
-    {
-      "rank": 13,
-      "teamId": 239,
-      "team": "Torino",
-      "played": 1,
-      "won": 0,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 1,
-      "goalsAgainst": 2,
-      "goalDiff": -1,
-      "points": 0
     },
     {
       "rank": 14,
@@ -190,32 +190,19 @@
     },
     {
       "rank": 15,
-      "teamId": 4057,
-      "team": "Frosinone",
-      "played": 1,
+      "teamId": 239,
+      "team": "Torino",
+      "played": 2,
       "won": 0,
       "drawn": 0,
-      "lost": 1,
-      "goalsFor": 0,
-      "goalsAgainst": 1,
-      "goalDiff": -1,
+      "lost": 2,
+      "goalsFor": 2,
+      "goalsAgainst": 4,
+      "goalDiff": -2,
       "points": 0
     },
     {
       "rank": 16,
-      "teamId": 115,
-      "team": "Parma",
-      "played": 1,
-      "won": 0,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 0,
-      "goalsAgainst": 1,
-      "goalDiff": -1,
-      "points": 0
-    },
-    {
-      "rank": 17,
       "teamId": 3263,
       "team": "Genoa",
       "played": 1,
@@ -228,33 +215,33 @@
       "points": 0
     },
     {
-      "rank": 18,
-      "teamId": 4007,
-      "team": "Monza",
-      "played": 1,
+      "rank": 17,
+      "teamId": 115,
+      "team": "Parma",
+      "played": 2,
       "won": 0,
       "drawn": 0,
-      "lost": 1,
-      "goalsFor": 1,
-      "goalsAgainst": 4,
+      "lost": 2,
+      "goalsFor": 0,
+      "goalsAgainst": 3,
       "goalDiff": -3,
       "points": 0
     },
     {
-      "rank": 19,
-      "teamId": 109,
-      "team": "Fiorentina",
-      "played": 1,
+      "rank": 18,
+      "teamId": 4007,
+      "team": "Monza",
+      "played": 2,
       "won": 0,
       "drawn": 0,
-      "lost": 1,
-      "goalsFor": 0,
-      "goalsAgainst": 4,
+      "lost": 2,
+      "goalsFor": 3,
+      "goalsAgainst": 7,
       "goalDiff": -4,
       "points": 0
     },
     {
-      "rank": 20,
+      "rank": 19,
       "teamId": 17530,
       "team": "Venezia",
       "played": 2,
@@ -264,6 +251,19 @@
       "goalsFor": 0,
       "goalsAgainst": 4,
       "goalDiff": -4,
+      "points": 0
+    },
+    {
+      "rank": 20,
+      "teamId": 109,
+      "team": "Fiorentina",
+      "played": 2,
+      "won": 0,
+      "drawn": 0,
+      "lost": 2,
+      "goalsFor": 0,
+      "goalsAgainst": 7,
+      "goalDiff": -7,
       "points": 0
     }
   ]
