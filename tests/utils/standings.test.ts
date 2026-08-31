@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { applyForm, computeStandings, mergeStandings } from '../../src/utils/standings'
+import { applyForm, applyMatchFixes, computeStandings, ESPN_MATCH_FIXES, mergeStandings } from '../../src/utils/standings'
 import type { RawStanding, RawXgStanding } from '../../src/types/static'
 import type { Match } from '../../src/types/models'
 
@@ -17,6 +17,19 @@ const xg: RawXgStanding[] = [
 ]
 
 const map = { Tottenham: 'Tottenham Hotspur' }
+
+function makeMatch(over: Partial<Match> = {}): Match {
+  return {
+    eventId: 'e1',
+    date: '2026-08-15T14:00Z',
+    status: 'post',
+    completed: true,
+    venue: 'Stadium',
+    home: { id: 1, name: 'Team A', abbreviation: 'A', logo: '', score: 0, winner: null },
+    away: { id: 2, name: 'Team B', abbreviation: 'B', logo: '', score: 0, winner: null },
+    ...over,
+  }
+}
 
 describe('mergeStandings', () => {
   it('rank/zone/xG 三合一，映射不上的 xG 留空', () => {
@@ -63,19 +76,6 @@ describe('applyForm', () => {
 })
 
 describe('computeStandings', () => {
-  function makeMatch(over: Partial<Match> = {}): Match {
-    return {
-      eventId: 'e1',
-      date: '2026-08-15T14:00Z',
-      status: 'post',
-      completed: true,
-      venue: 'Stadium',
-      home: { id: 1, name: 'Team A', abbreviation: 'A', logo: '', score: 0, winner: null },
-      away: { id: 2, name: 'Team B', abbreviation: 'B', logo: '', score: 0, winner: null },
-      ...over,
-    }
-  }
-
   it('空输入返回空数组', () => {
     expect(computeStandings([])).toEqual([])
   })
@@ -136,10 +136,71 @@ describe('computeStandings', () => {
 
   it('未完赛比赛也收录球队（played=0 保留完整榜单）', () => {
     const rows = computeStandings([
-      makeMatch({ status: 'pre', completed: false, home: { id: 5, name: 'C', abbreviation: 'C', logo: '', score: null, winner: null }, away: { id: 6, name: 'D', abbreviation: 'D', logo: '', score: null, winner: null } }),
+      makeMatch({ status: 'pre', completed: false, home: { id: 5, name: 'C', abbreviation: 'C', logo: '', score: null, winner: null }, away: { id: 6, name: 'D', abbreviation: 'D', logo: '', score: null, winner: null }),
     ])
     expect(rows).toHaveLength(2)
     expect(rows.find((r) => r.teamId === 5)).toMatchObject({ played: 0, points: 0 })
     expect(rows.find((r) => r.teamId === 6)).toMatchObject({ played: 0, points: 0 })
+  })
+})
+
+describe('applyMatchFixes（ESPN 源数据勘误表）', () => {
+  const fix = makeMatch // 复用工厂
+
+  it('score 勘误：按 eventId 改写比分并重算 winner/completed', () => {
+    const bad = fix({
+      eventId: '401861543',
+      home: { id: 131705, name: 'Liaoning Tieren', abbreviation: 'LIA', logo: '', score: 0, winner: null },
+      away: { id: 15515, name: 'Shanghai Port', abbreviation: 'SIPG', logo: '', score: 0, winner: null },
+      completed: true,
+    })
+    const [m] = applyMatchFixes([bad])
+    expect(m.home.score).toBe(3)
+    expect(m.away.score).toBe(2)
+    expect(m.home.winner).toBe(true)
+    expect(m.away.winner).toBe(false)
+    expect(m.completed).toBe(true)
+  })
+
+  it('void 勘误：整场剔除（通用逃生舱，合成条目验证）', () => {
+    ;(ESPN_MATCH_FIXES as Record<string, unknown>)['test-void'] = { void: true }
+    try {
+      const bad = fix({ eventId: 'test-void' })
+      expect(applyMatchFixes([bad])).toEqual([])
+      // 两队另有未完赛场次时仍收录榜单（played=0）
+      const pre = fix({ eventId: 'future-x', status: 'pre', completed: false, home: { id: 18203, name: 'Zhejiang Professional FC', abbreviation: 'ZHE', logo: '', score: null, winner: null }, away: { id: 21506, name: 'Wuhan Three Towns', abbreviation: 'WTT', logo: '', score: null, winner: null } })
+      const rows = computeStandings(applyMatchFixes([bad, pre]))
+      expect(rows).toHaveLength(2)
+      expect(rows.every((r) => r.played === 0)).toBe(true)
+    } finally {
+      delete (ESPN_MATCH_FIXES as Record<string, unknown>)['test-void']
+    }
+  })
+
+  it('score 勘误：平局比分 winner 双方置 null', () => {
+    ;(ESPN_MATCH_FIXES as Record<string, unknown>)['test-draw'] = { score: { home: 1, away: 1 } }
+    try {
+      const m = applyMatchFixes([fix({ eventId: 'test-draw' })])[0]
+      expect(m.home.winner).toBe(null)
+      expect(m.away.winner).toBe(null)
+    } finally {
+      delete (ESPN_MATCH_FIXES as Record<string, unknown>)['test-draw']
+    }
+  })
+
+  it('未命中勘误的场次原样透传（同一引用）', () => {
+    const m = fix({ eventId: 'normal-1', home: { id: 1, name: 'A', abbreviation: 'A', logo: '', score: 2, winner: true }, away: { id: 2, name: 'B', abbreviation: 'B', logo: '', score: 0, winner: null } })
+    expect(applyMatchFixes([m])[0]).toBe(m)
+  })
+
+  it('中超实锤案：勘误后辽宁/海港积分与官方一致', () => {
+    // ESPN 误记：401861543 辽宁 0-0 海港（实际 3-2 辽宁胜）。浙江-三镇延期场已由 completed 判据根治，不在此列
+    const lia = fix({ eventId: '401861543', home: { id: 131705, name: 'Liaoning Tieren', abbreviation: 'LIA', logo: '', score: 0, winner: true }, away: { id: 15515, name: 'Shanghai Port', abbreviation: 'SIPG', logo: '', score: 0, winner: null } })
+    const rowsBefore = computeStandings([lia])
+    expect(rowsBefore.find((r) => r.teamId === 131705)!.points).toBe(1) // 错账：各 1 分
+    const rows = computeStandings(applyMatchFixes([lia]))
+    expect(rows.find((r) => r.teamId === 131705)!.points).toBe(3) // 勘误后：辽宁 3 分、海港 0 分
+    expect(rows.find((r) => r.teamId === 15515)!.points).toBe(0)
+    expect(rows.find((r) => r.teamId === 131705)!.goalsFor).toBe(3)
   })
 })

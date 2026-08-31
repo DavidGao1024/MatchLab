@@ -48,6 +48,42 @@ export const POINT_DEDUCTIONS: Partial<Record<LeagueSlug, Record<number, number>
   'chn.1': { 977: 10, 8239: 10, 21910: 7, 7521: 6, 8240: 6, 21506: 5, 18203: 5, 15515: 5, 2052: 5 },
 }
 
+/** ESPN 源数据勘误（按 eventId）。上游修正后删除对应条目 */
+export interface MatchFix {
+  score?: { home: number; away: number }
+  void?: boolean
+}
+
+export const ESPN_MATCH_FIXES: Record<string, MatchFix> = {
+  // 2026-05-29 中超第15轮 辽宁铁人 3-2 上海海港（央视/新华社/腾讯实录），ESPN 误记 0-0（比分无源可推，唯一人工条目类型）
+  '401861543': { score: { home: 3, away: 2 } },
+  // 延期场（如 2026-08-08 浙江 vs 武汉三镇）已由 normalizeEvent 判据对齐 type.completed 根治，无需手工条目
+}
+
+/** 应用 ESPN 勘误表：void 整场剔除，score 改写比分并重设 winner/completed */
+export function applyMatchFixes(matches: Match[]): Match[] {
+  const out: Match[] = []
+  for (const m of matches) {
+    const f = ESPN_MATCH_FIXES[m.eventId]
+    if (!f) {
+      out.push(m)
+      continue
+    }
+    if (f.void) continue
+    if (f.score) {
+      const { home, away } = f.score
+      out.push({
+        ...m,
+        status: 'post',
+        completed: true,
+        home: { ...m.home, score: home, winner: home > away ? true : home < away ? false : null },
+        away: { ...m.away, score: away, winner: away > home ? true : away < home ? false : null },
+      })
+    }
+  }
+  return out
+}
+
 /**
  * 从已完赛比分本地计算积分榜（与 scripts/fetch-espn-scores.js 的 computeStandings 同一算法）。
  * 排序：积分 → 净胜球 → 进球 → 队名。返回已按名次排序、带上 rank 的行。
