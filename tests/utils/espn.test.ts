@@ -43,6 +43,13 @@ describe('normalizeEvent', () => {
     expect(m!.status).toBe('pre')
     expect(m!.home.score).toBeNull()
   })
+  it('延期幽灵场（浙江-三镇 8-8 直播案）：state=post 但 completed=false → 不算完赛', () => {
+    const postponed = JSON.parse(JSON.stringify(rawEvent)) as EspnEvent
+    postponed.status = { type: { id: '6', state: 'post', completed: false } }
+    const m = normalizeEvent(postponed)!
+    expect(m.status).toBe('post')
+    expect(m.completed).toBe(false) // 判据对齐抓取脚本的 type.completed，根治延期场以 0-0 污染榜单
+  })
   it('残缺事件（无 competitors）→ null，不炸', () => {
     expect(normalizeEvent({ ...rawEvent, competitions: [] })).toBeNull()
   })

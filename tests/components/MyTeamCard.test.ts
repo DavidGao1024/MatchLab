@@ -152,7 +152,7 @@ describe('队旗卡·比赛状态', () => {
       rawEvent({
         id: '98',
         date: localAt(0, 9),
-        status: { type: { state: 'post' }, displayClock: '90:00' },
+        status: { type: { state: 'post', completed: true }, displayClock: '90:00' },
       }),
       rawEvent({ id: '99', date: localAt(3, 19) }),
     ])

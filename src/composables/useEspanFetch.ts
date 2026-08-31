@@ -52,7 +52,9 @@ export function normalizeEvent(e: EspnEvent): Match | null {
     eventId: e.id,
     date: e.date,
     status: state,
-    completed: state === 'post',
+    // 判据对齐抓取脚本（scripts/fetch-espn-scores.js 的 type.completed）：
+    // ESPN 延期场标 state=post 但 completed=false（STATUS_POSTPONED），按 post 判完赛会以 0-0 污染积分榜
+    completed: e.status?.type?.completed === true,
     clock: e.status?.displayClock,
     venue: comp.venue?.fullName ?? '',
     home: toTeam(homeC),
