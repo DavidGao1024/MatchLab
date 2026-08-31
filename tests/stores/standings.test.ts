@@ -89,6 +89,36 @@ describe('standings.load 实时算榜', () => {
     expect(store.rows['eng.1']).toHaveLength(2)
   })
 
+  it('中超启用相互战绩同分排序，英超不受影响', async () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2026-08-24T00:00:00Z'))
+    const h2hMatch = (eventId: string, hid: number, hn: string, hs: number, aid: number, an: string, as: number) => ({
+      eventId, date: '2026-03-10T11:35Z', status: 'post', completed: true, venue: 'X',
+      home: { id: hid, name: hn, abbreviation: hn, logo: '', score: hs, winner: hs > as ? true : hs < as ? false : null },
+      away: { id: aid, name: an, abbreviation: an, logo: '', score: as, winner: as > hs ? true : as < hs ? false : null },
+    })
+    // A、B 同 6 分：总净胜球 A(+7)>B(+4)，相互净胜球 B(+2)>A(-2)
+    const cslMatches = [
+      h2hMatch('c1', 2, 'B', 3, 1, 'A', 0),
+      h2hMatch('c2', 1, 'A', 1, 2, 'B', 0),
+      h2hMatch('c3', 1, 'A', 9, 3, 'Y', 0),
+      h2hMatch('c4', 2, 'B', 2, 3, 'Y', 0),
+    ]
+    mockFetch.mockImplementation((input) => {
+      const url = String(input)
+      if (url.includes('site.api.espn.com')) return ok({ events: [] })
+      if (url.includes('chn.1/matches/2026-03.json')) return ok({ matches: cslMatches })
+      if (url.includes('eng.1/matches/2026-09.json')) return ok({ matches: cslMatches })
+      return Promise.resolve({ ok: false, status: 404 })
+    })
+    const store = useStandingsStore()
+    await store.load('chn.1', '2026', { seasonType: 'calendar', forceFresh: true })
+    expect(store.rows['chn.1']!.map((r) => r.teamId)).toEqual([2, 1, 3]) // 相互战绩：B 压 A
+
+    await store.load('eng.1', '2026', { seasonType: 'european', forceFresh: true })
+    expect(store.rows['eng.1']!.map((r) => r.teamId)).toEqual([1, 2, 3]) // 欧洲链：总净胜球 A 压 B
+  })
+
   it('withForm=false 时不算形势（form 为空）', async () => {
     vi.useFakeTimers()
     vi.setSystemTime(new Date('2026-08-24T00:00:00Z'))

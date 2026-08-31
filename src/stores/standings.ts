@@ -3,7 +3,7 @@ import { fetchJsonCached } from '../composables/useJsonFetch'
 import { fetchLiveScores } from '../composables/useEspanFetch'
 import type { Match, StandingRow } from '../types/models'
 import type { MatchesFile, RawStanding, TeamNameMapFile, XgFile } from '../types/static'
-import { applyForm, applyMatchFixes, computeStandings, mergeStandings, POINT_DEDUCTIONS } from '../utils/standings'
+import { applyForm, applyMatchFixes, computeStandings, HEAD_TO_HEAD_TIEBREAK, mergeStandings, POINT_DEDUCTIONS } from '../utils/standings'
 import { currentMonth, seasonMonths, type LeagueSlug } from '../utils/constants'
 
 const MATCHES_TTL = 60 * 60 * 1000
@@ -59,7 +59,7 @@ export const useStandingsStore = defineStore('standings', {
         const files = await Promise.all(months.map((m) => this.fetchMonthMatches(league, m, season, m === cur)))
         const allMatches = applyMatchFixes(files.flat())
         this.formMatches[league] = withForm ? allMatches : []
-        this.raw[league] = computeStandings(allMatches, POINT_DEDUCTIONS[league] ?? {})
+        this.raw[league] = computeStandings(allMatches, POINT_DEDUCTIONS[league] ?? {}, { headToHead: Boolean(HEAD_TO_HEAD_TIEBREAK[league]) })
         this.updateTime[league] = new Date().toISOString()
         this.rebuild(league, null)
         if (this.xgOn[league]) {

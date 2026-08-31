@@ -84,11 +84,62 @@ export function applyMatchFixes(matches: Match[]): Match[] {
   return out
 }
 
+/** 同分先比相互战绩的联赛（中超官方规则；其余走净胜球） */
+export const HEAD_TO_HEAD_TIEBREAK: Partial<Record<LeagueSlug, true>> = { 'chn.1': true }
+
+export interface StandingsOpts { headToHead?: boolean }
+
+/** 总净胜球 → 总进球 → 队名 */
+function stdTiebreak(x: RawStanding, y: RawStanding): number {
+  return y.goalDiff - x.goalDiff || y.goalsFor - x.goalsFor || x.team.localeCompare(y.team)
+}
+
 /**
- * 从已完赛比分本地计算积分榜（与 scripts/fetch-espn-scores.js 的 computeStandings 同一算法）。
- * 排序：积分 → 净胜球 → 进球 → 队名。返回已按名次排序、带上 rank 的行。
+ * 同分组的相互战绩排序（2026 中超秩序册：积分→相互积分→相互净胜球→相互进球→总净胜球→总进球→公平竞赛→抽签）。
+ * 章程注「只有相关球队比赛全部结束后才比较胜负关系」——组内各对组合的双回合未全部完赛时，
+ * 回落总净胜球链，不误用残缺相互战绩。公平竞赛积分/抽签无法实时获取，最终以队名兜底。
  */
-export function computeStandings(matches: Match[], deductions: Record<number, number> = {}): RawStanding[] {
+function orderTiedGroup(group: RawStanding[], matches: Match[]): RawStanding[] {
+  const ids = new Set(group.map((r) => r.teamId))
+  const mutual = matches.filter(
+    (m) => m.completed && m.home.score != null && m.away.score != null && ids.has(m.home.id) && ids.has(m.away.id),
+  )
+  for (const a of group) {
+    for (const b of group) {
+      if (a.teamId >= b.teamId) continue
+      const played = mutual.filter(
+        (m) => (m.home.id === a.teamId && m.away.id === b.teamId) || (m.home.id === b.teamId && m.away.id === a.teamId),
+      ).length
+      if (played < 2) return [...group].sort(stdTiebreak) // 该对双回合没打完 → 整组回落
+    }
+  }
+  const stat = new Map<number, { pts: number; gf: number; ga: number }>()
+  for (const r of group) stat.set(r.teamId, { pts: 0, gf: 0, ga: 0 })
+  for (const m of mutual) {
+    const h = stat.get(m.home.id)!
+    const a = stat.get(m.away.id)!
+    h.gf += m.home.score!
+    h.ga += m.away.score!
+    a.gf += m.away.score!
+    a.ga += m.home.score!
+    if (m.home.score! > m.away.score!) h.pts += 3
+    else if (m.home.score! < m.away.score!) a.pts += 3
+    else { h.pts += 1; a.pts += 1 }
+  }
+  return [...group].sort((x, y) => {
+    const sx = stat.get(x.teamId)!
+    const sy = stat.get(y.teamId)!
+    return sy.pts - sx.pts || (sy.gf - sy.ga) - (sx.gf - sx.ga) || sy.gf - sx.gf || stdTiebreak(x, y)
+  })
+}
+
+/**
+ * 从已完赛比分本地计算积分榜。
+ * 排序：积分 →（启用相互战绩时）同分组内相互积分 → 相互净胜球 → 相互进球 → 净胜球 → 进球 → 队名；
+ * 未启用时积分 → 净胜球 → 进球 → 队名（与 scripts/fetch-espn-scores.js 的通用链一致）。
+ * 返回已按名次排序、带上 rank 的行。
+ */
+export function computeStandings(matches: Match[], deductions: Record<number, number> = {}, opts: StandingsOpts = {}): RawStanding[] {
   const byTeam = new Map<number, RawStanding>()
   const get = (id: number, name: string): RawStanding => {
     let r = byTeam.get(id)
@@ -136,12 +187,20 @@ export function computeStandings(matches: Match[], deductions: Record<number, nu
       deduction: deduction || undefined,
     }
   })
-  rows.sort(
-    (x, y) =>
-      y.points - x.points ||
-      y.goalDiff - x.goalDiff ||
-      y.goalsFor - x.goalsFor ||
-      x.team.localeCompare(y.team),
-  )
-  return rows.map((r, i) => ({ ...r, rank: i + 1 }))
+  let ordered: RawStanding[]
+  if (opts.headToHead) {
+    rows.sort((x, y) => y.points - x.points)
+    ordered = []
+    let i = 0
+    while (i < rows.length) {
+      let j = i + 1
+      while (j < rows.length && rows[j].points === rows[i].points) j++
+      const group = rows.slice(i, j)
+      ordered.push(...(group.length > 1 ? orderTiedGroup(group, matches) : group))
+      i = j
+    }
+  } else {
+    ordered = [...rows].sort((x, y) => y.points - x.points || stdTiebreak(x, y))
+  }
+  return ordered.map((r, i) => ({ ...r, rank: i + 1 }))
 }

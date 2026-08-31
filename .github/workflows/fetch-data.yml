@@ -61,3 +61,10 @@ jobs:
             git commit -m "data: 每日抓取更新 $(date -u +%F)"
             git push
           fi
+
+      # ESPN 源数据体检（2026-08-31 中超积分榜对账事故后增设）：
+      # 三指纹——比分平却标胜者 / status=post 但 completed=false / 0-0 完赛 summary 空壳。
+      # 放在 commit 之后：红灯只示警不阻塞数据部署；可疑清单写入 Job Summary，
+      # 人工与官方赛果核对后写入 src/utils/standings.ts → ESPN_MATCH_FIXES 勘误表。
+      - name: Check ESPN data consistency
+        run: node scripts/check-suspicious-matches.js

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { applyForm, applyMatchFixes, computeStandings, ESPN_MATCH_FIXES, mergeStandings } from '../../src/utils/standings'
+import { applyForm, applyMatchFixes, computeStandings, ESPN_MATCH_FIXES, HEAD_TO_HEAD_TIEBREAK, mergeStandings } from '../../src/utils/standings'
 import type { RawStanding, RawXgStanding } from '../../src/types/static'
 import type { Match } from '../../src/types/models'
 
@@ -202,5 +202,73 @@ describe('applyMatchFixes（ESPN 源数据勘误表）', () => {
     expect(rows.find((r) => r.teamId === 131705)!.points).toBe(3) // 勘误后：辽宁 3 分、海港 0 分
     expect(rows.find((r) => r.teamId === 15515)!.points).toBe(0)
     expect(rows.find((r) => r.teamId === 131705)!.goalsFor).toBe(3)
+  })
+})
+
+describe('中超同分排序（官方规则：积分→相互积分→相互净胜球→相互进球→总净胜球→总进球）', () => {
+  const t = (id: number, name: string, score: number, win: boolean | null) =>
+    ({ id, name, abbreviation: name[0], logo: '', score, winner: win })
+  const m = (eid: string, hid: number, hn: string, hs: number, aid: number, an: string, as: number) =>
+    makeMatch({
+      eventId: eid,
+      home: t(hid, hn, hs, hs > as ? true : hs < as ? false : null),
+      away: t(aid, an, as, as > hs ? true : as < hs ? false : null),
+    })
+
+  // A、B 同 6 分：总净胜球 A(+7) > B(+4)；相互净胜球 B(+2) > A(-2)
+  const fixture = [
+    m('h1', 2, 'B', 3, 1, 'A', 0),
+    m('h2', 1, 'A', 1, 2, 'B', 0),
+    m('h3', 1, 'A', 9, 3, 'Y', 0),
+    m('h4', 2, 'B', 2, 3, 'Y', 0),
+  ]
+
+  it('相互比赛全部结束 → 按相互战绩压过总净胜球', () => {
+    const ids = computeStandings(fixture, {}, { headToHead: true }).map((r) => r.teamId)
+    expect(ids).toEqual([2, 1, 3]) // B 靠相互净胜球上位，Y 0 分垫底
+  })
+
+  it('开关关闭（五大联赛默认）→ 仍按总净胜球', () => {
+    const ids = computeStandings(fixture).map((r) => r.teamId)
+    expect(ids).toEqual([1, 2, 3])
+  })
+
+  it('相互对战未全部踢完（缺回合一）→ 回落总净胜球，不误用残缺相互战绩', () => {
+    const partial = [m('h1', 2, 'B', 3, 1, 'A', 0), m('h3', 1, 'A', 9, 3, 'Y', 0)]
+    // A、B 各 3 分；A 总净胜球 +6 > B +3；若残缺相互战绩被误用则 B 会压 A
+    const ids = computeStandings(partial, {}, { headToHead: true }).map((r) => r.teamId)
+    expect(ids).toEqual([1, 2, 3])
+  })
+
+  it('相互积分打平 → 比相互净胜球（本例 B 总净胜球高但相互吃亏）', () => {
+    // 一胜一负相互积分 3-3；相互净胜球 A +1 > B -1；总净胜球 B(+8) > A(+2)
+    const split = [
+      m('h1', 2, 'B', 2, 1, 'A', 0),
+      m('h2', 1, 'A', 3, 2, 'B', 0),
+      m('h3', 1, 'A', 1, 3, 'Y', 0),
+      m('h4', 2, 'B', 9, 3, 'Y', 0),
+    ]
+    const ids = computeStandings(split, {}, { headToHead: true }).map((r) => r.teamId)
+    expect(ids).toEqual([1, 2, 3])
+  })
+
+  it('相互积分/净胜球/进球全同（两回合同分）→ 逐级回落到总净胜球', () => {
+    const twin = [
+      m('h1', 2, 'B', 2, 1, 'A', 0),
+      m('h2', 1, 'A', 2, 2, 'B', 0),
+      m('h3', 1, 'A', 3, 3, 'Y', 0),
+      m('h4', 2, 'B', 1, 3, 'Y', 0),
+    ]
+    const ids = computeStandings(twin, {}, { headToHead: true }).map((r) => r.teamId)
+    expect(ids).toEqual([1, 2, 3]) // A 总净胜球 +3 > B +1
+  })
+
+  it('配置开关：仅中超启用相互战绩', () => {
+    expect(HEAD_TO_HEAD_TIEBREAK['chn.1']).toBe(true)
+    expect(HEAD_TO_HEAD_TIEBREAK['eng.1']).toBeFalsy()
+    expect(HEAD_TO_HEAD_TIEBREAK['esp.1']).toBeFalsy()
+    expect(HEAD_TO_HEAD_TIEBREAK['ita.1']).toBeFalsy()
+    expect(HEAD_TO_HEAD_TIEBREAK['ger.1']).toBeFalsy()
+    expect(HEAD_TO_HEAD_TIEBREAK['fra.1']).toBeFalsy()
   })
 })
