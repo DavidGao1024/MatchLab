@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-30T00:56:29.085Z",
+  "updateTime": "2026-08-31T01:02:27.756Z",
   "league": "fra.1",
   "month": "2026-08",
   "count": 18,
@@ -399,17 +399,18 @@
       "eventId": "401876479",
       "date": "2026-08-30T13:00Z",
       "name": "Nice at Paris FC",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Stade Jean Bouin",
       "home": {
         "id": 6851,
         "name": "Paris FC",
         "abbreviation": "PAR",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       },
       "away": {
         "id": 2502,
@@ -424,24 +425,25 @@
       "eventId": "401876478",
       "date": "2026-08-30T15:15Z",
       "name": "Le Mans at Stade Rennais",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+16'",
+      "period": 2,
       "venue": "Roazhon Park",
       "home": {
         "id": 169,
         "name": "Stade Rennais",
         "abbreviation": "REN",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       },
       "away": {
         "id": 2697,
         "name": "Le Mans",
         "abbreviation": "MNS",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       }
     },
@@ -449,17 +451,18 @@
       "eventId": "401876480",
       "date": "2026-08-30T18:45Z",
       "name": "Marseille at AS Monaco",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Stade Louis II",
       "home": {
         "id": 174,
         "name": "AS Monaco",
         "abbreviation": "MON",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 176,
