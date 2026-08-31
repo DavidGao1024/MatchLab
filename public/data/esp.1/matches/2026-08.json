@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-30T00:56:18.786Z",
+  "updateTime": "2026-08-31T01:02:16.881Z",
   "league": "esp.1",
   "month": "2026-08",
   "count": 30,
@@ -659,17 +659,18 @@
       "eventId": "401882899",
       "date": "2026-08-30T15:00Z",
       "name": "Málaga at Real Madrid",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Santiago Bernabéu",
       "home": {
         "id": 86,
         "name": "Real Madrid",
         "abbreviation": "RMA",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
-        "score": 0,
-        "winner": null
+        "score": 4,
+        "winner": true
       },
       "away": {
         "id": 99,
@@ -684,24 +685,25 @@
       "eventId": "401882904",
       "date": "2026-08-30T17:30Z",
       "name": "Valencia at Deportivo",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Riazor",
       "home": {
         "id": 90,
         "name": "Deportivo",
         "abbreviation": "DEP",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/90.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       },
       "away": {
         "id": 94,
         "name": "Valencia",
         "abbreviation": "VAL",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -709,9 +711,10 @@
       "eventId": "401882905",
       "date": "2026-08-30T19:30Z",
       "name": "Athletic Club at Celta Vigo",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+3'",
+      "period": 2,
       "venue": "Balaidos",
       "home": {
         "id": 85,
@@ -726,8 +729,8 @@
         "name": "Athletic Club",
         "abbreviation": "ATH",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/93.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       }
     },
     {
