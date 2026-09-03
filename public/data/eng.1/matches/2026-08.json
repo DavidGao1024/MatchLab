@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-31T01:02:13.326Z",
+  "updateTime": "2026-09-03T00:53:48.728Z",
   "league": "eng.1",
   "month": "2026-08",
   "count": 20,
@@ -503,9 +503,10 @@
       "eventId": "401879295",
       "date": "2026-08-31T19:00Z",
       "name": "Arsenal at Aston Villa",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+10'",
+      "period": 2,
       "venue": "Villa Park",
       "home": {
         "id": 362,
@@ -520,8 +521,8 @@
         "name": "Arsenal",
         "abbreviation": "ARS",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
-        "score": 0,
-        "winner": null
+        "score": 1,
+        "winner": true
       }
     }
   ]

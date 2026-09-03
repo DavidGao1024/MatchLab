@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-08-31T01:02:16.293Z",
+  "updateTime": "2026-09-03T00:53:51.518Z",
   "league": "eng.1",
   "season": "2026",
-  "matchesCounted": 19,
+  "matchesCounted": 20,
   "count": 20,
   "standings": [
     {
@@ -21,6 +21,19 @@
     },
     {
       "rank": 2,
+      "teamId": 359,
+      "team": "Arsenal",
+      "played": 2,
+      "won": 2,
+      "drawn": 0,
+      "lost": 0,
+      "goalsFor": 4,
+      "goalsAgainst": 0,
+      "goalDiff": 4,
+      "points": 6
+    },
+    {
+      "rank": 3,
       "teamId": 306,
       "team": "Hull City",
       "played": 2,
@@ -33,7 +46,7 @@
       "points": 6
     },
     {
-      "rank": 3,
+      "rank": 4,
       "teamId": 363,
       "team": "Chelsea",
       "played": 2,
@@ -46,7 +59,7 @@
       "points": 6
     },
     {
-      "rank": 4,
+      "rank": 5,
       "teamId": 337,
       "team": "Brentford",
       "played": 2,
@@ -59,7 +72,7 @@
       "points": 4
     },
     {
-      "rank": 5,
+      "rank": 6,
       "teamId": 361,
       "team": "Newcastle United",
       "played": 2,
@@ -72,7 +85,7 @@
       "points": 4
     },
     {
-      "rank": 6,
+      "rank": 7,
       "teamId": 368,
       "team": "Everton",
       "played": 2,
@@ -85,7 +98,7 @@
       "points": 4
     },
     {
-      "rank": 7,
+      "rank": 8,
       "teamId": 357,
       "team": "Leeds United",
       "played": 2,
@@ -98,7 +111,7 @@
       "points": 4
     },
     {
-      "rank": 8,
+      "rank": 9,
       "teamId": 331,
       "team": "Brighton & Hove Albion",
       "played": 2,
@@ -107,19 +120,6 @@
       "lost": 1,
       "goalsFor": 7,
       "goalsAgainst": 4,
-      "goalDiff": 3,
-      "points": 3
-    },
-    {
-      "rank": 9,
-      "teamId": 359,
-      "team": "Arsenal",
-      "played": 1,
-      "won": 1,
-      "drawn": 0,
-      "lost": 0,
-      "goalsFor": 3,
-      "goalsAgainst": 0,
       "goalDiff": 3,
       "points": 3
     },
@@ -216,19 +216,6 @@
     },
     {
       "rank": 17,
-      "teamId": 362,
-      "team": "Aston Villa",
-      "played": 1,
-      "won": 0,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 0,
-      "goalsAgainst": 4,
-      "goalDiff": -4,
-      "points": 0
-    },
-    {
-      "rank": 18,
       "teamId": 388,
       "team": "Coventry City",
       "played": 2,
@@ -241,7 +228,7 @@
       "points": 0
     },
     {
-      "rank": 19,
+      "rank": 18,
       "teamId": 384,
       "team": "Crystal Palace",
       "played": 2,
@@ -250,6 +237,19 @@
       "lost": 2,
       "goalsFor": 1,
       "goalsAgainst": 6,
+      "goalDiff": -5,
+      "points": 0
+    },
+    {
+      "rank": 19,
+      "teamId": 362,
+      "team": "Aston Villa",
+      "played": 2,
+      "won": 0,
+      "drawn": 0,
+      "lost": 2,
+      "goalsFor": 0,
+      "goalsAgainst": 5,
       "goalDiff": -5,
       "points": 0
     },

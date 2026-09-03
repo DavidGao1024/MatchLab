@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-08-31T01:02:17.180Z",
+  "updateTime": "2026-09-03T00:53:52.328Z",
   "league": "esp.1",
   "month": "2026-09",
   "count": 40,
@@ -87,7 +87,7 @@
       "status": "pre",
       "completed": false,
       "clock": "0'",
-      "venue": "Estadio de Vallecas",
+      "venue": "Estadio Municipal de Butarque",
       "home": {
         "id": 101,
         "name": "Rayo Vallecano",
@@ -956,33 +956,8 @@
       }
     },
     {
-      "eventId": "401882858",
-      "date": "2026-09-20T18:00Z",
-      "name": "Real Sociedad at Valencia",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
-      "venue": "Mestalla Stadium",
-      "home": {
-        "id": 94,
-        "name": "Valencia",
-        "abbreviation": "VAL",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
-        "score": 0,
-        "winner": null
-      },
-      "away": {
-        "id": 89,
-        "name": "Real Sociedad",
-        "abbreviation": "RSO",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
-        "score": 0,
-        "winner": null
-      }
-    },
-    {
       "eventId": "401882857",
-      "date": "2026-09-20T18:00Z",
+      "date": "2026-09-20T16:30Z",
       "name": "Levante at Villarreal",
       "status": "pre",
       "completed": false,
@@ -1001,6 +976,31 @@
         "name": "Levante",
         "abbreviation": "LEV",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "401882858",
+      "date": "2026-09-20T19:00Z",
+      "name": "Real Sociedad at Valencia",
+      "status": "pre",
+      "completed": false,
+      "clock": "0'",
+      "venue": "Mestalla Stadium",
+      "home": {
+        "id": 94,
+        "name": "Valencia",
+        "abbreviation": "VAL",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 89,
+        "name": "Real Sociedad",
+        "abbreviation": "RSO",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
         "score": 0,
         "winner": null
       }

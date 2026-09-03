@@ -1,13 +1,26 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-08-31T01:02:19.907Z",
+  "updateTime": "2026-09-03T00:53:54.873Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 28,
+  "matchesCounted": 30,
   "count": 20,
   "standings": [
     {
       "rank": 1,
+      "teamId": 83,
+      "team": "Barcelona",
+      "played": 3,
+      "won": 3,
+      "drawn": 0,
+      "lost": 0,
+      "goalsFor": 12,
+      "goalsAgainst": 2,
+      "goalDiff": 10,
+      "points": 9
+    },
+    {
+      "rank": 2,
       "teamId": 86,
       "team": "Real Madrid",
       "played": 3,
@@ -20,7 +33,7 @@
       "points": 9
     },
     {
-      "rank": 2,
+      "rank": 3,
       "teamId": 1068,
       "team": "Atlético Madrid",
       "played": 3,
@@ -33,7 +46,7 @@
       "points": 7
     },
     {
-      "rank": 3,
+      "rank": 4,
       "teamId": 96,
       "team": "Alavés",
       "played": 3,
@@ -46,20 +59,20 @@
       "points": 7
     },
     {
-      "rank": 4,
-      "teamId": 83,
-      "team": "Barcelona",
-      "played": 2,
+      "rank": 5,
+      "teamId": 97,
+      "team": "Osasuna",
+      "played": 3,
       "won": 2,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
-      "goalsFor": 7,
-      "goalsAgainst": 0,
-      "goalDiff": 7,
-      "points": 6
+      "goalsFor": 3,
+      "goalsAgainst": 1,
+      "goalDiff": 2,
+      "points": 7
     },
     {
-      "rank": 5,
+      "rank": 6,
       "teamId": 243,
       "team": "Sevilla",
       "played": 3,
@@ -72,7 +85,7 @@
       "points": 6
     },
     {
-      "rank": 6,
+      "rank": 7,
       "teamId": 244,
       "team": "Real Betis",
       "played": 3,
@@ -85,7 +98,7 @@
       "points": 6
     },
     {
-      "rank": 7,
+      "rank": 8,
       "teamId": 90,
       "team": "Deportivo",
       "played": 3,
@@ -96,19 +109,6 @@
       "goalsAgainst": 3,
       "goalDiff": 2,
       "points": 5
-    },
-    {
-      "rank": 8,
-      "teamId": 97,
-      "team": "Osasuna",
-      "played": 2,
-      "won": 1,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 2,
-      "goalsAgainst": 1,
-      "goalDiff": 1,
-      "points": 4
     },
     {
       "rank": 9,
@@ -164,19 +164,6 @@
     },
     {
       "rank": 13,
-      "teamId": 2922,
-      "team": "Getafe",
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 1,
-      "goalsAgainst": 3,
-      "goalDiff": -2,
-      "points": 3
-    },
-    {
-      "rank": 14,
       "teamId": 89,
       "team": "Real Sociedad",
       "played": 3,
@@ -185,6 +172,19 @@
       "lost": 2,
       "goalsFor": 3,
       "goalsAgainst": 6,
+      "goalDiff": -3,
+      "points": 3
+    },
+    {
+      "rank": 14,
+      "teamId": 2922,
+      "team": "Getafe",
+      "played": 3,
+      "won": 1,
+      "drawn": 0,
+      "lost": 2,
+      "goalsFor": 1,
+      "goalsAgainst": 4,
       "goalDiff": -3,
       "points": 3
     },
@@ -203,19 +203,6 @@
     },
     {
       "rank": 16,
-      "teamId": 101,
-      "team": "Rayo Vallecano",
-      "played": 2,
-      "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 2,
-      "goalsAgainst": 3,
-      "goalDiff": -1,
-      "points": 1
-    },
-    {
-      "rank": 17,
       "teamId": 85,
       "team": "Celta Vigo",
       "played": 3,
@@ -228,7 +215,7 @@
       "points": 1
     },
     {
-      "rank": 18,
+      "rank": 17,
       "teamId": 94,
       "team": "Valencia",
       "played": 3,
@@ -238,6 +225,19 @@
       "goalsFor": 1,
       "goalsAgainst": 4,
       "goalDiff": -3,
+      "points": 1
+    },
+    {
+      "rank": 18,
+      "teamId": 101,
+      "team": "Rayo Vallecano",
+      "played": 3,
+      "won": 0,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 4,
+      "goalsAgainst": 8,
+      "goalDiff": -4,
       "points": 1
     },
     {
