@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-09-03T00:53:55.685Z",
+  "updateTime": "2026-09-05T00:31:30.423Z",
   "league": "ita.1",
   "month": "2026-09",
   "count": 30,
@@ -9,16 +9,17 @@
       "eventId": "401874744",
       "date": "2026-09-04T18:45Z",
       "name": "Como at Genoa",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Stadio Luigi Ferraris",
       "home": {
         "id": 3263,
         "name": "Genoa",
         "abbreviation": "GEN",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -26,8 +27,8 @@
         "name": "Como",
         "abbreviation": "COMO",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2572.png",
-        "score": 0,
-        "winner": null
+        "score": 4,
+        "winner": true
       }
     },
     {

@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-03T00:53:51.518Z",
+  "updateTime": "2026-09-05T00:31:26.011Z",
   "league": "eng.1",
   "season": "2026",
-  "matchesCounted": 20,
+  "matchesCounted": 21,
   "count": 20,
   "standings": [
     {
@@ -60,6 +60,19 @@
     },
     {
       "rank": 5,
+      "teamId": 364,
+      "team": "Liverpool",
+      "played": 3,
+      "won": 1,
+      "drawn": 2,
+      "lost": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 4,
+      "goalDiff": 2,
+      "points": 5
+    },
+    {
+      "rank": 6,
       "teamId": 337,
       "team": "Brentford",
       "played": 2,
@@ -72,7 +85,7 @@
       "points": 4
     },
     {
-      "rank": 6,
+      "rank": 7,
       "teamId": 361,
       "team": "Newcastle United",
       "played": 2,
@@ -85,7 +98,7 @@
       "points": 4
     },
     {
-      "rank": 7,
+      "rank": 8,
       "teamId": 368,
       "team": "Everton",
       "played": 2,
@@ -98,7 +111,7 @@
       "points": 4
     },
     {
-      "rank": 8,
+      "rank": 9,
       "teamId": 357,
       "team": "Leeds United",
       "played": 2,
@@ -111,7 +124,7 @@
       "points": 4
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 331,
       "team": "Brighton & Hove Albion",
       "played": 2,
@@ -124,7 +137,7 @@
       "points": 3
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 360,
       "team": "Manchester United",
       "played": 2,
@@ -137,7 +150,7 @@
       "points": 3
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 366,
       "team": "Sunderland",
       "played": 2,
@@ -150,30 +163,17 @@
       "points": 3
     },
     {
-      "rank": 12,
+      "rank": 13,
       "teamId": 373,
       "team": "Ipswich Town",
-      "played": 2,
+      "played": 3,
       "won": 1,
       "drawn": 0,
-      "lost": 1,
+      "lost": 2,
       "goalsFor": 4,
-      "goalsAgainst": 6,
-      "goalDiff": -2,
+      "goalsAgainst": 8,
+      "goalDiff": -4,
       "points": 3
-    },
-    {
-      "rank": 13,
-      "teamId": 364,
-      "team": "Liverpool",
-      "played": 2,
-      "won": 0,
-      "drawn": 2,
-      "lost": 0,
-      "goalsFor": 4,
-      "goalsAgainst": 4,
-      "goalDiff": 0,
-      "points": 2
     },
     {
       "rank": 14,
