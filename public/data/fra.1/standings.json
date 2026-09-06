@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-05T00:31:39.688Z",
+  "updateTime": "2026-09-06T00:27:33.782Z",
   "league": "fra.1",
   "season": "2026",
-  "matchesCounted": 21,
+  "matchesCounted": 24,
   "count": 18,
   "standings": [
     {
@@ -47,6 +47,19 @@
     },
     {
       "rank": 4,
+      "teamId": 6997,
+      "team": "Brest",
+      "played": 3,
+      "won": 1,
+      "drawn": 2,
+      "lost": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 5,
+      "goalDiff": 1,
+      "points": 5
+    },
+    {
+      "rank": 5,
       "teamId": 6851,
       "team": "Paris FC",
       "played": 2,
@@ -59,7 +72,7 @@
       "points": 4
     },
     {
-      "rank": 5,
+      "rank": 6,
       "teamId": 169,
       "team": "Stade Rennais",
       "played": 2,
@@ -72,7 +85,7 @@
       "points": 4
     },
     {
-      "rank": 6,
+      "rank": 7,
       "teamId": 170,
       "team": "Troyes",
       "played": 2,
@@ -85,20 +98,20 @@
       "points": 4
     },
     {
-      "rank": 7,
-      "teamId": 175,
-      "team": "Lens",
-      "played": 2,
+      "rank": 8,
+      "teamId": 273,
+      "team": "Lorient",
+      "played": 3,
       "won": 1,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
-      "goalsFor": 6,
-      "goalsAgainst": 4,
-      "goalDiff": 2,
-      "points": 3
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "goalDiff": 0,
+      "points": 4
     },
     {
-      "rank": 8,
+      "rank": 9,
       "teamId": 176,
       "team": "Marseille",
       "played": 2,
@@ -111,7 +124,20 @@
       "points": 3
     },
     {
-      "rank": 9,
+      "rank": 10,
+      "teamId": 175,
+      "team": "Lens",
+      "played": 3,
+      "won": 1,
+      "drawn": 0,
+      "lost": 2,
+      "goalsFor": 6,
+      "goalsAgainst": 5,
+      "goalDiff": 1,
+      "points": 3
+    },
+    {
+      "rank": 11,
       "teamId": 7868,
       "team": "Angers",
       "played": 2,
@@ -124,7 +150,7 @@
       "points": 3
     },
     {
-      "rank": 10,
+      "rank": 12,
       "teamId": 180,
       "team": "Strasbourg",
       "played": 2,
@@ -137,20 +163,20 @@
       "points": 3
     },
     {
-      "rank": 11,
-      "teamId": 6997,
-      "team": "Brest",
-      "played": 2,
+      "rank": 13,
+      "teamId": 2697,
+      "team": "Le Mans",
+      "played": 3,
       "won": 0,
       "drawn": 2,
-      "lost": 0,
-      "goalsFor": 4,
-      "goalsAgainst": 4,
-      "goalDiff": 0,
+      "lost": 1,
+      "goalsFor": 5,
+      "goalsAgainst": 6,
+      "goalDiff": -1,
       "points": 2
     },
     {
-      "rank": 12,
+      "rank": 14,
       "teamId": 160,
       "team": "Paris Saint-Germain",
       "played": 3,
@@ -163,46 +189,33 @@
       "points": 2
     },
     {
-      "rank": 13,
-      "teamId": 2697,
-      "team": "Le Mans",
-      "played": 2,
-      "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 4,
-      "goalsAgainst": 5,
-      "goalDiff": -1,
-      "points": 1
-    },
-    {
-      "rank": 14,
-      "teamId": 3236,
-      "team": "Le Havre AC",
-      "played": 2,
-      "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 1,
-      "goalsAgainst": 2,
-      "goalDiff": -1,
-      "points": 1
-    },
-    {
       "rank": 15,
-      "teamId": 273,
-      "team": "Lorient",
-      "played": 2,
+      "teamId": 2502,
+      "team": "Nice",
+      "played": 3,
       "won": 0,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 1,
       "goalsFor": 1,
-      "goalsAgainst": 2,
-      "goalDiff": -1,
-      "points": 1
+      "goalsAgainst": 4,
+      "goalDiff": -3,
+      "points": 2
     },
     {
       "rank": 16,
+      "teamId": 3236,
+      "team": "Le Havre AC",
+      "played": 3,
+      "won": 0,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 2,
+      "goalsAgainst": 4,
+      "goalDiff": -2,
+      "points": 1
+    },
+    {
+      "rank": 17,
       "teamId": 179,
       "team": "Toulouse",
       "played": 3,
@@ -211,19 +224,6 @@
       "lost": 2,
       "goalsFor": 2,
       "goalsAgainst": 5,
-      "goalDiff": -3,
-      "points": 1
-    },
-    {
-      "rank": 17,
-      "teamId": 2502,
-      "team": "Nice",
-      "played": 2,
-      "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 0,
-      "goalsAgainst": 3,
       "goalDiff": -3,
       "points": 1
     },

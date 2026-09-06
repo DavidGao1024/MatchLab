@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-08-22T07:22:44.135Z",
+  "updateTime": "2026-09-06T00:41:25.158Z",
   "league": "chn.1",
   "playersScanned": 499,
-  "count": 47,
+  "count": 44,
   "transfers": [
     {
       "playerId": 150127,
@@ -208,18 +208,6 @@
       "type": "Allocation",
       "amount": 0,
       "displayAmount": "Allocation"
-    },
-    {
-      "playerId": 173386,
-      "playerName": "Yaw Yeboah",
-      "date": "2025-01-24T08:00Z",
-      "fromTeamId": 22529,
-      "fromTeam": "San Diego FC",
-      "toTeamId": 18966,
-      "toTeam": "LAFC",
-      "type": "Fee",
-      "amount": 50000,
-      "displayAmount": "50000"
     },
     {
       "playerId": 178003,
@@ -522,18 +510,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 298909,
-      "playerName": "Matt Orr",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 2555,
-      "fromTeam": "Linfield",
-      "toTeamId": 393,
-      "toTeam": "Nottingham Forest",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 301780,
       "playerName": "Jeffinho",
       "date": "2023-01-31T08:00Z",
@@ -556,18 +532,6 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
-    },
-    {
-      "playerId": 301780,
-      "playerName": "Jeffinho",
-      "date": "2025-01-01T08:00Z",
-      "fromTeamId": 167,
-      "fromTeam": "Lyon",
-      "toTeamId": 6086,
-      "toTeam": "Botafogo",
-      "type": "Fee",
-      "amount": 5300000,
-      "displayAmount": "5300000"
     }
   ]
 }
