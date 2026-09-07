@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-09-06T00:27:23.749Z",
+  "updateTime": "2026-09-07T00:34:24.605Z",
   "league": "ita.1",
   "month": "2026-09",
   "count": 30,
@@ -113,24 +113,25 @@
       "eventId": "401874768",
       "date": "2026-09-06T13:00Z",
       "name": "Venezia at Frosinone",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
       "venue": "Stadio Benito Stirpe",
       "home": {
         "id": 4057,
         "name": "Frosinone",
         "abbreviation": "FRO",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       },
       "away": {
         "id": 17530,
         "name": "Venezia",
         "abbreviation": "VEN",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       }
     },
@@ -138,16 +139,17 @@
       "eventId": "401874987",
       "date": "2026-09-06T13:00Z",
       "name": "Monza at Parma",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Ennio Tardini",
       "home": {
         "id": 115,
         "name": "Parma",
         "abbreviation": "PAR",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/115.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -155,7 +157,7 @@
         "name": "Monza",
         "abbreviation": "MON",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4007.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -163,16 +165,17 @@
       "eventId": "401874751",
       "date": "2026-09-06T16:00Z",
       "name": "Sassuolo at Bologna",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Renato Dall'Ara",
       "home": {
         "id": 107,
         "name": "Bologna",
         "abbreviation": "BOL",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       },
       "away": {
@@ -180,7 +183,7 @@
         "name": "Sassuolo",
         "abbreviation": "SAS",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       }
     },
@@ -188,16 +191,17 @@
       "eventId": "401874954",
       "date": "2026-09-06T18:45Z",
       "name": "AC Milan at Juventus",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Allianz Stadium",
       "home": {
         "id": 111,
         "name": "Juventus",
         "abbreviation": "JUV",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -205,7 +209,7 @@
         "name": "AC Milan",
         "abbreviation": "MIL",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },

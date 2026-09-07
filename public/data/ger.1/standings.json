@@ -1,13 +1,26 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-06T00:27:30.304Z",
+  "updateTime": "2026-09-07T00:34:30.830Z",
   "league": "ger.1",
   "season": "2026",
-  "matchesCounted": 16,
+  "matchesCounted": 18,
   "count": 18,
   "standings": [
     {
       "rank": 1,
+      "teamId": 3841,
+      "team": "FC Augsburg",
+      "played": 2,
+      "won": 2,
+      "drawn": 0,
+      "lost": 0,
+      "goalsFor": 7,
+      "goalsAgainst": 1,
+      "goalDiff": 6,
+      "points": 6
+    },
+    {
+      "rank": 2,
       "teamId": 126,
       "team": "SC Freiburg",
       "played": 2,
@@ -20,7 +33,7 @@
       "points": 6
     },
     {
-      "rank": 2,
+      "rank": 3,
       "teamId": 124,
       "team": "Borussia Dortmund",
       "played": 2,
@@ -33,7 +46,7 @@
       "points": 6
     },
     {
-      "rank": 3,
+      "rank": 4,
       "teamId": 10388,
       "team": "SV Elversberg",
       "played": 2,
@@ -46,7 +59,20 @@
       "points": 6
     },
     {
-      "rank": 4,
+      "rank": 5,
+      "teamId": 2950,
+      "team": "Mainz",
+      "played": 2,
+      "won": 1,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 5,
+      "goalsAgainst": 0,
+      "goalDiff": 5,
+      "points": 4
+    },
+    {
+      "rank": 6,
       "teamId": 132,
       "team": "Bayern Munich",
       "played": 2,
@@ -59,7 +85,7 @@
       "points": 4
     },
     {
-      "rank": 5,
+      "rank": 7,
       "teamId": 131,
       "team": "Bayer Leverkusen",
       "played": 2,
@@ -72,20 +98,7 @@
       "points": 3
     },
     {
-      "rank": 6,
-      "teamId": 3841,
-      "team": "FC Augsburg",
-      "played": 1,
-      "won": 1,
-      "drawn": 0,
-      "lost": 0,
-      "goalsFor": 3,
-      "goalsAgainst": 0,
-      "goalDiff": 3,
-      "points": 3
-    },
-    {
-      "rank": 7,
+      "rank": 8,
       "teamId": 11420,
       "team": "RB Leipzig",
       "played": 2,
@@ -98,7 +111,7 @@
       "points": 3
     },
     {
-      "rank": 8,
+      "rank": 9,
       "teamId": 134,
       "team": "VfB Stuttgart",
       "played": 2,
@@ -111,7 +124,7 @@
       "points": 3
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 137,
       "team": "Werder Bremen",
       "played": 2,
@@ -124,7 +137,7 @@
       "points": 3
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 122,
       "team": "FC Cologne",
       "played": 2,
@@ -137,33 +150,7 @@
       "points": 3
     },
     {
-      "rank": 11,
-      "teamId": 125,
-      "team": "Eintracht Frankfurt",
-      "played": 1,
-      "won": 0,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 3,
-      "goalsAgainst": 3,
-      "goalDiff": 0,
-      "points": 1
-    },
-    {
       "rank": 12,
-      "teamId": 2950,
-      "team": "Mainz",
-      "played": 1,
-      "won": 0,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 0,
-      "goalsAgainst": 0,
-      "goalDiff": 0,
-      "points": 1
-    },
-    {
-      "rank": 13,
       "teamId": 3307,
       "team": "SC Paderborn 07",
       "played": 2,
@@ -173,6 +160,19 @@
       "goalsFor": 0,
       "goalsAgainst": 1,
       "goalDiff": -1,
+      "points": 1
+    },
+    {
+      "rank": 13,
+      "teamId": 125,
+      "team": "Eintracht Frankfurt",
+      "played": 2,
+      "won": 0,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 4,
+      "goalsAgainst": 7,
+      "goalDiff": -3,
       "points": 1
     },
     {
@@ -216,19 +216,6 @@
     },
     {
       "rank": 17,
-      "teamId": 127,
-      "team": "Hamburg SV",
-      "played": 1,
-      "won": 0,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 0,
-      "goalsAgainst": 2,
-      "goalDiff": -2,
-      "points": 0
-    },
-    {
-      "rank": 18,
       "teamId": 268,
       "team": "Borussia Mönchengladbach",
       "played": 2,
@@ -238,6 +225,19 @@
       "goalsFor": 3,
       "goalsAgainst": 7,
       "goalDiff": -4,
+      "points": 0
+    },
+    {
+      "rank": 18,
+      "teamId": 127,
+      "team": "Hamburg SV",
+      "played": 2,
+      "won": 0,
+      "drawn": 0,
+      "lost": 2,
+      "goalsFor": 0,
+      "goalsAgainst": 7,
+      "goalDiff": -7,
       "points": 0
     }
   ]

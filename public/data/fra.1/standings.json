@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-06T00:27:33.782Z",
+  "updateTime": "2026-09-07T00:34:34.348Z",
   "league": "fra.1",
   "season": "2026",
-  "matchesCounted": 24,
+  "matchesCounted": 27,
   "count": 18,
   "standings": [
     {
@@ -34,6 +34,19 @@
     },
     {
       "rank": 3,
+      "teamId": 6851,
+      "team": "Paris FC",
+      "played": 3,
+      "won": 2,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 2,
+      "goalDiff": 4,
+      "points": 7
+    },
+    {
+      "rank": 4,
       "teamId": 166,
       "team": "Lille",
       "played": 3,
@@ -46,7 +59,33 @@
       "points": 7
     },
     {
-      "rank": 4,
+      "rank": 5,
+      "teamId": 169,
+      "team": "Stade Rennais",
+      "played": 3,
+      "won": 2,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 7,
+      "goalsAgainst": 5,
+      "goalDiff": 2,
+      "points": 7
+    },
+    {
+      "rank": 6,
+      "teamId": 180,
+      "team": "Strasbourg",
+      "played": 3,
+      "won": 2,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 8,
+      "goalsAgainst": 7,
+      "goalDiff": 1,
+      "points": 6
+    },
+    {
+      "rank": 7,
       "teamId": 6997,
       "team": "Brest",
       "played": 3,
@@ -57,45 +96,6 @@
       "goalsAgainst": 5,
       "goalDiff": 1,
       "points": 5
-    },
-    {
-      "rank": 5,
-      "teamId": 6851,
-      "team": "Paris FC",
-      "played": 2,
-      "won": 1,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 3,
-      "goalsAgainst": 0,
-      "goalDiff": 3,
-      "points": 4
-    },
-    {
-      "rank": 6,
-      "teamId": 169,
-      "team": "Stade Rennais",
-      "played": 2,
-      "won": 1,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 5,
-      "goalsAgainst": 4,
-      "goalDiff": 1,
-      "points": 4
-    },
-    {
-      "rank": 7,
-      "teamId": 170,
-      "team": "Troyes",
-      "played": 2,
-      "won": 1,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 2,
-      "goalsAgainst": 1,
-      "goalDiff": 1,
-      "points": 4
     },
     {
       "rank": 8,
@@ -112,16 +112,16 @@
     },
     {
       "rank": 9,
-      "teamId": 176,
-      "team": "Marseille",
-      "played": 2,
+      "teamId": 170,
+      "team": "Troyes",
+      "played": 3,
       "won": 1,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
       "goalsFor": 4,
-      "goalsAgainst": 2,
-      "goalDiff": 2,
-      "points": 3
+      "goalsAgainst": 7,
+      "goalDiff": -3,
+      "points": 4
     },
     {
       "rank": 10,
@@ -138,28 +138,28 @@
     },
     {
       "rank": 11,
-      "teamId": 7868,
-      "team": "Angers",
-      "played": 2,
+      "teamId": 176,
+      "team": "Marseille",
+      "played": 3,
       "won": 1,
       "drawn": 0,
-      "lost": 1,
-      "goalsFor": 3,
-      "goalsAgainst": 3,
-      "goalDiff": 0,
+      "lost": 2,
+      "goalsFor": 6,
+      "goalsAgainst": 5,
+      "goalDiff": 1,
       "points": 3
     },
     {
       "rank": 12,
-      "teamId": 180,
-      "team": "Strasbourg",
-      "played": 2,
+      "teamId": 7868,
+      "team": "Angers",
+      "played": 3,
       "won": 1,
       "drawn": 0,
-      "lost": 1,
-      "goalsFor": 2,
+      "lost": 2,
+      "goalsFor": 4,
       "goalsAgainst": 5,
-      "goalDiff": -3,
+      "goalDiff": -1,
       "points": 3
     },
     {
