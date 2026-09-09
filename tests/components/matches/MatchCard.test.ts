@@ -33,6 +33,14 @@ describe('MatchCard plain 模式', () => {
     expect(names[1].classes()).toContain('text-white')
     expect(names[1].classes()).not.toContain('text-slate-500')
   })
+
+  it('leagueTag 徽标：传入则底栏出现该徽标节点，不传则无（默认零影响）', () => {
+    const withTag = mount(MatchCard, { props: { match, league: 'eng.1', leagueTag: '英超' } })
+    expect(withTag.find('.league-tag').exists()).toBe(true)
+    expect(withTag.find('.league-tag').text()).toBe('英超')
+    const withoutTag = mount(MatchCard, { props: { match, league: 'eng.1' } })
+    expect(withoutTag.find('.league-tag').exists()).toBe(false)
+  })
 })
 
 describe('MatchList 透传 plain', () => {

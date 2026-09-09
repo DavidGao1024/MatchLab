@@ -80,6 +80,21 @@ export async function fetchLiveScores(league: LeagueSlug, month: string): Promis
   return data
 }
 
+/** 战报带专用：任意日期区间的实时比分（YYYY-MM-DD，±时区富余由调用方放宽区间）。
+ *  与 fetchLiveScores 共用 scoreCache 与 TTL_DEFAULT；区间键 60s 缓存 */
+export async function fetchScoresRange(league: LeagueSlug, fromDay: string, toDay: string): Promise<Match[]> {
+  const key = `range:${league}:${fromDay}:${toDay}`
+  const hit = scoreCache.get(key)
+  if (hit && Date.now() - hit.ts < TTL_DEFAULT) return hit.data
+  const compact = (d: string) => d.replace(/-/g, '')
+  const res = await fetch(`${SITE_API}/${league}/scoreboard?dates=${compact(fromDay)}-${compact(toDay)}&limit=200`)
+  if (!res.ok) throw new Error(`ESPN HTTP ${res.status}`)
+  const sb = (await res.json()) as EspnScoreboard
+  const data = (sb.events ?? []).map(normalizeEvent).filter((m): m is Match => m !== null)
+  scoreCache.set(key, { data, ts: Date.now() })
+  return data
+}
+
 // ===== Phase 3：比赛详情弹窗 summary 端点（CORS 已验证，与 scoreboard 同源同端点族）=====
 
 /** 解析阵型串 "3-5-2" → [3, 5, 2]（后卫/中场/前锋）；GK 单独 */

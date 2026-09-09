@@ -243,8 +243,7 @@ export const TEAM_ZH: Record<string, string> = {
 const UI: Record<string, { zh: string; en: string }> = {
   'nav.standings': { zh: '积分榜', en: 'Table' },
   'nav.schedule': { zh: '赛程', en: 'Fixtures' },
-  'home.lastRound': { zh: '上轮战报', en: 'Latest Round' },
-  'home.viewFull': { zh: '查看完整赛程', en: 'Full fixtures' },
+  'home.lastRound': { zh: '昨日战报', en: "Yesterday's Results" },
   'home.featured': { zh: '焦点联赛', en: 'Featured' },
   'home.enter': { zh: '进入', en: 'Enter' },
   'home.teamsUnit': { zh: '队', en: 'teams' },

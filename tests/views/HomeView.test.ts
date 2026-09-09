@@ -37,9 +37,26 @@ function mockData() {
     if (url.includes('leagues.json')) return ok({ leagues })
     if (url.includes('meta.json')) return ok({ season: '2026', seasonType: 'european' })
     if (url.includes('teams.json')) {
-      return ok({ teams: [{ id: 1, displayName: 'Team', shortDisplayName: 'Team', abbreviation: 'T', color: '#123456', alternateColor: '#FFFFFF', logo: '', logoDark: '' }] })
+      return ok({ teams: [
+        { id: 1, displayName: 'Team', shortDisplayName: 'Team', abbreviation: 'T', color: '#123456', alternateColor: '#FFFFFF', logo: '', logoDark: '' },
+        { id: 2, displayName: 'Rival', shortDisplayName: 'Rival', abbreviation: 'R', color: '#654321', alternateColor: '#FFFFFF', logo: '', logoDark: '' },
+      ] })
     }
-    // 积分榜各月份赛程 / 当月直播比分 → 404 出空榜即可
+    // （战报带请求：site.api scoreboard → 两队完赛；26 小时前恒落在回看窗内且不属今天）
+    // 良性副作用：积分榜当月直播比分（fetchLiveScores）同 URL 也拿到这场 2:1，空榜变一行榜，不影响既有断言
+    if (url.includes('scoreboard')) {
+      return ok({
+        events: [{
+          id: 'x1', date: new Date(Date.now() - 26 * 3600_000).toISOString(),
+          status: { type: { state: 'post', completed: true } },
+          competitions: [{ competitors: [
+            { homeAway: 'home', team: { id: '1', displayName: 'Team' }, score: '2' },
+            { homeAway: 'away', team: { id: '2', displayName: 'Rival' }, score: '1' },
+          ] }],
+        }],
+      })
+    }
+    // 积分榜各月份赛程（历史月静态文件）→ 404 出空即可
     return notFound()
   })
 }
@@ -87,5 +104,18 @@ describe('首页 load — 六联赛 teams 档案预热', () => {
     const teams = useTeamsStore()
     // 西甲（非焦点）也有球队档案，MiniStandings 的 teamById 不再返回 undefined
     expect(teams.teamById('esp.1', 1)?.name).toBe('Team')
+  })
+})
+
+describe('首页昨日战报带（v2：六联赛混合·实时区间取数）', () => {
+  it('昨日有完赛 → 战报带渲染且卡片带联赛徽标', async () => {
+    const router = makeRouter()
+    router.push('/')
+    await router.isReady()
+    const w = mount(HomeView, { global: { plugins: [router] } })
+    await flushPromises()
+
+    expect(w.find('.league-tag').exists()).toBe(true)
+    expect(w.text()).toContain('昨日战报')
   })
 })

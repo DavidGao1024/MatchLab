@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { computeForm, formDetails, lastCompletedMatchday, selectStripMatches } from '../../src/utils/matches'
+import { computeForm, formDetails, findStripDay, pickCrossLeagueStrip } from '../../src/utils/matches'
+import type { StripEntry } from '../../src/utils/matches'
 import type { Match } from '../../src/types/models'
 
 /** 构造一场已完赛比赛：homeId a - b awayId */
@@ -35,50 +36,73 @@ describe('computeForm', () => {
   })
 })
 
-describe('lastCompletedMatchday', () => {
-  it('取完赛比赛里最晚的 UTC 日期', () => {
-    const ms = [
-      mk('1', '2026-05-24T15:00Z', 1, 1, 2, 0),
-      mk('2', '2026-05-23T15:00Z', 3, 1, 4, 0),
+/** 造跨联赛战报条目（日期为 UTC ISO，北京日由 beijingDay 换算） */
+const entry = (slug: StripEntry['league'], id: string, bjIso: string, homeId: number, awayId: number): StripEntry => ({
+  match: mk(id, bjIso, homeId, 1, awayId, 0),
+  league: slug,
+})
+
+describe('findStripDay（昨日优先，回看 7 天）', () => {
+  // 北京日 = UTC+8：07T10:00Z→北京07；08T02:00Z→北京08（今天）；06T10:00Z→北京06
+  it('昨日（北京）有完赛 → 只取昨日各场', () => {
+    const es = [
+      entry('eng.1', 'a', '2026-09-07T10:00:00Z', 1, 2),
+      entry('esp.1', 'b', '2026-09-08T02:00:00Z', 3, 4),
+      entry('ita.1', 'c', '2026-09-06T10:00:00Z', 5, 6),
     ]
-    expect(lastCompletedMatchday(ms)).toBe('2026-05-24')
+    const day = findStripDay(es, '2026-09-08')
+    expect(day?.day).toBe('2026-09-07')
+    expect(day?.entries.map((e) => e.match.eventId)).toEqual(['a'])
   })
-  it('没有完赛比赛 → null', () => {
-    expect(lastCompletedMatchday([])).toBeNull()
+  it('昨日无完赛 → 回退到最近有完赛的北京日', () => {
+    const es = [entry('ger.1', 'x', '2026-09-05T19:00:00Z', 1, 2)] // 北京 09-06 凌晨
+    const day = findStripDay(es, '2026-09-08') // 昨日 09-07 空 → 回退 09-06
+    expect(day?.day).toBe('2026-09-06')
+  })
+  it('未完赛不计；回看窗外（>7 天）返回 null', () => {
+    const pre = entry('eng.1', 'p', '2026-09-07T19:00:00Z', 1, 2)
+    pre.match.completed = false
+    expect(findStripDay([pre], '2026-09-08')).toBeNull()
+    expect(findStripDay([entry('eng.1', 'o', '2026-08-30T19:00:00Z', 1, 2)], '2026-09-08')).toBeNull()
   })
 })
 
-describe('selectStripMatches（战报带选场，规格 v1.4 确定性规则）', () => {
-  const standings = [
-    { rank: 1, teamId: 100 },
-    { rank: 2, teamId: 200 },
-    { rank: 3, teamId: 300 },
-  ]
-  const day = [
-    mk('a', '2026-05-24T15:00Z', 300, 1, 400, 0), // 无关前二，早场
-    mk('b', '2026-05-24T15:00Z', 100, 2, 500, 1), // 榜首参与
-    mk('c', '2026-05-24T15:00Z', 600, 0, 200, 0), // 榜二参与
-    mk('d', '2026-05-24T15:00Z', 700, 1, 800, 1), // 无关，晚场
-    mk('e', '2026-05-24T15:00Z', 900, 3, 901, 2), // 无关
-  ]
-  it('榜首榜二优先，其余按开球时间补满 4 场且去重', () => {
-    const picked = selectStripMatches(day, standings)
-    expect(picked.map((m) => m.eventId)).toEqual(['b', 'c', 'a', 'd'])
-  })
-  it('不足 4 场全取', () => {
-    expect(selectStripMatches(day.slice(0, 2), standings)).toHaveLength(2)
-  })
-  it('榜首榜二直接对话只占一个名额', () => {
-    const day2 = [
-      mk('x', '2026-05-24T15:00Z', 100, 1, 200, 0), // 榜首 vs 榜二
-      mk('y', '2026-05-24T15:00Z', 300, 2, 400, 2),
+describe('pickCrossLeagueStrip（联赛序轮转，榜首优先，封顶 4）', () => {
+  const ranked = {
+    'eng.1': [{ rank: 1, teamId: 100 }, { rank: 2, teamId: 200 }],
+    'esp.1': [{ rank: 1, teamId: 300 }],
+  }
+  it('多联赛大赛日：每联赛先取代表场（榜首参与最优先），满 4 截断', () => {
+    const es = [
+      entry('eng.1', 'e-early', '2026-09-07T11:00:00Z', 700, 800),
+      entry('eng.1', 'e-top', '2026-09-07T16:00:00Z', 100, 900),
+      entry('esp.1', 's-top', '2026-09-07T17:00:00Z', 300, 910),
+      entry('ita.1', 'i-1', '2026-09-07T12:00:00Z', 920, 930),
+      entry('ger.1', 'g-1', '2026-09-07T13:00:00Z', 940, 950),
     ]
-    const picked = selectStripMatches(day2, standings)
-    expect(picked.map((m) => m.eventId)).toEqual(['x', 'y'])
+    const picked = pickCrossLeagueStrip(es, ranked)
+    // 联赛序 eng→esp→ita→ger：eng 代表=榜首场 e-top，esp=s-top，ita=i-1，ger=g-1 → 满 4
+    expect(picked.map((p) => p.match.eventId)).toEqual(['e-top', 's-top', 'i-1', 'g-1'])
+    expect(picked.filter((p) => p.featured).map((p) => p.match.eventId)).toEqual(['e-top', 's-top'])
   })
-  it('ranked 缺榜首时优雅跳过', () => {
-    const picked = selectStripMatches(day, [{ rank: 2, teamId: 200 }, { rank: 3, teamId: 300 }])
-    expect(picked.map((m) => m.eventId)).toEqual(['c', 'a', 'b', 'd'])
+  it('联赛不足 4 个 → 第二轮同序补该联赛次场（组内按开球时间）', () => {
+    const es = [
+      entry('eng.1', 'e1', '2026-09-07T16:00:00Z', 100, 900),
+      entry('eng.1', 'e2', '2026-09-07T11:00:00Z', 700, 800),
+      entry('eng.1', 'e3', '2026-09-07T13:00:00Z', 710, 810),
+      entry('esp.1', 's1', '2026-09-07T12:00:00Z', 300, 910),
+      entry('esp.1', 's2', '2026-09-07T10:00:00Z', 720, 820),
+    ]
+    const picked = pickCrossLeagueStrip(es, ranked)
+    // 第一轮：e1(榜首)、s1(榜首)；第二轮：e2、s2（时间早者优先）
+    expect(picked.map((p) => p.match.eventId)).toEqual(['e1', 's1', 'e2', 's2'])
+  })
+  it('无 ranked 数据也能出：组内退化为纯开球时间序', () => {
+    const es = [
+      entry('fra.1', 'f2', '2026-09-07T19:00:00Z', 1, 2),
+      entry('fra.1', 'f1', '2026-09-07T11:00:00Z', 3, 4),
+    ]
+    expect(pickCrossLeagueStrip(es, {}).map((p) => p.match.eventId)).toEqual(['f1', 'f2'])
   })
 })
 

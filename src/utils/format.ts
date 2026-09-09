@@ -74,3 +74,20 @@ export function formatUpdateTime(iso: string): string {
   const d = new Date(iso)
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`
 }
+
+// ===== 北京日历日（首页战报带「昨日」判据，规格 v2.0）=====
+
+const BJ_DATE_FMT = new Intl.DateTimeFormat('en-CA', {
+  timeZone: ZONE_ZH, year: 'numeric', month: '2-digit', day: '2-digit',
+})
+
+/** UTC ISO → 北京日历日 'YYYY-MM-DD'（en-CA 输出天然 ISO 形） */
+export function beijingDay(iso: string): string {
+  return BJ_DATE_FMT.format(new Date(iso))
+}
+
+/** 'YYYY-MM-DD' 按日历日平移 N 天（纯 UTC 日历运算，无时区语义） */
+export function shiftBjDay(ymd: string, days: number): string {
+  const [y, m, d] = ymd.split('-').map(Number)
+  return new Date(Date.UTC(y, m - 1, d + days)).toISOString().slice(0, 10)
+}

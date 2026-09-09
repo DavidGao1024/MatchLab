@@ -1,4 +1,7 @@
 import type { FormResult, Match } from '../types/models'
+import { beijingDay, shiftBjDay } from './format'
+import type { LeagueSlug } from './constants'
+import { LEAGUE_SLUGS } from './constants'
 
 export interface FormDetail {
   result: FormResult
@@ -25,32 +28,75 @@ export function computeForm(matches: Match[], teamId: number, limit = 5): FormRe
   return formDetails(matches, teamId, limit).map((d) => d.result)
 }
 
-/** 最近一个有完赛的比赛日（UTC 日期）；没有则 null（战报带回扫用） */
-export function lastCompletedMatchday(matches: Match[]): string | null {
-  let best: string | null = null
-  for (const m of matches) {
-    if (!m.completed) continue
-    const d = m.date.slice(0, 10)
-    if (!best || d > best) best = d
-  }
-  return best
+// ===== 战报带 v2（跨联赛·昨日优先回看 7 天，规格 v2.0）=====
+
+export interface StripEntry {
+  match: Match
+  league: LeagueSlug
 }
 
-/** 战报带选场：① 榜首参与 ② 榜二参与 ③ 剩余按开球时间从早到晚补满 4 场（规格 v1.4） */
-export function selectStripMatches(dayMatches: Match[], ranked: { rank: number; teamId: number }[]): Match[] {
-  const top1 = ranked.find((r) => r.rank === 1)?.teamId
-  const top2 = ranked.find((r) => r.rank === 2)?.teamId
+export interface StripDay {
+  day: string // 命中的北京日历日 'YYYY-MM-DD'
+  entries: StripEntry[] // 该日全部完赛条目（未筛选）
+}
+
+export interface StripPick extends StripEntry {
+  featured: boolean // 涉及本联赛榜首
+}
+
+/** 昨日（todayBj-1）起回看 lookback 个北京日，第一个有完赛的日子；全无 → null */
+export function findStripDay(entries: StripEntry[], todayBj: string, lookback = 7): StripDay | null {
+  const byDay = new Map<string, StripEntry[]>()
+  for (const e of entries) {
+    if (!e.match.completed) continue
+    const d = beijingDay(e.match.date)
+    const list = byDay.get(d)
+    if (list) list.push(e)
+    else byDay.set(d, [e])
+  }
+  for (let i = 1; i <= lookback; i++) {
+    const day = shiftBjDay(todayBj, -i)
+    const list = byDay.get(day)
+    if (list?.length) return { day, entries: list }
+  }
+  return null
+}
+
+/** 选场：LEAGUE_SLUGS 固定联赛序轮转；组内排序 榜首→榜二→开球时间；cap 封顶 */
+export function pickCrossLeagueStrip(
+  dayEntries: StripEntry[],
+  rankedByLeague: Partial<Record<LeagueSlug, { rank: number; teamId: number }[]>>,
+  cap = 4,
+): StripPick[] {
   const involves = (m: Match, id: number | undefined) => id !== undefined && (m.home.id === id || m.away.id === id)
-  const picked: Match[] = []
-  const take = (m: Match | undefined) => {
-    if (m && !picked.includes(m)) picked.push(m)
+  const groups = new Map<LeagueSlug, StripPick[]>()
+  for (const slug of LEAGUE_SLUGS) {
+    const ranked = rankedByLeague[slug] ?? []
+    const top1 = ranked.find((r) => r.rank === 1)?.teamId
+    const top2 = ranked.find((r) => r.rank === 2)?.teamId
+    const list = dayEntries
+      .filter((e) => e.league === slug)
+      .map((e): StripPick => ({ ...e, featured: involves(e.match, top1) }))
+    // 组内排序键：榜首 0 / 榜二 1 / 其余 2，同键按开球时间升序
+    list.sort((a, b) => {
+      const ka = involves(a.match, top1) ? 0 : involves(a.match, top2) ? 1 : 2
+      const kb = involves(b.match, top1) ? 0 : involves(b.match, top2) ? 1 : 2
+      return ka - kb || a.match.date.localeCompare(b.match.date)
+    })
+    groups.set(slug, list)
   }
-  take(dayMatches.find((m) => involves(m, top1)))
-  take(dayMatches.find((m) => involves(m, top2)))
-  const rest = [...dayMatches].filter((m) => !picked.includes(m)).sort((a, b) => a.date.localeCompare(b.date))
-  for (const m of rest) {
-    if (picked.length >= 4) break
-    picked.push(m)
+  const picked: StripPick[] = []
+  for (let round = 0; picked.length < cap; round++) {
+    let moved = false
+    for (const slug of LEAGUE_SLUGS) {
+      const it = groups.get(slug)?.[round]
+      if (it) {
+        picked.push(it)
+        moved = true
+        if (picked.length >= cap) break
+      }
+    }
+    if (!moved) break
   }
-  return picked.slice(0, 4)
+  return picked.slice(0, cap)
 }

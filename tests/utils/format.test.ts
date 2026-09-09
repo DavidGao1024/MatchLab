@@ -4,6 +4,8 @@ import {
   formatMatchDate,
   formatUtcDateLabel,
   groupMatchesByUtcDate,
+  beijingDay,
+  shiftBjDay,
 } from '../../src/utils/format'
 import type { Match } from '../../src/types/models'
 
@@ -59,5 +61,31 @@ describe('groupMatchesByUtcDate', () => {
   })
   it('空输入 → 空数组', () => {
     expect(groupMatchesByUtcDate([])).toEqual([])
+  })
+})
+
+describe('beijingDay / shiftBjDay（北京日历日）', () => {
+  it('UTC 上午仍算北京当天（北京傍晚）', () => {
+    expect(beijingDay('2026-09-08T10:00:00Z')).toBe('2026-09-08')
+  })
+  it('UTC 晚间跨过北京零点 → 次日', () => {
+    expect(beijingDay('2026-09-07T20:00:00Z')).toBe('2026-09-08')
+  })
+  it('欧联晚场：UTC 21:05 → 北京次日', () => {
+    expect(beijingDay('2026-09-05T21:05:00Z')).toBe('2026-09-06')
+  })
+  it('shiftBjDay 往前跨日', () => {
+    expect(shiftBjDay('2026-09-08', -1)).toBe('2026-09-07')
+  })
+  it('shiftBjDay 跨月', () => {
+    expect(shiftBjDay('2026-10-01', -1)).toBe('2026-09-30')
+    expect(shiftBjDay('2026-09-30', 1)).toBe('2026-10-01')
+  })
+  it('shiftBjDay 跨年', () => {
+    expect(shiftBjDay('2026-01-01', -1)).toBe('2025-12-31')
+    expect(shiftBjDay('2025-12-31', 1)).toBe('2026-01-01')
+  })
+  it('shiftBjDay 闰日', () => {
+    expect(shiftBjDay('2028-03-01', -1)).toBe('2028-02-29')
   })
 })

@@ -6,17 +6,16 @@ import EmptyState from '../components/common/EmptyState.vue'
 import LeagueCard from '../components/home/LeagueCard.vue'
 import MatchdayStrip from '../components/home/MatchdayStrip.vue'
 import MyTeamCard from '../components/home/MyTeamCard.vue'
-import { fetchJsonCached } from '../composables/useJsonFetch'
+import { fetchScoresRange } from '../composables/useEspanFetch'
 import { ensureLeague } from '../composables/useLeague'
 import { useAppStore } from '../stores/app'
 import { t } from '../utils/i18n'
 import { useStandingsStore } from '../stores/standings'
 import { useTeamsStore } from '../stores/teams'
 import { useUserDataStore } from '../stores/userData'
-import type { Match } from '../types/models'
-import type { MatchesFile } from '../types/static'
-import { FOCUS_LEAGUE, LEAGUE_SLUGS, defaultMonth, seasonMonths } from '../utils/constants'
-import { lastCompletedMatchday, selectStripMatches } from '../utils/matches'
+import { FOCUS_LEAGUE, LEAGUE_SLUGS } from '../utils/constants'
+import { beijingDay, shiftBjDay } from '../utils/format'
+import { findStripDay, pickCrossLeagueStrip, type StripDay, type StripEntry } from '../utils/matches'
 
 const app = useAppStore()
 const standings = useStandingsStore()
@@ -40,12 +39,7 @@ const seq = ref(0)
 const error = ref('')
 const loading = ref(true)
 
-interface Strip {
-  matches: Match[] // 该比赛日全部比赛（未筛选）
-  utcDate: string
-  month: string
-}
-const strip = ref<Strip | null>(null)
+const strip = ref<StripDay | null>(null)
 
 async function load() {
   const my = ++seq.value
@@ -55,7 +49,6 @@ async function load() {
     await app.loadLeagues()
     const focusInfo = app.leagueInfo(focus)
     const season = focusInfo?.season ?? '2025'
-    const sType = focusInfo?.seasonType ?? 'european'
     // 并行：焦点联赛档案 + 其余联赛 teams 档案预热（队徽/队色就位）+ 各联赛正榜
     await Promise.all([
       ensureLeague(focus),
@@ -67,27 +60,18 @@ async function load() {
         return standings.load(l, ls, { withForm: false, seasonType: lt, forceFresh: true }).catch(() => null)
       }),
     ])
-    // "上轮" = 最近一个有完赛的比赛日，从默认月份往前最多回看 2 个月份文件（规格 v1.2）
-    const months = seasonMonths(season, sType)
-    const from = months.indexOf(defaultMonth(season, sType))
-    const scan = months.slice(Math.max(0, from - 1), from + 1).reverse()
-    let found: Strip | null = null
-    for (const m of scan) {
-      if (seq.value !== my) return // 过期响应防护：扫描途中视图已切换则立即放弃
-      let matches: Match[]
+    // 战报带 v2：六联赛并行拉近 9 天实时比分（±时区富余），纯前端判「昨日优先→回看 7 天」
+    const today = beijingDay(new Date().toISOString())
+    const perLeague = await Promise.all(LEAGUE_SLUGS.map(async (l): Promise<StripEntry[]> => {
       try {
-        matches = (await fetchJsonCached<MatchesFile>(`data/${focus}/matches/${m}.json`, 60 * 60 * 1000, season, { forceFresh: true })).matches
+        const ms = await fetchScoresRange(l, shiftBjDay(today, -8), shiftBjDay(today, 1))
+        return ms.map((m): StripEntry => ({ match: m, league: l }))
       } catch {
-        continue // 该月文件缺失 → 继续回看
+        return [] // 单联赛失败不拖垮战报带
       }
-      const d = lastCompletedMatchday(matches)
-      if (d) {
-        found = { matches: matches.filter((x) => x.date.slice(0, 10) === d), utcDate: d, month: m }
-        break
-      }
-    }
-    if (seq.value !== my) return
-    strip.value = found
+    }))
+    if (seq.value !== my) return // 过期响应防护：取数途中代际已变则放弃
+    strip.value = findStripDay(perLeague.flat(), today, 7)
   } catch (e) {
     if (seq.value !== my) return
     error.value = e instanceof Error ? e.message : String(e)
@@ -98,16 +82,15 @@ async function load() {
 
 onMounted(load)
 
-// 选场：榜首/榜二优先 + 开球时间补足 4 场（规格 v1.4 确定性规则）
-const stripMatches = computed(() =>
-  strip.value ? selectStripMatches(strip.value.matches, standings.rows[focus] ?? []) : [],
+// 战报带选场：六联赛轮转封顶 4（规格 v2.0）
+const stripPicks = computed(() =>
+  strip.value
+    ? pickCrossLeagueStrip(
+        strip.value.entries,
+        Object.fromEntries(LEAGUE_SLUGS.map((l) => [l, standings.rows[l] ?? []])),
+      )
+    : [],
 )
-const topTeamId = computed(() => (standings.rows[focus] ?? []).find((r) => r.rank === 1)?.teamId)
-const featuredId = computed(() => {
-  const id = topTeamId.value
-  if (id === undefined) return ''
-  return stripMatches.value.find((m) => m.home.id === id || m.away.id === id)?.eventId ?? ''
-})
 </script>
 
 <template>
@@ -132,15 +115,8 @@ const featuredId = computed(() => {
         </div>
       </section>
 
-      <!-- ② 上轮战报转播带（查不到完赛比赛日则不出，规格 v1.2） -->
-      <MatchdayStrip
-        v-if="strip && stripMatches.length"
-        :league="focus"
-        :utc-date="strip.utcDate"
-        :month="strip.month"
-        :matches="stripMatches"
-        :featured-id="featuredId"
-      />
+      <!-- ② 昨日战报转播带（回看窗内查不到完赛则不出，规格 v2.0） -->
+      <MatchdayStrip v-if="strip && stripPicks.length" :day="strip.day" :picks="stripPicks" />
 
       <!-- ② 联赛板块：六联赛等宽卡（3 列） -->
       <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 flex-1">

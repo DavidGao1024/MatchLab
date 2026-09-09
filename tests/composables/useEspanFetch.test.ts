@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { fetchLiveScores, clearScoreCache, fetchTeamInjuries, clearInjuryCache } from '../../src/composables/useEspanFetch'
+import { fetchLiveScores, fetchScoresRange, clearScoreCache, fetchTeamInjuries, clearInjuryCache } from '../../src/composables/useEspanFetch'
 
 const mockFetch = vi.fn()
 globalThis.fetch = mockFetch as any
@@ -73,5 +73,53 @@ describe('fetchTeamInjuries', () => {
   it('HTTP 错抛错', async () => {
     mockFetch.mockResolvedValue({ ok: false, status: 500 } as Response)
     await expect(fetchTeamInjuries('eng.1', 888)).rejects.toThrow()
+  })
+})
+
+describe('fetchScoresRange 战报带日期区间', () => {
+  const event = {
+    id: 'e1', date: '2026-09-07T10:00:00Z',
+    status: { type: { state: 'post', completed: true } },
+    competitions: [{
+      venue: { fullName: 'Anfield' },
+      competitors: [
+        { homeAway: 'home', team: { id: '1', displayName: 'A' }, score: '2' },
+        { homeAway: 'away', team: { id: '2', displayName: 'B' }, score: '1' },
+      ],
+    }],
+  }
+  beforeEach(() => {
+    vi.useFakeTimers()
+    mockFetch.mockReset()
+    clearScoreCache()
+  })
+  afterEach(() => {
+    vi.useRealTimers()
+  })
+
+  it('请求带 dates 区间与 limit=200，返回归一化 Match', async () => {
+    mockFetch.mockResolvedValue(mockResponse([event]))
+    const list = await fetchScoresRange('eng.1', '2026-09-01', '2026-09-08')
+    expect(mockFetch).toHaveBeenCalledWith(
+      expect.stringContaining('scoreboard?dates=20260901-20260908&limit=200'),
+    )
+    expect(list).toHaveLength(1)
+    expect(list[0].eventId).toBe('e1')
+    expect(list[0].completed).toBe(true)
+  })
+
+  it('同区间 60s 内命中缓存，60s 后再发', async () => {
+    mockFetch.mockResolvedValue(mockResponse([]))
+    await fetchScoresRange('eng.1', '2026-09-02', '2026-09-08')
+    await fetchScoresRange('eng.1', '2026-09-02', '2026-09-08')
+    expect(mockFetch).toHaveBeenCalledTimes(1)
+    vi.advanceTimersByTime(61000)
+    await fetchScoresRange('eng.1', '2026-09-02', '2026-09-08')
+    expect(mockFetch).toHaveBeenCalledTimes(2)
+  })
+
+  it('HTTP 非 2xx 抛错', async () => {
+    mockFetch.mockResolvedValue({ ok: false, status: 403 } as Response)
+    await expect(fetchScoresRange('eng.1', '2026-09-01', '2026-09-08')).rejects.toThrow('ESPN HTTP 403')
   })
 })
