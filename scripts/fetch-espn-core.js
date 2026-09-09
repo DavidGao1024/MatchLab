@@ -32,7 +32,7 @@ const { SEASON, LEAGUES, core, TEAM_OVERRIDES, resolveSeasonsInPlace } = require
 const { resolveFill } = require('./lib/nationality-fill');
 const { COUNTRY_MAP } = require('./lib/country-map');
 const { localFlagPath } = require('./lib/flag-map');
-const { fetchLeaders } = require('./lib/fetch-leaders');
+const { fetchLeaders, idFromRef } = require('./lib/fetch-leaders');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 
@@ -333,6 +333,7 @@ async function fetchPlayers(league, rosterMap) {
         assists,
         citizenship: doc.citizenship,
         flag: doc.flag,
+        jersey: doc.jersey,
       });
 
       ok += 1;
@@ -492,6 +493,8 @@ async function main() {
 
   console.log(`\n[espn-core] 全部完成，共 ${totalRequests} 次请求`);
   for (const s of summary) console.log(`  - ${s.slug}: ${s.error ? `错误 ${s.error}` : `${s.teams} 队 / ${s.players} 球员`}`);
+  // 2026-09-09 防线：任一联赛失败必须红灯（08-24 idFromRef 断链静默空转 16 天的教训）
+  if (summary.some((s) => s.error)) process.exit(1);
 }
 
 main().catch((e) => {
