@@ -136,7 +136,7 @@ describe('computeStandings', () => {
 
   it('未完赛比赛也收录球队（played=0 保留完整榜单）', () => {
     const rows = computeStandings([
-      makeMatch({ status: 'pre', completed: false, home: { id: 5, name: 'C', abbreviation: 'C', logo: '', score: null, winner: null }, away: { id: 6, name: 'D', abbreviation: 'D', logo: '', score: null, winner: null }),
+      makeMatch({ status: 'pre', completed: false, home: { id: 5, name: 'C', abbreviation: 'C', logo: '', score: null, winner: null }, away: { id: 6, name: 'D', abbreviation: 'D', logo: '', score: null, winner: null } }),
     ])
     expect(rows).toHaveLength(2)
     expect(rows.find((r) => r.teamId === 5)).toMatchObject({ played: 0, points: 0 })
