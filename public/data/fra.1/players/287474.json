@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-24T07:14:31.709Z",
+  "updateTime": "2026-09-09T08:33:48.316Z",
   "league": "fra.1",
   "season": "2026",
   "id": 287474,
@@ -32,7 +32,7 @@
       "recoveries": 1
     },
     "general": {
-      "appearances": 1,
+      "appearances": 2,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -45,12 +45,12 @@
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 90,
+      "minutes": 91,
       "ownGoals": 0,
-      "passPct": 0.991,
+      "passPct": 0.992,
       "redCards": 0,
       "starts": 1,
-      "subIns": 0,
+      "subIns": 1,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -62,7 +62,8 @@
       "duelsLost": 4,
       "duelsWon": 1,
       "duels": 5,
-      "touches": 125
+      "secondYellow": 0,
+      "touches": 126
     },
     "goalKeeping": {
       "cleanSheet": 1,
@@ -80,14 +81,15 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 0,
-      "accuratePasses": 116,
+      "accuratePasses": 117,
       "accurateThroughBalls": 0,
-      "attemptsInBox": 7,
+      "attemptsInBox": 9,
       "attemptsOutBox": 2,
       "crossPct": 0,
       "freeKickGoals": 0,
@@ -123,10 +125,13 @@
       "totalCrosses": 0,
       "totalGoals": 0,
       "totalLongBalls": 1,
-      "totalPasses": 117,
+      "totalPasses": 118,
       "totalShots": 0,
       "totalThroughBalls": 0,
-      "progressiveCarries": 4
+      "bigChanceCreated": 0,
+      "bigChanceMissed": 0,
+      "progressiveCarries": 4,
+      "touchesInOppBox": 0
     }
   }
 }

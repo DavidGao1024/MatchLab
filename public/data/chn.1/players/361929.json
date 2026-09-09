@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-18T06:48:06.423Z",
+  "updateTime": "2026-09-09T08:37:03.778Z",
   "league": "chn.1",
   "season": "2026",
   "id": 361929,
@@ -62,6 +62,7 @@
       "duelsLost": 9,
       "duelsWon": 3,
       "duels": 12,
+      "secondYellow": 0,
       "touches": 29
     },
     "goalKeeping": {
@@ -80,7 +81,8 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 1,
@@ -126,6 +128,7 @@
       "totalPasses": 17,
       "totalShots": 5,
       "totalThroughBalls": 0,
+      "bigChanceCreated": 0,
       "bigChanceMissed": 1,
       "progressiveCarries": 3,
       "touchesInOppBox": 4

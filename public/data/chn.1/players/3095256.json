@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-24T07:17:49.496Z",
+  "updateTime": "2026-09-09T08:37:30.315Z",
   "league": "chn.1",
   "season": "2026",
   "id": 3095256,
@@ -22,17 +22,17 @@
     "defensive": {
       "blockedShots": 0,
       "effectiveClearance": 4,
-      "effectiveTackles": 2,
+      "effectiveTackles": 3,
       "inneffectiveTackles": 0,
       "interceptions": 1,
       "tacklePct": 1,
       "totalClearance": 4,
-      "totalTackles": 2,
+      "totalTackles": 3,
       "tacklesLost": 0,
       "recoveries": 4
     },
     "general": {
-      "appearances": 5,
+      "appearances": 6,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -45,12 +45,12 @@
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 142,
+      "minutes": 150,
       "ownGoals": 0,
       "passPct": 0.857,
       "redCards": 0,
       "starts": 2,
-      "subIns": 3,
+      "subIns": 4,
       "subOuts": 2,
       "suspensions": 0,
       "timeEnded": 0,
@@ -59,10 +59,11 @@
       "wins": 0,
       "wonCorners": 0,
       "yellowCards": 2,
-      "duelsLost": 12,
-      "duelsWon": 6,
-      "duels": 18,
-      "touches": 61
+      "duelsLost": 13,
+      "duelsWon": 7,
+      "duels": 20,
+      "secondYellow": 0,
+      "touches": 62
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -80,15 +81,16 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 0,
       "accuratePasses": 24,
       "accurateThroughBalls": 0,
-      "attemptsInBox": 10,
-      "attemptsOutBox": 4,
+      "attemptsInBox": 15,
+      "attemptsOutBox": 6,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -126,6 +128,7 @@
       "totalPasses": 28,
       "totalShots": 2,
       "totalThroughBalls": 0,
+      "bigChanceCreated": 0,
       "bigChanceMissed": 1,
       "progressiveCarries": 4,
       "touchesInOppBox": 3

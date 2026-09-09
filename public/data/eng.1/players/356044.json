@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-24T06:53:49.052Z",
+  "updateTime": "2026-09-09T08:11:11.345Z",
   "league": "eng.1",
   "season": "2026",
   "id": 356044,
@@ -28,6 +28,7 @@
       "tacklePct": 1,
       "totalClearance": 1,
       "totalTackles": 1,
+      "tacklesLost": 0,
       "recoveries": 4
     },
     "general": {
@@ -61,6 +62,7 @@
       "duelsLost": 6,
       "duelsWon": 5,
       "duels": 11,
+      "secondYellow": 0,
       "touches": 77
     },
     "goalKeeping": {
@@ -79,7 +81,8 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
@@ -125,6 +128,8 @@
       "totalPasses": 68,
       "totalShots": 2,
       "totalThroughBalls": 0,
+      "bigChanceCreated": 0,
+      "bigChanceMissed": 0,
       "progressiveCarries": 6,
       "touchesInOppBox": 3
     }

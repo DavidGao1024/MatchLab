@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-07T00:34:27.457Z",
+  "updateTime": "2026-09-09T08:39:02.553Z",
   "league": "ita.1",
   "season": "2026",
-  "matchesCounted": 28,
+  "matchesCounted": 30,
   "count": 20,
   "standings": [
     {
@@ -34,6 +34,19 @@
     },
     {
       "rank": 3,
+      "teamId": 112,
+      "team": "Lazio",
+      "played": 3,
+      "won": 3,
+      "drawn": 0,
+      "lost": 0,
+      "goalsFor": 4,
+      "goalsAgainst": 1,
+      "goalDiff": 3,
+      "points": 9
+    },
+    {
+      "rank": 4,
       "teamId": 2572,
       "team": "Como",
       "played": 3,
@@ -46,7 +59,7 @@
       "points": 7
     },
     {
-      "rank": 4,
+      "rank": 5,
       "teamId": 103,
       "team": "AC Milan",
       "played": 3,
@@ -59,7 +72,7 @@
       "points": 7
     },
     {
-      "rank": 5,
+      "rank": 6,
       "teamId": 111,
       "team": "Juventus",
       "played": 3,
@@ -72,7 +85,7 @@
       "points": 7
     },
     {
-      "rank": 6,
+      "rank": 7,
       "teamId": 4057,
       "team": "Frosinone",
       "played": 3,
@@ -82,19 +95,6 @@
       "goalsFor": 6,
       "goalsAgainst": 3,
       "goalDiff": 3,
-      "points": 6
-    },
-    {
-      "rank": 7,
-      "teamId": 112,
-      "team": "Lazio",
-      "played": 2,
-      "won": 2,
-      "drawn": 0,
-      "lost": 0,
-      "goalsFor": 2,
-      "goalsAgainst": 0,
-      "goalDiff": 2,
       "points": 6
     },
     {
@@ -112,16 +112,16 @@
     },
     {
       "rank": 9,
-      "teamId": 118,
-      "team": "Udinese",
-      "played": 2,
-      "won": 1,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 4,
-      "goalsAgainst": 3,
+      "teamId": 2925,
+      "team": "Cagliari",
+      "played": 3,
+      "won": 2,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 1,
       "goalDiff": 1,
-      "points": 4
+      "points": 6
     },
     {
       "rank": 10,
@@ -138,6 +138,19 @@
     },
     {
       "rank": 11,
+      "teamId": 118,
+      "team": "Udinese",
+      "played": 3,
+      "won": 1,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 5,
+      "goalsAgainst": 5,
+      "goalDiff": 0,
+      "points": 4
+    },
+    {
+      "rank": 12,
       "teamId": 114,
       "team": "Napoli",
       "played": 3,
@@ -146,19 +159,6 @@
       "lost": 2,
       "goalsFor": 5,
       "goalsAgainst": 5,
-      "goalDiff": 0,
-      "points": 3
-    },
-    {
-      "rank": 12,
-      "teamId": 2925,
-      "team": "Cagliari",
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 1,
-      "goalsAgainst": 1,
       "goalDiff": 0,
       "points": 3
     },
@@ -179,13 +179,13 @@
       "rank": 14,
       "teamId": 113,
       "team": "Lecce",
-      "played": 2,
+      "played": 3,
       "won": 1,
       "drawn": 0,
-      "lost": 1,
+      "lost": 2,
       "goalsFor": 2,
-      "goalsAgainst": 4,
-      "goalDiff": -2,
+      "goalsAgainst": 5,
+      "goalDiff": -3,
       "points": 3
     },
     {

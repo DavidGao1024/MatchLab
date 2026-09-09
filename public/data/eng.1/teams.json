@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-24T06:52:20.539Z",
+  "updateTime": "2026-09-09T08:09:35.956Z",
   "league": "eng.1",
   "season": "2026",
   "count": 20,
@@ -26,14 +26,14 @@
       "isActive": true,
       "record": {
         "wins": 0,
-        "draws": 0,
+        "draws": 2,
         "losses": 1,
-        "played": 1,
-        "points": 0,
+        "played": 3,
+        "points": 2,
         "goalDiff": -1,
-        "goalsFor": 1,
-        "goalsAgainst": 2,
-        "summary": "0-0-1"
+        "goalsFor": 4,
+        "goalsAgainst": 5,
+        "summary": "0-2-1"
       }
     },
     {
@@ -50,20 +50,21 @@
       "logo": "logos/359.png",
       "logoDark": "logos/359-dark.png",
       "venue": {
-        "name": "Aviva Stadium",
-        "city": "Dublin"
+        "name": "Emirates Stadium",
+        "city": "London",
+        "country": "England"
       },
       "isActive": true,
       "record": {
-        "wins": 1,
+        "wins": 3,
         "draws": 0,
         "losses": 0,
-        "played": 1,
-        "points": 3,
-        "goalDiff": 3,
-        "goalsFor": 3,
-        "goalsAgainst": 0,
-        "summary": "1-0-0"
+        "played": 3,
+        "points": 9,
+        "goalDiff": 5,
+        "goalsFor": 6,
+        "goalsAgainst": 1,
+        "summary": "3-0-0"
       }
     },
     {
@@ -87,14 +88,14 @@
       "isActive": true,
       "record": {
         "wins": 0,
-        "draws": 0,
-        "losses": 1,
-        "played": 1,
-        "points": 0,
-        "goalDiff": -4,
+        "draws": 1,
+        "losses": 2,
+        "played": 3,
+        "points": 1,
+        "goalDiff": -5,
         "goalsFor": 0,
-        "goalsAgainst": 4,
-        "summary": "0-0-1"
+        "goalsAgainst": 5,
+        "summary": "0-1-2"
       }
     },
     {
@@ -118,14 +119,14 @@
       "isActive": true,
       "record": {
         "wins": 1,
-        "draws": 0,
+        "draws": 2,
         "losses": 0,
-        "played": 1,
-        "points": 3,
+        "played": 3,
+        "points": 5,
         "goalDiff": 3,
-        "goalsFor": 3,
-        "goalsAgainst": 0,
-        "summary": "1-0-0"
+        "goalsFor": 5,
+        "goalsAgainst": 2,
+        "summary": "1-2-0"
       }
     },
     {
@@ -141,18 +142,22 @@
       "alternateColor": "#FFFFFF",
       "logo": "logos/331.png",
       "logoDark": "logos/331-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "American Express Stadium",
+        "city": "Falmer",
+        "country": "England"
+      },
       "isActive": true,
       "record": {
         "wins": 1,
-        "draws": 0,
-        "losses": 0,
-        "played": 1,
-        "points": 3,
-        "goalDiff": 4,
-        "goalsFor": 4,
-        "goalsAgainst": 0,
-        "summary": "1-0-0"
+        "draws": 1,
+        "losses": 1,
+        "played": 3,
+        "points": 4,
+        "goalDiff": 3,
+        "goalsFor": 8,
+        "goalsAgainst": 5,
+        "summary": "1-1-1"
       }
     },
     {
@@ -169,21 +174,21 @@
       "logo": "logos/363.png",
       "logoDark": "logos/363-dark.png",
       "venue": {
-        "name": "Kai Tak Sports Park",
-        "city": "Mongkok, Kowloon",
-        "country": "Hong Kong"
+        "name": "Stamford Bridge",
+        "city": "London",
+        "country": "England"
       },
       "isActive": true,
       "record": {
-        "wins": 0,
+        "wins": 2,
         "draws": 0,
-        "losses": 0,
-        "played": 0,
-        "points": 0,
-        "goalDiff": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "summary": "0-0-0"
+        "losses": 1,
+        "played": 3,
+        "points": 6,
+        "goalDiff": 1,
+        "goalsFor": 8,
+        "goalsAgainst": 7,
+        "summary": "2-0-1"
       }
     },
     {
@@ -208,13 +213,13 @@
       "record": {
         "wins": 0,
         "draws": 0,
-        "losses": 1,
-        "played": 1,
+        "losses": 3,
+        "played": 3,
         "points": 0,
-        "goalDiff": -3,
+        "goalDiff": -5,
         "goalsFor": 0,
-        "goalsAgainst": 3,
-        "summary": "0-0-1"
+        "goalsAgainst": 5,
+        "summary": "0-0-3"
       }
     },
     {
@@ -233,15 +238,15 @@
       "venue": null,
       "isActive": true,
       "record": {
-        "wins": 0,
+        "wins": 1,
         "draws": 0,
-        "losses": 1,
-        "played": 1,
-        "points": 0,
-        "goalDiff": -2,
-        "goalsFor": 0,
-        "goalsAgainst": 2,
-        "summary": "0-0-1"
+        "losses": 2,
+        "played": 3,
+        "points": 3,
+        "goalDiff": -4,
+        "goalsFor": 4,
+        "goalsAgainst": 8,
+        "summary": "1-0-2"
       }
     },
     {
@@ -265,14 +270,14 @@
       "isActive": true,
       "record": {
         "wins": 1,
-        "draws": 0,
+        "draws": 2,
         "losses": 0,
-        "played": 1,
-        "points": 3,
+        "played": 3,
+        "points": 5,
         "goalDiff": 2,
-        "goalsFor": 2,
-        "goalsAgainst": 0,
-        "summary": "1-0-0"
+        "goalsFor": 5,
+        "goalsAgainst": 3,
+        "summary": "1-2-0"
       }
     },
     {
@@ -288,18 +293,22 @@
       "alternateColor": "#000000",
       "logo": "logos/370.png",
       "logoDark": "logos/370-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Craven Cottage",
+        "city": "London",
+        "country": "England"
+      },
       "isActive": true,
       "record": {
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "played": 0,
+        "losses": 3,
+        "played": 3,
         "points": 0,
-        "goalDiff": 0,
-        "goalsFor": 0,
-        "goalsAgainst": 0,
-        "summary": "0-0-0"
+        "goalDiff": -3,
+        "goalsFor": 4,
+        "goalsAgainst": 7,
+        "summary": "0-0-3"
       }
     },
     {
@@ -322,15 +331,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 1,
-        "draws": 0,
+        "wins": 2,
+        "draws": 1,
         "losses": 0,
-        "played": 1,
-        "points": 3,
-        "goalDiff": 2,
-        "goalsFor": 2,
+        "played": 3,
+        "points": 7,
+        "goalDiff": 3,
+        "goalsFor": 3,
         "goalsAgainst": 0,
-        "summary": "1-0-0"
+        "summary": "2-1-0"
       }
     },
     {
@@ -355,13 +364,13 @@
       "record": {
         "wins": 1,
         "draws": 0,
-        "losses": 0,
-        "played": 1,
+        "losses": 2,
+        "played": 3,
         "points": 3,
-        "goalDiff": 1,
-        "goalsFor": 2,
-        "goalsAgainst": 1,
-        "summary": "1-0-0"
+        "goalDiff": -4,
+        "goalsFor": 4,
+        "goalsAgainst": 8,
+        "summary": "1-0-2"
       }
     },
     {
@@ -385,14 +394,14 @@
       "isActive": true,
       "record": {
         "wins": 1,
-        "draws": 0,
+        "draws": 2,
         "losses": 0,
-        "played": 1,
-        "points": 3,
+        "played": 3,
+        "points": 5,
         "goalDiff": 1,
-        "goalsFor": 1,
-        "goalsAgainst": 0,
-        "summary": "1-0-0"
+        "goalsFor": 3,
+        "goalsAgainst": 2,
+        "summary": "1-2-0"
       }
     },
     {
@@ -409,21 +418,21 @@
       "logo": "logos/364.png",
       "logoDark": "logos/364-dark.png",
       "venue": {
-        "name": "GEODIS Park",
-        "city": "Nashville, Tennessee",
-        "country": "USA"
+        "name": "Anfield",
+        "city": "Liverpool",
+        "country": "England"
       },
       "isActive": true,
       "record": {
-        "wins": 0,
-        "draws": 1,
+        "wins": 1,
+        "draws": 2,
         "losses": 0,
-        "played": 1,
-        "points": 1,
-        "goalDiff": 0,
-        "goalsFor": 2,
-        "goalsAgainst": 2,
-        "summary": "0-1-0"
+        "played": 3,
+        "points": 5,
+        "goalDiff": 2,
+        "goalsFor": 6,
+        "goalsAgainst": 4,
+        "summary": "1-2-0"
       }
     },
     {
@@ -440,21 +449,21 @@
       "logo": "logos/382.png",
       "logoDark": "logos/382-dark.png",
       "venue": {
-        "name": "Kai Tak Sports Park",
-        "city": "Mongkok, Kowloon",
-        "country": "Hong Kong"
+        "name": "Seoul World Cup Stadium",
+        "city": "Seoul",
+        "country": "South Korea"
       },
       "isActive": true,
       "record": {
-        "wins": 1,
+        "wins": 3,
         "draws": 0,
         "losses": 0,
-        "played": 1,
-        "points": 3,
-        "goalDiff": 1,
-        "goalsFor": 2,
-        "goalsAgainst": 1,
-        "summary": "1-0-0"
+        "played": 3,
+        "points": 9,
+        "goalDiff": 5,
+        "goalsFor": 7,
+        "goalsAgainst": 2,
+        "summary": "3-0-0"
       }
     },
     {
@@ -471,21 +480,21 @@
       "logo": "logos/360.png",
       "logoDark": "logos/360-dark.png",
       "venue": {
-        "name": "Helsinki Olympic Stadium",
-        "city": "Helsinki",
-        "country": "Finland"
+        "name": "Croke Park",
+        "city": "Dublin",
+        "country": "Republic of Ireland"
       },
       "isActive": true,
       "record": {
-        "wins": 0,
-        "draws": 0,
+        "wins": 1,
+        "draws": 1,
         "losses": 1,
-        "played": 1,
-        "points": 0,
-        "goalDiff": -2,
-        "goalsFor": 0,
-        "goalsAgainst": 2,
-        "summary": "0-0-1"
+        "played": 3,
+        "points": 4,
+        "goalDiff": 1,
+        "goalsFor": 7,
+        "goalsAgainst": 6,
+        "summary": "1-1-1"
       }
     },
     {
@@ -504,15 +513,15 @@
       "venue": null,
       "isActive": true,
       "record": {
-        "wins": 0,
-        "draws": 1,
+        "wins": 1,
+        "draws": 2,
         "losses": 0,
-        "played": 1,
-        "points": 1,
-        "goalDiff": 0,
-        "goalsFor": 2,
-        "goalsAgainst": 2,
-        "summary": "0-1-0"
+        "played": 3,
+        "points": 5,
+        "goalDiff": 2,
+        "goalsFor": 6,
+        "goalsAgainst": 4,
+        "summary": "1-2-0"
       }
     },
     {
@@ -536,14 +545,14 @@
       "isActive": true,
       "record": {
         "wins": 0,
-        "draws": 0,
+        "draws": 2,
         "losses": 1,
-        "played": 1,
-        "points": 0,
+        "played": 3,
+        "points": 2,
         "goalDiff": -1,
-        "goalsFor": 0,
-        "goalsAgainst": 1,
-        "summary": "0-0-1"
+        "goalsFor": 2,
+        "goalsAgainst": 3,
+        "summary": "0-2-1"
       }
     },
     {
@@ -560,21 +569,21 @@
       "logo": "logos/366.png",
       "logoDark": "logos/366-dark.png",
       "venue": {
-        "name": "Red Bull Arena",
-        "city": "Harrison, New Jersey",
-        "country": "USA"
+        "name": "Stadium of Light",
+        "city": "Sunderland",
+        "country": "England"
       },
       "isActive": true,
       "record": {
-        "wins": 0,
-        "draws": 0,
+        "wins": 1,
+        "draws": 1,
         "losses": 1,
-        "played": 1,
-        "points": 0,
-        "goalDiff": -1,
-        "goalsFor": 1,
-        "goalsAgainst": 2,
-        "summary": "0-0-1"
+        "played": 3,
+        "points": 4,
+        "goalDiff": 0,
+        "goalsFor": 3,
+        "goalsAgainst": 3,
+        "summary": "1-1-1"
       }
     },
     {
@@ -591,21 +600,21 @@
       "logo": "logos/367.png",
       "logoDark": "logos/367-dark.png",
       "venue": {
-        "name": "Tottenham Hotspur Training Centre",
-        "city": "Enfield",
+        "name": "Tottenham Hotspur Stadium",
+        "city": "London",
         "country": "England"
       },
       "isActive": true,
       "record": {
         "wins": 0,
-        "draws": 0,
-        "losses": 1,
-        "played": 1,
-        "points": 0,
-        "goalDiff": -3,
+        "draws": 1,
+        "losses": 2,
+        "played": 3,
+        "points": 1,
+        "goalDiff": -5,
         "goalsFor": 0,
-        "goalsAgainst": 3,
-        "summary": "0-0-1"
+        "goalsAgainst": 5,
+        "summary": "0-1-2"
       }
     }
   ]

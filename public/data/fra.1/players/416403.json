@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-24T07:14:50.810Z",
+  "updateTime": "2026-09-09T08:34:07.793Z",
   "league": "fra.1",
   "season": "2026",
   "id": 416403,
@@ -28,10 +28,11 @@
       "tacklePct": 0,
       "totalClearance": 0,
       "totalTackles": 0,
+      "tacklesLost": 0,
       "recoveries": 1
     },
     "general": {
-      "appearances": 1,
+      "appearances": 2,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -39,17 +40,17 @@
       "dnp": 0,
       "draws": 0,
       "foulsCommitted": 0,
-      "foulsSuffered": 1,
+      "foulsSuffered": 2,
       "goalDifference": 0,
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 1,
+      "minutes": 8,
       "ownGoals": 0,
       "passPct": 1,
       "redCards": 0,
       "starts": 0,
-      "subIns": 1,
+      "subIns": 2,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -59,9 +60,10 @@
       "wonCorners": 0,
       "yellowCards": 0,
       "duelsLost": 2,
-      "duelsWon": 3,
-      "duels": 5,
-      "touches": 6
+      "duelsWon": 4,
+      "duels": 6,
+      "secondYellow": 0,
+      "touches": 7
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -79,13 +81,16 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 0,
       "accuratePasses": 1,
       "accurateThroughBalls": 0,
+      "attemptsInBox": 0,
+      "attemptsOutBox": 0,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -123,6 +128,9 @@
       "totalPasses": 1,
       "totalShots": 0,
       "totalThroughBalls": 0,
+      "bigChanceCreated": 0,
+      "bigChanceMissed": 0,
+      "progressiveCarries": 0,
       "touchesInOppBox": 1
     }
   }

@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-18T06:46:37.954Z",
+  "updateTime": "2026-09-09T08:35:35.805Z",
   "league": "chn.1",
   "season": "2026",
   "id": 419811,
@@ -8,7 +8,7 @@
   "lastName": "Li",
   "displayName": "Li Shuaiqi",
   "shortName": "S. Li",
-  "age": 17,
+  "age": 18,
   "height": 191,
   "weight": 82,
   "dateOfBirth": "2008-09-08T07:00Z",
@@ -28,7 +28,8 @@
       "tacklePct": 0,
       "totalClearance": 0,
       "totalTackles": 0,
-      "tacklesLost": 0
+      "tacklesLost": 0,
+      "recoveries": 0
     },
     "general": {
       "appearances": 0,
@@ -58,6 +59,10 @@
       "wins": 0,
       "wonCorners": 0,
       "yellowCards": 0,
+      "duelsLost": 0,
+      "duelsWon": 0,
+      "duels": 0,
+      "secondYellow": 0,
       "touches": 0
     },
     "goalKeeping": {
@@ -76,7 +81,8 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
@@ -121,7 +127,11 @@
       "totalLongBalls": 0,
       "totalPasses": 0,
       "totalShots": 0,
-      "totalThroughBalls": 0
+      "totalThroughBalls": 0,
+      "bigChanceCreated": 0,
+      "bigChanceMissed": 0,
+      "progressiveCarries": 0,
+      "touchesInOppBox": 0
     }
   }
 }

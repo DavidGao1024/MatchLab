@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-24T07:04:56.899Z",
+  "updateTime": "2026-09-09T08:23:24.509Z",
   "league": "ita.1",
   "season": "2026",
   "id": 387491,
@@ -27,7 +27,9 @@
       "interceptions": 0,
       "tacklePct": 0,
       "totalClearance": 0,
-      "totalTackles": 0
+      "totalTackles": 0,
+      "tacklesLost": 0,
+      "recoveries": 0
     },
     "general": {
       "appearances": 1,
@@ -60,6 +62,7 @@
       "duelsLost": 6,
       "duelsWon": 1,
       "duels": 7,
+      "secondYellow": 0,
       "touches": 30
     },
     "goalKeeping": {
@@ -78,7 +81,8 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
@@ -124,7 +128,9 @@
       "totalPasses": 10,
       "totalShots": 2,
       "totalThroughBalls": 0,
+      "bigChanceCreated": 0,
       "bigChanceMissed": 1,
+      "progressiveCarries": 0,
       "touchesInOppBox": 8
     }
   }

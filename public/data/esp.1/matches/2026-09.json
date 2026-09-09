@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-09-07T00:34:21.202Z",
+  "updateTime": "2026-09-09T08:38:54.353Z",
   "league": "esp.1",
   "month": "2026-09",
   "count": 40,
@@ -243,16 +243,17 @@
       "eventId": "401882891",
       "date": "2026-09-07T17:00Z",
       "name": "Celta Vigo at Getafe",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Estadio Coliseum",
       "home": {
         "id": 2922,
         "name": "Getafe",
         "abbreviation": "GET",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -260,7 +261,7 @@
         "name": "Celta Vigo",
         "abbreviation": "CEL",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/85.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -268,16 +269,17 @@
       "eventId": "401882893",
       "date": "2026-09-07T19:30Z",
       "name": "Real Sociedad at Elche",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Estadio Martínez Valero",
       "home": {
         "id": 3751,
         "name": "Elche",
         "abbreviation": "ELC",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3751.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       },
       "away": {
@@ -285,8 +287,8 @@
         "name": "Real Sociedad",
         "abbreviation": "RSO",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       }
     },
     {
@@ -546,7 +548,7 @@
       "status": "pre",
       "completed": false,
       "clock": "0'",
-      "venue": "Estadio de Vallecas",
+      "venue": "Estadio Municipal de Butarque",
       "home": {
         "id": 101,
         "name": "Rayo Vallecano",

@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-24T07:11:40.087Z",
+  "updateTime": "2026-09-09T08:30:38.742Z",
   "league": "fra.1",
   "season": "2026",
   "id": 214649,
@@ -62,6 +62,7 @@
       "duelsLost": 1,
       "duelsWon": 5,
       "duels": 6,
+      "secondYellow": 0,
       "touches": 99
     },
     "goalKeeping": {
@@ -80,7 +81,8 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
@@ -126,7 +128,10 @@
       "totalPasses": 86,
       "totalShots": 0,
       "totalThroughBalls": 0,
-      "progressiveCarries": 10
+      "bigChanceCreated": 0,
+      "bigChanceMissed": 0,
+      "progressiveCarries": 10,
+      "touchesInOppBox": 0
     }
   }
 }
