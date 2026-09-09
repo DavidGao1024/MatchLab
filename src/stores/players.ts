@@ -37,6 +37,7 @@ function toSummary(p: PlayersIndexFile['players'][number]): PlayerSummary {
     assists: p.assists,
     citizenship: p.citizenship,
     flag: p.flag,
+    jersey: p.jersey ?? null,
   }
 }
 

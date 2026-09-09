@@ -119,6 +119,7 @@ export interface PlayerIndexEntry {
   team: string
   citizenship?: string | null
   flag?: string | null
+  jersey?: number | null
 }
 
 export interface PlayersIndexFile {

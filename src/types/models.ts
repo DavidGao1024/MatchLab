@@ -110,6 +110,7 @@ export interface PlayerSummary {
   assists: number | null
   citizenship?: string | null
   flag?: string | null
+  jersey?: number | null
 }
 
 /** 球员档案（业务模型，含 i18n 友好的姓名/队名） */

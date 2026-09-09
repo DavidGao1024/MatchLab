@@ -37,6 +37,10 @@ function go(p: PlayerSummary) {
 function fmtStat(n: number | null, unitKey: string): string {
   return n === null ? '—' : `${n}${t(unitKey, app.lang)}`
 }
+
+function fmtJersey(n: number | null | undefined): string {
+  return n == null ? '—' : `#${n}`
+}
 </script>
 
 <template>
@@ -55,6 +59,7 @@ function fmtStat(n: number | null, unitKey: string): string {
           class="text-left px-2 py-1.5 rounded hover:bg-white/5 transition-colors flex items-center gap-3"
         >
           <NationFlag :flag="p.flag" :citizenship="p.citizenship" :size="16" />
+          <span class="text-xs text-white font-mono-d w-8 shrink-0 text-right">{{ fmtJersey(p.jersey) }}</span>
           <span class="text-white text-sm flex-1 truncate">{{ playerName(p.name, app.lang) }}</span>
           <span class="text-xs text-white font-mono-d w-12 text-right">{{ fmtStat(p.goals, 'squad.goalUnit') }}</span>
           <span class="text-xs text-white font-mono-d w-12 text-right">{{ fmtStat(p.assists, 'squad.assistUnit') }}</span>

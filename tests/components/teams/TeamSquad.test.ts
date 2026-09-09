@@ -8,7 +8,7 @@ import type { PlayerSummary } from '../../../src/types/models'
 
 const player = (over: Partial<PlayerSummary> = {}): PlayerSummary => ({
   id: 1, name: 'Test Player', teamId: 1, team: 'T', position: 'M', age: 20,
-  goals: 3, assists: 2, citizenship: 'Germany', flag: 'flags/de.png', ...over,
+  goals: 3, assists: 2, citizenship: 'Germany', flag: 'flags/de.png', jersey: 7, ...over,
 })
 
 const router = createRouter({
@@ -42,5 +42,14 @@ describe('TeamSquad 进助攻单位文案', () => {
     expect(w.text()).toContain('—')
     expect(w.text()).not.toContain('—球')
     expect(w.text()).not.toContain('—助')
+  })
+  it('球衣号码：显示为 #N', () => {
+    const w = mountSquad([player({ jersey: 7 })])
+    expect(w.text()).toContain('#7')
+  })
+  it('球衣号码：无号码显破折号不出井号', () => {
+    const w = mountSquad([player({ jersey: null })])
+    expect(w.text()).not.toContain('#')
+    expect(w.text()).toContain('—')
   })
 })
