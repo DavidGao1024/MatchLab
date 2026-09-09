@@ -384,6 +384,8 @@ const UI: Record<string, { zh: string; en: string }> = {
   'col.age': { zh: '年龄', en: 'Age' },
   'col.goals': { zh: '进球', en: 'G' },
   'col.assists': { zh: '助攻', en: 'A' },
+  'squad.goalUnit': { zh: '球', en: 'G' },
+  'squad.assistUnit': { zh: '助', en: 'A' },
   'player.jersey': { zh: '号', en: '#' },
   'player.country': { zh: '国籍', en: 'Nationality' },
   'player.born': { zh: '出生', en: 'Born' },

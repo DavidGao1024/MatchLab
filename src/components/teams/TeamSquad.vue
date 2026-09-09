@@ -34,8 +34,8 @@ function go(p: PlayerSummary) {
   router.push(`/${props.league}/player/${p.id}`)
 }
 
-function fmtNum(n: number | null): string {
-  return n === null ? '—' : String(n)
+function fmtStat(n: number | null, unitKey: string): string {
+  return n === null ? '—' : `${n}${t(unitKey, app.lang)}`
 }
 </script>
 
@@ -56,8 +56,8 @@ function fmtNum(n: number | null): string {
         >
           <NationFlag :flag="p.flag" :citizenship="p.citizenship" :size="16" />
           <span class="text-white text-sm flex-1 truncate">{{ playerName(p.name, app.lang) }}</span>
-          <span class="text-xs text-slate-500 font-mono-d w-10 text-right">{{ fmtNum(p.goals) }}G</span>
-          <span class="text-xs text-slate-500 font-mono-d w-10 text-right">{{ fmtNum(p.assists) }}A</span>
+          <span class="text-xs text-white font-mono-d w-12 text-right">{{ fmtStat(p.goals, 'squad.goalUnit') }}</span>
+          <span class="text-xs text-white font-mono-d w-12 text-right">{{ fmtStat(p.assists, 'squad.assistUnit') }}</span>
         </button>
       </div>
     </section>
