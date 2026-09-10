@@ -53,7 +53,7 @@ export const POINT_DEDUCTIONS: Partial<Record<LeagueSlug, Record<number, number>
 export interface MatchFix {
   score?: { home: number; away: number }
   void?: boolean
-  /** 仅注记在案：不改数据，只让体检脚本跳过（中断/取消场等前端已天然排除的 raw 怪态） */
+  /** 仅注记在案：不改数据，只让体检脚本跳过（中断/取消场等前端已天然排除的 raw 怪态）。严禁对 completed=true 的场次使用 ack——会同时静音体检且不修数据 */
   ack?: boolean
   note?: string
 }

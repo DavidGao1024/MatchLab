@@ -199,6 +199,7 @@ describe('applyMatchFixes（ESPN 源数据勘误表）', () => {
         away: { id: 2, name: 'A', abbreviation: 'A', logo: '', score: 0, winner: null },
       })
       const [m] = applyMatchFixes([pre])
+      expect(m).toBe(pre) // 同引用锁：ack-only 不许拷贝返回（对齐未命中用例）
       expect(m.completed).toBe(false)
       expect(m.home.score).toBe(0)
     } finally {
@@ -229,10 +230,17 @@ describe('match-fixes.json 契约守卫', () => {
       expect(id).toMatch(/^\d+$/)
       const fields = Object.keys(f as object)
       for (const k of fields) expect(['score', 'void', 'ack', 'note']).toContain(k)
-      const fx = f as { score?: { home: unknown; away: unknown } }
-      if (fx.score) {
-        expect(typeof fx.score.home).toBe('number')
-        expect(typeof fx.score.away).toBe('number')
+      const fx = f as { score?: unknown; void?: unknown; ack?: unknown }
+      // void/ack 必须是 boolean：手写字符串 "false" 在 JS 真值判断下会误删/误跳整场
+      if ('void' in fx) expect(typeof fx.void).toBe('boolean')
+      if ('ack' in fx) expect(typeof fx.ack).toBe('boolean')
+      // score 存在性用 in 判断（防 "score": null 混过守卫），且须为非空对象 + home/away 均为 number
+      if ('score' in fx) {
+        const s = fx.score
+        expect(s).not.toBeNull()
+        expect(typeof s).toBe('object')
+        expect(typeof (s as { home: unknown }).home).toBe('number')
+        expect(typeof (s as { away: unknown }).away).toBe('number')
       }
       expect(fields.some((k) => k === 'score' || k === 'void' || k === 'ack')).toBe(true)
     }
