@@ -59,9 +59,10 @@ export interface MatchFix {
 }
 
 // 延期场（如 2026-08-08 浙江 vs 武汉三镇）已由 normalizeEvent 判据对齐 type.completed 根治，无需手工条目
-export const ESPN_MATCH_FIXES = matchFixesJson as Record<string, MatchFix>
+/** 勘误表数据源：./match-fixes.json（脚本同读；条目契约见 MatchFix） */
+export const ESPN_MATCH_FIXES: Record<string, MatchFix> = matchFixesJson
 
-/** 应用 ESPN 勘误表：void 整场剔除，score 改写比分并重设 winner/completed */
+/** 应用 ESPN 勘误表：void 整场剔除，score 改写比分并重设 winner/completed，仅 ack/note 的原样透传 */
 export function applyMatchFixes(matches: Match[]): Match[] {
   const out: Match[] = []
   for (const m of matches) {
@@ -71,16 +72,18 @@ export function applyMatchFixes(matches: Match[]): Match[] {
       continue
     }
     if (f.void) continue
-    if (f.score) {
-      const { home, away } = f.score
-      out.push({
-        ...m,
-        status: 'post',
-        completed: true,
-        home: { ...m.home, score: home, winner: home > away ? true : home < away ? false : null },
-        away: { ...m.away, score: away, winner: away > home ? true : away < home ? false : null },
-      })
+    if (!f.score) {
+      out.push(m) // ack-only：仅注记在案，数据不改写
+      continue
     }
+    const { home, away } = f.score
+    out.push({
+      ...m,
+      status: 'post',
+      completed: true,
+      home: { ...m.home, score: home, winner: home > away ? true : home < away ? false : null },
+      away: { ...m.away, score: away, winner: away > home ? true : away < home ? false : null },
+    })
   }
   return out
 }

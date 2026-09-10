@@ -188,6 +188,24 @@ describe('applyMatchFixes（ESPN 源数据勘误表）', () => {
     }
   })
 
+  it('ack-only 条目：数据原样透传不改写', () => {
+    ;(ESPN_MATCH_FIXES as Record<string, unknown>)['test-ack'] = { ack: true, note: '中断场在案' }
+    try {
+      const pre = fix({
+        eventId: 'test-ack',
+        status: 'post',
+        completed: false,
+        home: { id: 1, name: 'H', abbreviation: 'H', logo: '', score: 0, winner: null },
+        away: { id: 2, name: 'A', abbreviation: 'A', logo: '', score: 0, winner: null },
+      })
+      const [m] = applyMatchFixes([pre])
+      expect(m.completed).toBe(false)
+      expect(m.home.score).toBe(0)
+    } finally {
+      delete (ESPN_MATCH_FIXES as Record<string, unknown>)['test-ack']
+    }
+  })
+
   it('未命中勘误的场次原样透传（同一引用）', () => {
     const m = fix({ eventId: 'normal-1', home: { id: 1, name: 'A', abbreviation: 'A', logo: '', score: 2, winner: true }, away: { id: 2, name: 'B', abbreviation: 'B', logo: '', score: 0, winner: null } })
     expect(applyMatchFixes([m])[0]).toBe(m)
@@ -202,6 +220,22 @@ describe('applyMatchFixes（ESPN 源数据勘误表）', () => {
     expect(rows.find((r) => r.teamId === 131705)!.points).toBe(3) // 勘误后：辽宁 3 分、海港 0 分
     expect(rows.find((r) => r.teamId === 15515)!.points).toBe(0)
     expect(rows.find((r) => r.teamId === 131705)!.goalsFor).toBe(3)
+  })
+})
+
+describe('match-fixes.json 契约守卫', () => {
+  it('每条目：键为纯数字 eventId、字段合法、至少一个生效字段', () => {
+    for (const [id, f] of Object.entries(ESPN_MATCH_FIXES)) {
+      expect(id).toMatch(/^\d+$/)
+      const fields = Object.keys(f as object)
+      for (const k of fields) expect(['score', 'void', 'ack', 'note']).toContain(k)
+      const fx = f as { score?: { home: unknown; away: unknown } }
+      if (fx.score) {
+        expect(typeof fx.score.home).toBe('number')
+        expect(typeof fx.score.away).toBe('number')
+      }
+      expect(fields.some((k) => k === 'score' || k === 'void' || k === 'ack')).toBe(true)
+    }
   })
 })
 
