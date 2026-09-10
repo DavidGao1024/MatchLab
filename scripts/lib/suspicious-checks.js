@@ -62,4 +62,20 @@ function isGhostSummary(summary) {
   return players === 0;
 }
 
-module.exports = { findWinnerConflicts, findPostNotCompleted, isGhostSummary };
+/**
+ * 跳过勘误在案场次（2026-09-09 治理体检永久红）：fixes 表里的 eventId 一律不体检。
+ * 在案场次已是人工确认过的 raw 怪态，再报只会磨钝红灯警觉；真新伤不受影响。
+ * @param {{league:string, month:string, match:object}[]} entries
+ * @param {Record<string, object>} fixes 勘误表（src/utils/match-fixes.json 同构）
+ * @returns {{kept:object[], skipped:object[]}}
+ */
+function filterKnownFixes(entries, fixes) {
+  const kept = [];
+  const skipped = [];
+  for (const e of entries) {
+    (fixes && e.match && fixes[e.match.eventId] ? skipped : kept).push(e);
+  }
+  return { kept, skipped };
+}
+
+module.exports = { findWinnerConflicts, findPostNotCompleted, isGhostSummary, filterKnownFixes };

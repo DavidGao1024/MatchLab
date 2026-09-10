@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest'
 import { createRequire } from 'node:module'
 
 const req = createRequire(import.meta.url)
-const { findWinnerConflicts, findPostNotCompleted, isGhostSummary } = req('../../scripts/lib/suspicious-checks.js')
+const { findWinnerConflicts, findPostNotCompleted, isGhostSummary, filterKnownFixes } = req('../../scripts/lib/suspicious-checks.js')
 
 const match = (over: Record<string, unknown> = {}) => ({
   eventId: 'e1',
@@ -86,5 +86,28 @@ describe('isGhostSummary（0-0 幽灵场指纹：无事件且无球员）', () =
   })
   it('summary 抓取失败/为 null → 不下幽灵结论（fail-safe）', () => {
     expect(isGhostSummary(null)).toBe(false)
+  })
+})
+
+describe('filterKnownFixes（勘误在案跳过）', () => {
+  const fixes = { '401861543': { score: { home: 3, away: 2 }, note: '辽宁案' } }
+  it('在案 eventId 被跳过，其余保留', () => {
+    const known = match({ eventId: '401861543', home: { id: 1, name: 'H', score: 0, winner: true }, away: { id: 2, name: 'A', score: 0, winner: null } })
+    const fresh = match({ eventId: 'x9', home: { id: 3, name: 'H2', score: 1, winner: true }, away: { id: 4, name: 'A2', score: 1, winner: null } })
+    const { kept, skipped } = filterKnownFixes([entry(known), entry(fresh)], fixes)
+    expect(skipped).toHaveLength(1)
+    expect(skipped[0].match.eventId).toBe('401861543')
+    expect(kept).toHaveLength(1)
+    expect(kept[0].match.eventId).toBe('x9')
+  })
+  it('空勘误表全保留', () => {
+    const { kept, skipped } = filterKnownFixes([entry(match())], {})
+    expect(kept).toHaveLength(1)
+    expect(skipped).toEqual([])
+  })
+  it('串联指纹：在案辽宁 raw 不再报 tied-but-winner', () => {
+    const raw = match({ eventId: '401861543', home: { id: 1, name: 'H', score: 0, winner: true }, away: { id: 2, name: 'A', score: 0, winner: null } })
+    const { kept } = filterKnownFixes([entry(raw)], fixes)
+    expect(findWinnerConflicts(kept)).toEqual([])
   })
 })

@@ -5,7 +5,7 @@
  *   ① 真实 3-2 的比赛记成 0-0 却仍标 home.winner=true；
  *   ② 台风延期未赛的比赛记成 0-0「完赛」（summary 无事件无阵容）。
  * 两种错误都会污染前端实时积分榜（前端直连 scoreboard）。本脚本不修数据、不阻塞部署，
- * 只负责「次日晨体检发现」，人工确认后写入 src/utils/standings.ts 的 ESPN_MATCH_FIXES 勘误表。
+ * 只负责「次日晨体检发现」，人工确认后写入 src/utils/match-fixes.json 勘误表（单一事实源，在案场次本脚本自动跳过）。
  *
  * 用法：
  *   node scripts/check-suspicious-matches.js            # 全联赛（含 0-0 场 summary 联网核验）
@@ -20,9 +20,10 @@ const fs = require('fs');
 const path = require('path');
 const { sleep, fetchJson, UA_CURL } = require('./lib/http');
 const { LEAGUES, site } = require('./lib/espn-endpoints');
-const { findWinnerConflicts, findPostNotCompleted, isGhostSummary } = require('./lib/suspicious-checks');
+const { findWinnerConflicts, findPostNotCompleted, isGhostSummary, filterKnownFixes } = require('./lib/suspicious-checks');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
+const FIXES = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'src', 'utils', 'match-fixes.json'), 'utf8'));
 const DELAY_MS = 200;
 
 const requested = process.argv.slice(2);
@@ -56,13 +57,15 @@ async function main() {
 
   for (const { slug } of targets) {
     const entries = collectEntries(slug);
-    const conflicts = findWinnerConflicts(entries);
-    const postNotDone = findPostNotCompleted(entries);
+    const { kept, skipped } = filterKnownFixes(entries, FIXES);
+    if (skipped.length) console.log(`  · 勘误在案跳过 ${skipped.length} 场：${skipped.map((e) => e.match.eventId).join(',')}`);
+    const conflicts = findWinnerConflicts(kept);
+    const postNotDone = findPostNotCompleted(kept);
     issues.push(...conflicts, ...postNotDone);
-    console.log(`[${slug}] 场次 ${entries.length}，平局标胜者 ${conflicts.length}，post未完成 ${postNotDone.length}`);
+    console.log(`[${slug}] 场次 ${kept.length}（在案 ${skipped.length}），平局标胜者 ${conflicts.length}，post未完成 ${postNotDone.length}`);
 
     // 0-0 完赛场逐场拉 summary 核验幽灵场（真平局必有换人/牌类事件或阵容，空壳即幽灵）
-    const zeroZero = entries.filter(
+    const zeroZero = kept.filter(
       (e) => e.match.completed && e.match.home && e.match.away
         && e.match.home.score === 0 && e.match.away.score === 0
         && e.match.home.winner !== true && e.match.away.winner !== true,
@@ -93,7 +96,7 @@ async function main() {
     }[i.reason] ?? i.reason}`,
   );
   if (lines.length) {
-    const md = `## ⚠️ ESPN 数据体检：${lines.length} 场可疑\n\n${lines.join('\n')}\n\n处置：与官方赛果核对后，写入 \`src/utils/standings.ts\` → \`ESPN_MATCH_FIXES\` 勘误表。\n`;
+    const md = `## ⚠️ ESPN 数据体检：${lines.length} 场可疑\n\n${lines.join('\n')}\n\n处置：与官方赛果核对后，写入 \`src/utils/match-fixes.json\` 勘误表（单一事实源，在案场次本体检自动跳过）。\n`;
     console.error('\n' + md);
     if (process.env.GITHUB_STEP_SUMMARY) {
       fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md);
