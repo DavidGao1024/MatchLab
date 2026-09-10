@@ -176,6 +176,17 @@
 
 > 按日期倒序记录每次调研进展，格式：`### YYYY-MM-DD`
 
+### 2026-09-10 — 南特腰斩场取证：ESPN Abandoned 状态永不更新 + 体检永久红三连环伤治理
+
+**背景**：09-09 查岗发现 Fetch Data #39/#40/#41 连红——体检脚本不读勘误表，辽宁案 raw（0-0 标胜者，前端已勘误 3-2）每次必报；红灯又触发 deploy.yml 的 conclusion 闸门连坐跳过部署，GH Pages 静态数据冻结 9+ 天（10-01 九月转历史月文件是暴露 deadline）。另一半红灯源是南特-图卢兹场（fra.1/2026-05，eventId `746714`）被指纹 2（post 未完成）永久上报。
+
+**结论**：
+- **南特场取证**（`summary?event=746714`，curl UA 直连）：`status.type.detail = "Abandoned"`（弃赛），keyEvents 仅 1 条且为 Kickoff，双方 40 人名单 + boxscore 在案，比分 0-0——**开赛后腰斩弃赛，ESPN 永不更新终场**。前端 normalizeEvent 按 `completed=false` 已排除出榜单（安全），但 raw 怪态会一直触发体检指纹。
+- **`type.completed` 判据再确认**：ESPN 对中断/弃赛场不清理 `status=post`，raw 的 post 状态不可单独作完赛判据，前端与体检一律看 `completed`（08-31 延期幽灵场根治口径的延续）。
+- **ack 条目类型诞生**：南特场无需改数据（前端已天然排除），只需体检闭嘴——既有 score（改判）/void（剔除）两语义不够用，增 `ack`（仅注记在案）+ `note` 字段。
+
+**落地**（治理工程 6 commit 本地完工，opus 终审放行）：① 勘误表迁 `src/utils/match-fixes.json` 单一事实源（前端 vite import + 体检脚本 fs 读同一文件）；② 体检 `filterKnownFixes` 跳过勘误在案场次（辽宁永久红根治）；③ 南特案 ack 入表；④ deploy.yml 删 conclusion 闸门，部署与体检解耦；⑤ 施工中揪出并修复 `applyMatchFixes` 静默吞场 bug（命中勘误但条目无 score/void 时整场从数据流蒸发 → 改原样透传）；⑥ 契约守卫单测钉住 JSON 手写格式。398 单测全绿，联网体检 08-31 以来首次 exit 0 回绿。
+
 ### 2026-08-24 — 转会滞后 + 译名缺口复测：德转仍 405 captcha，前端兜底定案
 
 **背景**：总司令报「李刚仁已在马竞但履历停在巴黎」「升班马球员无中文名」。
@@ -1074,6 +1085,22 @@ Understat:
 **理由**：
 **后续影响**：
 -->
+
+#### 决策：体检红灯不阻塞部署——deploy.yml 删 conclusion 闸门（修正 08-13 决策的闸门部分）
+**日期**：2026-09-10
+**背景**：08-13 决策给 workflow_run 接力加了「Fetch Data conclusion=success 才部署」闸门（本意防红灯后空跑）；09 月初体检脚本因不读勘误表永久红，闸门连坐 → 部署连跳 → GH Pages 静态数据冻结 9+ 天。而体检红灯的设计定位是「喊人勘误」的警报：数据 commit 步在体检步之前，红灯时数据已入库
+**选项**：A) 删闸门，部署无条件跑 B) 保闸门，只根治体检误报 C) 体检降 warning 不 exit 1
+**选择**：A+B 并行（治理工程落地：B 治本次误报，A 保将来新伤红灯时部署不再被绑架）
+**理由**：B 无法保证将来零红灯，新伤红灯时部署的仍是已入库数据，红灯只表示存在待人工核对的可疑场；C 钝化警报本末倒置。A 恢复 check 脚本头部「不阻塞部署」原设计：红灯负责喊人、部署负责上线，各司其职
+**后续影响**：Fetch Data 真失败（抓取挂掉）时会多一次旧数据空转重部署（约 2-4 分钟，额度内可接受）；残余风险转为「体检红时可疑数据已上线」——值班处置链：见红灯 → 读告警可疑清单 → 人工核对 → 写入 match-fixes.json 在案 → push 重部署修正；08-13 决策的 workflow_run 接力机制本身保留不动
+
+#### 决策：勘误表迁 match-fixes.json 单一事实源 + 新增 ack 注记语义
+**日期**：2026-09-10
+**背景**：08-31 勘误层 `ESPN_MATCH_FIXES` 内联在 `src/utils/standings.ts`，只有前端读得到；体检脚本不知在案勘误，辽宁案 raw 怪态每次必报（永久红灯源之一）。南特腰斩场只需体检闭嘴、无需改数据，score/void 两语义不够用
+**选项**：A) 表迁共享 JSON（前端 vite import + 脚本 fs 读同一文件）B) 体检脚本内复制一份表 C) 脚本解析 TS 源码提取
+**选择**：A，并给 MatchFix 接口增 `ack?: boolean`（仅注记在案，不改数据）+ `note?: string` 字段
+**理由**：A 单一事实源零重复、两侧结构同构；B 必然漂移；C 脆弱。ack 语义 = 「该场 raw 怪态已人工确认，体检跳过、前端数据原样透传」——仅适用于前端按 completed=false 天然排除的场次，**严禁对 completed=true 场次使用**（会同时静音体检且不修数据，JSDoc 禁令在案）
+**后续影响**：契约守卫单测钉住 JSON 手写格式（键纯数字 eventId / 字段白名单 / void/ack 布尔 / score 数值非空）；上游 ESPN 修正后删条目即自动恢复体检；值班指引三处文本同步收敛（check 脚本头部 + 告警 markdown + fetch-data.yml 注释）；施工中顺带修复 applyMatchFixes 静默吞场 bug（命中勘误但无 score/void 时整场从数据流蒸发 → 原样透传）
 
 #### 决策：数据提交后接力部署——workflow_run 监听 Fetch Data
 **日期**：2026-08-13
