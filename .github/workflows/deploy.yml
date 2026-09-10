@@ -23,8 +23,8 @@ concurrency:
 
 jobs:
   build:
-    # workflow_run 接力时只在抓取成功才部署；push/手动触发不受条件影响
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    # 2026-09-09 解耦：接力部署不再看 Fetch Data conclusion——体检红灯是「喊人勘误」的警报，
+    # 不是部署闸门（数据提交步在体检步之前，红时数据已入库）；与 check 脚本头部「不阻塞部署」设计对齐
     runs-on: ubuntu-latest
     steps:
       # action 升到 Node24 运行时以消除 Node20 deprecated 警告；
