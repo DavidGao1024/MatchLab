@@ -2,6 +2,7 @@ import type { Match, StandingRow, XgRow } from '../types/models'
 import type { RawStanding, RawXgStanding } from '../types/static'
 import { zoneOf, type LeagueSlug } from './constants'
 import { computeForm } from './matches'
+import matchFixesJson from './match-fixes.json'
 
 /**
  * 正榜 + zone + xG 三合一。
@@ -48,17 +49,17 @@ export const POINT_DEDUCTIONS: Partial<Record<LeagueSlug, Record<number, number>
   'chn.1': { 977: 10, 8239: 10, 21910: 7, 7521: 6, 8240: 6, 21506: 5, 18203: 5, 15515: 5, 2052: 5 },
 }
 
-/** ESPN 源数据勘误（按 eventId）。上游修正后删除对应条目 */
+/** ESPN 源数据勘误（按 eventId）。上游修正后删除对应条目；表体在 match-fixes.json（脚本体检同读） */
 export interface MatchFix {
   score?: { home: number; away: number }
   void?: boolean
+  /** 仅注记在案：不改数据，只让体检脚本跳过（中断/取消场等前端已天然排除的 raw 怪态） */
+  ack?: boolean
+  note?: string
 }
 
-export const ESPN_MATCH_FIXES: Record<string, MatchFix> = {
-  // 2026-05-29 中超第15轮 辽宁铁人 3-2 上海海港（央视/新华社/腾讯实录），ESPN 误记 0-0（比分无源可推，唯一人工条目类型）
-  '401861543': { score: { home: 3, away: 2 } },
-  // 延期场（如 2026-08-08 浙江 vs 武汉三镇）已由 normalizeEvent 判据对齐 type.completed 根治，无需手工条目
-}
+// 延期场（如 2026-08-08 浙江 vs 武汉三镇）已由 normalizeEvent 判据对齐 type.completed 根治，无需手工条目
+export const ESPN_MATCH_FIXES = matchFixesJson as Record<string, MatchFix>
 
 /** 应用 ESPN 勘误表：void 整场剔除，score 改写比分并重设 winner/completed */
 export function applyMatchFixes(matches: Match[]): Match[] {
