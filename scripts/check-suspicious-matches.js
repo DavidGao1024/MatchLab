@@ -96,7 +96,7 @@ async function main() {
     }[i.reason] ?? i.reason}`,
   );
   if (lines.length) {
-    const md = `## ⚠️ ESPN 数据体检：${lines.length} 场可疑\n\n${lines.join('\n')}\n\n处置：与官方赛果核对后，写入 \`src/utils/match-fixes.json\` 勘误表（单一事实源，在案场次本体检自动跳过）。\n`;
+    const md = `## ⚠️ ESPN 数据体检：${lines.length} 场可疑\n\n${lines.join('\n')}\n\n处置：与官方赛果核对后，写入 \`src/utils/match-fixes.json\` 勘误表（单一事实源，在案场次本体检自动跳过）。格式照已有条目：\`{"<eventId>": {"score": {"home": N, "away": N}, "note": "依据"}}\`；仅注记不改数据用 \`{"<eventId>": {"ack": true, "note": "依据"}}\`。\n`;
     console.error('\n' + md);
     if (process.env.GITHUB_STEP_SUMMARY) {
       fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md);
