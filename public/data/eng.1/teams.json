@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-09T08:09:35.956Z",
+  "updateTime": "2026-09-10T00:44:37.650Z",
   "league": "eng.1",
   "season": "2026",
   "count": 20,
@@ -235,7 +235,11 @@
       "alternateColor": "#C4122E",
       "logo": "logos/384.png",
       "logoDark": "logos/384-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Selhurst Park",
+        "city": "London",
+        "country": "England"
+      },
       "isActive": true,
       "record": {
         "wins": 1,
@@ -449,9 +453,9 @@
       "logo": "logos/382.png",
       "logoDark": "logos/382-dark.png",
       "venue": {
-        "name": "Seoul World Cup Stadium",
-        "city": "Seoul",
-        "country": "South Korea"
+        "name": "Etihad Stadium",
+        "city": "Manchester",
+        "country": "England"
       },
       "isActive": true,
       "record": {
@@ -480,9 +484,9 @@
       "logo": "logos/360.png",
       "logoDark": "logos/360-dark.png",
       "venue": {
-        "name": "Croke Park",
-        "city": "Dublin",
-        "country": "Republic of Ireland"
+        "name": "Old Trafford",
+        "city": "Manchester",
+        "country": "England"
       },
       "isActive": true,
       "record": {
@@ -510,7 +514,11 @@
       "alternateColor": "#FFFFFF",
       "logo": "logos/361.png",
       "logoDark": "logos/361-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "St. James' Park",
+        "city": "Newcastle-upon-Tyne",
+        "country": "England"
+      },
       "isActive": true,
       "record": {
         "wins": 1,
