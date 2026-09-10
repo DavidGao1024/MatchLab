@@ -34,7 +34,6 @@ function enter() {
         <h3 class="font-cond text-lg font-semibold text-white">{{ name }}</h3>
         <span class="text-slate-600 transition-all group-hover:translate-x-1 group-hover:text-white">→</span>
       </div>
-      <p class="font-mono-d text-[9px] uppercase tracking-[0.18em] text-slate-500">{{ name }}</p>
 
       <MiniStandings :rows="rows" :league="league" :limit="8" :header="true" class="mt-3 flex-1" />
 
