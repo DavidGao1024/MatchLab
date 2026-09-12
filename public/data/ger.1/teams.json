@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-10T04:10:28.794Z",
+  "updateTime": "2026-09-12T01:03:41.948Z",
   "league": "ger.1",
   "season": "2026",
   "count": 18,
@@ -17,18 +17,22 @@
       "alternateColor": "#d4d4d4",
       "logo": "logos/598.png",
       "logoDark": "logos/598-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Stadion An der Alten Försterei",
+        "city": "Berlin",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 0,
         "draws": 1,
-        "losses": 1,
-        "played": 2,
+        "losses": 2,
+        "played": 3,
         "points": 1,
-        "goalDiff": -4,
-        "goalsFor": 3,
-        "goalsAgainst": 7,
-        "summary": "0-1-1"
+        "goalDiff": -6,
+        "goalsFor": 4,
+        "goalsAgainst": 10,
+        "summary": "0-1-2"
       }
     },
     {
@@ -74,9 +78,9 @@
       "logo": "logos/132.png",
       "logoDark": "logos/132-dark.png",
       "venue": {
-        "name": "Kai Tak Sports Park",
-        "city": "Mongkok, Kowloon",
-        "country": "Hong Kong"
+        "name": "Allianz Arena",
+        "city": "München",
+        "country": "Germany"
       },
       "isActive": true,
       "record": {
@@ -163,7 +167,11 @@
       "alternateColor": "#272726",
       "logo": "logos/125.png",
       "logoDark": "logos/125-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Deutsche Bank Park",
+        "city": "Frankfurt",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 0,
@@ -339,7 +347,11 @@
       "alternateColor": "#ffffff",
       "logo": "logos/126.png",
       "logoDark": "logos/126-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Europa-Park Stadion",
+        "city": "Freiburg im Breisgau",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 2,
@@ -402,15 +414,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 0,
+        "wins": 1,
         "draws": 1,
         "losses": 1,
-        "played": 2,
-        "points": 1,
-        "goalDiff": -3,
-        "goalsFor": 0,
-        "goalsAgainst": 3,
-        "summary": "0-1-1"
+        "played": 3,
+        "points": 4,
+        "goalDiff": -1,
+        "goalsFor": 3,
+        "goalsAgainst": 4,
+        "summary": "1-1-1"
       }
     },
     {
@@ -515,7 +527,11 @@
       "alternateColor": "#ffffff",
       "logo": "logos/137.png",
       "logoDark": "logos/137-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Weserstadion",
+        "city": "Bremen",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 1,

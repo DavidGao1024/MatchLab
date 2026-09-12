@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-10T04:05:44.442Z",
+  "updateTime": "2026-09-12T00:58:52.047Z",
   "league": "ita.1",
   "season": "2026",
   "count": 20,
@@ -18,9 +18,9 @@
       "logo": "logos/103.png",
       "logoDark": "logos/103-dark.png",
       "venue": {
-        "name": "Optus Stadium",
-        "city": "Perth",
-        "country": "Australia"
+        "name": "San Siro",
+        "city": "Milano",
+        "country": "Italy"
       },
       "isActive": true,
       "record": {
@@ -107,7 +107,11 @@
       "alternateColor": "#ffffff",
       "logo": "logos/107.png",
       "logoDark": "logos/107-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Renato Dall'Ara",
+        "city": "Bologna",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 0,
@@ -193,18 +197,22 @@
       "alternateColor": "#ffffff",
       "logo": "logos/109.png",
       "logoDark": "logos/109-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Stadio Artemio Franchi",
+        "city": "Firenze",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
-        "wins": 0,
+        "wins": 1,
         "draws": 0,
         "losses": 3,
-        "played": 3,
-        "points": 0,
-        "goalDiff": -8,
-        "goalsFor": 1,
-        "goalsAgainst": 9,
-        "summary": "0-0-3"
+        "played": 4,
+        "points": 3,
+        "goalDiff": -6,
+        "goalsFor": 5,
+        "goalsAgainst": 11,
+        "summary": "1-0-3"
       }
     },
     {
@@ -280,8 +288,8 @@
       "logo": "logos/110.png",
       "logoDark": "logos/110-dark.png",
       "venue": {
-        "name": "San Nicola",
-        "city": "Bari",
+        "name": "San Siro",
+        "city": "Milano",
         "country": "Italy"
       },
       "isActive": true,
@@ -309,7 +317,11 @@
       "alternateColor": "#FFFFFF",
       "logo": "logos/111.png",
       "logoDark": "logos/111-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Allianz Stadium",
+        "city": "Torino",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 2,
@@ -365,7 +377,11 @@
       "alternateColor": "#FFD700",
       "logo": "logos/113.png",
       "logoDark": "logos/113-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Via Del Mare",
+        "city": "Lecce",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 1,
@@ -421,7 +437,11 @@
       "alternateColor": "#ffffff",
       "logo": "logos/114.png",
       "logoDark": "logos/114-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Stadio Diego Armando Maradona",
+        "city": "Napoli",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 1,
@@ -576,13 +596,13 @@
       "record": {
         "wins": 0,
         "draws": 0,
-        "losses": 3,
-        "played": 3,
+        "losses": 4,
+        "played": 4,
         "points": 0,
-        "goalDiff": -5,
-        "goalsFor": 2,
-        "goalsAgainst": 7,
-        "summary": "0-0-3"
+        "goalDiff": -7,
+        "goalsFor": 4,
+        "goalsAgainst": 11,
+        "summary": "0-0-4"
       }
     }
   ]

@@ -1,13 +1,26 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-10T04:22:29.317Z",
+  "updateTime": "2026-09-12T01:15:45.727Z",
   "league": "fra.1",
   "season": "2026",
-  "matchesCounted": 27,
+  "matchesCounted": 28,
   "count": 18,
   "standings": [
     {
       "rank": 1,
+      "teamId": 169,
+      "team": "Stade Rennais",
+      "played": 4,
+      "won": 3,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 8,
+      "goalsAgainst": 5,
+      "goalDiff": 3,
+      "points": 10
+    },
+    {
+      "rank": 2,
       "teamId": 174,
       "team": "AS Monaco",
       "played": 3,
@@ -20,7 +33,7 @@
       "points": 9
     },
     {
-      "rank": 2,
+      "rank": 3,
       "teamId": 167,
       "team": "Lyon",
       "played": 3,
@@ -33,7 +46,7 @@
       "points": 7
     },
     {
-      "rank": 3,
+      "rank": 4,
       "teamId": 6851,
       "team": "Paris FC",
       "played": 3,
@@ -46,7 +59,7 @@
       "points": 7
     },
     {
-      "rank": 4,
+      "rank": 5,
       "teamId": 166,
       "team": "Lille",
       "played": 3,
@@ -56,19 +69,6 @@
       "goalsFor": 5,
       "goalsAgainst": 2,
       "goalDiff": 3,
-      "points": 7
-    },
-    {
-      "rank": 5,
-      "teamId": 169,
-      "team": "Stade Rennais",
-      "played": 3,
-      "won": 2,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 7,
-      "goalsAgainst": 5,
-      "goalDiff": 2,
       "points": 7
     },
     {
@@ -140,13 +140,13 @@
       "rank": 11,
       "teamId": 176,
       "team": "Marseille",
-      "played": 3,
+      "played": 4,
       "won": 1,
       "drawn": 0,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 6,
-      "goalsAgainst": 5,
-      "goalDiff": 1,
+      "goalsAgainst": 6,
+      "goalDiff": 0,
       "points": 3
     },
     {

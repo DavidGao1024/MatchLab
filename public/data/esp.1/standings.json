@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-10T04:22:20.230Z",
+  "updateTime": "2026-09-12T01:15:36.464Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 41,
+  "matchesCounted": 42,
   "count": 20,
   "standings": [
     {
@@ -34,6 +34,19 @@
     },
     {
       "rank": 3,
+      "teamId": 243,
+      "team": "Sevilla",
+      "played": 5,
+      "won": 3,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 8,
+      "goalsAgainst": 6,
+      "goalDiff": 2,
+      "points": 10
+    },
+    {
+      "rank": 4,
       "teamId": 86,
       "team": "Real Madrid",
       "played": 4,
@@ -46,7 +59,7 @@
       "points": 9
     },
     {
-      "rank": 4,
+      "rank": 5,
       "teamId": 244,
       "team": "Real Betis",
       "played": 4,
@@ -59,7 +72,7 @@
       "points": 9
     },
     {
-      "rank": 5,
+      "rank": 6,
       "teamId": 90,
       "team": "Deportivo",
       "played": 4,
@@ -72,22 +85,9 @@
       "points": 8
     },
     {
-      "rank": 6,
+      "rank": 7,
       "teamId": 1068,
       "team": "Atlético Madrid",
-      "played": 4,
-      "won": 2,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 7,
-      "goalsAgainst": 6,
-      "goalDiff": 1,
-      "points": 7
-    },
-    {
-      "rank": 7,
-      "teamId": 243,
-      "team": "Sevilla",
       "played": 4,
       "won": 2,
       "drawn": 1,
@@ -257,13 +257,13 @@
       "rank": 20,
       "teamId": 94,
       "team": "Valencia",
-      "played": 4,
+      "played": 5,
       "won": 0,
       "drawn": 1,
-      "lost": 3,
+      "lost": 4,
       "goalsFor": 1,
-      "goalsAgainst": 9,
-      "goalDiff": -8,
+      "goalsAgainst": 10,
+      "goalDiff": -9,
       "points": 1
     }
   ]

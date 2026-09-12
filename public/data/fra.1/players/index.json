@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-10T04:18:21.712Z",
+  "updateTime": "2026-09-12T01:11:35.116Z",
   "league": "fra.1",
   "season": "2026",
-  "count": 507,
+  "count": 506,
   "players": [
     {
       "id": 259743,
@@ -643,6 +643,19 @@
       "team": "Stade Rennais"
     },
     {
+      "id": 401045,
+      "name": "Rayan Fofana",
+      "teamId": 3236,
+      "position": "F",
+      "age": 20,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 38,
+      "team": "Le Havre AC"
+    },
+    {
       "id": 349185,
       "name": "Remy Labeau Lascary",
       "teamId": 172,
@@ -1219,7 +1232,7 @@
       "name": "Arsène Kouassi",
       "teamId": 273,
       "position": "D",
-      "age": 21,
+      "age": 22,
       "goals": 0,
       "assists": 0,
       "citizenship": "Burkina Faso",
@@ -4508,7 +4521,7 @@
       "name": "Raúl Torrente",
       "teamId": 2697,
       "position": "D",
-      "age": 24,
+      "age": 25,
       "goals": 0,
       "assists": 0,
       "citizenship": "Spain",
@@ -4528,19 +4541,6 @@
       "flag": "flags/fr.png",
       "jersey": 19,
       "team": "Le Mans"
-    },
-    {
-      "id": 401045,
-      "name": "Rayan Fofana",
-      "teamId": 3236,
-      "position": "F",
-      "age": 20,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 38,
-      "team": "Le Havre AC"
     },
     {
       "id": 379070,
@@ -5713,19 +5713,6 @@
       "team": "Lorient"
     },
     {
-      "id": 218620,
-      "name": "Francisco Sierralta",
-      "teamId": 172,
-      "position": "D",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Chile",
-      "flag": "flags/cl.png",
-      "jersey": 4,
-      "team": "AJ Auxerre"
-    },
-    {
       "id": 408136,
       "name": "Gabriel Kerckaert",
       "teamId": 180,
@@ -6223,7 +6210,7 @@
       "id": 213535,
       "name": "Moussa Diarra",
       "teamId": 175,
-      "position": "F",
+      "position": "D",
       "age": 24,
       "goals": null,
       "assists": null,

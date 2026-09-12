@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-10T04:22:23.224Z",
+  "updateTime": "2026-09-12T01:15:39.460Z",
   "league": "ita.1",
   "season": "2026",
-  "matchesCounted": 30,
+  "matchesCounted": 31,
   "count": 20,
   "standings": [
     {
@@ -190,6 +190,19 @@
     },
     {
       "rank": 15,
+      "teamId": 109,
+      "team": "Fiorentina",
+      "played": 4,
+      "won": 1,
+      "drawn": 0,
+      "lost": 3,
+      "goalsFor": 5,
+      "goalsAgainst": 11,
+      "goalDiff": -6,
+      "points": 3
+    },
+    {
+      "rank": 16,
       "teamId": 107,
       "team": "Bologna",
       "played": 3,
@@ -202,7 +215,7 @@
       "points": 1
     },
     {
-      "rank": 16,
+      "rank": 17,
       "teamId": 115,
       "team": "Parma",
       "played": 3,
@@ -215,7 +228,7 @@
       "points": 1
     },
     {
-      "rank": 17,
+      "rank": 18,
       "teamId": 4007,
       "team": "Monza",
       "played": 3,
@@ -226,19 +239,6 @@
       "goalsAgainst": 8,
       "goalDiff": -4,
       "points": 1
-    },
-    {
-      "rank": 18,
-      "teamId": 17530,
-      "team": "Venezia",
-      "played": 3,
-      "won": 0,
-      "drawn": 0,
-      "lost": 3,
-      "goalsFor": 2,
-      "goalsAgainst": 7,
-      "goalDiff": -5,
-      "points": 0
     },
     {
       "rank": 19,
@@ -255,15 +255,15 @@
     },
     {
       "rank": 20,
-      "teamId": 109,
-      "team": "Fiorentina",
-      "played": 3,
+      "teamId": 17530,
+      "team": "Venezia",
+      "played": 4,
       "won": 0,
       "drawn": 0,
-      "lost": 3,
-      "goalsFor": 1,
-      "goalsAgainst": 9,
-      "goalDiff": -8,
+      "lost": 4,
+      "goalsFor": 4,
+      "goalsAgainst": 11,
+      "goalDiff": -7,
       "points": 0
     }
   ]

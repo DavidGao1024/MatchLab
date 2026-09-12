@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-10T04:14:39.166Z",
+  "updateTime": "2026-09-12T01:07:51.574Z",
   "league": "fra.1",
   "season": "2026",
   "count": 18,
@@ -257,7 +257,11 @@
       "alternateColor": "#1a1a1a",
       "logo": "logos/273.png",
       "logoDark": "logos/273-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Stade du Moustoir - Yves Allainmat",
+        "city": "Lorient",
+        "country": "France"
+      },
       "isActive": true,
       "record": {
         "wins": 1,
@@ -322,13 +326,13 @@
       "record": {
         "wins": 1,
         "draws": 0,
-        "losses": 2,
-        "played": 3,
+        "losses": 3,
+        "played": 4,
         "points": 3,
-        "goalDiff": 1,
+        "goalDiff": 0,
         "goalsFor": 6,
-        "goalsAgainst": 5,
-        "summary": "1-0-2"
+        "goalsAgainst": 6,
+        "summary": "1-0-3"
       }
     },
     {
@@ -373,7 +377,11 @@
       "alternateColor": "#FFFFFF",
       "logo": "logos/6851.png",
       "logoDark": "logos/6851-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Stade Jean Bouin",
+        "city": "Paris",
+        "country": "France"
+      },
       "isActive": true,
       "record": {
         "wins": 2,
@@ -400,9 +408,9 @@
       "logo": "logos/160.png",
       "logoDark": "logos/160-dark.png",
       "venue": {
-        "name": "Ullevi Stadium",
-        "city": "Gothenburg",
-        "country": "Sweden"
+        "name": "Parc des Princes",
+        "city": "Paris",
+        "country": "France"
       },
       "isActive": true,
       "record": {
@@ -436,15 +444,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 2,
+        "wins": 3,
         "draws": 1,
         "losses": 0,
-        "played": 3,
-        "points": 7,
-        "goalDiff": 2,
-        "goalsFor": 7,
+        "played": 4,
+        "points": 10,
+        "goalDiff": 3,
+        "goalsFor": 8,
         "goalsAgainst": 5,
-        "summary": "2-1-0"
+        "summary": "3-1-0"
       }
     },
     {

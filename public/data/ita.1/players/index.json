@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-10T01:00:29.680Z",
+  "updateTime": "2026-09-12T01:03:21.172Z",
   "league": "ita.1",
   "season": "2026",
-  "count": 604,
+  "count": 605,
   "players": [
     {
       "id": 259481,
@@ -199,6 +199,19 @@
       "flag": "flags/fr.png",
       "jersey": 12,
       "team": "AC Milan"
+    },
+    {
+      "id": 224044,
+      "name": "Albert Gudmundsson",
+      "teamId": 112,
+      "position": "F",
+      "age": 29,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Iceland",
+      "flag": "flags/is.png",
+      "jersey": 80,
+      "team": "Lazio"
     },
     {
       "id": 6729,
@@ -708,6 +721,19 @@
       "team": "AS Roma"
     },
     {
+      "id": 210392,
+      "name": "Rolando Mandragora",
+      "teamId": 239,
+      "position": "M",
+      "age": 29,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 8,
+      "team": "Torino"
+    },
+    {
       "id": 413818,
       "name": "Simone Lontani",
       "teamId": 115,
@@ -916,19 +942,6 @@
       "team": "Venezia"
     },
     {
-      "id": 224044,
-      "name": "Albert Gudmundsson",
-      "teamId": 112,
-      "position": "F",
-      "age": 29,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Iceland",
-      "flag": "flags/is.png",
-      "jersey": null,
-      "team": "Lazio"
-    },
-    {
       "id": 252372,
       "name": "Alberto Dossena",
       "teamId": 2572,
@@ -1081,7 +1094,7 @@
       "assists": 0,
       "citizenship": "Italy",
       "flag": "flags/it.png",
-      "jersey": null,
+      "jersey": 35,
       "team": "Cagliari"
     },
     {
@@ -1224,7 +1237,7 @@
       "assists": 0,
       "citizenship": "Sweden",
       "flag": "flags/se.png",
-      "jersey": null,
+      "jersey": 25,
       "team": "Fiorentina"
     },
     {
@@ -1549,7 +1562,7 @@
       "assists": 0,
       "citizenship": "Italy",
       "flag": "flags/it.png",
-      "jersey": null,
+      "jersey": 41,
       "team": "Juventus"
     },
     {
@@ -1653,7 +1666,7 @@
       "assists": 0,
       "citizenship": "Guinea-Bissau",
       "flag": "flags/gw.png",
-      "jersey": null,
+      "jersey": 23,
       "team": "Fiorentina"
     },
     {
@@ -1926,7 +1939,7 @@
       "assists": 0,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
-      "jersey": null,
+      "jersey": 21,
       "team": "Torino"
     },
     {
@@ -2115,12 +2128,12 @@
       "id": 250460,
       "name": "Demba Thiam",
       "teamId": 4007,
-      "position": "D",
-      "age": 36,
+      "position": "G",
+      "age": 28,
       "goals": 0,
       "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
+      "citizenship": "Senegal",
+      "flag": "flags/sn.png",
       "jersey": 20,
       "team": "Monza"
     },
@@ -2160,7 +2173,7 @@
       "assists": 0,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
-      "jersey": null,
+      "jersey": 34,
       "team": "Parma"
     },
     {
@@ -2680,7 +2693,7 @@
       "assists": 0,
       "citizenship": "Italy",
       "flag": "flags/it.png",
-      "jersey": null,
+      "jersey": 43,
       "team": "Juventus"
     },
     {
@@ -2771,7 +2784,7 @@
       "assists": 0,
       "citizenship": "Ivory Coast",
       "flag": "flags/ci.png",
-      "jersey": null,
+      "jersey": 19,
       "team": "Atalanta"
     },
     {
@@ -3273,7 +3286,7 @@
       "name": "Ivan Sulev",
       "teamId": 2925,
       "position": "M",
-      "age": 19,
+      "age": 20,
       "goals": 0,
       "assists": 0,
       "citizenship": "Bulgaria",
@@ -3356,7 +3369,7 @@
       "assists": 0,
       "citizenship": "Poland",
       "flag": "flags/pl.png",
-      "jersey": null,
+      "jersey": 4,
       "team": "Monza"
     },
     {
@@ -3369,7 +3382,7 @@
       "assists": 0,
       "citizenship": "Netherlands",
       "flag": "flags/nl.png",
-      "jersey": null,
+      "jersey": 22,
       "team": "Bologna"
     },
     {
@@ -3465,14 +3478,14 @@
     },
     {
       "id": 139008,
-      "name": "Joao Victor",
+      "name": "João Mário",
       "teamId": 109,
       "position": "D",
-      "age": 31,
+      "age": 26,
       "goals": 0,
       "assists": 0,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
       "jersey": 17,
       "team": "Fiorentina"
     },
@@ -3538,7 +3551,7 @@
       "assists": 0,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
-      "jersey": null,
+      "jersey": 11,
       "team": "Atalanta"
     },
     {
@@ -3980,7 +3993,7 @@
       "assists": 0,
       "citizenship": "Serbia",
       "flag": "flags/rs.png",
-      "jersey": null,
+      "jersey": 91,
       "team": "Udinese"
     },
     {
@@ -4170,7 +4183,7 @@
       "name": "Lorenzo Lucca",
       "teamId": 114,
       "position": "F",
-      "age": 25,
+      "age": 26,
       "goals": 0,
       "assists": 0,
       "citizenship": "Italy",
@@ -4586,7 +4599,7 @@
       "name": "Marin Pongracic",
       "teamId": 109,
       "position": "D",
-      "age": 28,
+      "age": 29,
       "goals": 0,
       "assists": 0,
       "citizenship": "Croatia",
@@ -5004,7 +5017,7 @@
       "position": "F",
       "age": 26,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "jersey": 90,
@@ -5059,7 +5072,7 @@
       "assists": 0,
       "citizenship": "Scotland",
       "flag": "flags/gb-sct.png",
-      "jersey": null,
+      "jersey": 2,
       "team": "Torino"
     },
     {
@@ -5124,7 +5137,7 @@
       "assists": 0,
       "citizenship": "Germany",
       "flag": "flags/de.png",
-      "jersey": null,
+      "jersey": 27,
       "team": "Juventus"
     },
     {
@@ -5566,7 +5579,7 @@
       "assists": 0,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
-      "jersey": null,
+      "jersey": 28,
       "team": "Fiorentina"
     },
     {
@@ -5722,7 +5735,7 @@
       "assists": 1,
       "citizenship": "Algeria",
       "flag": "flags/dz.png",
-      "jersey": null,
+      "jersey": 45,
       "team": "Torino"
     },
     {
@@ -5908,19 +5921,6 @@
       "team": "Cagliari"
     },
     {
-      "id": 210392,
-      "name": "Rolando Mandragora",
-      "teamId": 239,
-      "position": "M",
-      "age": 29,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": null,
-      "team": "Torino"
-    },
-    {
       "id": 330041,
       "name": "Romano Floriani",
       "teamId": 112,
@@ -6021,7 +6021,7 @@
       "assists": 0,
       "citizenship": "Belgium",
       "flag": "flags/be.png",
-      "jersey": null,
+      "jersey": 11,
       "team": "Bologna"
     },
     {
@@ -6268,7 +6268,7 @@
       "assists": 0,
       "citizenship": "Italy",
       "flag": "flags/it.png",
-      "jersey": null,
+      "jersey": 22,
       "team": "Parma"
     },
     {
@@ -6424,7 +6424,7 @@
       "assists": 0,
       "citizenship": null,
       "flag": null,
-      "jersey": null,
+      "jersey": 22,
       "team": "Atalanta"
     },
     {
@@ -6515,7 +6515,7 @@
       "assists": 0,
       "citizenship": "Spain",
       "flag": "flags/es.png",
-      "jersey": null,
+      "jersey": 77,
       "team": "Venezia"
     },
     {
@@ -6645,7 +6645,7 @@
       "assists": 0,
       "citizenship": "Switzerland",
       "flag": "flags/ch.png",
-      "jersey": null,
+      "jersey": 4,
       "team": "Parma"
     },
     {
@@ -6697,7 +6697,7 @@
       "assists": 0,
       "citizenship": "Italy",
       "flag": "flags/it.png",
-      "jersey": null,
+      "jersey": 29,
       "team": "Fiorentina"
     },
     {
@@ -7427,6 +7427,19 @@
       "flag": "flags/it.png",
       "jersey": 70,
       "team": "Monza"
+    },
+    {
+      "id": 3140451,
+      "name": "Lorenzo Luigi Ginelli",
+      "teamId": 2572,
+      "position": "G",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 12,
+      "team": "Como"
     },
     {
       "id": 413868,

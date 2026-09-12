@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-09T08:38:47.794Z",
+  "updateTime": "2026-09-12T01:15:29.261Z",
   "league": "chn.1",
   "season": "2026",
   "count": 496,
@@ -1735,6 +1735,19 @@
       "team": "Qingdao Hainiu"
     },
     {
+      "id": 82922,
+      "name": "Pedro Delgado",
+      "teamId": 22537,
+      "position": "M",
+      "age": 29,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "jersey": 9,
+      "team": "Dalian Yingbo"
+    },
+    {
       "id": 212536,
       "name": "Rômulo",
       "teamId": 21355,
@@ -1759,19 +1772,6 @@
       "flag": "flags/cn.png",
       "jersey": 38,
       "team": "Chongqing Tonglianglong"
-    },
-    {
-      "id": 239541,
-      "name": "Ruibao Hu",
-      "teamId": 22536,
-      "position": "D",
-      "age": 29,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "China PR",
-      "flag": "flags/cn.png",
-      "jersey": 2,
-      "team": "Yunnan Yukun"
     },
     {
       "id": 234667,
@@ -2300,7 +2300,7 @@
       "position": "D",
       "age": 29,
       "goals": 0,
-      "assists": 1,
+      "assists": 0,
       "citizenship": "China PR",
       "flag": "flags/cn.png",
       "jersey": 12,
@@ -3743,7 +3743,7 @@
       "position": "M",
       "age": 28,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "China PR",
       "flag": "flags/cn.png",
       "jersey": 22,
@@ -4001,7 +4001,7 @@
       "name": "Ning Fangze",
       "teamId": 18203,
       "position": "F",
-      "age": 20,
+      "age": 21,
       "goals": 0,
       "assists": 0,
       "citizenship": "China PR",
@@ -4099,19 +4099,6 @@
       "flag": "flags/pt.png",
       "jersey": 23,
       "team": "Shandong Taishan"
-    },
-    {
-      "id": 82922,
-      "name": "Pedro Delgado",
-      "teamId": 22537,
-      "position": "M",
-      "age": 29,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "jersey": 9,
-      "team": "Dalian Yingbo"
     },
     {
       "id": 287809,
@@ -4241,6 +4228,19 @@
       "citizenship": "China PR",
       "flag": "flags/cn.png",
       "jersey": 28,
+      "team": "Yunnan Yukun"
+    },
+    {
+      "id": 239541,
+      "name": "Ruibao Hu",
+      "teamId": 22536,
+      "position": "D",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "China PR",
+      "flag": "flags/cn.png",
+      "jersey": 2,
       "team": "Yunnan Yukun"
     },
     {
@@ -5056,7 +5056,7 @@
       "position": "D",
       "age": 27,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "China PR",
       "flag": "flags/cn.png",
       "jersey": 4,

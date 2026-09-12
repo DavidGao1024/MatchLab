@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-09-10T04:35:04.563Z",
+  "updateTime": "2026-09-12T01:28:22.906Z",
   "league": "ger.1",
-  "playersScanned": 531,
-  "count": 319,
+  "playersScanned": 525,
+  "count": 320,
   "transfers": [
     {
       "playerId": 102337,
@@ -2819,6 +2819,18 @@
       "date": "2024-07-07T07:00Z",
       "fromTeamId": 384,
       "fromTeam": "Crystal Palace",
+      "toTeamId": 132,
+      "toTeam": "Bayern Munich",
+      "type": "Undisclosed",
+      "amount": 0,
+      "displayAmount": "Undisclosed"
+    },
+    {
+      "playerId": 287225,
+      "playerName": "Sacha Boey",
+      "date": "2024-01-28T08:00Z",
+      "fromTeamId": 432,
+      "fromTeam": "Galatasaray",
       "toTeamId": 132,
       "toTeam": "Bayern Munich",
       "type": "Undisclosed",

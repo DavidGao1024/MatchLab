@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-10T04:22:26.186Z",
+  "updateTime": "2026-09-12T01:15:42.625Z",
   "league": "ger.1",
   "season": "2026",
-  "matchesCounted": 18,
+  "matchesCounted": 19,
   "count": 18,
   "standings": [
     {
@@ -86,6 +86,19 @@
     },
     {
       "rank": 7,
+      "teamId": 133,
+      "team": "Schalke 04",
+      "played": 3,
+      "won": 1,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 3,
+      "goalsAgainst": 4,
+      "goalDiff": -1,
+      "points": 4
+    },
+    {
+      "rank": 8,
       "teamId": 131,
       "team": "Bayer Leverkusen",
       "played": 2,
@@ -98,7 +111,7 @@
       "points": 3
     },
     {
-      "rank": 8,
+      "rank": 9,
       "teamId": 11420,
       "team": "RB Leipzig",
       "played": 2,
@@ -111,7 +124,7 @@
       "points": 3
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 134,
       "team": "VfB Stuttgart",
       "played": 2,
@@ -124,7 +137,7 @@
       "points": 3
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 137,
       "team": "Werder Bremen",
       "played": 2,
@@ -137,7 +150,7 @@
       "points": 3
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 122,
       "team": "FC Cologne",
       "played": 2,
@@ -150,7 +163,7 @@
       "points": 3
     },
     {
-      "rank": 12,
+      "rank": 13,
       "teamId": 3307,
       "team": "SC Paderborn 07",
       "played": 2,
@@ -163,7 +176,7 @@
       "points": 1
     },
     {
-      "rank": 13,
+      "rank": 14,
       "teamId": 125,
       "team": "Eintracht Frankfurt",
       "played": 2,
@@ -176,29 +189,16 @@
       "points": 1
     },
     {
-      "rank": 14,
-      "teamId": 133,
-      "team": "Schalke 04",
-      "played": 2,
-      "won": 0,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 0,
-      "goalsAgainst": 3,
-      "goalDiff": -3,
-      "points": 1
-    },
-    {
       "rank": 15,
       "teamId": 598,
       "team": "1. FC Union Berlin",
-      "played": 2,
+      "played": 3,
       "won": 0,
       "drawn": 1,
-      "lost": 1,
-      "goalsFor": 3,
-      "goalsAgainst": 7,
-      "goalDiff": -4,
+      "lost": 2,
+      "goalsFor": 4,
+      "goalsAgainst": 10,
+      "goalDiff": -6,
       "points": 1
     },
     {

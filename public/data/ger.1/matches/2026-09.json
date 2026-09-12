@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-09-10T04:22:23.920Z",
+  "updateTime": "2026-09-12T01:15:40.318Z",
   "league": "ger.1",
   "month": "2026-09",
   "count": 27,
@@ -243,16 +243,17 @@
       "eventId": "401884793",
       "date": "2026-09-11T18:30Z",
       "name": "Schalke 04 at 1. FC Union Berlin",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+14'",
+      "period": 2,
       "venue": "Stadion An der Alten Försterei",
       "home": {
         "id": 598,
         "name": "1. FC Union Berlin",
         "abbreviation": "FCU",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -260,8 +261,8 @@
         "name": "Schalke 04",
         "abbreviation": "S04",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       }
     },
     {
