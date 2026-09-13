@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-12T01:07:33.175Z",
+  "updateTime": "2026-09-13T00:50:57.146Z",
   "league": "ger.1",
   "season": "2026",
-  "count": 524,
+  "count": 525,
   "players": [
     {
       "id": 359793,
@@ -149,6 +149,19 @@
       "team": "FC Cologne"
     },
     {
+      "id": 220796,
+      "name": "Tim Skarke",
+      "teamId": 598,
+      "position": "M",
+      "age": 30,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 21,
+      "team": "1. FC Union Berlin"
+    },
+    {
       "id": 338854,
       "name": "Adam Daghim",
       "teamId": 7911,
@@ -160,6 +173,19 @@
       "flag": "flags/dk.png",
       "jersey": 14,
       "team": "TSG Hoffenheim"
+    },
+    {
+      "id": 290166,
+      "name": "Adil Aouchiche",
+      "teamId": 133,
+      "position": "M",
+      "age": 24,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Algeria",
+      "flag": "flags/dz.png",
+      "jersey": 24,
+      "team": "Schalke 04"
     },
     {
       "id": 359370,
@@ -539,6 +565,19 @@
       "team": "SC Freiburg"
     },
     {
+      "id": 231674,
+      "name": "Maximilian Wöber",
+      "teamId": 133,
+      "position": "D",
+      "age": 28,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Austria",
+      "flag": "flags/at.png",
+      "jersey": 39,
+      "team": "Schalke 04"
+    },
+    {
       "id": 146804,
       "name": "Michael Gregoritsch",
       "teamId": 3841,
@@ -630,6 +669,19 @@
       "team": "FC Augsburg"
     },
     {
+      "id": 198087,
+      "name": "Robin Gosens",
+      "teamId": 133,
+      "position": "D",
+      "age": 32,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 8,
+      "team": "Schalke 04"
+    },
+    {
       "id": 307364,
       "name": "Rocco Reitz",
       "teamId": 11420,
@@ -695,19 +747,6 @@
       "team": "TSG Hoffenheim"
     },
     {
-      "id": 220796,
-      "name": "Tim Skarke",
-      "teamId": 598,
-      "position": "M",
-      "age": 30,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 21,
-      "team": "1. FC Union Berlin"
-    },
-    {
       "id": 384380,
       "name": "Abdoul Koné",
       "teamId": 11420,
@@ -732,19 +771,6 @@
       "flag": "flags/cz.png",
       "jersey": 10,
       "team": "TSG Hoffenheim"
-    },
-    {
-      "id": 290166,
-      "name": "Adil Aouchiche",
-      "teamId": 133,
-      "position": "M",
-      "age": 24,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Algeria",
-      "flag": "flags/dz.png",
-      "jersey": 24,
-      "team": "Schalke 04"
     },
     {
       "id": 361258,
@@ -1982,6 +2008,19 @@
       "team": "Bayern Munich"
     },
     {
+      "id": 237224,
+      "name": "Hwang Hee-Chan",
+      "teamId": 133,
+      "position": "F",
+      "age": 30,
+      "goals": 0,
+      "assists": 1,
+      "citizenship": "South Korea",
+      "flag": "flags/kr.png",
+      "jersey": 7,
+      "team": "Schalke 04"
+    },
+    {
       "id": 387474,
       "name": "Ifechukwu Ogbus",
       "teamId": 126,
@@ -2456,7 +2495,7 @@
       "position": "F",
       "age": 25,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Austria",
       "flag": "flags/at.png",
       "jersey": 20,
@@ -3516,19 +3555,6 @@
       "team": "SV Elversberg"
     },
     {
-      "id": 231674,
-      "name": "Maximilian Wöber",
-      "teamId": 133,
-      "position": "D",
-      "age": 28,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Austria",
-      "flag": "flags/at.png",
-      "jersey": 39,
-      "team": "Schalke 04"
-    },
-    {
       "id": 403400,
       "name": "Mert Can Ayhan",
       "teamId": 133,
@@ -4322,19 +4348,6 @@
       "team": "1. FC Union Berlin"
     },
     {
-      "id": 198087,
-      "name": "Robin Gosens",
-      "teamId": 133,
-      "position": "D",
-      "age": 32,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 8,
-      "team": "Schalke 04"
-    },
-    {
       "id": 258876,
       "name": "Robin Hack",
       "teamId": 268,
@@ -4822,7 +4835,7 @@
       "position": "D",
       "age": 21,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 15,
@@ -5592,7 +5605,7 @@
       "assists": null,
       "citizenship": "Ivory Coast",
       "flag": "flags/ci.png",
-      "jersey": null,
+      "jersey": 20,
       "team": "Bayer Leverkusen"
     },
     {
@@ -5607,19 +5620,6 @@
       "flag": "flags/kr.png",
       "jersey": 13,
       "team": "Mainz"
-    },
-    {
-      "id": 237224,
-      "name": "Hwang Hee-Chan",
-      "teamId": 133,
-      "position": "F",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "citizenship": "South Korea",
-      "flag": "flags/kr.png",
-      "jersey": null,
-      "team": "Schalke 04"
     },
     {
       "id": 3116071,
@@ -6179,6 +6179,19 @@
       "flag": "flags/de.png",
       "jersey": 44,
       "team": "FC Cologne"
+    },
+    {
+      "id": 376559,
+      "name": "Maximilian Herwerth",
+      "teamId": 134,
+      "position": "D",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 37,
+      "team": "VfB Stuttgart"
     },
     {
       "id": 417373,

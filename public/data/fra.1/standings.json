@@ -1,13 +1,26 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-12T01:15:45.727Z",
+  "updateTime": "2026-09-13T01:00:08.072Z",
   "league": "fra.1",
   "season": "2026",
-  "matchesCounted": 28,
+  "matchesCounted": 33,
   "count": 18,
   "standings": [
     {
       "rank": 1,
+      "teamId": 174,
+      "team": "AS Monaco",
+      "played": 4,
+      "won": 3,
+      "drawn": 1,
+      "lost": 0,
+      "goalsFor": 6,
+      "goalsAgainst": 2,
+      "goalDiff": 4,
+      "points": 10
+    },
+    {
+      "rank": 2,
       "teamId": 169,
       "team": "Stade Rennais",
       "played": 4,
@@ -20,43 +33,30 @@
       "points": 10
     },
     {
-      "rank": 2,
-      "teamId": 174,
-      "team": "AS Monaco",
-      "played": 3,
-      "won": 3,
-      "drawn": 0,
-      "lost": 0,
-      "goalsFor": 5,
-      "goalsAgainst": 1,
-      "goalDiff": 4,
-      "points": 9
-    },
-    {
       "rank": 3,
       "teamId": 167,
       "team": "Lyon",
-      "played": 3,
+      "played": 4,
       "won": 2,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 0,
       "goalsFor": 6,
       "goalsAgainst": 2,
       "goalDiff": 4,
-      "points": 7
+      "points": 8
     },
     {
       "rank": 4,
       "teamId": 6851,
       "team": "Paris FC",
-      "played": 3,
+      "played": 4,
       "won": 2,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 0,
       "goalsFor": 6,
       "goalsAgainst": 2,
       "goalDiff": 4,
-      "points": 7
+      "points": 8
     },
     {
       "rank": 5,
@@ -75,14 +75,14 @@
       "rank": 6,
       "teamId": 180,
       "team": "Strasbourg",
-      "played": 3,
+      "played": 4,
       "won": 2,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
-      "goalsFor": 8,
-      "goalsAgainst": 7,
+      "goalsFor": 9,
+      "goalsAgainst": 8,
       "goalDiff": 1,
-      "points": 6
+      "points": 7
     },
     {
       "rank": 7,
@@ -101,17 +101,30 @@
       "rank": 8,
       "teamId": 273,
       "team": "Lorient",
-      "played": 3,
+      "played": 4,
       "won": 1,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 1,
-      "goalsFor": 2,
-      "goalsAgainst": 2,
+      "goalsFor": 4,
+      "goalsAgainst": 4,
       "goalDiff": 0,
-      "points": 4
+      "points": 5
     },
     {
       "rank": 9,
+      "teamId": 7868,
+      "team": "Angers",
+      "played": 4,
+      "won": 1,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 4,
+      "goalsAgainst": 5,
+      "goalDiff": -1,
+      "points": 4
+    },
+    {
+      "rank": 10,
       "teamId": 170,
       "team": "Troyes",
       "played": 3,
@@ -124,7 +137,7 @@
       "points": 4
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 175,
       "team": "Lens",
       "played": 3,
@@ -137,7 +150,7 @@
       "points": 3
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 176,
       "team": "Marseille",
       "played": 4,
@@ -150,20 +163,20 @@
       "points": 3
     },
     {
-      "rank": 12,
-      "teamId": 7868,
-      "team": "Angers",
-      "played": 3,
+      "rank": 13,
+      "teamId": 172,
+      "team": "AJ Auxerre",
+      "played": 4,
       "won": 1,
       "drawn": 0,
-      "lost": 2,
-      "goalsFor": 4,
-      "goalsAgainst": 5,
-      "goalDiff": -1,
+      "lost": 3,
+      "goalsFor": 5,
+      "goalsAgainst": 11,
+      "goalDiff": -6,
       "points": 3
     },
     {
-      "rank": 13,
+      "rank": 14,
       "teamId": 2697,
       "team": "Le Mans",
       "played": 3,
@@ -176,7 +189,7 @@
       "points": 2
     },
     {
-      "rank": 14,
+      "rank": 15,
       "teamId": 160,
       "team": "Paris Saint-Germain",
       "played": 3,
@@ -189,56 +202,43 @@
       "points": 2
     },
     {
-      "rank": 15,
-      "teamId": 2502,
-      "team": "Nice",
-      "played": 3,
-      "won": 0,
-      "drawn": 2,
-      "lost": 1,
-      "goalsFor": 1,
-      "goalsAgainst": 4,
-      "goalDiff": -3,
-      "points": 2
-    },
-    {
       "rank": 16,
       "teamId": 3236,
       "team": "Le Havre AC",
-      "played": 3,
+      "played": 4,
       "won": 0,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 2,
       "goalsFor": 2,
       "goalsAgainst": 4,
       "goalDiff": -2,
-      "points": 1
+      "points": 2
     },
     {
       "rank": 17,
       "teamId": 179,
       "team": "Toulouse",
-      "played": 3,
+      "played": 4,
       "won": 0,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 2,
-      "goalsFor": 2,
-      "goalsAgainst": 5,
+      "goalsFor": 4,
+      "goalsAgainst": 7,
       "goalDiff": -3,
-      "points": 1
+      "points": 2
     },
     {
       "rank": 18,
-      "teamId": 172,
-      "team": "AJ Auxerre",
-      "played": 3,
+      "teamId": 2502,
+      "team": "Nice",
+      "played": 4,
       "won": 0,
-      "drawn": 0,
-      "lost": 3,
-      "goalsFor": 4,
-      "goalsAgainst": 11,
-      "goalDiff": -7,
-      "points": 0
+      "drawn": 2,
+      "lost": 2,
+      "goalsFor": 1,
+      "goalsAgainst": 5,
+      "goalDiff": -4,
+      "points": 2
     }
   ]
 }

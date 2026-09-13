@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-12T01:11:35.116Z",
+  "updateTime": "2026-09-13T00:55:27.379Z",
   "league": "fra.1",
   "season": "2026",
-  "count": 506,
+  "count": 509,
   "players": [
     {
       "id": 259743,
@@ -160,6 +160,19 @@
       "flag": "flags/fr.png",
       "jersey": 11,
       "team": "Le Mans"
+    },
+    {
+      "id": 173266,
+      "name": "Adrien Thomasson",
+      "teamId": 169,
+      "position": "M",
+      "age": 32,
+      "goals": 1,
+      "assists": 2,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 28,
+      "team": "Stade Rennais"
     },
     {
       "id": 301262,
@@ -888,19 +901,6 @@
       "flag": "flags/fr.png",
       "jersey": 6,
       "team": "Troyes"
-    },
-    {
-      "id": 173266,
-      "name": "Adrien Thomasson",
-      "teamId": 169,
-      "position": "M",
-      "age": 32,
-      "goals": 0,
-      "assists": 2,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 28,
-      "team": "Stade Rennais"
     },
     {
       "id": 246847,
@@ -5245,19 +5245,6 @@
       "team": "Troyes"
     },
     {
-      "id": 277383,
-      "name": "Yann Gboho",
-      "teamId": 179,
-      "position": "F",
-      "age": 25,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 10,
-      "team": "Toulouse"
-    },
-    {
       "id": 289837,
       "name": "Yasser Larouci",
       "teamId": 2697,
@@ -5425,6 +5412,19 @@
       "flag": "flags/fr.png",
       "jersey": 44,
       "team": "Lyon"
+    },
+    {
+      "id": 114031,
+      "name": "Alex Teixeira",
+      "teamId": 3236,
+      "position": "G",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": null,
+      "team": "Le Havre AC"
     },
     {
       "id": 305669,
@@ -5736,6 +5736,19 @@
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 24,
+      "team": "Le Havre AC"
+    },
+    {
+      "id": 3140852,
+      "name": "Hakim Dongopandji",
+      "teamId": 3236,
+      "position": "F",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 33,
       "team": "Le Havre AC"
     },
     {
@@ -6207,6 +6220,19 @@
       "team": "Nice"
     },
     {
+      "id": 408085,
+      "name": "Mouhamed N'Diaye",
+      "teamId": 3236,
+      "position": "D",
+      "age": 21,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Senegal",
+      "flag": "flags/sn.png",
+      "jersey": null,
+      "team": "Le Havre AC"
+    },
+    {
       "id": 213535,
       "name": "Moussa Diarra",
       "teamId": 175,
@@ -6478,6 +6504,19 @@
       "flag": "flags/fr.png",
       "jersey": 23,
       "team": "Lille"
+    },
+    {
+      "id": 3140851,
+      "name": "Théo Collin",
+      "teamId": 179,
+      "position": "G",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 1,
+      "team": "Toulouse"
     },
     {
       "id": 408362,
