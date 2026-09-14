@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-13T00:59:51.328Z",
+  "updateTime": "2026-09-14T01:01:04.171Z",
   "league": "eng.1",
   "season": "2026",
-  "matchesCounted": 37,
+  "matchesCounted": 39,
   "count": 20,
   "standings": [
     {
@@ -23,14 +23,14 @@
       "rank": 2,
       "teamId": 382,
       "team": "Manchester City",
-      "played": 3,
-      "won": 3,
+      "played": 4,
+      "won": 4,
       "drawn": 0,
       "lost": 0,
-      "goalsFor": 7,
+      "goalsFor": 8,
       "goalsAgainst": 2,
-      "goalDiff": 5,
-      "points": 9
+      "goalDiff": 6,
+      "points": 12
     },
     {
       "rank": 3,
@@ -47,6 +47,19 @@
     },
     {
       "rank": 4,
+      "teamId": 331,
+      "team": "Brighton & Hove Albion",
+      "played": 4,
+      "won": 2,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 13,
+      "goalsAgainst": 5,
+      "goalDiff": 8,
+      "points": 7
+    },
+    {
+      "rank": 5,
       "teamId": 363,
       "team": "Chelsea",
       "played": 4,
@@ -59,7 +72,7 @@
       "points": 7
     },
     {
-      "rank": 5,
+      "rank": 6,
       "teamId": 337,
       "team": "Brentford",
       "played": 4,
@@ -72,7 +85,7 @@
       "points": 6
     },
     {
-      "rank": 6,
+      "rank": 7,
       "teamId": 364,
       "team": "Liverpool",
       "played": 4,
@@ -85,7 +98,7 @@
       "points": 6
     },
     {
-      "rank": 7,
+      "rank": 8,
       "teamId": 368,
       "team": "Everton",
       "played": 4,
@@ -98,7 +111,7 @@
       "points": 6
     },
     {
-      "rank": 8,
+      "rank": 9,
       "teamId": 373,
       "team": "Ipswich Town",
       "played": 4,
@@ -111,7 +124,7 @@
       "points": 6
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 361,
       "team": "Newcastle United",
       "played": 3,
@@ -124,7 +137,7 @@
       "points": 5
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 357,
       "team": "Leeds United",
       "played": 3,
@@ -137,7 +150,7 @@
       "points": 5
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 393,
       "team": "Nottingham Forest",
       "played": 4,
@@ -150,29 +163,16 @@
       "points": 5
     },
     {
-      "rank": 12,
-      "teamId": 331,
-      "team": "Brighton & Hove Albion",
-      "played": 3,
-      "won": 1,
-      "drawn": 1,
-      "lost": 1,
-      "goalsFor": 8,
-      "goalsAgainst": 5,
-      "goalDiff": 3,
-      "points": 4
-    },
-    {
       "rank": 13,
       "teamId": 360,
       "team": "Manchester United",
-      "played": 3,
+      "played": 4,
       "won": 1,
       "drawn": 1,
-      "lost": 1,
+      "lost": 2,
       "goalsFor": 7,
-      "goalsAgainst": 6,
-      "goalDiff": 1,
+      "goalsAgainst": 7,
+      "goalDiff": 0,
       "points": 4
     },
     {
@@ -257,13 +257,13 @@
       "rank": 20,
       "teamId": 388,
       "team": "Coventry City",
-      "played": 3,
+      "played": 4,
       "won": 0,
       "drawn": 0,
-      "lost": 3,
+      "lost": 4,
       "goalsFor": 0,
-      "goalsAgainst": 5,
-      "goalDiff": -5,
+      "goalsAgainst": 10,
+      "goalDiff": -10,
       "points": 0
     }
   ]

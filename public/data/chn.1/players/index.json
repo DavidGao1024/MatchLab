@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-12T01:15:29.261Z",
+  "updateTime": "2026-09-14T01:00:58.186Z",
   "league": "chn.1",
   "season": "2026",
-  "count": 496,
+  "count": 500,
   "players": [
     {
       "id": 302980,
@@ -32,6 +32,19 @@
       "team": "Chengdu Rongcheng"
     },
     {
+      "id": 173239,
+      "name": "Jhonder Cádiz",
+      "teamId": 21506,
+      "position": "F",
+      "age": 31,
+      "goals": 17,
+      "assists": 6,
+      "citizenship": "Venezuela",
+      "flag": "flags/ve.png",
+      "jersey": 29,
+      "team": "Wuhan Three Towns"
+    },
+    {
       "id": 218955,
       "name": "Crysan",
       "teamId": 7521,
@@ -43,19 +56,6 @@
       "flag": "flags/br.png",
       "jersey": 9,
       "team": "Shandong Taishan"
-    },
-    {
-      "id": 173239,
-      "name": "Jhonder Cádiz",
-      "teamId": 21506,
-      "position": "F",
-      "age": 31,
-      "goals": 16,
-      "assists": 6,
-      "citizenship": "Venezuela",
-      "flag": "flags/ve.png",
-      "jersey": 29,
-      "team": "Wuhan Three Towns"
     },
     {
       "id": 198512,
@@ -71,6 +71,19 @@
       "team": "Shanghai Shenhua"
     },
     {
+      "id": 202305,
+      "name": "Gustavo",
+      "teamId": 8240,
+      "position": "F",
+      "age": 32,
+      "goals": 13,
+      "assists": 4,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 9,
+      "team": "Henan"
+    },
+    {
       "id": 287781,
       "name": "Cleber",
       "teamId": 22536,
@@ -82,19 +95,6 @@
       "flag": "flags/br.png",
       "jersey": 9,
       "team": "Yunnan Yukun"
-    },
-    {
-      "id": 202305,
-      "name": "Gustavo",
-      "teamId": 8240,
-      "position": "F",
-      "age": 32,
-      "goals": 12,
-      "assists": 4,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 9,
-      "team": "Henan"
     },
     {
       "id": 233666,
@@ -272,7 +272,7 @@
       "position": "M",
       "age": 28,
       "goals": 8,
-      "assists": 8,
+      "assists": 9,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
       "jersey": 8,
@@ -1020,6 +1020,19 @@
       "team": "Henan"
     },
     {
+      "id": 213024,
+      "name": "Aitor Córdoba",
+      "teamId": 8239,
+      "position": "D",
+      "age": 31,
+      "goals": 2,
+      "assists": 1,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 18,
+      "team": "Tianjin Jinmen Tiger"
+    },
+    {
       "id": 233748,
       "name": "Chuangyi Lin",
       "teamId": 21910,
@@ -1180,7 +1193,7 @@
       "name": "Liu Yang",
       "teamId": 7521,
       "position": "D",
-      "age": 35,
+      "age": 31,
       "goals": 2,
       "assists": 3,
       "citizenship": "China PR",
@@ -1343,19 +1356,6 @@
       "flag": "flags/cn.png",
       "jersey": 19,
       "team": "Yunnan Yukun"
-    },
-    {
-      "id": 213024,
-      "name": "Aitor Córdoba",
-      "teamId": 8239,
-      "position": "D",
-      "age": 31,
-      "goals": 1,
-      "assists": 1,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 18,
-      "team": "Tianjin Jinmen Tiger"
     },
     {
       "id": 241976,
@@ -2266,6 +2266,19 @@
       "flag": "flags/hk.png",
       "jersey": 18,
       "team": "Qingdao West Coast"
+    },
+    {
+      "id": 235428,
+      "name": "Beni N'Kololo",
+      "teamId": 2052,
+      "position": "M",
+      "age": 29,
+      "goals": 0,
+      "assists": 2,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 20,
+      "team": "Beijing Guoan"
     },
     {
       "id": 234466,
@@ -3789,6 +3802,19 @@
       "team": "Dalian Yingbo"
     },
     {
+      "id": 407656,
+      "name": "Lu Tongyun",
+      "teamId": 2052,
+      "position": "G",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 14,
+      "team": "Beijing Guoan"
+    },
+    {
       "id": 340024,
       "name": "Lu Yongtao",
       "teamId": 15515,
@@ -4107,7 +4133,7 @@
       "position": "M",
       "age": 27,
       "goals": 0,
-      "assists": 2,
+      "assists": 3,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
       "jersey": 8,
@@ -5921,6 +5947,19 @@
       "team": "Wuhan Three Towns"
     },
     {
+      "id": 217526,
+      "name": "Chadrac Akolo",
+      "teamId": 2052,
+      "position": "F",
+      "age": 31,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Congo DR",
+      "flag": "flags/cd.png",
+      "jersey": null,
+      "team": "Beijing Guoan"
+    },
+    {
       "id": 419839,
       "name": "Chen Hanyang",
       "teamId": 8240,
@@ -5997,6 +6036,19 @@
       "flag": "flags/cn.png",
       "jersey": 1,
       "team": "Wuhan Three Towns"
+    },
+    {
+      "id": 215792,
+      "name": "Jeremy Dudziak",
+      "teamId": 2052,
+      "position": "M",
+      "age": 31,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Tunisia",
+      "flag": "flags/tn.png",
+      "jersey": null,
+      "team": "Beijing Guoan"
     },
     {
       "id": 419824,

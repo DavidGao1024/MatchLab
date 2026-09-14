@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-09T08:21:49.547Z",
+  "updateTime": "2026-09-14T00:45:18.872Z",
   "league": "ita.1",
   "season": "2026",
   "id": 241430,
@@ -29,10 +29,10 @@
       "totalClearance": 1,
       "totalTackles": 0,
       "tacklesLost": 0,
-      "recoveries": 2
+      "recoveries": 3
     },
     "general": {
-      "appearances": 1,
+      "appearances": 2,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -40,17 +40,17 @@
       "dnp": 0,
       "draws": 0,
       "foulsCommitted": 1,
-      "foulsSuffered": 0,
+      "foulsSuffered": 1,
       "goalDifference": 0,
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 10,
+      "minutes": 16,
       "ownGoals": 0,
-      "passPct": 0.6,
+      "passPct": 0.75,
       "redCards": 0,
       "starts": 0,
-      "subIns": 1,
+      "subIns": 2,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -60,10 +60,10 @@
       "wonCorners": 0,
       "yellowCards": 0,
       "duelsLost": 2,
-      "duelsWon": 0,
-      "duels": 2,
+      "duelsWon": 1,
+      "duels": 3,
       "secondYellow": 0,
-      "touches": 10
+      "touches": 15
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -87,10 +87,10 @@
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 0,
-      "accuratePasses": 3,
+      "accuratePasses": 6,
       "accurateThroughBalls": 0,
       "attemptsInBox": 2,
-      "attemptsOutBox": 2,
+      "attemptsOutBox": 3,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -122,16 +122,16 @@
       "shotsOnPost": 0,
       "shotsOnTarget": 0,
       "throughBallPct": 0,
-      "totalCrosses": 0,
+      "totalCrosses": 1,
       "totalGoals": 0,
       "totalLongBalls": 0,
-      "totalPasses": 5,
+      "totalPasses": 8,
       "totalShots": 0,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 0,
       "progressiveCarries": 0,
-      "touchesInOppBox": 1
+      "touchesInOppBox": 2
     }
   }
 }

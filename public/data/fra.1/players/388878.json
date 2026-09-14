@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-09T08:33:41.301Z",
+  "updateTime": "2026-09-14T00:56:13.263Z",
   "league": "fra.1",
   "season": "2026",
   "id": 388878,
@@ -29,10 +29,10 @@
       "totalClearance": 0,
       "totalTackles": 0,
       "tacklesLost": 0,
-      "recoveries": 0
+      "recoveries": 2
     },
     "general": {
-      "appearances": 0,
+      "appearances": 1,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -40,17 +40,17 @@
       "dnp": 0,
       "draws": 0,
       "foulsCommitted": 0,
-      "foulsSuffered": 0,
+      "foulsSuffered": 2,
       "goalDifference": 0,
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 0,
+      "minutes": 5,
       "ownGoals": 0,
-      "passPct": 0,
+      "passPct": 1,
       "redCards": 0,
       "starts": 0,
-      "subIns": 0,
+      "subIns": 1,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -59,11 +59,11 @@
       "wins": 0,
       "wonCorners": 0,
       "yellowCards": 0,
-      "duelsLost": 0,
-      "duelsWon": 0,
-      "duels": 0,
+      "duelsLost": 1,
+      "duelsWon": 2,
+      "duels": 3,
       "secondYellow": 0,
-      "touches": 0
+      "touches": 7
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -87,10 +87,10 @@
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 0,
-      "accuratePasses": 0,
+      "accuratePasses": 2,
       "accurateThroughBalls": 0,
       "attemptsInBox": 0,
-      "attemptsOutBox": 0,
+      "attemptsOutBox": 1,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -125,12 +125,12 @@
       "totalCrosses": 0,
       "totalGoals": 0,
       "totalLongBalls": 0,
-      "totalPasses": 0,
+      "totalPasses": 2,
       "totalShots": 0,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 0,
-      "progressiveCarries": 0,
+      "progressiveCarries": 1,
       "touchesInOppBox": 0
     }
   }

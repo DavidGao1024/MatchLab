@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-09T08:24:42.825Z",
+  "updateTime": "2026-09-14T00:47:59.360Z",
   "league": "ita.1",
   "season": "2026",
   "id": 252447,
@@ -20,7 +20,7 @@
   "flag": "flags/it.png",
   "stats": {
     "defensive": {
-      "blockedShots": 0,
+      "blockedShots": 1,
       "effectiveClearance": 1,
       "effectiveTackles": 3,
       "inneffectiveTackles": 0,
@@ -32,7 +32,7 @@
       "recoveries": 4
     },
     "general": {
-      "appearances": 2,
+      "appearances": 3,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -45,12 +45,12 @@
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 76,
+      "minutes": 79,
       "ownGoals": 0,
       "passPct": 0.56,
       "redCards": 0,
       "starts": 0,
-      "subIns": 2,
+      "subIns": 3,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -63,7 +63,7 @@
       "duelsWon": 7,
       "duels": 16,
       "secondYellow": 0,
-      "touches": 47
+      "touches": 51
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -110,28 +110,28 @@
       "penaltyKickPct": 0,
       "penaltyKickShots": 0,
       "penaltyKicksMissed": 0,
-      "rightFootedShots": 0,
+      "rightFootedShots": 1,
       "secondAssists": 0,
       "shootOutGoals": 0,
       "shootOutMisses": 0,
       "shootOutPct": 0,
       "shotAssists": 1,
-      "shotPct": 0,
+      "shotPct": 0.5,
       "shotsHeaded": 0,
-      "shotsOffTarget": 0,
+      "shotsOffTarget": 1,
       "shotsOnPost": 0,
-      "shotsOnTarget": 0,
+      "shotsOnTarget": 1,
       "throughBallPct": 0,
-      "totalCrosses": 3,
+      "totalCrosses": 4,
       "totalGoals": 0,
       "totalLongBalls": 6,
       "totalPasses": 25,
-      "totalShots": 0,
+      "totalShots": 2,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 0,
-      "progressiveCarries": 5,
-      "touchesInOppBox": 3
+      "progressiveCarries": 6,
+      "touchesInOppBox": 4
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-09-10T04:37:01.389Z",
+  "updateTime": "2026-09-14T01:14:40.154Z",
   "league": "chn.1",
-  "playersScanned": 497,
-  "count": 47,
+  "playersScanned": 501,
+  "count": 46,
   "transfers": [
     {
       "playerId": 150127,
@@ -210,18 +210,6 @@
       "displayAmount": "Allocation"
     },
     {
-      "playerId": 173386,
-      "playerName": "Yaw Yeboah",
-      "date": "2025-01-24T08:00Z",
-      "fromTeamId": 22529,
-      "fromTeam": "San Diego FC",
-      "toTeamId": 18966,
-      "toTeam": "LAFC",
-      "type": "Fee",
-      "amount": 50000,
-      "displayAmount": "50000"
-    },
-    {
       "playerId": 178003,
       "playerName": "Uros Spajic",
       "date": "2016-08-31T07:00Z",
@@ -414,6 +402,30 @@
       "displayAmount": "Loan"
     },
     {
+      "playerId": 215792,
+      "playerName": "Jeremy Dudziak",
+      "date": "2015-08-28T07:00Z",
+      "fromTeamId": 124,
+      "fromTeam": "Borussia Dortmund",
+      "toTeamId": 270,
+      "toTeam": "St. Pauli",
+      "type": "Free",
+      "amount": 0,
+      "displayAmount": "Free"
+    },
+    {
+      "playerId": 217526,
+      "playerName": "Chadrac Akolo",
+      "date": "2017-07-08T07:00Z",
+      "fromTeamId": 3076,
+      "fromTeam": "FC Sion",
+      "toTeamId": 134,
+      "toTeam": "VfB Stuttgart",
+      "type": "Undisclosed",
+      "amount": 0,
+      "displayAmount": "Undisclosed"
+    },
+    {
       "playerId": 222356,
       "playerName": "Wesley",
       "date": "2021-08-28T07:00Z",
@@ -522,18 +534,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 298909,
-      "playerName": "Matt Orr",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 2555,
-      "fromTeam": "Linfield",
-      "toTeamId": 393,
-      "toTeam": "Nottingham Forest",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 301780,
       "playerName": "Jeffinho",
       "date": "2023-01-31T08:00Z",
@@ -556,18 +556,6 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
-    },
-    {
-      "playerId": 301780,
-      "playerName": "Jeffinho",
-      "date": "2025-01-01T08:00Z",
-      "fromTeamId": 167,
-      "fromTeam": "Lyon",
-      "toTeamId": 6086,
-      "toTeam": "Botafogo",
-      "type": "Fee",
-      "amount": 5300000,
-      "displayAmount": "5300000"
     }
   ]
 }

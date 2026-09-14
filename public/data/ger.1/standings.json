@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-13T01:00:03.144Z",
+  "updateTime": "2026-09-14T01:01:15.551Z",
   "league": "ger.1",
   "season": "2026",
-  "matchesCounted": 25,
+  "matchesCounted": 27,
   "count": 18,
   "standings": [
     {
@@ -47,32 +47,45 @@
     },
     {
       "rank": 4,
-      "teamId": 10388,
-      "team": "SV Elversberg",
-      "played": 2,
+      "teamId": 132,
+      "team": "Bayern Munich",
+      "played": 3,
       "won": 2,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 0,
       "goalsFor": 7,
-      "goalsAgainst": 5,
-      "goalDiff": 2,
-      "points": 6
+      "goalsAgainst": 2,
+      "goalDiff": 5,
+      "points": 7
     },
     {
       "rank": 5,
-      "teamId": 132,
-      "team": "Bayern Munich",
-      "played": 2,
-      "won": 1,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 5,
-      "goalsAgainst": 1,
-      "goalDiff": 4,
-      "points": 4
+      "teamId": 11420,
+      "team": "RB Leipzig",
+      "played": 3,
+      "won": 2,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 9,
+      "goalsAgainst": 3,
+      "goalDiff": 6,
+      "points": 6
     },
     {
       "rank": 6,
+      "teamId": 10388,
+      "team": "SV Elversberg",
+      "played": 3,
+      "won": 2,
+      "drawn": 0,
+      "lost": 1,
+      "goalsFor": 8,
+      "goalsAgainst": 7,
+      "goalDiff": 1,
+      "points": 6
+    },
+    {
+      "rank": 7,
       "teamId": 131,
       "team": "Bayer Leverkusen",
       "played": 3,
@@ -85,7 +98,7 @@
       "points": 4
     },
     {
-      "rank": 7,
+      "rank": 8,
       "teamId": 2950,
       "team": "Mainz",
       "played": 3,
@@ -98,7 +111,7 @@
       "points": 4
     },
     {
-      "rank": 8,
+      "rank": 9,
       "teamId": 125,
       "team": "Eintracht Frankfurt",
       "played": 3,
@@ -111,7 +124,7 @@
       "points": 4
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 137,
       "team": "Werder Bremen",
       "played": 3,
@@ -124,7 +137,7 @@
       "points": 4
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 133,
       "team": "Schalke 04",
       "played": 3,
@@ -137,7 +150,7 @@
       "points": 4
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 122,
       "team": "FC Cologne",
       "played": 3,
@@ -148,19 +161,6 @@
       "goalsAgainst": 7,
       "goalDiff": -2,
       "points": 4
-    },
-    {
-      "rank": 12,
-      "teamId": 11420,
-      "team": "RB Leipzig",
-      "played": 2,
-      "won": 1,
-      "drawn": 0,
-      "lost": 1,
-      "goalsFor": 4,
-      "goalsAgainst": 3,
-      "goalDiff": 1,
-      "points": 3
     },
     {
       "rank": 13,
@@ -216,19 +216,6 @@
     },
     {
       "rank": 17,
-      "teamId": 127,
-      "team": "Hamburg SV",
-      "played": 2,
-      "won": 0,
-      "drawn": 0,
-      "lost": 2,
-      "goalsFor": 0,
-      "goalsAgainst": 7,
-      "goalDiff": -7,
-      "points": 0
-    },
-    {
-      "rank": 18,
       "teamId": 268,
       "team": "Borussia Mönchengladbach",
       "played": 3,
@@ -238,6 +225,19 @@
       "goalsFor": 3,
       "goalsAgainst": 12,
       "goalDiff": -9,
+      "points": 0
+    },
+    {
+      "rank": 18,
+      "teamId": 127,
+      "team": "Hamburg SV",
+      "played": 3,
+      "won": 0,
+      "drawn": 0,
+      "lost": 3,
+      "goalsFor": 0,
+      "goalsAgainst": 12,
+      "goalDiff": -12,
       "points": 0
     }
   ]

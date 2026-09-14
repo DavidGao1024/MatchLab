@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-09T08:12:00.161Z",
+  "updateTime": "2026-09-14T00:36:11.042Z",
   "league": "eng.1",
   "season": "2026",
   "id": 115271,
@@ -32,7 +32,7 @@
       "recoveries": 0
     },
     "general": {
-      "appearances": 1,
+      "appearances": 2,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -45,12 +45,12 @@
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 3,
+      "minutes": 15,
       "ownGoals": 0,
       "passPct": 1,
       "redCards": 0,
       "starts": 0,
-      "subIns": 1,
+      "subIns": 2,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -63,7 +63,7 @@
       "duelsWon": 0,
       "duels": 0,
       "secondYellow": 0,
-      "touches": 2
+      "touches": 8
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -87,10 +87,10 @@
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 0,
-      "accuratePasses": 1,
+      "accuratePasses": 4,
       "accurateThroughBalls": 0,
-      "attemptsInBox": 0,
-      "attemptsOutBox": 0,
+      "attemptsInBox": 3,
+      "attemptsOutBox": 1,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -115,7 +115,7 @@
       "shootOutGoals": 0,
       "shootOutMisses": 0,
       "shootOutPct": 0,
-      "shotAssists": 0,
+      "shotAssists": 1,
       "shotPct": 0,
       "shotsHeaded": 0,
       "shotsOffTarget": 0,
@@ -125,13 +125,13 @@
       "totalCrosses": 0,
       "totalGoals": 0,
       "totalLongBalls": 0,
-      "totalPasses": 1,
+      "totalPasses": 4,
       "totalShots": 0,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 0,
       "progressiveCarries": 0,
-      "touchesInOppBox": 1
+      "touchesInOppBox": 2
     }
   }
 }

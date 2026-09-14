@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-09-13T00:59:48.525Z",
+  "updateTime": "2026-09-14T01:01:00.475Z",
   "league": "eng.1",
   "month": "2026-09",
   "count": 30,
@@ -451,9 +451,10 @@
       "eventId": "401879282",
       "date": "2026-09-13T13:00Z",
       "name": "Brighton & Hove Albion at Coventry City",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Coventry Building Society Arena",
       "home": {
         "id": 388,
@@ -468,17 +469,18 @@
         "name": "Brighton & Hove Albion",
         "abbreviation": "BHA",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
-        "score": 0,
-        "winner": null
+        "score": 5,
+        "winner": true
       }
     },
     {
       "eventId": "401879278",
       "date": "2026-09-13T15:30Z",
       "name": "Manchester City at Manchester United",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Old Trafford",
       "home": {
         "id": 360,
@@ -493,8 +495,8 @@
         "name": "Manchester City",
         "abbreviation": "MNC",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
-        "score": 0,
-        "winner": null
+        "score": 1,
+        "winner": true
       }
     },
     {
