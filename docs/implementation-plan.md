@@ -400,8 +400,10 @@ async function fetchLeagueJson<T>(league: string, path: string, ttlMs: number): 
 const ESPN_SITE_API = 'https://site.api.espn.com/apis/site/v2/sports/soccer'
 
 // 赛程/比分（CORS 已验证）
-async function fetchScores(league: string, dateRange: string) {
-  return fetch(`${ESPN_SITE_API}/${league}/scoreboard?dates=${dateRange}&limit=200`)
+// 取数令牌：单日 'YYYYMMDD' 或整月 'YYYYMM'（2026-09-23 起 ESPN 废弃区间语法
+// `dates=A-B`，一律 400；区间语义需自行本地按日过滤，见 fetchScoresRange）
+async function fetchScores(league: string, token: string) {
+  return fetch(`${ESPN_SITE_API}/${league}/scoreboard?dates=${token}&limit=200`)
 }
 
 // 比赛详情：阵容/事件/统计/H2H
@@ -971,7 +973,8 @@ fetch('https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1')
   .then(r => r.json()).then(d => console.log(d.name))
 
 # 4. 验证 ESPN site.api CORS（世界杯项目已验证，再确认一次）
-fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260501-20260531&limit=10')
+#    注意：dates 用单日 YYYYMMDD 或整月 YYYYMM；区间 A-B 自 2026-09-23 起被 ESPN 废弃（400）
+fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=202605&limit=10')
   .then(r => r.json()).then(d => console.log(d.events.length))
 
 # 5. 如果 step 3 CORS 失败 → 确认架构：ESPN core 全走 Actions
