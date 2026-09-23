@@ -1,13 +1,14 @@
 import { describe, expect, it } from 'vitest'
-import { monthDateRange, normalizeEvent } from '../../src/composables/useEspanFetch'
+import { monthToken, normalizeEvent } from '../../src/composables/useEspanFetch'
 import type { EspnEvent } from '../../src/types/espn-site'
 
-describe('monthDateRange', () => {
-  it('平月：2026-01 → 20260101-20260131', () => {
-    expect(monthDateRange('2026-01')).toBe('20260101-20260131')
+describe('monthToken', () => {
+  // ESPN 已废弃日期区间语法（2026-09 起一律 400），整月令牌仍返回该月全部赛事
+  it('YYYY-MM → YYYYMM（个位月补零）', () => {
+    expect(monthToken('2026-01')).toBe('202601')
   })
-  it('闰月：2028-02 → 20280201-20280229', () => {
-    expect(monthDateRange('2028-02')).toBe('20280201-20280229')
+  it('12 月', () => {
+    expect(monthToken('2026-12')).toBe('202612')
   })
 })
 

@@ -97,15 +97,37 @@ describe('fetchScoresRange 战报带日期区间', () => {
     vi.useRealTimers()
   })
 
-  it('请求带 dates 区间与 limit=200，返回归一化 Match', async () => {
+  it('月内区间：单次请求，URL 带整月令牌', async () => {
     mockFetch.mockResolvedValue(mockResponse([event]))
     const list = await fetchScoresRange('eng.1', '2026-09-01', '2026-09-08')
+    expect(mockFetch).toHaveBeenCalledTimes(1)
     expect(mockFetch).toHaveBeenCalledWith(
-      expect.stringContaining('scoreboard?dates=20260901-20260908&limit=200'),
+      expect.stringContaining('scoreboard?dates=202609&limit=200'),
     )
     expect(list).toHaveLength(1)
     expect(list[0].eventId).toBe('e1')
     expect(list[0].completed).toBe(true)
+  })
+
+  it('跨月区间：按月各发一次请求', async () => {
+    mockFetch.mockResolvedValue(mockResponse([event]))
+    await fetchScoresRange('eng.1', '2026-08-28', '2026-09-08')
+    expect(mockFetch).toHaveBeenCalledTimes(2)
+    const urls = mockFetch.mock.calls.map((c) => String(c[0]))
+    expect(urls.some((u) => u.includes('dates=202608'))).toBe(true)
+    expect(urls.some((u) => u.includes('dates=202609'))).toBe(true)
+  })
+
+  it('区间外比赛本地过滤，时区边界 ±1 天保留', async () => {
+    const at = (d: string) => ({ ...event, id: `e-${d}`, date: `${d}T10:00:00Z` })
+    mockFetch.mockResolvedValue(mockResponse([
+      at('2026-09-01'), // 早一天：时区松弛保留
+      at('2026-09-08'), // 区间端点
+      at('2026-08-20'), // 早于区间
+      at('2026-09-20'), // 晚于区间
+    ]))
+    const list = await fetchScoresRange('eng.1', '2026-09-02', '2026-09-08')
+    expect(list.map((m) => m.date.slice(0, 10)).sort()).toEqual(['2026-09-01', '2026-09-08'])
   })
 
   it('同区间 60s 内命中缓存，60s 后再发', async () => {

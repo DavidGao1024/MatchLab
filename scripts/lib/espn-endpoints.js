@@ -47,6 +47,13 @@ const core = {
   athleteSeasonStats: (slug, id, year = SEASON) => `${CORE_BASE}/v2/sports/soccer/leagues/${slug}/seasons/${year}/types/1/athletes/${id}/statistics/0`,
 };
 
+/**
+ * 'YYYY-MM' → ESPN dates 月令牌 'YYYYMM'。
+ * ESPN 已废弃日期区间语法（2026-09 起 `dates=YYYYMMDD-YYYYMMDD` 一律 400
+ * "Failed to get events endpoint."），整月令牌仍返回该月全部赛事（与旧区间逐场等价，已验证）。
+ */
+const monthToken = (key) => key.replace('-', '');
+
 /** ESPN site API 端点构造器（site.api.espn.com，浏览器 CORS 已验证） */
 const site = {
   scoreboard: (slug, dates, limit = 200) => `${SITE_BASE}/${slug}/scoreboard?dates=${dates}&limit=${limit}`,
@@ -137,18 +144,19 @@ async function resolveSeasonsInPlace(leagues, now = new Date()) {
     const cand = candidateSeason(type, now);
     const m = seasonOpenMonth(type);
     const mm = String(m).padStart(2, '0');
-    const last = new Date(Date.UTC(cand, m + 1, 0)).getUTCDate();
     try {
       // site.api 服务端抓取必须用 curl UA（浏览器 UA + 服务器 IP 会被 Akamai 403）
-      const sb = await fetchJson(`${SITE_BASE}/${league.slug}/scoreboard?dates=${cand}${mm}01-${cand}${mm}${String(last).padStart(2, '0')}&limit=200`, { ua: UA_CURL });
+      const sb = await fetchJson(site.scoreboard(league.slug, monthToken(`${cand}-${mm}`)), { ua: UA_CURL });
       const scheduled = (sb.events ?? []).length > 0;
       league.season = scheduled ? String(cand) : String(cand - 1);
-    } catch {
-      // 网络失败不改 season（保守沿用配置值）
+    } catch (e) {
+      // 网络失败不改 season（保守沿用配置值）；但必须出声——2026-09 ESPN 废弃区间语法的
+      // 400 曾被此 catch 静默吞掉，判定失效无法察觉
+      console.warn(`  ! [season] ${league.slug} 赛季探测失败，沿用 ${league.season}: ${e.message}`);
     }
     console.log(`[season] ${league.slug} → ${league.season}（候选 ${cand}）`);
   }
   return leagues;
 }
 
-module.exports = { CORE_BASE, SITE_BASE, SEASON, LEAGUES, core, site, TEAM_OVERRIDES, resolveSeasonsInPlace };
+module.exports = { CORE_BASE, SITE_BASE, SEASON, LEAGUES, core, site, monthToken, TEAM_OVERRIDES, resolveSeasonsInPlace };

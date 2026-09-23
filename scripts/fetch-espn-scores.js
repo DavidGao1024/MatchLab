@@ -19,7 +19,7 @@
 
 const path = require('path');
 const { sleep, fetchJson, writeJsonIfChanged, UA_CURL } = require('./lib/http');
-const { SEASON, LEAGUES, site, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
+const { SEASON, LEAGUES, site, monthToken, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 const DELAY_MS = 200;
@@ -31,25 +31,23 @@ if (requested.length && targets.length !== requested.length) {
   process.exit(1);
 }
 
-/** 某月的日期窗口：YYYYMM01-YYYYMMDD（末日按真实日历算） */
-function monthRange(year, month) {
-  const mm = String(month).padStart(2, '0');
-  const lastDay = new Date(Date.UTC(year, month, 0)).getUTCDate();
-  return { key: `${year}-${mm}`, dates: `${year}${mm}01-${year}${mm}${String(lastDay).padStart(2, '0')}` };
+/** 某月归档键 YYYY-MM（取数用 ESPN 月令牌，见 lib/espn-endpoints.js monthToken） */
+function monthKey(year, month) {
+  return `${year}-${String(month).padStart(2, '0')}`;
 }
 
 /** 赛季月窗口：欧洲制 startYear 年 7 月 → 次年 6 月 */
 function seasonMonthsEuropean(startYear) {
   const months = [];
-  for (let m = 7; m <= 12; m += 1) months.push(monthRange(startYear, m));
-  for (let m = 1; m <= 6; m += 1) months.push(monthRange(startYear + 1, m));
+  for (let m = 7; m <= 12; m += 1) months.push(monthKey(startYear, m));
+  for (let m = 1; m <= 6; m += 1) months.push(monthKey(startYear + 1, m));
   return months;
 }
 
 /** 赛季月窗口：自然年制 1 月 → 12 月 */
 function seasonMonthsCalendar(year) {
   const months = [];
-  for (let m = 1; m <= 12; m += 1) months.push(monthRange(year, m));
+  for (let m = 1; m <= 12; m += 1) months.push(monthKey(year, m));
   return months;
 }
 
@@ -157,11 +155,12 @@ async function processLeague(league) {
   const allMatches = [];
   let successMonths = 0; // 请求成功的月份数（含空赛月）；0 = 全失败，防线拒绝空榜覆写（2026-08-10）
 
-  for (const { key, dates } of months) {
+  for (const key of months) {
     await sleep(DELAY_MS);
     try {
       // site.api 服务端抓取必须用 curl UA（浏览器 UA + 服务器 IP 会被 Akamai 403，2026-08-10 实测）
-      const resp = await fetchJson(site.scoreboard(league.slug, dates, 200), { ua: UA_CURL });
+      // dates 用整月令牌（区间语法已被 ESPN 废弃，2026-09）
+      const resp = await fetchJson(site.scoreboard(league.slug, monthToken(key), 200), { ua: UA_CURL });
       successMonths += 1;
       const events = resp.events || [];
       if (events.length === 0) {

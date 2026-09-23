@@ -24,12 +24,31 @@ function scoreCacheKey(league: string, month: string) { return `${league}:${mont
 /** 仅供测试：清空缓存 */
 export function clearScoreCache() { scoreCache.clear() }
 
-/** 'YYYY-MM' → ESPN dates 参数 YYYYMM01-YYYYMMDD（月末按 UTC 日历推） */
-export function monthDateRange(month: string): string {
-  const [y, m] = month.split('-').map(Number)
-  const last = new Date(Date.UTC(y, m, 0)).getUTCDate() // 下月 0 号 = 本月最后一天
-  const mm = String(m).padStart(2, '0')
-  return `${y}${mm}01-${y}${mm}${String(last).padStart(2, '0')}`
+/**
+ * 'YYYY-MM' → ESPN dates 月令牌 'YYYYMM'。
+ * ESPN 已废弃日期区间语法（2026-09 起 `dates=YYYYMMDD-YYYYMMDD` 一律 400
+ * "Failed to get events endpoint."），整月令牌仍返回该月全部赛事（与旧区间逐场等价，已验证）。
+ */
+export function monthToken(month: string): string {
+  return month.replace('-', '')
+}
+
+/** 'YYYY-MM-DD' 偏移若干天 */
+function shiftDay(day: string, delta: number): string {
+  return new Date(Date.parse(`${day}T00:00:00Z`) + delta * 86_400_000).toISOString().slice(0, 10)
+}
+
+/** 覆盖 [fromDay, toDay] 的归档月列表（含首尾；'YYYY-MM' 零填充可直接字典序比较） */
+function monthsCovering(fromDay: string, toDay: string): string[] {
+  let [y, m] = fromDay.slice(0, 7).split('-').map(Number)
+  const end = toDay.slice(0, 7)
+  const out: string[] = []
+  while (`${y}-${String(m).padStart(2, '0')}` <= end) {
+    out.push(`${y}-${String(m).padStart(2, '0')}`)
+    m += 1
+    if (m > 12) { m = 1; y += 1 }
+  }
+  return out
 }
 
 /** ESPN 事件 → Match 模型。页面层永不接触 ESPN 原始结构，接口变脸只改这个文件（规格 §五） */
@@ -72,7 +91,7 @@ export async function fetchLiveScores(league: LeagueSlug, month: string): Promis
     const ttl = isMonthLive(hit.data) ? TTL_LIVE : TTL_DEFAULT
     if (age < ttl) return hit.data
   }
-  const res = await fetch(`${SITE_API}/${league}/scoreboard?dates=${monthDateRange(month)}&limit=200`)
+  const res = await fetch(`${SITE_API}/${league}/scoreboard?dates=${monthToken(month)}&limit=200`)
   if (!res.ok) throw new Error(`ESPN HTTP ${res.status}`)
   const sb = (await res.json()) as EspnScoreboard
   const data = (sb.events ?? []).map(normalizeEvent).filter((m): m is Match => m !== null)
@@ -81,16 +100,19 @@ export async function fetchLiveScores(league: LeagueSlug, month: string): Promis
 }
 
 /** 战报带专用：任意日期区间的实时比分（YYYY-MM-DD，±时区富余由调用方放宽区间）。
- *  与 fetchLiveScores 共用 scoreCache 与 TTL_DEFAULT；区间键 60s 缓存 */
+ *  ESPN 区间语法已废弃，改为「按覆盖月逐月取整月令牌 + 本地按日过滤」，两端各放宽 1 天
+ *  吸收北京时间/UTC 跨日偏差；月数据复用 fetchLiveScores 的 60s 缓存，区间键另存 60s。 */
 export async function fetchScoresRange(league: LeagueSlug, fromDay: string, toDay: string): Promise<Match[]> {
   const key = `range:${league}:${fromDay}:${toDay}`
   const hit = scoreCache.get(key)
   if (hit && Date.now() - hit.ts < TTL_DEFAULT) return hit.data
-  const compact = (d: string) => d.replace(/-/g, '')
-  const res = await fetch(`${SITE_API}/${league}/scoreboard?dates=${compact(fromDay)}-${compact(toDay)}&limit=200`)
-  if (!res.ok) throw new Error(`ESPN HTTP ${res.status}`)
-  const sb = (await res.json()) as EspnScoreboard
-  const data = (sb.events ?? []).map(normalizeEvent).filter((m): m is Match => m !== null)
+  const perMonth = await Promise.all(monthsCovering(fromDay, toDay).map((m) => fetchLiveScores(league, m)))
+  const lo = shiftDay(fromDay, -1)
+  const hi = shiftDay(toDay, 1)
+  const data = perMonth.flat().filter((m) => {
+    const day = m.date.slice(0, 10)
+    return day >= lo && day <= hi
+  })
   scoreCache.set(key, { data, ts: Date.now() })
   return data
 }
