@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-09T08:25:56.570Z",
+  "updateTime": "2026-09-24T01:15:00.616Z",
   "league": "ger.1",
   "season": "2026",
   "id": 403833,
@@ -27,7 +27,9 @@
       "interceptions": 0,
       "tacklePct": 0,
       "totalClearance": 0,
-      "totalTackles": 0
+      "totalTackles": 0,
+      "tacklesLost": 0,
+      "recoveries": 0
     },
     "general": {
       "appearances": 1,
@@ -58,6 +60,9 @@
       "wonCorners": 0,
       "yellowCards": 0,
       "duelsLost": 1,
+      "duelsWon": 0,
+      "duels": 1,
+      "secondYellow": 0,
       "touches": 1
     },
     "goalKeeping": {
@@ -76,13 +81,16 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 0,
       "accuratePasses": 1,
       "accurateThroughBalls": 0,
+      "attemptsInBox": 0,
+      "attemptsOutBox": 0,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -119,7 +127,11 @@
       "totalLongBalls": 0,
       "totalPasses": 1,
       "totalShots": 0,
-      "totalThroughBalls": 0
+      "totalThroughBalls": 0,
+      "bigChanceCreated": 0,
+      "bigChanceMissed": 0,
+      "progressiveCarries": 0,
+      "touchesInOppBox": 0
     }
   }
 }

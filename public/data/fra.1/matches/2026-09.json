@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-09-14T01:01:16.851Z",
+  "updateTime": "2026-09-24T01:27:29.338Z",
   "league": "fra.1",
   "month": "2026-09",
   "count": 27,
@@ -477,24 +477,25 @@
       "eventId": "401876453",
       "date": "2026-09-18T18:45Z",
       "name": "Lens at AS Monaco",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Stade Louis II",
       "home": {
         "id": 174,
         "name": "AS Monaco",
         "abbreviation": "MON",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 175,
         "name": "Lens",
         "abbreviation": "RCL",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -502,24 +503,25 @@
       "eventId": "401876451",
       "date": "2026-09-19T15:15Z",
       "name": "Strasbourg at Paris FC",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Stade Jean Bouin",
       "home": {
         "id": 6851,
         "name": "Paris FC",
         "abbreviation": "PAR",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 180,
         "name": "Strasbourg",
         "abbreviation": "STR",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/180.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -527,17 +529,18 @@
       "eventId": "401876457",
       "date": "2026-09-19T18:45Z",
       "name": "Troyes at Angers",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
       "venue": "Stade Raymond Kopa",
       "home": {
         "id": 7868,
         "name": "Angers",
         "abbreviation": "ANG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 170,
@@ -552,24 +555,25 @@
       "eventId": "401876455",
       "date": "2026-09-19T18:45Z",
       "name": "Lorient at Le Mans",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
       "venue": "Stade Marie-Marvingt",
       "home": {
         "id": 2697,
         "name": "Le Mans",
         "abbreviation": "MNS",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 273,
         "name": "Lorient",
         "abbreviation": "LOR",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -577,17 +581,18 @@
       "eventId": "401876454",
       "date": "2026-09-19T18:45Z",
       "name": "Stade Rennais at Lyon",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Groupama Stadium",
       "home": {
         "id": 167,
         "name": "Lyon",
         "abbreviation": "LYON",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
-        "score": 0,
-        "winner": null
+        "score": 4,
+        "winner": true
       },
       "away": {
         "id": 169,
@@ -602,24 +607,25 @@
       "eventId": "401876450",
       "date": "2026-09-19T18:45Z",
       "name": "Le Havre AC at Toulouse",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Stadium Municipal de Toulouse",
       "home": {
         "id": 179,
         "name": "Toulouse",
         "abbreviation": "TOU",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/179.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       },
       "away": {
         "id": 3236,
         "name": "Le Havre AC",
         "abbreviation": "HAC",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       }
     },
@@ -627,24 +633,25 @@
       "eventId": "401876456",
       "date": "2026-09-20T13:00Z",
       "name": "Brest at AJ Auxerre",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Stade de l'Abbé-Deschamps",
       "home": {
         "id": 172,
         "name": "AJ Auxerre",
         "abbreviation": "AUX",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 6997,
         "name": "Brest",
         "abbreviation": "BRE",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -652,24 +659,25 @@
       "eventId": "401876452",
       "date": "2026-09-20T15:15Z",
       "name": "Lille at Nice",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Allianz Riviera",
       "home": {
         "id": 2502,
         "name": "Nice",
         "abbreviation": "NICE",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 166,
         "name": "Lille",
         "abbreviation": "LILL",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/166.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -677,16 +685,17 @@
       "eventId": "401876449",
       "date": "2026-09-20T18:45Z",
       "name": "Paris Saint-Germain at Marseille",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Stade Vélodrome",
       "home": {
         "id": 176,
         "name": "Marseille",
         "abbreviation": "OLM",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -694,8 +703,8 @@
         "name": "Paris Saint-Germain",
         "abbreviation": "PSG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       }
     }
   ]

@@ -1,10 +1,88 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-14T00:52:39.981Z",
+  "updateTime": "2026-09-24T01:18:41.807Z",
   "league": "ger.1",
   "season": "2026",
-  "count": 525,
+  "count": 524,
   "players": [
+    {
+      "id": 286831,
+      "name": "Michael Olise",
+      "teamId": 132,
+      "position": "M",
+      "age": 24,
+      "goals": 4,
+      "assists": 1,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 17,
+      "team": "Bayern Munich"
+    },
+    {
+      "id": 212330,
+      "name": "Patrik Schick",
+      "teamId": 131,
+      "position": "F",
+      "age": 30,
+      "goals": 4,
+      "assists": 1,
+      "citizenship": "Czechia",
+      "flag": "flags/cz.png",
+      "jersey": 14,
+      "team": "Bayer Leverkusen"
+    },
+    {
+      "id": 234376,
+      "name": "Phillip Tietz",
+      "teamId": 2950,
+      "position": "F",
+      "age": 29,
+      "goals": 4,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 9,
+      "team": "Mainz"
+    },
+    {
+      "id": 359793,
+      "name": "Younes Ebnoutalib",
+      "teamId": 125,
+      "position": "F",
+      "age": 23,
+      "goals": 4,
+      "assists": 1,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 11,
+      "team": "Eintracht Frankfurt"
+    },
+    {
+      "id": 303031,
+      "name": "Yuito Suzuki",
+      "teamId": 126,
+      "position": "M",
+      "age": 24,
+      "goals": 4,
+      "assists": 0,
+      "citizenship": "Japan",
+      "flag": "flags/jp.png",
+      "jersey": 14,
+      "team": "SC Freiburg"
+    },
+    {
+      "id": 142200,
+      "name": "Harry Kane",
+      "teamId": 132,
+      "position": "F",
+      "age": 33,
+      "goals": 3,
+      "assists": 1,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 9,
+      "team": "Bayern Munich"
+    },
     {
       "id": 310883,
       "name": "Igor Matanovic",
@@ -17,6 +95,32 @@
       "flag": "flags/hr.png",
       "jersey": 31,
       "team": "SC Freiburg"
+    },
+    {
+      "id": 274887,
+      "name": "Jonathan Burkardt",
+      "teamId": 125,
+      "position": "F",
+      "age": 26,
+      "goals": 3,
+      "assists": 1,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 9,
+      "team": "Eintracht Frankfurt"
+    },
+    {
+      "id": 358496,
+      "name": "Maurice Krattenmacher",
+      "teamId": 10388,
+      "position": "M",
+      "age": 21,
+      "goals": 3,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 7,
+      "team": "SV Elversberg"
     },
     {
       "id": 146804,
@@ -32,56 +136,30 @@
       "team": "FC Augsburg"
     },
     {
-      "id": 212330,
-      "name": "Patrik Schick",
-      "teamId": 131,
+      "id": 170257,
+      "name": "Niclas Füllkrug",
+      "teamId": 137,
       "position": "F",
-      "age": 30,
-      "goals": 3,
-      "assists": 1,
-      "citizenship": "Czechia",
-      "flag": "flags/cz.png",
-      "jersey": 14,
-      "team": "Bayer Leverkusen"
-    },
-    {
-      "id": 234376,
-      "name": "Phillip Tietz",
-      "teamId": 2950,
-      "position": "F",
-      "age": 29,
+      "age": 33,
       "goals": 3,
       "assists": 0,
       "citizenship": "Germany",
       "flag": "flags/de.png",
-      "jersey": 9,
-      "team": "Mainz"
+      "jersey": 10,
+      "team": "Werder Bremen"
     },
     {
-      "id": 359793,
-      "name": "Younes Ebnoutalib",
-      "teamId": 125,
+      "id": 338854,
+      "name": "Adam Daghim",
+      "teamId": 7911,
       "position": "F",
-      "age": 23,
-      "goals": 3,
-      "assists": 1,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 11,
-      "team": "Eintracht Frankfurt"
-    },
-    {
-      "id": 303031,
-      "name": "Yuito Suzuki",
-      "teamId": 126,
-      "position": "M",
-      "age": 24,
-      "goals": 3,
-      "assists": 0,
-      "citizenship": "Japan",
-      "flag": "flags/jp.png",
+      "age": 20,
+      "goals": 2,
+      "assists": 2,
+      "citizenship": "Denmark",
+      "flag": "flags/dk.png",
       "jersey": 14,
-      "team": "SC Freiburg"
+      "team": "TSG Hoffenheim"
     },
     {
       "id": 292169,
@@ -95,6 +173,19 @@
       "flag": "flags/cz.png",
       "jersey": 10,
       "team": "TSG Hoffenheim"
+    },
+    {
+      "id": 319368,
+      "name": "Antonio Nusa",
+      "teamId": 11420,
+      "position": "M",
+      "age": 21,
+      "goals": 2,
+      "assists": 2,
+      "citizenship": "Norway",
+      "flag": "flags/no.png",
+      "jersey": 7,
+      "team": "RB Leipzig"
     },
     {
       "id": 355369,
@@ -175,19 +266,6 @@
       "team": "Borussia Mönchengladbach"
     },
     {
-      "id": 274887,
-      "name": "Jonathan Burkardt",
-      "teamId": 125,
-      "position": "F",
-      "age": 26,
-      "goals": 2,
-      "assists": 1,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 9,
-      "team": "Eintracht Frankfurt"
-    },
-    {
       "id": 266839,
       "name": "Josha Vagnoman",
       "teamId": 134,
@@ -201,17 +279,17 @@
       "team": "VfB Stuttgart"
     },
     {
-      "id": 358496,
-      "name": "Maurice Krattenmacher",
-      "teamId": 10388,
-      "position": "M",
-      "age": 21,
+      "id": 305853,
+      "name": "Marco Grüll",
+      "teamId": 137,
+      "position": "F",
+      "age": 28,
       "goals": 2,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 7,
-      "team": "SV Elversberg"
+      "assists": 3,
+      "citizenship": "Austria",
+      "flag": "flags/at.png",
+      "jersey": 17,
+      "team": "Werder Bremen"
     },
     {
       "id": 214203,
@@ -227,19 +305,6 @@
       "team": "SC Freiburg"
     },
     {
-      "id": 170257,
-      "name": "Niclas Füllkrug",
-      "teamId": 137,
-      "position": "F",
-      "age": 33,
-      "goals": 2,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 10,
-      "team": "Werder Bremen"
-    },
-    {
       "id": 258963,
       "name": "Ridle Baku",
       "teamId": 11420,
@@ -253,6 +318,19 @@
       "team": "RB Leipzig"
     },
     {
+      "id": 306928,
+      "name": "Robin Fellhauer",
+      "teamId": 3841,
+      "position": "M",
+      "age": 28,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 19,
+      "team": "FC Augsburg"
+    },
+    {
       "id": 186381,
       "name": "Serhou Guirassy",
       "teamId": 124,
@@ -264,6 +342,19 @@
       "flag": "flags/gn.png",
       "jersey": 9,
       "team": "Borussia Dortmund"
+    },
+    {
+      "id": 195027,
+      "name": "Sheraldo Becker",
+      "teamId": 2950,
+      "position": "F",
+      "age": 31,
+      "goals": 2,
+      "assists": 3,
+      "citizenship": "Suriname",
+      "flag": "flags/sr.png",
+      "jersey": 23,
+      "team": "Mainz"
     },
     {
       "id": 266280,
@@ -305,19 +396,6 @@
       "team": "SC Freiburg"
     },
     {
-      "id": 338854,
-      "name": "Adam Daghim",
-      "teamId": 7911,
-      "position": "F",
-      "age": 20,
-      "goals": 1,
-      "assists": 2,
-      "citizenship": "Denmark",
-      "flag": "flags/dk.png",
-      "jersey": 14,
-      "team": "TSG Hoffenheim"
-    },
-    {
       "id": 290166,
       "name": "Adil Aouchiche",
       "teamId": 133,
@@ -332,12 +410,12 @@
     },
     {
       "id": 359370,
-      "name": "Aleksandar Pavlović",
+      "name": "Aleksandar Pavlovic",
       "teamId": 132,
-      "position": "D",
+      "position": "M",
       "age": 22,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 45,
@@ -350,7 +428,7 @@
       "position": "M",
       "age": 28,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 20,
@@ -370,19 +448,6 @@
       "team": "FC Augsburg"
     },
     {
-      "id": 319368,
-      "name": "Antonio Nusa",
-      "teamId": 11420,
-      "position": "M",
-      "age": 21,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Norway",
-      "flag": "flags/no.png",
-      "jersey": 7,
-      "team": "RB Leipzig"
-    },
-    {
       "id": 336595,
       "name": "Bilal El Khannouss",
       "teamId": 134,
@@ -396,6 +461,32 @@
       "team": "VfB Stuttgart"
     },
     {
+      "id": 345106,
+      "name": "Calvin Brackelmann",
+      "teamId": 3841,
+      "position": "D",
+      "age": 27,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 2,
+      "team": "FC Augsburg"
+    },
+    {
+      "id": 222176,
+      "name": "Christopher Nkunku",
+      "teamId": 11420,
+      "position": "F",
+      "age": 28,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 28,
+      "team": "RB Leipzig"
+    },
+    {
       "id": 379024,
       "name": "Cole Campbell",
       "teamId": 10388,
@@ -407,6 +498,19 @@
       "flag": "flags/us.png",
       "jersey": 39,
       "team": "SV Elversberg"
+    },
+    {
+      "id": 154603,
+      "name": "Danny da Costa",
+      "teamId": 2950,
+      "position": "D",
+      "age": 33,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 21,
+      "team": "Mainz"
     },
     {
       "id": 399747,
@@ -435,6 +539,19 @@
       "team": "Bayern Munich"
     },
     {
+      "id": 346619,
+      "name": "Derry Scherhant",
+      "teamId": 126,
+      "position": "F",
+      "age": 23,
+      "goals": 1,
+      "assists": 2,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 7,
+      "team": "SC Freiburg"
+    },
+    {
       "id": 242439,
       "name": "Emmanuel Latte Lath",
       "teamId": 598,
@@ -459,6 +576,19 @@
       "flag": "flags/tr.png",
       "jersey": 18,
       "team": "Werder Bremen"
+    },
+    {
+      "id": 290398,
+      "name": "Eric Martel",
+      "teamId": 2950,
+      "position": "M",
+      "age": 24,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 5,
+      "team": "Mainz"
     },
     {
       "id": 269136,
@@ -493,7 +623,7 @@
       "position": "M",
       "age": 24,
       "goals": 1,
-      "assists": 2,
+      "assists": 3,
       "citizenship": "Switzerland",
       "flag": "flags/ch.png",
       "jersey": 32,
@@ -526,6 +656,19 @@
       "team": "SV Elversberg"
     },
     {
+      "id": 238527,
+      "name": "Florian Neuhaus",
+      "teamId": 268,
+      "position": "M",
+      "age": 29,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 10,
+      "team": "Borussia Mönchengladbach"
+    },
+    {
       "id": 218714,
       "name": "Grischa Prömel",
       "teamId": 134,
@@ -552,6 +695,45 @@
       "team": "Bayer Leverkusen"
     },
     {
+      "id": 221690,
+      "name": "Isac Lidberg",
+      "teamId": 268,
+      "position": "F",
+      "age": 28,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Sweden",
+      "flag": "flags/se.png",
+      "jersey": 3,
+      "team": "Borussia Mönchengladbach"
+    },
+    {
+      "id": 304572,
+      "name": "Ismael Saibari",
+      "teamId": 132,
+      "position": "M",
+      "age": 25,
+      "goals": 1,
+      "assists": 2,
+      "citizenship": "Morocco",
+      "flag": "flags/ma.png",
+      "jersey": 34,
+      "team": "Bayern Munich"
+    },
+    {
+      "id": 303821,
+      "name": "Jamal Musiala",
+      "teamId": 132,
+      "position": "M",
+      "age": 23,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 10,
+      "team": "Bayern Munich"
+    },
+    {
       "id": 272135,
       "name": "Joe Scally",
       "teamId": 268,
@@ -563,6 +745,19 @@
       "flag": "flags/us.png",
       "jersey": 29,
       "team": "Borussia Mönchengladbach"
+    },
+    {
+      "id": 402841,
+      "name": "Lennart Karl",
+      "teamId": 132,
+      "position": "M",
+      "age": 18,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 42,
+      "team": "Bayern Munich"
     },
     {
       "id": 362590,
@@ -630,19 +825,6 @@
       "team": "SV Elversberg"
     },
     {
-      "id": 305853,
-      "name": "Marco Grüll",
-      "teamId": 137,
-      "position": "F",
-      "age": 28,
-      "goals": 1,
-      "assists": 2,
-      "citizenship": "Austria",
-      "flag": "flags/at.png",
-      "jersey": 17,
-      "team": "Werder Bremen"
-    },
-    {
       "id": 275797,
       "name": "Marius Bulter",
       "teamId": 122,
@@ -654,6 +836,19 @@
       "flag": "flags/de.png",
       "jersey": 30,
       "team": "FC Cologne"
+    },
+    {
+      "id": 290639,
+      "name": "Maximilian Beier",
+      "teamId": 124,
+      "position": "F",
+      "age": 23,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 14,
+      "team": "Borussia Dortmund"
     },
     {
       "id": 216225,
@@ -682,17 +877,43 @@
       "team": "Schalke 04"
     },
     {
-      "id": 286831,
-      "name": "Michael Olise",
-      "teamId": 132,
-      "position": "M",
-      "age": 24,
+      "id": 290044,
+      "name": "Miguel Gutiérrez",
+      "teamId": 131,
+      "position": "D",
+      "age": 25,
+      "goals": 1,
+      "assists": 3,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 3,
+      "team": "Bayer Leverkusen"
+    },
+    {
+      "id": 159139,
+      "name": "Mitchell Weiser",
+      "teamId": 137,
+      "position": "D",
+      "age": 32,
       "goals": 1,
       "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 17,
-      "team": "Bayern Munich"
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 8,
+      "team": "Werder Bremen"
+    },
+    {
+      "id": 284835,
+      "name": "Nicolás Capaldo",
+      "teamId": 127,
+      "position": "M",
+      "age": 28,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "jersey": 24,
+      "team": "Hamburg SV"
     },
     {
       "id": 266565,
@@ -721,6 +942,19 @@
       "team": "Mainz"
     },
     {
+      "id": 255355,
+      "name": "Ragnar Ache",
+      "teamId": 122,
+      "position": "F",
+      "age": 28,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 9,
+      "team": "FC Cologne"
+    },
+    {
       "id": 300961,
       "name": "Ransford-Yeboah Königsdörffer",
       "teamId": 2950,
@@ -732,19 +966,6 @@
       "flag": "flags/gh.png",
       "jersey": 11,
       "team": "Mainz"
-    },
-    {
-      "id": 306928,
-      "name": "Robin Fellhauer",
-      "teamId": 3841,
-      "position": "M",
-      "age": 28,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 19,
-      "team": "FC Augsburg"
     },
     {
       "id": 198087,
@@ -786,6 +1007,19 @@
       "team": "FC Augsburg"
     },
     {
+      "id": 324766,
+      "name": "Rômulo",
+      "teamId": 11420,
+      "position": "F",
+      "age": 24,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 40,
+      "team": "RB Leipzig"
+    },
+    {
       "id": 380795,
       "name": "Said El Mala",
       "teamId": 122,
@@ -799,17 +1033,69 @@
       "team": "FC Cologne"
     },
     {
-      "id": 195027,
-      "name": "Sheraldo Becker",
-      "teamId": 2950,
+      "id": 338837,
+      "name": "Santiago Castaneda",
+      "teamId": 3307,
+      "position": "M",
+      "age": 21,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "USA",
+      "flag": "flags/us.png",
+      "jersey": 5,
+      "team": "SC Paderborn 07"
+    },
+    {
+      "id": 271352,
+      "name": "Shuto Machino",
+      "teamId": 268,
       "position": "F",
-      "age": 31,
+      "age": 26,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Japan",
+      "flag": "flags/jp.png",
+      "jersey": 18,
+      "team": "Borussia Mönchengladbach"
+    },
+    {
+      "id": 332543,
+      "name": "Stefano Marino",
+      "teamId": 3307,
+      "position": "F",
+      "age": 22,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 30,
+      "team": "SC Paderborn 07"
+    },
+    {
+      "id": 231764,
+      "name": "Steffen Tigges",
+      "teamId": 3307,
+      "position": "F",
+      "age": 28,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 27,
+      "team": "SC Paderborn 07"
+    },
+    {
+      "id": 366911,
+      "name": "Tidiam Gomis",
+      "teamId": 11420,
+      "position": "F",
+      "age": 20,
       "goals": 1,
       "assists": 2,
-      "citizenship": "Suriname",
-      "flag": "flags/sr.png",
-      "jersey": 23,
-      "team": "Mainz"
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 27,
+      "team": "RB Leipzig"
     },
     {
       "id": 303792,
@@ -823,6 +1109,32 @@
       "flag": "flags/de.png",
       "jersey": 19,
       "team": "TSG Hoffenheim"
+    },
+    {
+      "id": 162162,
+      "name": "Willi Orbán",
+      "teamId": 11420,
+      "position": "D",
+      "age": 33,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Hungary",
+      "flag": "flags/hu.png",
+      "jersey": 4,
+      "team": "RB Leipzig"
+    },
+    {
+      "id": 182245,
+      "name": "Yussuf Poulsen",
+      "teamId": 127,
+      "position": "F",
+      "age": 32,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Denmark",
+      "flag": "flags/dk.png",
+      "jersey": 15,
+      "team": "Hamburg SV"
     },
     {
       "id": 384380,
@@ -857,7 +1169,7 @@
       "position": "M",
       "age": 25,
       "goals": 0,
-      "assists": 0,
+      "assists": 2,
       "citizenship": "Denmark",
       "flag": "flags/dk.png",
       "jersey": 11,
@@ -974,7 +1286,7 @@
       "position": "D",
       "age": 25,
       "goals": 0,
-      "assists": 0,
+      "assists": 2,
       "citizenship": "Canada",
       "flag": "flags/ca.png",
       "jersey": 19,
@@ -1072,13 +1384,26 @@
       "team": "VfB Stuttgart"
     },
     {
+      "id": 305555,
+      "name": "Ansgar Knauff",
+      "teamId": 125,
+      "position": "F",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 7,
+      "team": "Eintracht Frankfurt"
+    },
+    {
       "id": 241297,
       "name": "Anthony Caci",
       "teamId": 2950,
       "position": "D",
       "age": 29,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 19,
@@ -1109,6 +1434,19 @@
       "flag": "flags/br.png",
       "jersey": 13,
       "team": "Werder Bremen"
+    },
+    {
+      "id": 364897,
+      "name": "Assan Ouédraogo",
+      "teamId": 11420,
+      "position": "M",
+      "age": 20,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 8,
+      "team": "RB Leipzig"
     },
     {
       "id": 241742,
@@ -1280,19 +1618,6 @@
       "team": "TSG Hoffenheim"
     },
     {
-      "id": 345106,
-      "name": "Calvin Brackelmann",
-      "teamId": 3841,
-      "position": "D",
-      "age": 27,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 2,
-      "team": "FC Augsburg"
-    },
-    {
       "id": 221460,
       "name": "Carl Klaus",
       "teamId": 598,
@@ -1384,19 +1709,6 @@
       "team": "SC Freiburg"
     },
     {
-      "id": 222176,
-      "name": "Christopher Nkunku",
-      "teamId": 11420,
-      "position": "F",
-      "age": 28,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 28,
-      "team": "RB Leipzig"
-    },
-    {
       "id": 146485,
       "name": "Christopher Trimmel",
       "teamId": 598,
@@ -1416,7 +1728,7 @@
       "position": "M",
       "age": 22,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "jersey": 20,
@@ -1499,19 +1811,6 @@
       "flag": "flags/se.png",
       "jersey": 24,
       "team": "Borussia Dortmund"
-    },
-    {
-      "id": 154603,
-      "name": "Danny da Costa",
-      "teamId": 2950,
-      "position": "D",
-      "age": 33,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 21,
-      "team": "Mainz"
     },
     {
       "id": 405585,
@@ -1618,19 +1917,6 @@
       "team": "1. FC Union Berlin"
     },
     {
-      "id": 346619,
-      "name": "Derry Scherhant",
-      "teamId": 126,
-      "position": "F",
-      "age": 23,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 7,
-      "team": "SC Freiburg"
-    },
-    {
       "id": 172997,
       "name": "Dominik Kohr",
       "teamId": 2950,
@@ -1702,7 +1988,7 @@
       "position": "M",
       "age": 31,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Tunisia",
       "flag": "flags/tn.png",
       "jersey": 6,
@@ -1741,7 +2027,7 @@
       "position": "M",
       "age": 21,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Netherlands",
       "flag": "flags/nl.png",
       "jersey": 6,
@@ -1917,19 +2203,6 @@
       "team": "SC Freiburg"
     },
     {
-      "id": 238527,
-      "name": "Florian Neuhaus",
-      "teamId": 268,
-      "position": "M",
-      "age": 29,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 10,
-      "team": "Borussia Mönchengladbach"
-    },
-    {
       "id": 379180,
       "name": "Francis-Ikechukwu Onyeka",
       "teamId": 10388,
@@ -2047,19 +2320,6 @@
       "team": "FC Augsburg"
     },
     {
-      "id": 142200,
-      "name": "Harry Kane",
-      "teamId": 132,
-      "position": "F",
-      "age": 33,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 9,
-      "team": "Bayern Munich"
-    },
-    {
       "id": 246560,
       "name": "Hasan Kurucay",
       "teamId": 133,
@@ -2138,19 +2398,6 @@
       "team": "FC Cologne"
     },
     {
-      "id": 221690,
-      "name": "Isac Lidberg",
-      "teamId": 268,
-      "position": "F",
-      "age": 28,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Sweden",
-      "flag": "flags/se.png",
-      "jersey": 3,
-      "team": "Borussia Mönchengladbach"
-    },
-    {
       "id": 286815,
       "name": "Ísak Jóhannesson",
       "teamId": 122,
@@ -2164,19 +2411,6 @@
       "team": "FC Cologne"
     },
     {
-      "id": 304572,
-      "name": "Ismael Saibari",
-      "teamId": 132,
-      "position": "M",
-      "age": 25,
-      "goals": 0,
-      "assists": 2,
-      "citizenship": "Morocco",
-      "flag": "flags/ma.png",
-      "jersey": 34,
-      "team": "Bayern Munich"
-    },
-    {
       "id": 357337,
       "name": "Jahmai Simpson-Pusey",
       "teamId": 122,
@@ -2188,19 +2422,6 @@
       "flag": "flags/gb-eng.png",
       "jersey": 22,
       "team": "FC Cologne"
-    },
-    {
-      "id": 303821,
-      "name": "Jamal Musiala",
-      "teamId": 132,
-      "position": "M",
-      "age": 23,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 10,
-      "team": "Bayern Munich"
     },
     {
       "id": 290811,
@@ -2350,7 +2571,7 @@
       "name": "Jeong Woo-Yeong",
       "teamId": 598,
       "position": "M",
-      "age": 26,
+      "age": 27,
       "goals": 0,
       "assists": 0,
       "citizenship": "South Korea",
@@ -2376,9 +2597,9 @@
       "name": "Jobe Bellingham",
       "teamId": 124,
       "position": "M",
-      "age": 20,
+      "age": 21,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "jersey": 7,
@@ -2389,7 +2610,7 @@
       "name": "Joel Schmied",
       "teamId": 122,
       "position": "D",
-      "age": 27,
+      "age": 28,
       "goals": 0,
       "assists": 0,
       "citizenship": "Switzerland",
@@ -2430,7 +2651,7 @@
       "position": "M",
       "age": 22,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 3,
@@ -2508,7 +2729,7 @@
       "position": "D",
       "age": 25,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 33,
@@ -2638,7 +2859,7 @@
       "position": "M",
       "age": 25,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Japan",
       "flag": "flags/jp.png",
       "jersey": 6,
@@ -2656,6 +2877,19 @@
       "flag": "flags/ee.png",
       "jersey": 1,
       "team": "Werder Bremen"
+    },
+    {
+      "id": 289527,
+      "name": "Kastriot Imeri",
+      "teamId": 598,
+      "position": "M",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Switzerland",
+      "flag": "flags/ch.png",
+      "jersey": 30,
+      "team": "1. FC Union Berlin"
     },
     {
       "id": 399455,
@@ -2872,7 +3106,7 @@
       "position": "D",
       "age": 24,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 17,
@@ -2916,19 +3150,6 @@
       "flag": "flags/us.png",
       "jersey": 15,
       "team": "Mainz"
-    },
-    {
-      "id": 402841,
-      "name": "Lennart Karl",
-      "teamId": 132,
-      "position": "M",
-      "age": 18,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 42,
-      "team": "Bayern Munich"
     },
     {
       "id": 355487,
@@ -3126,6 +3347,19 @@
       "team": "Schalke 04"
     },
     {
+      "id": 191352,
+      "name": "Luca Waldschmidt",
+      "teamId": 122,
+      "position": "F",
+      "age": 30,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 7,
+      "team": "FC Cologne"
+    },
+    {
       "id": 238525,
       "name": "Lucas Höler",
       "teamId": 126,
@@ -3236,7 +3470,7 @@
       "position": "D",
       "age": 22,
       "goals": 0,
-      "assists": 0,
+      "assists": 2,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 26,
@@ -3574,7 +3808,7 @@
       "position": "F",
       "age": 20,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 9,
@@ -3605,19 +3839,6 @@
       "flag": "flags/fr.png",
       "jersey": 3,
       "team": "RB Leipzig"
-    },
-    {
-      "id": 290639,
-      "name": "Maximilian Beier",
-      "teamId": 124,
-      "position": "F",
-      "age": 23,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 14,
-      "team": "Borussia Dortmund"
     },
     {
       "id": 376559,
@@ -3711,19 +3932,6 @@
       "team": "Werder Bremen"
     },
     {
-      "id": 290044,
-      "name": "Miguel Gutiérrez",
-      "teamId": 131,
-      "position": "D",
-      "age": 25,
-      "goals": 0,
-      "assists": 2,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 3,
-      "team": "Bayer Leverkusen"
-    },
-    {
       "id": 365332,
       "name": "Mikey Moore",
       "teamId": 122,
@@ -3748,19 +3956,6 @@
       "flag": "flags/de.png",
       "jersey": 1,
       "team": "SC Freiburg"
-    },
-    {
-      "id": 159139,
-      "name": "Mitchell Weiser",
-      "teamId": 137,
-      "position": "D",
-      "age": 32,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 8,
-      "team": "Werder Bremen"
     },
     {
       "id": 238536,
@@ -3945,19 +4140,6 @@
       "team": "Hamburg SV"
     },
     {
-      "id": 284835,
-      "name": "Nicolás Capaldo",
-      "teamId": 127,
-      "position": "M",
-      "age": 27,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "jersey": 24,
-      "team": "Hamburg SV"
-    },
-    {
       "id": 324021,
       "name": "Nicolas Kristof",
       "teamId": 10388,
@@ -4049,6 +4231,19 @@
       "team": "Schalke 04"
     },
     {
+      "id": 259878,
+      "name": "Nikolas Nartey",
+      "teamId": 134,
+      "position": "M",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Denmark",
+      "flag": "flags/dk.png",
+      "jersey": 28,
+      "team": "VfB Stuttgart"
+    },
+    {
       "id": 305556,
       "name": "Nnamdi Collins",
       "teamId": 125,
@@ -4081,7 +4276,7 @@
       "position": "M",
       "age": 19,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 10,
@@ -4348,19 +4543,6 @@
       "team": "Mainz"
     },
     {
-      "id": 255355,
-      "name": "Ragnar Ache",
-      "teamId": 122,
-      "position": "F",
-      "age": 28,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 9,
-      "team": "FC Cologne"
-    },
-    {
       "id": 289322,
       "name": "Ramon Hendriks",
       "teamId": 134,
@@ -4471,7 +4653,7 @@
       "position": "M",
       "age": 28,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Japan",
       "flag": "flags/jp.png",
       "jersey": 20,
@@ -4482,7 +4664,7 @@
       "name": "Robert Andrich",
       "teamId": 131,
       "position": "M",
-      "age": 31,
+      "age": 32,
       "goals": 0,
       "assists": 0,
       "citizenship": "Germany",
@@ -4536,7 +4718,7 @@
       "position": "D",
       "age": 30,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 4,
@@ -4580,6 +4762,19 @@
       "flag": "flags/de.png",
       "jersey": 20,
       "team": "FC Cologne"
+    },
+    {
+      "id": 406466,
+      "name": "Ruben Müller",
+      "teamId": 3307,
+      "position": "F",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 2,
+      "team": "SC Paderborn 07"
     },
     {
       "id": 407196,
@@ -4632,19 +4827,6 @@
       "flag": "flags/no.png",
       "jersey": 12,
       "team": "Hamburg SV"
-    },
-    {
-      "id": 338837,
-      "name": "Santiago Castaneda",
-      "teamId": 3307,
-      "position": "M",
-      "age": 21,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "USA",
-      "flag": "flags/us.png",
-      "jersey": 5,
-      "team": "SC Paderborn 07"
     },
     {
       "id": 297565,
@@ -4712,6 +4894,19 @@
       "team": "FC Augsburg"
     },
     {
+      "id": 178980,
+      "name": "Serge Gnabry",
+      "teamId": 132,
+      "position": "F",
+      "age": 31,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 7,
+      "team": "Bayern Munich"
+    },
+    {
       "id": 415376,
       "name": "Shafiq Nandja",
       "teamId": 127,
@@ -4723,19 +4918,6 @@
       "flag": "flags/de.png",
       "jersey": 43,
       "team": "Hamburg SV"
-    },
-    {
-      "id": 271352,
-      "name": "Shuto Machino",
-      "teamId": 268,
-      "position": "F",
-      "age": 26,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Japan",
-      "flag": "flags/jp.png",
-      "jersey": 18,
-      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 175905,
@@ -4803,29 +4985,16 @@
       "team": "Mainz"
     },
     {
-      "id": 332543,
-      "name": "Stefano Marino",
+      "id": 197796,
+      "name": "Sven Michel",
       "teamId": 3307,
       "position": "F",
-      "age": 22,
+      "age": 36,
       "goals": 0,
       "assists": 0,
       "citizenship": "Germany",
       "flag": "flags/de.png",
-      "jersey": 30,
-      "team": "SC Paderborn 07"
-    },
-    {
-      "id": 231764,
-      "name": "Steffen Tigges",
-      "teamId": 3307,
-      "position": "F",
-      "age": 28,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 27,
+      "jersey": 11,
       "team": "SC Paderborn 07"
     },
     {
@@ -4853,19 +5022,6 @@
       "flag": "flags/pt.png",
       "jersey": 8,
       "team": "VfB Stuttgart"
-    },
-    {
-      "id": 366911,
-      "name": "Tidiam Gomis",
-      "teamId": 11420,
-      "position": "F",
-      "age": 20,
-      "goals": 0,
-      "assists": 2,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 27,
-      "team": "RB Leipzig"
     },
     {
       "id": 275817,
@@ -4978,7 +5134,7 @@
       "position": "M",
       "age": 21,
       "goals": 0,
-      "assists": 0,
+      "assists": 2,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 8,
@@ -5115,17 +5271,17 @@
       "team": "Borussia Dortmund"
     },
     {
-      "id": 162162,
-      "name": "Willi Orbán",
-      "teamId": 11420,
+      "id": 309840,
+      "name": "Warmed Omari",
+      "teamId": 127,
       "position": "D",
-      "age": 33,
+      "age": 26,
       "goals": 0,
       "assists": 0,
-      "citizenship": "Hungary",
-      "flag": "flags/hu.png",
-      "jersey": 4,
-      "team": "RB Leipzig"
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 17,
+      "team": "Hamburg SV"
     },
     {
       "id": 274860,
@@ -5178,19 +5334,6 @@
       "flag": "flags/nl.png",
       "jersey": 44,
       "team": "Werder Bremen"
-    },
-    {
-      "id": 182245,
-      "name": "Yussuf Poulsen",
-      "teamId": 127,
-      "position": "F",
-      "age": 32,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Denmark",
-      "flag": "flags/dk.png",
-      "jersey": 15,
-      "team": "Hamburg SV"
     },
     {
       "id": 325024,
@@ -5298,9 +5441,9 @@
     },
     {
       "id": 341441,
-      "name": "Andrej Ilic",
+      "name": "Andrej Ilić",
       "teamId": 598,
-      "position": "F",
+      "position": "M",
       "age": 26,
       "goals": null,
       "assists": null,
@@ -5321,19 +5464,6 @@
       "flag": "flags/de.png",
       "jersey": 3,
       "team": "1. FC Union Berlin"
-    },
-    {
-      "id": 305555,
-      "name": "Ansgar Knauff",
-      "teamId": 125,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 7,
-      "team": "Eintracht Frankfurt"
     },
     {
       "id": 169753,
@@ -5360,19 +5490,6 @@
       "flag": "flags/br.png",
       "jersey": 35,
       "team": "TSG Hoffenheim"
-    },
-    {
-      "id": 364897,
-      "name": "Assan Ouédraogo",
-      "teamId": 11420,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 8,
-      "team": "RB Leipzig"
     },
     {
       "id": 413837,
@@ -5501,7 +5618,7 @@
       "assists": null,
       "citizenship": "Morocco",
       "flag": "flags/ma.png",
-      "jersey": 17,
+      "jersey": 29,
       "team": "Bayer Leverkusen"
     },
     {
@@ -5542,19 +5659,6 @@
       "flag": "flags/lu.png",
       "jersey": 44,
       "team": "Borussia Dortmund"
-    },
-    {
-      "id": 290398,
-      "name": "Eric Martel",
-      "teamId": 2950,
-      "position": "M",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 5,
-      "team": "Mainz"
     },
     {
       "id": 410646,
@@ -5847,7 +5951,7 @@
       "name": "Jens Grahl",
       "teamId": 125,
       "position": "G",
-      "age": 37,
+      "age": 38,
       "goals": null,
       "assists": null,
       "citizenship": "Germany",
@@ -5960,19 +6064,6 @@
       "team": "Borussia Dortmund"
     },
     {
-      "id": 289527,
-      "name": "Kastriot Imeri",
-      "teamId": 598,
-      "position": "M",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Switzerland",
-      "flag": "flags/ch.png",
-      "jersey": null,
-      "team": "1. FC Union Berlin"
-    },
-    {
       "id": 332325,
       "name": "Keke Topp",
       "teamId": 137,
@@ -6064,19 +6155,6 @@
       "team": "VfB Stuttgart"
     },
     {
-      "id": 381471,
-      "name": "Louey Farhat",
-      "teamId": 126,
-      "position": "M",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Tunisia",
-      "flag": "flags/tn.png",
-      "jersey": null,
-      "team": "SC Freiburg"
-    },
-    {
       "id": 332574,
       "name": "Luca Jaquez",
       "teamId": 134,
@@ -6101,19 +6179,6 @@
       "flag": "flags/de.png",
       "jersey": 16,
       "team": "SV Elversberg"
-    },
-    {
-      "id": 191352,
-      "name": "Luca Waldschmidt",
-      "teamId": 122,
-      "position": "F",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 7,
-      "team": "FC Cologne"
     },
     {
       "id": 383188,
@@ -6363,19 +6428,6 @@
       "team": "Bayer Leverkusen"
     },
     {
-      "id": 259878,
-      "name": "Nikolas Nartey",
-      "teamId": 134,
-      "position": "M",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Denmark",
-      "flag": "flags/dk.png",
-      "jersey": 28,
-      "team": "VfB Stuttgart"
-    },
-    {
       "id": 367058,
       "name": "Nyamekye Awortwie-Grant",
       "teamId": 3307,
@@ -6467,19 +6519,6 @@
       "team": "SC Freiburg"
     },
     {
-      "id": 324766,
-      "name": "Rômulo",
-      "teamId": 11420,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 40,
-      "team": "RB Leipzig"
-    },
-    {
       "id": 419274,
       "name": "Rouven Tarnutzer",
       "teamId": 126,
@@ -6491,19 +6530,6 @@
       "flag": "flags/ch.png",
       "jersey": 39,
       "team": "SC Freiburg"
-    },
-    {
-      "id": 406466,
-      "name": "Ruben Müller",
-      "teamId": 3307,
-      "position": "F",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 2,
-      "team": "SC Paderborn 07"
     },
     {
       "id": 287225,
@@ -6543,19 +6569,6 @@
       "flag": "flags/de.png",
       "jersey": 26,
       "team": "SC Paderborn 07"
-    },
-    {
-      "id": 178980,
-      "name": "Serge Gnabry",
-      "teamId": 132,
-      "position": "F",
-      "age": 31,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 7,
-      "team": "Bayern Munich"
     },
     {
       "id": 279282,
@@ -6649,19 +6662,6 @@
       "team": "FC Augsburg"
     },
     {
-      "id": 197796,
-      "name": "Sven Michel",
-      "teamId": 3307,
-      "position": "F",
-      "age": 36,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 11,
-      "team": "SC Paderborn 07"
-    },
-    {
       "id": 113733,
       "name": "Sven Ulreich",
       "teamId": 132,
@@ -6744,7 +6744,7 @@
       "name": "Tom Zimmerschied",
       "teamId": 10388,
       "position": "F",
-      "age": 27,
+      "age": 28,
       "goals": null,
       "assists": null,
       "citizenship": "Germany",
@@ -6790,19 +6790,6 @@
       "flag": "flags/de.png",
       "jersey": 47,
       "team": "RB Leipzig"
-    },
-    {
-      "id": 309840,
-      "name": "Warmed Omari",
-      "teamId": 127,
-      "position": "D",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 17,
-      "team": "Hamburg SV"
     },
     {
       "id": 276082,

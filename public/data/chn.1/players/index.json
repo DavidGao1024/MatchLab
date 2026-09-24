@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-14T01:00:58.186Z",
+  "updateTime": "2026-09-24T01:27:13.608Z",
   "league": "chn.1",
   "season": "2026",
   "count": 500,
@@ -19,6 +19,19 @@
       "team": "Yunnan Yukun"
     },
     {
+      "id": 173239,
+      "name": "Jhonder Cádiz",
+      "teamId": 21506,
+      "position": "F",
+      "age": 31,
+      "goals": 18,
+      "assists": 6,
+      "citizenship": "Venezuela",
+      "flag": "flags/ve.png",
+      "jersey": 29,
+      "team": "Wuhan Three Towns"
+    },
+    {
       "id": 216975,
       "name": "Felipe Sousa",
       "teamId": 21355,
@@ -30,19 +43,6 @@
       "flag": "flags/br.png",
       "jersey": 9,
       "team": "Chengdu Rongcheng"
-    },
-    {
-      "id": 173239,
-      "name": "Jhonder Cádiz",
-      "teamId": 21506,
-      "position": "F",
-      "age": 31,
-      "goals": 17,
-      "assists": 6,
-      "citizenship": "Venezuela",
-      "flag": "flags/ve.png",
-      "jersey": 29,
-      "team": "Wuhan Three Towns"
     },
     {
       "id": 218955,
@@ -123,6 +123,19 @@
       "team": "Tianjin Jinmen Tiger"
     },
     {
+      "id": 194410,
+      "name": "Alexandru Mitrita",
+      "teamId": 18203,
+      "position": "M",
+      "age": 31,
+      "goals": 10,
+      "assists": 12,
+      "citizenship": "Romania",
+      "flag": "flags/ro.png",
+      "jersey": 28,
+      "team": "Zhejiang Professional FC"
+    },
+    {
       "id": 301780,
       "name": "Jeffinho",
       "teamId": 131705,
@@ -147,19 +160,6 @@
       "flag": "flags/br.png",
       "jersey": 7,
       "team": "Shenzhen Xinpengcheng"
-    },
-    {
-      "id": 194410,
-      "name": "Alexandru Mitrita",
-      "teamId": 18203,
-      "position": "M",
-      "age": 31,
-      "goals": 9,
-      "assists": 11,
-      "citizenship": "Romania",
-      "flag": "flags/ro.png",
-      "jersey": 28,
-      "team": "Zhejiang Professional FC"
     },
     {
       "id": 251462,
@@ -199,6 +199,19 @@
       "flag": "flags/cg.png",
       "jersey": 9,
       "team": "Liaoning Tieren"
+    },
+    {
+      "id": 237548,
+      "name": "Marko Tolic",
+      "teamId": 18203,
+      "position": "M",
+      "age": 30,
+      "goals": 9,
+      "assists": 6,
+      "citizenship": "Croatia",
+      "flag": "flags/hr.png",
+      "jersey": 10,
+      "team": "Zhejiang Professional FC"
     },
     {
       "id": 176678,
@@ -394,19 +407,6 @@
       "flag": "flags/gq.png",
       "jersey": 19,
       "team": "Shanghai Shenhua"
-    },
-    {
-      "id": 237548,
-      "name": "Marko Tolic",
-      "teamId": 18203,
-      "position": "M",
-      "age": 30,
-      "goals": 7,
-      "assists": 5,
-      "citizenship": "Croatia",
-      "flag": "flags/hr.png",
-      "jersey": 10,
-      "team": "Zhejiang Professional FC"
     },
     {
       "id": 173386,
@@ -1063,7 +1063,7 @@
       "name": "Du Yuezheng",
       "teamId": 131704,
       "position": "F",
-      "age": 20,
+      "age": 21,
       "goals": 2,
       "assists": 0,
       "citizenship": "China PR",
@@ -1156,7 +1156,7 @@
       "position": "M",
       "age": 31,
       "goals": 2,
-      "assists": 3,
+      "assists": 4,
       "citizenship": "China PR",
       "flag": "flags/cn.png",
       "jersey": 22,
@@ -1488,6 +1488,19 @@
       "team": "Yunnan Yukun"
     },
     {
+      "id": 317839,
+      "name": "Hao Fang",
+      "teamId": 18203,
+      "position": "F",
+      "age": 26,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "China PR",
+      "flag": "flags/cn.png",
+      "jersey": 18,
+      "team": "Zhejiang Professional FC"
+    },
+    {
       "id": 234661,
       "name": "Haoran Li",
       "teamId": 131705,
@@ -1596,7 +1609,7 @@
       "name": "Li Ang",
       "teamId": 21506,
       "position": "D",
-      "age": 32,
+      "age": 33,
       "goals": 1,
       "assists": 0,
       "citizenship": "China PR",
@@ -2181,7 +2194,7 @@
       "name": "Asqer Afrden",
       "teamId": 22198,
       "position": "F",
-      "age": 22,
+      "age": 23,
       "goals": 0,
       "assists": 0,
       "citizenship": "China PR",
@@ -2194,7 +2207,7 @@
       "name": "Ba Dun",
       "teamId": 8239,
       "position": "M",
-      "age": 30,
+      "age": 31,
       "goals": 0,
       "assists": 2,
       "citizenship": "China PR",
@@ -2866,19 +2879,6 @@
       "team": "Yunnan Yukun"
     },
     {
-      "id": 317839,
-      "name": "Hao Fang",
-      "teamId": 18203,
-      "position": "F",
-      "age": 26,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "China PR",
-      "flag": "flags/cn.png",
-      "jersey": 18,
-      "team": "Zhejiang Professional FC"
-    },
-    {
       "id": 387477,
       "name": "Hao Fubo",
       "teamId": 7521,
@@ -3091,7 +3091,7 @@
       "name": "Ji Jiabao",
       "teamId": 22199,
       "position": "G",
-      "age": 23,
+      "age": 24,
       "goals": 0,
       "assists": 0,
       "citizenship": "China PR",
@@ -4703,7 +4703,7 @@
       "name": "Wang Gengrui",
       "teamId": 22198,
       "position": "D",
-      "age": 17,
+      "age": 18,
       "goals": 0,
       "assists": 0,
       "citizenship": "China PR",
@@ -5730,7 +5730,7 @@
       "name": "Zhang Yuhang",
       "teamId": 15515,
       "position": "G",
-      "age": 19,
+      "age": 20,
       "goals": 0,
       "assists": 0,
       "citizenship": "China PR",
@@ -5743,7 +5743,7 @@
       "name": "Zhao Bo",
       "teamId": 18203,
       "position": "G",
-      "age": 32,
+      "age": 33,
       "goals": 0,
       "assists": 0,
       "citizenship": "China PR",
@@ -5964,7 +5964,7 @@
       "name": "Chen Hanyang",
       "teamId": 8240,
       "position": "M",
-      "age": 18,
+      "age": 19,
       "goals": null,
       "assists": null,
       "citizenship": "China PR",

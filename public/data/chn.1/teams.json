@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-14T00:57:08.086Z",
+  "updateTime": "2026-09-24T01:23:17.907Z",
   "league": "chn.1",
   "season": "2026",
   "count": 16,
@@ -319,11 +319,7 @@
       "alternateColor": "#FFFFFF",
       "logo": "logos/977.png",
       "logoDark": "logos/977-dark.png",
-      "venue": {
-        "name": "Shanghai Stadium",
-        "city": "Shanghai",
-        "country": "China PR"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 12,
@@ -419,13 +415,13 @@
       "record": {
         "wins": 5,
         "draws": 11,
-        "losses": 9,
-        "played": 25,
+        "losses": 10,
+        "played": 26,
         "points": 21,
-        "goalDiff": -4,
-        "goalsFor": 38,
-        "goalsAgainst": 42,
-        "summary": "5-11-9"
+        "goalDiff": -7,
+        "goalsFor": 39,
+        "goalsAgainst": 46,
+        "summary": "5-11-10"
       }
     },
     {
@@ -477,15 +473,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 9,
+        "wins": 10,
         "draws": 6,
         "losses": 10,
-        "played": 25,
-        "points": 28,
-        "goalDiff": -1,
-        "goalsFor": 41,
-        "goalsAgainst": 42,
-        "summary": "9-6-10"
+        "played": 26,
+        "points": 31,
+        "goalDiff": 2,
+        "goalsFor": 45,
+        "goalsAgainst": 43,
+        "summary": "10-6-10"
       }
     }
   ]

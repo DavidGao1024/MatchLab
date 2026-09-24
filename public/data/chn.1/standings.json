@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-09-14T01:01:23.588Z",
+  "updateTime": "2026-09-24T01:27:35.513Z",
   "league": "chn.1",
   "season": "2026",
-  "matchesCounted": 207,
+  "matchesCounted": 208,
   "count": 16,
   "standings": [
     {
@@ -116,6 +116,20 @@
     },
     {
       "rank": 9,
+      "teamId": 18203,
+      "team": "Zhejiang Professional FC",
+      "played": 26,
+      "won": 10,
+      "drawn": 6,
+      "lost": 10,
+      "goalsFor": 45,
+      "goalsAgainst": 43,
+      "goalDiff": 2,
+      "points": 31,
+      "deduction": 5
+    },
+    {
+      "rank": 10,
       "teamId": 131704,
       "team": "Chongqing Tonglianglong",
       "played": 26,
@@ -126,20 +140,6 @@
       "goalsAgainst": 32,
       "goalDiff": -5,
       "points": 31
-    },
-    {
-      "rank": 10,
-      "teamId": 18203,
-      "team": "Zhejiang Professional FC",
-      "played": 25,
-      "won": 9,
-      "drawn": 6,
-      "lost": 10,
-      "goalsFor": 41,
-      "goalsAgainst": 42,
-      "goalDiff": -1,
-      "points": 28,
-      "deduction": 5
     },
     {
       "rank": 11,
@@ -199,13 +199,13 @@
       "rank": 15,
       "teamId": 21506,
       "team": "Wuhan Three Towns",
-      "played": 25,
+      "played": 26,
       "won": 5,
       "drawn": 11,
-      "lost": 9,
-      "goalsFor": 38,
-      "goalsAgainst": 42,
-      "goalDiff": -4,
+      "lost": 10,
+      "goalsFor": 39,
+      "goalsAgainst": 46,
+      "goalDiff": -7,
       "points": 21,
       "deduction": 5
     },

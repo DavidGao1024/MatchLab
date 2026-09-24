@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-14T00:39:24.612Z",
+  "updateTime": "2026-09-24T01:05:05.118Z",
   "league": "esp.1",
   "season": "2026",
   "id": 346612,
@@ -19,7 +19,7 @@
   "flag": "flags/br.png",
   "stats": {
     "defensive": {
-      "blockedShots": 0,
+      "blockedShots": 1,
       "effectiveClearance": 0,
       "effectiveTackles": 0,
       "inneffectiveTackles": 0,
@@ -31,7 +31,7 @@
       "recoveries": 0
     },
     "general": {
-      "appearances": 0,
+      "appearances": 1,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -44,12 +44,12 @@
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 0,
+      "minutes": 4,
       "ownGoals": 0,
       "passPct": 0,
       "redCards": 0,
       "starts": 0,
-      "subIns": 0,
+      "subIns": 1,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -62,7 +62,7 @@
       "duelsWon": 0,
       "duels": 0,
       "secondYellow": 0,
-      "touches": 0
+      "touches": 2
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -102,7 +102,7 @@
       "inaccurateLongBalls": 0,
       "inaccuratePasses": 0,
       "inaccurateThroughBalls": 0,
-      "leftFootedShots": 0,
+      "leftFootedShots": 1,
       "longballPct": 0,
       "offsides": 0,
       "penaltyKickGoals": 0,
@@ -117,7 +117,7 @@
       "shotAssists": 0,
       "shotPct": 0,
       "shotsHeaded": 0,
-      "shotsOffTarget": 0,
+      "shotsOffTarget": 1,
       "shotsOnPost": 0,
       "shotsOnTarget": 0,
       "throughBallPct": 0,
@@ -125,12 +125,12 @@
       "totalGoals": 0,
       "totalLongBalls": 0,
       "totalPasses": 0,
-      "totalShots": 0,
+      "totalShots": 1,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 0,
       "progressiveCarries": 0,
-      "touchesInOppBox": 0
+      "touchesInOppBox": 1
     }
   }
 }
