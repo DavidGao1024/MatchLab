@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-24T01:23:17.907Z",
+  "updateTime": "2026-09-26T01:27:39.687Z",
   "league": "chn.1",
   "season": "2026",
   "count": 16,
@@ -79,7 +79,7 @@
       "logo": "logos/chn.1/131704.png",
       "logoDark": null,
       "venue": {
-        "name": "Chongqing Longxing Football Stadium",
+        "name": "Tongliang Long Stadium",
         "city": "Chongqing",
         "country": "China PR"
       },
@@ -319,7 +319,11 @@
       "alternateColor": "#FFFFFF",
       "logo": "logos/977.png",
       "logoDark": "logos/977-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Jinshan Sports Center Stadium",
+        "city": "Shanghai",
+        "country": "China PR"
+      },
       "isActive": true,
       "record": {
         "wins": 12,

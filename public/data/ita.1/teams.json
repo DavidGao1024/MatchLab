@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-24T01:09:22.097Z",
+  "updateTime": "2026-09-26T01:14:41.911Z",
   "league": "ita.1",
   "season": "2026",
   "count": 20,
@@ -197,7 +197,11 @@
       "alternateColor": "#ffffff",
       "logo": "logos/109.png",
       "logoDark": "logos/109-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Stadio Artemio Franchi",
+        "city": "Firenze",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 1,

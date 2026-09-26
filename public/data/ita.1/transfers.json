@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-09-24T01:39:02.509Z",
+  "updateTime": "2026-09-26T01:42:31.506Z",
   "league": "ita.1",
-  "playersScanned": 612,
-  "count": 599,
+  "playersScanned": 613,
+  "count": 600,
   "transfers": [
     {
       "playerId": 108482,
@@ -64,6 +64,18 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
+    },
+    {
+      "playerId": 118444,
+      "playerName": "David Alaba",
+      "date": "2021-07-01T07:00Z",
+      "fromTeamId": 132,
+      "fromTeam": "Bayern Munich",
+      "toTeamId": 86,
+      "toTeam": "Real Madrid",
+      "type": "Free",
+      "amount": 0,
+      "displayAmount": "Free"
     },
     {
       "playerId": 130036,
