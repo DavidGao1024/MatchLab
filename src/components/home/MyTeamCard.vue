@@ -8,6 +8,7 @@ import { useAppStore } from '../../stores/app'
 import { teamName, t, venueName } from '../../utils/i18n'
 import { flagTheme } from '../../utils/teamColor'
 import TeamLogo from '../common/TeamLogo.vue'
+import LeagueLogo from '../common/LeagueLogo.vue'
 import type { Subscription } from '../../types/user-data'
 import type { Match, StandingRow, Team } from '../../types/models'
 
@@ -144,7 +145,10 @@ function formatDateLong(iso: string): string {
         <TeamLogo :team="flagTeam" :size="52" />
         <div class="flag-id">
           <h3 class="flag-name">{{ displayName(subscription.teamName) }}</h3>
-          <div class="flag-sub">{{ leagueLabel }}</div>
+          <div class="flag-sub flex items-center gap-1">
+            <LeagueLogo :league="subscription.league" :size="14" />
+            <span>{{ leagueLabel }}</span>
+          </div>
         </div>
         <div v-if="standing" class="flag-rank">
           <span class="num">{{ standing.rank }}</span>

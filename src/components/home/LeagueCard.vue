@@ -6,6 +6,7 @@ import { useStandingsStore } from '../../stores/standings'
 import { t } from '../../utils/i18n'
 import type { LeagueSlug } from '../../utils/constants'
 import MiniStandings from './MiniStandings.vue'
+import LeagueLogo from '../common/LeagueLogo.vue'
 
 const props = defineProps<{ league: LeagueSlug }>()
 const app = useAppStore()
@@ -31,7 +32,10 @@ function enter() {
   >
     <div class="p-4 flex flex-col flex-1">
       <div class="flex items-baseline justify-between gap-2">
-        <h3 class="font-cond text-lg font-semibold text-white">{{ name }}</h3>
+        <h3 class="flex items-center gap-1.5 font-cond text-lg font-semibold text-white">
+          <LeagueLogo :league="league" :size="18" />
+          {{ name }}
+        </h3>
         <span class="text-slate-600 transition-all group-hover:translate-x-1 group-hover:text-white">→</span>
       </div>
 

@@ -34,12 +34,22 @@ describe('MatchCard plain 模式', () => {
     expect(names[1].classes()).not.toContain('text-slate-500')
   })
 
-  it('leagueTag 徽标：传入则底栏出现该徽标节点，不传则无（默认零影响）', () => {
-    const withTag = mount(MatchCard, { props: { match, league: 'eng.1', leagueTag: '英超' } })
-    expect(withTag.find('.league-tag').exists()).toBe(true)
-    expect(withTag.find('.league-tag').text()).toBe('英超')
+  it('leagueTag 联赛标识：不传则底栏无标识（默认零影响）', () => {
     const withoutTag = mount(MatchCard, { props: { match, league: 'eng.1' } })
-    expect(withoutTag.find('.league-tag').exists()).toBe(false)
+    expect(withoutTag.find('img[src*="/leagues/"]').exists()).toBe(false)
+  })
+
+  it('leagueTag 传入 → 出对应联赛徽标，文字仅作 alt', () => {
+    const w = mount(MatchCard, { props: { match, league: 'eng.1', leagueTag: '英超' } })
+    const img = w.find('img[src*="/leagues/"]')
+    expect(img.exists()).toBe(true)
+    expect(img.attributes('src')).toContain('leagues/eng.1.png')
+    expect(img.attributes('alt')).toBe('英超')
+  })
+
+  it('leagueTag 传入 + 中超 → 同样出中超徽标', () => {
+    const w = mount(MatchCard, { props: { match, league: 'chn.1', leagueTag: '中超' } })
+    expect(w.find('img[src*="/leagues/chn.1.png"]').exists()).toBe(true)
   })
 })
 

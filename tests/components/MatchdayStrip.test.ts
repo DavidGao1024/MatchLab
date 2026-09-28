@@ -22,13 +22,17 @@ beforeEach(() => {
 })
 
 describe('MatchdayStrip v2（跨联赛）', () => {
-  it('渲染日期标题 + 每卡联赛徽标 + 比分', () => {
+  it('渲染日期标题 + 每卡联赛标识 + 比分', () => {
     const w = mount(MatchdayStrip, {
       props: { day: '2026-09-07', picks: [pick('a', 'eng.1', true), pick('b', 'chn.1')] },
     })
     expect(w.text()).toContain('9月7日')
     expect(w.text()).toContain('昨日战报')
-    expect(w.findAll('.league-tag')).toHaveLength(2)
+    // 2026-09-28 起联赛标识一律出徽标（六大联赛齐全），不再用文字角标
+    const logos = w.findAll('img[src*="/leagues/"]')
+    expect(logos).toHaveLength(2)
+    expect(logos[0].attributes('src')).toContain('leagues/eng.1.png')
+    expect(logos[1].attributes('src')).toContain('leagues/chn.1.png')
     expect(w.text()).toContain('2')
   })
 })

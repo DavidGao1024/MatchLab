@@ -3,6 +3,7 @@ import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
+import LeagueLogo from '../components/common/LeagueLogo.vue'
 import StandingsTable from '../components/standings/StandingsTable.vue'
 import { ensureLeague } from '../composables/useLeague'
 import { useTimezone } from '../composables/useTimezone'
@@ -65,6 +66,7 @@ const ready = computed(() => !store.loading[league.value] && rows.value.length >
   <section class="py-6">
     <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2">
       <h1 class="font-cond text-2xl font-semibold text-white">
+        <LeagueLogo :league="league" :size="22" class="mr-1.5" />
         {{ app.lang === 'zh' ? meta?.nameZh : meta?.displayName }}
         <span class="text-base text-slate-500">{{ t('standings.season', app.lang) }} {{ seasonLabel }}</span>
       </h1>

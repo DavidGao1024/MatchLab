@@ -5,6 +5,7 @@ import { playerName, teamName, t } from '../../utils/i18n'
 import type { LeagueSlug } from '../../utils/constants'
 import type { Team } from '../../types/models'
 import TeamLogo from '../common/TeamLogo.vue'
+import LeagueLogo from '../common/LeagueLogo.vue'
 import ExportCalendarButton from '../teams/ExportCalendarButton.vue'
 
 const props = defineProps<{
@@ -75,7 +76,10 @@ const seasonStart = computed(() => {
     <span v-else class="min-w-0 flex-1 truncate text-sm text-slate-200">{{ display }}</span>
 
     <!-- 联赛徽章 -->
-    <span class="flex-none rounded-full px-2 py-0.5 text-[10px]" :style="chipStyle">{{ leagueLabel }}</span>
+    <span class="inline-flex flex-none items-center gap-1 rounded-full px-2 py-0.5 text-[10px]" :style="chipStyle">
+      <LeagueLogo :league="league" :size="13" />
+      {{ leagueLabel }}
+    </span>
 
     <!-- 动作区：仅有编号条目渲染；日历钮内嵌导出按钮紧凑变体（整链闭环，不发事件） -->
     <template v-if="hasId">

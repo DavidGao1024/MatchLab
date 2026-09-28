@@ -115,7 +115,10 @@ describe('首页昨日战报带（v2：六联赛混合·实时区间取数）', 
     const w = mount(HomeView, { global: { plugins: [router] } })
     await flushPromises()
 
-    expect(w.find('.league-tag').exists()).toBe(true)
+    // 2026-09-28 起：有徽标的联赛出图，不再用文字角标
+    const logo = w.find('img[src*="/leagues/"]')
+    expect(logo.exists()).toBe(true)
+    expect(logo.attributes('src')).toContain('leagues/eng.1.png')
     expect(w.text()).toContain('昨日战报')
   })
 })

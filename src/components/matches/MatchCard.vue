@@ -9,6 +9,7 @@ import { useMatchesStore } from '../../stores/matches'
 import { t, teamName, venueName } from '../../utils/i18n'
 import type { Team } from '../../types/models'
 import TeamLogo from '../common/TeamLogo.vue'
+import LeagueLogo from '../common/LeagueLogo.vue'
 
 const props = withDefaults(defineProps<{ match: Match; league: LeagueSlug; featured?: boolean; plain?: boolean; leagueTag?: string }>(), { featured: false, plain: false, leagueTag: undefined })
 const app = useAppStore()
@@ -91,7 +92,8 @@ const scoreCls = computed(() => (tone.value.home === 'draw' && props.match.statu
     <!-- 底栏：本地开球时间（跨天自动"次日"）· 英文球场名（规格 v1.6） -->
     <div class="mt-2 flex items-center justify-between gap-3 border-t border-dashed border-white/10 pt-1.5 font-mono-d text-[9px] text-slate-500">
       <span class="flex min-w-0 items-center gap-1.5">
-        <span v-if="leagueTag" class="league-tag shrink-0 rounded-sm border border-white/15 px-1 leading-[1.4] text-slate-400">{{ leagueTag }}</span>
+        <!-- 联赛标识：仅战报带传 leagueTag（兼任徽标 alt）；不传则此位留空，默认零影响 -->
+        <LeagueLogo v-if="leagueTag" :league="league" :size="16" :label="leagueTag" class="shrink-0" />
         <time class="shrink-0" :datetime="match.date">{{ tz.kickoff(match.date) }}</time>
       </span>
       <span class="truncate">{{ venueName(match.venue, app.lang) }}</span>

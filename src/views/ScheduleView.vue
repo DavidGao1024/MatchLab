@@ -3,6 +3,7 @@ import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DataError from '../components/common/DataError.vue'
 import DataLoading from '../components/common/DataLoading.vue'
+import LeagueLogo from '../components/common/LeagueLogo.vue'
 import MatchList from '../components/matches/MatchList.vue'
 import MonthStrip from '../components/matches/MonthStrip.vue'
 import { ensureLeague } from '../composables/useLeague'
@@ -71,6 +72,7 @@ const offSeason = computed(() => !inSeason.value)
 <template>
   <section class="py-6">
     <h1 class="font-cond text-2xl font-semibold text-white">
+      <LeagueLogo :league="league" :size="22" class="mr-1.5" />
       {{ (app.lang === 'zh' ? app.leagueInfo(league)?.nameZh : app.leagueInfo(league)?.name) ?? league }}
       <span class="text-base text-slate-500">{{ t('nav.schedule', app.lang) }}</span>
     </h1>
