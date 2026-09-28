@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-09T08:33:07.328Z",
+  "updateTime": "2026-09-24T01:21:48.924Z",
   "league": "fra.1",
   "season": "2026",
   "id": 376344,
@@ -8,7 +8,7 @@
   "lastName": "Koutoune",
   "displayName": "Hamza Koutoune",
   "shortName": "H. Koutoune",
-  "age": 19,
+  "age": 20,
   "height": 178,
   "weight": 62,
   "dateOfBirth": "2006-09-17T07:00Z",
@@ -27,7 +27,9 @@
       "interceptions": 0,
       "tacklePct": 0,
       "totalClearance": 0,
-      "totalTackles": 0
+      "totalTackles": 0,
+      "tacklesLost": 0,
+      "recoveries": 0
     },
     "general": {
       "appearances": 2,
@@ -58,6 +60,9 @@
       "wonCorners": 0,
       "yellowCards": 0,
       "duelsLost": 4,
+      "duelsWon": 0,
+      "duels": 4,
+      "secondYellow": 0,
       "touches": 8
     },
     "goalKeeping": {
@@ -76,7 +81,8 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
@@ -122,7 +128,10 @@
       "totalPasses": 3,
       "totalShots": 1,
       "totalThroughBalls": 0,
-      "progressiveCarries": 1
+      "bigChanceCreated": 0,
+      "bigChanceMissed": 0,
+      "progressiveCarries": 1,
+      "touchesInOppBox": 0
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-09T08:14:13.934Z",
+  "updateTime": "2026-09-24T01:03:55.516Z",
   "league": "eng.1",
   "season": "2026",
   "id": 303765,
@@ -32,7 +32,7 @@
       "recoveries": 1
     },
     "general": {
-      "appearances": 2,
+      "appearances": 3,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -45,12 +45,12 @@
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 20,
+      "minutes": 27,
       "ownGoals": 0,
-      "passPct": 0.625,
+      "passPct": 0.813,
       "redCards": 0,
       "starts": 0,
-      "subIns": 2,
+      "subIns": 3,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -59,11 +59,11 @@
       "wins": 0,
       "wonCorners": 0,
       "yellowCards": 0,
-      "duelsLost": 2,
+      "duelsLost": 3,
       "duelsWon": 1,
-      "duels": 3,
+      "duels": 4,
       "secondYellow": 0,
-      "touches": 13
+      "touches": 25
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -85,13 +85,13 @@
       "bigChanceSaves": 0
     },
     "offensive": {
-      "accurateCrosses": 0,
+      "accurateCrosses": 1,
       "accurateLongBalls": 0,
-      "accuratePasses": 5,
+      "accuratePasses": 13,
       "accurateThroughBalls": 0,
       "attemptsInBox": 1,
       "attemptsOutBox": 1,
-      "crossPct": 0,
+      "crossPct": 0.5,
       "freeKickGoals": 0,
       "freeKickPct": 0,
       "freeKickShots": 0,
@@ -115,23 +115,23 @@
       "shootOutGoals": 0,
       "shootOutMisses": 0,
       "shootOutPct": 0,
-      "shotAssists": 0,
+      "shotAssists": 1,
       "shotPct": 0,
       "shotsHeaded": 0,
       "shotsOffTarget": 0,
       "shotsOnPost": 0,
       "shotsOnTarget": 0,
       "throughBallPct": 0,
-      "totalCrosses": 0,
+      "totalCrosses": 2,
       "totalGoals": 0,
       "totalLongBalls": 3,
-      "totalPasses": 8,
+      "totalPasses": 16,
       "totalShots": 0,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 0,
       "progressiveCarries": 0,
-      "touchesInOppBox": 0
+      "touchesInOppBox": 1
     }
   }
 }
