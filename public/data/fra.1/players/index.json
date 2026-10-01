@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-28T01:42:31.329Z",
+  "updateTime": "2026-10-01T02:09:15.469Z",
   "league": "fra.1",
   "season": "2026",
   "count": 513,
@@ -244,7 +244,7 @@
       "name": "Thomas Jørgensen",
       "teamId": 179,
       "position": "M",
-      "age": 20,
+      "age": 21,
       "goals": 2,
       "assists": 1,
       "citizenship": "Denmark",
@@ -444,7 +444,7 @@
       "assists": 1,
       "citizenship": "Cameroon",
       "flag": "flags/cm.png",
-      "jersey": 19,
+      "jersey": 10,
       "team": "AJ Auxerre"
     },
     {
@@ -842,7 +842,7 @@
       "name": "Olivier Giroud",
       "teamId": 166,
       "position": "F",
-      "age": 39,
+      "age": 40,
       "goals": 1,
       "assists": 2,
       "citizenship": "France",
@@ -1570,7 +1570,7 @@
       "name": "Aymen Ammaouch",
       "teamId": 179,
       "position": "F",
-      "age": 16,
+      "age": 17,
       "goals": 0,
       "assists": 0,
       "citizenship": "France",
@@ -1683,6 +1683,19 @@
       "team": "Lille"
     },
     {
+      "id": 279137,
+      "name": "Bilal Brahimi",
+      "teamId": 2697,
+      "position": "F",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Algeria",
+      "flag": "flags/dz.png",
+      "jersey": 7,
+      "team": "Le Mans"
+    },
+    {
       "id": 207369,
       "name": "Bingourou Kamara",
       "teamId": 273,
@@ -1720,19 +1733,6 @@
       "flag": "flags/fr.png",
       "jersey": 2,
       "team": "Brest"
-    },
-    {
-      "id": 279137,
-      "name": "Brahimi Bilal",
-      "teamId": 2697,
-      "position": "M",
-      "age": 26,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 7,
-      "team": "Le Mans"
     },
     {
       "id": 164126,
@@ -2056,7 +2056,7 @@
       "assists": 0,
       "citizenship": null,
       "flag": null,
-      "jersey": 33,
+      "jersey": 20,
       "team": "Le Havre AC"
     },
     {
@@ -2628,7 +2628,7 @@
       "assists": 0,
       "citizenship": "France",
       "flag": "flags/fr.png",
-      "jersey": 69,
+      "jersey": 65,
       "team": "Stade Rennais"
     },
     {
@@ -2961,7 +2961,7 @@
       "name": "Jeyland Mitchell",
       "teamId": 180,
       "position": "D",
-      "age": 21,
+      "age": 22,
       "goals": 0,
       "assists": 0,
       "citizenship": "Costa Rica",
@@ -3052,7 +3052,7 @@
       "name": "Jordan Teze",
       "teamId": 174,
       "position": "D",
-      "age": 26,
+      "age": 27,
       "goals": 0,
       "assists": 1,
       "citizenship": "Netherlands",
@@ -3363,12 +3363,12 @@
       "id": 38721,
       "name": "Lamine Camara",
       "teamId": 174,
-      "position": "F",
-      "age": 24,
+      "position": "M",
+      "age": 22,
       "goals": 0,
       "assists": 1,
-      "citizenship": "Mali",
-      "flag": "flags/ml.png",
+      "citizenship": "Senegal",
+      "flag": "flags/sn.png",
       "jersey": 15,
       "team": "AS Monaco"
     },
@@ -3689,7 +3689,7 @@
       "name": "Mamadou Coulibaly",
       "teamId": 174,
       "position": "M",
-      "age": 23,
+      "age": 22,
       "goals": 0,
       "assists": 0,
       "citizenship": "France",
@@ -3863,7 +3863,7 @@
       "assists": 1,
       "citizenship": "France",
       "flag": "flags/fr.png",
-      "jersey": 39,
+      "jersey": 11,
       "team": "AS Monaco"
     },
     {
@@ -4092,7 +4092,7 @@
       "name": "Mouhamed Diop",
       "teamId": 170,
       "position": "M",
-      "age": 25,
+      "age": 26,
       "goals": 0,
       "assists": 0,
       "citizenship": "Senegal",
@@ -4890,7 +4890,7 @@
       "assists": 1,
       "citizenship": "France",
       "flag": "flags/fr.png",
-      "jersey": 28,
+      "jersey": 21,
       "team": "AJ Auxerre"
     },
     {
@@ -5716,7 +5716,7 @@
       "id": 185685,
       "name": "Abdoulaye Touré",
       "teamId": 3236,
-      "position": "F",
+      "position": "M",
       "age": 32,
       "goals": null,
       "assists": null,
@@ -6099,7 +6099,7 @@
       "assists": null,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
-      "jersey": null,
+      "jersey": 12,
       "team": "Le Mans"
     },
     {
@@ -6140,19 +6140,6 @@
       "flag": "flags/fr.png",
       "jersey": 25,
       "team": "Lyon"
-    },
-    {
-      "id": 3138939,
-      "name": "Kingsley Olufade",
-      "teamId": 180,
-      "position": "F",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "jersey": null,
-      "team": "Strasbourg"
     },
     {
       "id": 142743,
@@ -6205,6 +6192,19 @@
       "flag": null,
       "jersey": 35,
       "team": "Angers"
+    },
+    {
+      "id": 415461,
+      "name": "Mamoudou Cissokho",
+      "teamId": 172,
+      "position": "F",
+      "age": 18,
+      "goals": null,
+      "assists": null,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 44,
+      "team": "AJ Auxerre"
     },
     {
       "id": 348301,
@@ -6268,7 +6268,7 @@
       "assists": null,
       "citizenship": "France",
       "flag": "flags/fr.png",
-      "jersey": null,
+      "jersey": 21,
       "team": "Le Havre AC"
     },
     {
@@ -6411,7 +6411,7 @@
       "assists": null,
       "citizenship": null,
       "flag": null,
-      "jersey": null,
+      "jersey": 34,
       "team": "Nice"
     },
     {

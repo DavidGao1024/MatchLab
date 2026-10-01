@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-28T01:34:32.713Z",
+  "updateTime": "2026-10-01T02:00:08.689Z",
   "league": "ger.1",
   "season": "2026",
   "count": 18,
@@ -78,9 +78,9 @@
       "logo": "logos/132.png",
       "logoDark": "logos/132-dark.png",
       "venue": {
-        "name": "Allianz Arena",
-        "city": "München",
-        "country": "Germany"
+        "name": "Kai Tak Sports Park",
+        "city": "Mongkok, Kowloon",
+        "country": "Hong Kong"
       },
       "isActive": true,
       "record": {
@@ -167,11 +167,7 @@
       "alternateColor": "#272726",
       "logo": "logos/125.png",
       "logoDark": "logos/125-dark.png",
-      "venue": {
-        "name": "Deutsche Bank Park",
-        "city": "Frankfurt",
-        "country": "Germany"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 1,
@@ -197,7 +193,11 @@
       "alternateColor": "#03915c",
       "logo": "logos/3841.png",
       "logoDark": "logos/3841-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "WWK Arena",
+        "city": "Augsburg",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 2,
@@ -283,11 +283,7 @@
       "alternateColor": "#000055",
       "logo": "logos/2950.png",
       "logoDark": "logos/2950-dark.png",
-      "venue": {
-        "name": "MEWA ARENA",
-        "city": "Mainz",
-        "country": "Germany"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 2,
@@ -343,11 +339,7 @@
       "alternateColor": "#ffffff",
       "logo": "logos/126.png",
       "logoDark": "logos/126-dark.png",
-      "venue": {
-        "name": "Europa-Park Stadion",
-        "city": "Freiburg im Breisgau",
-        "country": "Germany"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 3,
@@ -490,8 +482,8 @@
       "logo": "logos/134.png",
       "logoDark": "logos/134-dark.png",
       "venue": {
-        "name": "WIRmachenDRUCK Arena",
-        "city": "Aspach",
+        "name": "Stadion Weinstadt",
+        "city": "Weinstadt",
         "country": "Germany"
       },
       "isActive": true,
@@ -519,11 +511,7 @@
       "alternateColor": "#ffffff",
       "logo": "logos/137.png",
       "logoDark": "logos/137-dark.png",
-      "venue": {
-        "name": "Weserstadion",
-        "city": "Bremen",
-        "country": "Germany"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 2,
