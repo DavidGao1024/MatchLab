@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-01T01:43:47.785Z",
+  "updateTime": "2026-10-03T01:36:12.287Z",
   "league": "eng.1",
   "season": "2026",
   "count": 20,
@@ -235,7 +235,11 @@
       "alternateColor": "#C4122E",
       "logo": "logos/384.png",
       "logoDark": "logos/384-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Selhurst Park",
+        "city": "London",
+        "country": "England"
+      },
       "isActive": true,
       "record": {
         "wins": 1,
