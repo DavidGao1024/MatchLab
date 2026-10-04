@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-03T01:55:06.908Z",
+  "updateTime": "2026-10-04T02:36:09.815Z",
   "league": "fra.1",
   "season": "2026",
   "count": 18,
@@ -73,11 +73,7 @@
       "alternateColor": "#FFFFFF",
       "logo": "logos/174.png",
       "logoDark": "logos/174-dark.png",
-      "venue": {
-        "name": "Stade Louis II",
-        "city": "Monaco",
-        "country": "France"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 4,
@@ -361,7 +357,11 @@
       "alternateColor": "#FFFFFF",
       "logo": "logos/6851.png",
       "logoDark": "logos/6851-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Centre d’entrainement Paris FC",
+        "city": "Paris",
+        "country": "France"
+      },
       "isActive": true,
       "record": {
         "wins": 3,

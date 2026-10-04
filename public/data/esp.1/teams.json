@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-03T01:40:58.634Z",
+  "updateTime": "2026-10-04T02:22:30.024Z",
   "league": "esp.1",
   "season": "2026",
   "count": 20,
@@ -78,7 +78,7 @@
       "logo": "logos/1068.png",
       "logoDark": "logos/1068-dark.png",
       "venue": {
-        "name": "Cerro del Espino",
+        "name": "Riyadh Air Metropolitano",
         "city": "Madrid",
         "country": "Spain"
       },
@@ -199,8 +199,8 @@
       "logo": "logos/3751.png",
       "logoDark": "logos/3751-dark.png",
       "venue": {
-        "name": "Pinatar Arena",
-        "city": "Murcia",
+        "name": "Estadio Martínez Valero",
+        "city": "Elche",
         "country": "Spain"
       },
       "isActive": true,
@@ -379,8 +379,8 @@
       "logo": "logos/87.png",
       "logoDark": "logos/87-dark.png",
       "venue": {
-        "name": "Campo de Fútbol Municipal La Planchada",
-        "city": "Astillero",
+        "name": "El Sardineros",
+        "city": "Santander",
         "country": "Spain"
       },
       "isActive": true,
@@ -468,7 +468,11 @@
       "alternateColor": "#FEBE10",
       "logo": "logos/86.png",
       "logoDark": "logos/86-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Santiago Bernabéu",
+        "city": "Madrid",
+        "country": "Spain"
+      },
       "isActive": true,
       "record": {
         "wins": 5,
