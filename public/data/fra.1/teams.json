@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-05T01:48:18.891Z",
+  "updateTime": "2026-10-08T02:42:46.630Z",
   "league": "fra.1",
   "season": "2026",
   "count": 18,
@@ -17,7 +17,11 @@
       "alternateColor": "#FFFFFF",
       "logo": "logos/172.png",
       "logoDark": "logos/172-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Stade de l'Abbé-Deschamps",
+        "city": "Auxerre",
+        "country": "France"
+      },
       "isActive": true,
       "record": {
         "wins": 2,
@@ -73,7 +77,11 @@
       "alternateColor": "#FFFFFF",
       "logo": "logos/174.png",
       "logoDark": "logos/174-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Stade Louis II",
+        "city": "Monaco",
+        "country": "France"
+      },
       "isActive": true,
       "record": {
         "wins": 4,
@@ -129,7 +137,11 @@
       "alternateColor": "#ededed",
       "logo": "logos/3236.png",
       "logoDark": "logos/3236-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Stade Océane",
+        "city": "Le Havre",
+        "country": "France"
+      },
       "isActive": true,
       "record": {
         "wins": 0,
@@ -215,7 +227,11 @@
       "alternateColor": "#e2d3d7",
       "logo": "logos/166.png",
       "logoDark": "logos/166-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Decathlon Arena - Stade Pierre-Mauroy",
+        "city": "Lille",
+        "country": "France"
+      },
       "isActive": true,
       "record": {
         "wins": 3,
@@ -241,7 +257,11 @@
       "alternateColor": "#1a1a1a",
       "logo": "logos/273.png",
       "logoDark": "logos/273-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Stade du Moustoir - Yves Allainmat",
+        "city": "Lorient",
+        "country": "France"
+      },
       "isActive": true,
       "record": {
         "wins": 1,
@@ -358,7 +378,7 @@
       "logo": "logos/6851.png",
       "logoDark": "logos/6851-dark.png",
       "venue": {
-        "name": "Centre d’entrainement Paris FC",
+        "name": "Stade Jean Bouin",
         "city": "Paris",
         "country": "France"
       },
@@ -388,9 +408,9 @@
       "logo": "logos/160.png",
       "logoDark": "logos/160-dark.png",
       "venue": {
-        "name": "Ullevi Stadium",
-        "city": "Gothenburg",
-        "country": "Sweden"
+        "name": "Parc des Princes",
+        "city": "Paris",
+        "country": "France"
       },
       "isActive": true,
       "record": {
@@ -477,7 +497,11 @@
       "alternateColor": "#ffff00",
       "logo": "logos/179.png",
       "logoDark": "logos/179-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Stadium Municipal de Toulouse",
+        "city": "Toulouse",
+        "country": "France"
+      },
       "isActive": true,
       "record": {
         "wins": 1,

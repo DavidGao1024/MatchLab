@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-05T01:37:58.631Z",
+  "updateTime": "2026-10-08T02:33:12.876Z",
   "league": "ita.1",
   "season": "2026",
   "count": 20,
@@ -283,7 +283,11 @@
       "alternateColor": "#000000",
       "logo": "logos/110.png",
       "logoDark": "logos/110-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "San Siro",
+        "city": "Milano",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 4,
@@ -336,8 +340,8 @@
       "logo": "logos/112.png",
       "logoDark": "logos/112-dark.png",
       "venue": {
-        "name": "Stadio Mirko Fersini",
-        "city": "Formello",
+        "name": "Olimpico",
+        "city": "Roma",
         "country": "Italy"
       },
       "isActive": true,
@@ -365,7 +369,11 @@
       "alternateColor": "#FFD700",
       "logo": "logos/113.png",
       "logoDark": "logos/113-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Via Del Mare",
+        "city": "Lecce",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 2,
@@ -418,8 +426,8 @@
       "logo": "logos/114.png",
       "logoDark": "logos/114-dark.png",
       "venue": {
-        "name": "Stadio Teofilo Patini",
-        "city": "Castel di Sangro",
+        "name": "Stadio Diego Armando Maradona",
+        "city": "Napoli",
         "country": "Italy"
       },
       "isActive": true,
