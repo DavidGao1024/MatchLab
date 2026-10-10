@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-08T02:33:12.876Z",
+  "updateTime": "2026-10-10T02:10:14.005Z",
   "league": "ita.1",
   "season": "2026",
   "count": 20,
@@ -18,9 +18,9 @@
       "logo": "logos/103.png",
       "logoDark": "logos/103-dark.png",
       "venue": {
-        "name": "Optus Stadium",
-        "city": "Perth",
-        "country": "Australia"
+        "name": "San Siro",
+        "city": "Milano",
+        "country": "Italy"
       },
       "isActive": true,
       "record": {
@@ -107,7 +107,11 @@
       "alternateColor": "#ffffff",
       "logo": "logos/107.png",
       "logoDark": "logos/107-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Renato Dall'Ara",
+        "city": "Bologna",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 0,
@@ -194,8 +198,8 @@
       "logo": "logos/109.png",
       "logoDark": "logos/109-dark.png",
       "venue": {
-        "name": "Stadio Curva Fiesole - Viola Park",
-        "city": "Bagno a Ripoli",
+        "name": "Stadio Artemio Franchi",
+        "city": "Firenze",
         "country": "Italy"
       },
       "isActive": true,
@@ -313,7 +317,11 @@
       "alternateColor": "#FFFFFF",
       "logo": "logos/111.png",
       "logoDark": "logos/111-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Allianz Stadium",
+        "city": "Torino",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 3,
@@ -399,7 +407,11 @@
       "alternateColor": "#ffffff",
       "logo": "logos/4007.png",
       "logoDark": "logos/4007-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "U-Power Stadium",
+        "city": "Monza",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 1,
@@ -455,7 +467,11 @@
       "alternateColor": "#0056A0",
       "logo": "logos/115.png",
       "logoDark": "logos/115-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Ennio Tardini",
+        "city": "Parma",
+        "country": "Italy"
+      },
       "isActive": true,
       "record": {
         "wins": 1,

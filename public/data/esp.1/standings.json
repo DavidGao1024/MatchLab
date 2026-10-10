@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-08T02:51:10.156Z",
+  "updateTime": "2026-10-10T02:27:13.954Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 69,
+  "matchesCounted": 70,
   "count": 20,
   "standings": [
     {
@@ -138,6 +138,19 @@
     },
     {
       "rank": 11,
+      "teamId": 88,
+      "team": "Espanyol",
+      "played": 8,
+      "won": 2,
+      "drawn": 2,
+      "lost": 4,
+      "goalsFor": 11,
+      "goalsAgainst": 11,
+      "goalDiff": 0,
+      "points": 8
+    },
+    {
+      "rank": 12,
       "teamId": 2922,
       "team": "Getafe",
       "played": 7,
@@ -150,7 +163,7 @@
       "points": 8
     },
     {
-      "rank": 12,
+      "rank": 13,
       "teamId": 101,
       "team": "Rayo Vallecano",
       "played": 7,
@@ -163,7 +176,7 @@
       "points": 8
     },
     {
-      "rank": 13,
+      "rank": 14,
       "teamId": 97,
       "team": "Osasuna",
       "played": 7,
@@ -176,7 +189,7 @@
       "points": 8
     },
     {
-      "rank": 14,
+      "rank": 15,
       "teamId": 85,
       "team": "Celta Vigo",
       "played": 7,
@@ -186,19 +199,6 @@
       "goalsFor": 8,
       "goalsAgainst": 6,
       "goalDiff": 2,
-      "points": 7
-    },
-    {
-      "rank": 15,
-      "teamId": 88,
-      "team": "Espanyol",
-      "played": 7,
-      "won": 2,
-      "drawn": 1,
-      "lost": 4,
-      "goalsFor": 10,
-      "goalsAgainst": 10,
-      "goalDiff": 0,
       "points": 7
     },
     {
@@ -242,6 +242,19 @@
     },
     {
       "rank": 19,
+      "teamId": 99,
+      "team": "Málaga",
+      "played": 8,
+      "won": 0,
+      "drawn": 4,
+      "lost": 4,
+      "goalsFor": 4,
+      "goalsAgainst": 13,
+      "goalDiff": -9,
+      "points": 4
+    },
+    {
+      "rank": 20,
       "teamId": 94,
       "team": "Valencia",
       "played": 7,
@@ -252,19 +265,6 @@
       "goalsAgainst": 13,
       "goalDiff": -9,
       "points": 4
-    },
-    {
-      "rank": 20,
-      "teamId": 99,
-      "team": "Málaga",
-      "played": 7,
-      "won": 0,
-      "drawn": 3,
-      "lost": 4,
-      "goalsFor": 3,
-      "goalsAgainst": 12,
-      "goalDiff": -9,
-      "points": 3
     }
   ]
 }

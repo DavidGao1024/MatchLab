@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-08T02:51:16.074Z",
+  "updateTime": "2026-10-10T02:27:18.283Z",
   "league": "ger.1",
   "month": "2026-10",
   "count": 34,
@@ -9,16 +9,17 @@
       "eventId": "401884781",
       "date": "2026-10-09T18:30Z",
       "name": "Werder Bremen at Borussia Dortmund",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
       "venue": "Signal Iduna Park",
       "home": {
         "id": 124,
         "name": "Borussia Dortmund",
         "abbreviation": "DOR",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       },
       "away": {
@@ -26,7 +27,7 @@
         "name": "Werder Bremen",
         "abbreviation": "SVW",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       }
     },

@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-08T02:51:26.697Z",
+  "updateTime": "2026-10-10T02:27:23.465Z",
   "league": "fra.1",
   "season": "2026",
-  "matchesCounted": 45,
+  "matchesCounted": 46,
   "count": 18,
   "standings": [
     {
@@ -23,13 +23,13 @@
       "rank": 2,
       "teamId": 167,
       "team": "Lyon",
-      "played": 5,
+      "played": 6,
       "won": 3,
       "drawn": 2,
-      "lost": 0,
-      "goalsFor": 10,
-      "goalsAgainst": 2,
-      "goalDiff": 8,
+      "lost": 1,
+      "goalsFor": 11,
+      "goalsAgainst": 4,
+      "goalDiff": 7,
       "points": 11
     },
     {
@@ -86,6 +86,19 @@
     },
     {
       "rank": 7,
+      "teamId": 175,
+      "team": "Lens",
+      "played": 6,
+      "won": 2,
+      "drawn": 1,
+      "lost": 3,
+      "goalsFor": 11,
+      "goalsAgainst": 10,
+      "goalDiff": 1,
+      "points": 7
+    },
+    {
+      "rank": 8,
       "teamId": 7868,
       "team": "Angers",
       "played": 5,
@@ -98,7 +111,7 @@
       "points": 7
     },
     {
-      "rank": 8,
+      "rank": 9,
       "teamId": 180,
       "team": "Strasbourg",
       "played": 5,
@@ -111,7 +124,7 @@
       "points": 7
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 2697,
       "team": "Le Mans",
       "played": 5,
@@ -124,7 +137,7 @@
       "points": 6
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 172,
       "team": "AJ Auxerre",
       "played": 5,
@@ -137,7 +150,7 @@
       "points": 6
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 6997,
       "team": "Brest",
       "played": 5,
@@ -150,7 +163,7 @@
       "points": 5
     },
     {
-      "rank": 12,
+      "rank": 13,
       "teamId": 273,
       "team": "Lorient",
       "played": 5,
@@ -163,7 +176,7 @@
       "points": 5
     },
     {
-      "rank": 13,
+      "rank": 14,
       "teamId": 179,
       "team": "Toulouse",
       "played": 5,
@@ -176,7 +189,7 @@
       "points": 5
     },
     {
-      "rank": 14,
+      "rank": 15,
       "teamId": 2502,
       "team": "Nice",
       "played": 5,
@@ -187,19 +200,6 @@
       "goalsAgainst": 6,
       "goalDiff": -3,
       "points": 5
-    },
-    {
-      "rank": 15,
-      "teamId": 175,
-      "team": "Lens",
-      "played": 5,
-      "won": 1,
-      "drawn": 1,
-      "lost": 3,
-      "goalsFor": 9,
-      "goalsAgainst": 9,
-      "goalDiff": 0,
-      "points": 4
     },
     {
       "rank": 16,

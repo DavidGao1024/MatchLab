@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-08T02:38:20.850Z",
+  "updateTime": "2026-10-10T02:15:13.760Z",
   "league": "ger.1",
   "season": "2026",
   "count": 18,
@@ -115,14 +115,14 @@
       "isActive": true,
       "record": {
         "wins": 4,
-        "draws": 0,
+        "draws": 1,
         "losses": 0,
-        "played": 4,
-        "points": 12,
+        "played": 5,
+        "points": 13,
         "goalDiff": 7,
-        "goalsFor": 9,
-        "goalsAgainst": 2,
-        "summary": "4-0-0"
+        "goalsFor": 11,
+        "goalsAgainst": 4,
+        "summary": "4-1-0"
       }
     },
     {
@@ -193,7 +193,11 @@
       "alternateColor": "#03915c",
       "logo": "logos/3841.png",
       "logoDark": "logos/3841-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "WWK Arena",
+        "city": "Augsburg",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 2,
@@ -279,7 +283,11 @@
       "alternateColor": "#000055",
       "logo": "logos/2950.png",
       "logoDark": "logos/2950-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "MEWA ARENA",
+        "city": "Mainz",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 2,
@@ -455,7 +463,11 @@
       "alternateColor": "#000055",
       "logo": "logos/7911.png",
       "logoDark": "logos/7911-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "PreZero Arena",
+        "city": "Sinsheim",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 1,
@@ -515,14 +527,14 @@
       "isActive": true,
       "record": {
         "wins": 2,
-        "draws": 1,
+        "draws": 2,
         "losses": 1,
-        "played": 4,
-        "points": 7,
+        "played": 5,
+        "points": 8,
         "goalDiff": 0,
-        "goalsFor": 8,
-        "goalsAgainst": 8,
-        "summary": "2-1-1"
+        "goalsFor": 10,
+        "goalsAgainst": 10,
+        "summary": "2-2-1"
       }
     }
   ]

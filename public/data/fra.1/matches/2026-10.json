@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-08T02:51:21.637Z",
+  "updateTime": "2026-10-10T02:27:21.478Z",
   "league": "fra.1",
   "month": "2026-10",
   "count": 33,
@@ -9,24 +9,25 @@
       "eventId": "401876447",
       "date": "2026-10-09T18:45Z",
       "name": "Lyon at Lens",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Stade Bollaert-Delelis",
       "home": {
         "id": 175,
         "name": "Lens",
         "abbreviation": "RCL",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 167,
         "name": "Lyon",
         "abbreviation": "LYON",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
