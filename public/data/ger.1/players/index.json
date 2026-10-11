@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-10T02:19:06.647Z",
+  "updateTime": "2026-10-11T01:45:29.780Z",
   "league": "ger.1",
   "season": "2026",
   "count": 524,
@@ -17,6 +17,19 @@
       "flag": "flags/fr.png",
       "jersey": 17,
       "team": "Bayern Munich"
+    },
+    {
+      "id": 170257,
+      "name": "Niclas Füllkrug",
+      "teamId": 137,
+      "position": "F",
+      "age": 33,
+      "goals": 4,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 10,
+      "team": "Werder Bremen"
     },
     {
       "id": 212330,
@@ -136,19 +149,6 @@
       "team": "FC Augsburg"
     },
     {
-      "id": 170257,
-      "name": "Niclas Füllkrug",
-      "teamId": 137,
-      "position": "F",
-      "age": 33,
-      "goals": 3,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 10,
-      "team": "Werder Bremen"
-    },
-    {
       "id": 338854,
       "name": "Adam Daghim",
       "teamId": 7911,
@@ -233,7 +233,7 @@
       "position": "F",
       "age": 24,
       "goals": 2,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
       "jersey": 21,
@@ -244,7 +244,7 @@
       "name": "Felix Nmecha",
       "teamId": 124,
       "position": "M",
-      "age": 25,
+      "age": 26,
       "goals": 2,
       "assists": 0,
       "citizenship": "Germany",
@@ -285,7 +285,7 @@
       "position": "F",
       "age": 28,
       "goals": 2,
-      "assists": 3,
+      "assists": 4,
       "citizenship": "Austria",
       "flag": "flags/at.png",
       "jersey": 17,
@@ -498,6 +498,19 @@
       "flag": "flags/us.png",
       "jersey": 39,
       "team": "SV Elversberg"
+    },
+    {
+      "id": 310709,
+      "name": "Daniel Svensson",
+      "teamId": 124,
+      "position": "D",
+      "age": 24,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Sweden",
+      "flag": "flags/se.png",
+      "jersey": 24,
+      "team": "Borussia Dortmund"
     },
     {
       "id": 154603,
@@ -799,6 +812,19 @@
       "team": "FC Cologne"
     },
     {
+      "id": 261363,
+      "name": "Ludovit Reis",
+      "teamId": 137,
+      "position": "M",
+      "age": 26,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Netherlands",
+      "flag": "flags/nl.png",
+      "jersey": 15,
+      "team": "Werder Bremen"
+    },
+    {
       "id": 257390,
       "name": "Luis Díaz",
       "teamId": 132,
@@ -901,6 +927,19 @@
       "flag": "flags/de.png",
       "jersey": 8,
       "team": "Werder Bremen"
+    },
+    {
+      "id": 286828,
+      "name": "Nico Schlotterbeck",
+      "teamId": 124,
+      "position": "D",
+      "age": 26,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 4,
+      "team": "Borussia Dortmund"
     },
     {
       "id": 284835,
@@ -1800,17 +1839,17 @@
       "team": "Hamburg SV"
     },
     {
-      "id": 310709,
-      "name": "Daniel Svensson",
-      "teamId": 124,
-      "position": "D",
-      "age": 24,
+      "id": 3100710,
+      "name": "Darwin Kaan Soylu",
+      "teamId": 137,
+      "position": "M",
+      "age": null,
       "goals": 0,
       "assists": 0,
-      "citizenship": "Sweden",
-      "flag": "flags/se.png",
-      "jersey": 24,
-      "team": "Borussia Dortmund"
+      "citizenship": null,
+      "flag": null,
+      "jersey": 34,
+      "team": "Werder Bremen"
     },
     {
       "id": 405585,
@@ -2625,7 +2664,7 @@
       "position": "M",
       "age": 27,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Netherlands",
       "flag": "flags/nl.png",
       "jersey": 25,
@@ -3386,19 +3425,6 @@
       "team": "Bayer Leverkusen"
     },
     {
-      "id": 261363,
-      "name": "Ludovit Reis",
-      "teamId": 137,
-      "position": "M",
-      "age": 26,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Netherlands",
-      "flag": "flags/nl.png",
-      "jersey": 15,
-      "team": "Werder Bremen"
-    },
-    {
       "id": 399219,
       "name": "Luka Djuric",
       "teamId": 3307,
@@ -4079,7 +4105,7 @@
       "name": "Nediljko Labrovic",
       "teamId": 3841,
       "position": "G",
-      "age": 26,
+      "age": 27,
       "goals": 0,
       "assists": 0,
       "citizenship": "Croatia",
@@ -4112,19 +4138,6 @@
       "flag": "flags/th.png",
       "jersey": 2,
       "team": "SV Elversberg"
-    },
-    {
-      "id": 286828,
-      "name": "Nico Schlotterbeck",
-      "teamId": 124,
-      "position": "D",
-      "age": 26,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 4,
-      "team": "Borussia Dortmund"
     },
     {
       "id": 321226,
@@ -4222,7 +4235,7 @@
       "name": "Nikola Katic",
       "teamId": 133,
       "position": "D",
-      "age": 29,
+      "age": 30,
       "goals": 0,
       "assists": 0,
       "citizenship": "Bosnia and Herzegovina",
@@ -4393,7 +4406,7 @@
       "position": "D",
       "age": 23,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Poland",
       "flag": "flags/pl.png",
       "jersey": 3,
@@ -5544,19 +5557,6 @@
       "team": "VfB Stuttgart"
     },
     {
-      "id": 3100710,
-      "name": "Darwin Kaan Soylu",
-      "teamId": 137,
-      "position": "M",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "jersey": 34,
-      "team": "Werder Bremen"
-    },
-    {
       "id": 220060,
       "name": "Dawid Kownacki",
       "teamId": 137,
@@ -6328,7 +6328,7 @@
       "name": "Maycon Cardozo",
       "teamId": 132,
       "position": "M",
-      "age": 17,
+      "age": 18,
       "goals": null,
       "assists": null,
       "citizenship": "Brazil",
@@ -6484,7 +6484,7 @@
       "name": "Paul Nebel",
       "teamId": 2950,
       "position": "M",
-      "age": 23,
+      "age": 24,
       "goals": null,
       "assists": null,
       "citizenship": "Germany",

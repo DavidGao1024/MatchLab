@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-10T02:14:54.993Z",
+  "updateTime": "2026-10-11T01:41:01.944Z",
   "league": "ita.1",
   "season": "2026",
-  "count": 615,
+  "count": 618,
   "players": [
     {
       "id": 259481,
@@ -3949,7 +3949,7 @@
       "name": "Juan David Arizala",
       "teamId": 118,
       "position": "M",
-      "age": 20,
+      "age": 21,
       "goals": 0,
       "assists": 0,
       "citizenship": "Colombia",
@@ -5807,12 +5807,12 @@
       "id": 194718,
       "name": "Ousmane Diallo",
       "teamId": 115,
-      "position": "D",
-      "age": 26,
+      "position": "F",
+      "age": 19,
       "goals": 0,
       "assists": 0,
-      "citizenship": "Mali",
-      "flag": "flags/ml.png",
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
       "jersey": 7,
       "team": "Parma"
     },
@@ -7377,6 +7377,19 @@
       "team": "Internazionale"
     },
     {
+      "id": 422950,
+      "name": "Djibril Diallo",
+      "teamId": 115,
+      "position": "D",
+      "age": 17,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 70,
+      "team": "Parma"
+    },
+    {
       "id": 333925,
       "name": "Edoardo Pieragnolo",
       "teamId": 3997,
@@ -7492,6 +7505,19 @@
       "flag": "flags/it.png",
       "jersey": null,
       "team": "Parma"
+    },
+    {
+      "id": 383999,
+      "name": "Gaël Lafont",
+      "teamId": 3263,
+      "position": "M",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": null,
+      "team": "Genoa"
     },
     {
       "id": 423015,
@@ -7780,6 +7806,19 @@
       "team": "Internazionale"
     },
     {
+      "id": 3145436,
+      "name": "Milton Agustín Pereyra",
+      "teamId": 114,
+      "position": "F",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 36,
+      "team": "Napoli"
+    },
+    {
       "id": 3111599,
       "name": "Mohamed Malang Touré",
       "teamId": 17530,
@@ -7893,7 +7932,7 @@
       "assists": null,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
-      "jersey": null,
+      "jersey": 21,
       "team": "Genoa"
     },
     {

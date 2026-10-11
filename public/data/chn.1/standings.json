@@ -1,22 +1,22 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-10T02:27:26.794Z",
+  "updateTime": "2026-10-11T01:54:25.176Z",
   "league": "chn.1",
   "season": "2026",
-  "matchesCounted": 211,
+  "matchesCounted": 213,
   "count": 16,
   "standings": [
     {
       "rank": 1,
       "teamId": 21355,
       "team": "Chengdu Rongcheng",
-      "played": 26,
+      "played": 27,
       "won": 15,
       "drawn": 7,
-      "lost": 4,
+      "lost": 5,
       "goalsFor": 51,
-      "goalsAgainst": 30,
-      "goalDiff": 21,
+      "goalsAgainst": 31,
+      "goalDiff": 20,
       "points": 52
     },
     {
@@ -48,19 +48,6 @@
     },
     {
       "rank": 4,
-      "teamId": 22536,
-      "team": "Yunnan Yukun",
-      "played": 26,
-      "won": 11,
-      "drawn": 5,
-      "lost": 10,
-      "goalsFor": 54,
-      "goalsAgainst": 51,
-      "goalDiff": 3,
-      "points": 38
-    },
-    {
-      "rank": 5,
       "teamId": 22198,
       "team": "Qingdao West Coast",
       "played": 26,
@@ -70,6 +57,19 @@
       "goalsFor": 31,
       "goalsAgainst": 32,
       "goalDiff": -1,
+      "points": 38
+    },
+    {
+      "rank": 5,
+      "teamId": 22536,
+      "team": "Yunnan Yukun",
+      "played": 27,
+      "won": 11,
+      "drawn": 5,
+      "lost": 11,
+      "goalsFor": 55,
+      "goalsAgainst": 58,
+      "goalDiff": -3,
       "points": 38
     },
     {
@@ -104,14 +104,14 @@
       "rank": 8,
       "teamId": 977,
       "team": "Shanghai Shenhua",
-      "played": 26,
-      "won": 12,
+      "played": 27,
+      "won": 13,
       "drawn": 5,
       "lost": 9,
-      "goalsFor": 52,
-      "goalsAgainst": 46,
-      "goalDiff": 6,
-      "points": 31,
+      "goalsFor": 59,
+      "goalsAgainst": 47,
+      "goalDiff": 12,
+      "points": 34,
       "deduction": 10
     },
     {
@@ -156,6 +156,20 @@
     },
     {
       "rank": 12,
+      "teamId": 8239,
+      "team": "Tianjin Jinmen Tiger",
+      "played": 27,
+      "won": 10,
+      "drawn": 8,
+      "lost": 9,
+      "goalsFor": 37,
+      "goalsAgainst": 32,
+      "goalDiff": 5,
+      "points": 28,
+      "deduction": 10
+    },
+    {
+      "rank": 13,
       "teamId": 8240,
       "team": "Henan",
       "played": 27,
@@ -167,20 +181,6 @@
       "goalDiff": -2,
       "points": 28,
       "deduction": 6
-    },
-    {
-      "rank": 13,
-      "teamId": 8239,
-      "team": "Tianjin Jinmen Tiger",
-      "played": 26,
-      "won": 9,
-      "drawn": 8,
-      "lost": 9,
-      "goalsFor": 36,
-      "goalsAgainst": 32,
-      "goalDiff": 4,
-      "points": 25,
-      "deduction": 10
     },
     {
       "rank": 14,

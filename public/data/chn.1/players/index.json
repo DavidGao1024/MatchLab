@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-10T02:27:06.860Z",
+  "updateTime": "2026-10-11T01:54:03.824Z",
   "league": "chn.1",
   "season": "2026",
   "count": 501,
@@ -77,7 +77,7 @@
       "position": "F",
       "age": 32,
       "goals": 13,
-      "assists": 4,
+      "assists": 5,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
       "jersey": 9,
@@ -97,13 +97,26 @@
       "team": "Yunnan Yukun"
     },
     {
+      "id": 222356,
+      "name": "Wesley",
+      "teamId": 22199,
+      "position": "F",
+      "age": 29,
+      "goals": 12,
+      "assists": 5,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 7,
+      "team": "Shenzhen Xinpengcheng"
+    },
+    {
       "id": 233666,
       "name": "Zhang Yuning",
       "teamId": 2052,
       "position": "F",
       "age": 29,
       "goals": 12,
-      "assists": 6,
+      "assists": 7,
       "citizenship": "China PR",
       "flag": "flags/cn.png",
       "jersey": 9,
@@ -128,12 +141,25 @@
       "teamId": 18203,
       "position": "M",
       "age": 31,
-      "goals": 10,
+      "goals": 11,
       "assists": 12,
       "citizenship": "Romania",
       "flag": "flags/ro.png",
       "jersey": 28,
       "team": "Zhejiang Professional FC"
+    },
+    {
+      "id": 208131,
+      "name": "Fábio Abreu",
+      "teamId": 2052,
+      "position": "F",
+      "age": 33,
+      "goals": 11,
+      "assists": 6,
+      "citizenship": "Angola",
+      "flag": "flags/ao.png",
+      "jersey": 29,
+      "team": "BEIJING GUOAN"
     },
     {
       "id": 301780,
@@ -149,17 +175,17 @@
       "team": "Liaoning Tieren"
     },
     {
-      "id": 222356,
-      "name": "Wesley",
-      "teamId": 22199,
-      "position": "F",
-      "age": 29,
-      "goals": 10,
-      "assists": 5,
+      "id": 180446,
+      "name": "Bruno Nazario",
+      "teamId": 8240,
+      "position": "M",
+      "age": 31,
+      "goals": 9,
+      "assists": 6,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
-      "jersey": 7,
-      "team": "Shenzhen Xinpengcheng"
+      "jersey": 10,
+      "team": "Henan"
     },
     {
       "id": 251462,
@@ -175,19 +201,6 @@
       "team": "Qingdao West Coast"
     },
     {
-      "id": 208131,
-      "name": "Fábio Abreu",
-      "teamId": 2052,
-      "position": "F",
-      "age": 33,
-      "goals": 9,
-      "assists": 6,
-      "citizenship": "Angola",
-      "flag": "flags/ao.png",
-      "jersey": 29,
-      "team": "BEIJING GUOAN"
-    },
-    {
       "id": 251743,
       "name": "Guy Mbenza",
       "teamId": 131705,
@@ -199,6 +212,19 @@
       "flag": "flags/cg.png",
       "jersey": 9,
       "team": "Liaoning Tieren"
+    },
+    {
+      "id": 302013,
+      "name": "Leonardo",
+      "teamId": 15515,
+      "position": "F",
+      "age": 29,
+      "goals": 9,
+      "assists": 2,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 45,
+      "team": "Shanghai Port"
     },
     {
       "id": 237548,
@@ -266,19 +292,6 @@
       "team": "Shandong Taishan"
     },
     {
-      "id": 180446,
-      "name": "Bruno Nazario",
-      "teamId": 8240,
-      "position": "M",
-      "age": 31,
-      "goals": 8,
-      "assists": 6,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 10,
-      "team": "Henan"
-    },
-    {
       "id": 238895,
       "name": "Bruno Xadas",
       "teamId": 8239,
@@ -316,19 +329,6 @@
       "flag": "flags/br.png",
       "jersey": 7,
       "team": "Wuhan Three Towns"
-    },
-    {
-      "id": 302013,
-      "name": "Leonardo",
-      "teamId": 15515,
-      "position": "F",
-      "age": 29,
-      "goals": 8,
-      "assists": 2,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 45,
-      "team": "Shanghai Port"
     },
     {
       "id": 247046,
@@ -426,7 +426,7 @@
       "name": "Guilherme Schettine",
       "teamId": 8239,
       "position": "F",
-      "age": 30,
+      "age": 31,
       "goals": 6,
       "assists": 2,
       "citizenship": "Brazil",
@@ -446,6 +446,19 @@
       "flag": "flags/ma.png",
       "jersey": 6,
       "team": "Qingdao Hainiu"
+    },
+    {
+      "id": 201497,
+      "name": "Serginho",
+      "teamId": 2052,
+      "position": "M",
+      "age": 31,
+      "goals": 6,
+      "assists": 7,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 7,
+      "team": "BEIJING GUOAN"
     },
     {
       "id": 236393,
@@ -563,19 +576,6 @@
       "flag": "flags/sn.png",
       "jersey": 29,
       "team": "Shanghai Shenhua"
-    },
-    {
-      "id": 201497,
-      "name": "Serginho",
-      "teamId": 2052,
-      "position": "M",
-      "age": 31,
-      "goals": 5,
-      "assists": 7,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 7,
-      "team": "BEIJING GUOAN"
     },
     {
       "id": 286535,
@@ -719,6 +719,19 @@
       "flag": "flags/cn.png",
       "jersey": 11,
       "team": "BEIJING GUOAN"
+    },
+    {
+      "id": 322690,
+      "name": "Prince Obeng Ampem",
+      "teamId": 15515,
+      "position": "F",
+      "age": 28,
+      "goals": 4,
+      "assists": 2,
+      "citizenship": "Ghana",
+      "flag": "flags/gh.png",
+      "jersey": 17,
+      "team": "Shanghai Port"
     },
     {
       "id": 156780,
@@ -877,6 +890,19 @@
       "team": "Shanghai Shenhua"
     },
     {
+      "id": 302243,
+      "name": "Liu Zhurun",
+      "teamId": 15515,
+      "position": "F",
+      "age": 25,
+      "goals": 3,
+      "assists": 4,
+      "citizenship": "China PR",
+      "flag": "flags/cn.png",
+      "jersey": 33,
+      "team": "Shanghai Port"
+    },
+    {
       "id": 197614,
       "name": "Lucas Varone",
       "teamId": 8240,
@@ -927,19 +953,6 @@
       "flag": "flags/cn.png",
       "jersey": 25,
       "team": "Qingdao West Coast"
-    },
-    {
-      "id": 322690,
-      "name": "Prince Obeng Ampem",
-      "teamId": 15515,
-      "position": "F",
-      "age": 28,
-      "goals": 3,
-      "assists": 2,
-      "citizenship": "Ghana",
-      "flag": "flags/gh.png",
-      "jersey": 17,
-      "team": "Shanghai Port"
     },
     {
       "id": 400280,
@@ -1065,7 +1078,7 @@
       "position": "F",
       "age": 26,
       "goals": 2,
-      "assists": 2,
+      "assists": 3,
       "citizenship": "Netherlands",
       "flag": "flags/nl.png",
       "jersey": 31,
@@ -1195,7 +1208,7 @@
       "position": "D",
       "age": 22,
       "goals": 2,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Togo",
       "flag": "flags/tg.png",
       "jersey": 8,
@@ -1213,19 +1226,6 @@
       "flag": "flags/cn.png",
       "jersey": 11,
       "team": "Shandong Taishan"
-    },
-    {
-      "id": 302243,
-      "name": "Liu Zhurun",
-      "teamId": 15515,
-      "position": "F",
-      "age": 25,
-      "goals": 2,
-      "assists": 4,
-      "citizenship": "China PR",
-      "flag": "flags/cn.png",
-      "jersey": 33,
-      "team": "Shanghai Port"
     },
     {
       "id": 341603,
@@ -1637,7 +1637,7 @@
       "position": "D",
       "age": 31,
       "goals": 1,
-      "assists": 3,
+      "assists": 4,
       "citizenship": "China PR",
       "flag": "flags/cn.png",
       "jersey": 32,
@@ -1759,6 +1759,19 @@
       "flag": "flags/rs.png",
       "jersey": 26,
       "team": "Qingdao Hainiu"
+    },
+    {
+      "id": 250375,
+      "name": "Óscar Melendo",
+      "teamId": 15515,
+      "position": "M",
+      "age": 29,
+      "goals": 1,
+      "assists": 5,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 21,
+      "team": "Shanghai Port"
     },
     {
       "id": 82922,
@@ -2032,6 +2045,19 @@
       "flag": "flags/cn.png",
       "jersey": 18,
       "team": "Yunnan Yukun"
+    },
+    {
+      "id": 271116,
+      "name": "Yin Congyao",
+      "teamId": 8240,
+      "position": "F",
+      "age": 29,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "China PR",
+      "flag": "flags/cn.png",
+      "jersey": 24,
+      "team": "Henan"
     },
     {
       "id": 308158,
@@ -4016,7 +4042,7 @@
       "position": "F",
       "age": 25,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": null,
       "flag": null,
       "jersey": 11,
@@ -4073,19 +4099,6 @@
       "flag": "flags/cn.png",
       "jersey": 33,
       "team": "BEIJING GUOAN"
-    },
-    {
-      "id": 250375,
-      "name": "Óscar Melendo",
-      "teamId": 15515,
-      "position": "M",
-      "age": 29,
-      "goals": 0,
-      "assists": 4,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 21,
-      "team": "Shanghai Port"
     },
     {
       "id": 419706,
@@ -4151,6 +4164,19 @@
       "flag": "flags/br.png",
       "jersey": 8,
       "team": "Henan"
+    },
+    {
+      "id": 3107051,
+      "name": "Peicheng Zhao",
+      "teamId": 18203,
+      "position": "G",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "China PR",
+      "flag": "flags/cn.png",
+      "jersey": 24,
+      "team": "Zhejiang Professional FC"
     },
     {
       "id": 302695,
@@ -4549,7 +4575,7 @@
       "position": "D",
       "age": 35,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "China PR",
       "flag": "flags/cn.png",
       "jersey": 16,
@@ -5089,6 +5115,19 @@
       "team": "Tianjin Jinmen Tiger"
     },
     {
+      "id": 3098689,
+      "name": "Xinyang Yi",
+      "teamId": 21910,
+      "position": "D",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "China PR",
+      "flag": "flags/cn.png",
+      "jersey": 52,
+      "team": "Qingdao Hainiu"
+    },
+    {
       "id": 304102,
       "name": "Xu Haofeng",
       "teamId": 21506,
@@ -5373,19 +5412,6 @@
       "flag": "flags/cn.png",
       "jersey": 25,
       "team": "Chongqing Tonglianglong"
-    },
-    {
-      "id": 271116,
-      "name": "Yin Congyao",
-      "teamId": 8240,
-      "position": "F",
-      "age": 29,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "China PR",
-      "flag": "flags/cn.png",
-      "jersey": 24,
-      "team": "Henan"
     },
     {
       "id": 340025,
@@ -6194,19 +6220,6 @@
       "team": "Shandong Taishan"
     },
     {
-      "id": 3107051,
-      "name": "Peicheng Zhao",
-      "teamId": 18203,
-      "position": "G",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": "China PR",
-      "flag": "flags/cn.png",
-      "jersey": 24,
-      "team": "Zhejiang Professional FC"
-    },
-    {
       "id": 407537,
       "name": "Peng Haochen",
       "teamId": 21355,
@@ -6348,19 +6361,6 @@
       "flag": "flags/cn.png",
       "jersey": 59,
       "team": "Chengdu Rongcheng"
-    },
-    {
-      "id": 3098689,
-      "name": "Xinyang Yi",
-      "teamId": 21910,
-      "position": "D",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": "China PR",
-      "flag": "flags/cn.png",
-      "jersey": 52,
-      "team": "Qingdao Hainiu"
     },
     {
       "id": 271099,

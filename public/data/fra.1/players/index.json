@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-10T02:23:10.339Z",
+  "updateTime": "2026-10-11T01:49:52.252Z",
   "league": "fra.1",
   "season": "2026",
-  "count": 513,
+  "count": 514,
   "players": [
     {
       "id": 259743,
@@ -142,7 +142,7 @@
       "position": "F",
       "age": 33,
       "goals": 3,
-      "assists": 2,
+      "assists": 4,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 10,
@@ -212,6 +212,19 @@
       "flag": "flags/ma.png",
       "jersey": 80,
       "team": "Strasbourg"
+    },
+    {
+      "id": 233199,
+      "name": "Matthieu Udol",
+      "teamId": 175,
+      "position": "D",
+      "age": 30,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 14,
+      "team": "Lens"
     },
     {
       "id": 231366,
@@ -526,6 +539,19 @@
       "team": "Lyon"
     },
     {
+      "id": 215687,
+      "name": "Florian Sotoca",
+      "teamId": 175,
+      "position": "F",
+      "age": 35,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 7,
+      "team": "Lens"
+    },
+    {
       "id": 290230,
       "name": "Giovanni Reyna",
       "teamId": 180,
@@ -695,6 +721,19 @@
       "team": "Marseille"
     },
     {
+      "id": 408345,
+      "name": "Khalis Merah",
+      "teamId": 167,
+      "position": "M",
+      "age": 19,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 18,
+      "team": "Lyon"
+    },
+    {
       "id": 335320,
       "name": "Lamine Sy",
       "teamId": 172,
@@ -771,19 +810,6 @@
       "flag": null,
       "jersey": 42,
       "team": "Lorient"
-    },
-    {
-      "id": 233199,
-      "name": "Matthieu Udol",
-      "teamId": 175,
-      "position": "D",
-      "age": 30,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 14,
-      "team": "Lens"
     },
     {
       "id": 315384,
@@ -2359,19 +2385,6 @@
       "team": "Strasbourg"
     },
     {
-      "id": 215687,
-      "name": "Florian Sotoca",
-      "teamId": 175,
-      "position": "F",
-      "age": 35,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 7,
-      "team": "Lens"
-    },
-    {
       "id": 282643,
       "name": "Folarin Balogun",
       "teamId": 174,
@@ -2870,7 +2883,7 @@
       "name": "Issa Soumaré",
       "teamId": 169,
       "position": "F",
-      "age": 25,
+      "age": 26,
       "goals": 0,
       "assists": 1,
       "citizenship": "Senegal",
@@ -3293,19 +3306,6 @@
       "flag": "flags/de.png",
       "jersey": 1,
       "team": "Paris FC"
-    },
-    {
-      "id": 408345,
-      "name": "Khalis Merah",
-      "teamId": 167,
-      "position": "M",
-      "age": 19,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 18,
-      "team": "Lyon"
     },
     {
       "id": 274745,
@@ -4400,6 +4400,19 @@
       "team": "Brest"
     },
     {
+      "id": 403110,
+      "name": "Noham Kamara",
+      "teamId": 167,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 85,
+      "team": "Lyon"
+    },
+    {
       "id": 368592,
       "name": "Nosa Obaretin",
       "teamId": 273,
@@ -4996,6 +5009,19 @@
       "flag": "flags/ma.png",
       "jersey": 29,
       "team": "Strasbourg"
+    },
+    {
+      "id": 329484,
+      "name": "Samson Baidoo",
+      "teamId": 175,
+      "position": "D",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Austria",
+      "flag": "flags/at.png",
+      "jersey": 6,
+      "team": "Lens"
     },
     {
       "id": 223117,
@@ -6327,8 +6353,8 @@
       "id": 345529,
       "name": "Mohamed Bamba",
       "teamId": 273,
-      "position": "M",
-      "age": 22,
+      "position": "F",
+      "age": 24,
       "goals": null,
       "assists": null,
       "citizenship": "France",
@@ -6441,19 +6467,6 @@
       "team": "Brest"
     },
     {
-      "id": 403110,
-      "name": "Noham Kamara",
-      "teamId": 167,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 85,
-      "team": "Lyon"
-    },
-    {
       "id": 403419,
       "name": "Quentin Ndjantou",
       "teamId": 160,
@@ -6532,17 +6545,17 @@
       "team": "Nice"
     },
     {
-      "id": 329484,
-      "name": "Samson Baidoo",
-      "teamId": 175,
-      "position": "D",
-      "age": 22,
+      "id": 3145437,
+      "name": "Samir Said Haribou",
+      "teamId": 273,
+      "position": "F",
+      "age": null,
       "goals": null,
       "assists": null,
-      "citizenship": "Austria",
-      "flag": "flags/at.png",
-      "jersey": 6,
-      "team": "Lens"
+      "citizenship": null,
+      "flag": null,
+      "jersey": 31,
+      "team": "Lorient"
     },
     {
       "id": 388328,

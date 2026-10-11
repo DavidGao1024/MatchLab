@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-10T02:27:26.215Z",
+  "updateTime": "2026-10-11T01:54:24.594Z",
   "league": "chn.1",
   "month": "2026-10",
   "count": 24,
@@ -87,9 +87,10 @@
       "eventId": "401861473",
       "date": "2026-10-10T11:35Z",
       "name": "Tianjin Jinmen Tiger at Chengdu Rongcheng",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Chengdu Phoenix Mountain Sports Park",
       "home": {
         "id": 21355,
@@ -104,32 +105,33 @@
         "name": "Tianjin Jinmen Tiger",
         "abbreviation": "TIG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8239.png",
-        "score": 0,
-        "winner": null
+        "score": 1,
+        "winner": true
       }
     },
     {
       "eventId": "401861474",
       "date": "2026-10-10T11:35Z",
       "name": "Yunnan Yukun at Shanghai Shenhua",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+2'",
+      "period": 2,
       "venue": "Shanghai Stadium",
       "home": {
         "id": 977,
         "name": "Shanghai Shenhua",
         "abbreviation": "SHE",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/977.png",
-        "score": 0,
-        "winner": null
+        "score": 7,
+        "winner": true
       },
       "away": {
         "id": 22536,
         "name": "Yunnan Yukun",
         "abbreviation": "YUN",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/22536.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
