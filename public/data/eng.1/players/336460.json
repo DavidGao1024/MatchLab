@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-24T01:02:52.809Z",
+  "updateTime": "2026-10-12T02:01:14.932Z",
   "league": "eng.1",
   "season": "2026",
   "id": 336460,
@@ -20,7 +20,7 @@
   "flag": "flags/se.png",
   "stats": {
     "defensive": {
-      "blockedShots": 1,
+      "blockedShots": 2,
       "effectiveClearance": 2,
       "effectiveTackles": 0,
       "inneffectiveTackles": 1,
@@ -32,7 +32,7 @@
       "recoveries": 3
     },
     "general": {
-      "appearances": 3,
+      "appearances": 4,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -41,16 +41,16 @@
       "draws": 0,
       "foulsCommitted": 0,
       "foulsSuffered": 0,
-      "goalDifference": -1,
+      "goalDifference": -3,
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 37,
+      "minutes": 40,
       "ownGoals": 0,
-      "passPct": 0.72,
+      "passPct": 0.741,
       "redCards": 0,
       "starts": 0,
-      "subIns": 3,
+      "subIns": 4,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -63,12 +63,12 @@
       "duelsWon": 1,
       "duels": 2,
       "secondYellow": 0,
-      "touches": 31
+      "touches": 34
     },
     "goalKeeping": {
       "cleanSheet": 0,
       "crossesCaught": 0,
-      "goalsConceded": 1,
+      "goalsConceded": 3,
       "partialCleenSheet": 0,
       "penaltyKickConceded": 0,
       "penaltyKickSavePct": 0,
@@ -87,10 +87,10 @@
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 0,
-      "accuratePasses": 18,
+      "accuratePasses": 20,
       "accurateThroughBalls": 0,
-      "attemptsInBox": 6,
-      "attemptsOutBox": 4,
+      "attemptsInBox": 7,
+      "attemptsOutBox": 5,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -110,7 +110,7 @@
       "penaltyKickPct": 0,
       "penaltyKickShots": 0,
       "penaltyKicksMissed": 0,
-      "rightFootedShots": 1,
+      "rightFootedShots": 2,
       "secondAssists": 0,
       "shootOutGoals": 0,
       "shootOutMisses": 0,
@@ -118,20 +118,20 @@
       "shotAssists": 0,
       "shotPct": 0,
       "shotsHeaded": 0,
-      "shotsOffTarget": 1,
+      "shotsOffTarget": 2,
       "shotsOnPost": 0,
       "shotsOnTarget": 0,
       "throughBallPct": 0,
       "totalCrosses": 0,
       "totalGoals": 0,
       "totalLongBalls": 0,
-      "totalPasses": 25,
-      "totalShots": 1,
+      "totalPasses": 27,
+      "totalShots": 2,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 0,
       "progressiveCarries": 1,
-      "touchesInOppBox": 3
+      "touchesInOppBox": 4
     }
   }
 }

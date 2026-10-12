@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-24T01:04:03.552Z",
+  "updateTime": "2026-10-12T02:02:30.329Z",
   "league": "eng.1",
   "season": "2026",
   "categories": [
@@ -20,6 +20,24 @@
         },
         {
           "rank": 2,
+          "value": 5,
+          "displayValue": "Matches: 5, Goals: 5",
+          "athleteId": 284960,
+          "athleteName": "João Pedro",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
+          "rank": 3,
+          "value": 4,
+          "displayValue": "Matches: 6, Goals: 4",
+          "athleteId": 265653,
+          "athleteName": "Morgan Rogers",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
+          "rank": 4,
           "value": 4,
           "displayValue": "Matches: 5, Goals: 4",
           "athleteId": 235662,
@@ -28,54 +46,36 @@
           "teamName": "Liverpool"
         },
         {
-          "rank": 3,
+          "rank": 5,
           "value": 3,
-          "displayValue": "Matches: 5, Goals: 3",
+          "displayValue": "Matches: 6, Goals: 3",
+          "athleteId": 271170,
+          "athleteName": "Bryan Mbeumo",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 6,
+          "value": 3,
+          "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 132659,
           "athleteName": "Pascal Gross",
           "teamId": 331,
           "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 4,
+          "rank": 7,
           "value": 3,
-          "displayValue": "Matches: 5, Goals: 3",
+          "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 124091,
           "athleteName": "Bruno Fernandes",
           "teamId": 360,
           "teamName": "Manchester United"
         },
         {
-          "rank": 5,
-          "value": 3,
-          "displayValue": "Matches: 5, Goals: 3",
-          "athleteId": 310958,
-          "athleteName": "Kevin Schade",
-          "teamId": 337,
-          "teamName": "Brentford"
-        },
-        {
-          "rank": 6,
-          "value": 3,
-          "displayValue": "Matches: 5, Goals: 3",
-          "athleteId": 265653,
-          "athleteName": "Morgan Rogers",
-          "teamId": 363,
-          "teamName": "Chelsea"
-        },
-        {
-          "rank": 7,
-          "value": 3,
-          "displayValue": "Matches: 5, Goals: 3",
-          "athleteId": 243364,
-          "athleteName": "Marcus Tavernier",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
-        },
-        {
           "rank": 8,
           "value": 3,
-          "displayValue": "Matches: 5, Goals: 3",
+          "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 280555,
           "athleteName": "Bukayo Saka",
           "teamId": 359,
@@ -84,6 +84,24 @@
         {
           "rank": 9,
           "value": 3,
+          "displayValue": "Matches: 6, Goals: 3",
+          "athleteId": 310958,
+          "athleteName": "Kevin Schade",
+          "teamId": 337,
+          "teamName": "Brentford"
+        },
+        {
+          "rank": 10,
+          "value": 3,
+          "displayValue": "Matches: 6, Goals: 3",
+          "athleteId": 243364,
+          "athleteName": "Marcus Tavernier",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 11,
+          "value": 3,
           "displayValue": "Matches: 5, Goals: 3",
           "athleteId": 282229,
           "athleteName": "Brian Brobbey",
@@ -91,7 +109,7 @@
           "teamName": "Sunderland"
         },
         {
-          "rank": 10,
+          "rank": 12,
           "value": 3,
           "displayValue": "Matches: 5, Goals: 3",
           "athleteId": 298008,
@@ -100,139 +118,121 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 11,
-          "value": 3,
-          "displayValue": "Matches: 4, Goals: 3",
-          "athleteId": 284960,
-          "athleteName": "João Pedro",
-          "teamId": 363,
-          "teamName": "Chelsea"
-        },
-        {
-          "rank": 12,
+          "rank": 13,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 283086,
           "athleteName": "Leif Davis",
           "teamId": 373,
           "teamName": "Ipswich Town"
         },
         {
-          "rank": 13,
-          "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
-          "athleteId": 273292,
-          "athleteName": "Antoine Semenyo",
-          "teamId": 382,
-          "teamName": "Manchester City"
-        },
-        {
           "rank": 14,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
-          "athleteId": 271170,
-          "athleteName": "Bryan Mbeumo",
-          "teamId": 360,
-          "teamName": "Manchester United"
-        },
-        {
-          "rank": 15,
-          "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 225564,
           "athleteName": "Vitaly Janelt",
           "teamId": 337,
           "teamName": "Brentford"
         },
         {
-          "rank": 16,
+          "rank": 15,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 296395,
           "athleteName": "Cole Palmer",
           "teamId": 363,
           "teamName": "Chelsea"
         },
         {
-          "rank": 17,
+          "rank": 16,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
-          "athleteId": 231182,
-          "athleteName": "Kai Havertz",
-          "teamId": 359,
-          "teamName": "Arsenal"
-        },
-        {
-          "rank": 18,
-          "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
-          "athleteId": 409541,
-          "athleteName": "Josh King",
-          "teamId": 370,
-          "teamName": "Fulham"
-        },
-        {
-          "rank": 19,
-          "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
-          "athleteId": 300853,
-          "athleteName": "Tyrick Mitchell",
-          "teamId": 384,
-          "teamName": "Crystal Palace"
-        },
-        {
-          "rank": 20,
-          "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 197717,
           "athleteName": "Dominic Calvert-Lewin",
           "teamId": 357,
           "teamName": "Leeds United"
         },
         {
-          "rank": 21,
+          "rank": 17,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
-          "athleteId": 301166,
-          "athleteName": "Thierno Barry",
-          "teamId": 368,
-          "teamName": "Everton"
+          "displayValue": "Matches: 6, Goals: 2",
+          "athleteId": 409541,
+          "athleteName": "Josh King",
+          "teamId": 370,
+          "teamName": "Fulham"
         },
         {
-          "rank": 22,
+          "rank": 18,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
-          "athleteId": 320417,
-          "athleteName": "Mohamed Belloumi",
-          "teamId": 306,
-          "teamName": "Hull City"
+          "displayValue": "Matches: 6, Goals: 2",
+          "athleteId": 231182,
+          "athleteName": "Kai Havertz",
+          "teamId": 359,
+          "teamName": "Arsenal"
         },
         {
-          "rank": 23,
+          "rank": 19,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
+          "athleteId": 301327,
+          "athleteName": "Maxim De Cuyper",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 20,
+          "value": 2,
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 203669,
           "athleteName": "Martin Ødegaard",
           "teamId": 359,
           "teamName": "Arsenal"
         },
         {
-          "rank": 24,
+          "rank": 21,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 243408,
           "athleteName": "Jayden Bogle",
           "teamId": 357,
           "teamName": "Leeds United"
         },
         {
-          "rank": 25,
+          "rank": 22,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 387655,
           "athleteName": "Charalambos Kostoulas",
           "teamId": 331,
           "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 23,
+          "value": 2,
+          "displayValue": "Matches: 6, Goals: 2",
+          "athleteId": 322654,
+          "athleteName": "Emersonn",
+          "teamId": 373,
+          "teamName": "Ipswich Town"
+        },
+        {
+          "rank": 24,
+          "value": 2,
+          "displayValue": "Matches: 6, Goals: 2",
+          "athleteId": 359097,
+          "athleteName": "Malick Yalcouyé",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 25,
+          "value": 2,
+          "displayValue": "Matches: 5, Goals: 2",
+          "athleteId": 273292,
+          "athleteName": "Antoine Semenyo",
+          "teamId": 382,
+          "teamName": "Manchester City"
         }
       ]
     },
@@ -243,6 +243,42 @@
       "entries": [
         {
           "rank": 1,
+          "value": 4,
+          "displayValue": "Matches: 6, Assists: 4",
+          "athleteId": 132659,
+          "athleteName": "Pascal Gross",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 2,
+          "value": 3,
+          "displayValue": "Matches: 6, Assists: 3",
+          "athleteId": 296395,
+          "athleteName": "Cole Palmer",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
+          "rank": 3,
+          "value": 3,
+          "displayValue": "Matches: 6, Assists: 3",
+          "athleteId": 102368,
+          "athleteName": "Evanilson",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 4,
+          "value": 3,
+          "displayValue": "Matches: 6, Assists: 3",
+          "athleteId": 238262,
+          "athleteName": "Declan Rice",
+          "teamId": 359,
+          "teamName": "Arsenal"
+        },
+        {
+          "rank": 5,
           "value": 3,
           "displayValue": "Matches: 5, Assists: 3",
           "athleteId": 273292,
@@ -251,16 +287,7 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 2,
-          "value": 3,
-          "displayValue": "Matches: 5, Assists: 3",
-          "athleteId": 132659,
-          "athleteName": "Pascal Gross",
-          "teamId": 331,
-          "teamName": "Brighton & Hove Albion"
-        },
-        {
-          "rank": 3,
+          "rank": 6,
           "value": 3,
           "displayValue": "Matches: 5, Assists: 3",
           "athleteId": 219362,
@@ -269,16 +296,16 @@
           "teamName": "Crystal Palace"
         },
         {
-          "rank": 4,
+          "rank": 7,
           "value": 3,
           "displayValue": "Matches: 5, Assists: 3",
-          "athleteId": 102368,
-          "athleteName": "Evanilson",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
+          "athleteId": 284960,
+          "athleteName": "João Pedro",
+          "teamId": 363,
+          "teamName": "Chelsea"
         },
         {
-          "rank": 5,
+          "rank": 8,
           "value": 3,
           "displayValue": "Matches: 5, Assists: 3",
           "athleteId": 249524,
@@ -287,45 +314,18 @@
           "teamName": "Liverpool"
         },
         {
-          "rank": 6,
-          "value": 3,
-          "displayValue": "Matches: 4, Assists: 3",
-          "athleteId": 284960,
-          "athleteName": "João Pedro",
-          "teamId": 363,
-          "teamName": "Chelsea"
-        },
-        {
-          "rank": 7,
-          "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
-          "athleteId": 243396,
-          "athleteName": "Morgan Gibbs-White",
-          "teamId": 393,
-          "teamName": "Nottingham Forest"
-        },
-        {
-          "rank": 8,
-          "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
-          "athleteId": 243386,
-          "athleteName": "Harvey Barnes",
-          "teamId": 361,
-          "teamName": "Newcastle United"
-        },
-        {
           "rank": 9,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
-          "athleteId": 296395,
-          "athleteName": "Cole Palmer",
-          "teamId": 363,
-          "teamName": "Chelsea"
+          "displayValue": "Matches: 6, Assists: 2",
+          "athleteId": 162843,
+          "athleteName": "John McGinn",
+          "teamId": 362,
+          "teamName": "Aston Villa"
         },
         {
           "rank": 10,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
+          "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 192278,
           "athleteName": "Diego Gómez",
           "teamId": 331,
@@ -334,25 +334,25 @@
         {
           "rank": 11,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
-          "athleteId": 162843,
-          "athleteName": "John McGinn",
-          "teamId": 362,
-          "teamName": "Aston Villa"
+          "displayValue": "Matches: 6, Assists: 2",
+          "athleteId": 298329,
+          "athleteName": "Riccardo Calafiori",
+          "teamId": 359,
+          "teamName": "Arsenal"
         },
         {
           "rank": 12,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
-          "athleteId": 299910,
-          "athleteName": "Josko Gvardiol",
-          "teamId": 382,
-          "teamName": "Manchester City"
+          "displayValue": "Matches: 6, Assists: 2",
+          "athleteId": 259902,
+          "athleteName": "Matheus Cunha",
+          "teamId": 360,
+          "teamName": "Manchester United"
         },
         {
           "rank": 13,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
+          "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 301327,
           "athleteName": "Maxim De Cuyper",
           "teamId": 331,
@@ -361,32 +361,41 @@
         {
           "rank": 14,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
-          "athleteId": 298329,
-          "athleteName": "Riccardo Calafiori",
-          "teamId": 359,
-          "teamName": "Arsenal"
-        },
-        {
-          "rank": 15,
-          "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
+          "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 20975,
           "athleteName": "Julio Enciso",
           "teamId": 373,
           "teamName": "Ipswich Town"
         },
         {
+          "rank": 15,
+          "value": 2,
+          "displayValue": "Matches: 5, Assists: 2",
+          "athleteId": 243396,
+          "athleteName": "Morgan Gibbs-White",
+          "teamId": 393,
+          "teamName": "Nottingham Forest"
+        },
+        {
           "rank": 16,
           "value": 2,
           "displayValue": "Matches: 5, Assists: 2",
-          "athleteId": 238262,
-          "athleteName": "Declan Rice",
-          "teamId": 359,
-          "teamName": "Arsenal"
+          "athleteId": 243386,
+          "athleteName": "Harvey Barnes",
+          "teamId": 361,
+          "teamName": "Newcastle United"
         },
         {
           "rank": 17,
+          "value": 2,
+          "displayValue": "Matches: 5, Assists: 2",
+          "athleteId": 299910,
+          "athleteName": "Josko Gvardiol",
+          "teamId": 382,
+          "teamName": "Manchester City"
+        },
+        {
+          "rank": 18,
           "value": 2,
           "displayValue": "Matches: 5, Assists: 2",
           "athleteId": 320417,
@@ -395,7 +404,16 @@
           "teamName": "Hull City"
         },
         {
-          "rank": 18,
+          "rank": 19,
+          "value": 2,
+          "displayValue": "Matches: 5, Assists: 2",
+          "athleteId": 241077,
+          "athleteName": "Ben White",
+          "teamId": 359,
+          "teamName": "Arsenal"
+        },
+        {
+          "rank": 20,
           "value": 2,
           "displayValue": "Matches: 5, Assists: 2",
           "athleteId": 298008,
@@ -404,7 +422,7 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 19,
+          "rank": 21,
           "value": 2,
           "displayValue": "Matches: 4, Assists: 2",
           "athleteId": 353951,
@@ -413,7 +431,7 @@
           "teamName": "Chelsea"
         },
         {
-          "rank": 20,
+          "rank": 22,
           "value": 2,
           "displayValue": "Matches: 4, Assists: 2",
           "athleteId": 250787,
@@ -422,49 +440,31 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 21,
-          "value": 1,
-          "displayValue": "Matches: 5, Assists: 1",
-          "athleteId": 318390,
-          "athleteName": "Tarik Muharemovic",
-          "teamId": 357,
-          "teamName": "Leeds United"
-        },
-        {
-          "rank": 22,
-          "value": 1,
-          "displayValue": "Matches: 5, Assists: 1",
-          "athleteId": 307069,
-          "athleteName": "Carl Rushworth",
-          "teamId": 388,
-          "teamName": "Coventry City"
-        },
-        {
           "rank": 23,
-          "value": 1,
-          "displayValue": "Matches: 5, Assists: 1",
-          "athleteId": 283086,
-          "athleteName": "Leif Davis",
-          "teamId": 373,
-          "teamName": "Ipswich Town"
+          "value": 2,
+          "displayValue": "Matches: 3, Assists: 2",
+          "athleteId": 386992,
+          "athleteName": "Johan Manzambi",
+          "teamId": 362,
+          "teamName": "Aston Villa"
         },
         {
           "rank": 24,
-          "value": 1,
-          "displayValue": "Matches: 5, Assists: 1",
-          "athleteId": 265907,
-          "athleteName": "Marc Guéhi",
-          "teamId": 382,
-          "teamName": "Manchester City"
+          "value": 2,
+          "displayValue": "Matches: 3, Assists: 2",
+          "athleteId": 278061,
+          "athleteName": "Georginio Rutter",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
         },
         {
           "rank": 25,
           "value": 1,
-          "displayValue": "Matches: 5, Assists: 1",
-          "athleteId": 155226,
-          "athleteName": "James Tarkowski",
-          "teamId": 368,
-          "teamName": "Everton"
+          "displayValue": "Matches: 6, Assists: 1",
+          "athleteId": 318390,
+          "athleteName": "Tarik Muharemovic",
+          "teamId": 357,
+          "teamName": "Leeds United"
         }
       ]
     },
@@ -484,6 +484,24 @@
         },
         {
           "rank": 2,
+          "value": 5,
+          "displayValue": "5",
+          "athleteId": 284960,
+          "athleteName": "João Pedro",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
+          "rank": 3,
+          "value": 4,
+          "displayValue": "4",
+          "athleteId": 265653,
+          "athleteName": "Morgan Rogers",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
+          "rank": 4,
           "value": 4,
           "displayValue": "4",
           "athleteId": 235662,
@@ -492,7 +510,16 @@
           "teamName": "Liverpool"
         },
         {
-          "rank": 3,
+          "rank": 5,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 271170,
+          "athleteName": "Bryan Mbeumo",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 6,
           "value": 3,
           "displayValue": "3",
           "athleteId": 132659,
@@ -501,40 +528,13 @@
           "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 4,
+          "rank": 7,
           "value": 3,
           "displayValue": "3",
           "athleteId": 124091,
           "athleteName": "Bruno Fernandes",
           "teamId": 360,
           "teamName": "Manchester United"
-        },
-        {
-          "rank": 5,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 310958,
-          "athleteName": "Kevin Schade",
-          "teamId": 337,
-          "teamName": "Brentford"
-        },
-        {
-          "rank": 6,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 265653,
-          "athleteName": "Morgan Rogers",
-          "teamId": 363,
-          "teamName": "Chelsea"
-        },
-        {
-          "rank": 7,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 243364,
-          "athleteName": "Marcus Tavernier",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
         },
         {
           "rank": 8,
@@ -549,13 +549,31 @@
           "rank": 9,
           "value": 3,
           "displayValue": "3",
+          "athleteId": 310958,
+          "athleteName": "Kevin Schade",
+          "teamId": 337,
+          "teamName": "Brentford"
+        },
+        {
+          "rank": 10,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 243364,
+          "athleteName": "Marcus Tavernier",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 11,
+          "value": 3,
+          "displayValue": "3",
           "athleteId": 282229,
           "athleteName": "Brian Brobbey",
           "teamId": 366,
           "teamName": "Sunderland"
         },
         {
-          "rank": 10,
+          "rank": 12,
           "value": 3,
           "displayValue": "3",
           "athleteId": 298008,
@@ -564,16 +582,7 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 11,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 284960,
-          "athleteName": "João Pedro",
-          "teamId": 363,
-          "teamName": "Chelsea"
-        },
-        {
-          "rank": 12,
+          "rank": 13,
           "value": 2,
           "displayValue": "2",
           "athleteId": 283086,
@@ -582,25 +591,7 @@
           "teamName": "Ipswich Town"
         },
         {
-          "rank": 13,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 273292,
-          "athleteName": "Antoine Semenyo",
-          "teamId": 382,
-          "teamName": "Manchester City"
-        },
-        {
           "rank": 14,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 271170,
-          "athleteName": "Bryan Mbeumo",
-          "teamId": 360,
-          "teamName": "Manchester United"
-        },
-        {
-          "rank": 15,
           "value": 2,
           "displayValue": "2",
           "athleteId": 225564,
@@ -609,7 +600,7 @@
           "teamName": "Brentford"
         },
         {
-          "rank": 16,
+          "rank": 15,
           "value": 2,
           "displayValue": "2",
           "athleteId": 296395,
@@ -618,34 +609,7 @@
           "teamName": "Chelsea"
         },
         {
-          "rank": 17,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 231182,
-          "athleteName": "Kai Havertz",
-          "teamId": 359,
-          "teamName": "Arsenal"
-        },
-        {
-          "rank": 18,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 409541,
-          "athleteName": "Josh King",
-          "teamId": 370,
-          "teamName": "Fulham"
-        },
-        {
-          "rank": 19,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 300853,
-          "athleteName": "Tyrick Mitchell",
-          "teamId": 384,
-          "teamName": "Crystal Palace"
-        },
-        {
-          "rank": 20,
+          "rank": 16,
           "value": 2,
           "displayValue": "2",
           "athleteId": 197717,
@@ -654,25 +618,34 @@
           "teamName": "Leeds United"
         },
         {
-          "rank": 21,
+          "rank": 17,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 301166,
-          "athleteName": "Thierno Barry",
-          "teamId": 368,
-          "teamName": "Everton"
+          "athleteId": 409541,
+          "athleteName": "Josh King",
+          "teamId": 370,
+          "teamName": "Fulham"
         },
         {
-          "rank": 22,
+          "rank": 18,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 320417,
-          "athleteName": "Mohamed Belloumi",
-          "teamId": 306,
-          "teamName": "Hull City"
+          "athleteId": 231182,
+          "athleteName": "Kai Havertz",
+          "teamId": 359,
+          "teamName": "Arsenal"
         },
         {
-          "rank": 23,
+          "rank": 19,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 301327,
+          "athleteName": "Maxim De Cuyper",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 20,
           "value": 2,
           "displayValue": "2",
           "athleteId": 203669,
@@ -681,7 +654,7 @@
           "teamName": "Arsenal"
         },
         {
-          "rank": 24,
+          "rank": 21,
           "value": 2,
           "displayValue": "2",
           "athleteId": 243408,
@@ -690,13 +663,40 @@
           "teamName": "Leeds United"
         },
         {
-          "rank": 25,
+          "rank": 22,
           "value": 2,
           "displayValue": "2",
           "athleteId": 387655,
           "athleteName": "Charalambos Kostoulas",
           "teamId": 331,
           "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 23,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 322654,
+          "athleteName": "Emersonn",
+          "teamId": 373,
+          "teamName": "Ipswich Town"
+        },
+        {
+          "rank": 24,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 359097,
+          "athleteName": "Malick Yalcouyé",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 25,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 273292,
+          "athleteName": "Antoine Semenyo",
+          "teamId": 382,
+          "teamName": "Manchester City"
         }
       ]
     },
@@ -707,33 +707,24 @@
       "entries": [
         {
           "rank": 1,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 273292,
-          "athleteName": "Antoine Semenyo",
-          "teamId": 382,
-          "teamName": "Manchester City"
-        },
-        {
-          "rank": 2,
-          "value": 3,
-          "displayValue": "3",
+          "value": 4,
+          "displayValue": "4",
           "athleteId": 132659,
           "athleteName": "Pascal Gross",
           "teamId": 331,
           "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 3,
+          "rank": 2,
           "value": 3,
           "displayValue": "3",
-          "athleteId": 219362,
-          "athleteName": "Daichi Kamada",
-          "teamId": 384,
-          "teamName": "Crystal Palace"
+          "athleteId": 296395,
+          "athleteName": "Cole Palmer",
+          "teamId": 363,
+          "teamName": "Chelsea"
         },
         {
-          "rank": 4,
+          "rank": 3,
           "value": 3,
           "displayValue": "3",
           "athleteId": 102368,
@@ -742,16 +733,34 @@
           "teamName": "AFC Bournemouth"
         },
         {
+          "rank": 4,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 238262,
+          "athleteName": "Declan Rice",
+          "teamId": 359,
+          "teamName": "Arsenal"
+        },
+        {
           "rank": 5,
           "value": 3,
           "displayValue": "3",
-          "athleteId": 249524,
-          "athleteName": "Cody Gakpo",
-          "teamId": 364,
-          "teamName": "Liverpool"
+          "athleteId": 273292,
+          "athleteName": "Antoine Semenyo",
+          "teamId": 382,
+          "teamName": "Manchester City"
         },
         {
           "rank": 6,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 219362,
+          "athleteName": "Daichi Kamada",
+          "teamId": 384,
+          "teamName": "Crystal Palace"
+        },
+        {
+          "rank": 7,
           "value": 3,
           "displayValue": "3",
           "athleteId": 284960,
@@ -760,31 +769,22 @@
           "teamName": "Chelsea"
         },
         {
-          "rank": 7,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 243396,
-          "athleteName": "Morgan Gibbs-White",
-          "teamId": 393,
-          "teamName": "Nottingham Forest"
-        },
-        {
           "rank": 8,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 243386,
-          "athleteName": "Harvey Barnes",
-          "teamId": 361,
-          "teamName": "Newcastle United"
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 249524,
+          "athleteName": "Cody Gakpo",
+          "teamId": 364,
+          "teamName": "Liverpool"
         },
         {
           "rank": 9,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 296395,
-          "athleteName": "Cole Palmer",
-          "teamId": 363,
-          "teamName": "Chelsea"
+          "athleteId": 162843,
+          "athleteName": "John McGinn",
+          "teamId": 362,
+          "teamName": "Aston Villa"
         },
         {
           "rank": 10,
@@ -799,19 +799,19 @@
           "rank": 11,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 162843,
-          "athleteName": "John McGinn",
-          "teamId": 362,
-          "teamName": "Aston Villa"
+          "athleteId": 298329,
+          "athleteName": "Riccardo Calafiori",
+          "teamId": 359,
+          "teamName": "Arsenal"
         },
         {
           "rank": 12,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 299910,
-          "athleteName": "Josko Gvardiol",
-          "teamId": 382,
-          "teamName": "Manchester City"
+          "athleteId": 259902,
+          "athleteName": "Matheus Cunha",
+          "teamId": 360,
+          "teamName": "Manchester United"
         },
         {
           "rank": 13,
@@ -826,31 +826,40 @@
           "rank": 14,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 298329,
-          "athleteName": "Riccardo Calafiori",
-          "teamId": 359,
-          "teamName": "Arsenal"
-        },
-        {
-          "rank": 15,
-          "value": 2,
-          "displayValue": "2",
           "athleteId": 20975,
           "athleteName": "Julio Enciso",
           "teamId": 373,
           "teamName": "Ipswich Town"
         },
         {
+          "rank": 15,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 243396,
+          "athleteName": "Morgan Gibbs-White",
+          "teamId": 393,
+          "teamName": "Nottingham Forest"
+        },
+        {
           "rank": 16,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 238262,
-          "athleteName": "Declan Rice",
-          "teamId": 359,
-          "teamName": "Arsenal"
+          "athleteId": 243386,
+          "athleteName": "Harvey Barnes",
+          "teamId": 361,
+          "teamName": "Newcastle United"
         },
         {
           "rank": 17,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 299910,
+          "athleteName": "Josko Gvardiol",
+          "teamId": 382,
+          "teamName": "Manchester City"
+        },
+        {
+          "rank": 18,
           "value": 2,
           "displayValue": "2",
           "athleteId": 320417,
@@ -859,7 +868,16 @@
           "teamName": "Hull City"
         },
         {
-          "rank": 18,
+          "rank": 19,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 241077,
+          "athleteName": "Ben White",
+          "teamId": 359,
+          "teamName": "Arsenal"
+        },
+        {
+          "rank": 20,
           "value": 2,
           "displayValue": "2",
           "athleteId": 298008,
@@ -868,7 +886,7 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 19,
+          "rank": 21,
           "value": 2,
           "displayValue": "2",
           "athleteId": 353951,
@@ -877,7 +895,7 @@
           "teamName": "Chelsea"
         },
         {
-          "rank": 20,
+          "rank": 22,
           "value": 2,
           "displayValue": "2",
           "athleteId": 250787,
@@ -886,49 +904,31 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 21,
+          "rank": 23,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 386992,
+          "athleteName": "Johan Manzambi",
+          "teamId": 362,
+          "teamName": "Aston Villa"
+        },
+        {
+          "rank": 24,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 278061,
+          "athleteName": "Georginio Rutter",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 25,
           "value": 1,
           "displayValue": "1",
           "athleteId": 318390,
           "athleteName": "Tarik Muharemovic",
           "teamId": 357,
           "teamName": "Leeds United"
-        },
-        {
-          "rank": 22,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 307069,
-          "athleteName": "Carl Rushworth",
-          "teamId": 388,
-          "teamName": "Coventry City"
-        },
-        {
-          "rank": 23,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 283086,
-          "athleteName": "Leif Davis",
-          "teamId": 373,
-          "teamName": "Ipswich Town"
-        },
-        {
-          "rank": 24,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 265907,
-          "athleteName": "Marc Guéhi",
-          "teamId": 382,
-          "teamName": "Manchester City"
-        },
-        {
-          "rank": 25,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 155226,
-          "athleteName": "James Tarkowski",
-          "teamId": 368,
-          "teamName": "Everton"
         }
       ]
     },
@@ -941,22 +941,31 @@
           "rank": 1,
           "value": 10,
           "displayValue": "10",
-          "athleteId": 253989,
-          "athleteName": "Erling Haaland",
-          "teamId": 382,
-          "teamName": "Manchester City"
-        },
-        {
-          "rank": 2,
-          "value": 9,
-          "displayValue": "9",
           "athleteId": 280555,
           "athleteName": "Bukayo Saka",
           "teamId": 359,
           "teamName": "Arsenal"
         },
         {
+          "rank": 2,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 253989,
+          "athleteName": "Erling Haaland",
+          "teamId": 382,
+          "teamName": "Manchester City"
+        },
+        {
           "rank": 3,
+          "value": 8,
+          "displayValue": "8",
+          "athleteId": 271170,
+          "athleteName": "Bryan Mbeumo",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 4,
           "value": 8,
           "displayValue": "8",
           "athleteId": 243364,
@@ -965,7 +974,7 @@
           "teamName": "AFC Bournemouth"
         },
         {
-          "rank": 4,
+          "rank": 5,
           "value": 7,
           "displayValue": "7",
           "athleteId": 409541,
@@ -974,7 +983,25 @@
           "teamName": "Fulham"
         },
         {
-          "rank": 5,
+          "rank": 6,
+          "value": 7,
+          "displayValue": "7",
+          "athleteId": 231182,
+          "athleteName": "Kai Havertz",
+          "teamId": 359,
+          "teamName": "Arsenal"
+        },
+        {
+          "rank": 7,
+          "value": 7,
+          "displayValue": "7",
+          "athleteId": 310958,
+          "athleteName": "Kevin Schade",
+          "teamId": 337,
+          "teamName": "Brentford"
+        },
+        {
+          "rank": 8,
           "value": 7,
           "displayValue": "7",
           "athleteId": 235662,
@@ -983,34 +1010,25 @@
           "teamName": "Liverpool"
         },
         {
-          "rank": 6,
-          "value": 6,
-          "displayValue": "6",
-          "athleteId": 271170,
-          "athleteName": "Bryan Mbeumo",
-          "teamId": 360,
-          "teamName": "Manchester United"
-        },
-        {
-          "rank": 7,
-          "value": 6,
-          "displayValue": "6",
-          "athleteId": 310958,
-          "athleteName": "Kevin Schade",
-          "teamId": 337,
-          "teamName": "Brentford"
-        },
-        {
-          "rank": 8,
-          "value": 6,
-          "displayValue": "6",
-          "athleteId": 231182,
-          "athleteName": "Kai Havertz",
-          "teamId": 359,
-          "teamName": "Arsenal"
-        },
-        {
           "rank": 9,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 192278,
+          "athleteName": "Diego Gómez",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 10,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 265653,
+          "athleteName": "Morgan Rogers",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
+          "rank": 11,
           "value": 6,
           "displayValue": "6",
           "athleteId": 197717,
@@ -1019,7 +1037,16 @@
           "teamName": "Leeds United"
         },
         {
-          "rank": 10,
+          "rank": 12,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 284960,
+          "athleteName": "João Pedro",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
+          "rank": 13,
           "value": 6,
           "displayValue": "6",
           "athleteId": 245916,
@@ -1028,7 +1055,7 @@
           "teamName": "AFC Bournemouth"
         },
         {
-          "rank": 11,
+          "rank": 14,
           "value": 5,
           "displayValue": "5",
           "athleteId": 124091,
@@ -1037,16 +1064,7 @@
           "teamName": "Manchester United"
         },
         {
-          "rank": 12,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 252389,
-          "athleteName": "Kiernan Dewsbury-Hall",
-          "teamId": 368,
-          "teamName": "Everton"
-        },
-        {
-          "rank": 13,
+          "rank": 15,
           "value": 5,
           "displayValue": "5",
           "athleteId": 296395,
@@ -1055,52 +1073,43 @@
           "teamName": "Chelsea"
         },
         {
-          "rank": 14,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 257206,
-          "athleteName": "Dominik Szoboszlai",
-          "teamId": 364,
-          "teamName": "Liverpool"
-        },
-        {
-          "rank": 15,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 265653,
-          "athleteName": "Morgan Rogers",
-          "teamId": 363,
-          "teamName": "Chelsea"
-        },
-        {
           "rank": 16,
           "value": 5,
           "displayValue": "5",
-          "athleteId": 301166,
-          "athleteName": "Thierno Barry",
-          "teamId": 368,
-          "teamName": "Everton"
+          "athleteId": 357719,
+          "athleteName": "Rayan",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
         },
         {
           "rank": 17,
           "value": 5,
           "displayValue": "5",
-          "athleteId": 282229,
-          "athleteName": "Brian Brobbey",
-          "teamId": 366,
-          "teamName": "Sunderland"
+          "athleteId": 20975,
+          "athleteName": "Julio Enciso",
+          "teamId": 373,
+          "teamName": "Ipswich Town"
         },
         {
           "rank": 18,
           "value": 5,
           "displayValue": "5",
-          "athleteId": 320417,
-          "athleteName": "Mohamed Belloumi",
-          "teamId": 306,
-          "teamName": "Hull City"
+          "athleteId": 243408,
+          "athleteName": "Jayden Bogle",
+          "teamId": 357,
+          "teamName": "Leeds United"
         },
         {
           "rank": 19,
+          "value": 5,
+          "displayValue": "5",
+          "athleteId": 256115,
+          "athleteName": "Pedro Neto",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
+          "rank": 20,
           "value": 5,
           "displayValue": "5",
           "athleteId": 387655,
@@ -1109,58 +1118,49 @@
           "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 20,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 273292,
-          "athleteName": "Antoine Semenyo",
-          "teamId": 382,
-          "teamName": "Manchester City"
-        },
-        {
           "rank": 21,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 243386,
-          "athleteName": "Harvey Barnes",
-          "teamId": 361,
-          "teamName": "Newcastle United"
+          "value": 5,
+          "displayValue": "5",
+          "athleteId": 252389,
+          "athleteName": "Kiernan Dewsbury-Hall",
+          "teamId": 368,
+          "teamName": "Everton"
         },
         {
           "rank": 22,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 301894,
-          "athleteName": "Igor Thiago",
-          "teamId": 337,
-          "teamName": "Brentford"
+          "value": 5,
+          "displayValue": "5",
+          "athleteId": 257206,
+          "athleteName": "Dominik Szoboszlai",
+          "teamId": 364,
+          "teamName": "Liverpool"
         },
         {
           "rank": 23,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 357719,
-          "athleteName": "Rayan",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
+          "value": 5,
+          "displayValue": "5",
+          "athleteId": 301166,
+          "athleteName": "Thierno Barry",
+          "teamId": 368,
+          "teamName": "Everton"
         },
         {
           "rank": 24,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 192278,
-          "athleteName": "Diego Gómez",
-          "teamId": 331,
-          "teamName": "Brighton & Hove Albion"
+          "value": 5,
+          "displayValue": "5",
+          "athleteId": 282229,
+          "athleteName": "Brian Brobbey",
+          "teamId": 366,
+          "teamName": "Sunderland"
         },
         {
           "rank": 25,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 20975,
-          "athleteName": "Julio Enciso",
-          "teamId": 373,
-          "teamName": "Ipswich Town"
+          "value": 5,
+          "displayValue": "5",
+          "athleteId": 320417,
+          "athleteName": "Mohamed Belloumi",
+          "teamId": 306,
+          "teamName": "Hull City"
         }
       ]
     },
@@ -1171,8 +1171,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 3,
-          "displayValue": "3",
+          "value": 4,
+          "displayValue": "4",
           "athleteId": 225564,
           "athleteName": "Vitaly Janelt",
           "teamId": 337,
@@ -1182,10 +1182,10 @@
           "rank": 2,
           "value": 3,
           "displayValue": "3",
-          "athleteId": 122268,
-          "athleteName": "Adam Smith",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
+          "athleteId": 301894,
+          "athleteName": "Igor Thiago",
+          "teamId": 337,
+          "teamName": "Brentford"
         },
         {
           "rank": 3,
@@ -1200,13 +1200,40 @@
           "rank": 4,
           "value": 3,
           "displayValue": "3",
+          "athleteId": 122268,
+          "athleteName": "Adam Smith",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 5,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 243364,
+          "athleteName": "Marcus Tavernier",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 6,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 234698,
+          "athleteName": "Matty Cash",
+          "teamId": 362,
+          "teamName": "Aston Villa"
+        },
+        {
+          "rank": 7,
+          "value": 3,
+          "displayValue": "3",
           "athleteId": 172836,
           "athleteName": "Jacob Murphy",
           "teamId": 361,
           "teamName": "Newcastle United"
         },
         {
-          "rank": 5,
+          "rank": 8,
           "value": 3,
           "displayValue": "3",
           "athleteId": 153613,
@@ -1215,7 +1242,7 @@
           "teamName": "Hull City"
         },
         {
-          "rank": 6,
+          "rank": 9,
           "value": 2,
           "displayValue": "2",
           "athleteId": 346588,
@@ -1224,16 +1251,25 @@
           "teamName": "AFC Bournemouth"
         },
         {
-          "rank": 7,
+          "rank": 10,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 282645,
-          "athleteName": "Danny Ballard",
-          "teamId": 366,
-          "teamName": "Sunderland"
+          "athleteId": 282583,
+          "athleteName": "Jan Paul van Hecke",
+          "teamId": 367,
+          "teamName": "Tottenham Hotspur"
         },
         {
-          "rank": 8,
+          "rank": 11,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 263110,
+          "athleteName": "Calvin Bassey",
+          "teamId": 370,
+          "teamName": "Fulham"
+        },
+        {
+          "rank": 12,
           "value": 2,
           "displayValue": "2",
           "athleteId": 236322,
@@ -1242,7 +1278,16 @@
           "teamName": "Arsenal"
         },
         {
-          "rank": 9,
+          "rank": 13,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 206173,
+          "athleteName": "Kristoffer Ajer",
+          "teamId": 337,
+          "teamName": "Brentford"
+        },
+        {
+          "rank": 14,
           "value": 2,
           "displayValue": "2",
           "athleteId": 157073,
@@ -1251,7 +1296,7 @@
           "teamName": "Manchester United"
         },
         {
-          "rank": 10,
+          "rank": 15,
           "value": 2,
           "displayValue": "2",
           "athleteId": 149981,
@@ -1260,7 +1305,7 @@
           "teamName": "Sunderland"
         },
         {
-          "rank": 11,
+          "rank": 16,
           "value": 2,
           "displayValue": "2",
           "athleteId": 132659,
@@ -1269,43 +1314,16 @@
           "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 12,
+          "rank": 17,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 378458,
-          "athleteName": "Harrison Armstrong",
-          "teamId": 368,
-          "teamName": "Everton"
+          "athleteId": 305684,
+          "athleteName": "Adrien Truffert",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
         },
         {
-          "rank": 13,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 301894,
-          "athleteName": "Igor Thiago",
-          "teamId": 337,
-          "teamName": "Brentford"
-        },
-        {
-          "rank": 14,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 193010,
-          "athleteName": "Oliver McBurnie",
-          "teamId": 306,
-          "teamName": "Hull City"
-        },
-        {
-          "rank": 15,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 224077,
-          "athleteName": "Yoane Wissa",
-          "teamId": 361,
-          "teamName": "Newcastle United"
-        },
-        {
-          "rank": 16,
+          "rank": 18,
           "value": 2,
           "displayValue": "2",
           "athleteId": 162843,
@@ -1314,16 +1332,25 @@
           "teamName": "Aston Villa"
         },
         {
-          "rank": 17,
+          "rank": 19,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 243364,
-          "athleteName": "Marcus Tavernier",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
+          "athleteId": 216017,
+          "athleteName": "Olivier Boscagli",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 18,
+          "rank": 20,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 409541,
+          "athleteName": "Josh King",
+          "teamId": 370,
+          "teamName": "Fulham"
+        },
+        {
+          "rank": 21,
           "value": 2,
           "displayValue": "2",
           "athleteId": 301327,
@@ -1332,40 +1359,13 @@
           "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 19,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 298518,
-          "athleteName": "James McAtee",
-          "teamId": 393,
-          "teamName": "Nottingham Forest"
-        },
-        {
-          "rank": 20,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 197163,
-          "athleteName": "Timothy Castagne",
-          "teamId": 370,
-          "teamName": "Fulham"
-        },
-        {
-          "rank": 21,
+          "rank": 22,
           "value": 2,
           "displayValue": "2",
           "athleteId": 222300,
           "athleteName": "Sasa Lukic",
           "teamId": 373,
           "teamName": "Ipswich Town"
-        },
-        {
-          "rank": 22,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 323110,
-          "athleteName": "Milos Kerkez",
-          "teamId": 364,
-          "teamName": "Liverpool"
         },
         {
           "rank": 23,
@@ -1380,19 +1380,19 @@
           "rank": 24,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 303793,
-          "athleteName": "Christos Tzolis",
-          "teamId": 359,
-          "teamName": "Arsenal"
+          "athleteId": 238902,
+          "athleteName": "Diogo Dalot",
+          "teamId": 360,
+          "teamName": "Manchester United"
         },
         {
           "rank": 25,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 318680,
-          "athleteName": "Fatawu Issahaku",
-          "teamId": 373,
-          "teamName": "Ipswich Town"
+          "athleteId": 228547,
+          "athleteName": "Mamadou Sangare",
+          "teamId": 337,
+          "teamName": "Brentford"
         }
       ]
     },
@@ -1405,10 +1405,10 @@
           "rank": 1,
           "value": 1,
           "displayValue": "1",
-          "athleteId": 318680,
-          "athleteName": "Fatawu Issahaku",
-          "teamId": 373,
-          "teamName": "Ipswich Town"
+          "athleteId": 215772,
+          "athleteName": "Rodrigo Bentancur",
+          "teamId": 367,
+          "teamName": "Tottenham Hotspur"
         },
         {
           "rank": 2,
@@ -1423,13 +1423,22 @@
           "rank": 3,
           "value": 1,
           "displayValue": "1",
+          "athleteId": 318680,
+          "athleteName": "Fatawu Issahaku",
+          "teamId": 373,
+          "teamName": "Ipswich Town"
+        },
+        {
+          "rank": 4,
+          "value": 1,
+          "displayValue": "1",
           "athleteId": 194686,
           "athleteName": "Taiwo Awoniyi",
           "teamId": 388,
           "teamName": "Coventry City"
         },
         {
-          "rank": 4,
+          "rank": 5,
           "value": 1,
           "displayValue": "1",
           "athleteId": 250787,
@@ -1438,16 +1447,16 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 5,
+          "rank": 6,
           "value": 1,
           "displayValue": "1",
-          "athleteId": 231718,
-          "athleteName": "Axel Disasi",
-          "teamId": 384,
-          "teamName": "Crystal Palace"
+          "athleteId": 246771,
+          "athleteName": "Pascal Struijk",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 6,
+          "rank": 7,
           "value": 1,
           "displayValue": "1",
           "athleteId": 301524,
@@ -1456,7 +1465,16 @@
           "teamName": "Aston Villa"
         },
         {
-          "rank": 7,
+          "rank": 8,
+          "value": 1,
+          "displayValue": "1",
+          "athleteId": 231718,
+          "athleteName": "Axel Disasi",
+          "teamId": 384,
+          "teamName": "Crystal Palace"
+        },
+        {
+          "rank": 9,
           "value": 0,
           "displayValue": "0",
           "athleteId": 346588,
@@ -1465,7 +1483,7 @@
           "teamName": "AFC Bournemouth"
         },
         {
-          "rank": 8,
+          "rank": 10,
           "value": 0,
           "displayValue": "0",
           "athleteId": 324393,
@@ -1474,16 +1492,7 @@
           "teamName": "Tottenham Hotspur"
         },
         {
-          "rank": 9,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 319267,
-          "athleteName": "Lukás Hornícek",
-          "teamId": 361,
-          "teamName": "Newcastle United"
-        },
-        {
-          "rank": 10,
+          "rank": 11,
           "value": 0,
           "displayValue": "0",
           "athleteId": 318390,
@@ -1492,7 +1501,7 @@
           "teamName": "Leeds United"
         },
         {
-          "rank": 11,
+          "rank": 12,
           "value": 0,
           "displayValue": "0",
           "athleteId": 307118,
@@ -1501,34 +1510,7 @@
           "teamName": "Leeds United"
         },
         {
-          "rank": 12,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 307069,
-          "athleteName": "Carl Rushworth",
-          "teamId": 388,
-          "teamName": "Coventry City"
-        },
-        {
           "rank": 13,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 305684,
-          "athleteName": "Adrien Truffert",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
-        },
-        {
-          "rank": 14,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 303444,
-          "athleteName": "Malick Thiaw",
-          "teamId": 361,
-          "teamName": "Newcastle United"
-        },
-        {
-          "rank": 15,
           "value": 0,
           "displayValue": "0",
           "athleteId": 301449,
@@ -1537,7 +1519,7 @@
           "teamName": "Sunderland"
         },
         {
-          "rank": 16,
+          "rank": 14,
           "value": 0,
           "displayValue": "0",
           "athleteId": 301425,
@@ -1546,16 +1528,7 @@
           "teamName": "Manchester United"
         },
         {
-          "rank": 17,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 291638,
-          "athleteName": "Neco Williams",
-          "teamId": 393,
-          "teamName": "Nottingham Forest"
-        },
-        {
-          "rank": 18,
+          "rank": 15,
           "value": 0,
           "displayValue": "0",
           "athleteId": 291609,
@@ -1564,7 +1537,7 @@
           "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 19,
+          "rank": 16,
           "value": 0,
           "displayValue": "0",
           "athleteId": 289824,
@@ -1573,25 +1546,7 @@
           "teamName": "AFC Bournemouth"
         },
         {
-          "rank": 20,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 286965,
-          "athleteName": "Jarrad Branthwaite",
-          "teamId": 368,
-          "teamName": "Everton"
-        },
-        {
-          "rank": 21,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 284199,
-          "athleteName": "Konstantinos Tzolakis",
-          "teamId": 306,
-          "teamName": "Hull City"
-        },
-        {
-          "rank": 22,
+          "rank": 17,
           "value": 0,
           "displayValue": "0",
           "athleteId": 283086,
@@ -1600,16 +1555,7 @@
           "teamName": "Ipswich Town"
         },
         {
-          "rank": 23,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 282645,
-          "athleteName": "Danny Ballard",
-          "teamId": 366,
-          "teamName": "Sunderland"
-        },
-        {
-          "rank": 24,
+          "rank": 18,
           "value": 0,
           "displayValue": "0",
           "athleteId": 282583,
@@ -1618,13 +1564,67 @@
           "teamName": "Tottenham Hotspur"
         },
         {
-          "rank": 25,
+          "rank": 19,
           "value": 0,
           "displayValue": "0",
           "athleteId": 279155,
           "athleteName": "James Hill",
           "teamId": 349,
           "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 20,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 275599,
+          "athleteName": "Caoimhín Kelleher",
+          "teamId": 337,
+          "teamName": "Brentford"
+        },
+        {
+          "rank": 21,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 271170,
+          "athleteName": "Bryan Mbeumo",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 22,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 263110,
+          "athleteName": "Calvin Bassey",
+          "teamId": 370,
+          "teamName": "Fulham"
+        },
+        {
+          "rank": 23,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 243440,
+          "athleteName": "Dara O'Shea",
+          "teamId": 373,
+          "teamName": "Ipswich Town"
+        },
+        {
+          "rank": 24,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 241317,
+          "athleteName": "Ethan Ampadu",
+          "teamId": 357,
+          "teamName": "Leeds United"
+        },
+        {
+          "rank": 25,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 236322,
+          "athleteName": "Gabriel Magalhães",
+          "teamId": 359,
+          "teamName": "Arsenal"
         }
       ]
     },
@@ -1635,24 +1635,105 @@
       "entries": [
         {
           "rank": 1,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 305684,
-          "athleteName": "Adrien Truffert",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
-        },
-        {
-          "rank": 2,
-          "value": 11,
-          "displayValue": "11",
+          "value": 14,
+          "displayValue": "14",
           "athleteId": 222300,
           "athleteName": "Sasa Lukic",
           "teamId": 373,
           "teamName": "Ipswich Town"
         },
         {
+          "rank": 2,
+          "value": 13,
+          "displayValue": "13",
+          "athleteId": 304802,
+          "athleteName": "Anton Stach",
+          "teamId": 357,
+          "teamName": "Leeds United"
+        },
+        {
           "rank": 3,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 132659,
+          "athleteName": "Pascal Gross",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 4,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 305684,
+          "athleteName": "Adrien Truffert",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 5,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 197717,
+          "athleteName": "Dominic Calvert-Lewin",
+          "teamId": 357,
+          "teamName": "Leeds United"
+        },
+        {
+          "rank": 6,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 225564,
+          "athleteName": "Vitaly Janelt",
+          "teamId": 337,
+          "teamName": "Brentford"
+        },
+        {
+          "rank": 7,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 222776,
+          "athleteName": "Tyler Adams",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 8,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 102368,
+          "athleteName": "Evanilson",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 9,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 216017,
+          "athleteName": "Olivier Boscagli",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 10,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 284490,
+          "athleteName": "Keane Lewis-Potter",
+          "teamId": 337,
+          "teamName": "Brentford"
+        },
+        {
+          "rank": 11,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 228547,
+          "athleteName": "Mamadou Sangare",
+          "teamId": 337,
+          "teamName": "Brentford"
+        },
+        {
+          "rank": 12,
           "value": 10,
           "displayValue": "10",
           "athleteId": 282645,
@@ -1661,16 +1742,7 @@
           "teamName": "Sunderland"
         },
         {
-          "rank": 4,
-          "value": 10,
-          "displayValue": "10",
-          "athleteId": 304802,
-          "athleteName": "Anton Stach",
-          "teamId": 357,
-          "teamName": "Leeds United"
-        },
-        {
-          "rank": 5,
+          "rank": 13,
           "value": 10,
           "displayValue": "10",
           "athleteId": 257206,
@@ -1679,7 +1751,7 @@
           "teamName": "Liverpool"
         },
         {
-          "rank": 6,
+          "rank": 14,
           "value": 10,
           "displayValue": "10",
           "athleteId": 224077,
@@ -1688,7 +1760,7 @@
           "teamName": "Newcastle United"
         },
         {
-          "rank": 7,
+          "rank": 15,
           "value": 10,
           "displayValue": "10",
           "athleteId": 318680,
@@ -1697,34 +1769,16 @@
           "teamName": "Ipswich Town"
         },
         {
-          "rank": 8,
+          "rank": 16,
           "value": 9,
           "displayValue": "9",
-          "athleteId": 225564,
-          "athleteName": "Vitaly Janelt",
-          "teamId": 337,
-          "teamName": "Brentford"
+          "athleteId": 282583,
+          "athleteName": "Jan Paul van Hecke",
+          "teamId": 367,
+          "teamName": "Tottenham Hotspur"
         },
         {
-          "rank": 9,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 338894,
-          "athleteName": "Murillo",
-          "teamId": 393,
-          "teamName": "Nottingham Forest"
-        },
-        {
-          "rank": 10,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 378458,
-          "athleteName": "Harrison Armstrong",
-          "teamId": 368,
-          "teamName": "Everton"
-        },
-        {
-          "rank": 11,
+          "rank": 17,
           "value": 9,
           "displayValue": "9",
           "athleteId": 250936,
@@ -1733,61 +1787,16 @@
           "teamName": "Aston Villa"
         },
         {
-          "rank": 12,
+          "rank": 18,
           "value": 9,
           "displayValue": "9",
-          "athleteId": 216017,
-          "athleteName": "Olivier Boscagli",
-          "teamId": 331,
-          "teamName": "Brighton & Hove Albion"
-        },
-        {
-          "rank": 13,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 102368,
-          "athleteName": "Evanilson",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
-        },
-        {
-          "rank": 14,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 197717,
-          "athleteName": "Dominic Calvert-Lewin",
-          "teamId": 357,
-          "teamName": "Leeds United"
-        },
-        {
-          "rank": 15,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 197163,
-          "athleteName": "Timothy Castagne",
-          "teamId": 370,
-          "teamName": "Fulham"
-        },
-        {
-          "rank": 16,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 284490,
-          "athleteName": "Keane Lewis-Potter",
+          "athleteId": 301894,
+          "athleteName": "Igor Thiago",
           "teamId": 337,
           "teamName": "Brentford"
         },
         {
-          "rank": 17,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 323110,
-          "athleteName": "Milos Kerkez",
-          "teamId": 364,
-          "teamName": "Liverpool"
-        },
-        {
-          "rank": 18,
+          "rank": 19,
           "value": 9,
           "displayValue": "9",
           "athleteId": 215772,
@@ -1796,22 +1805,13 @@
           "teamName": "Tottenham Hotspur"
         },
         {
-          "rank": 19,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 228547,
-          "athleteName": "Mamadou Sangare",
-          "teamId": 337,
-          "teamName": "Brentford"
-        },
-        {
           "rank": 20,
           "value": 9,
           "displayValue": "9",
-          "athleteId": 387659,
-          "athleteName": "Caleb Yirenkyi",
-          "teamId": 388,
-          "teamName": "Coventry City"
+          "athleteId": 342029,
+          "athleteName": "Yehor Yarmoliuk",
+          "teamId": 337,
+          "teamName": "Brentford"
         },
         {
           "rank": 21,
@@ -1824,39 +1824,39 @@
         },
         {
           "rank": 22,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 132659,
-          "athleteName": "Pascal Gross",
-          "teamId": 331,
-          "teamName": "Brighton & Hove Albion"
-        },
-        {
-          "rank": 23,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 282229,
-          "athleteName": "Brian Brobbey",
-          "teamId": 366,
-          "teamName": "Sunderland"
-        },
-        {
-          "rank": 24,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 275842,
-          "athleteName": "Dan Ndoye",
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 338894,
+          "athleteName": "Murillo",
           "teamId": 393,
           "teamName": "Nottingham Forest"
         },
         {
+          "rank": 23,
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 378458,
+          "athleteName": "Harrison Armstrong",
+          "teamId": 368,
+          "teamName": "Everton"
+        },
+        {
+          "rank": 24,
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 197163,
+          "athleteName": "Timothy Castagne",
+          "teamId": 370,
+          "teamName": "Fulham"
+        },
+        {
           "rank": 25,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 230081,
-          "athleteName": "Reinildo Mandava",
-          "teamId": 366,
-          "teamName": "Sunderland"
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 323110,
+          "athleteName": "Milos Kerkez",
+          "teamId": 364,
+          "teamName": "Liverpool"
         }
       ]
     },
@@ -1867,6 +1867,24 @@
       "entries": [
         {
           "rank": 1,
+          "value": 19,
+          "displayValue": "19",
+          "athleteId": 162843,
+          "athleteName": "John McGinn",
+          "teamId": 362,
+          "teamName": "Aston Villa"
+        },
+        {
+          "rank": 2,
+          "value": 18,
+          "displayValue": "18",
+          "athleteId": 280555,
+          "athleteName": "Bukayo Saka",
+          "teamId": 359,
+          "teamName": "Arsenal"
+        },
+        {
+          "rank": 3,
           "value": 17,
           "displayValue": "17",
           "athleteId": 314790,
@@ -1875,25 +1893,52 @@
           "teamName": "AFC Bournemouth"
         },
         {
-          "rank": 2,
-          "value": 15,
-          "displayValue": "15",
-          "athleteId": 280555,
-          "athleteName": "Bukayo Saka",
-          "teamId": 359,
-          "teamName": "Arsenal"
-        },
-        {
-          "rank": 3,
+          "rank": 4,
           "value": 14,
           "displayValue": "14",
-          "athleteId": 162843,
-          "athleteName": "John McGinn",
+          "athleteId": 284960,
+          "athleteName": "João Pedro",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
+          "rank": 5,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 149981,
+          "athleteName": "Granit Xhaka",
+          "teamId": 366,
+          "teamName": "Sunderland"
+        },
+        {
+          "rank": 6,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 250936,
+          "athleteName": "Boubacar Kamara",
           "teamId": 362,
           "teamName": "Aston Villa"
         },
         {
-          "rank": 4,
+          "rank": 7,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 102368,
+          "athleteName": "Evanilson",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 8,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 193297,
+          "athleteName": "Youri Tielemans",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 9,
           "value": 12,
           "displayValue": "12",
           "athleteId": 224077,
@@ -1902,7 +1947,7 @@
           "teamName": "Newcastle United"
         },
         {
-          "rank": 5,
+          "rank": 10,
           "value": 12,
           "displayValue": "12",
           "athleteId": 238472,
@@ -1911,16 +1956,34 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 6,
-          "value": 12,
-          "displayValue": "12",
-          "athleteId": 284960,
-          "athleteName": "João Pedro",
+          "rank": 11,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 304802,
+          "athleteName": "Anton Stach",
+          "teamId": 357,
+          "teamName": "Leeds United"
+        },
+        {
+          "rank": 12,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 296395,
+          "athleteName": "Cole Palmer",
           "teamId": 363,
           "teamName": "Chelsea"
         },
         {
-          "rank": 7,
+          "rank": 13,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 214375,
+          "athleteName": "Emiliano Buendía",
+          "teamId": 362,
+          "teamName": "Aston Villa"
+        },
+        {
+          "rank": 14,
           "value": 11,
           "displayValue": "11",
           "athleteId": 193010,
@@ -1929,16 +1992,25 @@
           "teamName": "Hull City"
         },
         {
-          "rank": 8,
+          "rank": 15,
           "value": 10,
           "displayValue": "10",
-          "athleteId": 149981,
-          "athleteName": "Granit Xhaka",
+          "athleteId": 288340,
+          "athleteName": "Enzo Le Fée",
           "teamId": 366,
           "teamName": "Sunderland"
         },
         {
-          "rank": 9,
+          "rank": 16,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 20975,
+          "athleteName": "Julio Enciso",
+          "teamId": 373,
+          "teamName": "Ipswich Town"
+        },
+        {
+          "rank": 17,
           "value": 10,
           "displayValue": "10",
           "athleteId": 243386,
@@ -1947,7 +2019,7 @@
           "teamName": "Newcastle United"
         },
         {
-          "rank": 10,
+          "rank": 18,
           "value": 10,
           "displayValue": "10",
           "athleteId": 333419,
@@ -1956,34 +2028,34 @@
           "teamName": "Crystal Palace"
         },
         {
-          "rank": 11,
+          "rank": 19,
           "value": 10,
           "displayValue": "10",
-          "athleteId": 102368,
-          "athleteName": "Evanilson",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
+          "athleteId": 352758,
+          "athleteName": "Myles Lewis-Skelly",
+          "teamId": 359,
+          "teamName": "Arsenal"
         },
         {
-          "rank": 12,
+          "rank": 20,
           "value": 9,
           "displayValue": "9",
-          "athleteId": 304802,
-          "athleteName": "Anton Stach",
-          "teamId": 357,
-          "teamName": "Leeds United"
+          "athleteId": 216017,
+          "athleteName": "Olivier Boscagli",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 13,
+          "rank": 21,
           "value": 9,
           "displayValue": "9",
-          "athleteId": 288340,
-          "athleteName": "Enzo Le Fée",
+          "athleteId": 340240,
+          "athleteName": "Noah Sadiki",
           "teamId": 366,
           "teamName": "Sunderland"
         },
         {
-          "rank": 14,
+          "rank": 22,
           "value": 9,
           "displayValue": "9",
           "athleteId": 231182,
@@ -1992,103 +2064,31 @@
           "teamName": "Arsenal"
         },
         {
-          "rank": 15,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 298518,
-          "athleteName": "James McAtee",
-          "teamId": 393,
-          "teamName": "Nottingham Forest"
-        },
-        {
-          "rank": 16,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 20975,
-          "athleteName": "Julio Enciso",
-          "teamId": 373,
-          "teamName": "Ipswich Town"
-        },
-        {
-          "rank": 17,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 282229,
-          "athleteName": "Brian Brobbey",
-          "teamId": 366,
-          "teamName": "Sunderland"
-        },
-        {
-          "rank": 18,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 240495,
-          "athleteName": "Brandon Thomas-Asante",
-          "teamId": 388,
-          "teamName": "Coventry City"
-        },
-        {
-          "rank": 19,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 268641,
-          "athleteName": "Iliman Ndiaye",
-          "teamId": 382,
-          "teamName": "Manchester City"
-        },
-        {
-          "rank": 20,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 291638,
-          "athleteName": "Neco Williams",
-          "teamId": 393,
-          "teamName": "Nottingham Forest"
-        },
-        {
-          "rank": 21,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 282645,
-          "athleteName": "Danny Ballard",
-          "teamId": 366,
-          "teamName": "Sunderland"
-        },
-        {
-          "rank": 22,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 243396,
-          "athleteName": "Morgan Gibbs-White",
-          "teamId": 393,
-          "teamName": "Nottingham Forest"
-        },
-        {
           "rank": 23,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 155226,
-          "athleteName": "James Tarkowski",
-          "teamId": 368,
-          "teamName": "Everton"
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 259902,
+          "athleteName": "Matheus Cunha",
+          "teamId": 360,
+          "teamName": "Manchester United"
         },
         {
           "rank": 24,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 310958,
-          "athleteName": "Kevin Schade",
-          "teamId": 337,
-          "teamName": "Brentford"
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 243408,
+          "athleteName": "Jayden Bogle",
+          "teamId": 357,
+          "teamName": "Leeds United"
         },
         {
           "rank": 25,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 252389,
-          "athleteName": "Kiernan Dewsbury-Hall",
-          "teamId": 368,
-          "teamName": "Everton"
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 307111,
+          "athleteName": "Oscar Bobb",
+          "teamId": 370,
+          "teamName": "Fulham"
         }
       ]
     },
@@ -2099,6 +2099,24 @@
       "entries": [
         {
           "rank": 1,
+          "value": 21,
+          "displayValue": "21",
+          "athleteId": 271170,
+          "athleteName": "Bryan Mbeumo",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 2,
+          "value": 20,
+          "displayValue": "20",
+          "athleteId": 124091,
+          "athleteName": "Bruno Fernandes",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 3,
           "value": 20,
           "displayValue": "20",
           "athleteId": 253989,
@@ -2107,25 +2125,34 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 2,
-          "value": 19,
-          "displayValue": "19",
-          "athleteId": 271170,
-          "athleteName": "Bryan Mbeumo",
-          "teamId": 360,
-          "teamName": "Manchester United"
-        },
-        {
-          "rank": 3,
-          "value": 19,
-          "displayValue": "19",
-          "athleteId": 124091,
-          "athleteName": "Bruno Fernandes",
-          "teamId": 360,
-          "teamName": "Manchester United"
-        },
-        {
           "rank": 4,
+          "value": 19,
+          "displayValue": "19",
+          "athleteId": 20975,
+          "athleteName": "Julio Enciso",
+          "teamId": 373,
+          "teamName": "Ipswich Town"
+        },
+        {
+          "rank": 5,
+          "value": 18,
+          "displayValue": "18",
+          "athleteId": 192278,
+          "athleteName": "Diego Gómez",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 6,
+          "value": 18,
+          "displayValue": "18",
+          "athleteId": 87297,
+          "athleteName": "Gonzalo García",
+          "teamId": 370,
+          "teamName": "Fulham"
+        },
+        {
+          "rank": 7,
           "value": 18,
           "displayValue": "18",
           "athleteId": 252389,
@@ -2134,7 +2161,7 @@
           "teamName": "Everton"
         },
         {
-          "rank": 5,
+          "rank": 8,
           "value": 17,
           "displayValue": "17",
           "athleteId": 296395,
@@ -2143,7 +2170,34 @@
           "teamName": "Chelsea"
         },
         {
-          "rank": 6,
+          "rank": 9,
+          "value": 17,
+          "displayValue": "17",
+          "athleteId": 265653,
+          "athleteName": "Morgan Rogers",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
+          "rank": 10,
+          "value": 17,
+          "displayValue": "17",
+          "athleteId": 280555,
+          "athleteName": "Bukayo Saka",
+          "teamId": 359,
+          "teamName": "Arsenal"
+        },
+        {
+          "rank": 11,
+          "value": 17,
+          "displayValue": "17",
+          "athleteId": 310958,
+          "athleteName": "Kevin Schade",
+          "teamId": 337,
+          "teamName": "Brentford"
+        },
+        {
+          "rank": 12,
           "value": 17,
           "displayValue": "17",
           "athleteId": 301166,
@@ -2152,43 +2206,7 @@
           "teamName": "Everton"
         },
         {
-          "rank": 7,
-          "value": 17,
-          "displayValue": "17",
-          "athleteId": 20975,
-          "athleteName": "Julio Enciso",
-          "teamId": 373,
-          "teamName": "Ipswich Town"
-        },
-        {
-          "rank": 8,
-          "value": 15,
-          "displayValue": "15",
-          "athleteId": 265653,
-          "athleteName": "Morgan Rogers",
-          "teamId": 363,
-          "teamName": "Chelsea"
-        },
-        {
-          "rank": 9,
-          "value": 15,
-          "displayValue": "15",
-          "athleteId": 87297,
-          "athleteName": "Gonzalo García",
-          "teamId": 370,
-          "teamName": "Fulham"
-        },
-        {
-          "rank": 10,
-          "value": 15,
-          "displayValue": "15",
-          "athleteId": 280555,
-          "athleteName": "Bukayo Saka",
-          "teamId": 359,
-          "teamName": "Arsenal"
-        },
-        {
-          "rank": 11,
+          "rank": 13,
           "value": 15,
           "displayValue": "15",
           "athleteId": 235662,
@@ -2197,16 +2215,25 @@
           "teamName": "Liverpool"
         },
         {
-          "rank": 12,
+          "rank": 14,
           "value": 14,
           "displayValue": "14",
-          "athleteId": 192278,
-          "athleteName": "Diego Gómez",
-          "teamId": 331,
-          "teamName": "Brighton & Hove Albion"
+          "athleteId": 301894,
+          "athleteName": "Igor Thiago",
+          "teamId": 337,
+          "teamName": "Brentford"
         },
         {
-          "rank": 13,
+          "rank": 15,
+          "value": 14,
+          "displayValue": "14",
+          "athleteId": 357719,
+          "athleteName": "Rayan",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 16,
           "value": 14,
           "displayValue": "14",
           "athleteId": 409541,
@@ -2215,34 +2242,25 @@
           "teamName": "Fulham"
         },
         {
-          "rank": 14,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 310958,
-          "athleteName": "Kevin Schade",
-          "teamId": 337,
-          "teamName": "Brentford"
-        },
-        {
-          "rank": 15,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 301894,
-          "athleteName": "Igor Thiago",
-          "teamId": 337,
-          "teamName": "Brentford"
-        },
-        {
-          "rank": 16,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 257206,
-          "athleteName": "Dominik Szoboszlai",
-          "teamId": 364,
-          "teamName": "Liverpool"
-        },
-        {
           "rank": 17,
+          "value": 14,
+          "displayValue": "14",
+          "athleteId": 259902,
+          "athleteName": "Matheus Cunha",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 18,
+          "value": 14,
+          "displayValue": "14",
+          "athleteId": 387655,
+          "athleteName": "Charalambos Kostoulas",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
+          "rank": 19,
           "value": 13,
           "displayValue": "13",
           "athleteId": 243364,
@@ -2251,31 +2269,13 @@
           "teamName": "AFC Bournemouth"
         },
         {
-          "rank": 18,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 259902,
-          "athleteName": "Matheus Cunha",
-          "teamId": 360,
-          "teamName": "Manchester United"
-        },
-        {
-          "rank": 19,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 320417,
-          "athleteName": "Mohamed Belloumi",
-          "teamId": 306,
-          "teamName": "Hull City"
-        },
-        {
           "rank": 20,
           "value": 13,
           "displayValue": "13",
-          "athleteId": 387655,
-          "athleteName": "Charalambos Kostoulas",
-          "teamId": 331,
-          "teamName": "Brighton & Hove Albion"
+          "athleteId": 214375,
+          "athleteName": "Emiliano Buendía",
+          "teamId": 362,
+          "teamName": "Aston Villa"
         },
         {
           "rank": 21,
@@ -2288,39 +2288,39 @@
         },
         {
           "rank": 22,
-          "value": 12,
-          "displayValue": "12",
-          "athleteId": 357719,
-          "athleteName": "Rayan",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
-        },
-        {
-          "rank": 23,
-          "value": 12,
-          "displayValue": "12",
-          "athleteId": 303748,
-          "athleteName": "Florian Wirtz",
+          "value": 13,
+          "displayValue": "13",
+          "athleteId": 257206,
+          "athleteName": "Dominik Szoboszlai",
           "teamId": 364,
           "teamName": "Liverpool"
         },
         {
+          "rank": 23,
+          "value": 13,
+          "displayValue": "13",
+          "athleteId": 284960,
+          "athleteName": "João Pedro",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
           "rank": 24,
-          "value": 12,
-          "displayValue": "12",
-          "athleteId": 307114,
-          "athleteName": "Liam Delap",
-          "teamId": 393,
-          "teamName": "Nottingham Forest"
+          "value": 13,
+          "displayValue": "13",
+          "athleteId": 320417,
+          "athleteName": "Mohamed Belloumi",
+          "teamId": 306,
+          "teamName": "Hull City"
         },
         {
           "rank": 25,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 197717,
-          "athleteName": "Dominic Calvert-Lewin",
-          "teamId": 357,
-          "teamName": "Leeds United"
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 231182,
+          "athleteName": "Kai Havertz",
+          "teamId": 359,
+          "teamName": "Arsenal"
         }
       ]
     },
@@ -2331,6 +2331,15 @@
       "entries": [
         {
           "rank": 1,
+          "value": 417,
+          "displayValue": "417",
+          "athleteId": 282583,
+          "athleteName": "Jan Paul van Hecke",
+          "teamId": 367,
+          "teamName": "Tottenham Hotspur"
+        },
+        {
+          "rank": 2,
           "value": 397,
           "displayValue": "397",
           "athleteId": 234878,
@@ -2339,7 +2348,7 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 2,
+          "rank": 3,
           "value": 389,
           "displayValue": "389",
           "athleteId": 238472,
@@ -2348,7 +2357,7 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 3,
+          "rank": 4,
           "value": 376,
           "displayValue": "376",
           "athleteId": 265907,
@@ -2357,7 +2366,16 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 4,
+          "rank": 5,
+          "value": 375,
+          "displayValue": "375",
+          "athleteId": 238262,
+          "athleteName": "Declan Rice",
+          "teamId": 359,
+          "teamName": "Arsenal"
+        },
+        {
+          "rank": 6,
           "value": 371,
           "displayValue": "371",
           "athleteId": 157892,
@@ -2366,34 +2384,79 @@
           "teamName": "Liverpool"
         },
         {
-          "rank": 5,
-          "value": 358,
-          "displayValue": "358",
-          "athleteId": 282583,
-          "athleteName": "Jan Paul van Hecke",
-          "teamId": 367,
-          "teamName": "Tottenham Hotspur"
+          "rank": 7,
+          "value": 365,
+          "displayValue": "365",
+          "athleteId": 263110,
+          "athleteName": "Calvin Bassey",
+          "teamId": 370,
+          "teamName": "Fulham"
         },
         {
-          "rank": 6,
-          "value": 346,
-          "displayValue": "346",
+          "rank": 8,
+          "value": 351,
+          "displayValue": "351",
           "athleteId": 147106,
           "athleteName": "Lewis Dunk",
           "teamId": 331,
           "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 7,
-          "value": 322,
-          "displayValue": "322",
+          "rank": 9,
+          "value": 339,
+          "displayValue": "339",
           "athleteId": 364962,
           "athleteName": "Luka Vuskovic",
           "teamId": 331,
           "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 8,
+          "rank": 10,
+          "value": 338,
+          "displayValue": "338",
+          "athleteId": 328466,
+          "athleteName": "Kobbie Mainoo",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 11,
+          "value": 324,
+          "displayValue": "324",
+          "athleteId": 193297,
+          "athleteName": "Youri Tielemans",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 12,
+          "value": 322,
+          "displayValue": "322",
+          "athleteId": 157073,
+          "athleteName": "Harry Maguire",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 13,
+          "value": 316,
+          "displayValue": "316",
+          "athleteId": 233937,
+          "athleteName": "Lisandro Martínez",
+          "teamId": 360,
+          "teamName": "Manchester United"
+        },
+        {
+          "rank": 14,
+          "value": 314,
+          "displayValue": "314",
+          "athleteId": 175063,
+          "athleteName": "Alex Iwobi",
+          "teamId": 370,
+          "teamName": "Fulham"
+        },
+        {
+          "rank": 15,
           "value": 314,
           "displayValue": "314",
           "athleteId": 355980,
@@ -2402,157 +2465,94 @@
           "teamName": "Liverpool"
         },
         {
-          "rank": 9,
-          "value": 313,
-          "displayValue": "313",
-          "athleteId": 263110,
-          "athleteName": "Calvin Bassey",
-          "teamId": 370,
-          "teamName": "Fulham"
-        },
-        {
-          "rank": 10,
-          "value": 312,
-          "displayValue": "312",
-          "athleteId": 238262,
-          "athleteName": "Declan Rice",
-          "teamId": 359,
-          "teamName": "Arsenal"
-        },
-        {
-          "rank": 11,
-          "value": 304,
-          "displayValue": "304",
-          "athleteId": 193297,
-          "athleteName": "Youri Tielemans",
-          "teamId": 360,
-          "teamName": "Manchester United"
-        },
-        {
-          "rank": 12,
-          "value": 286,
-          "displayValue": "286",
-          "athleteId": 296512,
-          "athleteName": "Micky van de Ven",
-          "teamId": 367,
-          "teamName": "Tottenham Hotspur"
-        },
-        {
-          "rank": 13,
-          "value": 284,
-          "displayValue": "284",
-          "athleteId": 157073,
-          "athleteName": "Harry Maguire",
-          "teamId": 360,
-          "teamName": "Manchester United"
-        },
-        {
-          "rank": 14,
-          "value": 273,
-          "displayValue": "273",
-          "athleteId": 328466,
-          "athleteName": "Kobbie Mainoo",
-          "teamId": 360,
-          "teamName": "Manchester United"
-        },
-        {
-          "rank": 15,
-          "value": 271,
-          "displayValue": "271",
-          "athleteId": 132659,
-          "athleteName": "Pascal Gross",
-          "teamId": 331,
-          "teamName": "Brighton & Hove Albion"
-        },
-        {
           "rank": 16,
-          "value": 270,
-          "displayValue": "270",
-          "athleteId": 124091,
-          "athleteName": "Bruno Fernandes",
-          "teamId": 360,
-          "teamName": "Manchester United"
-        },
-        {
-          "rank": 17,
-          "value": 269,
-          "displayValue": "269",
-          "athleteId": 175063,
-          "athleteName": "Alex Iwobi",
-          "teamId": 370,
-          "teamName": "Fulham"
-        },
-        {
-          "rank": 18,
-          "value": 258,
-          "displayValue": "258",
+          "value": 310,
+          "displayValue": "310",
           "athleteId": 261047,
           "athleteName": "Sandro Tonali",
           "teamId": 367,
           "teamName": "Tottenham Hotspur"
         },
         {
-          "rank": 19,
-          "value": 251,
-          "displayValue": "251",
+          "rank": 17,
+          "value": 307,
+          "displayValue": "307",
+          "athleteId": 230963,
+          "athleteName": "Issa Diop",
+          "teamId": 373,
+          "teamName": "Ipswich Town"
+        },
+        {
+          "rank": 18,
+          "value": 307,
+          "displayValue": "307",
           "athleteId": 149981,
           "athleteName": "Granit Xhaka",
           "teamId": 366,
           "teamName": "Sunderland"
         },
         {
-          "rank": 20,
-          "value": 249,
-          "displayValue": "249",
-          "athleteId": 233937,
-          "athleteName": "Lisandro Martínez",
+          "rank": 19,
+          "value": 306,
+          "displayValue": "306",
+          "athleteId": 124091,
+          "athleteName": "Bruno Fernandes",
           "teamId": 360,
           "teamName": "Manchester United"
         },
         {
+          "rank": 20,
+          "value": 293,
+          "displayValue": "293",
+          "athleteId": 132659,
+          "athleteName": "Pascal Gross",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
+        },
+        {
           "rank": 21,
-          "value": 246,
-          "displayValue": "246",
-          "athleteId": 204679,
-          "athleteName": "Victor Lindelöf",
-          "teamId": 362,
-          "teamName": "Aston Villa"
+          "value": 292,
+          "displayValue": "292",
+          "athleteId": 296512,
+          "athleteName": "Micky van de Ven",
+          "teamId": 367,
+          "teamName": "Tottenham Hotspur"
         },
         {
           "rank": 22,
-          "value": 246,
-          "displayValue": "246",
-          "athleteId": 257206,
-          "athleteName": "Dominik Szoboszlai",
-          "teamId": 364,
-          "teamName": "Liverpool"
-        },
-        {
-          "rank": 23,
-          "value": 244,
-          "displayValue": "244",
-          "athleteId": 274633,
-          "athleteName": "Sven Botman",
-          "teamId": 361,
-          "teamName": "Newcastle United"
-        },
-        {
-          "rank": 24,
-          "value": 244,
-          "displayValue": "244",
+          "value": 291,
+          "displayValue": "291",
           "athleteId": 236322,
           "athleteName": "Gabriel Magalhães",
           "teamId": 359,
           "teamName": "Arsenal"
         },
         {
-          "rank": 25,
-          "value": 242,
-          "displayValue": "242",
-          "athleteId": 230963,
-          "athleteName": "Issa Diop",
+          "rank": 23,
+          "value": 287,
+          "displayValue": "287",
+          "athleteId": 204679,
+          "athleteName": "Victor Lindelöf",
+          "teamId": 362,
+          "teamName": "Aston Villa"
+        },
+        {
+          "rank": 24,
+          "value": 280,
+          "displayValue": "280",
+          "athleteId": 222300,
+          "athleteName": "Sasa Lukic",
           "teamId": 373,
           "teamName": "Ipswich Town"
+        },
+        {
+          "rank": 25,
+          "value": 275,
+          "displayValue": "275",
+          "athleteId": 346588,
+          "athleteName": "António Silva",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
         }
       ]
     },
@@ -2563,8 +2563,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 20,
-          "displayValue": "20",
+          "value": 24,
+          "displayValue": "24",
           "athleteId": 307118,
           "athleteName": "James Trafford",
           "teamId": 357,
@@ -2572,6 +2572,33 @@
         },
         {
           "rank": 2,
+          "value": 22,
+          "displayValue": "22",
+          "athleteId": 275599,
+          "athleteName": "Caoimhín Kelleher",
+          "teamId": 337,
+          "teamName": "Brentford"
+        },
+        {
+          "rank": 3,
+          "value": 21,
+          "displayValue": "21",
+          "athleteId": 158626,
+          "athleteName": "Emiliano Martínez",
+          "teamId": 363,
+          "teamName": "Chelsea"
+        },
+        {
+          "rank": 4,
+          "value": 19,
+          "displayValue": "19",
+          "athleteId": 153765,
+          "athleteName": "Bernd Leno",
+          "teamId": 370,
+          "teamName": "Fulham"
+        },
+        {
+          "rank": 5,
           "value": 19,
           "displayValue": "19",
           "athleteId": 319267,
@@ -2580,16 +2607,25 @@
           "teamName": "Newcastle United"
         },
         {
-          "rank": 3,
+          "rank": 6,
           "value": 18,
           "displayValue": "18",
-          "athleteId": 158626,
-          "athleteName": "Emiliano Martínez",
-          "teamId": 363,
-          "teamName": "Chelsea"
+          "athleteId": 301425,
+          "athleteName": "Senne Lammens",
+          "teamId": 360,
+          "teamName": "Manchester United"
         },
         {
-          "rank": 4,
+          "rank": 7,
+          "value": 18,
+          "displayValue": "18",
+          "athleteId": 265958,
+          "athleteName": "Zion Suzuki",
+          "teamId": 362,
+          "teamName": "Aston Villa"
+        },
+        {
+          "rank": 8,
           "value": 17,
           "displayValue": "17",
           "athleteId": 284199,
@@ -2598,34 +2634,25 @@
           "teamName": "Hull City"
         },
         {
-          "rank": 5,
-          "value": 17,
-          "displayValue": "17",
-          "athleteId": 275599,
-          "athleteName": "Caoimhín Kelleher",
-          "teamId": 337,
-          "teamName": "Brentford"
+          "rank": 9,
+          "value": 15,
+          "displayValue": "15",
+          "athleteId": 324393,
+          "athleteName": "Antonín Kinsky",
+          "teamId": 367,
+          "teamName": "Tottenham Hotspur"
         },
         {
-          "rank": 6,
-          "value": 16,
-          "displayValue": "16",
-          "athleteId": 301425,
-          "athleteName": "Senne Lammens",
-          "teamId": 360,
-          "teamName": "Manchester United"
+          "rank": 10,
+          "value": 15,
+          "displayValue": "15",
+          "athleteId": 291609,
+          "athleteName": "Bart Verbruggen",
+          "teamId": 331,
+          "teamName": "Brighton & Hove Albion"
         },
         {
-          "rank": 7,
-          "value": 16,
-          "displayValue": "16",
-          "athleteId": 153765,
-          "athleteName": "Bernd Leno",
-          "teamId": 370,
-          "teamName": "Fulham"
-        },
-        {
-          "rank": 8,
+          "rank": 11,
           "value": 15,
           "displayValue": "15",
           "athleteId": 159443,
@@ -2634,16 +2661,7 @@
           "teamName": "Everton"
         },
         {
-          "rank": 9,
-          "value": 15,
-          "displayValue": "15",
-          "athleteId": 265958,
-          "athleteName": "Zion Suzuki",
-          "teamId": 362,
-          "teamName": "Aston Villa"
-        },
-        {
-          "rank": 10,
+          "rank": 12,
           "value": 15,
           "displayValue": "15",
           "athleteId": 246244,
@@ -2652,7 +2670,7 @@
           "teamName": "Ipswich Town"
         },
         {
-          "rank": 11,
+          "rank": 13,
           "value": 14,
           "displayValue": "14",
           "athleteId": 217092,
@@ -2661,7 +2679,7 @@
           "teamName": "Manchester City"
         },
         {
-          "rank": 12,
+          "rank": 14,
           "value": 14,
           "displayValue": "14",
           "athleteId": 196876,
@@ -2670,25 +2688,25 @@
           "teamName": "Liverpool"
         },
         {
-          "rank": 13,
-          "value": 12,
-          "displayValue": "12",
-          "athleteId": 324393,
-          "athleteName": "Antonín Kinsky",
-          "teamId": 367,
-          "teamName": "Tottenham Hotspur"
-        },
-        {
-          "rank": 14,
-          "value": 12,
-          "displayValue": "12",
-          "athleteId": 291609,
-          "athleteName": "Bart Verbruggen",
-          "teamId": 331,
-          "teamName": "Brighton & Hove Albion"
-        },
-        {
           "rank": 15,
+          "value": 13,
+          "displayValue": "13",
+          "athleteId": 196176,
+          "athleteName": "David Raya",
+          "teamId": 359,
+          "teamName": "Arsenal"
+        },
+        {
+          "rank": 16,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 289824,
+          "athleteName": "Djordje Petrovic",
+          "teamId": 349,
+          "teamName": "AFC Bournemouth"
+        },
+        {
+          "rank": 17,
           "value": 12,
           "displayValue": "12",
           "athleteId": 234172,
@@ -2697,16 +2715,7 @@
           "teamName": "Crystal Palace"
         },
         {
-          "rank": 16,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 289824,
-          "athleteName": "Djordje Petrovic",
-          "teamId": 349,
-          "teamName": "AFC Bournemouth"
-        },
-        {
-          "rank": 17,
+          "rank": 18,
           "value": 11,
           "displayValue": "11",
           "athleteId": 179497,
@@ -2715,7 +2724,7 @@
           "teamName": "Nottingham Forest"
         },
         {
-          "rank": 18,
+          "rank": 19,
           "value": 9,
           "displayValue": "9",
           "athleteId": 307069,
@@ -2724,18 +2733,9 @@
           "teamName": "Coventry City"
         },
         {
-          "rank": 19,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 196176,
-          "athleteName": "David Raya",
-          "teamId": 359,
-          "teamName": "Arsenal"
-        },
-        {
           "rank": 20,
-          "value": 6,
-          "displayValue": "6",
+          "value": 8,
+          "displayValue": "8",
           "athleteId": 301449,
           "athleteName": "Robin Roefs",
           "teamId": 366,
@@ -2754,28 +2754,28 @@
           "rank": 22,
           "value": 4,
           "displayValue": "4",
+          "athleteId": 168746,
+          "athleteName": "Christian Walton",
+          "teamId": 373,
+          "teamName": "Ipswich Town"
+        },
+        {
+          "rank": 23,
+          "value": 4,
+          "displayValue": "4",
           "athleteId": 108662,
           "athleteName": "Robert Sánchez",
           "teamId": 363,
           "teamName": "Chelsea"
         },
         {
-          "rank": 23,
+          "rank": 24,
           "value": 3,
           "displayValue": "3",
           "athleteId": 132233,
           "athleteName": "Marco Bizot",
           "teamId": 362,
           "teamName": "Aston Villa"
-        },
-        {
-          "rank": 24,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 168746,
-          "athleteName": "Christian Walton",
-          "teamId": 373,
-          "teamName": "Ipswich Town"
         },
         {
           "rank": 25,

@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-11T01:54:03.824Z",
+  "updateTime": "2026-10-12T02:27:11.468Z",
   "league": "chn.1",
   "season": "2026",
   "count": 501,
@@ -12,11 +12,24 @@
       "position": "F",
       "age": 27,
       "goals": 20,
-      "assists": 8,
+      "assists": 9,
       "citizenship": "Congo DR",
       "flag": "flags/cd.png",
       "jersey": 11,
       "team": "Yunnan Yukun"
+    },
+    {
+      "id": 198512,
+      "name": "Rafael Ratão",
+      "teamId": 977,
+      "position": "F",
+      "age": 30,
+      "goals": 19,
+      "assists": 1,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 9,
+      "team": "Shanghai Shenhua"
     },
     {
       "id": 173239,
@@ -58,17 +71,17 @@
       "team": "Shandong Taishan"
     },
     {
-      "id": 198512,
-      "name": "Rafael Ratão",
-      "teamId": 977,
+      "id": 287781,
+      "name": "Cleber",
+      "teamId": 22536,
       "position": "F",
-      "age": 30,
-      "goals": 16,
-      "assists": 1,
+      "age": 29,
+      "goals": 13,
+      "assists": 5,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
       "jersey": 9,
-      "team": "Shanghai Shenhua"
+      "team": "Yunnan Yukun"
     },
     {
       "id": 202305,
@@ -84,17 +97,17 @@
       "team": "Henan"
     },
     {
-      "id": 287781,
-      "name": "Cleber",
-      "teamId": 22536,
+      "id": 250439,
+      "name": "Alberto Quiles Piosa",
+      "teamId": 8239,
       "position": "F",
-      "age": 29,
+      "age": 31,
       "goals": 12,
-      "assists": 5,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
+      "assists": 4,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
       "jersey": 9,
-      "team": "Yunnan Yukun"
+      "team": "Tianjin Jinmen Tiger"
     },
     {
       "id": 222356,
@@ -121,19 +134,6 @@
       "flag": "flags/cn.png",
       "jersey": 9,
       "team": "BEIJING GUOAN"
-    },
-    {
-      "id": 250439,
-      "name": "Alberto Quiles Piosa",
-      "teamId": 8239,
-      "position": "F",
-      "age": 31,
-      "goals": 11,
-      "assists": 4,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 9,
-      "team": "Tianjin Jinmen Tiger"
     },
     {
       "id": 194410,
@@ -402,7 +402,7 @@
       "position": "F",
       "age": 25,
       "goals": 7,
-      "assists": 4,
+      "assists": 5,
       "citizenship": "Equatorial Guinea",
       "flag": "flags/gq.png",
       "jersey": 19,
@@ -883,7 +883,7 @@
       "position": "M",
       "age": 33,
       "goals": 3,
-      "assists": 3,
+      "assists": 6,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
       "jersey": 10,
@@ -1189,6 +1189,19 @@
       "team": "Zhejiang Professional FC"
     },
     {
+      "id": 361772,
+      "name": "Jin Shunkai",
+      "teamId": 977,
+      "position": "D",
+      "age": 24,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "China PR",
+      "flag": "flags/cn.png",
+      "jersey": 3,
+      "team": "Shanghai Shenhua"
+    },
+    {
       "id": 251620,
       "name": "Jinxian Wang",
       "teamId": 21506,
@@ -1219,7 +1232,7 @@
       "name": "Liu Yang",
       "teamId": 7521,
       "position": "D",
-      "age": 31,
+      "age": 35,
       "goals": 2,
       "assists": 3,
       "citizenship": "China PR",
@@ -1306,13 +1319,26 @@
       "team": "Liaoning Tieren"
     },
     {
+      "id": 234233,
+      "name": "Xie Pengfei",
+      "teamId": 977,
+      "position": "M",
+      "age": 33,
+      "goals": 2,
+      "assists": 4,
+      "citizenship": "China PR",
+      "flag": "flags/cn.png",
+      "jersey": 30,
+      "team": "Shanghai Shenhua"
+    },
+    {
       "id": 275979,
       "name": "Xu Haoyang",
       "teamId": 977,
       "position": "M",
       "age": 27,
       "goals": 2,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "China PR",
       "flag": "flags/cn.png",
       "jersey": 21,
@@ -1566,19 +1592,6 @@
       "team": "Shanghai Port"
     },
     {
-      "id": 361772,
-      "name": "Jin Shunkai",
-      "teamId": 977,
-      "position": "D",
-      "age": 24,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "China PR",
-      "flag": "flags/cn.png",
-      "jersey": 3,
-      "team": "Shanghai Shenhua"
-    },
-    {
       "id": 317927,
       "name": "Jintao Liao",
       "teamId": 22537,
@@ -1668,6 +1681,19 @@
       "flag": "flags/cn.png",
       "jersey": 58,
       "team": "Chengdu Rongcheng"
+    },
+    {
+      "id": 380880,
+      "name": "Liu Chengyu",
+      "teamId": 977,
+      "position": "F",
+      "age": 20,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "China PR",
+      "flag": "flags/cn.png",
+      "jersey": 18,
+      "team": "Shanghai Shenhua"
     },
     {
       "id": 323168,
@@ -1852,6 +1878,19 @@
       "team": "Shenzhen Xinpengcheng"
     },
     {
+      "id": 286503,
+      "name": "Wang Haijian",
+      "teamId": 977,
+      "position": "M",
+      "age": 26,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "China PR",
+      "flag": "flags/cn.png",
+      "jersey": 33,
+      "team": "Shanghai Shenhua"
+    },
+    {
       "id": 191223,
       "name": "Wang Shangyuan",
       "teamId": 8240,
@@ -1928,19 +1967,6 @@
       "flag": "flags/cn.png",
       "jersey": 6,
       "team": "Tianjin Jinmen Tiger"
-    },
-    {
-      "id": 234233,
-      "name": "Xie Pengfei",
-      "teamId": 977,
-      "position": "M",
-      "age": 33,
-      "goals": 1,
-      "assists": 4,
-      "citizenship": "China PR",
-      "flag": "flags/cn.png",
-      "jersey": 30,
-      "team": "Shanghai Shenhua"
     },
     {
       "id": 234497,
@@ -3568,19 +3594,6 @@
       "team": "Wuhan Three Towns"
     },
     {
-      "id": 380880,
-      "name": "Liu Chengyu",
-      "teamId": 977,
-      "position": "F",
-      "age": 20,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "China PR",
-      "flag": "flags/cn.png",
-      "jersey": 18,
-      "team": "Shanghai Shenhua"
-    },
-    {
       "id": 201251,
       "name": "Liu Dianzuo",
       "teamId": 21355,
@@ -4452,6 +4465,19 @@
       "team": "Henan"
     },
     {
+      "id": 408808,
+      "name": "Shuai Weihao",
+      "teamId": 21355,
+      "position": "F",
+      "age": 17,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "China PR",
+      "flag": "flags/cn.png",
+      "jersey": 52,
+      "team": "Chengdu Rongcheng"
+    },
+    {
       "id": 363426,
       "name": "Sirong Li",
       "teamId": 21910,
@@ -4523,7 +4549,7 @@
       "position": "D",
       "age": 26,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Hong Kong",
       "flag": "flags/hk.png",
       "jersey": 31,
@@ -4762,19 +4788,6 @@
       "flag": "flags/cn.png",
       "jersey": 18,
       "team": "Henan"
-    },
-    {
-      "id": 286503,
-      "name": "Wang Haijian",
-      "teamId": 977,
-      "position": "M",
-      "age": 26,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "China PR",
-      "flag": "flags/cn.png",
-      "jersey": 33,
-      "team": "Shanghai Shenhua"
     },
     {
       "id": 361777,
@@ -6270,19 +6283,6 @@
       "flag": "flags/cn.png",
       "jersey": 24,
       "team": "Shanghai Port"
-    },
-    {
-      "id": 408808,
-      "name": "Shuai Weihao",
-      "teamId": 21355,
-      "position": "F",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "citizenship": "China PR",
-      "flag": "flags/cn.png",
-      "jersey": 52,
-      "team": "Chengdu Rongcheng"
     },
     {
       "id": 419836,
