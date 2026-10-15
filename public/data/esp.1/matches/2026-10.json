@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-12T02:27:17.904Z",
+  "updateTime": "2026-10-15T01:37:10.127Z",
   "league": "esp.1",
   "month": "2026-10",
   "count": 36,
@@ -243,16 +243,17 @@
       "eventId": "401882852",
       "date": "2026-10-12T19:00Z",
       "name": "Sevilla at Levante",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+14'",
+      "period": 2,
       "venue": "Estadi Ciutat de València",
       "home": {
         "id": 1538,
         "name": "Levante",
         "abbreviation": "LEV",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
-        "score": 0,
+        "score": 3,
         "winner": null
       },
       "away": {
@@ -260,7 +261,7 @@
         "name": "Sevilla",
         "abbreviation": "SEV",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
-        "score": 0,
+        "score": 3,
         "winner": null
       }
     },

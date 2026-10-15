@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-24T07:04:19.100Z",
+  "updateTime": "2026-10-15T01:21:54.993Z",
   "league": "ita.1",
   "season": "2026",
   "id": 384519,
@@ -59,7 +59,10 @@
       "wins": 0,
       "wonCorners": 0,
       "yellowCards": 0,
+      "duelsLost": 0,
       "duelsWon": 4,
+      "duels": 4,
+      "secondYellow": 0,
       "touches": 24
     },
     "goalKeeping": {
@@ -78,7 +81,8 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
@@ -123,7 +127,11 @@
       "totalLongBalls": 2,
       "totalPasses": 17,
       "totalShots": 0,
-      "totalThroughBalls": 0
+      "totalThroughBalls": 0,
+      "bigChanceCreated": 0,
+      "bigChanceMissed": 0,
+      "progressiveCarries": 0,
+      "touchesInOppBox": 0
     }
   }
 }

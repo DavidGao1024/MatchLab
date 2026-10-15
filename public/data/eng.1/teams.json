@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-12T01:57:36.924Z",
+  "updateTime": "2026-10-15T01:09:05.397Z",
   "league": "eng.1",
   "season": "2026",
   "count": 20,
@@ -211,15 +211,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 1,
+        "wins": 2,
         "draws": 0,
         "losses": 4,
-        "played": 5,
-        "points": 3,
-        "goalDiff": -9,
-        "goalsFor": 1,
-        "goalsAgainst": 10,
-        "summary": "1-0-4"
+        "played": 6,
+        "points": 6,
+        "goalDiff": -6,
+        "goalsFor": 5,
+        "goalsAgainst": 11,
+        "summary": "2-0-4"
       }
     },
     {
@@ -523,13 +523,13 @@
       "record": {
         "wins": 2,
         "draws": 2,
-        "losses": 1,
-        "played": 5,
+        "losses": 2,
+        "played": 6,
         "points": 8,
-        "goalDiff": 0,
-        "goalsFor": 9,
-        "goalsAgainst": 9,
-        "summary": "2-2-1"
+        "goalDiff": -3,
+        "goalsFor": 10,
+        "goalsAgainst": 13,
+        "summary": "2-2-2"
       }
     },
     {
@@ -607,7 +607,11 @@
       "alternateColor": "#0B1426",
       "logo": "logos/367.png",
       "logoDark": "logos/367-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Tottenham Hotspur Stadium",
+        "city": "London",
+        "country": "England"
+      },
       "isActive": true,
       "record": {
         "wins": 0,

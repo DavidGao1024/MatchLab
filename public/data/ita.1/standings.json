@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-12T02:27:24.141Z",
+  "updateTime": "2026-10-15T01:37:15.678Z",
   "league": "ita.1",
   "season": "2026",
-  "matchesCounted": 58,
+  "matchesCounted": 60,
   "count": 20,
   "standings": [
     {
@@ -125,6 +125,19 @@
     },
     {
       "rank": 10,
+      "teamId": 105,
+      "team": "Atalanta",
+      "played": 6,
+      "won": 3,
+      "drawn": 0,
+      "lost": 3,
+      "goalsFor": 8,
+      "goalsAgainst": 8,
+      "goalDiff": 0,
+      "points": 9
+    },
+    {
+      "rank": 11,
       "teamId": 3997,
       "team": "Sassuolo",
       "played": 6,
@@ -137,20 +150,20 @@
       "points": 8
     },
     {
-      "rank": 11,
-      "teamId": 105,
-      "team": "Atalanta",
-      "played": 5,
+      "rank": 12,
+      "teamId": 239,
+      "team": "Torino",
+      "played": 6,
       "won": 2,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 3,
-      "goalsFor": 5,
-      "goalsAgainst": 7,
+      "goalsFor": 7,
+      "goalsAgainst": 9,
       "goalDiff": -2,
-      "points": 6
+      "points": 7
     },
     {
-      "rank": 12,
+      "rank": 13,
       "teamId": 113,
       "team": "Lecce",
       "played": 6,
@@ -163,7 +176,7 @@
       "points": 6
     },
     {
-      "rank": 13,
+      "rank": 14,
       "teamId": 107,
       "team": "Bologna",
       "played": 6,
@@ -176,29 +189,16 @@
       "points": 5
     },
     {
-      "rank": 14,
+      "rank": 15,
       "teamId": 118,
       "team": "Udinese",
-      "played": 5,
+      "played": 6,
       "won": 1,
       "drawn": 1,
-      "lost": 3,
-      "goalsFor": 8,
-      "goalsAgainst": 11,
-      "goalDiff": -3,
-      "points": 4
-    },
-    {
-      "rank": 15,
-      "teamId": 239,
-      "team": "Torino",
-      "played": 5,
-      "won": 1,
-      "drawn": 1,
-      "lost": 3,
-      "goalsFor": 5,
-      "goalsAgainst": 8,
-      "goalDiff": -3,
+      "lost": 4,
+      "goalsFor": 9,
+      "goalsAgainst": 13,
+      "goalDiff": -4,
       "points": 4
     },
     {
@@ -257,13 +257,13 @@
       "rank": 20,
       "teamId": 17530,
       "team": "Venezia",
-      "played": 5,
+      "played": 6,
       "won": 0,
       "drawn": 0,
-      "lost": 5,
-      "goalsFor": 4,
-      "goalsAgainst": 13,
-      "goalDiff": -9,
+      "lost": 6,
+      "goalsFor": 5,
+      "goalsAgainst": 16,
+      "goalDiff": -11,
       "points": 0
     }
   ]

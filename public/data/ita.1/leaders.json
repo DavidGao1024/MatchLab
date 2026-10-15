@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-12T02:13:22.097Z",
+  "updateTime": "2026-10-15T01:24:04.135Z",
   "league": "ita.1",
   "season": "2026",
   "categories": [
@@ -12,7 +12,7 @@
         {
           "rank": 1,
           "value": 6,
-          "displayValue": "Matches: 5, Goals: 6",
+          "displayValue": "Matches: 6, Goals: 6",
           "athleteId": 259481,
           "athleteName": "Donyell Malen",
           "teamId": 104,
@@ -30,16 +30,16 @@
         {
           "rank": 3,
           "value": 4,
-          "displayValue": "Matches: 5, Goals: 4",
-          "athleteId": 219713,
-          "athleteName": "Lautaro Martínez",
-          "teamId": 110,
-          "teamName": "Internazionale"
+          "displayValue": "Matches: 6, Goals: 4",
+          "athleteId": 290545,
+          "athleteName": "Daniel Maldini",
+          "teamId": 2925,
+          "teamName": "Cagliari"
         },
         {
           "rank": 4,
           "value": 4,
-          "displayValue": "Matches: 4, Goals: 4",
+          "displayValue": "Matches: 5, Goals: 4",
           "athleteId": 384482,
           "athleteName": "Gustavo Varela",
           "teamId": 4007,
@@ -47,6 +47,15 @@
         },
         {
           "rank": 5,
+          "value": 4,
+          "displayValue": "Matches: 5, Goals: 4",
+          "athleteId": 219713,
+          "athleteName": "Lautaro Martínez",
+          "teamId": 110,
+          "teamName": "Internazionale"
+        },
+        {
+          "rank": 6,
           "value": 3,
           "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 360714,
@@ -55,7 +64,16 @@
           "teamName": "Frosinone"
         },
         {
-          "rank": 6,
+          "rank": 7,
+          "value": 3,
+          "displayValue": "Matches: 6, Goals: 3",
+          "athleteId": 270817,
+          "athleteName": "Jurgen Ekkelenkamp",
+          "teamId": 118,
+          "teamName": "Udinese"
+        },
+        {
+          "rank": 8,
           "value": 3,
           "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 376473,
@@ -64,27 +82,9 @@
           "teamName": "Fiorentina"
         },
         {
-          "rank": 7,
-          "value": 3,
-          "displayValue": "Matches: 6, Goals: 3",
-          "athleteId": 134947,
-          "athleteName": "Kevin De Bruyne",
-          "teamId": 114,
-          "teamName": "Napoli"
-        },
-        {
-          "rank": 8,
-          "value": 3,
-          "displayValue": "Matches: 5, Goals: 3",
-          "athleteId": 275444,
-          "athleteName": "Milutin Osmajic",
-          "teamId": 3263,
-          "teamName": "Genoa"
-        },
-        {
           "rank": 9,
           "value": 3,
-          "displayValue": "Matches: 5, Goals: 3",
+          "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 250850,
           "athleteName": "Davide Frattesi",
           "teamId": 112,
@@ -93,25 +93,25 @@
         {
           "rank": 10,
           "value": 3,
-          "displayValue": "Matches: 5, Goals: 3",
-          "athleteId": 290545,
-          "athleteName": "Daniel Maldini",
-          "teamId": 2925,
-          "teamName": "Cagliari"
+          "displayValue": "Matches: 6, Goals: 3",
+          "athleteId": 176203,
+          "athleteName": "Adrien Rabiot",
+          "teamId": 103,
+          "teamName": "AC Milan"
         },
         {
           "rank": 11,
           "value": 3,
-          "displayValue": "Matches: 5, Goals: 3",
-          "athleteId": 217331,
-          "athleteName": "Marcus Thuram",
-          "teamId": 110,
-          "teamName": "Internazionale"
+          "displayValue": "Matches: 6, Goals: 3",
+          "athleteId": 134947,
+          "athleteName": "Kevin De Bruyne",
+          "teamId": 114,
+          "teamName": "Napoli"
         },
         {
           "rank": 12,
           "value": 3,
-          "displayValue": "Matches: 5, Goals: 3",
+          "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 344917,
           "athleteName": "Vasilije Adzic",
           "teamId": 3997,
@@ -120,6 +120,42 @@
         {
           "rank": 13,
           "value": 3,
+          "displayValue": "Matches: 6, Goals: 3",
+          "athleteId": 258158,
+          "athleteName": "Nikola Krstovic",
+          "teamId": 105,
+          "teamName": "Atalanta"
+        },
+        {
+          "rank": 14,
+          "value": 3,
+          "displayValue": "Matches: 5, Goals: 3",
+          "athleteId": 275444,
+          "athleteName": "Milutin Osmajic",
+          "teamId": 3263,
+          "teamName": "Genoa"
+        },
+        {
+          "rank": 15,
+          "value": 3,
+          "displayValue": "Matches: 5, Goals: 3",
+          "athleteId": 217331,
+          "athleteName": "Marcus Thuram",
+          "teamId": 110,
+          "teamName": "Internazionale"
+        },
+        {
+          "rank": 16,
+          "value": 3,
+          "displayValue": "Matches: 4, Goals: 3",
+          "athleteId": 340678,
+          "athleteName": "Diego Moreira",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 17,
+          "value": 3,
           "displayValue": "Matches: 4, Goals: 3",
           "athleteId": 170785,
           "athleteName": "Hakan Çalhanoglu",
@@ -127,45 +163,9 @@
           "teamName": "Internazionale"
         },
         {
-          "rank": 14,
-          "value": 3,
-          "displayValue": "Matches: 3, Goals: 3",
-          "athleteId": 340678,
-          "athleteName": "Diego Moreira",
-          "teamId": 103,
-          "teamName": "AC Milan"
-        },
-        {
-          "rank": 15,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 309273,
-          "athleteName": "Rasmus Højlund",
-          "teamId": 114,
-          "teamName": "Napoli"
-        },
-        {
-          "rank": 16,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 312757,
-          "athleteName": "Mateo Pellegrino",
-          "teamId": 109,
-          "teamName": "Fiorentina"
-        },
-        {
-          "rank": 17,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 362674,
-          "athleteName": "Pio Esposito",
-          "teamId": 110,
-          "teamName": "Internazionale"
-        },
-        {
           "rank": 18,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 258307,
           "athleteName": "Bremer",
           "teamId": 111,
@@ -174,7 +174,7 @@
         {
           "rank": 19,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 223947,
           "athleteName": "Lassana Coulibaly",
           "teamId": 113,
@@ -183,16 +183,16 @@
         {
           "rank": 20,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
-          "athleteId": 270817,
-          "athleteName": "Jurgen Ekkelenkamp",
-          "teamId": 118,
-          "teamName": "Udinese"
+          "displayValue": "Matches: 6, Goals: 2",
+          "athleteId": 346916,
+          "athleteName": "Antoine Hainaut",
+          "teamId": 17530,
+          "teamName": "Venezia"
         },
         {
           "rank": 21,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 193919,
           "athleteName": "Hassane Kamara",
           "teamId": 118,
@@ -201,7 +201,7 @@
         {
           "rank": 22,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 364742,
           "athleteName": "Assane Diao",
           "teamId": 2572,
@@ -210,29 +210,29 @@
         {
           "rank": 23,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
+          "athleteId": 309273,
+          "athleteName": "Rasmus Højlund",
+          "teamId": 114,
+          "teamName": "Napoli"
+        },
+        {
+          "rank": 24,
+          "value": 2,
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 285226,
           "athleteName": "Manu Koné",
           "teamId": 104,
           "teamName": "AS Roma"
         },
         {
-          "rank": 24,
+          "rank": 25,
           "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
+          "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 262071,
           "athleteName": "Anastasios Douvikas",
           "teamId": 2572,
           "teamName": "Como"
-        },
-        {
-          "rank": 25,
-          "value": 2,
-          "displayValue": "Matches: 5, Goals: 2",
-          "athleteId": 176203,
-          "athleteName": "Adrien Rabiot",
-          "teamId": 103,
-          "teamName": "AC Milan"
         }
       ]
     },
@@ -244,7 +244,7 @@
         {
           "rank": 1,
           "value": 4,
-          "displayValue": "Matches: 5, Assists: 4",
+          "displayValue": "Matches: 6, Assists: 4",
           "athleteId": 164839,
           "athleteName": "Paulo Dybala",
           "teamId": 104,
@@ -271,68 +271,95 @@
         {
           "rank": 4,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
+          "displayValue": "Matches: 6, Assists: 2",
+          "athleteId": 344844,
+          "athleteName": "Danilo Veiga",
+          "teamId": 113,
+          "teamName": "Lecce"
+        },
+        {
+          "rank": 5,
+          "value": 2,
+          "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 272745,
           "athleteName": "Michel Adopo",
           "teamId": 2925,
           "teamName": "Cagliari"
         },
         {
-          "rank": 5,
+          "rank": 6,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
+          "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 204669,
           "athleteName": "Mattia Zaccagni",
           "teamId": 112,
           "teamName": "Lazio"
         },
         {
-          "rank": 6,
+          "rank": 7,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
+          "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 248440,
           "athleteName": "Samuele Birindelli",
           "teamId": 4007,
           "teamName": "Monza"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
+          "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 212597,
           "athleteName": "Gianluca Mancini",
           "teamId": 104,
           "teamName": "AS Roma"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
+          "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 228298,
           "athleteName": "Samuel Chukwueze",
           "teamId": 103,
           "teamName": "AC Milan"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
+          "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 259871,
           "athleteName": "Ricardo Mangas",
           "teamId": 4007,
           "teamName": "Monza"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
+          "displayValue": "Matches: 6, Assists: 2",
+          "athleteId": 287790,
+          "athleteName": "Nicolò Cambiaghi",
+          "teamId": 107,
+          "teamName": "Bologna"
+        },
+        {
+          "rank": 12,
+          "value": 2,
+          "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 288901,
           "athleteName": "Nuno Tavares",
           "teamId": 112,
           "teamName": "Lazio"
         },
         {
-          "rank": 11,
+          "rank": 13,
+          "value": 2,
+          "displayValue": "Matches: 6, Assists: 2",
+          "athleteId": 176203,
+          "athleteName": "Adrien Rabiot",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 14,
           "value": 2,
           "displayValue": "Matches: 5, Assists: 2",
           "athleteId": 297220,
@@ -341,16 +368,7 @@
           "teamName": "Genoa"
         },
         {
-          "rank": 12,
-          "value": 2,
-          "displayValue": "Matches: 5, Assists: 2",
-          "athleteId": 176203,
-          "athleteName": "Adrien Rabiot",
-          "teamId": 103,
-          "teamName": "AC Milan"
-        },
-        {
-          "rank": 13,
+          "rank": 15,
           "value": 2,
           "displayValue": "Matches: 5, Assists: 2",
           "athleteId": 217331,
@@ -359,7 +377,34 @@
           "teamName": "Internazionale"
         },
         {
-          "rank": 14,
+          "rank": 16,
+          "value": 2,
+          "displayValue": "Matches: 5, Assists: 2",
+          "athleteId": 233654,
+          "athleteName": "Keinan Davis",
+          "teamId": 118,
+          "teamName": "Udinese"
+        },
+        {
+          "rank": 17,
+          "value": 2,
+          "displayValue": "Matches: 5, Assists: 2",
+          "athleteId": 323113,
+          "athleteName": "Tijjani Noslin",
+          "teamId": 112,
+          "teamName": "Lazio"
+        },
+        {
+          "rank": 18,
+          "value": 2,
+          "displayValue": "Matches: 5, Assists: 2",
+          "athleteId": 260004,
+          "athleteName": "Ivan Ilic",
+          "teamId": 113,
+          "teamName": "Lecce"
+        },
+        {
+          "rank": 19,
           "value": 2,
           "displayValue": "Matches: 4, Assists: 2",
           "athleteId": 263705,
@@ -368,25 +413,7 @@
           "teamName": "Venezia"
         },
         {
-          "rank": 15,
-          "value": 2,
-          "displayValue": "Matches: 4, Assists: 2",
-          "athleteId": 233654,
-          "athleteName": "Keinan Davis",
-          "teamId": 118,
-          "teamName": "Udinese"
-        },
-        {
-          "rank": 16,
-          "value": 2,
-          "displayValue": "Matches: 4, Assists: 2",
-          "athleteId": 260004,
-          "athleteName": "Ivan Ilic",
-          "teamId": 113,
-          "teamName": "Lecce"
-        },
-        {
-          "rank": 17,
+          "rank": 20,
           "value": 1,
           "displayValue": "Matches: 6, Assists: 1",
           "athleteId": 310216,
@@ -395,7 +422,34 @@
           "teamName": "Fiorentina"
         },
         {
-          "rank": 18,
+          "rank": 21,
+          "value": 1,
+          "displayValue": "Matches: 6, Assists: 1",
+          "athleteId": 290375,
+          "athleteName": "Strahinja Pavlovic",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 22,
+          "value": 1,
+          "displayValue": "Matches: 6, Assists: 1",
+          "athleteId": 272719,
+          "athleteName": "Armand Laurienté",
+          "teamId": 3997,
+          "teamName": "Sassuolo"
+        },
+        {
+          "rank": 23,
+          "value": 1,
+          "displayValue": "Matches: 6, Assists: 1",
+          "athleteId": 223947,
+          "athleteName": "Lassana Coulibaly",
+          "teamId": 113,
+          "teamName": "Lecce"
+        },
+        {
+          "rank": 24,
           "value": 1,
           "displayValue": "Matches: 6, Assists: 1",
           "athleteId": 205576,
@@ -404,67 +458,13 @@
           "teamName": "Napoli"
         },
         {
-          "rank": 19,
+          "rank": 25,
           "value": 1,
           "displayValue": "Matches: 6, Assists: 1",
           "athleteId": 155904,
           "athleteName": "Giovanni Di Lorenzo",
           "teamId": 114,
           "teamName": "Napoli"
-        },
-        {
-          "rank": 20,
-          "value": 1,
-          "displayValue": "Matches: 6, Assists: 1",
-          "athleteId": 360714,
-          "athleteName": "Giorgi Kvernadze",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 21,
-          "value": 1,
-          "displayValue": "Matches: 6, Assists: 1",
-          "athleteId": 324256,
-          "athleteName": "Mikael Ellertsson",
-          "teamId": 3263,
-          "teamName": "Genoa"
-        },
-        {
-          "rank": 22,
-          "value": 1,
-          "displayValue": "Matches: 6, Assists: 1",
-          "athleteId": 236038,
-          "athleteName": "Giacomo Calo",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 23,
-          "value": 1,
-          "displayValue": "Matches: 6, Assists: 1",
-          "athleteId": 346974,
-          "athleteName": "Gabriele Bracaglia",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 24,
-          "value": 1,
-          "displayValue": "Matches: 6, Assists: 1",
-          "athleteId": 360061,
-          "athleteName": "Cher Ndour",
-          "teamId": 109,
-          "teamName": "Fiorentina"
-        },
-        {
-          "rank": 25,
-          "value": 1,
-          "displayValue": "Matches: 6, Assists: 1",
-          "athleteId": 315213,
-          "athleteName": "Anthony Oyono",
-          "teamId": 4057,
-          "teamName": "Frosinone"
         }
       ]
     },
@@ -495,10 +495,10 @@
           "rank": 3,
           "value": 4,
           "displayValue": "4",
-          "athleteId": 219713,
-          "athleteName": "Lautaro Martínez",
-          "teamId": 110,
-          "teamName": "Internazionale"
+          "athleteId": 290545,
+          "athleteName": "Daniel Maldini",
+          "teamId": 2925,
+          "teamName": "Cagliari"
         },
         {
           "rank": 4,
@@ -511,6 +511,15 @@
         },
         {
           "rank": 5,
+          "value": 4,
+          "displayValue": "4",
+          "athleteId": 219713,
+          "athleteName": "Lautaro Martínez",
+          "teamId": 110,
+          "teamName": "Internazionale"
+        },
+        {
+          "rank": 6,
           "value": 3,
           "displayValue": "3",
           "athleteId": 360714,
@@ -519,31 +528,22 @@
           "teamName": "Frosinone"
         },
         {
-          "rank": 6,
+          "rank": 7,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 270817,
+          "athleteName": "Jurgen Ekkelenkamp",
+          "teamId": 118,
+          "teamName": "Udinese"
+        },
+        {
+          "rank": 8,
           "value": 3,
           "displayValue": "3",
           "athleteId": 376473,
           "athleteName": "Franco Mastantuono",
           "teamId": 109,
           "teamName": "Fiorentina"
-        },
-        {
-          "rank": 7,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 134947,
-          "athleteName": "Kevin De Bruyne",
-          "teamId": 114,
-          "teamName": "Napoli"
-        },
-        {
-          "rank": 8,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 275444,
-          "athleteName": "Milutin Osmajic",
-          "teamId": 3263,
-          "teamName": "Genoa"
         },
         {
           "rank": 9,
@@ -558,19 +558,19 @@
           "rank": 10,
           "value": 3,
           "displayValue": "3",
-          "athleteId": 290545,
-          "athleteName": "Daniel Maldini",
-          "teamId": 2925,
-          "teamName": "Cagliari"
+          "athleteId": 176203,
+          "athleteName": "Adrien Rabiot",
+          "teamId": 103,
+          "teamName": "AC Milan"
         },
         {
           "rank": 11,
           "value": 3,
           "displayValue": "3",
-          "athleteId": 217331,
-          "athleteName": "Marcus Thuram",
-          "teamId": 110,
-          "teamName": "Internazionale"
+          "athleteId": 134947,
+          "athleteName": "Kevin De Bruyne",
+          "teamId": 114,
+          "teamName": "Napoli"
         },
         {
           "rank": 12,
@@ -585,13 +585,31 @@
           "rank": 13,
           "value": 3,
           "displayValue": "3",
-          "athleteId": 170785,
-          "athleteName": "Hakan Çalhanoglu",
+          "athleteId": 258158,
+          "athleteName": "Nikola Krstovic",
+          "teamId": 105,
+          "teamName": "Atalanta"
+        },
+        {
+          "rank": 14,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 275444,
+          "athleteName": "Milutin Osmajic",
+          "teamId": 3263,
+          "teamName": "Genoa"
+        },
+        {
+          "rank": 15,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 217331,
+          "athleteName": "Marcus Thuram",
           "teamId": 110,
           "teamName": "Internazionale"
         },
         {
-          "rank": 14,
+          "rank": 16,
           "value": 3,
           "displayValue": "3",
           "athleteId": 340678,
@@ -600,29 +618,11 @@
           "teamName": "AC Milan"
         },
         {
-          "rank": 15,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 309273,
-          "athleteName": "Rasmus Højlund",
-          "teamId": 114,
-          "teamName": "Napoli"
-        },
-        {
-          "rank": 16,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 312757,
-          "athleteName": "Mateo Pellegrino",
-          "teamId": 109,
-          "teamName": "Fiorentina"
-        },
-        {
           "rank": 17,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 362674,
-          "athleteName": "Pio Esposito",
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 170785,
+          "athleteName": "Hakan Çalhanoglu",
           "teamId": 110,
           "teamName": "Internazionale"
         },
@@ -648,10 +648,10 @@
           "rank": 20,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 270817,
-          "athleteName": "Jurgen Ekkelenkamp",
-          "teamId": 118,
-          "teamName": "Udinese"
+          "athleteId": 346916,
+          "athleteName": "Antoine Hainaut",
+          "teamId": 17530,
+          "teamName": "Venezia"
         },
         {
           "rank": 21,
@@ -675,28 +675,28 @@
           "rank": 23,
           "value": 2,
           "displayValue": "2",
+          "athleteId": 309273,
+          "athleteName": "Rasmus Højlund",
+          "teamId": 114,
+          "teamName": "Napoli"
+        },
+        {
+          "rank": 24,
+          "value": 2,
+          "displayValue": "2",
           "athleteId": 285226,
           "athleteName": "Manu Koné",
           "teamId": 104,
           "teamName": "AS Roma"
         },
         {
-          "rank": 24,
+          "rank": 25,
           "value": 2,
           "displayValue": "2",
           "athleteId": 262071,
           "athleteName": "Anastasios Douvikas",
           "teamId": 2572,
           "teamName": "Como"
-        },
-        {
-          "rank": 25,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 176203,
-          "athleteName": "Adrien Rabiot",
-          "teamId": 103,
-          "teamName": "AC Milan"
         }
       ]
     },
@@ -736,13 +736,22 @@
           "rank": 4,
           "value": 2,
           "displayValue": "2",
+          "athleteId": 344844,
+          "athleteName": "Danilo Veiga",
+          "teamId": 113,
+          "teamName": "Lecce"
+        },
+        {
+          "rank": 5,
+          "value": 2,
+          "displayValue": "2",
           "athleteId": 272745,
           "athleteName": "Michel Adopo",
           "teamId": 2925,
           "teamName": "Cagliari"
         },
         {
-          "rank": 5,
+          "rank": 6,
           "value": 2,
           "displayValue": "2",
           "athleteId": 204669,
@@ -751,7 +760,7 @@
           "teamName": "Lazio"
         },
         {
-          "rank": 6,
+          "rank": 7,
           "value": 2,
           "displayValue": "2",
           "athleteId": 248440,
@@ -760,7 +769,7 @@
           "teamName": "Monza"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "value": 2,
           "displayValue": "2",
           "athleteId": 212597,
@@ -769,7 +778,7 @@
           "teamName": "AS Roma"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "value": 2,
           "displayValue": "2",
           "athleteId": 228298,
@@ -778,7 +787,7 @@
           "teamName": "AC Milan"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "value": 2,
           "displayValue": "2",
           "athleteId": 259871,
@@ -787,7 +796,16 @@
           "teamName": "Monza"
         },
         {
-          "rank": 10,
+          "rank": 11,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 287790,
+          "athleteName": "Nicolò Cambiaghi",
+          "teamId": 107,
+          "teamName": "Bologna"
+        },
+        {
+          "rank": 12,
           "value": 2,
           "displayValue": "2",
           "athleteId": 288901,
@@ -796,16 +814,7 @@
           "teamName": "Lazio"
         },
         {
-          "rank": 11,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 297220,
-          "athleteName": "Lorenzo Colombo",
-          "teamId": 3263,
-          "teamName": "Genoa"
-        },
-        {
-          "rank": 12,
+          "rank": 13,
           "value": 2,
           "displayValue": "2",
           "athleteId": 176203,
@@ -814,7 +823,16 @@
           "teamName": "AC Milan"
         },
         {
-          "rank": 13,
+          "rank": 14,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 297220,
+          "athleteName": "Lorenzo Colombo",
+          "teamId": 3263,
+          "teamName": "Genoa"
+        },
+        {
+          "rank": 15,
           "value": 2,
           "displayValue": "2",
           "athleteId": 217331,
@@ -823,16 +841,7 @@
           "teamName": "Internazionale"
         },
         {
-          "rank": 14,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 263705,
-          "athleteName": "Gianluca Busio",
-          "teamId": 17530,
-          "teamName": "Venezia"
-        },
-        {
-          "rank": 15,
+          "rank": 16,
           "value": 2,
           "displayValue": "2",
           "athleteId": 233654,
@@ -841,7 +850,16 @@
           "teamName": "Udinese"
         },
         {
-          "rank": 16,
+          "rank": 17,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 323113,
+          "athleteName": "Tijjani Noslin",
+          "teamId": 112,
+          "teamName": "Lazio"
+        },
+        {
+          "rank": 18,
           "value": 2,
           "displayValue": "2",
           "athleteId": 260004,
@@ -850,7 +868,16 @@
           "teamName": "Lecce"
         },
         {
-          "rank": 17,
+          "rank": 19,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 263705,
+          "athleteName": "Gianluca Busio",
+          "teamId": 17530,
+          "teamName": "Venezia"
+        },
+        {
+          "rank": 20,
           "value": 1,
           "displayValue": "1",
           "athleteId": 310216,
@@ -859,7 +886,34 @@
           "teamName": "Fiorentina"
         },
         {
-          "rank": 18,
+          "rank": 21,
+          "value": 1,
+          "displayValue": "1",
+          "athleteId": 290375,
+          "athleteName": "Strahinja Pavlovic",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 22,
+          "value": 1,
+          "displayValue": "1",
+          "athleteId": 272719,
+          "athleteName": "Armand Laurienté",
+          "teamId": 3997,
+          "teamName": "Sassuolo"
+        },
+        {
+          "rank": 23,
+          "value": 1,
+          "displayValue": "1",
+          "athleteId": 223947,
+          "athleteName": "Lassana Coulibaly",
+          "teamId": 113,
+          "teamName": "Lecce"
+        },
+        {
+          "rank": 24,
           "value": 1,
           "displayValue": "1",
           "athleteId": 205576,
@@ -868,67 +922,13 @@
           "teamName": "Napoli"
         },
         {
-          "rank": 19,
+          "rank": 25,
           "value": 1,
           "displayValue": "1",
           "athleteId": 155904,
           "athleteName": "Giovanni Di Lorenzo",
           "teamId": 114,
           "teamName": "Napoli"
-        },
-        {
-          "rank": 20,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 360714,
-          "athleteName": "Giorgi Kvernadze",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 21,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 324256,
-          "athleteName": "Mikael Ellertsson",
-          "teamId": 3263,
-          "teamName": "Genoa"
-        },
-        {
-          "rank": 22,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 236038,
-          "athleteName": "Giacomo Calo",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 23,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 346974,
-          "athleteName": "Gabriele Bracaglia",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 24,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 360061,
-          "athleteName": "Cher Ndour",
-          "teamId": 109,
-          "teamName": "Fiorentina"
-        },
-        {
-          "rank": 25,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 315213,
-          "athleteName": "Anthony Oyono",
-          "teamId": 4057,
-          "teamName": "Frosinone"
         }
       ]
     },
@@ -950,13 +950,31 @@
           "rank": 2,
           "value": 9,
           "displayValue": "9",
+          "athleteId": 337970,
+          "athleteName": "Nico Paz",
+          "teamId": 2572,
+          "teamName": "Como"
+        },
+        {
+          "rank": 3,
+          "value": 9,
+          "displayValue": "9",
           "athleteId": 376473,
           "athleteName": "Franco Mastantuono",
           "teamId": 109,
           "teamName": "Fiorentina"
         },
         {
-          "rank": 3,
+          "rank": 4,
+          "value": 8,
+          "displayValue": "8",
+          "athleteId": 204669,
+          "athleteName": "Mattia Zaccagni",
+          "teamId": 112,
+          "teamName": "Lazio"
+        },
+        {
+          "rank": 5,
           "value": 8,
           "displayValue": "8",
           "athleteId": 262071,
@@ -965,7 +983,7 @@
           "teamName": "Como"
         },
         {
-          "rank": 4,
+          "rank": 6,
           "value": 8,
           "displayValue": "8",
           "athleteId": 323974,
@@ -974,16 +992,7 @@
           "teamName": "AS Roma"
         },
         {
-          "rank": 5,
-          "value": 7,
-          "displayValue": "7",
-          "athleteId": 204669,
-          "athleteName": "Mattia Zaccagni",
-          "teamId": 112,
-          "teamName": "Lazio"
-        },
-        {
-          "rank": 6,
+          "rank": 7,
           "value": 7,
           "displayValue": "7",
           "athleteId": 288472,
@@ -992,16 +1001,16 @@
           "teamName": "Venezia"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "value": 7,
           "displayValue": "7",
-          "athleteId": 301980,
-          "athleteName": "José Romero",
-          "teamId": 115,
-          "teamName": "Parma"
+          "athleteId": 258158,
+          "athleteName": "Nikola Krstovic",
+          "teamId": 105,
+          "teamName": "Atalanta"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "value": 7,
           "displayValue": "7",
           "athleteId": 173817,
@@ -1010,7 +1019,43 @@
           "teamName": "Sassuolo"
         },
         {
-          "rank": 9,
+          "rank": 10,
+          "value": 7,
+          "displayValue": "7",
+          "athleteId": 301980,
+          "athleteName": "José Romero",
+          "teamId": 115,
+          "teamName": "Parma"
+        },
+        {
+          "rank": 11,
+          "value": 7,
+          "displayValue": "7",
+          "athleteId": 260300,
+          "athleteName": "Edon Zhegrova",
+          "teamId": 111,
+          "teamName": "Juventus"
+        },
+        {
+          "rank": 12,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 288896,
+          "athleteName": "Gonçalo Ramos",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 13,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 164839,
+          "athleteName": "Paulo Dybala",
+          "teamId": 104,
+          "teamName": "AS Roma"
+        },
+        {
+          "rank": 14,
           "value": 6,
           "displayValue": "6",
           "athleteId": 319265,
@@ -1019,7 +1064,16 @@
           "teamName": "Frosinone"
         },
         {
-          "rank": 10,
+          "rank": 15,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 265926,
+          "athleteName": "John Yeboah",
+          "teamId": 17530,
+          "teamName": "Venezia"
+        },
+        {
+          "rank": 16,
           "value": 6,
           "displayValue": "6",
           "athleteId": 362674,
@@ -1028,7 +1082,7 @@
           "teamName": "Internazionale"
         },
         {
-          "rank": 11,
+          "rank": 17,
           "value": 6,
           "displayValue": "6",
           "athleteId": 219713,
@@ -1037,7 +1091,7 @@
           "teamName": "Internazionale"
         },
         {
-          "rank": 12,
+          "rank": 18,
           "value": 6,
           "displayValue": "6",
           "athleteId": 217331,
@@ -1046,16 +1100,7 @@
           "teamName": "Internazionale"
         },
         {
-          "rank": 13,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 360714,
-          "athleteName": "Giorgi Kvernadze",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 14,
+          "rank": 19,
           "value": 5,
           "displayValue": "5",
           "athleteId": 272719,
@@ -1064,16 +1109,7 @@
           "teamName": "Sassuolo"
         },
         {
-          "rank": 15,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 204441,
-          "athleteName": "Nicolò Barella",
-          "teamId": 110,
-          "teamName": "Internazionale"
-        },
-        {
-          "rank": 16,
+          "rank": 20,
           "value": 5,
           "displayValue": "5",
           "athleteId": 6729,
@@ -1082,7 +1118,25 @@
           "teamName": "Cagliari"
         },
         {
-          "rank": 17,
+          "rank": 21,
+          "value": 5,
+          "displayValue": "5",
+          "athleteId": 360714,
+          "athleteName": "Giorgi Kvernadze",
+          "teamId": 4057,
+          "teamName": "Frosinone"
+        },
+        {
+          "rank": 22,
+          "value": 5,
+          "displayValue": "5",
+          "athleteId": 270817,
+          "athleteName": "Jurgen Ekkelenkamp",
+          "teamId": 118,
+          "teamName": "Udinese"
+        },
+        {
+          "rank": 23,
           "value": 5,
           "displayValue": "5",
           "athleteId": 193919,
@@ -1091,76 +1145,22 @@
           "teamName": "Udinese"
         },
         {
-          "rank": 18,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 337970,
-          "athleteName": "Nico Paz",
-          "teamId": 2572,
-          "teamName": "Como"
-        },
-        {
-          "rank": 19,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 265926,
-          "athleteName": "John Yeboah",
-          "teamId": 17530,
-          "teamName": "Venezia"
-        },
-        {
-          "rank": 20,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 312659,
-          "athleteName": "Francisco Conceição",
-          "teamId": 111,
-          "teamName": "Juventus"
-        },
-        {
-          "rank": 21,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 180956,
-          "athleteName": "Federico Bernardeschi",
-          "teamId": 107,
-          "teamName": "Bologna"
-        },
-        {
-          "rank": 22,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 344917,
-          "athleteName": "Vasilije Adzic",
-          "teamId": 3997,
-          "teamName": "Sassuolo"
-        },
-        {
-          "rank": 23,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 384482,
-          "athleteName": "Gustavo Varela",
-          "teamId": 4007,
-          "teamName": "Monza"
-        },
-        {
           "rank": 24,
           "value": 5,
           "displayValue": "5",
-          "athleteId": 377170,
-          "athleteName": "Idrissa Gueye",
-          "teamId": 118,
-          "teamName": "Udinese"
+          "athleteId": 278210,
+          "athleteName": "Éderson",
+          "teamId": 105,
+          "teamName": "Atalanta"
         },
         {
           "rank": 25,
           "value": 5,
           "displayValue": "5",
-          "athleteId": 210392,
-          "athleteName": "Rolando Mandragora",
-          "teamId": 239,
-          "teamName": "Torino"
+          "athleteId": 290545,
+          "athleteName": "Daniel Maldini",
+          "teamId": 2925,
+          "teamName": "Cagliari"
         }
       ]
     },
@@ -1173,13 +1173,31 @@
           "rank": 1,
           "value": 3,
           "displayValue": "3",
+          "athleteId": 344844,
+          "athleteName": "Danilo Veiga",
+          "teamId": 113,
+          "teamName": "Lecce"
+        },
+        {
+          "rank": 2,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 290375,
+          "athleteName": "Strahinja Pavlovic",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 3,
+          "value": 3,
+          "displayValue": "3",
           "athleteId": 281736,
           "athleteName": "Leo Østigard",
           "teamId": 3263,
           "teamName": "Genoa"
         },
         {
-          "rank": 2,
+          "rank": 4,
           "value": 3,
           "displayValue": "3",
           "athleteId": 346974,
@@ -1188,7 +1206,16 @@
           "teamName": "Frosinone"
         },
         {
-          "rank": 3,
+          "rank": 5,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 186437,
+          "athleteName": "Alessandro Deiola",
+          "teamId": 2925,
+          "teamName": "Cagliari"
+        },
+        {
+          "rank": 6,
           "value": 3,
           "displayValue": "3",
           "athleteId": 345152,
@@ -1197,16 +1224,16 @@
           "teamName": "Venezia"
         },
         {
-          "rank": 4,
+          "rank": 7,
           "value": 3,
           "displayValue": "3",
-          "athleteId": 344844,
-          "athleteName": "Danilo Veiga",
-          "teamId": 113,
-          "teamName": "Lecce"
+          "athleteId": 186457,
+          "athleteName": "Matías Moreno",
+          "teamId": 17530,
+          "teamName": "Venezia"
         },
         {
-          "rank": 5,
+          "rank": 8,
           "value": 2,
           "displayValue": "2",
           "athleteId": 272694,
@@ -1215,52 +1242,7 @@
           "teamName": "Parma"
         },
         {
-          "rank": 6,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 366526,
-          "athleteName": "Mariano Troilo",
-          "teamId": 115,
-          "teamName": "Parma"
-        },
-        {
-          "rank": 7,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 352751,
-          "athleteName": "Gabriele Calvani",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 8,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 319265,
-          "athleteName": "Antonio Raimondo",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
           "rank": 9,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 238296,
-          "athleteName": "Romano Schmid",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 10,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 290375,
-          "athleteName": "Strahinja Pavlovic",
-          "teamId": 103,
-          "teamName": "AC Milan"
-        },
-        {
-          "rank": 11,
           "value": 2,
           "displayValue": "2",
           "athleteId": 237055,
@@ -1269,7 +1251,7 @@
           "teamName": "Udinese"
         },
         {
-          "rank": 12,
+          "rank": 10,
           "value": 2,
           "displayValue": "2",
           "athleteId": 204669,
@@ -1278,16 +1260,16 @@
           "teamName": "Lazio"
         },
         {
-          "rank": 13,
+          "rank": 11,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 186437,
-          "athleteName": "Alessandro Deiola",
-          "teamId": 2925,
-          "teamName": "Cagliari"
+          "athleteId": 366526,
+          "athleteName": "Mariano Troilo",
+          "teamId": 115,
+          "teamName": "Parma"
         },
         {
-          "rank": 14,
+          "rank": 12,
           "value": 2,
           "displayValue": "2",
           "athleteId": 390673,
@@ -1296,7 +1278,34 @@
           "teamName": "Monza"
         },
         {
+          "rank": 13,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 352751,
+          "athleteName": "Gabriele Calvani",
+          "teamId": 4057,
+          "teamName": "Frosinone"
+        },
+        {
+          "rank": 14,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 309570,
+          "athleteName": "Koni De Winter",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
           "rank": 15,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 333311,
+          "athleteName": "Oliver Provstgaard",
+          "teamId": 112,
+          "teamName": "Lazio"
+        },
+        {
+          "rank": 16,
           "value": 2,
           "displayValue": "2",
           "athleteId": 276636,
@@ -1305,16 +1314,25 @@
           "teamName": "Venezia"
         },
         {
-          "rank": 16,
+          "rank": 17,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 367635,
-          "athleteName": "Lorenzo Lucchesi",
-          "teamId": 4007,
-          "teamName": "Monza"
+          "athleteId": 272867,
+          "athleteName": "Torbjørn Heggem",
+          "teamId": 107,
+          "teamName": "Bologna"
         },
         {
-          "rank": 17,
+          "rank": 18,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 319265,
+          "athleteName": "Antonio Raimondo",
+          "teamId": 4057,
+          "teamName": "Frosinone"
+        },
+        {
+          "rank": 19,
           "value": 2,
           "displayValue": "2",
           "athleteId": 222529,
@@ -1323,76 +1341,58 @@
           "teamName": "AS Roma"
         },
         {
-          "rank": 18,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 214562,
-          "athleteName": "Manuel Akanji",
-          "teamId": 110,
-          "teamName": "Internazionale"
-        },
-        {
-          "rank": 19,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 219713,
-          "athleteName": "Lautaro Martínez",
-          "teamId": 110,
-          "teamName": "Internazionale"
-        },
-        {
           "rank": 20,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 318604,
-          "athleteName": "Kialonda Gaspar",
-          "teamId": 113,
-          "teamName": "Lecce"
+          "athleteId": 367635,
+          "athleteName": "Lorenzo Lucchesi",
+          "teamId": 4007,
+          "teamName": "Monza"
         },
         {
           "rank": 21,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 262481,
-          "athleteName": "Luca Ranieri",
-          "teamId": 109,
-          "teamName": "Fiorentina"
+          "athleteId": 238296,
+          "athleteName": "Romano Schmid",
+          "teamId": 4057,
+          "teamName": "Frosinone"
         },
         {
           "rank": 22,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 252385,
-          "athleteName": "Michael Folorunsho",
-          "teamId": 4007,
-          "teamName": "Monza"
+          "athleteId": 364742,
+          "athleteName": "Assane Diao",
+          "teamId": 2572,
+          "teamName": "Como"
         },
         {
           "rank": 23,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 227697,
-          "athleteName": "Jhon Lucumí",
-          "teamId": 111,
-          "teamName": "Juventus"
+          "athleteId": 285226,
+          "athleteName": "Manu Koné",
+          "teamId": 104,
+          "teamName": "AS Roma"
         },
         {
           "rank": 24,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 275015,
-          "athleteName": "Simon Sohm",
-          "teamId": 17530,
-          "teamName": "Venezia"
+          "athleteId": 214689,
+          "athleteName": "Pervis Estupiñán",
+          "teamId": 103,
+          "teamName": "AC Milan"
         },
         {
           "rank": 25,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 347408,
-          "athleteName": "Luca Lipani",
-          "teamId": 3997,
-          "teamName": "Sassuolo"
+          "athleteId": 311475,
+          "athleteName": "Martin Baturina",
+          "teamId": 2572,
+          "teamName": "Como"
         }
       ]
     },
@@ -1405,13 +1405,31 @@
           "rank": 1,
           "value": 1,
           "displayValue": "1",
+          "athleteId": 367635,
+          "athleteName": "Lorenzo Lucchesi",
+          "teamId": 4007,
+          "teamName": "Monza"
+        },
+        {
+          "rank": 2,
+          "value": 1,
+          "displayValue": "1",
+          "athleteId": 259481,
+          "athleteName": "Donyell Malen",
+          "teamId": 104,
+          "teamName": "AS Roma"
+        },
+        {
+          "rank": 3,
+          "value": 1,
+          "displayValue": "1",
           "athleteId": 259975,
           "athleteName": "Johan Vásquez",
           "teamId": 3263,
           "teamName": "Genoa"
         },
         {
-          "rank": 2,
+          "rank": 4,
           "value": 1,
           "displayValue": "1",
           "athleteId": 276692,
@@ -1420,7 +1438,34 @@
           "teamName": "Atalanta"
         },
         {
-          "rank": 3,
+          "rank": 5,
+          "value": 1,
+          "displayValue": "1",
+          "athleteId": 237435,
+          "athleteName": "Eljif Elmas",
+          "teamId": 105,
+          "teamName": "Atalanta"
+        },
+        {
+          "rank": 6,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 380318,
+          "athleteName": "Jacobo Ramón",
+          "teamId": 2572,
+          "teamName": "Como"
+        },
+        {
+          "rank": 7,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 344844,
+          "athleteName": "Danilo Veiga",
+          "teamId": 113,
+          "teamName": "Lecce"
+        },
+        {
+          "rank": 8,
           "value": 0,
           "displayValue": "0",
           "athleteId": 325056,
@@ -1429,7 +1474,7 @@
           "teamName": "Frosinone"
         },
         {
-          "rank": 4,
+          "rank": 9,
           "value": 0,
           "displayValue": "0",
           "athleteId": 310216,
@@ -1438,7 +1483,16 @@
           "teamName": "Fiorentina"
         },
         {
-          "rank": 5,
+          "rank": 10,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 295476,
+          "athleteName": "Maduka Okoye",
+          "teamId": 118,
+          "teamName": "Udinese"
+        },
+        {
+          "rank": 11,
           "value": 0,
           "displayValue": "0",
           "athleteId": 290792,
@@ -1447,7 +1501,70 @@
           "teamName": "Parma"
         },
         {
-          "rank": 6,
+          "rank": 12,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 290375,
+          "athleteName": "Strahinja Pavlovic",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 13,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 290129,
+          "athleteName": "Pierre Kalulu",
+          "teamId": 111,
+          "teamName": "Juventus"
+        },
+        {
+          "rank": 14,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 289560,
+          "athleteName": "Filip Stankovic",
+          "teamId": 17530,
+          "teamName": "Venezia"
+        },
+        {
+          "rank": 15,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 284804,
+          "athleteName": "Marco Carnesecchi",
+          "teamId": 105,
+          "teamName": "Atalanta"
+        },
+        {
+          "rank": 16,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 278987,
+          "athleteName": "Elia Caprile",
+          "teamId": 2925,
+          "teamName": "Cagliari"
+        },
+        {
+          "rank": 17,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 272745,
+          "athleteName": "Michel Adopo",
+          "teamId": 2925,
+          "teamName": "Cagliari"
+        },
+        {
+          "rank": 18,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 272719,
+          "athleteName": "Armand Laurienté",
+          "teamId": 3997,
+          "teamName": "Sassuolo"
+        },
+        {
+          "rank": 19,
           "value": 0,
           "displayValue": "0",
           "athleteId": 272694,
@@ -1456,7 +1573,7 @@
           "teamName": "Parma"
         },
         {
-          "rank": 7,
+          "rank": 20,
           "value": 0,
           "displayValue": "0",
           "athleteId": 270884,
@@ -1465,7 +1582,16 @@
           "teamName": "Genoa"
         },
         {
-          "rank": 8,
+          "rank": 21,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 265140,
+          "athleteName": "Christos Mandas",
+          "teamId": 112,
+          "teamName": "Lazio"
+        },
+        {
+          "rank": 22,
           "value": 0,
           "displayValue": "0",
           "athleteId": 261274,
@@ -1474,157 +1600,31 @@
           "teamName": "Parma"
         },
         {
-          "rank": 9,
+          "rank": 23,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 259838,
+          "athleteName": "Arijanet Muric",
+          "teamId": 3997,
+          "teamName": "Sassuolo"
+        },
+        {
+          "rank": 24,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 258307,
+          "athleteName": "Bremer",
+          "teamId": 111,
+          "teamName": "Juventus"
+        },
+        {
+          "rank": 25,
           "value": 0,
           "displayValue": "0",
           "athleteId": 240533,
           "athleteName": "Josep Martínez",
           "teamId": 110,
           "teamName": "Internazionale"
-        },
-        {
-          "rank": 10,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 205653,
-          "athleteName": "Justin Bijlow",
-          "teamId": 3263,
-          "teamName": "Genoa"
-        },
-        {
-          "rank": 11,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 205576,
-          "athleteName": "Amir Rrahmani",
-          "teamId": 114,
-          "teamName": "Napoli"
-        },
-        {
-          "rank": 12,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 155904,
-          "athleteName": "Giovanni Di Lorenzo",
-          "teamId": 114,
-          "teamName": "Napoli"
-        },
-        {
-          "rank": 13,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 108482,
-          "athleteName": "David de Gea",
-          "teamId": 109,
-          "teamName": "Fiorentina"
-        },
-        {
-          "rank": 14,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 366526,
-          "athleteName": "Mariano Troilo",
-          "teamId": 115,
-          "teamName": "Parma"
-        },
-        {
-          "rank": 15,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 297360,
-          "athleteName": "Rafa Marín",
-          "teamId": 114,
-          "teamName": "Napoli"
-        },
-        {
-          "rank": 16,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 360714,
-          "athleteName": "Giorgi Kvernadze",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 17,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 316609,
-          "athleteName": "Mandela Keita",
-          "teamId": 115,
-          "teamName": "Parma"
-        },
-        {
-          "rank": 18,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 352751,
-          "athleteName": "Gabriele Calvani",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 19,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 324256,
-          "athleteName": "Mikael Ellertsson",
-          "teamId": 3263,
-          "teamName": "Genoa"
-        },
-        {
-          "rank": 20,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 236038,
-          "athleteName": "Giacomo Calo",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 21,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 281736,
-          "athleteName": "Leo Østigard",
-          "teamId": 3263,
-          "teamName": "Genoa"
-        },
-        {
-          "rank": 22,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 188412,
-          "athleteName": "Stanislav Lobotka",
-          "teamId": 114,
-          "teamName": "Napoli"
-        },
-        {
-          "rank": 23,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 346974,
-          "athleteName": "Gabriele Bracaglia",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 24,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 360061,
-          "athleteName": "Cher Ndour",
-          "teamId": 109,
-          "teamName": "Fiorentina"
-        },
-        {
-          "rank": 25,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 319265,
-          "athleteName": "Antonio Raimondo",
-          "teamId": 4057,
-          "teamName": "Frosinone"
         }
       ]
     },
@@ -1635,8 +1635,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 13,
-          "displayValue": "13",
+          "value": 14,
+          "displayValue": "14",
           "athleteId": 202429,
           "athleteName": "Lewis Ferguson",
           "teamId": 107,
@@ -1655,15 +1655,15 @@
           "rank": 3,
           "value": 12,
           "displayValue": "12",
-          "athleteId": 347009,
-          "athleteName": "Lennon Miller",
-          "teamId": 118,
-          "teamName": "Udinese"
+          "athleteId": 252971,
+          "athleteName": "Randal Kolo Muani",
+          "teamId": 111,
+          "teamName": "Juventus"
         },
         {
           "rank": 4,
-          "value": 11,
-          "displayValue": "11",
+          "value": 12,
+          "displayValue": "12",
           "athleteId": 333311,
           "athleteName": "Oliver Provstgaard",
           "teamId": 112,
@@ -1671,6 +1671,24 @@
         },
         {
           "rank": 5,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 347009,
+          "athleteName": "Lennon Miller",
+          "teamId": 118,
+          "teamName": "Udinese"
+        },
+        {
+          "rank": 6,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 344844,
+          "athleteName": "Danilo Veiga",
+          "teamId": 113,
+          "teamName": "Lecce"
+        },
+        {
+          "rank": 7,
           "value": 11,
           "displayValue": "11",
           "athleteId": 346916,
@@ -1679,7 +1697,34 @@
           "teamName": "Venezia"
         },
         {
-          "rank": 6,
+          "rank": 8,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 309570,
+          "athleteName": "Koni De Winter",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 9,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 367635,
+          "athleteName": "Lorenzo Lucchesi",
+          "teamId": 4007,
+          "teamName": "Monza"
+        },
+        {
+          "rank": 10,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 418819,
+          "athleteName": "Paul Mendy",
+          "teamId": 2925,
+          "teamName": "Cagliari"
+        },
+        {
+          "rank": 11,
           "value": 11,
           "displayValue": "11",
           "athleteId": 312659,
@@ -1688,7 +1733,16 @@
           "teamName": "Juventus"
         },
         {
-          "rank": 7,
+          "rank": 12,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 337970,
+          "athleteName": "Nico Paz",
+          "teamId": 2572,
+          "teamName": "Como"
+        },
+        {
+          "rank": 13,
           "value": 10,
           "displayValue": "10",
           "athleteId": 319265,
@@ -1697,61 +1751,25 @@
           "teamName": "Frosinone"
         },
         {
-          "rank": 8,
+          "rank": 14,
           "value": 10,
           "displayValue": "10",
-          "athleteId": 252971,
-          "athleteName": "Randal Kolo Muani",
-          "teamId": 111,
-          "teamName": "Juventus"
+          "athleteId": 288429,
+          "athleteName": "Santiago Pierotti",
+          "teamId": 113,
+          "teamName": "Lecce"
         },
         {
-          "rank": 9,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 297360,
-          "athleteName": "Rafa Marín",
-          "teamId": 114,
-          "teamName": "Napoli"
+          "rank": 15,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 285438,
+          "athleteName": "Roberto Piccoli",
+          "teamId": 107,
+          "teamName": "Bologna"
         },
         {
-          "rank": 10,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 346974,
-          "athleteName": "Gabriele Bracaglia",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 11,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 238296,
-          "athleteName": "Romano Schmid",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 12,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 346840,
-          "athleteName": "Patrizio Masini",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 13,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 333598,
-          "athleteName": "Giorgio Cittadini",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 14,
+          "rank": 16,
           "value": 9,
           "displayValue": "9",
           "athleteId": 258307,
@@ -1760,52 +1778,61 @@
           "teamName": "Juventus"
         },
         {
-          "rank": 15,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 169213,
-          "athleteName": "Bryan Cristante",
-          "teamId": 104,
-          "teamName": "AS Roma"
-        },
-        {
-          "rank": 16,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 337970,
-          "athleteName": "Nico Paz",
-          "teamId": 2572,
-          "teamName": "Como"
-        },
-        {
           "rank": 17,
           "value": 9,
           "displayValue": "9",
-          "athleteId": 367635,
-          "athleteName": "Lorenzo Lucchesi",
-          "teamId": 4007,
-          "teamName": "Monza"
+          "athleteId": 288896,
+          "athleteName": "Gonçalo Ramos",
+          "teamId": 103,
+          "teamName": "AC Milan"
         },
         {
           "rank": 18,
           "value": 9,
           "displayValue": "9",
-          "athleteId": 288429,
-          "athleteName": "Santiago Pierotti",
-          "teamId": 113,
-          "teamName": "Lecce"
+          "athleteId": 297360,
+          "athleteName": "Rafa Marín",
+          "teamId": 114,
+          "teamName": "Napoli"
         },
         {
           "rank": 19,
           "value": 9,
           "displayValue": "9",
-          "athleteId": 418819,
-          "athleteName": "Paul Mendy",
-          "teamId": 2925,
-          "teamName": "Cagliari"
+          "athleteId": 276636,
+          "athleteName": "Enrique Perez",
+          "teamId": 17530,
+          "teamName": "Venezia"
         },
         {
           "rank": 20,
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 346974,
+          "athleteName": "Gabriele Bracaglia",
+          "teamId": 4057,
+          "teamName": "Frosinone"
+        },
+        {
+          "rank": 21,
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 330041,
+          "athleteName": "Romano Floriani",
+          "teamId": 112,
+          "teamName": "Lazio"
+        },
+        {
+          "rank": 22,
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 238296,
+          "athleteName": "Romano Schmid",
+          "teamId": 4057,
+          "teamName": "Frosinone"
+        },
+        {
+          "rank": 23,
           "value": 9,
           "displayValue": "9",
           "athleteId": 287790,
@@ -1814,49 +1841,22 @@
           "teamName": "Bologna"
         },
         {
-          "rank": 21,
+          "rank": 24,
           "value": 9,
           "displayValue": "9",
-          "athleteId": 362776,
-          "athleteName": "Ebenezer Akinsanmiro",
-          "teamId": 4007,
-          "teamName": "Monza"
-        },
-        {
-          "rank": 22,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 310216,
-          "athleteName": "Radu Dragusin",
-          "teamId": 109,
-          "teamName": "Fiorentina"
-        },
-        {
-          "rank": 23,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 360714,
-          "athleteName": "Giorgi Kvernadze",
+          "athleteId": 346840,
+          "athleteName": "Patrizio Masini",
           "teamId": 4057,
           "teamName": "Frosinone"
         },
         {
-          "rank": 24,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 324256,
-          "athleteName": "Mikael Ellertsson",
-          "teamId": 3263,
-          "teamName": "Genoa"
-        },
-        {
           "rank": 25,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 281736,
-          "athleteName": "Leo Østigard",
-          "teamId": 3263,
-          "teamName": "Genoa"
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 285226,
+          "athleteName": "Manu Koné",
+          "teamId": 104,
+          "teamName": "AS Roma"
         }
       ]
     },
@@ -1876,6 +1876,15 @@
         },
         {
           "rank": 2,
+          "value": 19,
+          "displayValue": "19",
+          "athleteId": 287790,
+          "athleteName": "Nicolò Cambiaghi",
+          "teamId": 107,
+          "teamName": "Bologna"
+        },
+        {
+          "rank": 3,
           "value": 13,
           "displayValue": "13",
           "athleteId": 236038,
@@ -1884,7 +1893,25 @@
           "teamName": "Frosinone"
         },
         {
-          "rank": 3,
+          "rank": 4,
+          "value": 13,
+          "displayValue": "13",
+          "athleteId": 276636,
+          "athleteName": "Enrique Perez",
+          "teamId": 17530,
+          "teamName": "Venezia"
+        },
+        {
+          "rank": 5,
+          "value": 13,
+          "displayValue": "13",
+          "athleteId": 285438,
+          "athleteName": "Roberto Piccoli",
+          "teamId": 107,
+          "teamName": "Bologna"
+        },
+        {
+          "rank": 6,
           "value": 13,
           "displayValue": "13",
           "athleteId": 275444,
@@ -1893,16 +1920,25 @@
           "teamName": "Genoa"
         },
         {
-          "rank": 4,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 287790,
-          "athleteName": "Nicolò Cambiaghi",
-          "teamId": 107,
-          "teamName": "Bologna"
+          "rank": 7,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 223947,
+          "athleteName": "Lassana Coulibaly",
+          "teamId": 113,
+          "teamName": "Lecce"
         },
         {
-          "rank": 5,
+          "rank": 8,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 204669,
+          "athleteName": "Mattia Zaccagni",
+          "teamId": 112,
+          "teamName": "Lazio"
+        },
+        {
+          "rank": 9,
           "value": 12,
           "displayValue": "12",
           "athleteId": 188412,
@@ -1911,7 +1947,7 @@
           "teamName": "Napoli"
         },
         {
-          "rank": 6,
+          "rank": 10,
           "value": 12,
           "displayValue": "12",
           "athleteId": 376473,
@@ -1920,16 +1956,70 @@
           "teamName": "Fiorentina"
         },
         {
-          "rank": 7,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 223947,
-          "athleteName": "Lassana Coulibaly",
-          "teamId": 113,
-          "teamName": "Lecce"
+          "rank": 11,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 403148,
+          "athleteName": "Alessio Cacciamani",
+          "teamId": 239,
+          "teamName": "Torino"
         },
         {
-          "rank": 8,
+          "rank": 12,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 278210,
+          "athleteName": "Éderson",
+          "teamId": 105,
+          "teamName": "Atalanta"
+        },
+        {
+          "rank": 13,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 250850,
+          "athleteName": "Davide Frattesi",
+          "teamId": 112,
+          "teamName": "Lazio"
+        },
+        {
+          "rank": 14,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 189974,
+          "athleteName": "Giovanni Simeone",
+          "teamId": 239,
+          "teamName": "Torino"
+        },
+        {
+          "rank": 15,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 252971,
+          "athleteName": "Randal Kolo Muani",
+          "teamId": 111,
+          "teamName": "Juventus"
+        },
+        {
+          "rank": 16,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 290545,
+          "athleteName": "Daniel Maldini",
+          "teamId": 2925,
+          "teamName": "Cagliari"
+        },
+        {
+          "rank": 17,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 262071,
+          "athleteName": "Anastasios Douvikas",
+          "teamId": 2572,
+          "teamName": "Como"
+        },
+        {
+          "rank": 18,
           "value": 10,
           "displayValue": "10",
           "athleteId": 362674,
@@ -1938,7 +2028,7 @@
           "teamName": "Internazionale"
         },
         {
-          "rank": 9,
+          "rank": 19,
           "value": 10,
           "displayValue": "10",
           "athleteId": 261054,
@@ -1947,16 +2037,25 @@
           "teamName": "Genoa"
         },
         {
-          "rank": 10,
+          "rank": 20,
           "value": 10,
           "displayValue": "10",
-          "athleteId": 278210,
-          "athleteName": "Éderson",
-          "teamId": 105,
-          "teamName": "Atalanta"
+          "athleteId": 284212,
+          "athleteName": "Kristian Thorstvedt",
+          "teamId": 3997,
+          "teamName": "Sassuolo"
         },
         {
-          "rank": 11,
+          "rank": 21,
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 324097,
+          "athleteName": "Mario Gila",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 22,
           "value": 9,
           "displayValue": "9",
           "athleteId": 287430,
@@ -1965,7 +2064,7 @@
           "teamName": "Parma"
         },
         {
-          "rank": 12,
+          "rank": 23,
           "value": 9,
           "displayValue": "9",
           "athleteId": 312757,
@@ -1974,121 +2073,22 @@
           "teamName": "Fiorentina"
         },
         {
-          "rank": 13,
+          "rank": 24,
           "value": 9,
           "displayValue": "9",
-          "athleteId": 204669,
-          "athleteName": "Mattia Zaccagni",
-          "teamId": 112,
-          "teamName": "Lazio"
-        },
-        {
-          "rank": 14,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 276636,
-          "athleteName": "Enrique Perez",
-          "teamId": 17530,
-          "teamName": "Venezia"
-        },
-        {
-          "rank": 15,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 250850,
-          "athleteName": "Davide Frattesi",
-          "teamId": 112,
-          "teamName": "Lazio"
-        },
-        {
-          "rank": 16,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 290545,
-          "athleteName": "Daniel Maldini",
-          "teamId": 2925,
-          "teamName": "Cagliari"
-        },
-        {
-          "rank": 17,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 403148,
-          "athleteName": "Alessio Cacciamani",
-          "teamId": 239,
-          "teamName": "Torino"
-        },
-        {
-          "rank": 18,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 285438,
-          "athleteName": "Roberto Piccoli",
-          "teamId": 107,
-          "teamName": "Bologna"
-        },
-        {
-          "rank": 19,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 189974,
-          "athleteName": "Giovanni Simeone",
-          "teamId": 239,
-          "teamName": "Torino"
-        },
-        {
-          "rank": 20,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 262071,
-          "athleteName": "Anastasios Douvikas",
-          "teamId": 2572,
-          "teamName": "Como"
-        },
-        {
-          "rank": 21,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 284212,
-          "athleteName": "Kristian Thorstvedt",
-          "teamId": 3997,
-          "teamName": "Sassuolo"
-        },
-        {
-          "rank": 22,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 355359,
-          "athleteName": "Jay Robinson",
+          "athleteId": 252385,
+          "athleteName": "Michael Folorunsho",
           "teamId": 4007,
           "teamName": "Monza"
         },
         {
-          "rank": 23,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 360714,
-          "athleteName": "Giorgi Kvernadze",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
-          "rank": 24,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 315213,
-          "athleteName": "Anthony Oyono",
-          "teamId": 4057,
-          "teamName": "Frosinone"
-        },
-        {
           "rank": 25,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 344844,
-          "athleteName": "Danilo Veiga",
-          "teamId": 113,
-          "teamName": "Lecce"
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 76017,
+          "athleteName": "Nico González",
+          "teamId": 111,
+          "teamName": "Juventus"
         }
       ]
     },
@@ -2099,8 +2099,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 27,
-          "displayValue": "27",
+          "value": 31,
+          "displayValue": "31",
           "athleteId": 337970,
           "athleteName": "Nico Paz",
           "teamId": 2572,
@@ -2126,8 +2126,8 @@
         },
         {
           "rank": 4,
-          "value": 20,
-          "displayValue": "20",
+          "value": 22,
+          "displayValue": "22",
           "athleteId": 259481,
           "athleteName": "Donyell Malen",
           "teamId": 104,
@@ -2135,15 +2135,60 @@
         },
         {
           "rank": 5,
-          "value": 19,
-          "displayValue": "19",
+          "value": 21,
+          "displayValue": "21",
+          "athleteId": 288472,
+          "athleteName": "Akor Adams",
+          "teamId": 17530,
+          "teamName": "Venezia"
+        },
+        {
+          "rank": 6,
+          "value": 21,
+          "displayValue": "21",
+          "athleteId": 164839,
+          "athleteName": "Paulo Dybala",
+          "teamId": 104,
+          "teamName": "AS Roma"
+        },
+        {
+          "rank": 7,
+          "value": 20,
+          "displayValue": "20",
           "athleteId": 272719,
           "athleteName": "Armand Laurienté",
           "teamId": 3997,
           "teamName": "Sassuolo"
         },
         {
-          "rank": 6,
+          "rank": 8,
+          "value": 19,
+          "displayValue": "19",
+          "athleteId": 270817,
+          "athleteName": "Jurgen Ekkelenkamp",
+          "teamId": 118,
+          "teamName": "Udinese"
+        },
+        {
+          "rank": 9,
+          "value": 18,
+          "displayValue": "18",
+          "athleteId": 204669,
+          "athleteName": "Mattia Zaccagni",
+          "teamId": 112,
+          "teamName": "Lazio"
+        },
+        {
+          "rank": 10,
+          "value": 18,
+          "displayValue": "18",
+          "athleteId": 288896,
+          "athleteName": "Gonçalo Ramos",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 11,
           "value": 18,
           "displayValue": "18",
           "athleteId": 360714,
@@ -2152,7 +2197,7 @@
           "teamName": "Frosinone"
         },
         {
-          "rank": 7,
+          "rank": 12,
           "value": 18,
           "displayValue": "18",
           "athleteId": 319265,
@@ -2161,25 +2206,16 @@
           "teamName": "Frosinone"
         },
         {
-          "rank": 8,
+          "rank": 13,
           "value": 18,
           "displayValue": "18",
-          "athleteId": 164839,
-          "athleteName": "Paulo Dybala",
-          "teamId": 104,
-          "teamName": "AS Roma"
-        },
-        {
-          "rank": 9,
-          "value": 17,
-          "displayValue": "17",
-          "athleteId": 288472,
-          "athleteName": "Akor Adams",
+          "athleteId": 265926,
+          "athleteName": "John Yeboah",
           "teamId": 17530,
           "teamName": "Venezia"
         },
         {
-          "rank": 10,
+          "rank": 14,
           "value": 17,
           "displayValue": "17",
           "athleteId": 217331,
@@ -2188,16 +2224,16 @@
           "teamName": "Internazionale"
         },
         {
-          "rank": 11,
+          "rank": 15,
           "value": 16,
           "displayValue": "16",
-          "athleteId": 204669,
-          "athleteName": "Mattia Zaccagni",
-          "teamId": 112,
-          "teamName": "Lazio"
+          "athleteId": 262071,
+          "athleteName": "Anastasios Douvikas",
+          "teamId": 2572,
+          "teamName": "Como"
         },
         {
-          "rank": 12,
+          "rank": 16,
           "value": 16,
           "displayValue": "16",
           "athleteId": 323974,
@@ -2206,7 +2242,16 @@
           "teamName": "AS Roma"
         },
         {
-          "rank": 13,
+          "rank": 17,
+          "value": 14,
+          "displayValue": "14",
+          "athleteId": 320074,
+          "athleteName": "Douglas Luiz",
+          "teamId": 111,
+          "teamName": "Juventus"
+        },
+        {
+          "rank": 18,
           "value": 14,
           "displayValue": "14",
           "athleteId": 362674,
@@ -2215,61 +2260,52 @@
           "teamName": "Internazionale"
         },
         {
-          "rank": 14,
-          "value": 14,
-          "displayValue": "14",
-          "athleteId": 288896,
-          "athleteName": "Gonçalo Ramos",
-          "teamId": 103,
-          "teamName": "AC Milan"
-        },
-        {
-          "rank": 15,
-          "value": 14,
-          "displayValue": "14",
-          "athleteId": 270817,
-          "athleteName": "Jurgen Ekkelenkamp",
-          "teamId": 118,
-          "teamName": "Udinese"
-        },
-        {
-          "rank": 16,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 265926,
-          "athleteName": "John Yeboah",
-          "teamId": 17530,
-          "teamName": "Venezia"
-        },
-        {
-          "rank": 17,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 262071,
-          "athleteName": "Anastasios Douvikas",
-          "teamId": 2572,
-          "teamName": "Como"
-        },
-        {
-          "rank": 18,
-          "value": 12,
-          "displayValue": "12",
-          "athleteId": 261054,
-          "athleteName": "Junior Messias",
-          "teamId": 3263,
-          "teamName": "Genoa"
-        },
-        {
           "rank": 19,
-          "value": 12,
-          "displayValue": "12",
+          "value": 13,
+          "displayValue": "13",
+          "athleteId": 252971,
+          "athleteName": "Randal Kolo Muani",
+          "teamId": 111,
+          "teamName": "Juventus"
+        },
+        {
+          "rank": 20,
+          "value": 13,
+          "displayValue": "13",
           "athleteId": 312659,
           "athleteName": "Francisco Conceição",
           "teamId": 111,
           "teamName": "Juventus"
         },
         {
-          "rank": 20,
+          "rank": 21,
+          "value": 13,
+          "displayValue": "13",
+          "athleteId": 258158,
+          "athleteName": "Nikola Krstovic",
+          "teamId": 105,
+          "teamName": "Atalanta"
+        },
+        {
+          "rank": 22,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 290545,
+          "athleteName": "Daniel Maldini",
+          "teamId": 2925,
+          "teamName": "Cagliari"
+        },
+        {
+          "rank": 23,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 189974,
+          "athleteName": "Giovanni Simeone",
+          "teamId": 239,
+          "teamName": "Torino"
+        },
+        {
+          "rank": 24,
           "value": 12,
           "displayValue": "12",
           "athleteId": 180956,
@@ -2278,49 +2314,13 @@
           "teamName": "Bologna"
         },
         {
-          "rank": 21,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 194748,
-          "athleteName": "Federico Dimarco",
-          "teamId": 110,
-          "teamName": "Internazionale"
-        },
-        {
-          "rank": 22,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 252971,
-          "athleteName": "Randal Kolo Muani",
-          "teamId": 111,
-          "teamName": "Juventus"
-        },
-        {
-          "rank": 23,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 320074,
-          "athleteName": "Douglas Luiz",
-          "teamId": 111,
-          "teamName": "Juventus"
-        },
-        {
-          "rank": 24,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 356213,
-          "athleteName": "Arthur Atta",
-          "teamId": 109,
-          "teamName": "Fiorentina"
-        },
-        {
           "rank": 25,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 311475,
-          "athleteName": "Martin Baturina",
-          "teamId": 2572,
-          "teamName": "Como"
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 344917,
+          "athleteName": "Vasilije Adzic",
+          "teamId": 3997,
+          "teamName": "Sassuolo"
         }
       ]
     },
@@ -2331,8 +2331,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 402,
-          "displayValue": "402",
+          "value": 436,
+          "displayValue": "436",
           "athleteId": 202429,
           "athleteName": "Lewis Ferguson",
           "teamId": 107,
@@ -2340,6 +2340,42 @@
         },
         {
           "rank": 2,
+          "value": 420,
+          "displayValue": "420",
+          "athleteId": 290375,
+          "athleteName": "Strahinja Pavlovic",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 3,
+          "value": 403,
+          "displayValue": "403",
+          "athleteId": 380318,
+          "athleteName": "Jacobo Ramón",
+          "teamId": 2572,
+          "teamName": "Como"
+        },
+        {
+          "rank": 4,
+          "value": 402,
+          "displayValue": "402",
+          "athleteId": 320074,
+          "athleteName": "Douglas Luiz",
+          "teamId": 111,
+          "teamName": "Juventus"
+        },
+        {
+          "rank": 5,
+          "value": 365,
+          "displayValue": "365",
+          "athleteId": 324097,
+          "athleteName": "Mario Gila",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 6,
           "value": 353,
           "displayValue": "353",
           "athleteId": 249280,
@@ -2348,16 +2384,61 @@
           "teamName": "Internazionale"
         },
         {
-          "rank": 3,
-          "value": 345,
-          "displayValue": "345",
-          "athleteId": 290375,
-          "athleteName": "Strahinja Pavlovic",
+          "rank": 7,
+          "value": 351,
+          "displayValue": "351",
+          "athleteId": 227784,
+          "athleteName": "Trevoh Chalobah",
+          "teamId": 2572,
+          "teamName": "Como"
+        },
+        {
+          "rank": 8,
+          "value": 349,
+          "displayValue": "349",
+          "athleteId": 309570,
+          "athleteName": "Koni De Winter",
           "teamId": 103,
           "teamName": "AC Milan"
         },
         {
-          "rank": 4,
+          "rank": 9,
+          "value": 349,
+          "displayValue": "349",
+          "athleteId": 272867,
+          "athleteName": "Torbjørn Heggem",
+          "teamId": 107,
+          "teamName": "Bologna"
+        },
+        {
+          "rank": 10,
+          "value": 348,
+          "displayValue": "348",
+          "athleteId": 309812,
+          "athleteName": "Giorgio Scalvini",
+          "teamId": 105,
+          "teamName": "Atalanta"
+        },
+        {
+          "rank": 11,
+          "value": 343,
+          "displayValue": "343",
+          "athleteId": 258307,
+          "athleteName": "Bremer",
+          "teamId": 111,
+          "teamName": "Juventus"
+        },
+        {
+          "rank": 12,
+          "value": 341,
+          "displayValue": "341",
+          "athleteId": 274258,
+          "athleteName": "Saúl Coco",
+          "teamId": 239,
+          "teamName": "Torino"
+        },
+        {
+          "rank": 13,
           "value": 339,
           "displayValue": "339",
           "athleteId": 366526,
@@ -2366,7 +2447,7 @@
           "teamName": "Parma"
         },
         {
-          "rank": 5,
+          "rank": 14,
           "value": 338,
           "displayValue": "338",
           "athleteId": 205576,
@@ -2375,43 +2456,88 @@
           "teamName": "Napoli"
         },
         {
-          "rank": 6,
+          "rank": 15,
+          "value": 330,
+          "displayValue": "330",
+          "athleteId": 227697,
+          "athleteName": "Jhon Lucumí",
+          "teamId": 111,
+          "teamName": "Juventus"
+        },
+        {
+          "rank": 16,
           "value": 324,
           "displayValue": "324",
-          "athleteId": 380318,
-          "athleteName": "Jacobo Ramón",
+          "athleteId": 291285,
+          "athleteName": "Lucas Da Cunha",
           "teamId": 2572,
           "teamName": "Como"
         },
         {
-          "rank": 7,
-          "value": 324,
-          "displayValue": "324",
-          "athleteId": 272867,
-          "athleteName": "Torbjørn Heggem",
-          "teamId": 107,
-          "teamName": "Bologna"
+          "rank": 17,
+          "value": 315,
+          "displayValue": "315",
+          "athleteId": 242601,
+          "athleteName": "Enzo Ebosse",
+          "teamId": 118,
+          "teamName": "Udinese"
         },
         {
-          "rank": 8,
-          "value": 323,
-          "displayValue": "323",
-          "athleteId": 309812,
-          "athleteName": "Giorgio Scalvini",
-          "teamId": 105,
-          "teamName": "Atalanta"
-        },
-        {
-          "rank": 9,
-          "value": 304,
-          "displayValue": "304",
-          "athleteId": 324097,
-          "athleteName": "Mario Gila",
+          "rank": 18,
+          "value": 313,
+          "displayValue": "313",
+          "athleteId": 76762,
+          "athleteName": "Luka Modric",
           "teamId": 103,
           "teamName": "AC Milan"
         },
         {
-          "rank": 10,
+          "rank": 19,
+          "value": 313,
+          "displayValue": "313",
+          "athleteId": 309241,
+          "athleteName": "Máximo Perrone",
+          "teamId": 2572,
+          "teamName": "Como"
+        },
+        {
+          "rank": 20,
+          "value": 309,
+          "displayValue": "309",
+          "athleteId": 290129,
+          "athleteName": "Pierre Kalulu",
+          "teamId": 111,
+          "teamName": "Juventus"
+        },
+        {
+          "rank": 21,
+          "value": 305,
+          "displayValue": "305",
+          "athleteId": 333311,
+          "athleteName": "Oliver Provstgaard",
+          "teamId": 112,
+          "teamName": "Lazio"
+        },
+        {
+          "rank": 22,
+          "value": 304,
+          "displayValue": "304",
+          "athleteId": 222529,
+          "athleteName": "Mario Hermoso",
+          "teamId": 104,
+          "teamName": "AS Roma"
+        },
+        {
+          "rank": 23,
+          "value": 302,
+          "displayValue": "302",
+          "athleteId": 276636,
+          "athleteName": "Enrique Perez",
+          "teamId": 17530,
+          "teamName": "Venezia"
+        },
+        {
+          "rank": 24,
           "value": 302,
           "displayValue": "302",
           "athleteId": 169213,
@@ -2420,139 +2546,13 @@
           "teamName": "AS Roma"
         },
         {
-          "rank": 11,
-          "value": 291,
-          "displayValue": "291",
-          "athleteId": 214562,
-          "athleteName": "Manuel Akanji",
-          "teamId": 110,
-          "teamName": "Internazionale"
-        },
-        {
-          "rank": 12,
-          "value": 285,
-          "displayValue": "285",
-          "athleteId": 297360,
-          "athleteName": "Rafa Marín",
-          "teamId": 114,
-          "teamName": "Napoli"
-        },
-        {
-          "rank": 13,
-          "value": 283,
-          "displayValue": "283",
-          "athleteId": 320074,
-          "athleteName": "Douglas Luiz",
-          "teamId": 111,
-          "teamName": "Juventus"
-        },
-        {
-          "rank": 14,
-          "value": 278,
-          "displayValue": "278",
-          "athleteId": 274258,
-          "athleteName": "Saúl Coco",
-          "teamId": 239,
-          "teamName": "Torino"
-        },
-        {
-          "rank": 15,
-          "value": 277,
-          "displayValue": "277",
-          "athleteId": 309570,
-          "athleteName": "Koni De Winter",
-          "teamId": 103,
-          "teamName": "AC Milan"
-        },
-        {
-          "rank": 16,
-          "value": 277,
-          "displayValue": "277",
-          "athleteId": 284822,
-          "athleteName": "Odilon Kossounou",
-          "teamId": 105,
-          "teamName": "Atalanta"
-        },
-        {
-          "rank": 17,
-          "value": 271,
-          "displayValue": "271",
-          "athleteId": 188412,
-          "athleteName": "Stanislav Lobotka",
-          "teamId": 114,
-          "teamName": "Napoli"
-        },
-        {
-          "rank": 18,
-          "value": 267,
-          "displayValue": "267",
-          "athleteId": 222529,
-          "athleteName": "Mario Hermoso",
-          "teamId": 104,
-          "teamName": "AS Roma"
-        },
-        {
-          "rank": 19,
-          "value": 266,
-          "displayValue": "266",
-          "athleteId": 76762,
-          "athleteName": "Luka Modric",
-          "teamId": 103,
-          "teamName": "AC Milan"
-        },
-        {
-          "rank": 20,
-          "value": 265,
-          "displayValue": "265",
-          "athleteId": 291285,
-          "athleteName": "Lucas Da Cunha",
+          "rank": 25,
+          "value": 298,
+          "displayValue": "298",
+          "athleteId": 297084,
+          "athleteName": "Yan Couto",
           "teamId": 2572,
           "teamName": "Como"
-        },
-        {
-          "rank": 21,
-          "value": 264,
-          "displayValue": "264",
-          "athleteId": 281736,
-          "athleteName": "Leo Østigard",
-          "teamId": 3263,
-          "teamName": "Genoa"
-        },
-        {
-          "rank": 22,
-          "value": 264,
-          "displayValue": "264",
-          "athleteId": 258307,
-          "athleteName": "Bremer",
-          "teamId": 111,
-          "teamName": "Juventus"
-        },
-        {
-          "rank": 23,
-          "value": 264,
-          "displayValue": "264",
-          "athleteId": 231697,
-          "athleteName": "Eray Cömert",
-          "teamId": 239,
-          "teamName": "Torino"
-        },
-        {
-          "rank": 24,
-          "value": 263,
-          "displayValue": "263",
-          "athleteId": 276254,
-          "athleteName": "Nicolò Fagioli",
-          "teamId": 109,
-          "teamName": "Fiorentina"
-        },
-        {
-          "rank": 25,
-          "value": 252,
-          "displayValue": "252",
-          "athleteId": 333311,
-          "athleteName": "Oliver Provstgaard",
-          "teamId": 112,
-          "teamName": "Lazio"
         }
       ]
     },
@@ -2563,8 +2563,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 27,
-          "displayValue": "27",
+          "value": 30,
+          "displayValue": "30",
           "athleteId": 177812,
           "athleteName": "Wladimiro Falcone",
           "teamId": 113,
@@ -2572,6 +2572,24 @@
         },
         {
           "rank": 2,
+          "value": 28,
+          "displayValue": "28",
+          "athleteId": 284804,
+          "athleteName": "Marco Carnesecchi",
+          "teamId": 105,
+          "teamName": "Atalanta"
+        },
+        {
+          "rank": 3,
+          "value": 28,
+          "displayValue": "28",
+          "athleteId": 278987,
+          "athleteName": "Elia Caprile",
+          "teamId": 2925,
+          "teamName": "Cagliari"
+        },
+        {
+          "rank": 4,
           "value": 26,
           "displayValue": "26",
           "athleteId": 325056,
@@ -2580,7 +2598,25 @@
           "teamName": "Frosinone"
         },
         {
-          "rank": 3,
+          "rank": 5,
+          "value": 26,
+          "displayValue": "26",
+          "athleteId": 265140,
+          "athleteName": "Christos Mandas",
+          "teamId": 112,
+          "teamName": "Lazio"
+        },
+        {
+          "rank": 6,
+          "value": 26,
+          "displayValue": "26",
+          "athleteId": 259838,
+          "athleteName": "Arijanet Muric",
+          "teamId": 3997,
+          "teamName": "Sassuolo"
+        },
+        {
+          "rank": 7,
           "value": 25,
           "displayValue": "25",
           "athleteId": 290792,
@@ -2589,58 +2625,22 @@
           "teamName": "Parma"
         },
         {
-          "rank": 4,
-          "value": 25,
-          "displayValue": "25",
-          "athleteId": 284804,
-          "athleteName": "Marco Carnesecchi",
-          "teamId": 105,
-          "teamName": "Atalanta"
-        },
-        {
-          "rank": 5,
-          "value": 21,
-          "displayValue": "21",
-          "athleteId": 265140,
-          "athleteName": "Christos Mandas",
-          "teamId": 112,
-          "teamName": "Lazio"
-        },
-        {
-          "rank": 6,
-          "value": 21,
-          "displayValue": "21",
-          "athleteId": 259838,
-          "athleteName": "Arijanet Muric",
-          "teamId": 3997,
-          "teamName": "Sassuolo"
-        },
-        {
-          "rank": 7,
-          "value": 20,
-          "displayValue": "20",
-          "athleteId": 295476,
-          "athleteName": "Maduka Okoye",
-          "teamId": 118,
-          "teamName": "Udinese"
-        },
-        {
           "rank": 8,
-          "value": 19,
-          "displayValue": "19",
-          "athleteId": 278987,
-          "athleteName": "Elia Caprile",
-          "teamId": 2925,
-          "teamName": "Cagliari"
-        },
-        {
-          "rank": 9,
-          "value": 17,
-          "displayValue": "17",
+          "value": 24,
+          "displayValue": "24",
           "athleteId": 289560,
           "athleteName": "Filip Stankovic",
           "teamId": 17530,
           "teamName": "Venezia"
+        },
+        {
+          "rank": 9,
+          "value": 22,
+          "displayValue": "22",
+          "athleteId": 295476,
+          "athleteName": "Maduka Okoye",
+          "teamId": 118,
+          "teamName": "Udinese"
         },
         {
           "rank": 10,
@@ -2655,13 +2655,22 @@
           "rank": 11,
           "value": 16,
           "displayValue": "16",
+          "athleteId": 189026,
+          "athleteName": "Mike Maignan",
+          "teamId": 103,
+          "teamName": "AC Milan"
+        },
+        {
+          "rank": 12,
+          "value": 16,
+          "displayValue": "16",
           "athleteId": 108482,
           "athleteName": "David de Gea",
           "teamId": 109,
           "teamName": "Fiorentina"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "value": 14,
           "displayValue": "14",
           "athleteId": 240533,
@@ -2670,22 +2679,13 @@
           "teamName": "Internazionale"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "value": 13,
           "displayValue": "13",
           "athleteId": 238798,
           "athleteName": "Mile Svilar",
           "teamId": 104,
           "teamName": "AS Roma"
-        },
-        {
-          "rank": 14,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 189026,
-          "athleteName": "Mike Maignan",
-          "teamId": 103,
-          "teamName": "AC Milan"
         },
         {
           "rank": 15,
@@ -2698,15 +2698,33 @@
         },
         {
           "rank": 16,
-          "value": 9,
-          "displayValue": "9",
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 301377,
+          "athleteName": "Noel Törnqvist",
+          "teamId": 4007,
+          "teamName": "Monza"
+        },
+        {
+          "rank": 17,
+          "value": 10,
+          "displayValue": "10",
           "athleteId": 204082,
           "athleteName": "Guglielmo Vicario",
           "teamId": 111,
           "teamName": "Juventus"
         },
         {
-          "rank": 17,
+          "rank": 18,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 214740,
+          "athleteName": "Jean Butez",
+          "teamId": 2572,
+          "teamName": "Como"
+        },
+        {
+          "rank": 19,
           "value": 9,
           "displayValue": "9",
           "athleteId": 179358,
@@ -2715,16 +2733,7 @@
           "teamName": "Bologna"
         },
         {
-          "rank": 18,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 214740,
-          "athleteName": "Jean Butez",
-          "teamId": 2572,
-          "teamName": "Como"
-        },
-        {
-          "rank": 19,
+          "rank": 20,
           "value": 7,
           "displayValue": "7",
           "athleteId": 252406,
@@ -2733,7 +2742,16 @@
           "teamName": "Torino"
         },
         {
-          "rank": 20,
+          "rank": 21,
+          "value": 7,
+          "displayValue": "7",
+          "athleteId": 388880,
+          "athleteName": "Massimo Pessina",
+          "teamId": 107,
+          "teamName": "Bologna"
+        },
+        {
+          "rank": 22,
           "value": 7,
           "displayValue": "7",
           "athleteId": 368006,
@@ -2742,16 +2760,7 @@
           "teamName": "Torino"
         },
         {
-          "rank": 21,
-          "value": 7,
-          "displayValue": "7",
-          "athleteId": 301377,
-          "athleteName": "Noel Törnqvist",
-          "teamId": 4007,
-          "teamName": "Monza"
-        },
-        {
-          "rank": 22,
+          "rank": 23,
           "value": 5,
           "displayValue": "5",
           "athleteId": 219531,
@@ -2760,7 +2769,7 @@
           "teamName": "Napoli"
         },
         {
-          "rank": 23,
+          "rank": 24,
           "value": 4,
           "displayValue": "4",
           "athleteId": 250460,
@@ -2769,22 +2778,13 @@
           "teamName": "Monza"
         },
         {
-          "rank": 24,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 388880,
-          "athleteName": "Massimo Pessina",
-          "teamId": 107,
-          "teamName": "Bologna"
-        },
-        {
           "rank": 25,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 108662,
-          "athleteName": "Robert Sánchez",
-          "teamId": 2572,
-          "teamName": "Como"
+          "value": 4,
+          "displayValue": "4",
+          "athleteId": 206587,
+          "athleteName": "Pierluigi Gollini",
+          "teamId": 104,
+          "teamName": "AS Roma"
         }
       ]
     }

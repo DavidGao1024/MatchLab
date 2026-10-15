@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-12T02:02:29.827Z",
+  "updateTime": "2026-10-15T01:13:44.989Z",
   "league": "eng.1",
   "season": "2026",
-  "count": 585,
+  "count": 590,
   "players": [
     {
       "id": 253989,
@@ -11,7 +11,7 @@
       "teamId": 382,
       "position": "F",
       "age": 26,
-      "goals": 5,
+      "goals": 6,
       "assists": 0,
       "citizenship": "Norway",
       "flag": "flags/no.png",
@@ -56,6 +56,19 @@
       "flag": "flags/gb-eng.png",
       "jersey": 17,
       "team": "Chelsea"
+    },
+    {
+      "id": 298008,
+      "name": "Rayan Cherki",
+      "teamId": 382,
+      "position": "M",
+      "age": 23,
+      "goals": 4,
+      "assists": 2,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 10,
+      "team": "Manchester City"
     },
     {
       "id": 282229,
@@ -136,6 +149,19 @@
       "team": "AFC Bournemouth"
     },
     {
+      "id": 320417,
+      "name": "Mohamed Belloumi",
+      "teamId": 306,
+      "position": "F",
+      "age": 24,
+      "goals": 3,
+      "assists": 2,
+      "citizenship": "Algeria",
+      "flag": "flags/dz.png",
+      "jersey": 10,
+      "team": "Hull City"
+    },
+    {
       "id": 132659,
       "name": "Pascal Gross",
       "teamId": 331,
@@ -149,17 +175,17 @@
       "team": "Brighton & Hove Albion"
     },
     {
-      "id": 298008,
-      "name": "Rayan Cherki",
-      "teamId": 382,
-      "position": "M",
+      "id": 301166,
+      "name": "Thierno Barry",
+      "teamId": 368,
+      "position": "F",
       "age": 23,
       "goals": 3,
-      "assists": 2,
+      "assists": 0,
       "citizenship": "France",
       "flag": "flags/fr.png",
-      "jersey": 10,
-      "team": "Manchester City"
+      "jersey": 11,
+      "team": "Everton"
     },
     {
       "id": 296622,
@@ -225,6 +251,19 @@
       "flag": "flags/gb-eng.png",
       "jersey": 10,
       "team": "Chelsea"
+    },
+    {
+      "id": 275842,
+      "name": "Dan Ndoye",
+      "teamId": 393,
+      "position": "F",
+      "age": 25,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Switzerland",
+      "flag": "flags/ch.png",
+      "jersey": 14,
+      "team": "Nottingham Forest"
     },
     {
       "id": 197717,
@@ -331,6 +370,19 @@
       "team": "Arsenal"
     },
     {
+      "id": 252389,
+      "name": "Kiernan Dewsbury-Hall",
+      "teamId": 368,
+      "position": "M",
+      "age": 28,
+      "goals": 2,
+      "assists": 1,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 8,
+      "team": "Everton"
+    },
+    {
       "id": 283086,
       "name": "Leif Davis",
       "teamId": 373,
@@ -383,19 +435,6 @@
       "team": "Brighton & Hove Albion"
     },
     {
-      "id": 320417,
-      "name": "Mohamed Belloumi",
-      "teamId": 306,
-      "position": "F",
-      "age": 24,
-      "goals": 2,
-      "assists": 2,
-      "citizenship": "Algeria",
-      "flag": "flags/dz.png",
-      "jersey": 10,
-      "team": "Hull City"
-    },
-    {
       "id": 308524,
       "name": "Nicolas Jackson",
       "teamId": 362,
@@ -407,19 +446,6 @@
       "flag": "flags/sn.png",
       "jersey": 11,
       "team": "Aston Villa"
-    },
-    {
-      "id": 301166,
-      "name": "Thierno Barry",
-      "teamId": 368,
-      "position": "F",
-      "age": 23,
-      "goals": 2,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 11,
-      "team": "Everton"
     },
     {
       "id": 300853,
@@ -467,7 +493,7 @@
       "position": "M",
       "age": 29,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "jersey": 2,
@@ -630,17 +656,17 @@
       "team": "Tottenham Hotspur"
     },
     {
-      "id": 275842,
-      "name": "Dan Ndoye",
-      "teamId": 393,
-      "position": "F",
-      "age": 25,
+      "id": 219362,
+      "name": "Daichi Kamada",
+      "teamId": 384,
+      "position": "M",
+      "age": 30,
       "goals": 1,
-      "assists": 0,
-      "citizenship": "Switzerland",
-      "flag": "flags/ch.png",
-      "jersey": 14,
-      "team": "Nottingham Forest"
+      "assists": 3,
+      "citizenship": "Japan",
+      "flag": "flags/jp.png",
+      "jersey": 18,
+      "team": "Crystal Palace"
     },
     {
       "id": 243440,
@@ -680,6 +706,19 @@
       "flag": "flags/hu.png",
       "jersey": 8,
       "team": "Liverpool"
+    },
+    {
+      "id": 282647,
+      "name": "Ellis Simms",
+      "teamId": 388,
+      "position": "F",
+      "age": 25,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 9,
+      "team": "Coventry City"
     },
     {
       "id": 214375,
@@ -802,14 +841,27 @@
       "id": 269343,
       "name": "Jack Clarke",
       "teamId": 373,
-      "position": "F",
-      "age": 25,
+      "position": "M",
+      "age": 27,
       "goals": 1,
       "assists": 1,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "jersey": 47,
       "team": "Ipswich Town"
+    },
+    {
+      "id": 286967,
+      "name": "Jack Rudoni",
+      "teamId": 388,
+      "position": "M",
+      "age": 25,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 5,
+      "team": "Coventry City"
     },
     {
       "id": 286090,
@@ -896,18 +948,57 @@
       "position": "D",
       "age": 28,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Wales",
       "flag": "flags/gb-wls.png",
       "jersey": 3,
       "team": "Coventry City"
     },
     {
+      "id": 197399,
+      "name": "Jefferson Lerma",
+      "teamId": 384,
+      "position": "M",
+      "age": 31,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Colombia",
+      "flag": "flags/co.png",
+      "jersey": 8,
+      "team": "Crystal Palace"
+    },
+    {
+      "id": 283672,
+      "name": "Jérémy Doku",
+      "teamId": 382,
+      "position": "F",
+      "age": 24,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Belgium",
+      "flag": "flags/be.png",
+      "jersey": 11,
+      "team": "Manchester City"
+    },
+    {
+      "id": 277531,
+      "name": "Joe Gelhardt",
+      "teamId": 306,
+      "position": "F",
+      "age": 24,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 11,
+      "team": "Hull City"
+    },
+    {
       "id": 386992,
       "name": "Johan Manzambi",
       "teamId": 362,
       "position": "M",
-      "age": 20,
+      "age": 21,
       "goals": 1,
       "assists": 2,
       "citizenship": "Switzerland",
@@ -948,7 +1039,7 @@
       "position": "D",
       "age": 24,
       "goals": 1,
-      "assists": 2,
+      "assists": 3,
       "citizenship": "Croatia",
       "flag": "flags/hr.png",
       "jersey": 24,
@@ -981,19 +1072,6 @@
       "team": "Brentford"
     },
     {
-      "id": 252389,
-      "name": "Kiernan Dewsbury-Hall",
-      "teamId": 368,
-      "position": "M",
-      "age": 28,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 8,
-      "team": "Everton"
-    },
-    {
       "id": 206173,
       "name": "Kristoffer Ajer",
       "teamId": 337,
@@ -1023,12 +1101,12 @@
       "id": 106139,
       "name": "Lewis Hall",
       "teamId": 361,
-      "position": "M",
-      "age": 26,
+      "position": "D",
+      "age": 22,
       "goals": 1,
       "assists": 1,
-      "citizenship": "Scotland",
-      "flag": "flags/gb-sct.png",
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
       "jersey": 3,
       "team": "Newcastle United"
     },
@@ -1228,6 +1306,45 @@
       "team": "Hull City"
     },
     {
+      "id": 366817,
+      "name": "Sidiki Cherif",
+      "teamId": 388,
+      "position": "F",
+      "age": 19,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 49,
+      "team": "Coventry City"
+    },
+    {
+      "id": 374220,
+      "name": "Stephen Mfuni",
+      "teamId": 388,
+      "position": "D",
+      "age": 18,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 12,
+      "team": "Coventry City"
+    },
+    {
+      "id": 274633,
+      "name": "Sven Botman",
+      "teamId": 361,
+      "position": "D",
+      "age": 26,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Netherlands",
+      "flag": "flags/nl.png",
+      "jersey": 4,
+      "team": "Newcastle United"
+    },
+    {
       "id": 368864,
       "name": "Tyrique George",
       "teamId": 368,
@@ -1291,6 +1408,19 @@
       "flag": "flags/ua.png",
       "jersey": 6,
       "team": "Brentford"
+    },
+    {
+      "id": 297370,
+      "name": "Yéremy Pino",
+      "teamId": 384,
+      "position": "M",
+      "age": 23,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 10,
+      "team": "Crystal Palace"
     },
     {
       "id": 224077,
@@ -1377,7 +1507,7 @@
       "position": "M",
       "age": 22,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "jersey": 20,
@@ -1897,7 +2027,7 @@
       "position": "F",
       "age": 27,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Ghana",
       "flag": "flags/gh.png",
       "jersey": 23,
@@ -2138,6 +2268,19 @@
       "team": "Nottingham Forest"
     },
     {
+      "id": 178077,
+      "name": "Christian Nørgaard",
+      "teamId": 368,
+      "position": "M",
+      "age": 32,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Denmark",
+      "flag": "flags/dk.png",
+      "jersey": 23,
+      "team": "Everton"
+    },
+    {
       "id": 168746,
       "name": "Christian Walton",
       "teamId": 373,
@@ -2203,19 +2346,6 @@
       "team": "Arsenal"
     },
     {
-      "id": 219362,
-      "name": "Daichi Kamada",
-      "teamId": 384,
-      "position": "M",
-      "age": 30,
-      "goals": 0,
-      "assists": 3,
-      "citizenship": "Japan",
-      "flag": "flags/jp.png",
-      "jersey": 18,
-      "team": "Crystal Palace"
-    },
-    {
       "id": 286347,
       "name": "Daizen Maeda",
       "teamId": 373,
@@ -2227,6 +2357,19 @@
       "flag": "flags/jp.png",
       "jersey": 38,
       "team": "Ipswich Town"
+    },
+    {
+      "id": 198138,
+      "name": "Dan Burn",
+      "teamId": 361,
+      "position": "D",
+      "age": 34,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 33,
+      "team": "Newcastle United"
     },
     {
       "id": 315530,
@@ -2285,11 +2428,11 @@
       "name": "Daniel Muñoz",
       "teamId": 393,
       "position": "D",
-      "age": 20,
+      "age": 30,
       "goals": 0,
       "assists": 0,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
+      "citizenship": "Colombia",
+      "flag": "flags/co.png",
       "jersey": 27,
       "team": "Nottingham Forest"
     },
@@ -2560,7 +2703,7 @@
       "position": "M",
       "age": 23,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "jersey": 5,
@@ -2573,24 +2716,11 @@
       "position": "M",
       "age": 24,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Sweden",
       "flag": "flags/se.png",
       "jersey": 21,
       "team": "Hull City"
-    },
-    {
-      "id": 282647,
-      "name": "Ellis Simms",
-      "teamId": 388,
-      "position": "F",
-      "age": 25,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 9,
-      "team": "Coventry City"
     },
     {
       "id": 266697,
@@ -2747,6 +2877,19 @@
       "flag": "flags/gh.png",
       "jersey": 7,
       "team": "Ipswich Town"
+    },
+    {
+      "id": 234306,
+      "name": "Federico Chiesa",
+      "teamId": 364,
+      "position": "F",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 14,
+      "team": "Liverpool"
     },
     {
       "id": 238318,
@@ -2974,7 +3117,7 @@
       "name": "Hákon Valdimarsson",
       "teamId": 337,
       "position": "G",
-      "age": 24,
+      "age": 25,
       "goals": 0,
       "assists": 0,
       "citizenship": "Iceland",
@@ -3202,19 +3345,6 @@
       "flag": "flags/gb-eng.png",
       "jersey": 10,
       "team": "Everton"
-    },
-    {
-      "id": 286967,
-      "name": "Jack Rudoni",
-      "teamId": 388,
-      "position": "M",
-      "age": 25,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 5,
-      "team": "Coventry City"
     },
     {
       "id": 291174,
@@ -3490,19 +3620,6 @@
       "team": "Crystal Palace"
     },
     {
-      "id": 197399,
-      "name": "Jefferson Lerma",
-      "teamId": 384,
-      "position": "M",
-      "age": 31,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Colombia",
-      "flag": "flags/co.png",
-      "jersey": 8,
-      "team": "Crystal Palace"
-    },
-    {
       "id": 354149,
       "name": "Jens Hjerto Dahl",
       "teamId": 306,
@@ -3527,19 +3644,6 @@
       "flag": "flags/nl.png",
       "jersey": 30,
       "team": "Liverpool"
-    },
-    {
-      "id": 283672,
-      "name": "Jérémy Doku",
-      "teamId": 382,
-      "position": "F",
-      "age": 24,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Belgium",
-      "flag": "flags/be.png",
-      "jersey": 11,
-      "team": "Manchester City"
     },
     {
       "id": 355980,
@@ -3594,19 +3698,6 @@
       "team": "Sunderland"
     },
     {
-      "id": 277531,
-      "name": "Joe Gelhardt",
-      "teamId": 306,
-      "position": "F",
-      "age": 24,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 11,
-      "team": "Hull City"
-    },
-    {
       "id": 102053,
       "name": "Joe Gomez",
       "teamId": 364,
@@ -3644,6 +3735,19 @@
       "flag": "flags/jm.png",
       "jersey": 22,
       "team": "Coventry City"
+    },
+    {
+      "id": 202232,
+      "name": "Joelinton",
+      "teamId": 361,
+      "position": "M",
+      "age": 30,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 7,
+      "team": "Newcastle United"
     },
     {
       "id": 168424,
@@ -4221,8 +4325,8 @@
       "id": 167127,
       "name": "Luke Shaw",
       "teamId": 360,
-      "position": "M",
-      "age": 30,
+      "position": "D",
+      "age": 31,
       "goals": 0,
       "assists": 1,
       "citizenship": "England",
@@ -4260,12 +4364,12 @@
       "id": 340645,
       "name": "Malick Fofana",
       "teamId": 366,
-      "position": "D",
-      "age": 26,
+      "position": "F",
+      "age": 21,
       "goals": 0,
       "assists": 0,
-      "citizenship": "Japan",
-      "flag": "flags/jp.png",
+      "citizenship": "Belgium",
+      "flag": "flags/be.png",
       "jersey": 39,
       "team": "Sunderland"
     },
@@ -4991,7 +5095,7 @@
       "position": "M",
       "age": 24,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "jersey": 6,
@@ -5028,7 +5132,7 @@
       "name": "Nikola Milenkovic",
       "teamId": 393,
       "position": "D",
-      "age": 28,
+      "age": 29,
       "goals": 0,
       "assists": 0,
       "citizenship": "Serbia",
@@ -5316,7 +5420,7 @@
       "position": "M",
       "age": 25,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Netherlands",
       "flag": "flags/nl.png",
       "jersey": 23,
@@ -5752,19 +5856,6 @@
       "team": "Manchester United"
     },
     {
-      "id": 366817,
-      "name": "Sidiki Cherif",
-      "teamId": 388,
-      "position": "F",
-      "age": 19,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 49,
-      "team": "Coventry City"
-    },
-    {
       "id": 330045,
       "name": "Sindre Walle Egeli",
       "teamId": 373,
@@ -5784,37 +5875,11 @@
       "position": "F",
       "age": 27,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Wales",
       "flag": "flags/gb-wls.png",
       "jersey": 7,
       "team": "Hull City"
-    },
-    {
-      "id": 374220,
-      "name": "Stephen Mfuni",
-      "teamId": 388,
-      "position": "D",
-      "age": 18,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 12,
-      "team": "Coventry City"
-    },
-    {
-      "id": 274633,
-      "name": "Sven Botman",
-      "teamId": 361,
-      "position": "D",
-      "age": 26,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Netherlands",
-      "flag": "flags/nl.png",
-      "jersey": 4,
-      "team": "Newcastle United"
     },
     {
       "id": 194686,
@@ -6233,19 +6298,6 @@
       "team": "Coventry City"
     },
     {
-      "id": 297370,
-      "name": "Yéremy Pino",
-      "teamId": 384,
-      "position": "M",
-      "age": 23,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 10,
-      "team": "Crystal Palace"
-    },
-    {
       "id": 413274,
       "name": "Younes Ibrahim",
       "teamId": 331,
@@ -6519,6 +6571,19 @@
       "team": "Leeds United"
     },
     {
+      "id": 381341,
+      "name": "Ceadach O’Neill",
+      "teamId": 359,
+      "position": "F",
+      "age": 18,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Northern Ireland",
+      "flag": "flags/gb-nir.png",
+      "jersey": null,
+      "team": "Arsenal"
+    },
+    {
       "id": 326187,
       "name": "Charlie Hughes",
       "teamId": 306,
@@ -6545,19 +6610,6 @@
       "team": "Fulham"
     },
     {
-      "id": 178077,
-      "name": "Christian Nørgaard",
-      "teamId": 368,
-      "position": "M",
-      "age": 32,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Denmark",
-      "flag": "flags/dk.png",
-      "jersey": 23,
-      "team": "Everton"
-    },
-    {
       "id": 250183,
       "name": "Conor Bradley",
       "teamId": 364,
@@ -6571,17 +6623,17 @@
       "team": "Liverpool"
     },
     {
-      "id": 198138,
-      "name": "Dan Burn",
-      "teamId": 361,
+      "id": 381055,
+      "name": "Daniel Armer",
+      "teamId": 360,
       "position": "D",
-      "age": 34,
+      "age": 18,
       "goals": null,
       "assists": null,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 33,
-      "team": "Newcastle United"
+      "citizenship": "Scotland",
+      "flag": "flags/gb-sct.png",
+      "jersey": null,
+      "team": "Manchester United"
     },
     {
       "id": 308216,
@@ -6686,19 +6738,6 @@
       "flag": "flags/ie.png",
       "jersey": 28,
       "team": "Brighton & Hove Albion"
-    },
-    {
-      "id": 234306,
-      "name": "Federico Chiesa",
-      "teamId": 364,
-      "position": "F",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 14,
-      "team": "Liverpool"
     },
     {
       "id": 308402,
@@ -6899,8 +6938,8 @@
       "id": 139744,
       "name": "Jack Taylor",
       "teamId": 373,
-      "position": "M",
-      "age": 28,
+      "position": "D",
+      "age": 21,
       "goals": null,
       "assists": null,
       "citizenship": "England",
@@ -6913,7 +6952,7 @@
       "name": "Jack Whittaker",
       "teamId": 366,
       "position": "M",
-      "age": 19,
+      "age": 20,
       "goals": null,
       "assists": null,
       "citizenship": "England",
@@ -6961,19 +7000,6 @@
       "team": "Sunderland"
     },
     {
-      "id": 202232,
-      "name": "Joelinton",
-      "teamId": 361,
-      "position": "M",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 7,
-      "team": "Newcastle United"
-    },
-    {
       "id": 369363,
       "name": "Jonah Kusi-Asare",
       "teamId": 370,
@@ -6998,6 +7024,19 @@
       "flag": "flags/gb-eng.png",
       "jersey": 10,
       "team": "Brentford"
+    },
+    {
+      "id": 395890,
+      "name": "Joshua Lambie",
+      "teamId": 364,
+      "position": "F",
+      "age": 18,
+      "goals": null,
+      "assists": null,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 82,
+      "team": "Liverpool"
     },
     {
       "id": 280764,
@@ -7128,6 +7167,19 @@
       "flag": "flags/gb-eng.png",
       "jersey": 26,
       "team": "Coventry City"
+    },
+    {
+      "id": 399007,
+      "name": "Maalik Hashi",
+      "teamId": 359,
+      "position": "M",
+      "age": 18,
+      "goals": null,
+      "assists": null,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": null,
+      "team": "Arsenal"
     },
     {
       "id": 3130136,
@@ -7556,6 +7608,19 @@
       "citizenship": "Czechia",
       "flag": "flags/cz.png",
       "jersey": 56,
+      "team": "Liverpool"
+    },
+    {
+      "id": 379855,
+      "name": "Wellity Lucky",
+      "teamId": 364,
+      "position": "D",
+      "age": 20,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": null,
       "team": "Liverpool"
     },
     {

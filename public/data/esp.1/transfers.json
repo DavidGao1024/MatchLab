@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-10-12T02:35:15.429Z",
+  "updateTime": "2026-10-15T01:44:44.094Z",
   "league": "esp.1",
-  "playersScanned": 602,
-  "count": 454,
+  "playersScanned": 603,
+  "count": 455,
   "transfers": [
     {
       "playerId": 119620,
@@ -1108,6 +1108,18 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
+    },
+    {
+      "playerId": 168531,
+      "playerName": "Dani Carvajal",
+      "date": "2013-07-01T07:00Z",
+      "fromTeamId": 131,
+      "fromTeam": "Bayer Leverkusen",
+      "toTeamId": 86,
+      "toTeam": "Real Madrid",
+      "type": "Fee",
+      "amount": 6500000,
+      "displayAmount": "6500000"
     },
     {
       "playerId": 169438,

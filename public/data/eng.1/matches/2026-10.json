@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-12T02:27:13.895Z",
+  "updateTime": "2026-10-15T01:37:06.757Z",
   "league": "eng.1",
   "month": "2026-10",
   "count": 38,
@@ -243,24 +243,25 @@
       "eventId": "401879267",
       "date": "2026-10-12T19:00Z",
       "name": "Newcastle United at Coventry City",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Coventry Building Society Arena",
       "home": {
         "id": 388,
         "name": "Coventry City",
         "abbreviation": "COV",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
-        "score": 0,
-        "winner": null
+        "score": 4,
+        "winner": true
       },
       "away": {
         "id": 361,
         "name": "Newcastle United",
         "abbreviation": "NEW",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
