@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-15T01:37:19.406Z",
+  "updateTime": "2026-10-17T01:24:29.905Z",
   "league": "ger.1",
   "season": "2026",
-  "matchesCounted": 45,
+  "matchesCounted": 46,
   "count": 18,
   "standings": [
     {
@@ -99,6 +99,19 @@
     },
     {
       "rank": 8,
+      "teamId": 125,
+      "team": "Eintracht Frankfurt",
+      "played": 6,
+      "won": 2,
+      "drawn": 2,
+      "lost": 2,
+      "goalsFor": 10,
+      "goalsAgainst": 16,
+      "goalDiff": -6,
+      "points": 8
+    },
+    {
+      "rank": 9,
       "teamId": 2950,
       "team": "Mainz",
       "played": 5,
@@ -111,7 +124,7 @@
       "points": 7
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 10388,
       "team": "SV Elversberg",
       "played": 5,
@@ -124,20 +137,20 @@
       "points": 7
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 122,
       "team": "FC Cologne",
-      "played": 5,
+      "played": 6,
       "won": 2,
       "drawn": 1,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 8,
-      "goalsAgainst": 10,
-      "goalDiff": -2,
+      "goalsAgainst": 11,
+      "goalDiff": -3,
       "points": 7
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 134,
       "team": "VfB Stuttgart",
       "played": 5,
@@ -150,7 +163,7 @@
       "points": 6
     },
     {
-      "rank": 12,
+      "rank": 13,
       "teamId": 127,
       "team": "Hamburg SV",
       "played": 5,
@@ -163,7 +176,7 @@
       "points": 6
     },
     {
-      "rank": 13,
+      "rank": 14,
       "teamId": 133,
       "team": "Schalke 04",
       "played": 5,
@@ -173,19 +186,6 @@
       "goalsFor": 4,
       "goalsAgainst": 6,
       "goalDiff": -2,
-      "points": 5
-    },
-    {
-      "rank": 14,
-      "teamId": 125,
-      "team": "Eintracht Frankfurt",
-      "played": 5,
-      "won": 1,
-      "drawn": 2,
-      "lost": 2,
-      "goalsFor": 9,
-      "goalsAgainst": 16,
-      "goalDiff": -7,
       "points": 5
     },
     {

@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-15T01:37:15.678Z",
+  "updateTime": "2026-10-17T01:24:26.292Z",
   "league": "ita.1",
   "season": "2026",
-  "matchesCounted": 60,
+  "matchesCounted": 61,
   "count": 20,
   "standings": [
     {
@@ -47,6 +47,19 @@
     },
     {
       "rank": 4,
+      "teamId": 4057,
+      "team": "Frosinone",
+      "played": 7,
+      "won": 4,
+      "drawn": 1,
+      "lost": 2,
+      "goalsFor": 13,
+      "goalsAgainst": 9,
+      "goalDiff": 4,
+      "points": 13
+    },
+    {
+      "rank": 5,
       "teamId": 2925,
       "team": "Cagliari",
       "played": 6,
@@ -59,7 +72,7 @@
       "points": 13
     },
     {
-      "rank": 5,
+      "rank": 6,
       "teamId": 103,
       "team": "AC Milan",
       "played": 6,
@@ -72,7 +85,7 @@
       "points": 12
     },
     {
-      "rank": 6,
+      "rank": 7,
       "teamId": 111,
       "team": "Juventus",
       "played": 6,
@@ -85,7 +98,7 @@
       "points": 11
     },
     {
-      "rank": 7,
+      "rank": 8,
       "teamId": 2572,
       "team": "Como",
       "played": 6,
@@ -98,7 +111,7 @@
       "points": 11
     },
     {
-      "rank": 8,
+      "rank": 9,
       "teamId": 114,
       "team": "Napoli",
       "played": 6,
@@ -108,19 +121,6 @@
       "goalsFor": 10,
       "goalsAgainst": 6,
       "goalDiff": 4,
-      "points": 10
-    },
-    {
-      "rank": 9,
-      "teamId": 4057,
-      "team": "Frosinone",
-      "played": 6,
-      "won": 3,
-      "drawn": 1,
-      "lost": 2,
-      "goalsFor": 9,
-      "goalsAgainst": 7,
-      "goalDiff": 2,
       "points": 10
     },
     {
@@ -140,13 +140,13 @@
       "rank": 11,
       "teamId": 3997,
       "team": "Sassuolo",
-      "played": 6,
+      "played": 7,
       "won": 2,
       "drawn": 2,
-      "lost": 2,
-      "goalsFor": 10,
-      "goalsAgainst": 10,
-      "goalDiff": 0,
+      "lost": 3,
+      "goalsFor": 12,
+      "goalsAgainst": 14,
+      "goalDiff": -2,
       "points": 8
     },
     {

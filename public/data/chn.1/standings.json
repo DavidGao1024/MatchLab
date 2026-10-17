@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-15T01:37:26.340Z",
+  "updateTime": "2026-10-17T01:24:37.472Z",
   "league": "chn.1",
   "season": "2026",
-  "matchesCounted": 216,
+  "matchesCounted": 217,
   "count": 16,
   "standings": [
     {
@@ -129,6 +129,20 @@
     },
     {
       "rank": 10,
+      "teamId": 8239,
+      "team": "Tianjin Jinmen Tiger",
+      "played": 28,
+      "won": 11,
+      "drawn": 8,
+      "lost": 9,
+      "goalsFor": 38,
+      "goalsAgainst": 32,
+      "goalDiff": 6,
+      "points": 31,
+      "deduction": 10
+    },
+    {
+      "rank": 11,
       "teamId": 18203,
       "team": "Zhejiang Professional FC",
       "played": 27,
@@ -142,7 +156,7 @@
       "deduction": 5
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 22199,
       "team": "Shenzhen Xinpengcheng",
       "played": 27,
@@ -155,30 +169,16 @@
       "points": 29
     },
     {
-      "rank": 12,
-      "teamId": 8239,
-      "team": "Tianjin Jinmen Tiger",
-      "played": 27,
-      "won": 10,
-      "drawn": 8,
-      "lost": 9,
-      "goalsFor": 37,
-      "goalsAgainst": 32,
-      "goalDiff": 5,
-      "points": 28,
-      "deduction": 10
-    },
-    {
       "rank": 13,
       "teamId": 8240,
       "team": "Henan",
-      "played": 27,
+      "played": 28,
       "won": 8,
       "drawn": 10,
-      "lost": 9,
+      "lost": 10,
       "goalsFor": 35,
-      "goalsAgainst": 37,
-      "goalDiff": -2,
+      "goalsAgainst": 38,
+      "goalDiff": -3,
       "points": 28,
       "deduction": 6
     },

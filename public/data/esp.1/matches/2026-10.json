@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-15T01:37:10.127Z",
+  "updateTime": "2026-10-17T01:24:20.016Z",
   "league": "esp.1",
   "month": "2026-10",
   "count": 36,
@@ -269,16 +269,17 @@
       "eventId": "401882844",
       "date": "2026-10-16T19:00Z",
       "name": "Levante at Deportivo",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
       "venue": "Riazor",
       "home": {
         "id": 90,
         "name": "Deportivo",
         "abbreviation": "DEP",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/90.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -286,7 +287,7 @@
         "name": "Levante",
         "abbreviation": "LEV",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -342,7 +343,7 @@
     },
     {
       "eventId": "401882846",
-      "date": "2026-10-17T16:30Z",
+      "date": "2026-10-17T16:00Z",
       "name": "Barcelona at Real Betis",
       "status": "pre",
       "completed": false,

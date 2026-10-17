@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-15T01:37:25.833Z",
+  "updateTime": "2026-10-17T01:24:36.897Z",
   "league": "chn.1",
   "month": "2026-10",
   "count": 24,
@@ -217,9 +217,10 @@
       "eventId": "401861477",
       "date": "2026-10-16T11:35Z",
       "name": "Tianjin Jinmen Tiger at Henan",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Zhengzhou Hanghai Stadium",
       "home": {
         "id": 8240,
@@ -234,8 +235,8 @@
         "name": "Tianjin Jinmen Tiger",
         "abbreviation": "TIG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8239.png",
-        "score": 0,
-        "winner": null
+        "score": 1,
+        "winner": true
       }
     },
     {
