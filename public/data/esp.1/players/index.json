@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-17T01:05:33.552Z",
+  "updateTime": "2026-10-18T00:42:01.345Z",
   "league": "esp.1",
   "season": "2026",
   "count": 605,
@@ -721,6 +721,19 @@
       "team": "Villarreal"
     },
     {
+      "id": 414299,
+      "name": "Bil Nsongo",
+      "teamId": 90,
+      "position": "F",
+      "age": 22,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Cameroon",
+      "flag": "flags/cm.png",
+      "jersey": 32,
+      "team": "Deportivo"
+    },
+    {
       "id": 311571,
       "name": "Bryan Zaragoza",
       "teamId": 88,
@@ -849,6 +862,19 @@
       "flag": "flags/es.png",
       "jersey": 19,
       "team": "Valencia"
+    },
+    {
+      "id": 362752,
+      "name": "Dani Requena",
+      "teamId": 1538,
+      "position": "M",
+      "age": 22,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 6,
+      "team": "Levante"
     },
     {
       "id": 377768,
@@ -2749,19 +2775,6 @@
       "team": "Real Madrid"
     },
     {
-      "id": 414299,
-      "name": "Bil Nsongo",
-      "teamId": 90,
-      "position": "F",
-      "age": 22,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Cameroon",
-      "flag": "flags/cm.png",
-      "jersey": 32,
-      "team": "Deportivo"
-    },
-    {
       "id": 214995,
       "name": "Borja Iglesias",
       "teamId": 85,
@@ -3048,19 +3061,6 @@
       "team": "Barcelona"
     },
     {
-      "id": 362752,
-      "name": "Dani Requena",
-      "teamId": 1538,
-      "position": "M",
-      "age": 22,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 6,
-      "team": "Levante"
-    },
-    {
       "id": 274016,
       "name": "Dani Vivian",
       "teamId": 93,
@@ -3325,7 +3325,7 @@
       "name": "Edu Altozano",
       "teamId": 243,
       "position": "M",
-      "age": 19,
+      "age": 20,
       "goals": 0,
       "assists": 0,
       "citizenship": "Spain",
@@ -3637,7 +3637,7 @@
       "name": "Francho Serrano",
       "teamId": 2922,
       "position": "M",
-      "age": 24,
+      "age": 25,
       "goals": 0,
       "assists": 0,
       "citizenship": "Spain",
@@ -4182,12 +4182,12 @@
       "id": 403576,
       "name": "Iker Rodríguez",
       "teamId": 83,
-      "position": "F",
-      "age": 17,
+      "position": "G",
+      "age": 18,
       "goals": 0,
       "assists": 0,
-      "citizenship": "Cuba",
-      "flag": null,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
       "jersey": 35,
       "team": "Barcelona"
     },
@@ -5194,14 +5194,14 @@
     },
     {
       "id": 331530,
-      "name": "Kevin Sánchez",
+      "name": "Kevin Sanchez",
       "teamId": 90,
-      "position": "F",
-      "age": 21,
+      "position": "M",
+      "age": 19,
       "goals": 0,
       "assists": 0,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
+      "citizenship": "USA",
+      "flag": "flags/us.png",
       "jersey": 33,
       "team": "Deportivo"
     },
@@ -5937,8 +5937,8 @@
       "id": 213535,
       "name": "Moussa Diarra",
       "teamId": 99,
-      "position": "F",
-      "age": 24,
+      "position": "D",
+      "age": 25,
       "goals": 0,
       "assists": 0,
       "citizenship": "Mali",
@@ -6421,7 +6421,7 @@
       "position": "F",
       "age": 23,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Serbia",
       "flag": "flags/rs.png",
       "jersey": 10,
@@ -7338,6 +7338,19 @@
       "team": "Levante"
     },
     {
+      "id": 324945,
+      "name": "Yayo",
+      "teamId": 90,
+      "position": "M",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 36,
+      "team": "Deportivo"
+    },
+    {
       "id": 217225,
       "name": "Yeray",
       "teamId": 93,
@@ -7771,7 +7784,7 @@
       "name": "Raúl de Tomás",
       "teamId": 101,
       "position": "F",
-      "age": 31,
+      "age": 32,
       "goals": null,
       "assists": null,
       "citizenship": "Spain",
@@ -7856,19 +7869,6 @@
       "flag": "flags/ua.png",
       "jersey": 35,
       "team": "Villarreal"
-    },
-    {
-      "id": 324945,
-      "name": "Yayo",
-      "teamId": 90,
-      "position": "M",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 36,
-      "team": "Deportivo"
     }
   ]
 }

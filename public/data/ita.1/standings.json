@@ -1,26 +1,39 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-17T01:24:26.292Z",
+  "updateTime": "2026-10-18T01:01:01.753Z",
   "league": "ita.1",
   "season": "2026",
-  "matchesCounted": 61,
+  "matchesCounted": 64,
   "count": 20,
   "standings": [
     {
       "rank": 1,
       "teamId": 110,
       "team": "Internazionale",
-      "played": 6,
-      "won": 5,
+      "played": 7,
+      "won": 6,
       "drawn": 1,
       "lost": 0,
-      "goalsFor": 18,
-      "goalsAgainst": 8,
-      "goalDiff": 10,
-      "points": 16
+      "goalsFor": 21,
+      "goalsAgainst": 9,
+      "goalDiff": 12,
+      "points": 19
     },
     {
       "rank": 2,
+      "teamId": 104,
+      "team": "AS Roma",
+      "played": 7,
+      "won": 5,
+      "drawn": 2,
+      "lost": 0,
+      "goalsFor": 16,
+      "goalsAgainst": 3,
+      "goalDiff": 13,
+      "points": 17
+    },
+    {
+      "rank": 3,
       "teamId": 112,
       "team": "Lazio",
       "played": 6,
@@ -31,19 +44,6 @@
       "goalsAgainst": 4,
       "goalDiff": 7,
       "points": 16
-    },
-    {
-      "rank": 3,
-      "teamId": 104,
-      "team": "AS Roma",
-      "played": 6,
-      "won": 4,
-      "drawn": 2,
-      "lost": 0,
-      "goalsFor": 14,
-      "goalsAgainst": 3,
-      "goalDiff": 11,
-      "points": 14
     },
     {
       "rank": 4,
@@ -114,13 +114,13 @@
       "rank": 9,
       "teamId": 114,
       "team": "Napoli",
-      "played": 6,
+      "played": 7,
       "won": 3,
       "drawn": 1,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 10,
-      "goalsAgainst": 6,
-      "goalDiff": 4,
+      "goalsAgainst": 7,
+      "goalDiff": 3,
       "points": 10
     },
     {
@@ -179,13 +179,13 @@
       "rank": 14,
       "teamId": 107,
       "team": "Bologna",
-      "played": 6,
+      "played": 7,
       "won": 1,
       "drawn": 2,
-      "lost": 3,
-      "goalsFor": 5,
-      "goalsAgainst": 7,
-      "goalDiff": -2,
+      "lost": 4,
+      "goalsFor": 6,
+      "goalsAgainst": 10,
+      "goalDiff": -4,
       "points": 5
     },
     {
@@ -216,19 +216,6 @@
     },
     {
       "rank": 17,
-      "teamId": 3263,
-      "team": "Genoa",
-      "played": 6,
-      "won": 1,
-      "drawn": 1,
-      "lost": 4,
-      "goalsFor": 5,
-      "goalsAgainst": 11,
-      "goalDiff": -6,
-      "points": 4
-    },
-    {
-      "rank": 18,
       "teamId": 115,
       "team": "Parma",
       "played": 6,
@@ -241,7 +228,7 @@
       "points": 4
     },
     {
-      "rank": 19,
+      "rank": 18,
       "teamId": 109,
       "team": "Fiorentina",
       "played": 6,
@@ -254,17 +241,30 @@
       "points": 4
     },
     {
+      "rank": 19,
+      "teamId": 3263,
+      "team": "Genoa",
+      "played": 7,
+      "won": 1,
+      "drawn": 1,
+      "lost": 5,
+      "goalsFor": 5,
+      "goalsAgainst": 13,
+      "goalDiff": -8,
+      "points": 4
+    },
+    {
       "rank": 20,
       "teamId": 17530,
       "team": "Venezia",
-      "played": 6,
-      "won": 0,
+      "played": 7,
+      "won": 1,
       "drawn": 0,
       "lost": 6,
-      "goalsFor": 5,
+      "goalsFor": 6,
       "goalsAgainst": 16,
-      "goalDiff": -11,
-      "points": 0
+      "goalDiff": -10,
+      "points": 3
     }
   ]
 }
