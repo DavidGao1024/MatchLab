@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-18T01:01:02.931Z",
+  "updateTime": "2026-10-19T00:40:41.458Z",
   "league": "ger.1",
   "month": "2026-10",
   "count": 34,
@@ -425,24 +425,25 @@
       "eventId": "401884771",
       "date": "2026-10-18T13:30Z",
       "name": "SC Freiburg at Bayer Leverkusen",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "BayArena",
       "home": {
         "id": 131,
         "name": "Bayer Leverkusen",
         "abbreviation": "B04",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 126,
         "name": "SC Freiburg",
         "abbreviation": "SCF",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -450,16 +451,17 @@
       "eventId": "401884768",
       "date": "2026-10-18T15:30Z",
       "name": "TSG Hoffenheim at Borussia Mönchengladbach",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "BORUSSIA-PARK",
       "home": {
         "id": 268,
         "name": "Borussia Mönchengladbach",
         "abbreviation": "BMG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -467,8 +469,8 @@
         "name": "TSG Hoffenheim",
         "abbreviation": "TSG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       }
     },
     {
