@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-19T00:40:40.516Z",
+  "updateTime": "2026-10-22T01:34:06.829Z",
   "league": "ita.1",
   "season": "2026",
-  "matchesCounted": 68,
+  "matchesCounted": 70,
   "count": 20,
   "standings": [
     {
@@ -88,13 +88,13 @@
       "rank": 7,
       "teamId": 2925,
       "team": "Cagliari",
-      "played": 6,
+      "played": 7,
       "won": 4,
       "drawn": 1,
-      "lost": 1,
+      "lost": 2,
       "goalsFor": 6,
-      "goalsAgainst": 3,
-      "goalDiff": 3,
+      "goalsAgainst": 7,
+      "goalDiff": -1,
       "points": 13
     },
     {
@@ -125,6 +125,19 @@
     },
     {
       "rank": 10,
+      "teamId": 239,
+      "team": "Torino",
+      "played": 7,
+      "won": 3,
+      "drawn": 1,
+      "lost": 3,
+      "goalsFor": 10,
+      "goalsAgainst": 9,
+      "goalDiff": 1,
+      "points": 10
+    },
+    {
+      "rank": 11,
       "teamId": 105,
       "team": "Atalanta",
       "played": 7,
@@ -137,7 +150,7 @@
       "points": 9
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 113,
       "team": "Lecce",
       "played": 7,
@@ -150,7 +163,7 @@
       "points": 9
     },
     {
-      "rank": 12,
+      "rank": 13,
       "teamId": 3997,
       "team": "Sassuolo",
       "played": 7,
@@ -163,20 +176,20 @@
       "points": 8
     },
     {
-      "rank": 13,
-      "teamId": 239,
-      "team": "Torino",
-      "played": 6,
+      "rank": 14,
+      "teamId": 4007,
+      "team": "Monza",
+      "played": 7,
       "won": 2,
       "drawn": 1,
-      "lost": 3,
-      "goalsFor": 7,
-      "goalsAgainst": 9,
+      "lost": 4,
+      "goalsFor": 13,
+      "goalsAgainst": 15,
       "goalDiff": -2,
       "points": 7
     },
     {
-      "rank": 14,
+      "rank": 15,
       "teamId": 107,
       "team": "Bologna",
       "played": 7,
@@ -189,33 +202,7 @@
       "points": 5
     },
     {
-      "rank": 15,
-      "teamId": 4007,
-      "team": "Monza",
-      "played": 6,
-      "won": 1,
-      "drawn": 1,
-      "lost": 4,
-      "goalsFor": 9,
-      "goalsAgainst": 15,
-      "goalDiff": -6,
-      "points": 4
-    },
-    {
       "rank": 16,
-      "teamId": 115,
-      "team": "Parma",
-      "played": 6,
-      "won": 1,
-      "drawn": 1,
-      "lost": 4,
-      "goalsFor": 4,
-      "goalsAgainst": 10,
-      "goalDiff": -6,
-      "points": 4
-    },
-    {
-      "rank": 17,
       "teamId": 118,
       "team": "Udinese",
       "played": 7,
@@ -228,7 +215,7 @@
       "points": 4
     },
     {
-      "rank": 18,
+      "rank": 17,
       "teamId": 3263,
       "team": "Genoa",
       "played": 7,
@@ -241,7 +228,7 @@
       "points": 4
     },
     {
-      "rank": 19,
+      "rank": 18,
       "teamId": 109,
       "team": "Fiorentina",
       "played": 7,
@@ -250,6 +237,19 @@
       "lost": 5,
       "goalsFor": 8,
       "goalsAgainst": 17,
+      "goalDiff": -9,
+      "points": 4
+    },
+    {
+      "rank": 19,
+      "teamId": 115,
+      "team": "Parma",
+      "played": 7,
+      "won": 1,
+      "drawn": 1,
+      "lost": 5,
+      "goalsFor": 4,
+      "goalsAgainst": 13,
       "goalDiff": -9,
       "points": 4
     },

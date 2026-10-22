@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-15T01:13:42.625Z",
+  "updateTime": "2026-10-22T01:12:05.229Z",
   "league": "eng.1",
   "season": "2026",
   "id": 134190,
@@ -20,7 +20,7 @@
   "flag": "flags/nz.png",
   "stats": {
     "defensive": {
-      "blockedShots": 0,
+      "blockedShots": 1,
       "effectiveClearance": 0,
       "effectiveTackles": 0,
       "inneffectiveTackles": 0,
@@ -32,7 +32,7 @@
       "recoveries": 2
     },
     "general": {
-      "appearances": 5,
+      "appearances": 6,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -45,12 +45,12 @@
       "handBalls": 1,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 80,
+      "minutes": 85,
       "ownGoals": 0,
-      "passPct": 0.625,
+      "passPct": 0.647,
       "redCards": 0,
       "starts": 0,
-      "subIns": 5,
+      "subIns": 6,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -60,10 +60,10 @@
       "wonCorners": 0,
       "yellowCards": 0,
       "duelsLost": 12,
-      "duelsWon": 6,
-      "duels": 18,
+      "duelsWon": 8,
+      "duels": 20,
       "secondYellow": 0,
-      "touches": 24
+      "touches": 27
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -87,7 +87,7 @@
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 1,
-      "accuratePasses": 10,
+      "accuratePasses": 11,
       "accurateThroughBalls": 0,
       "attemptsInBox": 8,
       "attemptsOutBox": 2,
@@ -103,7 +103,7 @@
       "inaccurateLongBalls": 0,
       "inaccuratePasses": 6,
       "inaccurateThroughBalls": 0,
-      "leftFootedShots": 0,
+      "leftFootedShots": 1,
       "longballPct": 1,
       "offsides": 0,
       "penaltyKickGoals": 0,
@@ -116,22 +116,22 @@
       "shootOutMisses": 0,
       "shootOutPct": 0,
       "shotAssists": 0,
-      "shotPct": 0.5,
+      "shotPct": 0.333,
       "shotsHeaded": 0,
-      "shotsOffTarget": 0,
+      "shotsOffTarget": 1,
       "shotsOnPost": 0,
       "shotsOnTarget": 1,
       "throughBallPct": 0,
       "totalCrosses": 0,
       "totalGoals": 0,
       "totalLongBalls": 1,
-      "totalPasses": 16,
-      "totalShots": 2,
+      "totalPasses": 17,
+      "totalShots": 3,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 1,
       "progressiveCarries": 2,
-      "touchesInOppBox": 3
+      "touchesInOppBox": 4
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-18T00:56:30.306Z",
+  "updateTime": "2026-10-22T01:29:59.442Z",
   "league": "fra.1",
   "season": "2026",
   "categories": [
@@ -11,6 +11,33 @@
       "entries": [
         {
           "rank": 1,
+          "value": 7,
+          "displayValue": "Matches: 7, Goals: 7",
+          "athleteId": 323850,
+          "athleteName": "Esteban Lepaul",
+          "teamId": 169,
+          "teamName": "Stade Rennais"
+        },
+        {
+          "rank": 2,
+          "value": 6,
+          "displayValue": "Matches: 7, Goals: 6",
+          "athleteId": 271137,
+          "athleteName": "Lassine Sinayoko",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 3,
+          "value": 5,
+          "displayValue": "Matches: 7, Goals: 5",
+          "athleteId": 259743,
+          "athleteName": "Amine Gouiri",
+          "teamId": 176,
+          "teamName": "Marseille"
+        },
+        {
+          "rank": 4,
           "value": 5,
           "displayValue": "Matches: 5, Goals: 5",
           "athleteId": 306664,
@@ -19,7 +46,7 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 2,
+          "rank": 5,
           "value": 4,
           "displayValue": "Matches: 7, Goals: 4",
           "athleteId": 268720,
@@ -28,45 +55,18 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 3,
+          "rank": 6,
           "value": 4,
-          "displayValue": "Matches: 6, Goals: 4",
-          "athleteId": 271137,
-          "athleteName": "Lassine Sinayoko",
-          "teamId": 6851,
-          "teamName": "Paris FC"
-        },
-        {
-          "rank": 4,
-          "value": 4,
-          "displayValue": "Matches: 6, Goals: 4",
-          "athleteId": 259743,
-          "athleteName": "Amine Gouiri",
-          "teamId": 176,
-          "teamName": "Marseille"
-        },
-        {
-          "rank": 5,
-          "value": 4,
-          "displayValue": "Matches: 6, Goals: 4",
+          "displayValue": "Matches: 7, Goals: 4",
           "athleteId": 330412,
           "athleteName": "Kamory Doumbia",
           "teamId": 6997,
           "teamName": "Brest"
         },
         {
-          "rank": 6,
-          "value": 4,
-          "displayValue": "Matches: 6, Goals: 4",
-          "athleteId": 323850,
-          "athleteName": "Esteban Lepaul",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
-        },
-        {
           "rank": 7,
           "value": 4,
-          "displayValue": "Matches: 6, Goals: 4",
+          "displayValue": "Matches: 7, Goals: 4",
           "athleteId": 265869,
           "athleteName": "Ferran Torres",
           "teamId": 160,
@@ -76,24 +76,24 @@
           "rank": 8,
           "value": 4,
           "displayValue": "Matches: 5, Goals: 4",
-          "athleteId": 365789,
-          "athleteName": "Paris Brunner",
-          "teamId": 174,
-          "teamName": "AS Monaco"
-        },
-        {
-          "rank": 9,
-          "value": 4,
-          "displayValue": "Matches: 4, Goals: 4",
           "athleteId": 293347,
           "athleteName": "Cameron Archer",
           "teamId": 172,
           "teamName": "AJ Auxerre"
         },
         {
+          "rank": 9,
+          "value": 4,
+          "displayValue": "Matches: 5, Goals: 4",
+          "athleteId": 365789,
+          "athleteName": "Paris Brunner",
+          "teamId": 174,
+          "teamName": "AS Monaco"
+        },
+        {
           "rank": 10,
           "value": 3,
-          "displayValue": "Matches: 6, Goals: 3",
+          "displayValue": "Matches: 7, Goals: 3",
           "athleteId": 156898,
           "athleteName": "Florian Thauvin",
           "teamId": 175,
@@ -102,6 +102,15 @@
         {
           "rank": 11,
           "value": 3,
+          "displayValue": "Matches: 7, Goals: 3",
+          "athleteId": 243748,
+          "athleteName": "Danny Namaso",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 12,
+          "value": 3,
           "displayValue": "Matches: 5, Goals: 3",
           "athleteId": 159047,
           "athleteName": "Marquinhos",
@@ -109,7 +118,7 @@
           "teamName": "Paris Saint-Germain"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "value": 3,
           "displayValue": "Matches: 5, Goals: 3",
           "athleteId": 418536,
@@ -118,7 +127,7 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "value": 3,
           "displayValue": "Matches: 5, Goals: 3",
           "athleteId": 333310,
@@ -127,7 +136,25 @@
           "teamName": "Lyon"
         },
         {
-          "rank": 14,
+          "rank": 15,
+          "value": 2,
+          "displayValue": "Matches: 7, Goals: 2",
+          "athleteId": 370758,
+          "athleteName": "Zachary Athekame",
+          "teamId": 167,
+          "teamName": "Lyon"
+        },
+        {
+          "rank": 16,
+          "value": 2,
+          "displayValue": "Matches: 7, Goals: 2",
+          "athleteId": 192015,
+          "athleteName": "Ludovic Ajorque",
+          "teamId": 6997,
+          "teamName": "Brest"
+        },
+        {
+          "rank": 17,
           "value": 2,
           "displayValue": "Matches: 7, Goals: 2",
           "athleteId": 362777,
@@ -136,103 +163,76 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 15,
-          "value": 2,
-          "displayValue": "Matches: 7, Goals: 2",
-          "athleteId": 297121,
-          "athleteName": "Jacen Russell-Rowe",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 16,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 370758,
-          "athleteName": "Zachary Athekame",
-          "teamId": 167,
-          "teamName": "Lyon"
-        },
-        {
-          "rank": 17,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 192015,
-          "athleteName": "Ludovic Ajorque",
-          "teamId": 6997,
-          "teamName": "Brest"
-        },
-        {
           "rank": 18,
           "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 379012,
-          "athleteName": "Gessime Yassine",
-          "teamId": 180,
-          "teamName": "Strasbourg"
-        },
-        {
-          "rank": 19,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
+          "displayValue": "Matches: 7, Goals: 2",
           "athleteId": 231366,
           "athleteName": "Mbwana Samatta",
           "teamId": 3236,
           "teamName": "Le Havre AC"
         },
         {
+          "rank": 19,
+          "value": 2,
+          "displayValue": "Matches: 7, Goals: 2",
+          "athleteId": 379012,
+          "athleteName": "Gessime Yassine",
+          "teamId": 180,
+          "teamName": "Strasbourg"
+        },
+        {
           "rank": 20,
           "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
+          "displayValue": "Matches: 7, Goals: 2",
+          "athleteId": 238917,
+          "athleteName": "Amine Harit",
+          "teamId": 176,
+          "teamName": "Marseille"
+        },
+        {
+          "rank": 21,
+          "value": 2,
+          "displayValue": "Matches: 7, Goals: 2",
+          "athleteId": 223122,
+          "athleteName": "Maxime López",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 22,
+          "value": 2,
+          "displayValue": "Matches: 7, Goals: 2",
           "athleteId": 365783,
           "athleteName": "Pathé Mboup",
           "teamId": 6997,
           "teamName": "Brest"
         },
         {
-          "rank": 21,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 346844,
-          "athleteName": "Tiago Santos",
-          "teamId": 166,
-          "teamName": "Lille"
-        },
-        {
-          "rank": 22,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 233199,
-          "athleteName": "Matthieu Udol",
-          "teamId": 175,
-          "teamName": "Lens"
-        },
-        {
           "rank": 23,
           "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 173266,
-          "athleteName": "Adrien Thomasson",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
+          "displayValue": "Matches: 7, Goals: 2",
+          "athleteId": 277525,
+          "athleteName": "Himad Abdelli",
+          "teamId": 176,
+          "teamName": "Marseille"
         },
         {
           "rank": 24,
           "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 403232,
-          "athleteName": "Prosper Peter",
+          "displayValue": "Matches: 7, Goals: 2",
+          "athleteId": 301262,
+          "athleteName": "Amine El Ouazzani",
           "teamId": 7868,
           "teamName": "Angers"
         },
         {
           "rank": 25,
           "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 350501,
-          "athleteName": "Samuel Amo-Ameyaw",
-          "teamId": 180,
-          "teamName": "Strasbourg"
+          "displayValue": "Matches: 7, Goals: 2",
+          "athleteId": 173266,
+          "athleteName": "Adrien Thomasson",
+          "teamId": 169,
+          "teamName": "Stade Rennais"
         }
       ]
     },
@@ -243,6 +243,15 @@
       "entries": [
         {
           "rank": 1,
+          "value": 6,
+          "displayValue": "Matches: 7, Assists: 6",
+          "athleteId": 156898,
+          "athleteName": "Florian Thauvin",
+          "teamId": 175,
+          "teamName": "Lens"
+        },
+        {
+          "rank": 2,
           "value": 5,
           "displayValue": "Matches: 7, Assists: 5",
           "athleteId": 271244,
@@ -251,34 +260,43 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 2,
-          "value": 4,
-          "displayValue": "Matches: 6, Assists: 4",
-          "athleteId": 156898,
-          "athleteName": "Florian Thauvin",
-          "teamId": 175,
-          "teamName": "Lens"
-        },
-        {
           "rank": 3,
           "value": 3,
-          "displayValue": "Matches: 6, Assists: 3",
+          "displayValue": "Matches: 7, Assists: 3",
+          "athleteId": 370758,
+          "athleteName": "Zachary Athekame",
+          "teamId": 167,
+          "teamName": "Lyon"
+        },
+        {
+          "rank": 4,
+          "value": 3,
+          "displayValue": "Matches: 7, Assists: 3",
           "athleteId": 195501,
           "athleteName": "Aleksandr Golovin",
           "teamId": 174,
           "teamName": "AS Monaco"
         },
         {
-          "rank": 4,
+          "rank": 5,
           "value": 3,
-          "displayValue": "Matches: 6, Assists: 3",
+          "displayValue": "Matches: 7, Assists: 3",
+          "athleteId": 271137,
+          "athleteName": "Lassine Sinayoko",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 6,
+          "value": 3,
+          "displayValue": "Matches: 7, Assists: 3",
           "athleteId": 305545,
           "athleteName": "Pavel Sulc",
           "teamId": 167,
           "teamName": "Lyon"
         },
         {
-          "rank": 5,
+          "rank": 7,
           "value": 3,
           "displayValue": "Matches: 5, Assists: 3",
           "athleteId": 364754,
@@ -287,7 +305,88 @@
           "teamName": "Lorient"
         },
         {
-          "rank": 6,
+          "rank": 8,
+          "value": 2,
+          "displayValue": "Matches: 7, Assists: 2",
+          "athleteId": 159051,
+          "athleteName": "Emerson",
+          "teamId": 176,
+          "teamName": "Marseille"
+        },
+        {
+          "rank": 9,
+          "value": 2,
+          "displayValue": "Matches: 7, Assists: 2",
+          "athleteId": 379012,
+          "athleteName": "Gessime Yassine",
+          "teamId": 180,
+          "teamName": "Strasbourg"
+        },
+        {
+          "rank": 10,
+          "value": 2,
+          "displayValue": "Matches: 7, Assists: 2",
+          "athleteId": 291850,
+          "athleteName": "Joris Chotard",
+          "teamId": 6997,
+          "teamName": "Brest"
+        },
+        {
+          "rank": 11,
+          "value": 2,
+          "displayValue": "Matches: 7, Assists: 2",
+          "athleteId": 243748,
+          "athleteName": "Danny Namaso",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 12,
+          "value": 2,
+          "displayValue": "Matches: 7, Assists: 2",
+          "athleteId": 301262,
+          "athleteName": "Amine El Ouazzani",
+          "teamId": 7868,
+          "teamName": "Angers"
+        },
+        {
+          "rank": 13,
+          "value": 2,
+          "displayValue": "Matches: 7, Assists: 2",
+          "athleteId": 192060,
+          "athleteName": "Corentin Tolisso",
+          "teamId": 167,
+          "teamName": "Lyon"
+        },
+        {
+          "rank": 14,
+          "value": 2,
+          "displayValue": "Matches: 7, Assists: 2",
+          "athleteId": 173266,
+          "athleteName": "Adrien Thomasson",
+          "teamId": 169,
+          "teamName": "Stade Rennais"
+        },
+        {
+          "rank": 15,
+          "value": 2,
+          "displayValue": "Matches: 7, Assists: 2",
+          "athleteId": 88965,
+          "athleteName": "Olivier Giroud",
+          "teamId": 166,
+          "teamName": "Lille"
+        },
+        {
+          "rank": 16,
+          "value": 2,
+          "displayValue": "Matches: 7, Assists: 2",
+          "athleteId": 268591,
+          "athleteName": "Romain Faivre",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 17,
           "value": 2,
           "displayValue": "Matches: 7, Assists: 2",
           "athleteId": 331636,
@@ -296,52 +395,34 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 7,
+          "rank": 18,
           "value": 2,
-          "displayValue": "Matches: 6, Assists: 2",
-          "athleteId": 370758,
-          "athleteName": "Zachary Athekame",
-          "teamId": 167,
-          "teamName": "Lyon"
+          "displayValue": "Matches: 7, Assists: 2",
+          "athleteId": 276995,
+          "athleteName": "Sofiane Diop",
+          "teamId": 2502,
+          "teamName": "Nice"
         },
         {
-          "rank": 8,
+          "rank": 19,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
-          "athleteId": 291850,
-          "athleteName": "Joris Chotard",
+          "athleteId": 266027,
+          "athleteName": "Timothy Weah",
+          "teamId": 176,
+          "teamName": "Marseille"
+        },
+        {
+          "rank": 20,
+          "value": 2,
+          "displayValue": "Matches: 6, Assists: 2",
+          "athleteId": 250377,
+          "athleteName": "Hugo Magnetti",
           "teamId": 6997,
           "teamName": "Brest"
         },
         {
-          "rank": 9,
-          "value": 2,
-          "displayValue": "Matches: 6, Assists: 2",
-          "athleteId": 192060,
-          "athleteName": "Corentin Tolisso",
-          "teamId": 167,
-          "teamName": "Lyon"
-        },
-        {
-          "rank": 10,
-          "value": 2,
-          "displayValue": "Matches: 6, Assists: 2",
-          "athleteId": 173266,
-          "athleteName": "Adrien Thomasson",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
-        },
-        {
-          "rank": 11,
-          "value": 2,
-          "displayValue": "Matches: 6, Assists: 2",
-          "athleteId": 301262,
-          "athleteName": "Amine El Ouazzani",
-          "teamId": 7868,
-          "teamName": "Angers"
-        },
-        {
-          "rank": 12,
+          "rank": 21,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 214596,
@@ -350,25 +431,7 @@
           "teamName": "Paris Saint-Germain"
         },
         {
-          "rank": 13,
-          "value": 2,
-          "displayValue": "Matches: 6, Assists: 2",
-          "athleteId": 88965,
-          "athleteName": "Olivier Giroud",
-          "teamId": 166,
-          "teamName": "Lille"
-        },
-        {
-          "rank": 14,
-          "value": 2,
-          "displayValue": "Matches: 6, Assists: 2",
-          "athleteId": 276995,
-          "athleteName": "Sofiane Diop",
-          "teamId": 2502,
-          "teamName": "Nice"
-        },
-        {
-          "rank": 15,
+          "rank": 22,
           "value": 2,
           "displayValue": "Matches: 5, Assists: 2",
           "athleteId": 418536,
@@ -377,7 +440,7 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 16,
+          "rank": 23,
           "value": 2,
           "displayValue": "Matches: 5, Assists: 2",
           "athleteId": 303787,
@@ -386,85 +449,22 @@
           "teamName": "Strasbourg"
         },
         {
-          "rank": 17,
+          "rank": 24,
           "value": 2,
           "displayValue": "Matches: 5, Assists: 2",
-          "athleteId": 250377,
-          "athleteName": "Hugo Magnetti",
-          "teamId": 6997,
-          "teamName": "Brest"
+          "athleteId": 229744,
+          "athleteName": "Ousmane Dembélé",
+          "teamId": 160,
+          "teamName": "Paris Saint-Germain"
         },
         {
-          "rank": 18,
+          "rank": 25,
           "value": 2,
-          "displayValue": "Matches: 4, Assists: 2",
+          "displayValue": "Matches: 5, Assists: 2",
           "athleteId": 250758,
           "athleteName": "Bryan Reynolds",
           "teamId": 169,
           "teamName": "Stade Rennais"
-        },
-        {
-          "rank": 19,
-          "value": 2,
-          "displayValue": "Matches: 3, Assists: 2",
-          "athleteId": 304011,
-          "athleteName": "Maurits Kjaergaard",
-          "teamId": 166,
-          "teamName": "Lille"
-        },
-        {
-          "rank": 20,
-          "value": 1,
-          "displayValue": "Matches: 7, Assists: 1",
-          "athleteId": 362777,
-          "athleteName": "Thomas Jørgensen",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 21,
-          "value": 1,
-          "displayValue": "Matches: 7, Assists: 1",
-          "athleteId": 268720,
-          "athleteName": "Louis Mafouta",
-          "teamId": 2697,
-          "teamName": "Le Mans"
-        },
-        {
-          "rank": 22,
-          "value": 1,
-          "displayValue": "Matches: 6, Assists: 1",
-          "athleteId": 381626,
-          "athleteName": "Arsène Kouassi",
-          "teamId": 273,
-          "teamName": "Lorient"
-        },
-        {
-          "rank": 23,
-          "value": 1,
-          "displayValue": "Matches: 6, Assists: 1",
-          "athleteId": 345926,
-          "athleteName": "Mamadou Diop",
-          "teamId": 172,
-          "teamName": "AJ Auxerre"
-        },
-        {
-          "rank": 24,
-          "value": 1,
-          "displayValue": "Matches: 6, Assists: 1",
-          "athleteId": 307713,
-          "athleteName": "Charlie Cresswell",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
-        },
-        {
-          "rank": 25,
-          "value": 1,
-          "displayValue": "Matches: 6, Assists: 1",
-          "athleteId": 196234,
-          "athleteName": "Branco van den Boomen",
-          "teamId": 7868,
-          "teamName": "Angers"
         }
       ]
     },
@@ -475,6 +475,33 @@
       "entries": [
         {
           "rank": 1,
+          "value": 7,
+          "displayValue": "7",
+          "athleteId": 323850,
+          "athleteName": "Esteban Lepaul",
+          "teamId": 169,
+          "teamName": "Stade Rennais"
+        },
+        {
+          "rank": 2,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 271137,
+          "athleteName": "Lassine Sinayoko",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 3,
+          "value": 5,
+          "displayValue": "5",
+          "athleteId": 259743,
+          "athleteName": "Amine Gouiri",
+          "teamId": 176,
+          "teamName": "Marseille"
+        },
+        {
+          "rank": 4,
           "value": 5,
           "displayValue": "5",
           "athleteId": 306664,
@@ -483,7 +510,7 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 2,
+          "rank": 5,
           "value": 4,
           "displayValue": "4",
           "athleteId": 268720,
@@ -492,40 +519,13 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 3,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 271137,
-          "athleteName": "Lassine Sinayoko",
-          "teamId": 6851,
-          "teamName": "Paris FC"
-        },
-        {
-          "rank": 4,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 259743,
-          "athleteName": "Amine Gouiri",
-          "teamId": 176,
-          "teamName": "Marseille"
-        },
-        {
-          "rank": 5,
+          "rank": 6,
           "value": 4,
           "displayValue": "4",
           "athleteId": 330412,
           "athleteName": "Kamory Doumbia",
           "teamId": 6997,
           "teamName": "Brest"
-        },
-        {
-          "rank": 6,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 323850,
-          "athleteName": "Esteban Lepaul",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
         },
         {
           "rank": 7,
@@ -540,19 +540,19 @@
           "rank": 8,
           "value": 4,
           "displayValue": "4",
-          "athleteId": 365789,
-          "athleteName": "Paris Brunner",
-          "teamId": 174,
-          "teamName": "AS Monaco"
+          "athleteId": 293347,
+          "athleteName": "Cameron Archer",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
         },
         {
           "rank": 9,
           "value": 4,
           "displayValue": "4",
-          "athleteId": 293347,
-          "athleteName": "Cameron Archer",
-          "teamId": 172,
-          "teamName": "AJ Auxerre"
+          "athleteId": 365789,
+          "athleteName": "Paris Brunner",
+          "teamId": 174,
+          "teamName": "AS Monaco"
         },
         {
           "rank": 10,
@@ -567,13 +567,22 @@
           "rank": 11,
           "value": 3,
           "displayValue": "3",
+          "athleteId": 243748,
+          "athleteName": "Danny Namaso",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 12,
+          "value": 3,
+          "displayValue": "3",
           "athleteId": 159047,
           "athleteName": "Marquinhos",
           "teamId": 160,
           "teamName": "Paris Saint-Germain"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "value": 3,
           "displayValue": "3",
           "athleteId": 418536,
@@ -582,7 +591,7 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "value": 3,
           "displayValue": "3",
           "athleteId": 333310,
@@ -591,25 +600,7 @@
           "teamName": "Lyon"
         },
         {
-          "rank": 14,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 362777,
-          "athleteName": "Thomas Jørgensen",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
           "rank": 15,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 297121,
-          "athleteName": "Jacen Russell-Rowe",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 16,
           "value": 2,
           "displayValue": "2",
           "athleteId": 370758,
@@ -618,7 +609,7 @@
           "teamName": "Lyon"
         },
         {
-          "rank": 17,
+          "rank": 16,
           "value": 2,
           "displayValue": "2",
           "athleteId": 192015,
@@ -627,16 +618,16 @@
           "teamName": "Brest"
         },
         {
-          "rank": 18,
+          "rank": 17,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 379012,
-          "athleteName": "Gessime Yassine",
-          "teamId": 180,
-          "teamName": "Strasbourg"
+          "athleteId": 362777,
+          "athleteName": "Thomas Jørgensen",
+          "teamId": 179,
+          "teamName": "Toulouse"
         },
         {
-          "rank": 19,
+          "rank": 18,
           "value": 2,
           "displayValue": "2",
           "athleteId": 231366,
@@ -645,7 +636,34 @@
           "teamName": "Le Havre AC"
         },
         {
+          "rank": 19,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 379012,
+          "athleteName": "Gessime Yassine",
+          "teamId": 180,
+          "teamName": "Strasbourg"
+        },
+        {
           "rank": 20,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 238917,
+          "athleteName": "Amine Harit",
+          "teamId": 176,
+          "teamName": "Marseille"
+        },
+        {
+          "rank": 21,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 223122,
+          "athleteName": "Maxime López",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 22,
           "value": 2,
           "displayValue": "2",
           "athleteId": 365783,
@@ -654,38 +672,20 @@
           "teamName": "Brest"
         },
         {
-          "rank": 21,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 346844,
-          "athleteName": "Tiago Santos",
-          "teamId": 166,
-          "teamName": "Lille"
-        },
-        {
-          "rank": 22,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 233199,
-          "athleteName": "Matthieu Udol",
-          "teamId": 175,
-          "teamName": "Lens"
-        },
-        {
           "rank": 23,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 173266,
-          "athleteName": "Adrien Thomasson",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
+          "athleteId": 277525,
+          "athleteName": "Himad Abdelli",
+          "teamId": 176,
+          "teamName": "Marseille"
         },
         {
           "rank": 24,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 403232,
-          "athleteName": "Prosper Peter",
+          "athleteId": 301262,
+          "athleteName": "Amine El Ouazzani",
           "teamId": 7868,
           "teamName": "Angers"
         },
@@ -693,10 +693,10 @@
           "rank": 25,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 350501,
-          "athleteName": "Samuel Amo-Ameyaw",
-          "teamId": 180,
-          "teamName": "Strasbourg"
+          "athleteId": 173266,
+          "athleteName": "Adrien Thomasson",
+          "teamId": 169,
+          "teamName": "Stade Rennais"
         }
       ]
     },
@@ -707,6 +707,15 @@
       "entries": [
         {
           "rank": 1,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 156898,
+          "athleteName": "Florian Thauvin",
+          "teamId": 175,
+          "teamName": "Lens"
+        },
+        {
+          "rank": 2,
           "value": 5,
           "displayValue": "5",
           "athleteId": 271244,
@@ -715,16 +724,16 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 2,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 156898,
-          "athleteName": "Florian Thauvin",
-          "teamId": 175,
-          "teamName": "Lens"
+          "rank": 3,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 370758,
+          "athleteName": "Zachary Athekame",
+          "teamId": 167,
+          "teamName": "Lyon"
         },
         {
-          "rank": 3,
+          "rank": 4,
           "value": 3,
           "displayValue": "3",
           "athleteId": 195501,
@@ -733,7 +742,16 @@
           "teamName": "AS Monaco"
         },
         {
-          "rank": 4,
+          "rank": 5,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 271137,
+          "athleteName": "Lassine Sinayoko",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 6,
           "value": 3,
           "displayValue": "3",
           "athleteId": 305545,
@@ -742,7 +760,7 @@
           "teamName": "Lyon"
         },
         {
-          "rank": 5,
+          "rank": 7,
           "value": 3,
           "displayValue": "3",
           "athleteId": 364754,
@@ -751,25 +769,25 @@
           "teamName": "Lorient"
         },
         {
-          "rank": 6,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 331636,
-          "athleteName": "Lucas Calodat",
-          "teamId": 2697,
-          "teamName": "Le Mans"
-        },
-        {
-          "rank": 7,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 370758,
-          "athleteName": "Zachary Athekame",
-          "teamId": 167,
-          "teamName": "Lyon"
-        },
-        {
           "rank": 8,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 159051,
+          "athleteName": "Emerson",
+          "teamId": 176,
+          "teamName": "Marseille"
+        },
+        {
+          "rank": 9,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 379012,
+          "athleteName": "Gessime Yassine",
+          "teamId": 180,
+          "teamName": "Strasbourg"
+        },
+        {
+          "rank": 10,
           "value": 2,
           "displayValue": "2",
           "athleteId": 291850,
@@ -778,25 +796,16 @@
           "teamName": "Brest"
         },
         {
-          "rank": 9,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 192060,
-          "athleteName": "Corentin Tolisso",
-          "teamId": 167,
-          "teamName": "Lyon"
-        },
-        {
-          "rank": 10,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 173266,
-          "athleteName": "Adrien Thomasson",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
-        },
-        {
           "rank": 11,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 243748,
+          "athleteName": "Danny Namaso",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 12,
           "value": 2,
           "displayValue": "2",
           "athleteId": 301262,
@@ -805,16 +814,25 @@
           "teamName": "Angers"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 214596,
-          "athleteName": "Fabián Ruiz",
-          "teamId": 160,
-          "teamName": "Paris Saint-Germain"
+          "athleteId": 192060,
+          "athleteName": "Corentin Tolisso",
+          "teamId": 167,
+          "teamName": "Lyon"
         },
         {
-          "rank": 13,
+          "rank": 14,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 173266,
+          "athleteName": "Adrien Thomasson",
+          "teamId": 169,
+          "teamName": "Stade Rennais"
+        },
+        {
+          "rank": 15,
           "value": 2,
           "displayValue": "2",
           "athleteId": 88965,
@@ -823,7 +841,25 @@
           "teamName": "Lille"
         },
         {
-          "rank": 14,
+          "rank": 16,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 268591,
+          "athleteName": "Romain Faivre",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 17,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 331636,
+          "athleteName": "Lucas Calodat",
+          "teamId": 2697,
+          "teamName": "Le Mans"
+        },
+        {
+          "rank": 18,
           "value": 2,
           "displayValue": "2",
           "athleteId": 276995,
@@ -832,25 +868,16 @@
           "teamName": "Nice"
         },
         {
-          "rank": 15,
+          "rank": 19,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 418536,
-          "athleteName": "Adil Bourabaa",
-          "teamId": 2697,
-          "teamName": "Le Mans"
+          "athleteId": 266027,
+          "athleteName": "Timothy Weah",
+          "teamId": 176,
+          "teamName": "Marseille"
         },
         {
-          "rank": 16,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 303787,
-          "athleteName": "Sebastian Nanasi",
-          "teamId": 180,
-          "teamName": "Strasbourg"
-        },
-        {
-          "rank": 17,
+          "rank": 20,
           "value": 2,
           "displayValue": "2",
           "athleteId": 250377,
@@ -859,76 +886,49 @@
           "teamName": "Brest"
         },
         {
-          "rank": 18,
+          "rank": 21,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 214596,
+          "athleteName": "Fabián Ruiz",
+          "teamId": 160,
+          "teamName": "Paris Saint-Germain"
+        },
+        {
+          "rank": 22,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 418536,
+          "athleteName": "Adil Bourabaa",
+          "teamId": 2697,
+          "teamName": "Le Mans"
+        },
+        {
+          "rank": 23,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 303787,
+          "athleteName": "Sebastian Nanasi",
+          "teamId": 180,
+          "teamName": "Strasbourg"
+        },
+        {
+          "rank": 24,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 229744,
+          "athleteName": "Ousmane Dembélé",
+          "teamId": 160,
+          "teamName": "Paris Saint-Germain"
+        },
+        {
+          "rank": 25,
           "value": 2,
           "displayValue": "2",
           "athleteId": 250758,
           "athleteName": "Bryan Reynolds",
           "teamId": 169,
           "teamName": "Stade Rennais"
-        },
-        {
-          "rank": 19,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 304011,
-          "athleteName": "Maurits Kjaergaard",
-          "teamId": 166,
-          "teamName": "Lille"
-        },
-        {
-          "rank": 20,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 362777,
-          "athleteName": "Thomas Jørgensen",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 21,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 268720,
-          "athleteName": "Louis Mafouta",
-          "teamId": 2697,
-          "teamName": "Le Mans"
-        },
-        {
-          "rank": 22,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 381626,
-          "athleteName": "Arsène Kouassi",
-          "teamId": 273,
-          "teamName": "Lorient"
-        },
-        {
-          "rank": 23,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 345926,
-          "athleteName": "Mamadou Diop",
-          "teamId": 172,
-          "teamName": "AJ Auxerre"
-        },
-        {
-          "rank": 24,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 307713,
-          "athleteName": "Charlie Cresswell",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
-        },
-        {
-          "rank": 25,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 196234,
-          "athleteName": "Branco van den Boomen",
-          "teamId": 7868,
-          "teamName": "Angers"
         }
       ]
     },
@@ -939,8 +939,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 13,
-          "displayValue": "13",
+          "value": 16,
+          "displayValue": "16",
           "athleteId": 323850,
           "athleteName": "Esteban Lepaul",
           "teamId": 169,
@@ -948,6 +948,24 @@
         },
         {
           "rank": 2,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 271137,
+          "athleteName": "Lassine Sinayoko",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 3,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 231366,
+          "athleteName": "Mbwana Samatta",
+          "teamId": 3236,
+          "teamName": "Le Havre AC"
+        },
+        {
+          "rank": 4,
           "value": 11,
           "displayValue": "11",
           "athleteId": 156898,
@@ -956,7 +974,7 @@
           "teamName": "Lens"
         },
         {
-          "rank": 3,
+          "rank": 5,
           "value": 11,
           "displayValue": "11",
           "athleteId": 365783,
@@ -965,7 +983,7 @@
           "teamName": "Brest"
         },
         {
-          "rank": 4,
+          "rank": 6,
           "value": 10,
           "displayValue": "10",
           "athleteId": 268720,
@@ -974,25 +992,16 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 5,
-          "value": 10,
-          "displayValue": "10",
-          "athleteId": 271137,
-          "athleteName": "Lassine Sinayoko",
-          "teamId": 6851,
-          "teamName": "Paris FC"
-        },
-        {
-          "rank": 6,
+          "rank": 7,
           "value": 9,
           "displayValue": "9",
-          "athleteId": 231366,
-          "athleteName": "Mbwana Samatta",
-          "teamId": 3236,
-          "teamName": "Le Havre AC"
+          "athleteId": 259743,
+          "athleteName": "Amine Gouiri",
+          "teamId": 176,
+          "teamName": "Marseille"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "value": 9,
           "displayValue": "9",
           "athleteId": 365789,
@@ -1001,7 +1010,16 @@
           "teamName": "AS Monaco"
         },
         {
-          "rank": 8,
+          "rank": 9,
+          "value": 8,
+          "displayValue": "8",
+          "athleteId": 243748,
+          "athleteName": "Danny Namaso",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 10,
           "value": 7,
           "displayValue": "7",
           "athleteId": 297121,
@@ -1010,7 +1028,16 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 9,
+          "rank": 11,
+          "value": 7,
+          "displayValue": "7",
+          "athleteId": 336388,
+          "athleteName": "Désiré Doué",
+          "teamId": 160,
+          "teamName": "Paris Saint-Germain"
+        },
+        {
+          "rank": 12,
           "value": 7,
           "displayValue": "7",
           "athleteId": 416429,
@@ -1019,7 +1046,16 @@
           "teamName": "Lorient"
         },
         {
-          "rank": 10,
+          "rank": 13,
+          "value": 7,
+          "displayValue": "7",
+          "athleteId": 293347,
+          "athleteName": "Cameron Archer",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 14,
           "value": 7,
           "displayValue": "7",
           "athleteId": 274277,
@@ -1028,16 +1064,7 @@
           "teamName": "Lille"
         },
         {
-          "rank": 11,
-          "value": 6,
-          "displayValue": "6",
-          "athleteId": 362777,
-          "athleteName": "Thomas Jørgensen",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 12,
+          "rank": 15,
           "value": 6,
           "displayValue": "6",
           "athleteId": 192015,
@@ -1046,7 +1073,16 @@
           "teamName": "Brest"
         },
         {
-          "rank": 13,
+          "rank": 16,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 362777,
+          "athleteName": "Thomas Jørgensen",
+          "teamId": 179,
+          "teamName": "Toulouse"
+        },
+        {
+          "rank": 17,
           "value": 6,
           "displayValue": "6",
           "athleteId": 232089,
@@ -1055,16 +1091,16 @@
           "teamName": "Nice"
         },
         {
-          "rank": 14,
+          "rank": 18,
           "value": 6,
           "displayValue": "6",
-          "athleteId": 259743,
-          "athleteName": "Amine Gouiri",
-          "teamId": 176,
-          "teamName": "Marseille"
+          "athleteId": 379012,
+          "athleteName": "Gessime Yassine",
+          "teamId": 180,
+          "teamName": "Strasbourg"
         },
         {
-          "rank": 15,
+          "rank": 19,
           "value": 6,
           "displayValue": "6",
           "athleteId": 330412,
@@ -1073,25 +1109,34 @@
           "teamName": "Brest"
         },
         {
-          "rank": 16,
+          "rank": 20,
           "value": 6,
           "displayValue": "6",
-          "athleteId": 243748,
-          "athleteName": "Danny Namaso",
+          "athleteId": 304918,
+          "athleteName": "Ilan Kebbal",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 21,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 265869,
+          "athleteName": "Ferran Torres",
+          "teamId": 160,
+          "teamName": "Paris Saint-Germain"
+        },
+        {
+          "rank": 22,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 268591,
+          "athleteName": "Romain Faivre",
           "teamId": 172,
           "teamName": "AJ Auxerre"
         },
         {
-          "rank": 17,
-          "value": 6,
-          "displayValue": "6",
-          "athleteId": 346844,
-          "athleteName": "Tiago Santos",
-          "teamId": 166,
-          "teamName": "Lille"
-        },
-        {
-          "rank": 18,
+          "rank": 23,
           "value": 6,
           "displayValue": "6",
           "athleteId": 274745,
@@ -1100,67 +1145,22 @@
           "teamName": "Paris Saint-Germain"
         },
         {
-          "rank": 19,
+          "rank": 24,
           "value": 6,
           "displayValue": "6",
-          "athleteId": 276265,
-          "athleteName": "Loïs Openda",
-          "teamId": 167,
-          "teamName": "Lyon"
+          "athleteId": 346844,
+          "athleteName": "Tiago Santos",
+          "teamId": 166,
+          "teamName": "Lille"
         },
         {
-          "rank": 20,
-          "value": 6,
-          "displayValue": "6",
-          "athleteId": 306664,
-          "athleteName": "Casper Tengstedt",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 21,
+          "rank": 25,
           "value": 6,
           "displayValue": "6",
           "athleteId": 355971,
           "athleteName": "Ethan Mbappé",
           "teamId": 166,
           "teamName": "Lille"
-        },
-        {
-          "rank": 22,
-          "value": 6,
-          "displayValue": "6",
-          "athleteId": 349185,
-          "athleteName": "Remy Labeau Lascary",
-          "teamId": 172,
-          "teamName": "AJ Auxerre"
-        },
-        {
-          "rank": 23,
-          "value": 6,
-          "displayValue": "6",
-          "athleteId": 293347,
-          "athleteName": "Cameron Archer",
-          "teamId": 172,
-          "teamName": "AJ Auxerre"
-        },
-        {
-          "rank": 24,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 379012,
-          "athleteName": "Gessime Yassine",
-          "teamId": 180,
-          "teamName": "Strasbourg"
-        },
-        {
-          "rank": 25,
-          "value": 5,
-          "displayValue": "5",
-          "athleteId": 304918,
-          "athleteName": "Ilan Kebbal",
-          "teamId": 6851,
-          "teamName": "Paris FC"
         }
       ]
     },
@@ -1173,13 +1173,49 @@
           "rank": 1,
           "value": 3,
           "displayValue": "3",
+          "athleteId": 112988,
+          "athleteName": "Michel Diaz",
+          "teamId": 170,
+          "teamName": "Troyes"
+        },
+        {
+          "rank": 2,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 316559,
+          "athleteName": "Názinho",
+          "teamId": 174,
+          "teamName": "AS Monaco"
+        },
+        {
+          "rank": 3,
+          "value": 3,
+          "displayValue": "3",
           "athleteId": 195501,
           "athleteName": "Aleksandr Golovin",
           "teamId": 174,
           "teamName": "AS Monaco"
         },
         {
-          "rank": 2,
+          "rank": 4,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 330412,
+          "athleteName": "Kamory Doumbia",
+          "teamId": 6997,
+          "teamName": "Brest"
+        },
+        {
+          "rank": 5,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 173266,
+          "athleteName": "Adrien Thomasson",
+          "teamId": 169,
+          "teamName": "Stade Rennais"
+        },
+        {
+          "rank": 6,
           "value": 3,
           "displayValue": "3",
           "athleteId": 397394,
@@ -1188,7 +1224,16 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 3,
+          "rank": 7,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 196729,
+          "athleteName": "Hamari Traoré",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 8,
           "value": 3,
           "displayValue": "3",
           "athleteId": 287606,
@@ -1197,7 +1242,16 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 4,
+          "rank": 9,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 381626,
+          "athleteName": "Arsène Kouassi",
+          "teamId": 273,
+          "teamName": "Lorient"
+        },
+        {
+          "rank": 10,
           "value": 2,
           "displayValue": "2",
           "athleteId": 271244,
@@ -1206,7 +1260,7 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 5,
+          "rank": 11,
           "value": 2,
           "displayValue": "2",
           "athleteId": 196234,
@@ -1215,25 +1269,7 @@
           "teamName": "Angers"
         },
         {
-          "rank": 6,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 156898,
-          "athleteName": "Florian Thauvin",
-          "teamId": 175,
-          "teamName": "Lens"
-        },
-        {
-          "rank": 7,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 112988,
-          "athleteName": "Michel Diaz",
-          "teamId": 170,
-          "teamName": "Troyes"
-        },
-        {
-          "rank": 8,
+          "rank": 12,
           "value": 2,
           "displayValue": "2",
           "athleteId": 38721,
@@ -1242,7 +1278,16 @@
           "teamName": "AS Monaco"
         },
         {
-          "rank": 9,
+          "rank": 13,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 324572,
+          "athleteName": "Bradley Locko",
+          "teamId": 6997,
+          "teamName": "Brest"
+        },
+        {
+          "rank": 14,
           "value": 2,
           "displayValue": "2",
           "athleteId": 192015,
@@ -1251,25 +1296,16 @@
           "teamName": "Brest"
         },
         {
-          "rank": 10,
+          "rank": 15,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 316559,
-          "athleteName": "Názinho",
-          "teamId": 174,
-          "teamName": "AS Monaco"
+          "athleteId": 344520,
+          "athleteName": "Clément Akpa",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
         },
         {
-          "rank": 11,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 379012,
-          "athleteName": "Gessime Yassine",
-          "teamId": 180,
-          "teamName": "Strasbourg"
-        },
-        {
-          "rank": 12,
+          "rank": 16,
           "value": 2,
           "displayValue": "2",
           "athleteId": 271137,
@@ -1278,7 +1314,25 @@
           "teamName": "Paris FC"
         },
         {
-          "rank": 13,
+          "rank": 17,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 379012,
+          "athleteName": "Gessime Yassine",
+          "teamId": 180,
+          "teamName": "Strasbourg"
+        },
+        {
+          "rank": 18,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 156898,
+          "athleteName": "Florian Thauvin",
+          "teamId": 175,
+          "teamName": "Lens"
+        },
+        {
+          "rank": 19,
           "value": 2,
           "displayValue": "2",
           "athleteId": 255192,
@@ -1287,16 +1341,7 @@
           "teamName": "Nice"
         },
         {
-          "rank": 14,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 330412,
-          "athleteName": "Kamory Doumbia",
-          "teamId": 6997,
-          "teamName": "Brest"
-        },
-        {
-          "rank": 15,
+          "rank": 20,
           "value": 2,
           "displayValue": "2",
           "athleteId": 223122,
@@ -1305,25 +1350,16 @@
           "teamName": "Paris FC"
         },
         {
-          "rank": 16,
+          "rank": 21,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 250853,
-          "athleteName": "Romain Perraud",
-          "teamId": 166,
-          "teamName": "Lille"
+          "athleteId": 222628,
+          "athleteName": "Denis Zakaria",
+          "teamId": 174,
+          "teamName": "AS Monaco"
         },
         {
-          "rank": 17,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 256773,
-          "athleteName": "Angel Gomes",
-          "teamId": 176,
-          "teamName": "Marseille"
-        },
-        {
-          "rank": 18,
+          "rank": 22,
           "value": 2,
           "displayValue": "2",
           "athleteId": 323850,
@@ -1332,7 +1368,7 @@
           "teamName": "Stade Rennais"
         },
         {
-          "rank": 19,
+          "rank": 23,
           "value": 2,
           "displayValue": "2",
           "athleteId": 270173,
@@ -1341,58 +1377,22 @@
           "teamName": "Troyes"
         },
         {
-          "rank": 20,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 173266,
-          "athleteName": "Adrien Thomasson",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
-        },
-        {
-          "rank": 21,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 353378,
-          "athleteName": "Pape Diop",
-          "teamId": 180,
-          "teamName": "Strasbourg"
-        },
-        {
-          "rank": 22,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 196729,
-          "athleteName": "Hamari Traoré",
-          "teamId": 6851,
-          "teamName": "Paris FC"
-        },
-        {
-          "rank": 23,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 365562,
-          "athleteName": "Noah Nartey",
-          "teamId": 167,
-          "teamName": "Lyon"
-        },
-        {
           "rank": 24,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 30302,
-          "athleteName": "Djibril Sidibé",
-          "teamId": 2697,
-          "teamName": "Le Mans"
+          "athleteId": 250853,
+          "athleteName": "Romain Perraud",
+          "teamId": 166,
+          "teamName": "Lille"
         },
         {
           "rank": 25,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 225565,
-          "athleteName": "Niklas Schmidt",
-          "teamId": 179,
-          "teamName": "Toulouse"
+          "athleteId": 236957,
+          "athleteName": "Mohamed Abdelmoneim",
+          "teamId": 2502,
+          "teamName": "Nice"
         }
       ]
     },
@@ -1405,13 +1405,22 @@
           "rank": 1,
           "value": 1,
           "displayValue": "1",
+          "athleteId": 266027,
+          "athleteName": "Timothy Weah",
+          "teamId": 176,
+          "teamName": "Marseille"
+        },
+        {
+          "rank": 2,
+          "value": 1,
+          "displayValue": "1",
           "athleteId": 258270,
           "athleteName": "Ayumu Seko",
           "teamId": 3236,
           "teamName": "Le Havre AC"
         },
         {
-          "rank": 2,
+          "rank": 3,
           "value": 1,
           "displayValue": "1",
           "athleteId": 191712,
@@ -1420,22 +1429,13 @@
           "teamName": "Angers"
         },
         {
-          "rank": 3,
+          "rank": 4,
           "value": 1,
           "displayValue": "1",
           "athleteId": 233199,
           "athleteName": "Matthieu Udol",
           "teamId": 175,
           "teamName": "Lens"
-        },
-        {
-          "rank": 4,
-          "value": 1,
-          "displayValue": "1",
-          "athleteId": 266027,
-          "athleteName": "Timothy Weah",
-          "teamId": 176,
-          "teamName": "Marseille"
         },
         {
           "rank": 5,
@@ -1459,22 +1459,31 @@
           "rank": 7,
           "value": 1,
           "displayValue": "1",
-          "athleteId": 30302,
-          "athleteName": "Djibril Sidibé",
-          "teamId": 2697,
-          "teamName": "Le Mans"
-        },
-        {
-          "rank": 8,
-          "value": 1,
-          "displayValue": "1",
           "athleteId": 378491,
           "athleteName": "Samir El Mourabet",
           "teamId": 180,
           "teamName": "Strasbourg"
         },
         {
+          "rank": 8,
+          "value": 1,
+          "displayValue": "1",
+          "athleteId": 30302,
+          "athleteName": "Djibril Sidibé",
+          "teamId": 2697,
+          "teamName": "Le Mans"
+        },
+        {
           "rank": 9,
+          "value": 1,
+          "displayValue": "1",
+          "athleteId": 265953,
+          "athleteName": "Keito Nakamura",
+          "teamId": 167,
+          "teamName": "Lyon"
+        },
+        {
+          "rank": 10,
           "value": 1,
           "displayValue": "1",
           "athleteId": 401306,
@@ -1483,88 +1492,7 @@
           "teamName": "Lens"
         },
         {
-          "rank": 10,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 271244,
-          "athleteName": "Cristian Cásseres Jr.",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
           "rank": 11,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 77072,
-          "athleteName": "Mark McKenzie",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 12,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 385000,
-          "athleteName": "Christ Tapé",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 13,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 362777,
-          "athleteName": "Thomas Jørgensen",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 14,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 268720,
-          "athleteName": "Louis Mafouta",
-          "teamId": 2697,
-          "teamName": "Le Mans"
-        },
-        {
-          "rank": 15,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 297121,
-          "athleteName": "Jacen Russell-Rowe",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 16,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 384162,
-          "athleteName": "Rafik Messali",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 17,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 233702,
-          "athleteName": "Dame Guèye",
-          "teamId": 2697,
-          "teamName": "Le Mans"
-        },
-        {
-          "rank": 18,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 331636,
-          "athleteName": "Lucas Calodat",
-          "teamId": 2697,
-          "teamName": "Le Mans"
-        },
-        {
-          "rank": 19,
           "value": 0,
           "displayValue": "0",
           "athleteId": 381626,
@@ -1573,7 +1501,7 @@
           "teamName": "Lorient"
         },
         {
-          "rank": 20,
+          "rank": 12,
           "value": 0,
           "displayValue": "0",
           "athleteId": 370758,
@@ -1582,7 +1510,7 @@
           "teamName": "Lyon"
         },
         {
-          "rank": 21,
+          "rank": 13,
           "value": 0,
           "displayValue": "0",
           "athleteId": 362288,
@@ -1591,16 +1519,7 @@
           "teamName": "AS Monaco"
         },
         {
-          "rank": 22,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 345926,
-          "athleteName": "Mamadou Diop",
-          "teamId": 172,
-          "teamName": "AJ Auxerre"
-        },
-        {
-          "rank": 23,
+          "rank": 14,
           "value": 0,
           "displayValue": "0",
           "athleteId": 344517,
@@ -1609,22 +1528,103 @@
           "teamName": "Lens"
         },
         {
-          "rank": 24,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 340900,
-          "athleteName": "Alexsandro",
-          "teamId": 166,
-          "teamName": "Lille"
-        },
-        {
-          "rank": 25,
+          "rank": 15,
           "value": 0,
           "displayValue": "0",
           "athleteId": 335240,
           "athleteName": "Patrick Beach",
           "teamId": 170,
           "teamName": "Troyes"
+        },
+        {
+          "rank": 16,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 332549,
+          "athleteName": "Diego Coppola",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 17,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 323722,
+          "athleteName": "Kévin Danois",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 18,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 307713,
+          "athleteName": "Charlie Cresswell",
+          "teamId": 169,
+          "teamName": "Stade Rennais"
+        },
+        {
+          "rank": 19,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 304256,
+          "athleteName": "Filip Jørgensen",
+          "teamId": 180,
+          "teamName": "Strasbourg"
+        },
+        {
+          "rank": 20,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 286433,
+          "athleteName": "Egil Selvik",
+          "teamId": 6997,
+          "teamName": "Brest"
+        },
+        {
+          "rank": 21,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 271244,
+          "athleteName": "Cristian Cásseres Jr.",
+          "teamId": 179,
+          "teamName": "Toulouse"
+        },
+        {
+          "rank": 22,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 265099,
+          "athleteName": "Montassar Talbi",
+          "teamId": 273,
+          "teamName": "Lorient"
+        },
+        {
+          "rank": 23,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 248699,
+          "athleteName": "Matvei Safonov",
+          "teamId": 160,
+          "teamName": "Paris Saint-Germain"
+        },
+        {
+          "rank": 24,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 241029,
+          "athleteName": "Yehvann Diouf",
+          "teamId": 2502,
+          "teamName": "Nice"
+        },
+        {
+          "rank": 25,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 228707,
+          "athleteName": "Jeffrey de Lange",
+          "teamId": 176,
+          "teamName": "Marseille"
         }
       ]
     },
@@ -1635,8 +1635,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 20,
-          "displayValue": "20",
+          "value": 22,
+          "displayValue": "22",
           "athleteId": 365783,
           "athleteName": "Pathé Mboup",
           "teamId": 6997,
@@ -1644,6 +1644,33 @@
         },
         {
           "rank": 2,
+          "value": 19,
+          "displayValue": "19",
+          "athleteId": 192015,
+          "athleteName": "Ludovic Ajorque",
+          "teamId": 6997,
+          "teamName": "Brest"
+        },
+        {
+          "rank": 3,
+          "value": 15,
+          "displayValue": "15",
+          "athleteId": 319285,
+          "athleteName": "Amir Richardson",
+          "teamId": 3236,
+          "teamName": "Le Havre AC"
+        },
+        {
+          "rank": 4,
+          "value": 14,
+          "displayValue": "14",
+          "athleteId": 323722,
+          "athleteName": "Kévin Danois",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 5,
           "value": 14,
           "displayValue": "14",
           "athleteId": 271244,
@@ -1652,34 +1679,34 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 3,
+          "rank": 6,
           "value": 14,
           "displayValue": "14",
-          "athleteId": 192015,
-          "athleteName": "Ludovic Ajorque",
-          "teamId": 6997,
-          "teamName": "Brest"
-        },
-        {
-          "rank": 4,
-          "value": 13,
-          "displayValue": "13",
           "athleteId": 346519,
           "athleteName": "Simon Ebonog",
           "teamId": 3236,
           "teamName": "Le Havre AC"
         },
         {
-          "rank": 5,
-          "value": 12,
-          "displayValue": "12",
-          "athleteId": 319285,
-          "athleteName": "Amir Richardson",
-          "teamId": 3236,
-          "teamName": "Le Havre AC"
+          "rank": 7,
+          "value": 14,
+          "displayValue": "14",
+          "athleteId": 190806,
+          "athleteName": "Przemyslaw Frankowski",
+          "teamId": 169,
+          "teamName": "Stade Rennais"
         },
         {
-          "rank": 6,
+          "rank": 8,
+          "value": 14,
+          "displayValue": "14",
+          "athleteId": 323058,
+          "athleteName": "Dermane Karim",
+          "teamId": 170,
+          "teamName": "Troyes"
+        },
+        {
+          "rank": 9,
           "value": 12,
           "displayValue": "12",
           "athleteId": 310640,
@@ -1688,25 +1715,61 @@
           "teamName": "AS Monaco"
         },
         {
-          "rank": 7,
-          "value": 11,
-          "displayValue": "11",
+          "rank": 10,
+          "value": 12,
+          "displayValue": "12",
           "athleteId": 270173,
           "athleteName": "Antoine Mille",
           "teamId": 170,
           "teamName": "Troyes"
         },
         {
-          "rank": 8,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 190806,
-          "athleteName": "Przemyslaw Frankowski",
+          "rank": 11,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 173266,
+          "athleteName": "Adrien Thomasson",
           "teamId": 169,
           "teamName": "Stade Rennais"
         },
         {
-          "rank": 9,
+          "rank": 12,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 335320,
+          "athleteName": "Lamine Sy",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 13,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 344520,
+          "athleteName": "Clément Akpa",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 14,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 379012,
+          "athleteName": "Gessime Yassine",
+          "teamId": 180,
+          "teamName": "Strasbourg"
+        },
+        {
+          "rank": 15,
+          "value": 11,
+          "displayValue": "11",
+          "athleteId": 287572,
+          "athleteName": "Samir Chergui",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 16,
           "value": 10,
           "displayValue": "10",
           "athleteId": 385000,
@@ -1715,16 +1778,16 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 10,
+          "rank": 17,
           "value": 10,
           "displayValue": "10",
-          "athleteId": 323722,
-          "athleteName": "Kévin Danois",
+          "athleteId": 243748,
+          "athleteName": "Danny Namaso",
           "teamId": 172,
           "teamName": "AJ Auxerre"
         },
         {
-          "rank": 11,
+          "rank": 18,
           "value": 10,
           "displayValue": "10",
           "athleteId": 357425,
@@ -1733,7 +1796,7 @@
           "teamName": "Nice"
         },
         {
-          "rank": 12,
+          "rank": 19,
           "value": 10,
           "displayValue": "10",
           "athleteId": 368325,
@@ -1742,16 +1805,7 @@
           "teamName": "Strasbourg"
         },
         {
-          "rank": 13,
-          "value": 10,
-          "displayValue": "10",
-          "athleteId": 173266,
-          "athleteName": "Adrien Thomasson",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
-        },
-        {
-          "rank": 14,
+          "rank": 20,
           "value": 10,
           "displayValue": "10",
           "athleteId": 330722,
@@ -1760,16 +1814,16 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 15,
+          "rank": 21,
           "value": 10,
           "displayValue": "10",
-          "athleteId": 323058,
-          "athleteName": "Dermane Karim",
-          "teamId": 170,
-          "teamName": "Troyes"
+          "athleteId": 293347,
+          "athleteName": "Cameron Archer",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
         },
         {
-          "rank": 16,
+          "rank": 22,
           "value": 9,
           "displayValue": "9",
           "athleteId": 77072,
@@ -1778,7 +1832,16 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 17,
+          "rank": 23,
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 38721,
+          "athleteName": "Lamine Camara",
+          "teamId": 174,
+          "teamName": "AS Monaco"
+        },
+        {
+          "rank": 24,
           "value": 9,
           "displayValue": "9",
           "athleteId": 362777,
@@ -1787,76 +1850,13 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 18,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 384162,
-          "athleteName": "Rafik Messali",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 19,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 233702,
-          "athleteName": "Dame Guèye",
-          "teamId": 2697,
-          "teamName": "Le Mans"
-        },
-        {
-          "rank": 20,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 335320,
-          "athleteName": "Lamine Sy",
-          "teamId": 172,
-          "teamName": "AJ Auxerre"
-        },
-        {
-          "rank": 21,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 379012,
-          "athleteName": "Gessime Yassine",
-          "teamId": 180,
-          "teamName": "Strasbourg"
-        },
-        {
-          "rank": 22,
+          "rank": 25,
           "value": 9,
           "displayValue": "9",
           "athleteId": 271137,
           "athleteName": "Lassine Sinayoko",
           "teamId": 6851,
           "teamName": "Paris FC"
-        },
-        {
-          "rank": 23,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 191712,
-          "athleteName": "Jordan Lefort",
-          "teamId": 7868,
-          "teamName": "Angers"
-        },
-        {
-          "rank": 24,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 382872,
-          "athleteName": "Rayan Bamba",
-          "teamId": 2697,
-          "teamName": "Le Mans"
-        },
-        {
-          "rank": 25,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 315460,
-          "athleteName": "Jean Vercruysse",
-          "teamId": 2697,
-          "teamName": "Le Mans"
         }
       ]
     },
@@ -1867,6 +1867,24 @@
       "entries": [
         {
           "rank": 1,
+          "value": 22,
+          "displayValue": "22",
+          "athleteId": 225557,
+          "athleteName": "Jean-Victor Makengo",
+          "teamId": 273,
+          "teamName": "Lorient"
+        },
+        {
+          "rank": 2,
+          "value": 20,
+          "displayValue": "20",
+          "athleteId": 38721,
+          "athleteName": "Lamine Camara",
+          "teamId": 174,
+          "teamName": "AS Monaco"
+        },
+        {
+          "rank": 3,
           "value": 18,
           "displayValue": "18",
           "athleteId": 379012,
@@ -1875,27 +1893,9 @@
           "teamName": "Strasbourg"
         },
         {
-          "rank": 2,
-          "value": 18,
-          "displayValue": "18",
-          "athleteId": 225557,
-          "athleteName": "Jean-Victor Makengo",
-          "teamId": 273,
-          "teamName": "Lorient"
-        },
-        {
-          "rank": 3,
-          "value": 17,
-          "displayValue": "17",
-          "athleteId": 38721,
-          "athleteName": "Lamine Camara",
-          "teamId": 174,
-          "teamName": "AS Monaco"
-        },
-        {
           "rank": 4,
-          "value": 14,
-          "displayValue": "14",
+          "value": 16,
+          "displayValue": "16",
           "athleteId": 346519,
           "athleteName": "Simon Ebonog",
           "teamId": 3236,
@@ -1903,6 +1903,51 @@
         },
         {
           "rank": 5,
+          "value": 16,
+          "displayValue": "16",
+          "athleteId": 330412,
+          "athleteName": "Kamory Doumbia",
+          "teamId": 6997,
+          "teamName": "Brest"
+        },
+        {
+          "rank": 6,
+          "value": 15,
+          "displayValue": "15",
+          "athleteId": 319285,
+          "athleteName": "Amir Richardson",
+          "teamId": 3236,
+          "teamName": "Le Havre AC"
+        },
+        {
+          "rank": 7,
+          "value": 15,
+          "displayValue": "15",
+          "athleteId": 304918,
+          "athleteName": "Ilan Kebbal",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 8,
+          "value": 14,
+          "displayValue": "14",
+          "athleteId": 323722,
+          "athleteName": "Kévin Danois",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 9,
+          "value": 14,
+          "displayValue": "14",
+          "athleteId": 284333,
+          "athleteName": "Jim Allevinah",
+          "teamId": 7868,
+          "teamName": "Angers"
+        },
+        {
+          "rank": 10,
           "value": 14,
           "displayValue": "14",
           "athleteId": 346844,
@@ -1911,7 +1956,16 @@
           "teamName": "Lille"
         },
         {
-          "rank": 6,
+          "rank": 11,
+          "value": 14,
+          "displayValue": "14",
+          "athleteId": 3132216,
+          "athleteName": "Djibril Ouziad",
+          "teamId": 3236,
+          "teamName": "Le Havre AC"
+        },
+        {
+          "rank": 12,
           "value": 13,
           "displayValue": "13",
           "athleteId": 271244,
@@ -1920,7 +1974,16 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 7,
+          "rank": 13,
+          "value": 13,
+          "displayValue": "13",
+          "athleteId": 192060,
+          "athleteName": "Corentin Tolisso",
+          "teamId": 167,
+          "teamName": "Lyon"
+        },
+        {
+          "rank": 14,
           "value": 13,
           "displayValue": "13",
           "athleteId": 276265,
@@ -1929,16 +1992,25 @@
           "teamName": "Lyon"
         },
         {
-          "rank": 8,
+          "rank": 15,
           "value": 12,
           "displayValue": "12",
-          "athleteId": 192060,
-          "athleteName": "Corentin Tolisso",
-          "teamId": 167,
-          "teamName": "Lyon"
+          "athleteId": 347940,
+          "athleteName": "Dembo Sylla",
+          "teamId": 273,
+          "teamName": "Lorient"
         },
         {
-          "rank": 9,
+          "rank": 16,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 271137,
+          "athleteName": "Lassine Sinayoko",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 17,
           "value": 12,
           "displayValue": "12",
           "athleteId": 408780,
@@ -1947,16 +2019,7 @@
           "teamName": "Troyes"
         },
         {
-          "rank": 10,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 323722,
-          "athleteName": "Kévin Danois",
-          "teamId": 172,
-          "teamName": "AJ Auxerre"
-        },
-        {
-          "rank": 11,
+          "rank": 18,
           "value": 11,
           "displayValue": "11",
           "athleteId": 324572,
@@ -1965,43 +2028,43 @@
           "teamName": "Brest"
         },
         {
-          "rank": 12,
+          "rank": 19,
           "value": 11,
           "displayValue": "11",
-          "athleteId": 330412,
-          "athleteName": "Kamory Doumbia",
-          "teamId": 6997,
-          "teamName": "Brest"
+          "athleteId": 238917,
+          "athleteName": "Amine Harit",
+          "teamId": 176,
+          "teamName": "Marseille"
         },
         {
-          "rank": 13,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 284333,
-          "athleteName": "Jim Allevinah",
-          "teamId": 7868,
-          "teamName": "Angers"
-        },
-        {
-          "rank": 14,
+          "rank": 20,
           "value": 10,
           "displayValue": "10",
-          "athleteId": 347940,
-          "athleteName": "Dembo Sylla",
+          "athleteId": 315215,
+          "athleteName": "Noah Cadiou",
           "teamId": 273,
           "teamName": "Lorient"
         },
         {
-          "rank": 15,
+          "rank": 21,
           "value": 10,
           "displayValue": "10",
-          "athleteId": 271137,
-          "athleteName": "Lassine Sinayoko",
-          "teamId": 6851,
-          "teamName": "Paris FC"
+          "athleteId": 344520,
+          "athleteName": "Clément Akpa",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
         },
         {
-          "rank": 16,
+          "rank": 22,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 156898,
+          "athleteName": "Florian Thauvin",
+          "teamId": 175,
+          "teamName": "Lens"
+        },
+        {
+          "rank": 23,
           "value": 10,
           "displayValue": "10",
           "athleteId": 314388,
@@ -2010,81 +2073,18 @@
           "teamName": "Angers"
         },
         {
-          "rank": 17,
-          "value": 10,
-          "displayValue": "10",
-          "athleteId": 336388,
-          "athleteName": "Désiré Doué",
-          "teamId": 160,
-          "teamName": "Paris Saint-Germain"
-        },
-        {
-          "rank": 18,
-          "value": 10,
-          "displayValue": "10",
-          "athleteId": 3132216,
-          "athleteName": "Djibril Ouziad",
-          "teamId": 3236,
-          "teamName": "Le Havre AC"
-        },
-        {
-          "rank": 19,
-          "value": 10,
-          "displayValue": "10",
-          "athleteId": 401045,
-          "athleteName": "Rayan Fofana",
-          "teamId": 3236,
-          "teamName": "Le Havre AC"
-        },
-        {
-          "rank": 20,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 192015,
-          "athleteName": "Ludovic Ajorque",
-          "teamId": 6997,
-          "teamName": "Brest"
-        },
-        {
-          "rank": 21,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 319285,
-          "athleteName": "Amir Richardson",
-          "teamId": 3236,
-          "teamName": "Le Havre AC"
-        },
-        {
-          "rank": 22,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 365783,
-          "athleteName": "Pathé Mboup",
-          "teamId": 6997,
-          "teamName": "Brest"
-        },
-        {
-          "rank": 23,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 238917,
-          "athleteName": "Amine Harit",
-          "teamId": 176,
-          "teamName": "Marseille"
-        },
-        {
           "rank": 24,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 304918,
-          "athleteName": "Ilan Kebbal",
-          "teamId": 6851,
-          "teamName": "Paris FC"
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 301262,
+          "athleteName": "Amine El Ouazzani",
+          "teamId": 7868,
+          "teamName": "Angers"
         },
         {
           "rank": 25,
-          "value": 9,
-          "displayValue": "9",
+          "value": 10,
+          "displayValue": "10",
           "athleteId": 318779,
           "athleteName": "Hákon Haraldsson",
           "teamId": 166,
@@ -2099,8 +2099,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 26,
-          "displayValue": "26",
+          "value": 31,
+          "displayValue": "31",
           "athleteId": 231366,
           "athleteName": "Mbwana Samatta",
           "teamId": 3236,
@@ -2108,8 +2108,8 @@
         },
         {
           "rank": 2,
-          "value": 24,
-          "displayValue": "24",
+          "value": 28,
+          "displayValue": "28",
           "athleteId": 323850,
           "athleteName": "Esteban Lepaul",
           "teamId": 169,
@@ -2117,8 +2117,8 @@
         },
         {
           "rank": 3,
-          "value": 20,
-          "displayValue": "20",
+          "value": 26,
+          "displayValue": "26",
           "athleteId": 271137,
           "athleteName": "Lassine Sinayoko",
           "teamId": 6851,
@@ -2135,6 +2135,24 @@
         },
         {
           "rank": 5,
+          "value": 20,
+          "displayValue": "20",
+          "athleteId": 336388,
+          "athleteName": "Désiré Doué",
+          "teamId": 160,
+          "teamName": "Paris Saint-Germain"
+        },
+        {
+          "rank": 6,
+          "value": 20,
+          "displayValue": "20",
+          "athleteId": 229744,
+          "athleteName": "Ousmane Dembélé",
+          "teamId": 160,
+          "teamName": "Paris Saint-Germain"
+        },
+        {
+          "rank": 7,
           "value": 19,
           "displayValue": "19",
           "athleteId": 306664,
@@ -2143,16 +2161,7 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 6,
-          "value": 18,
-          "displayValue": "18",
-          "athleteId": 156898,
-          "athleteName": "Florian Thauvin",
-          "teamId": 175,
-          "teamName": "Lens"
-        },
-        {
-          "rank": 7,
+          "rank": 8,
           "value": 18,
           "displayValue": "18",
           "athleteId": 192015,
@@ -2161,7 +2170,25 @@
           "teamName": "Brest"
         },
         {
-          "rank": 8,
+          "rank": 9,
+          "value": 18,
+          "displayValue": "18",
+          "athleteId": 156898,
+          "athleteName": "Florian Thauvin",
+          "teamId": 175,
+          "teamName": "Lens"
+        },
+        {
+          "rank": 10,
+          "value": 17,
+          "displayValue": "17",
+          "athleteId": 259743,
+          "athleteName": "Amine Gouiri",
+          "teamId": 176,
+          "teamName": "Marseille"
+        },
+        {
+          "rank": 11,
           "value": 17,
           "displayValue": "17",
           "athleteId": 268720,
@@ -2170,7 +2197,7 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 9,
+          "rank": 12,
           "value": 17,
           "displayValue": "17",
           "athleteId": 276265,
@@ -2179,7 +2206,7 @@
           "teamName": "Lyon"
         },
         {
-          "rank": 10,
+          "rank": 13,
           "value": 16,
           "displayValue": "16",
           "athleteId": 232089,
@@ -2188,16 +2215,7 @@
           "teamName": "Nice"
         },
         {
-          "rank": 11,
-          "value": 16,
-          "displayValue": "16",
-          "athleteId": 336388,
-          "athleteName": "Désiré Doué",
-          "teamId": 160,
-          "teamName": "Paris Saint-Germain"
-        },
-        {
-          "rank": 12,
+          "rank": 14,
           "value": 16,
           "displayValue": "16",
           "athleteId": 365789,
@@ -2206,16 +2224,16 @@
           "teamName": "AS Monaco"
         },
         {
-          "rank": 13,
-          "value": 16,
-          "displayValue": "16",
-          "athleteId": 229744,
-          "athleteName": "Ousmane Dembélé",
-          "teamId": 160,
-          "teamName": "Paris Saint-Germain"
+          "rank": 15,
+          "value": 15,
+          "displayValue": "15",
+          "athleteId": 243748,
+          "athleteName": "Danny Namaso",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
         },
         {
-          "rank": 14,
+          "rank": 16,
           "value": 15,
           "displayValue": "15",
           "athleteId": 330412,
@@ -2224,7 +2242,16 @@
           "teamName": "Brest"
         },
         {
-          "rank": 15,
+          "rank": 17,
+          "value": 15,
+          "displayValue": "15",
+          "athleteId": 304918,
+          "athleteName": "Ilan Kebbal",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 18,
           "value": 15,
           "displayValue": "15",
           "athleteId": 284333,
@@ -2233,7 +2260,25 @@
           "teamName": "Angers"
         },
         {
-          "rank": 16,
+          "rank": 19,
+          "value": 15,
+          "displayValue": "15",
+          "athleteId": 334359,
+          "athleteName": "Pablo Pagis",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 20,
+          "value": 15,
+          "displayValue": "15",
+          "athleteId": 341333,
+          "athleteName": "Luca Koleosho",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 21,
           "value": 14,
           "displayValue": "14",
           "athleteId": 362777,
@@ -2242,7 +2287,7 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 17,
+          "rank": 22,
           "value": 14,
           "displayValue": "14",
           "athleteId": 314388,
@@ -2251,16 +2296,16 @@
           "teamName": "Angers"
         },
         {
-          "rank": 18,
+          "rank": 23,
           "value": 14,
           "displayValue": "14",
-          "athleteId": 304918,
-          "athleteName": "Ilan Kebbal",
-          "teamId": 6851,
-          "teamName": "Paris FC"
+          "athleteId": 176406,
+          "athleteName": "Renaud Ripart",
+          "teamId": 170,
+          "teamName": "Troyes"
         },
         {
-          "rank": 19,
+          "rank": 24,
           "value": 14,
           "displayValue": "14",
           "athleteId": 274745,
@@ -2269,58 +2314,13 @@
           "teamName": "Paris Saint-Germain"
         },
         {
-          "rank": 20,
+          "rank": 25,
           "value": 14,
           "displayValue": "14",
           "athleteId": 333310,
           "athleteName": "Ernest Nuamah",
           "teamId": 167,
           "teamName": "Lyon"
-        },
-        {
-          "rank": 21,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 297121,
-          "athleteName": "Jacen Russell-Rowe",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
-          "rank": 22,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 259743,
-          "athleteName": "Amine Gouiri",
-          "teamId": 176,
-          "teamName": "Marseille"
-        },
-        {
-          "rank": 23,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 288897,
-          "athleteName": "Vitinha",
-          "teamId": 160,
-          "teamName": "Paris Saint-Germain"
-        },
-        {
-          "rank": 24,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 240233,
-          "athleteName": "Achraf Hakimi",
-          "teamId": 160,
-          "teamName": "Paris Saint-Germain"
-        },
-        {
-          "rank": 25,
-          "value": 12,
-          "displayValue": "12",
-          "athleteId": 334359,
-          "athleteName": "Pablo Pagis",
-          "teamId": 6851,
-          "teamName": "Paris FC"
         }
       ]
     },
@@ -2331,24 +2331,42 @@
       "entries": [
         {
           "rank": 1,
-          "value": 502,
-          "displayValue": "502",
-          "athleteId": 288897,
-          "athleteName": "Vitinha",
-          "teamId": 160,
-          "teamName": "Paris Saint-Germain"
-        },
-        {
-          "rank": 2,
-          "value": 501,
-          "displayValue": "501",
+          "value": 551,
+          "displayValue": "551",
           "athleteId": 255192,
           "athleteName": "Youssouf Ndayishimiye",
           "teamId": 2502,
           "teamName": "Nice"
         },
         {
+          "rank": 2,
+          "value": 539,
+          "displayValue": "539",
+          "athleteId": 288897,
+          "athleteName": "Vitinha",
+          "teamId": 160,
+          "teamName": "Paris Saint-Germain"
+        },
+        {
           "rank": 3,
+          "value": 535,
+          "displayValue": "535",
+          "athleteId": 223122,
+          "athleteName": "Maxime López",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 4,
+          "value": 516,
+          "displayValue": "516",
+          "athleteId": 332549,
+          "athleteName": "Diego Coppola",
+          "teamId": 6851,
+          "teamName": "Paris FC"
+        },
+        {
+          "rank": 5,
           "value": 495,
           "displayValue": "495",
           "athleteId": 271244,
@@ -2357,25 +2375,43 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 4,
-          "value": 482,
-          "displayValue": "482",
-          "athleteId": 223122,
-          "athleteName": "Maxime López",
-          "teamId": 6851,
-          "teamName": "Paris FC"
-        },
-        {
-          "rank": 5,
-          "value": 451,
-          "displayValue": "451",
-          "athleteId": 332549,
-          "athleteName": "Diego Coppola",
-          "teamId": 6851,
-          "teamName": "Paris FC"
-        },
-        {
           "rank": 6,
+          "value": 473,
+          "displayValue": "473",
+          "athleteId": 307115,
+          "athleteName": "CJ Egan-Riley",
+          "teamId": 176,
+          "teamName": "Marseille"
+        },
+        {
+          "rank": 7,
+          "value": 471,
+          "displayValue": "471",
+          "athleteId": 3117261,
+          "athleteName": "Xavier Junior Mandza Tsiendi",
+          "teamId": 2502,
+          "teamName": "Nice"
+        },
+        {
+          "rank": 8,
+          "value": 435,
+          "displayValue": "435",
+          "athleteId": 362288,
+          "athleteName": "Sadibou Sané",
+          "teamId": 174,
+          "teamName": "AS Monaco"
+        },
+        {
+          "rank": 9,
+          "value": 423,
+          "displayValue": "423",
+          "athleteId": 38721,
+          "athleteName": "Lamine Camara",
+          "teamId": 174,
+          "teamName": "AS Monaco"
+        },
+        {
+          "rank": 10,
           "value": 418,
           "displayValue": "418",
           "athleteId": 77072,
@@ -2384,25 +2420,16 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 7,
-          "value": 413,
-          "displayValue": "413",
-          "athleteId": 307115,
-          "athleteName": "CJ Egan-Riley",
-          "teamId": 176,
-          "teamName": "Marseille"
+          "rank": 11,
+          "value": 406,
+          "displayValue": "406",
+          "athleteId": 221527,
+          "athleteName": "Pierre Lees-Melou",
+          "teamId": 6851,
+          "teamName": "Paris FC"
         },
         {
-          "rank": 8,
-          "value": 409,
-          "displayValue": "409",
-          "athleteId": 3117261,
-          "athleteName": "Xavier Junior Mandza Tsiendi",
-          "teamId": 2502,
-          "teamName": "Nice"
-        },
-        {
-          "rank": 9,
+          "rank": 12,
           "value": 405,
           "displayValue": "405",
           "athleteId": 155532,
@@ -2411,7 +2438,16 @@
           "teamName": "AS Monaco"
         },
         {
-          "rank": 10,
+          "rank": 13,
+          "value": 387,
+          "displayValue": "387",
+          "athleteId": 307713,
+          "athleteName": "Charlie Cresswell",
+          "teamId": 169,
+          "teamName": "Stade Rennais"
+        },
+        {
+          "rank": 14,
           "value": 384,
           "displayValue": "384",
           "athleteId": 159047,
@@ -2420,7 +2456,43 @@
           "teamName": "Paris Saint-Germain"
         },
         {
-          "rank": 11,
+          "rank": 15,
+          "value": 380,
+          "displayValue": "380",
+          "athleteId": 236957,
+          "athleteName": "Mohamed Abdelmoneim",
+          "teamId": 2502,
+          "teamName": "Nice"
+        },
+        {
+          "rank": 16,
+          "value": 376,
+          "displayValue": "376",
+          "athleteId": 318577,
+          "athleteName": "Nathan Ngoy",
+          "teamId": 166,
+          "teamName": "Lille"
+        },
+        {
+          "rank": 17,
+          "value": 373,
+          "displayValue": "373",
+          "athleteId": 265099,
+          "athleteName": "Montassar Talbi",
+          "teamId": 273,
+          "teamName": "Lorient"
+        },
+        {
+          "rank": 18,
+          "value": 373,
+          "displayValue": "373",
+          "athleteId": 345581,
+          "athleteName": "Warren Zaïre-Emery",
+          "teamId": 160,
+          "teamName": "Paris Saint-Germain"
+        },
+        {
+          "rank": 19,
           "value": 368,
           "displayValue": "368",
           "athleteId": 340900,
@@ -2429,7 +2501,25 @@
           "teamName": "Lille"
         },
         {
-          "rank": 12,
+          "rank": 20,
+          "value": 365,
+          "displayValue": "365",
+          "athleteId": 315215,
+          "athleteName": "Noah Cadiou",
+          "teamId": 273,
+          "teamName": "Lorient"
+        },
+        {
+          "rank": 21,
+          "value": 360,
+          "displayValue": "360",
+          "athleteId": 345563,
+          "athleteName": "Nathaniel Adjei",
+          "teamId": 273,
+          "teamName": "Lorient"
+        },
+        {
+          "rank": 22,
           "value": 357,
           "displayValue": "357",
           "athleteId": 159543,
@@ -2438,117 +2528,27 @@
           "teamName": "Marseille"
         },
         {
-          "rank": 13,
-          "value": 356,
-          "displayValue": "356",
-          "athleteId": 221527,
-          "athleteName": "Pierre Lees-Melou",
-          "teamId": 6851,
-          "teamName": "Paris FC"
-        },
-        {
-          "rank": 14,
-          "value": 349,
-          "displayValue": "349",
-          "athleteId": 320945,
-          "athleteName": "Felix Bacher",
-          "teamId": 167,
-          "teamName": "Lyon"
-        },
-        {
-          "rank": 15,
-          "value": 341,
-          "displayValue": "341",
-          "athleteId": 362288,
-          "athleteName": "Sadibou Sané",
-          "teamId": 174,
-          "teamName": "AS Monaco"
-        },
-        {
-          "rank": 16,
-          "value": 336,
-          "displayValue": "336",
+          "rank": 23,
+          "value": 353,
+          "displayValue": "353",
           "athleteId": 245243,
           "athleteName": "Nayef Aguerd",
           "teamId": 176,
           "teamName": "Marseille"
         },
         {
-          "rank": 17,
-          "value": 333,
-          "displayValue": "333",
-          "athleteId": 38721,
-          "athleteName": "Lamine Camara",
-          "teamId": 174,
-          "teamName": "AS Monaco"
-        },
-        {
-          "rank": 18,
-          "value": 329,
-          "displayValue": "329",
-          "athleteId": 307713,
-          "athleteName": "Charlie Cresswell",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
-        },
-        {
-          "rank": 19,
-          "value": 328,
-          "displayValue": "328",
-          "athleteId": 236957,
-          "athleteName": "Mohamed Abdelmoneim",
-          "teamId": 2502,
-          "teamName": "Nice"
-        },
-        {
-          "rank": 20,
-          "value": 325,
-          "displayValue": "325",
-          "athleteId": 265099,
-          "athleteName": "Montassar Talbi",
-          "teamId": 273,
-          "teamName": "Lorient"
-        },
-        {
-          "rank": 21,
-          "value": 325,
-          "displayValue": "325",
-          "athleteId": 345563,
-          "athleteName": "Nathaniel Adjei",
-          "teamId": 273,
-          "teamName": "Lorient"
-        },
-        {
-          "rank": 22,
-          "value": 319,
-          "displayValue": "319",
-          "athleteId": 345581,
-          "athleteName": "Warren Zaïre-Emery",
-          "teamId": 160,
-          "teamName": "Paris Saint-Germain"
-        },
-        {
-          "rank": 23,
-          "value": 310,
-          "displayValue": "310",
-          "athleteId": 315215,
-          "athleteName": "Noah Cadiou",
-          "teamId": 273,
-          "teamName": "Lorient"
-        },
-        {
           "rank": 24,
-          "value": 308,
-          "displayValue": "308",
-          "athleteId": 362926,
-          "athleteName": "Jeyland Mitchell",
-          "teamId": 180,
-          "teamName": "Strasbourg"
+          "value": 351,
+          "displayValue": "351",
+          "athleteId": 320945,
+          "athleteName": "Felix Bacher",
+          "teamId": 167,
+          "teamName": "Lyon"
         },
         {
           "rank": 25,
-          "value": 307,
-          "displayValue": "307",
+          "value": 347,
+          "displayValue": "347",
           "athleteId": 207136,
           "athleteName": "Valentin Rongier",
           "teamId": 169,
@@ -2563,8 +2563,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 30,
-          "displayValue": "30",
+          "value": 33,
+          "displayValue": "33",
           "athleteId": 131743,
           "athleteName": "Anthony Lopes",
           "teamId": 7868,
@@ -2572,24 +2572,33 @@
         },
         {
           "rank": 2,
-          "value": 26,
-          "displayValue": "26",
-          "athleteId": 228707,
-          "athleteName": "Jeffrey de Lange",
-          "teamId": 176,
-          "teamName": "Marseille"
-        },
-        {
-          "rank": 3,
-          "value": 25,
-          "displayValue": "25",
+          "value": 29,
+          "displayValue": "29",
           "athleteId": 304256,
           "athleteName": "Filip Jørgensen",
           "teamId": 180,
           "teamName": "Strasbourg"
         },
         {
+          "rank": 3,
+          "value": 27,
+          "displayValue": "27",
+          "athleteId": 228707,
+          "athleteName": "Jeffrey de Lange",
+          "teamId": 176,
+          "teamName": "Marseille"
+        },
+        {
           "rank": 4,
+          "value": 25,
+          "displayValue": "25",
+          "athleteId": 344517,
+          "athleteName": "Robin Risser",
+          "teamId": 175,
+          "teamName": "Lens"
+        },
+        {
+          "rank": 5,
           "value": 24,
           "displayValue": "24",
           "athleteId": 345926,
@@ -2598,18 +2607,9 @@
           "teamName": "AJ Auxerre"
         },
         {
-          "rank": 5,
-          "value": 21,
-          "displayValue": "21",
-          "athleteId": 344517,
-          "athleteName": "Robin Risser",
-          "teamId": 175,
-          "teamName": "Lens"
-        },
-        {
           "rank": 6,
-          "value": 21,
-          "displayValue": "21",
+          "value": 23,
+          "displayValue": "23",
           "athleteId": 134169,
           "athleteName": "Lukas Hradecky",
           "teamId": 174,
@@ -2617,6 +2617,51 @@
         },
         {
           "rank": 7,
+          "value": 23,
+          "displayValue": "23",
+          "athleteId": 164126,
+          "athleteName": "Brice Samba",
+          "teamId": 169,
+          "teamName": "Stade Rennais"
+        },
+        {
+          "rank": 8,
+          "value": 21,
+          "displayValue": "21",
+          "athleteId": 286433,
+          "athleteName": "Egil Selvik",
+          "teamId": 6997,
+          "teamName": "Brest"
+        },
+        {
+          "rank": 9,
+          "value": 21,
+          "displayValue": "21",
+          "athleteId": 199381,
+          "athleteName": "Yvon Mvogo",
+          "teamId": 273,
+          "teamName": "Lorient"
+        },
+        {
+          "rank": 10,
+          "value": 20,
+          "displayValue": "20",
+          "athleteId": 248699,
+          "athleteName": "Matvei Safonov",
+          "teamId": 160,
+          "teamName": "Paris Saint-Germain"
+        },
+        {
+          "rank": 11,
+          "value": 20,
+          "displayValue": "20",
+          "athleteId": 241029,
+          "athleteName": "Yehvann Diouf",
+          "teamId": 2502,
+          "teamName": "Nice"
+        },
+        {
+          "rank": 12,
           "value": 19,
           "displayValue": "19",
           "athleteId": 257267,
@@ -2625,25 +2670,7 @@
           "teamName": "Lille"
         },
         {
-          "rank": 8,
-          "value": 19,
-          "displayValue": "19",
-          "athleteId": 164126,
-          "athleteName": "Brice Samba",
-          "teamId": 169,
-          "teamName": "Stade Rennais"
-        },
-        {
-          "rank": 9,
-          "value": 18,
-          "displayValue": "18",
-          "athleteId": 241029,
-          "athleteName": "Yehvann Diouf",
-          "teamId": 2502,
-          "teamName": "Nice"
-        },
-        {
-          "rank": 10,
+          "rank": 13,
           "value": 18,
           "displayValue": "18",
           "athleteId": 221278,
@@ -2652,25 +2679,25 @@
           "teamName": "Lyon"
         },
         {
-          "rank": 11,
+          "rank": 14,
           "value": 17,
           "displayValue": "17",
-          "athleteId": 286433,
-          "athleteName": "Egil Selvik",
-          "teamId": 6997,
-          "teamName": "Brest"
+          "athleteId": 335240,
+          "athleteName": "Patrick Beach",
+          "teamId": 170,
+          "teamName": "Troyes"
         },
         {
-          "rank": 12,
+          "rank": 15,
           "value": 17,
           "displayValue": "17",
-          "athleteId": 199381,
-          "athleteName": "Yvon Mvogo",
-          "teamId": 273,
-          "teamName": "Lorient"
+          "athleteId": 122280,
+          "athleteName": "Kevin Trapp",
+          "teamId": 6851,
+          "teamName": "Paris FC"
         },
         {
-          "rank": 13,
+          "rank": 16,
           "value": 17,
           "displayValue": "17",
           "athleteId": 324289,
@@ -2679,7 +2706,7 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 14,
+          "rank": 17,
           "value": 17,
           "displayValue": "17",
           "athleteId": 233308,
@@ -2688,7 +2715,7 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 15,
+          "rank": 18,
           "value": 17,
           "displayValue": "17",
           "athleteId": 211669,
@@ -2697,34 +2724,25 @@
           "teamName": "Le Havre AC"
         },
         {
-          "rank": 16,
-          "value": 16,
-          "displayValue": "16",
-          "athleteId": 335240,
-          "athleteName": "Patrick Beach",
-          "teamId": 170,
-          "teamName": "Troyes"
-        },
-        {
-          "rank": 17,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 248699,
-          "athleteName": "Matvei Safonov",
-          "teamId": 160,
-          "teamName": "Paris Saint-Germain"
-        },
-        {
-          "rank": 18,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 122280,
-          "athleteName": "Kevin Trapp",
-          "teamId": 6851,
-          "teamName": "Paris FC"
-        },
-        {
           "rank": 19,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 190293,
+          "athleteName": "Gauthier Gallon",
+          "teamId": 3236,
+          "teamName": "Le Havre AC"
+        },
+        {
+          "rank": 20,
+          "value": 6,
+          "displayValue": "6",
+          "athleteId": 159312,
+          "athleteName": "Paul Nardi",
+          "teamId": 172,
+          "teamName": "AJ Auxerre"
+        },
+        {
+          "rank": 21,
           "value": 5,
           "displayValue": "5",
           "athleteId": 299457,
@@ -2733,16 +2751,16 @@
           "teamName": "Le Mans"
         },
         {
-          "rank": 20,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 190293,
-          "athleteName": "Gauthier Gallon",
-          "teamId": 3236,
-          "teamName": "Le Havre AC"
+          "rank": 22,
+          "value": 5,
+          "displayValue": "5",
+          "athleteId": 222175,
+          "athleteName": "Rémy Descamps",
+          "teamId": 167,
+          "teamName": "Lyon"
         },
         {
-          "rank": 21,
+          "rank": 23,
           "value": 3,
           "displayValue": "3",
           "athleteId": 371559,
@@ -2751,7 +2769,7 @@
           "teamName": "Toulouse"
         },
         {
-          "rank": 22,
+          "rank": 24,
           "value": 3,
           "displayValue": "3",
           "athleteId": 217668,
@@ -2760,31 +2778,13 @@
           "teamName": "Stade Rennais"
         },
         {
-          "rank": 23,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 222175,
-          "athleteName": "Rémy Descamps",
-          "teamId": 167,
-          "teamName": "Lyon"
-        },
-        {
-          "rank": 24,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 271244,
-          "athleteName": "Cristian Cásseres Jr.",
-          "teamId": 179,
-          "teamName": "Toulouse"
-        },
-        {
           "rank": 25,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 77072,
-          "athleteName": "Mark McKenzie",
-          "teamId": 179,
-          "teamName": "Toulouse"
+          "value": 1,
+          "displayValue": "1",
+          "athleteId": 301648,
+          "athleteName": "Orlando Gill",
+          "teamId": 166,
+          "teamName": "Lille"
         }
       ]
     }
