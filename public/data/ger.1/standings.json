@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-22T01:34:09.908Z",
+  "updateTime": "2026-10-24T01:43:33.610Z",
   "league": "ger.1",
   "season": "2026",
-  "matchesCounted": 54,
+  "matchesCounted": 55,
   "count": 18,
   "standings": [
     {
@@ -164,19 +164,6 @@
     },
     {
       "rank": 13,
-      "teamId": 134,
-      "team": "VfB Stuttgart",
-      "played": 6,
-      "won": 2,
-      "drawn": 0,
-      "lost": 4,
-      "goalsFor": 8,
-      "goalsAgainst": 10,
-      "goalDiff": -2,
-      "points": 6
-    },
-    {
-      "rank": 14,
       "teamId": 7911,
       "team": "TSG Hoffenheim",
       "played": 6,
@@ -185,6 +172,19 @@
       "lost": 4,
       "goalsFor": 11,
       "goalsAgainst": 14,
+      "goalDiff": -3,
+      "points": 6
+    },
+    {
+      "rank": 14,
+      "teamId": 134,
+      "team": "VfB Stuttgart",
+      "played": 7,
+      "won": 2,
+      "drawn": 0,
+      "lost": 5,
+      "goalsFor": 10,
+      "goalsAgainst": 13,
       "goalDiff": -3,
       "points": 6
     },
@@ -231,14 +231,14 @@
       "rank": 18,
       "teamId": 268,
       "team": "Borussia Mönchengladbach",
-      "played": 6,
-      "won": 0,
+      "played": 7,
+      "won": 1,
       "drawn": 0,
       "lost": 6,
-      "goalsFor": 8,
-      "goalsAgainst": 20,
-      "goalDiff": -12,
-      "points": 0
+      "goalsFor": 11,
+      "goalsAgainst": 22,
+      "goalDiff": -11,
+      "points": 3
     }
   ]
 }

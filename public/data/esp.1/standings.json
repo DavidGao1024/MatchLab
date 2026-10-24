@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-22T01:34:03.740Z",
+  "updateTime": "2026-10-24T01:43:27.340Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 89,
+  "matchesCounted": 90,
   "count": 20,
   "standings": [
     {
@@ -88,14 +88,14 @@
       "rank": 7,
       "teamId": 96,
       "team": "Alavés",
-      "played": 9,
+      "played": 10,
       "won": 3,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 4,
-      "goalsFor": 13,
-      "goalsAgainst": 10,
+      "goalsFor": 14,
+      "goalsAgainst": 11,
       "goalDiff": 3,
-      "points": 11
+      "points": 12
     },
     {
       "rank": 8,
@@ -257,14 +257,14 @@
       "rank": 20,
       "teamId": 99,
       "team": "Málaga",
-      "played": 9,
+      "played": 10,
       "won": 0,
-      "drawn": 4,
+      "drawn": 5,
       "lost": 5,
-      "goalsFor": 6,
-      "goalsAgainst": 18,
+      "goalsFor": 7,
+      "goalsAgainst": 19,
       "goalDiff": -12,
-      "points": 4
+      "points": 5
     }
   ]
 }

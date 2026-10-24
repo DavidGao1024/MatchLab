@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-22T01:34:06.829Z",
+  "updateTime": "2026-10-24T01:43:30.293Z",
   "league": "ita.1",
   "season": "2026",
-  "matchesCounted": 70,
+  "matchesCounted": 71,
   "count": 20,
   "standings": [
     {
@@ -86,6 +86,19 @@
     },
     {
       "rank": 7,
+      "teamId": 239,
+      "team": "Torino",
+      "played": 8,
+      "won": 4,
+      "drawn": 1,
+      "lost": 3,
+      "goalsFor": 13,
+      "goalsAgainst": 11,
+      "goalDiff": 2,
+      "points": 13
+    },
+    {
+      "rank": 8,
       "teamId": 2925,
       "team": "Cagliari",
       "played": 7,
@@ -98,7 +111,7 @@
       "points": 13
     },
     {
-      "rank": 8,
+      "rank": 9,
       "teamId": 111,
       "team": "Juventus",
       "played": 7,
@@ -111,7 +124,7 @@
       "points": 11
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 114,
       "team": "Napoli",
       "played": 7,
@@ -121,19 +134,6 @@
       "goalsFor": 10,
       "goalsAgainst": 7,
       "goalDiff": 3,
-      "points": 10
-    },
-    {
-      "rank": 10,
-      "teamId": 239,
-      "team": "Torino",
-      "played": 7,
-      "won": 3,
-      "drawn": 1,
-      "lost": 3,
-      "goalsFor": 10,
-      "goalsAgainst": 9,
-      "goalDiff": 1,
       "points": 10
     },
     {
@@ -179,13 +179,13 @@
       "rank": 14,
       "teamId": 4007,
       "team": "Monza",
-      "played": 7,
+      "played": 8,
       "won": 2,
       "drawn": 1,
-      "lost": 4,
-      "goalsFor": 13,
-      "goalsAgainst": 15,
-      "goalDiff": -2,
+      "lost": 5,
+      "goalsFor": 15,
+      "goalsAgainst": 18,
+      "goalDiff": -3,
       "points": 7
     },
     {

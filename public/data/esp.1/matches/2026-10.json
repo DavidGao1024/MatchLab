@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-22T01:34:01.468Z",
+  "updateTime": "2026-10-24T01:43:25.333Z",
   "league": "esp.1",
   "month": "2026-10",
   "count": 36,
@@ -555,16 +555,17 @@
       "eventId": "401882836",
       "date": "2026-10-23T19:00Z",
       "name": "Málaga at Alavés",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Mendizorrotza",
       "home": {
         "id": 96,
         "name": "Alavés",
         "abbreviation": "ALA",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/96.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -572,7 +573,7 @@
         "name": "Málaga",
         "abbreviation": "MCF",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
