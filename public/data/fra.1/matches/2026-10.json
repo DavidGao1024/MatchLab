@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-24T01:43:34.548Z",
+  "updateTime": "2026-10-25T01:11:36.000Z",
   "league": "fra.1",
   "month": "2026-10",
   "count": 33,
@@ -503,24 +503,25 @@
       "eventId": "401876427",
       "date": "2026-10-24T18:45Z",
       "name": "Paris FC at Lens",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
       "venue": "Stade Bollaert-Delelis",
       "home": {
         "id": 175,
         "name": "Lens",
         "abbreviation": "RCL",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 6851,
         "name": "Paris FC",
         "abbreviation": "PAR",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },

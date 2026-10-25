@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-24T01:43:27.340Z",
+  "updateTime": "2026-10-25T01:11:28.120Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 90,
+  "matchesCounted": 94,
   "count": 20,
   "standings": [
     {
@@ -23,14 +23,14 @@
       "rank": 2,
       "teamId": 1068,
       "team": "Atlético Madrid",
-      "played": 9,
-      "won": 7,
+      "played": 10,
+      "won": 8,
       "drawn": 1,
       "lost": 1,
-      "goalsFor": 19,
+      "goalsFor": 20,
       "goalsAgainst": 8,
-      "goalDiff": 11,
-      "points": 22
+      "goalDiff": 12,
+      "points": 25
     },
     {
       "rank": 3,
@@ -99,6 +99,19 @@
     },
     {
       "rank": 8,
+      "teamId": 102,
+      "team": "Villarreal",
+      "played": 10,
+      "won": 3,
+      "drawn": 3,
+      "lost": 4,
+      "goalsFor": 15,
+      "goalsAgainst": 14,
+      "goalDiff": 1,
+      "points": 12
+    },
+    {
+      "rank": 9,
       "teamId": 85,
       "team": "Celta Vigo",
       "played": 9,
@@ -111,20 +124,20 @@
       "points": 11
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 90,
       "team": "Deportivo",
-      "played": 9,
+      "played": 10,
       "won": 2,
       "drawn": 5,
-      "lost": 2,
+      "lost": 3,
       "goalsFor": 13,
-      "goalsAgainst": 12,
-      "goalDiff": 1,
+      "goalsAgainst": 13,
+      "goalDiff": 0,
       "points": 11
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 97,
       "team": "Osasuna",
       "played": 9,
@@ -137,7 +150,20 @@
       "points": 11
     },
     {
-      "rank": 11,
+      "rank": 12,
+      "teamId": 87,
+      "team": "Racing Santander",
+      "played": 10,
+      "won": 3,
+      "drawn": 2,
+      "lost": 5,
+      "goalsFor": 15,
+      "goalsAgainst": 26,
+      "goalDiff": -11,
+      "points": 11
+    },
+    {
+      "rank": 13,
       "teamId": 1538,
       "team": "Levante",
       "played": 9,
@@ -150,20 +176,20 @@
       "points": 10
     },
     {
-      "rank": 12,
-      "teamId": 102,
-      "team": "Villarreal",
-      "played": 9,
+      "rank": 14,
+      "teamId": 3751,
+      "team": "Elche",
+      "played": 10,
       "won": 2,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 4,
-      "goalsFor": 13,
-      "goalsAgainst": 13,
-      "goalDiff": 0,
-      "points": 9
+      "goalsFor": 14,
+      "goalsAgainst": 17,
+      "goalDiff": -3,
+      "points": 10
     },
     {
-      "rank": 13,
+      "rank": 15,
       "teamId": 93,
       "team": "Athletic Club",
       "played": 8,
@@ -176,20 +202,7 @@
       "points": 9
     },
     {
-      "rank": 14,
-      "teamId": 101,
-      "team": "Rayo Vallecano",
-      "played": 8,
-      "won": 2,
-      "drawn": 3,
-      "lost": 3,
-      "goalsFor": 12,
-      "goalsAgainst": 17,
-      "goalDiff": -5,
-      "points": 9
-    },
-    {
-      "rank": 15,
+      "rank": 16,
       "teamId": 2922,
       "team": "Getafe",
       "played": 9,
@@ -202,55 +215,42 @@
       "points": 9
     },
     {
-      "rank": 16,
-      "teamId": 88,
-      "team": "Espanyol",
-      "played": 9,
-      "won": 2,
-      "drawn": 2,
-      "lost": 5,
-      "goalsFor": 11,
-      "goalsAgainst": 12,
-      "goalDiff": -1,
-      "points": 8
-    },
-    {
       "rank": 17,
-      "teamId": 87,
-      "team": "Racing Santander",
+      "teamId": 101,
+      "team": "Rayo Vallecano",
       "played": 9,
       "won": 2,
-      "drawn": 2,
-      "lost": 5,
-      "goalsFor": 13,
-      "goalsAgainst": 25,
-      "goalDiff": -12,
-      "points": 8
+      "drawn": 3,
+      "lost": 4,
+      "goalsFor": 12,
+      "goalsAgainst": 20,
+      "goalDiff": -8,
+      "points": 9
     },
     {
       "rank": 18,
-      "teamId": 3751,
-      "team": "Elche",
-      "played": 9,
-      "won": 1,
-      "drawn": 4,
-      "lost": 4,
-      "goalsFor": 11,
-      "goalsAgainst": 17,
-      "goalDiff": -6,
-      "points": 7
+      "teamId": 88,
+      "team": "Espanyol",
+      "played": 10,
+      "won": 2,
+      "drawn": 2,
+      "lost": 6,
+      "goalsFor": 12,
+      "goalsAgainst": 14,
+      "goalDiff": -2,
+      "points": 8
     },
     {
       "rank": 19,
       "teamId": 94,
       "team": "Valencia",
-      "played": 9,
+      "played": 10,
       "won": 1,
       "drawn": 3,
-      "lost": 5,
-      "goalsFor": 6,
-      "goalsAgainst": 15,
-      "goalDiff": -9,
+      "lost": 6,
+      "goalsFor": 7,
+      "goalsAgainst": 17,
+      "goalDiff": -10,
       "points": 6
     },
     {

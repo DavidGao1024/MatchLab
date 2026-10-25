@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-24T01:31:08.780Z",
+  "updateTime": "2026-10-25T00:58:17.028Z",
   "league": "ita.1",
   "season": "2026",
   "count": 628,
@@ -19,6 +19,19 @@
       "team": "Frosinone"
     },
     {
+      "id": 384482,
+      "name": "Gustavo Varela",
+      "teamId": 4007,
+      "position": "F",
+      "age": 21,
+      "goals": 7,
+      "assists": 1,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "jersey": 9,
+      "team": "Monza"
+    },
+    {
       "id": 259481,
       "name": "Donyell Malen",
       "teamId": 104,
@@ -30,19 +43,6 @@
       "flag": "flags/nl.png",
       "jersey": 14,
       "team": "AS Roma"
-    },
-    {
-      "id": 384482,
-      "name": "Gustavo Varela",
-      "teamId": 4007,
-      "position": "F",
-      "age": 21,
-      "goals": 6,
-      "assists": 1,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "jersey": 9,
-      "team": "Monza"
     },
     {
       "id": 176203,
@@ -402,7 +402,7 @@
       "position": "F",
       "age": 31,
       "goals": 2,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Argentina",
       "flag": "flags/ar.png",
       "jersey": 18,
@@ -1124,6 +1124,19 @@
       "team": "Lecce"
     },
     {
+      "id": 305589,
+      "name": "Kian Fitz-Jim",
+      "teamId": 239,
+      "position": "M",
+      "age": 23,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Netherlands",
+      "flag": "flags/nl.png",
+      "jersey": 28,
+      "team": "Torino"
+    },
+    {
       "id": 283375,
       "name": "Kieron Bowie",
       "teamId": 3997,
@@ -1293,6 +1306,19 @@
       "team": "Internazionale"
     },
     {
+      "id": 206378,
+      "name": "Nikola Vlasic",
+      "teamId": 239,
+      "position": "M",
+      "age": 29,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Croatia",
+      "flag": "flags/hr.png",
+      "jersey": 10,
+      "team": "Torino"
+    },
+    {
       "id": 255344,
       "name": "Noa Lang",
       "teamId": 114,
@@ -1408,6 +1434,19 @@
       "flag": "flags/se.png",
       "jersey": 11,
       "team": "Parma"
+    },
+    {
+      "id": 364590,
+      "name": "Rafik Belghali",
+      "teamId": 239,
+      "position": "D",
+      "age": 24,
+      "goals": 1,
+      "assists": 3,
+      "citizenship": "Algeria",
+      "flag": "flags/dz.png",
+      "jersey": 45,
+      "team": "Torino"
     },
     {
       "id": 252971,
@@ -3860,7 +3899,7 @@
       "position": "M",
       "age": 22,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Lithuania",
       "flag": "flags/lt.png",
       "jersey": 66,
@@ -3917,6 +3956,19 @@
       "flag": null,
       "jersey": 34,
       "team": "Lecce"
+    },
+    {
+      "id": 234951,
+      "name": "Idrissa Touré",
+      "teamId": 4007,
+      "position": "M",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 27,
+      "team": "Monza"
     },
     {
       "id": 292199,
@@ -4463,19 +4515,6 @@
       "flag": "flags/fr.png",
       "jersey": 19,
       "team": "Juventus"
-    },
-    {
-      "id": 305589,
-      "name": "Kian Fitz-Jim",
-      "teamId": 239,
-      "position": "M",
-      "age": 23,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Netherlands",
-      "flag": "flags/nl.png",
-      "jersey": 28,
-      "team": "Torino"
     },
     {
       "id": 212476,
@@ -5895,6 +5934,19 @@
       "team": "Atalanta"
     },
     {
+      "id": 250707,
+      "name": "Nicoló",
+      "teamId": 107,
+      "position": "D",
+      "age": 28,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 16,
+      "team": "Bologna"
+    },
+    {
       "id": 319437,
       "name": "Nicolò Bertola",
       "teamId": 118,
@@ -5918,19 +5970,6 @@
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "jersey": 28,
-      "team": "Bologna"
-    },
-    {
-      "id": 250707,
-      "name": "Nicolo Casale",
-      "teamId": 107,
-      "position": "D",
-      "age": 28,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 16,
       "team": "Bologna"
     },
     {
@@ -6010,19 +6049,6 @@
       "flag": "flags/rs.png",
       "jersey": 9,
       "team": "Lecce"
-    },
-    {
-      "id": 206378,
-      "name": "Nikola Vlasic",
-      "teamId": 239,
-      "position": "M",
-      "age": 29,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Croatia",
-      "flag": "flags/hr.png",
-      "jersey": 10,
-      "team": "Torino"
     },
     {
       "id": 301377,
@@ -6400,19 +6426,6 @@
       "flag": "flags/it.png",
       "jersey": 12,
       "team": "Internazionale"
-    },
-    {
-      "id": 364590,
-      "name": "Rafik Belghali",
-      "teamId": 239,
-      "position": "D",
-      "age": 24,
-      "goals": 0,
-      "assists": 3,
-      "citizenship": "Algeria",
-      "flag": "flags/dz.png",
-      "jersey": 45,
-      "team": "Torino"
     },
     {
       "id": 331770,
@@ -7830,19 +7843,6 @@
       "flag": "flags/it.png",
       "jersey": 41,
       "team": "Parma"
-    },
-    {
-      "id": 234951,
-      "name": "Idrissa Touré",
-      "teamId": 4007,
-      "position": "M",
-      "age": 28,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 27,
-      "team": "Monza"
     },
     {
       "id": 3128883,

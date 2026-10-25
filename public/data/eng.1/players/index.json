@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-24T01:21:30.784Z",
+  "updateTime": "2026-10-25T00:47:53.166Z",
   "league": "eng.1",
   "season": "2026",
-  "count": 599,
+  "count": 598,
   "players": [
     {
       "id": 253989,
@@ -1176,6 +1176,19 @@
       "team": "Manchester City"
     },
     {
+      "id": 20975,
+      "name": "Julio Enciso",
+      "teamId": 373,
+      "position": "M",
+      "age": 22,
+      "goals": 1,
+      "assists": 2,
+      "citizenship": "Paraguay",
+      "flag": "flags/py.png",
+      "jersey": 10,
+      "team": "Ipswich Town"
+    },
+    {
       "id": 245916,
       "name": "Justin Kluivert",
       "teamId": 349,
@@ -1316,6 +1329,19 @@
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "jersey": 10,
+      "team": "Nottingham Forest"
+    },
+    {
+      "id": 291638,
+      "name": "Neco Williams",
+      "teamId": 393,
+      "position": "D",
+      "age": 25,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Wales",
+      "flag": "flags/gb-wls.png",
+      "jersey": 3,
       "team": "Nottingham Forest"
     },
     {
@@ -2534,7 +2560,7 @@
       "position": "D",
       "age": 30,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Colombia",
       "flag": "flags/co.png",
       "jersey": 27,
@@ -4010,19 +4036,6 @@
       "team": "Sunderland"
     },
     {
-      "id": 20975,
-      "name": "Julio Enciso",
-      "teamId": 373,
-      "position": "M",
-      "age": 22,
-      "goals": 0,
-      "assists": 2,
-      "citizenship": "Paraguay",
-      "flag": "flags/py.png",
-      "jersey": 10,
-      "team": "Ipswich Town"
-    },
-    {
       "id": 339797,
       "name": "Julio Soler",
       "teamId": 349,
@@ -5191,19 +5204,6 @@
       "flag": "flags/ie.png",
       "jersey": 22,
       "team": "Brentford"
-    },
-    {
-      "id": 291638,
-      "name": "Neco Williams",
-      "teamId": 393,
-      "position": "D",
-      "age": 25,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Wales",
-      "flag": "flags/gb-wls.png",
-      "jersey": 3,
-      "team": "Nottingham Forest"
     },
     {
       "id": 399697,
@@ -6532,19 +6532,6 @@
       "team": "Hull City"
     },
     {
-      "id": 353304,
-      "name": "Aidan Harris",
-      "teamId": 361,
-      "position": "G",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 31,
-      "team": "Newcastle United"
-    },
-    {
       "id": 197627,
       "name": "Alan Browne",
       "teamId": 366,
@@ -6847,12 +6834,12 @@
       "id": 289645,
       "name": "Evan Ferguson",
       "teamId": 331,
-      "position": "F",
+      "position": "M",
       "age": 22,
       "goals": null,
       "assists": null,
-      "citizenship": "Republic of Ireland",
-      "flag": "flags/ie.png",
+      "citizenship": "Scotland",
+      "flag": "flags/gb-sct.png",
       "jersey": 28,
       "team": "Brighton & Hove Albion"
     },

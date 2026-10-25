@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-24T01:39:24.898Z",
+  "updateTime": "2026-10-25T01:07:10.507Z",
   "league": "fra.1",
   "season": "2026",
-  "count": 519,
+  "count": 521,
   "players": [
     {
       "id": 323850,
@@ -149,6 +149,19 @@
       "team": "AJ Auxerre"
     },
     {
+      "id": 311118,
+      "name": "Elye Wahi",
+      "teamId": 2502,
+      "position": "F",
+      "age": 23,
+      "goals": 3,
+      "assists": 1,
+      "citizenship": "Ivory Coast",
+      "flag": "flags/ci.png",
+      "jersey": 11,
+      "team": "Nice"
+    },
+    {
       "id": 333310,
       "name": "Ernest Nuamah",
       "teamId": 167,
@@ -173,6 +186,19 @@
       "flag": "flags/fr.png",
       "jersey": 10,
       "team": "Lens"
+    },
+    {
+      "id": 192015,
+      "name": "Ludovic Ajorque",
+      "teamId": 6997,
+      "position": "F",
+      "age": 32,
+      "goals": 3,
+      "assists": 1,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 19,
+      "team": "Brest"
     },
     {
       "id": 159047,
@@ -266,19 +292,6 @@
       "team": "Lille"
     },
     {
-      "id": 311118,
-      "name": "Elye Wahi",
-      "teamId": 2502,
-      "position": "F",
-      "age": 23,
-      "goals": 2,
-      "assists": 0,
-      "citizenship": "Ivory Coast",
-      "flag": "flags/ci.png",
-      "jersey": 11,
-      "team": "Nice"
-    },
-    {
       "id": 364180,
       "name": "Franjo Ivanovic",
       "teamId": 175,
@@ -342,19 +355,6 @@
       "flag": "flags/ca.png",
       "jersey": 13,
       "team": "Toulouse"
-    },
-    {
-      "id": 192015,
-      "name": "Ludovic Ajorque",
-      "teamId": 6997,
-      "position": "F",
-      "age": 32,
-      "goals": 2,
-      "assists": 1,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 19,
-      "team": "Brest"
     },
     {
       "id": 259960,
@@ -1130,7 +1130,7 @@
       "position": "F",
       "age": 26,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Algeria",
       "flag": "flags/dz.png",
       "jersey": 9,
@@ -1395,6 +1395,19 @@
       "flag": "flags/se.png",
       "jersey": 11,
       "team": "Toulouse"
+    },
+    {
+      "id": 276995,
+      "name": "Sofiane Diop",
+      "teamId": 2502,
+      "position": "M",
+      "age": 26,
+      "goals": 1,
+      "assists": 2,
+      "citizenship": "Morocco",
+      "flag": "flags/ma.png",
+      "jersey": 10,
+      "team": "Nice"
     },
     {
       "id": 356925,
@@ -2448,6 +2461,19 @@
       "flag": "flags/fr.png",
       "jersey": 19,
       "team": "Le Mans"
+    },
+    {
+      "id": 398380,
+      "name": "Djylian N'Guessan",
+      "teamId": 6997,
+      "position": "F",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": null,
+      "team": "Brest"
     },
     {
       "id": 221278,
@@ -5271,19 +5297,6 @@
       "team": "AJ Auxerre"
     },
     {
-      "id": 276995,
-      "name": "Sofiane Diop",
-      "teamId": 2502,
-      "position": "M",
-      "age": 26,
-      "goals": 0,
-      "assists": 2,
-      "citizenship": "Morocco",
-      "flag": "flags/ma.png",
-      "jersey": 10,
-      "team": "Nice"
-    },
-    {
       "id": 400352,
       "name": "Soriba Diaoune",
       "teamId": 166,
@@ -6168,6 +6181,19 @@
       "team": "Marseille"
     },
     {
+      "id": 5326108,
+      "name": "Ibrahim Meïté",
+      "teamId": 6851,
+      "position": "G",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 50,
+      "team": "Paris FC"
+    },
+    {
       "id": 377495,
       "name": "Ibrahim Traoré",
       "teamId": 170,
@@ -6653,7 +6679,7 @@
       "name": "Stephan Zagadou",
       "teamId": 3236,
       "position": "D",
-      "age": 17,
+      "age": 18,
       "goals": null,
       "assists": null,
       "citizenship": "France",

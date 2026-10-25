@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-24T01:35:17.798Z",
+  "updateTime": "2026-10-25T01:02:45.498Z",
   "league": "ger.1",
   "season": "2026",
-  "count": 528,
+  "count": 529,
   "players": [
     {
       "id": 170257,
@@ -149,6 +149,19 @@
       "team": "RB Leipzig"
     },
     {
+      "id": 269136,
+      "name": "Ermedin Demirovic",
+      "teamId": 134,
+      "position": "F",
+      "age": 28,
+      "goals": 3,
+      "assists": 0,
+      "citizenship": "Bosnia and Herzegovina",
+      "flag": "flags/ba.png",
+      "jersey": 9,
+      "team": "VfB Stuttgart"
+    },
+    {
       "id": 310883,
       "name": "Igor Matanovic",
       "teamId": 126,
@@ -160,6 +173,19 @@
       "flag": "flags/hr.png",
       "jersey": 31,
       "team": "SC Freiburg"
+    },
+    {
+      "id": 272135,
+      "name": "Joe Scally",
+      "teamId": 268,
+      "position": "D",
+      "age": 23,
+      "goals": 3,
+      "assists": 1,
+      "citizenship": "USA",
+      "flag": "flags/us.png",
+      "jersey": 29,
+      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 274887,
@@ -409,19 +435,6 @@
       "team": "Bayern Munich"
     },
     {
-      "id": 272135,
-      "name": "Joe Scally",
-      "teamId": 268,
-      "position": "D",
-      "age": 23,
-      "goals": 2,
-      "assists": 0,
-      "citizenship": "USA",
-      "flag": "flags/us.png",
-      "jersey": 29,
-      "team": "Borussia Mönchengladbach"
-    },
-    {
       "id": 266839,
       "name": "Josha Vagnoman",
       "teamId": 134,
@@ -539,6 +552,19 @@
       "team": "Mainz"
     },
     {
+      "id": 271352,
+      "name": "Shuto Machino",
+      "teamId": 268,
+      "position": "F",
+      "age": 27,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Japan",
+      "flag": "flags/jp.png",
+      "jersey": 18,
+      "team": "Borussia Mönchengladbach"
+    },
+    {
       "id": 332543,
       "name": "Stefano Marino",
       "teamId": 3307,
@@ -602,6 +628,19 @@
       "flag": "flags/de.png",
       "jersey": 21,
       "team": "1. FC Union Berlin"
+    },
+    {
+      "id": 408539,
+      "name": "Wael Mohya",
+      "teamId": 268,
+      "position": "M",
+      "age": 17,
+      "goals": 2,
+      "assists": 1,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 36,
+      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 337079,
@@ -849,19 +888,6 @@
       "flag": "flags/de.png",
       "jersey": 5,
       "team": "Mainz"
-    },
-    {
-      "id": 269136,
-      "name": "Ermedin Demirovic",
-      "teamId": 134,
-      "position": "F",
-      "age": 28,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Bosnia and Herzegovina",
-      "flag": "flags/ba.png",
-      "jersey": 9,
-      "team": "VfB Stuttgart"
     },
     {
       "id": 330233,
@@ -1410,19 +1436,6 @@
       "team": "SC Paderborn 07"
     },
     {
-      "id": 271352,
-      "name": "Shuto Machino",
-      "teamId": 268,
-      "position": "F",
-      "age": 27,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Japan",
-      "flag": "flags/jp.png",
-      "jersey": 18,
-      "team": "Borussia Mönchengladbach"
-    },
-    {
       "id": 289769,
       "name": "Terem Moffi",
       "teamId": 127,
@@ -1447,19 +1460,6 @@
       "flag": "flags/de.png",
       "jersey": 19,
       "team": "TSG Hoffenheim"
-    },
-    {
-      "id": 408539,
-      "name": "Wael Mohya",
-      "teamId": 268,
-      "position": "M",
-      "age": 17,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 36,
-      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 162162,
@@ -2261,7 +2261,7 @@
       "position": "F",
       "age": 21,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 17,
@@ -2781,7 +2781,7 @@
       "position": "F",
       "age": 25,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 18,
@@ -3013,7 +3013,7 @@
       "name": "Jonas Hofmann",
       "teamId": 131,
       "position": "M",
-      "age": 34,
+      "age": 29,
       "goals": 0,
       "assists": 0,
       "citizenship": "Germany",
@@ -3098,6 +3098,19 @@
       "flag": "flags/de.png",
       "jersey": 6,
       "team": "Bayern Munich"
+    },
+    {
+      "id": 3116064,
+      "name": "Josiah Kaled Uwakhonye",
+      "teamId": 268,
+      "position": "F",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 35,
+      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 222567,
@@ -3540,6 +3553,19 @@
       "flag": "flags/de.png",
       "jersey": 49,
       "team": "1. FC Union Berlin"
+    },
+    {
+      "id": 291817,
+      "name": "Lion Schweers",
+      "teamId": 268,
+      "position": "D",
+      "age": 30,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 48,
+      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 300410,
@@ -5745,7 +5771,7 @@
       "position": "M",
       "age": 22,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Japan",
       "flag": "flags/jp.png",
       "jersey": 47,
@@ -6168,6 +6194,19 @@
       "team": "Hamburg SV"
     },
     {
+      "id": 3107094,
+      "name": "Jean-Paul N'Diaye",
+      "teamId": 133,
+      "position": "F",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 35,
+      "team": "Schalke 04"
+    },
+    {
       "id": 304793,
       "name": "Jens Castrop",
       "teamId": 268,
@@ -6231,19 +6270,6 @@
       "flag": "flags/de.png",
       "jersey": 36,
       "team": "Schalke 04"
-    },
-    {
-      "id": 3116064,
-      "name": "Josiah Kaled Uwakhonye",
-      "teamId": 268,
-      "position": "F",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "jersey": 35,
-      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 408339,
@@ -6361,19 +6387,6 @@
       "flag": "flags/de.png",
       "jersey": 32,
       "team": "SC Paderborn 07"
-    },
-    {
-      "id": 291817,
-      "name": "Lion Schweers",
-      "teamId": 268,
-      "position": "D",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 48,
-      "team": "Borussia Mönchengladbach"
     },
     {
       "id": 279959,

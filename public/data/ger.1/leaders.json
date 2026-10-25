@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-22T01:25:55.854Z",
+  "updateTime": "2026-10-25T01:02:45.809Z",
   "league": "ger.1",
   "season": "2026",
   "categories": [
@@ -102,6 +102,24 @@
         {
           "rank": 11,
           "value": 3,
+          "displayValue": "Matches: 7, Goals: 3",
+          "athleteId": 272135,
+          "athleteName": "Joe Scally",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 12,
+          "value": 3,
+          "displayValue": "Matches: 7, Goals: 3",
+          "athleteId": 269136,
+          "athleteName": "Ermedin Demirovic",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 13,
+          "value": 3,
           "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 214203,
           "athleteName": "Maximilian Eggestein",
@@ -109,7 +127,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 12,
+          "rank": 14,
           "value": 3,
           "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 274887,
@@ -118,7 +136,7 @@
           "teamName": "Eintracht Frankfurt"
         },
         {
-          "rank": 13,
+          "rank": 15,
           "value": 3,
           "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 310883,
@@ -127,7 +145,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 14,
+          "rank": 16,
           "value": 3,
           "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 306928,
@@ -136,7 +154,7 @@
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 15,
+          "rank": 17,
           "value": 3,
           "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 319368,
@@ -145,7 +163,7 @@
           "teamName": "RB Leipzig"
         },
         {
-          "rank": 16,
+          "rank": 18,
           "value": 3,
           "displayValue": "Matches: 6, Goals: 3",
           "athleteId": 358496,
@@ -154,7 +172,25 @@
           "teamName": "SV Elversberg"
         },
         {
-          "rank": 17,
+          "rank": 19,
+          "value": 2,
+          "displayValue": "Matches: 7, Goals: 2",
+          "athleteId": 330239,
+          "athleteName": "Hugo Bolin",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 20,
+          "value": 2,
+          "displayValue": "Matches: 7, Goals: 2",
+          "athleteId": 408539,
+          "athleteName": "Wael Mohya",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 21,
           "value": 2,
           "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 305853,
@@ -163,7 +199,7 @@
           "teamName": "Werder Bremen"
         },
         {
-          "rank": 18,
+          "rank": 22,
           "value": 2,
           "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 310692,
@@ -172,7 +208,7 @@
           "teamName": "SV Elversberg"
         },
         {
-          "rank": 19,
+          "rank": 23,
           "value": 2,
           "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 308908,
@@ -181,7 +217,7 @@
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 20,
+          "rank": 24,
           "value": 2,
           "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 266839,
@@ -190,49 +226,13 @@
           "teamName": "VfB Stuttgart"
         },
         {
-          "rank": 21,
+          "rank": 25,
           "value": 2,
           "displayValue": "Matches: 6, Goals: 2",
           "athleteId": 186381,
           "athleteName": "Serhou Guirassy",
           "teamId": 124,
           "teamName": "Borussia Dortmund"
-        },
-        {
-          "rank": 22,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 361212,
-          "athleteName": "Ibrahim Maza",
-          "teamId": 131,
-          "teamName": "Bayer Leverkusen"
-        },
-        {
-          "rank": 23,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 337079,
-          "athleteName": "Yannick Engelhardt",
-          "teamId": 126,
-          "teamName": "SC Freiburg"
-        },
-        {
-          "rank": 24,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 330239,
-          "athleteName": "Hugo Bolin",
-          "teamId": 268,
-          "teamName": "Borussia Mönchengladbach"
-        },
-        {
-          "rank": 25,
-          "value": 2,
-          "displayValue": "Matches: 6, Goals: 2",
-          "athleteId": 346619,
-          "athleteName": "Derry Scherhant",
-          "teamId": 126,
-          "teamName": "SC Freiburg"
         }
       ]
     },
@@ -316,6 +316,15 @@
         {
           "rank": 9,
           "value": 2,
+          "displayValue": "Matches: 7, Assists: 2",
+          "athleteId": 290232,
+          "athleteName": "Angelo Stiller",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 10,
+          "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 399214,
           "athleteName": "Hennes Behrens",
@@ -323,7 +332,7 @@
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 367558,
@@ -332,7 +341,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 11,
+          "rank": 12,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 310692,
@@ -341,7 +350,7 @@
           "teamName": "SV Elversberg"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 357030,
@@ -350,7 +359,7 @@
           "teamName": "Mainz"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 186381,
@@ -359,7 +368,7 @@
           "teamName": "Borussia Dortmund"
         },
         {
-          "rank": 14,
+          "rank": 15,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 191209,
@@ -368,7 +377,7 @@
           "teamName": "TSG Hoffenheim"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 361212,
@@ -377,7 +386,16 @@
           "teamName": "Bayer Leverkusen"
         },
         {
-          "rank": 16,
+          "rank": 17,
+          "value": 2,
+          "displayValue": "Matches: 6, Assists: 2",
+          "athleteId": 346617,
+          "athleteName": "Lukas Ullrich",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 18,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 286831,
@@ -386,16 +404,7 @@
           "teamName": "Bayern Munich"
         },
         {
-          "rank": 17,
-          "value": 2,
-          "displayValue": "Matches: 6, Assists: 2",
-          "athleteId": 290232,
-          "athleteName": "Angelo Stiller",
-          "teamId": 134,
-          "teamName": "VfB Stuttgart"
-        },
-        {
-          "rank": 18,
+          "rank": 19,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 371689,
@@ -404,7 +413,7 @@
           "teamName": "Werder Bremen"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 346619,
@@ -413,7 +422,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 330233,
@@ -422,7 +431,7 @@
           "teamName": "RB Leipzig"
         },
         {
-          "rank": 21,
+          "rank": 22,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 338854,
@@ -431,7 +440,7 @@
           "teamName": "TSG Hoffenheim"
         },
         {
-          "rank": 22,
+          "rank": 23,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 241297,
@@ -440,7 +449,7 @@
           "teamName": "Mainz"
         },
         {
-          "rank": 23,
+          "rank": 24,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 212330,
@@ -449,22 +458,13 @@
           "teamName": "Bayer Leverkusen"
         },
         {
-          "rank": 24,
+          "rank": 25,
           "value": 2,
           "displayValue": "Matches: 6, Assists: 2",
           "athleteId": 336355,
           "athleteName": "Bambasé Conté",
           "teamId": 7911,
           "teamName": "TSG Hoffenheim"
-        },
-        {
-          "rank": 25,
-          "value": 2,
-          "displayValue": "Matches: 6, Assists: 2",
-          "athleteId": 231173,
-          "athleteName": "Linton Maina",
-          "teamId": 122,
-          "teamName": "FC Cologne"
         }
       ]
     },
@@ -567,13 +567,31 @@
           "rank": 11,
           "value": 3,
           "displayValue": "3",
+          "athleteId": 272135,
+          "athleteName": "Joe Scally",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 12,
+          "value": 3,
+          "displayValue": "3",
+          "athleteId": 269136,
+          "athleteName": "Ermedin Demirovic",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 13,
+          "value": 3,
+          "displayValue": "3",
           "athleteId": 214203,
           "athleteName": "Maximilian Eggestein",
           "teamId": 126,
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 12,
+          "rank": 14,
           "value": 3,
           "displayValue": "3",
           "athleteId": 274887,
@@ -582,7 +600,7 @@
           "teamName": "Eintracht Frankfurt"
         },
         {
-          "rank": 13,
+          "rank": 15,
           "value": 3,
           "displayValue": "3",
           "athleteId": 310883,
@@ -591,7 +609,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 14,
+          "rank": 16,
           "value": 3,
           "displayValue": "3",
           "athleteId": 306928,
@@ -600,7 +618,7 @@
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 15,
+          "rank": 17,
           "value": 3,
           "displayValue": "3",
           "athleteId": 319368,
@@ -609,7 +627,7 @@
           "teamName": "RB Leipzig"
         },
         {
-          "rank": 16,
+          "rank": 18,
           "value": 3,
           "displayValue": "3",
           "athleteId": 358496,
@@ -618,70 +636,7 @@
           "teamName": "SV Elversberg"
         },
         {
-          "rank": 17,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 305853,
-          "athleteName": "Marco Grüll",
-          "teamId": 137,
-          "teamName": "Werder Bremen"
-        },
-        {
-          "rank": 18,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 310692,
-          "athleteName": "Lukas Petkov",
-          "teamId": 10388,
-          "teamName": "SV Elversberg"
-        },
-        {
           "rank": 19,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 308908,
-          "athleteName": "Fabian Rieder",
-          "teamId": 3841,
-          "teamName": "FC Augsburg"
-        },
-        {
-          "rank": 20,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 266839,
-          "athleteName": "Josha Vagnoman",
-          "teamId": 134,
-          "teamName": "VfB Stuttgart"
-        },
-        {
-          "rank": 21,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 186381,
-          "athleteName": "Serhou Guirassy",
-          "teamId": 124,
-          "teamName": "Borussia Dortmund"
-        },
-        {
-          "rank": 22,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 361212,
-          "athleteName": "Ibrahim Maza",
-          "teamId": 131,
-          "teamName": "Bayer Leverkusen"
-        },
-        {
-          "rank": 23,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 337079,
-          "athleteName": "Yannick Engelhardt",
-          "teamId": 126,
-          "teamName": "SC Freiburg"
-        },
-        {
-          "rank": 24,
           "value": 2,
           "displayValue": "2",
           "athleteId": 330239,
@@ -690,13 +645,58 @@
           "teamName": "Borussia Mönchengladbach"
         },
         {
+          "rank": 20,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 408539,
+          "athleteName": "Wael Mohya",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 21,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 305853,
+          "athleteName": "Marco Grüll",
+          "teamId": 137,
+          "teamName": "Werder Bremen"
+        },
+        {
+          "rank": 22,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 310692,
+          "athleteName": "Lukas Petkov",
+          "teamId": 10388,
+          "teamName": "SV Elversberg"
+        },
+        {
+          "rank": 23,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 308908,
+          "athleteName": "Fabian Rieder",
+          "teamId": 3841,
+          "teamName": "FC Augsburg"
+        },
+        {
+          "rank": 24,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 266839,
+          "athleteName": "Josha Vagnoman",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
           "rank": 25,
           "value": 2,
           "displayValue": "2",
-          "athleteId": 346619,
-          "athleteName": "Derry Scherhant",
-          "teamId": 126,
-          "teamName": "SC Freiburg"
+          "athleteId": 186381,
+          "athleteName": "Serhou Guirassy",
+          "teamId": 124,
+          "teamName": "Borussia Dortmund"
         }
       ]
     },
@@ -781,13 +781,22 @@
           "rank": 9,
           "value": 2,
           "displayValue": "2",
+          "athleteId": 290232,
+          "athleteName": "Angelo Stiller",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 10,
+          "value": 2,
+          "displayValue": "2",
           "athleteId": 399214,
           "athleteName": "Hennes Behrens",
           "teamId": 3841,
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "value": 2,
           "displayValue": "2",
           "athleteId": 367558,
@@ -796,7 +805,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 11,
+          "rank": 12,
           "value": 2,
           "displayValue": "2",
           "athleteId": 310692,
@@ -805,7 +814,7 @@
           "teamName": "SV Elversberg"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "value": 2,
           "displayValue": "2",
           "athleteId": 357030,
@@ -814,7 +823,7 @@
           "teamName": "Mainz"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "value": 2,
           "displayValue": "2",
           "athleteId": 186381,
@@ -823,7 +832,7 @@
           "teamName": "Borussia Dortmund"
         },
         {
-          "rank": 14,
+          "rank": 15,
           "value": 2,
           "displayValue": "2",
           "athleteId": 191209,
@@ -832,7 +841,7 @@
           "teamName": "TSG Hoffenheim"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "value": 2,
           "displayValue": "2",
           "athleteId": 361212,
@@ -841,7 +850,16 @@
           "teamName": "Bayer Leverkusen"
         },
         {
-          "rank": 16,
+          "rank": 17,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 346617,
+          "athleteName": "Lukas Ullrich",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 18,
           "value": 2,
           "displayValue": "2",
           "athleteId": 286831,
@@ -850,16 +868,7 @@
           "teamName": "Bayern Munich"
         },
         {
-          "rank": 17,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 290232,
-          "athleteName": "Angelo Stiller",
-          "teamId": 134,
-          "teamName": "VfB Stuttgart"
-        },
-        {
-          "rank": 18,
+          "rank": 19,
           "value": 2,
           "displayValue": "2",
           "athleteId": 371689,
@@ -868,7 +877,7 @@
           "teamName": "Werder Bremen"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "value": 2,
           "displayValue": "2",
           "athleteId": 346619,
@@ -877,7 +886,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 2,
           "displayValue": "2",
           "athleteId": 330233,
@@ -886,7 +895,7 @@
           "teamName": "RB Leipzig"
         },
         {
-          "rank": 21,
+          "rank": 22,
           "value": 2,
           "displayValue": "2",
           "athleteId": 338854,
@@ -895,7 +904,7 @@
           "teamName": "TSG Hoffenheim"
         },
         {
-          "rank": 22,
+          "rank": 23,
           "value": 2,
           "displayValue": "2",
           "athleteId": 241297,
@@ -904,7 +913,7 @@
           "teamName": "Mainz"
         },
         {
-          "rank": 23,
+          "rank": 24,
           "value": 2,
           "displayValue": "2",
           "athleteId": 212330,
@@ -913,22 +922,13 @@
           "teamName": "Bayer Leverkusen"
         },
         {
-          "rank": 24,
+          "rank": 25,
           "value": 2,
           "displayValue": "2",
           "athleteId": 336355,
           "athleteName": "Bambasé Conté",
           "teamId": 7911,
           "teamName": "TSG Hoffenheim"
-        },
-        {
-          "rank": 25,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 231173,
-          "athleteName": "Linton Maina",
-          "teamId": 122,
-          "teamName": "FC Cologne"
         }
       ]
     },
@@ -959,13 +959,22 @@
           "rank": 3,
           "value": 10,
           "displayValue": "10",
+          "athleteId": 269136,
+          "athleteName": "Ermedin Demirovic",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 4,
+          "value": 10,
+          "displayValue": "10",
           "athleteId": 234376,
           "athleteName": "Phillip Tietz",
           "teamId": 2950,
           "teamName": "Mainz"
         },
         {
-          "rank": 4,
+          "rank": 5,
           "value": 10,
           "displayValue": "10",
           "athleteId": 310883,
@@ -974,7 +983,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 5,
+          "rank": 6,
           "value": 10,
           "displayValue": "10",
           "athleteId": 212330,
@@ -983,7 +992,7 @@
           "teamName": "Bayer Leverkusen"
         },
         {
-          "rank": 6,
+          "rank": 7,
           "value": 10,
           "displayValue": "10",
           "athleteId": 146804,
@@ -992,7 +1001,7 @@
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "value": 9,
           "displayValue": "9",
           "athleteId": 257390,
@@ -1001,7 +1010,7 @@
           "teamName": "Bayern Munich"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "value": 9,
           "displayValue": "9",
           "athleteId": 142200,
@@ -1010,7 +1019,7 @@
           "teamName": "Bayern Munich"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "value": 9,
           "displayValue": "9",
           "athleteId": 195027,
@@ -1019,7 +1028,7 @@
           "teamName": "Mainz"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "value": 8,
           "displayValue": "8",
           "athleteId": 186381,
@@ -1028,22 +1037,13 @@
           "teamName": "Borussia Dortmund"
         },
         {
-          "rank": 11,
+          "rank": 12,
           "value": 8,
           "displayValue": "8",
           "athleteId": 359793,
           "athleteName": "Younes Ebnoutalib",
           "teamId": 125,
           "teamName": "Eintracht Frankfurt"
-        },
-        {
-          "rank": 12,
-          "value": 8,
-          "displayValue": "8",
-          "athleteId": 269136,
-          "athleteName": "Ermedin Demirovic",
-          "teamId": 134,
-          "teamName": "VfB Stuttgart"
         },
         {
           "rank": 13,
@@ -1085,28 +1085,28 @@
           "rank": 17,
           "value": 6,
           "displayValue": "6",
+          "athleteId": 330239,
+          "athleteName": "Hugo Bolin",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 18,
+          "value": 6,
+          "displayValue": "6",
           "athleteId": 310692,
           "athleteName": "Lukas Petkov",
           "teamId": 10388,
           "teamName": "SV Elversberg"
         },
         {
-          "rank": 18,
+          "rank": 19,
           "value": 6,
           "displayValue": "6",
           "athleteId": 274887,
           "athleteName": "Jonathan Burkardt",
           "teamId": 125,
           "teamName": "Eintracht Frankfurt"
-        },
-        {
-          "rank": 19,
-          "value": 6,
-          "displayValue": "6",
-          "athleteId": 330239,
-          "athleteName": "Hugo Bolin",
-          "teamId": 268,
-          "teamName": "Borussia Mönchengladbach"
         },
         {
           "rank": 20,
@@ -1157,10 +1157,10 @@
           "rank": 25,
           "value": 5,
           "displayValue": "5",
-          "athleteId": 214203,
-          "athleteName": "Maximilian Eggestein",
-          "teamId": 126,
-          "teamName": "SC Freiburg"
+          "athleteId": 408539,
+          "athleteName": "Wael Mohya",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
         }
       ]
     },
@@ -1236,13 +1236,22 @@
           "rank": 8,
           "value": 2,
           "displayValue": "2",
+          "athleteId": 272135,
+          "athleteName": "Joe Scally",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 9,
+          "value": 2,
+          "displayValue": "2",
           "athleteId": 399214,
           "athleteName": "Hennes Behrens",
           "teamId": 3841,
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "value": 2,
           "displayValue": "2",
           "athleteId": 324021,
@@ -1251,7 +1260,7 @@
           "teamName": "SV Elversberg"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "value": 2,
           "displayValue": "2",
           "athleteId": 297165,
@@ -1260,7 +1269,7 @@
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 11,
+          "rank": 12,
           "value": 2,
           "displayValue": "2",
           "athleteId": 284835,
@@ -1269,7 +1278,7 @@
           "teamName": "Hamburg SV"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "value": 2,
           "displayValue": "2",
           "athleteId": 361212,
@@ -1278,7 +1287,16 @@
           "teamName": "Bayer Leverkusen"
         },
         {
-          "rank": 13,
+          "rank": 14,
+          "value": 2,
+          "displayValue": "2",
+          "athleteId": 346617,
+          "athleteName": "Lukas Ullrich",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 15,
           "value": 2,
           "displayValue": "2",
           "athleteId": 282885,
@@ -1287,7 +1305,7 @@
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 14,
+          "rank": 16,
           "value": 2,
           "displayValue": "2",
           "athleteId": 222793,
@@ -1296,7 +1314,7 @@
           "teamName": "Bayern Munich"
         },
         {
-          "rank": 15,
+          "rank": 17,
           "value": 2,
           "displayValue": "2",
           "athleteId": 319368,
@@ -1305,7 +1323,7 @@
           "teamName": "RB Leipzig"
         },
         {
-          "rank": 16,
+          "rank": 18,
           "value": 2,
           "displayValue": "2",
           "athleteId": 324820,
@@ -1314,7 +1332,7 @@
           "teamName": "Borussia Dortmund"
         },
         {
-          "rank": 17,
+          "rank": 19,
           "value": 2,
           "displayValue": "2",
           "athleteId": 266565,
@@ -1323,7 +1341,7 @@
           "teamName": "TSG Hoffenheim"
         },
         {
-          "rank": 18,
+          "rank": 20,
           "value": 2,
           "displayValue": "2",
           "athleteId": 195027,
@@ -1332,7 +1350,7 @@
           "teamName": "Mainz"
         },
         {
-          "rank": 19,
+          "rank": 21,
           "value": 2,
           "displayValue": "2",
           "athleteId": 286815,
@@ -1341,7 +1359,7 @@
           "teamName": "FC Cologne"
         },
         {
-          "rank": 20,
+          "rank": 22,
           "value": 2,
           "displayValue": "2",
           "athleteId": 170604,
@@ -1350,7 +1368,7 @@
           "teamName": "1. FC Union Berlin"
         },
         {
-          "rank": 21,
+          "rank": 23,
           "value": 2,
           "displayValue": "2",
           "athleteId": 220796,
@@ -1359,7 +1377,7 @@
           "teamName": "1. FC Union Berlin"
         },
         {
-          "rank": 22,
+          "rank": 24,
           "value": 2,
           "displayValue": "2",
           "athleteId": 332689,
@@ -1368,31 +1386,13 @@
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 23,
+          "rank": 25,
           "value": 2,
           "displayValue": "2",
           "athleteId": 222991,
           "athleteName": "Julian Ryerson",
           "teamId": 124,
           "teamName": "Borussia Dortmund"
-        },
-        {
-          "rank": 24,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 323807,
-          "athleteName": "Neil El Aynaoui",
-          "teamId": 11420,
-          "teamName": "RB Leipzig"
-        },
-        {
-          "rank": 25,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 314184,
-          "athleteName": "Zeno Van Den Bosch",
-          "teamId": 598,
-          "teamName": "1. FC Union Berlin"
         }
       ]
     },
@@ -1450,13 +1450,148 @@
           "rank": 6,
           "value": 0,
           "displayValue": "0",
+          "athleteId": 275805,
+          "athleteName": "Philipp Sander",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 7,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 238536,
+          "athleteName": "Moritz Nicolas",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 8,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 290232,
+          "athleteName": "Angelo Stiller",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 9,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 330239,
+          "athleteName": "Hugo Bolin",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 10,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 372026,
+          "athleteName": "Finn Jeltsch",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 11,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 272135,
+          "athleteName": "Joe Scally",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 12,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 258909,
+          "athleteName": "Jeff Chabot",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 13,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 269136,
+          "athleteName": "Ermedin Demirovic",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 14,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 273300,
+          "athleteName": "Deniz Undav",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 15,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 218714,
+          "athleteName": "Grischa Prömel",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 16,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 408539,
+          "athleteName": "Wael Mohya",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 17,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 345905,
+          "athleteName": "Dzenan Pejcinovic",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 18,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 336595,
+          "athleteName": "Bilal El Khannouss",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 19,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 290811,
+          "athleteName": "Jamie Leweling",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 20,
+          "value": 0,
+          "displayValue": "0",
+          "athleteId": 258876,
+          "athleteName": "Robin Hack",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 21,
+          "value": 0,
+          "displayValue": "0",
           "athleteId": 399214,
           "athleteName": "Hennes Behrens",
           "teamId": 3841,
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 7,
+          "rank": 22,
           "value": 0,
           "displayValue": "0",
           "athleteId": 367558,
@@ -1465,7 +1600,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 8,
+          "rank": 23,
           "value": 0,
           "displayValue": "0",
           "athleteId": 357337,
@@ -1474,7 +1609,7 @@
           "teamName": "FC Cologne"
         },
         {
-          "rank": 9,
+          "rank": 24,
           "value": 0,
           "displayValue": "0",
           "athleteId": 341826,
@@ -1483,148 +1618,13 @@
           "teamName": "SV Elversberg"
         },
         {
-          "rank": 10,
+          "rank": 25,
           "value": 0,
           "displayValue": "0",
           "athleteId": 338852,
           "athleteName": "Mio Backhaus",
           "teamId": 126,
           "teamName": "SC Freiburg"
-        },
-        {
-          "rank": 11,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 338837,
-          "athleteName": "Santiago Castaneda",
-          "teamId": 3307,
-          "teamName": "SC Paderborn 07"
-        },
-        {
-          "rank": 12,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 326499,
-          "athleteName": "Lukasz Poreba",
-          "teamId": 10388,
-          "teamName": "SV Elversberg"
-        },
-        {
-          "rank": 13,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 324269,
-          "athleteName": "Tom Rothe",
-          "teamId": 598,
-          "teamName": "1. FC Union Berlin"
-        },
-        {
-          "rank": 14,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 324021,
-          "athleteName": "Nicolas Kristof",
-          "teamId": 10388,
-          "teamName": "SV Elversberg"
-        },
-        {
-          "rank": 15,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 321064,
-          "athleteName": "Noah Atubolu",
-          "teamId": 125,
-          "teamName": "Eintracht Frankfurt"
-        },
-        {
-          "rank": 16,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 320882,
-          "athleteName": "Raphael Onyedika",
-          "teamId": 125,
-          "teamName": "Eintracht Frankfurt"
-        },
-        {
-          "rank": 17,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 319415,
-          "athleteName": "Nahuel Nicolas Noll",
-          "teamId": 3307,
-          "teamName": "SC Paderborn 07"
-        },
-        {
-          "rank": 18,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 318343,
-          "athleteName": "Soufian El-Faouzi",
-          "teamId": 133,
-          "teamName": "Schalke 04"
-        },
-        {
-          "rank": 19,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 310709,
-          "athleteName": "Daniel Svensson",
-          "teamId": 124,
-          "teamName": "Borussia Dortmund"
-        },
-        {
-          "rank": 20,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 297165,
-          "athleteName": "Chrislain Matsima",
-          "teamId": 3841,
-          "teamName": "FC Augsburg"
-        },
-        {
-          "rank": 21,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 284835,
-          "athleteName": "Nicolás Capaldo",
-          "teamId": 127,
-          "teamName": "Hamburg SV"
-        },
-        {
-          "rank": 22,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 282646,
-          "athleteName": "Karl Hein",
-          "teamId": 137,
-          "teamName": "Werder Bremen"
-        },
-        {
-          "rank": 23,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 282388,
-          "athleteName": "Olivier Deman",
-          "teamId": 137,
-          "teamName": "Werder Bremen"
-        },
-        {
-          "rank": 24,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 277377,
-          "athleteName": "Maarten Vandevoordt",
-          "teamId": 11420,
-          "teamName": "RB Leipzig"
-        },
-        {
-          "rank": 25,
-          "value": 0,
-          "displayValue": "0",
-          "athleteId": 275805,
-          "athleteName": "Philipp Sander",
-          "teamId": 268,
-          "teamName": "Borussia Mönchengladbach"
         }
       ]
     },
@@ -1635,8 +1635,8 @@
       "entries": [
         {
           "rank": 1,
-          "value": 14,
-          "displayValue": "14",
+          "value": 15,
+          "displayValue": "15",
           "athleteId": 275805,
           "athleteName": "Philipp Sander",
           "teamId": 268,
@@ -1727,13 +1727,22 @@
           "rank": 11,
           "value": 11,
           "displayValue": "11",
+          "athleteId": 346617,
+          "athleteName": "Lukas Ullrich",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 12,
+          "value": 11,
+          "displayValue": "11",
           "athleteId": 346619,
           "athleteName": "Derry Scherhant",
           "teamId": 126,
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "value": 11,
           "displayValue": "11",
           "athleteId": 375371,
@@ -1742,7 +1751,7 @@
           "teamName": "Mainz"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "value": 10,
           "displayValue": "10",
           "athleteId": 159152,
@@ -1751,7 +1760,7 @@
           "teamName": "1. FC Union Berlin"
         },
         {
-          "rank": 14,
+          "rank": 15,
           "value": 10,
           "displayValue": "10",
           "athleteId": 283683,
@@ -1760,7 +1769,7 @@
           "teamName": "FC Cologne"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "value": 10,
           "displayValue": "10",
           "athleteId": 306928,
@@ -1769,7 +1778,7 @@
           "teamName": "FC Augsburg"
         },
         {
-          "rank": 16,
+          "rank": 17,
           "value": 10,
           "displayValue": "10",
           "athleteId": 330233,
@@ -1778,34 +1787,7 @@
           "teamName": "RB Leipzig"
         },
         {
-          "rank": 17,
-          "value": 10,
-          "displayValue": "10",
-          "athleteId": 346617,
-          "athleteName": "Lukas Ullrich",
-          "teamId": 268,
-          "teamName": "Borussia Mönchengladbach"
-        },
-        {
           "rank": 18,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 326499,
-          "athleteName": "Lukasz Poreba",
-          "teamId": 10388,
-          "teamName": "SV Elversberg"
-        },
-        {
-          "rank": 19,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 310692,
-          "athleteName": "Lukas Petkov",
-          "teamId": 10388,
-          "teamName": "SV Elversberg"
-        },
-        {
-          "rank": 20,
           "value": 9,
           "displayValue": "9",
           "athleteId": 258909,
@@ -1814,22 +1796,40 @@
           "teamName": "VfB Stuttgart"
         },
         {
-          "rank": 21,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 257390,
-          "athleteName": "Luis Díaz",
-          "teamId": 132,
-          "teamName": "Bayern Munich"
-        },
-        {
-          "rank": 22,
+          "rank": 19,
           "value": 9,
           "displayValue": "9",
           "athleteId": 273300,
           "athleteName": "Deniz Undav",
           "teamId": 134,
           "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 20,
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 326499,
+          "athleteName": "Lukasz Poreba",
+          "teamId": 10388,
+          "teamName": "SV Elversberg"
+        },
+        {
+          "rank": 21,
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 310692,
+          "athleteName": "Lukas Petkov",
+          "teamId": 10388,
+          "teamName": "SV Elversberg"
+        },
+        {
+          "rank": 22,
+          "value": 9,
+          "displayValue": "9",
+          "athleteId": 257390,
+          "athleteName": "Luis Díaz",
+          "teamId": 132,
+          "teamName": "Bayern Munich"
         },
         {
           "rank": 23,
@@ -1853,10 +1853,10 @@
           "rank": 25,
           "value": 8,
           "displayValue": "8",
-          "athleteId": 324269,
-          "athleteName": "Tom Rothe",
-          "teamId": 598,
-          "teamName": "1. FC Union Berlin"
+          "athleteId": 290232,
+          "athleteName": "Angelo Stiller",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
         }
       ]
     },
@@ -1932,13 +1932,31 @@
           "rank": 8,
           "value": 12,
           "displayValue": "12",
+          "athleteId": 330239,
+          "athleteName": "Hugo Bolin",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 9,
+          "value": 12,
+          "displayValue": "12",
+          "athleteId": 272135,
+          "athleteName": "Joe Scally",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 10,
+          "value": 12,
+          "displayValue": "12",
           "athleteId": 284835,
           "athleteName": "Nicolás Capaldo",
           "teamId": 127,
           "teamName": "Hamburg SV"
         },
         {
-          "rank": 9,
+          "rank": 11,
           "value": 12,
           "displayValue": "12",
           "athleteId": 319368,
@@ -1947,7 +1965,7 @@
           "teamName": "RB Leipzig"
         },
         {
-          "rank": 10,
+          "rank": 12,
           "value": 12,
           "displayValue": "12",
           "athleteId": 297565,
@@ -1956,7 +1974,7 @@
           "teamName": "Schalke 04"
         },
         {
-          "rank": 11,
+          "rank": 13,
           "value": 11,
           "displayValue": "11",
           "athleteId": 338837,
@@ -1965,7 +1983,7 @@
           "teamName": "SC Paderborn 07"
         },
         {
-          "rank": 12,
+          "rank": 14,
           "value": 11,
           "displayValue": "11",
           "athleteId": 170209,
@@ -1974,7 +1992,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 13,
+          "rank": 15,
           "value": 11,
           "displayValue": "11",
           "athleteId": 357030,
@@ -1983,7 +2001,7 @@
           "teamName": "Mainz"
         },
         {
-          "rank": 14,
+          "rank": 16,
           "value": 11,
           "displayValue": "11",
           "athleteId": 274887,
@@ -1992,7 +2010,7 @@
           "teamName": "Eintracht Frankfurt"
         },
         {
-          "rank": 15,
+          "rank": 17,
           "value": 11,
           "displayValue": "11",
           "athleteId": 345394,
@@ -2001,16 +2019,7 @@
           "teamName": "SC Paderborn 07"
         },
         {
-          "rank": 16,
-          "value": 11,
-          "displayValue": "11",
-          "athleteId": 272135,
-          "athleteName": "Joe Scally",
-          "teamId": 268,
-          "teamName": "Borussia Mönchengladbach"
-        },
-        {
-          "rank": 17,
+          "rank": 18,
           "value": 11,
           "displayValue": "11",
           "athleteId": 231173,
@@ -2019,7 +2028,7 @@
           "teamName": "FC Cologne"
         },
         {
-          "rank": 18,
+          "rank": 19,
           "value": 11,
           "displayValue": "11",
           "athleteId": 219627,
@@ -2028,7 +2037,16 @@
           "teamName": "Eintracht Frankfurt"
         },
         {
-          "rank": 19,
+          "rank": 20,
+          "value": 10,
+          "displayValue": "10",
+          "athleteId": 216225,
+          "athleteName": "Maximilian Mittelstädt",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 21,
           "value": 10,
           "displayValue": "10",
           "athleteId": 186381,
@@ -2037,7 +2055,7 @@
           "teamName": "Borussia Dortmund"
         },
         {
-          "rank": 20,
+          "rank": 22,
           "value": 10,
           "displayValue": "10",
           "athleteId": 310883,
@@ -2046,7 +2064,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 21,
+          "rank": 23,
           "value": 10,
           "displayValue": "10",
           "athleteId": 297750,
@@ -2055,7 +2073,7 @@
           "teamName": "Hamburg SV"
         },
         {
-          "rank": 22,
+          "rank": 24,
           "value": 10,
           "displayValue": "10",
           "athleteId": 88865,
@@ -2064,31 +2082,13 @@
           "teamName": "Hamburg SV"
         },
         {
-          "rank": 23,
+          "rank": 25,
           "value": 9,
           "displayValue": "9",
           "athleteId": 239574,
           "athleteName": "Phillipp Mwene",
           "teamId": 2950,
           "teamName": "Mainz"
-        },
-        {
-          "rank": 24,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 191209,
-          "athleteName": "Vladimír Coufal",
-          "teamId": 7911,
-          "teamName": "TSG Hoffenheim"
-        },
-        {
-          "rank": 25,
-          "value": 9,
-          "displayValue": "9",
-          "athleteId": 361258,
-          "athleteName": "Afonso Moreira",
-          "teamId": 131,
-          "teamName": "Bayer Leverkusen"
         }
       ]
     },
@@ -2137,13 +2137,22 @@
           "rank": 5,
           "value": 21,
           "displayValue": "21",
+          "athleteId": 269136,
+          "athleteName": "Ermedin Demirovic",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 6,
+          "value": 21,
+          "displayValue": "21",
           "athleteId": 380795,
           "athleteName": "Said El Mala",
           "teamId": 122,
           "teamName": "FC Cologne"
         },
         {
-          "rank": 6,
+          "rank": 7,
           "value": 20,
           "displayValue": "20",
           "athleteId": 361212,
@@ -2152,7 +2161,7 @@
           "teamName": "Bayer Leverkusen"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "value": 20,
           "displayValue": "20",
           "athleteId": 310883,
@@ -2161,7 +2170,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "value": 19,
           "displayValue": "19",
           "athleteId": 186381,
@@ -2170,7 +2179,7 @@
           "teamName": "Borussia Dortmund"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "value": 19,
           "displayValue": "19",
           "athleteId": 170257,
@@ -2179,7 +2188,16 @@
           "teamName": "Werder Bremen"
         },
         {
-          "rank": 10,
+          "rank": 11,
+          "value": 18,
+          "displayValue": "18",
+          "athleteId": 330239,
+          "athleteName": "Hugo Bolin",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 12,
           "value": 18,
           "displayValue": "18",
           "athleteId": 257390,
@@ -2188,31 +2206,13 @@
           "teamName": "Bayern Munich"
         },
         {
-          "rank": 11,
+          "rank": 13,
           "value": 18,
           "displayValue": "18",
           "athleteId": 359793,
           "athleteName": "Younes Ebnoutalib",
           "teamId": 125,
           "teamName": "Eintracht Frankfurt"
-        },
-        {
-          "rank": 12,
-          "value": 17,
-          "displayValue": "17",
-          "athleteId": 269136,
-          "athleteName": "Ermedin Demirovic",
-          "teamId": 134,
-          "teamName": "VfB Stuttgart"
-        },
-        {
-          "rank": 13,
-          "value": 16,
-          "displayValue": "16",
-          "athleteId": 330239,
-          "athleteName": "Hugo Bolin",
-          "teamId": 268,
-          "teamName": "Borussia Mönchengladbach"
         },
         {
           "rank": 14,
@@ -2263,13 +2263,22 @@
           "rank": 19,
           "value": 15,
           "displayValue": "15",
+          "athleteId": 345905,
+          "athleteName": "Dzenan Pejcinovic",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 20,
+          "value": 15,
+          "displayValue": "15",
           "athleteId": 274887,
           "athleteName": "Jonathan Burkardt",
           "teamId": 125,
           "teamName": "Eintracht Frankfurt"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 15,
           "displayValue": "15",
           "athleteId": 231764,
@@ -2278,7 +2287,7 @@
           "teamName": "SC Paderborn 07"
         },
         {
-          "rank": 21,
+          "rank": 22,
           "value": 14,
           "displayValue": "14",
           "athleteId": 346619,
@@ -2287,7 +2296,7 @@
           "teamName": "SC Freiburg"
         },
         {
-          "rank": 22,
+          "rank": 23,
           "value": 14,
           "displayValue": "14",
           "athleteId": 222176,
@@ -2296,31 +2305,22 @@
           "teamName": "RB Leipzig"
         },
         {
-          "rank": 23,
+          "rank": 24,
+          "value": 13,
+          "displayValue": "13",
+          "athleteId": 273300,
+          "athleteName": "Deniz Undav",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 25,
           "value": 13,
           "displayValue": "13",
           "athleteId": 305853,
           "athleteName": "Marco Grüll",
           "teamId": 137,
           "teamName": "Werder Bremen"
-        },
-        {
-          "rank": 24,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 319368,
-          "athleteName": "Antonio Nusa",
-          "teamId": 11420,
-          "teamName": "RB Leipzig"
-        },
-        {
-          "rank": 25,
-          "value": 13,
-          "displayValue": "13",
-          "athleteId": 336355,
-          "athleteName": "Bambasé Conté",
-          "teamId": 7911,
-          "teamName": "TSG Hoffenheim"
         }
       ]
     },
@@ -2358,6 +2358,15 @@
         },
         {
           "rank": 4,
+          "value": 445,
+          "displayValue": "445",
+          "athleteId": 290232,
+          "athleteName": "Angelo Stiller",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 5,
           "value": 440,
           "displayValue": "440",
           "athleteId": 220714,
@@ -2366,7 +2375,7 @@
           "teamName": "Borussia Dortmund"
         },
         {
-          "rank": 5,
+          "rank": 6,
           "value": 418,
           "displayValue": "418",
           "athleteId": 222793,
@@ -2375,7 +2384,7 @@
           "teamName": "Bayern Munich"
         },
         {
-          "rank": 6,
+          "rank": 7,
           "value": 411,
           "displayValue": "411",
           "athleteId": 162162,
@@ -2384,7 +2393,7 @@
           "teamName": "RB Leipzig"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "value": 408,
           "displayValue": "408",
           "athleteId": 232477,
@@ -2393,7 +2402,7 @@
           "teamName": "Werder Bremen"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "value": 399,
           "displayValue": "399",
           "athleteId": 371500,
@@ -2402,7 +2411,7 @@
           "teamName": "Borussia Dortmund"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "value": 368,
           "displayValue": "368",
           "athleteId": 249663,
@@ -2411,22 +2420,13 @@
           "teamName": "Bayer Leverkusen"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "value": 366,
           "displayValue": "366",
           "athleteId": 257287,
           "athleteName": "Edmond Tapsoba",
           "teamId": 131,
           "teamName": "Bayer Leverkusen"
-        },
-        {
-          "rank": 11,
-          "value": 355,
-          "displayValue": "355",
-          "athleteId": 290232,
-          "athleteName": "Angelo Stiller",
-          "teamId": 134,
-          "teamName": "VfB Stuttgart"
         },
         {
           "rank": 12,
@@ -2457,6 +2457,15 @@
         },
         {
           "rank": 15,
+          "value": 340,
+          "displayValue": "340",
+          "athleteId": 372026,
+          "athleteName": "Finn Jeltsch",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 16,
           "value": 337,
           "displayValue": "337",
           "athleteId": 362590,
@@ -2465,7 +2474,7 @@
           "teamName": "TSG Hoffenheim"
         },
         {
-          "rank": 16,
+          "rank": 17,
           "value": 329,
           "displayValue": "329",
           "athleteId": 222477,
@@ -2474,7 +2483,7 @@
           "teamName": "FC Cologne"
         },
         {
-          "rank": 17,
+          "rank": 18,
           "value": 324,
           "displayValue": "324",
           "athleteId": 190167,
@@ -2483,7 +2492,7 @@
           "teamName": "SV Elversberg"
         },
         {
-          "rank": 18,
+          "rank": 19,
           "value": 305,
           "displayValue": "305",
           "athleteId": 249548,
@@ -2492,7 +2501,7 @@
           "teamName": "RB Leipzig"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "value": 298,
           "displayValue": "298",
           "athleteId": 206863,
@@ -2501,7 +2510,7 @@
           "teamName": "Borussia Mönchengladbach"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 297,
           "displayValue": "297",
           "athleteId": 357337,
@@ -2510,7 +2519,16 @@
           "teamName": "FC Cologne"
         },
         {
-          "rank": 21,
+          "rank": 22,
+          "value": 296,
+          "displayValue": "296",
+          "athleteId": 289322,
+          "athleteName": "Ramon Hendriks",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
+        },
+        {
+          "rank": 23,
           "value": 293,
           "displayValue": "293",
           "athleteId": 208285,
@@ -2519,7 +2537,7 @@
           "teamName": "Eintracht Frankfurt"
         },
         {
-          "rank": 22,
+          "rank": 24,
           "value": 292,
           "displayValue": "292",
           "athleteId": 371806,
@@ -2528,31 +2546,13 @@
           "teamName": "SC Paderborn 07"
         },
         {
-          "rank": 23,
-          "value": 287,
-          "displayValue": "287",
-          "athleteId": 286831,
-          "athleteName": "Michael Olise",
-          "teamId": 132,
-          "teamName": "Bayern Munich"
-        },
-        {
-          "rank": 24,
-          "value": 286,
-          "displayValue": "286",
-          "athleteId": 364892,
-          "athleteName": "Mattes Hansen",
-          "teamId": 3307,
-          "teamName": "SC Paderborn 07"
-        },
-        {
           "rank": 25,
-          "value": 286,
-          "displayValue": "286",
-          "athleteId": 286828,
-          "athleteName": "Nico Schlotterbeck",
-          "teamId": 124,
-          "teamName": "Borussia Dortmund"
+          "value": 290,
+          "displayValue": "290",
+          "athleteId": 216225,
+          "athleteName": "Maximilian Mittelstädt",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
         }
       ]
     },
@@ -2565,19 +2565,19 @@
           "rank": 1,
           "value": 36,
           "displayValue": "36",
-          "athleteId": 277377,
-          "athleteName": "Maarten Vandevoordt",
-          "teamId": 11420,
-          "teamName": "RB Leipzig"
-        },
-        {
-          "rank": 2,
-          "value": 33,
-          "displayValue": "33",
           "athleteId": 238536,
           "athleteName": "Moritz Nicolas",
           "teamId": 268,
           "teamName": "Borussia Mönchengladbach"
+        },
+        {
+          "rank": 2,
+          "value": 36,
+          "displayValue": "36",
+          "athleteId": 277377,
+          "athleteName": "Maarten Vandevoordt",
+          "teamId": 11420,
+          "teamName": "RB Leipzig"
         },
         {
           "rank": 3,
@@ -2725,8 +2725,8 @@
         },
         {
           "rank": 19,
-          "value": 6,
-          "displayValue": "6",
+          "value": 8,
+          "displayValue": "8",
           "athleteId": 362585,
           "athleteName": "Dennis Seimen",
           "teamId": 134,
@@ -2754,37 +2754,37 @@
           "rank": 22,
           "value": 0,
           "displayValue": "0",
-          "athleteId": 399214,
-          "athleteName": "Hennes Behrens",
-          "teamId": 3841,
-          "teamName": "FC Augsburg"
+          "athleteId": 275805,
+          "athleteName": "Philipp Sander",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
         },
         {
           "rank": 23,
           "value": 0,
           "displayValue": "0",
-          "athleteId": 367558,
-          "athleteName": "Jordy Makengo",
-          "teamId": 126,
-          "teamName": "SC Freiburg"
+          "athleteId": 290232,
+          "athleteName": "Angelo Stiller",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
         },
         {
           "rank": 24,
           "value": 0,
           "displayValue": "0",
-          "athleteId": 357337,
-          "athleteName": "Jahmai Simpson-Pusey",
-          "teamId": 122,
-          "teamName": "FC Cologne"
+          "athleteId": 330239,
+          "athleteName": "Hugo Bolin",
+          "teamId": 268,
+          "teamName": "Borussia Mönchengladbach"
         },
         {
           "rank": 25,
           "value": 0,
           "displayValue": "0",
-          "athleteId": 341826,
-          "athleteName": "Lukas Finn Pinckert",
-          "teamId": 10388,
-          "teamName": "SV Elversberg"
+          "athleteId": 372026,
+          "athleteName": "Finn Jeltsch",
+          "teamId": 134,
+          "teamName": "VfB Stuttgart"
         }
       ]
     }
