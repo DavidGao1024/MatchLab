@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-25T01:11:32.505Z",
+  "updateTime": "2026-10-26T01:21:56.836Z",
   "league": "ger.1",
   "month": "2026-10",
   "count": 34,
@@ -659,17 +659,18 @@
       "eventId": "401884760",
       "date": "2026-10-25T14:30Z",
       "name": "Bayer Leverkusen at TSG Hoffenheim",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+10'",
+      "period": 2,
       "venue": "PreZero Arena",
       "home": {
         "id": 7911,
         "name": "TSG Hoffenheim",
         "abbreviation": "TSG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       },
       "away": {
         "id": 131,
@@ -684,16 +685,17 @@
       "eventId": "401884759",
       "date": "2026-10-25T16:30Z",
       "name": "Bayern Munich at SC Freiburg",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Europa-Park Stadion",
       "home": {
         "id": 126,
         "name": "SC Freiburg",
         "abbreviation": "SCF",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -701,8 +703,8 @@
         "name": "Bayern Munich",
         "abbreviation": "MUN",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       }
     },
     {

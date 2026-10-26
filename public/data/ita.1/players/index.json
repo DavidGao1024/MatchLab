@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-25T00:58:17.028Z",
+  "updateTime": "2026-10-26T01:09:18.476Z",
   "league": "ita.1",
   "season": "2026",
-  "count": 628,
+  "count": 635,
   "players": [
     {
       "id": 319265,
@@ -38,11 +38,24 @@
       "position": "F",
       "age": 27,
       "goals": 6,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Netherlands",
       "flag": "flags/nl.png",
       "jersey": 14,
       "team": "AS Roma"
+    },
+    {
+      "id": 262071,
+      "name": "Anastasios Douvikas",
+      "teamId": 2572,
+      "position": "F",
+      "age": 27,
+      "goals": 5,
+      "assists": 0,
+      "citizenship": "Greece",
+      "flag": "flags/gr.png",
+      "jersey": 9,
+      "team": "Como"
     },
     {
       "id": 176203,
@@ -108,19 +121,6 @@
       "flag": "flags/me.png",
       "jersey": 90,
       "team": "Atalanta"
-    },
-    {
-      "id": 262071,
-      "name": "Anastasios Douvikas",
-      "teamId": 2572,
-      "position": "F",
-      "age": 27,
-      "goals": 3,
-      "assists": 0,
-      "citizenship": "Greece",
-      "flag": "flags/gr.png",
-      "jersey": 9,
-      "team": "Como"
     },
     {
       "id": 213725,
@@ -227,6 +227,19 @@
       "team": "Napoli"
     },
     {
+      "id": 323974,
+      "name": "Matìas Soulè",
+      "teamId": 104,
+      "position": "F",
+      "age": 23,
+      "goals": 3,
+      "assists": 1,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "jersey": 18,
+      "team": "AS Roma"
+    },
+    {
       "id": 275444,
       "name": "Milutin Osmajic",
       "teamId": 3263,
@@ -283,7 +296,7 @@
       "name": "Ange-Yoan Bonny",
       "teamId": 110,
       "position": "F",
-      "age": 22,
+      "age": 23,
       "goals": 2,
       "assists": 0,
       "citizenship": "Ivory Coast",
@@ -381,6 +394,19 @@
       "flag": "flags/xk.png",
       "jersey": 11,
       "team": "Juventus"
+    },
+    {
+      "id": 180956,
+      "name": "Federico Bernardeschi",
+      "teamId": 107,
+      "position": "F",
+      "age": 32,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 10,
+      "team": "Bologna"
     },
     {
       "id": 236038,
@@ -487,6 +513,19 @@
       "team": "Lecce"
     },
     {
+      "id": 271555,
+      "name": "Leonardo Balerdi",
+      "teamId": 104,
+      "position": "D",
+      "age": 27,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "jersey": 26,
+      "team": "AS Roma"
+    },
+    {
       "id": 285226,
       "name": "Manu Koné",
       "teamId": 104,
@@ -524,19 +563,6 @@
       "flag": "flags/ar.png",
       "jersey": 32,
       "team": "Fiorentina"
-    },
-    {
-      "id": 323974,
-      "name": "Matìas Soulè",
-      "teamId": 104,
-      "position": "F",
-      "age": 23,
-      "goals": 2,
-      "assists": 1,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "jersey": 18,
-      "team": "AS Roma"
     },
     {
       "id": 360235,
@@ -602,6 +628,32 @@
       "flag": "flags/hr.png",
       "jersey": 17,
       "team": "Torino"
+    },
+    {
+      "id": 255850,
+      "name": "Scott McTominay",
+      "teamId": 114,
+      "position": "M",
+      "age": 29,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Scotland",
+      "flag": "flags/gb-sct.png",
+      "jersey": 8,
+      "team": "Napoli"
+    },
+    {
+      "id": 413818,
+      "name": "Simone Lontani",
+      "teamId": 115,
+      "position": "F",
+      "age": 18,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 76,
+      "team": "Parma"
     },
     {
       "id": 379865,
@@ -838,19 +890,6 @@
       "team": "Monza"
     },
     {
-      "id": 180956,
-      "name": "Federico Bernardeschi",
-      "teamId": 107,
-      "position": "F",
-      "age": 32,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 10,
-      "team": "Bologna"
-    },
-    {
       "id": 323147,
       "name": "Federico Gatti",
       "teamId": 111,
@@ -901,6 +940,19 @@
       "flag": "flags/ci.png",
       "jersey": 19,
       "team": "Atalanta"
+    },
+    {
+      "id": 215721,
+      "name": "Frank Anguissa",
+      "teamId": 114,
+      "position": "M",
+      "age": 30,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Cameroon",
+      "flag": "flags/cm.png",
+      "jersey": 99,
+      "team": "Napoli"
     },
     {
       "id": 346974,
@@ -1104,11 +1156,24 @@
       "position": "D",
       "age": 23,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
       "jersey": 16,
       "team": "Como"
+    },
+    {
+      "id": 282228,
+      "name": "Kenneth Taylor",
+      "teamId": 112,
+      "position": "M",
+      "age": 24,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Netherlands",
+      "flag": "flags/nl.png",
+      "jersey": 24,
+      "team": "Lazio"
     },
     {
       "id": 318604,
@@ -1247,7 +1312,7 @@
       "position": "F",
       "age": 33,
       "goals": 1,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "jersey": 21,
@@ -1291,6 +1356,19 @@
       "flag": "flags/ar.png",
       "jersey": 31,
       "team": "Juventus"
+    },
+    {
+      "id": 250707,
+      "name": "Nicoló",
+      "teamId": 107,
+      "position": "D",
+      "age": 28,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 16,
+      "team": "Bologna"
     },
     {
       "id": 204441,
@@ -1388,7 +1466,7 @@
       "name": "Petar Sucic",
       "teamId": 110,
       "position": "M",
-      "age": 22,
+      "age": 23,
       "goals": 1,
       "assists": 0,
       "citizenship": "Croatia",
@@ -1559,7 +1637,7 @@
       "position": "F",
       "age": 22,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Argentina",
       "flag": "flags/ar.png",
       "jersey": 9,
@@ -1577,19 +1655,6 @@
       "flag": "flags/it.png",
       "jersey": 94,
       "team": "Sassuolo"
-    },
-    {
-      "id": 413818,
-      "name": "Simone Lontani",
-      "teamId": 115,
-      "position": "F",
-      "age": 18,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 76,
-      "team": "Parma"
     },
     {
       "id": 188412,
@@ -1816,8 +1881,8 @@
       "id": 240109,
       "name": "Aleksandar Stankovic",
       "teamId": 110,
-      "position": "M",
-      "age": 21,
+      "position": "G",
+      "age": 28,
       "goals": 0,
       "assists": 0,
       "citizenship": "Serbia",
@@ -1895,7 +1960,7 @@
       "name": "Alessandro Marcandalli",
       "teamId": 3263,
       "position": "D",
-      "age": 23,
+      "age": 24,
       "goals": 0,
       "assists": 0,
       "citizenship": "Italy",
@@ -2753,7 +2818,7 @@
       "name": "Daniele Padelli",
       "teamId": 118,
       "position": "G",
-      "age": 40,
+      "age": 41,
       "goals": 0,
       "assists": 0,
       "citizenship": "Italy",
@@ -3529,6 +3594,19 @@
       "team": "Venezia"
     },
     {
+      "id": 359380,
+      "name": "Filipe Bordon",
+      "teamId": 112,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 76,
+      "team": "Lazio"
+    },
+    {
       "id": 387434,
       "name": "Filippo Pagnucco",
       "teamId": 111,
@@ -3605,19 +3683,6 @@
       "flag": "flags/ar.png",
       "jersey": 29,
       "team": "Parma"
-    },
-    {
-      "id": 215721,
-      "name": "Frank Anguissa",
-      "teamId": 114,
-      "position": "M",
-      "age": 30,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Cameroon",
-      "flag": "flags/cm.png",
-      "jersey": 99,
-      "team": "Napoli"
     },
     {
       "id": 341773,
@@ -3834,7 +3899,7 @@
       "position": "M",
       "age": 23,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "jersey": 80,
@@ -4367,7 +4432,7 @@
       "position": "D",
       "age": 26,
       "goals": 0,
-      "assists": 2,
+      "assists": 3,
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "jersey": 33,
@@ -4450,19 +4515,6 @@
       "flag": "flags/tr.png",
       "jersey": 10,
       "team": "Juventus"
-    },
-    {
-      "id": 282228,
-      "name": "Kenneth Taylor",
-      "teamId": 112,
-      "position": "M",
-      "age": 24,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Netherlands",
-      "flag": "flags/nl.png",
-      "jersey": 24,
-      "team": "Lazio"
     },
     {
       "id": 391034,
@@ -4671,19 +4723,6 @@
       "flag": "flags/fr.png",
       "jersey": 41,
       "team": "AC Milan"
-    },
-    {
-      "id": 271555,
-      "name": "Leonardo Balerdi",
-      "teamId": 104,
-      "position": "D",
-      "age": 27,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "jersey": 26,
-      "team": "AS Roma"
     },
     {
       "id": 403808,
@@ -5394,7 +5433,7 @@
       "position": "D",
       "age": 28,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Uruguay",
       "flag": "flags/uy.png",
       "jersey": 17,
@@ -5615,7 +5654,7 @@
       "position": "M",
       "age": 26,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 8,
@@ -5932,19 +5971,6 @@
       "flag": "flags/pl.png",
       "jersey": 59,
       "team": "Atalanta"
-    },
-    {
-      "id": 250707,
-      "name": "Nicoló",
-      "teamId": 107,
-      "position": "D",
-      "age": 28,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 16,
-      "team": "Bologna"
     },
     {
       "id": 319437,
@@ -6818,19 +6844,6 @@
       "team": "Torino"
     },
     {
-      "id": 255850,
-      "name": "Scott McTominay",
-      "teamId": 114,
-      "position": "M",
-      "age": 29,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Scotland",
-      "flag": "flags/gb-sct.png",
-      "jersey": 8,
-      "team": "Napoli"
-    },
-    {
       "id": 170553,
       "name": "Sead Kolasinac",
       "teamId": 105,
@@ -7305,7 +7318,7 @@
       "position": "D",
       "age": 23,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
       "jersey": 43,
@@ -7715,6 +7728,19 @@
       "team": "Lecce"
     },
     {
+      "id": 5326343,
+      "name": "El Hadji Malick Cissé",
+      "teamId": 103,
+      "position": "D",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 48,
+      "team": "AC Milan"
+    },
+    {
       "id": 308082,
       "name": "Fabiano Parisi",
       "teamId": 109,
@@ -7726,19 +7752,6 @@
       "flag": "flags/it.png",
       "jersey": 65,
       "team": "Fiorentina"
-    },
-    {
-      "id": 359380,
-      "name": "Filipe Bordon",
-      "teamId": 112,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 76,
-      "team": "Lazio"
     },
     {
       "id": 413819,
@@ -7789,7 +7802,7 @@
       "assists": null,
       "citizenship": "Italy",
       "flag": "flags/it.png",
-      "jersey": null,
+      "jersey": 45,
       "team": "Internazionale"
     },
     {
@@ -7949,6 +7962,19 @@
       "team": "Monza"
     },
     {
+      "id": 384534,
+      "name": "Leon Jakirovic",
+      "teamId": 110,
+      "position": "D",
+      "age": 18,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Croatia",
+      "flag": "flags/hr.png",
+      "jersey": 51,
+      "team": "Internazionale"
+    },
+    {
       "id": 3140451,
       "name": "Lorenzo Luigi Ginelli",
       "teamId": 2572,
@@ -7962,6 +7988,19 @@
       "team": "Como"
     },
     {
+      "id": 3110063,
+      "name": "Lorenzo Ossola",
+      "teamId": 103,
+      "position": "M",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 40,
+      "team": "AC Milan"
+    },
+    {
       "id": 389431,
       "name": "Lorenzo Venturino",
       "teamId": 3263,
@@ -7973,6 +8012,19 @@
       "flag": "flags/it.png",
       "jersey": 76,
       "team": "Genoa"
+    },
+    {
+      "id": 5326345,
+      "name": "Luca Menon",
+      "teamId": 103,
+      "position": "F",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 49,
+      "team": "AC Milan"
     },
     {
       "id": 228328,
@@ -7999,6 +8051,19 @@
       "flag": null,
       "jersey": 36,
       "team": "Lecce"
+    },
+    {
+      "id": 402778,
+      "name": "Matteo Lavelli",
+      "teamId": 110,
+      "position": "F",
+      "age": 19,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 53,
+      "team": "Internazionale"
     },
     {
       "id": 224455,
@@ -8066,6 +8131,19 @@
       "team": "Lecce"
     },
     {
+      "id": 5326344,
+      "name": "Nirash Raffaello Perera",
+      "teamId": 103,
+      "position": "D",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 47,
+      "team": "AC Milan"
+    },
+    {
       "id": 416531,
       "name": "Rendijs Mihelsons",
       "teamId": 3263,
@@ -8103,6 +8181,19 @@
       "flag": "flags/hr.png",
       "jersey": 46,
       "team": "Atalanta"
+    },
+    {
+      "id": 335207,
+      "name": "Silvano Vos",
+      "teamId": 103,
+      "position": "M",
+      "age": 21,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Netherlands",
+      "flag": "flags/nl.png",
+      "jersey": 55,
+      "team": "AC Milan"
     },
     {
       "id": 414157,

@@ -1,22 +1,22 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-25T01:11:28.120Z",
+  "updateTime": "2026-10-26T01:21:52.430Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 94,
+  "matchesCounted": 98,
   "count": 20,
   "standings": [
     {
       "rank": 1,
       "teamId": 83,
       "team": "Barcelona",
-      "played": 9,
+      "played": 10,
       "won": 9,
       "drawn": 0,
-      "lost": 0,
-      "goalsFor": 39,
-      "goalsAgainst": 9,
-      "goalDiff": 30,
+      "lost": 1,
+      "goalsFor": 40,
+      "goalsAgainst": 11,
+      "goalDiff": 29,
       "points": 27
     },
     {
@@ -36,40 +36,40 @@
       "rank": 3,
       "teamId": 86,
       "team": "Real Madrid",
-      "played": 9,
-      "won": 7,
+      "played": 10,
+      "won": 8,
       "drawn": 0,
       "lost": 2,
-      "goalsFor": 23,
-      "goalsAgainst": 9,
-      "goalDiff": 14,
-      "points": 21
+      "goalsFor": 25,
+      "goalsAgainst": 10,
+      "goalDiff": 15,
+      "points": 24
     },
     {
       "rank": 4,
       "teamId": 244,
       "team": "Real Betis",
-      "played": 9,
+      "played": 10,
       "won": 6,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 2,
       "goalsFor": 16,
       "goalsAgainst": 14,
       "goalDiff": 2,
-      "points": 19
+      "points": 20
     },
     {
       "rank": 5,
       "teamId": 89,
       "team": "Real Sociedad",
-      "played": 9,
-      "won": 5,
+      "played": 10,
+      "won": 6,
       "drawn": 1,
       "lost": 3,
-      "goalsFor": 17,
-      "goalsAgainst": 17,
-      "goalDiff": 0,
-      "points": 16
+      "goalsFor": 19,
+      "goalsAgainst": 18,
+      "goalDiff": 1,
+      "points": 19
     },
     {
       "rank": 6,
@@ -99,6 +99,32 @@
     },
     {
       "rank": 8,
+      "teamId": 93,
+      "team": "Athletic Club",
+      "played": 9,
+      "won": 3,
+      "drawn": 3,
+      "lost": 3,
+      "goalsFor": 12,
+      "goalsAgainst": 9,
+      "goalDiff": 3,
+      "points": 12
+    },
+    {
+      "rank": 9,
+      "teamId": 85,
+      "team": "Celta Vigo",
+      "played": 10,
+      "won": 2,
+      "drawn": 6,
+      "lost": 2,
+      "goalsFor": 10,
+      "goalsAgainst": 7,
+      "goalDiff": 3,
+      "points": 12
+    },
+    {
+      "rank": 10,
       "teamId": 102,
       "team": "Villarreal",
       "played": 10,
@@ -111,20 +137,7 @@
       "points": 12
     },
     {
-      "rank": 9,
-      "teamId": 85,
-      "team": "Celta Vigo",
-      "played": 9,
-      "won": 2,
-      "drawn": 5,
-      "lost": 2,
-      "goalsFor": 10,
-      "goalsAgainst": 7,
-      "goalDiff": 3,
-      "points": 11
-    },
-    {
-      "rank": 10,
+      "rank": 11,
       "teamId": 90,
       "team": "Deportivo",
       "played": 10,
@@ -137,7 +150,7 @@
       "points": 11
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 97,
       "team": "Osasuna",
       "played": 9,
@@ -150,7 +163,7 @@
       "points": 11
     },
     {
-      "rank": 12,
+      "rank": 13,
       "teamId": 87,
       "team": "Racing Santander",
       "played": 10,
@@ -163,20 +176,20 @@
       "points": 11
     },
     {
-      "rank": 13,
+      "rank": 14,
       "teamId": 1538,
       "team": "Levante",
-      "played": 9,
+      "played": 10,
       "won": 2,
       "drawn": 4,
-      "lost": 3,
-      "goalsFor": 15,
-      "goalsAgainst": 17,
-      "goalDiff": -2,
+      "lost": 4,
+      "goalsFor": 16,
+      "goalsAgainst": 19,
+      "goalDiff": -3,
       "points": 10
     },
     {
-      "rank": 14,
+      "rank": 15,
       "teamId": 3751,
       "team": "Elche",
       "played": 10,
@@ -189,33 +202,7 @@
       "points": 10
     },
     {
-      "rank": 15,
-      "teamId": 93,
-      "team": "Athletic Club",
-      "played": 8,
-      "won": 2,
-      "drawn": 3,
-      "lost": 3,
-      "goalsFor": 8,
-      "goalsAgainst": 9,
-      "goalDiff": -1,
-      "points": 9
-    },
-    {
       "rank": 16,
-      "teamId": 2922,
-      "team": "Getafe",
-      "played": 9,
-      "won": 2,
-      "drawn": 3,
-      "lost": 4,
-      "goalsFor": 5,
-      "goalsAgainst": 11,
-      "goalDiff": -6,
-      "points": 9
-    },
-    {
-      "rank": 17,
       "teamId": 101,
       "team": "Rayo Vallecano",
       "played": 9,
@@ -225,6 +212,19 @@
       "goalsFor": 12,
       "goalsAgainst": 20,
       "goalDiff": -8,
+      "points": 9
+    },
+    {
+      "rank": 17,
+      "teamId": 2922,
+      "team": "Getafe",
+      "played": 10,
+      "won": 2,
+      "drawn": 3,
+      "lost": 5,
+      "goalsFor": 5,
+      "goalsAgainst": 15,
+      "goalDiff": -10,
       "points": 9
     },
     {
