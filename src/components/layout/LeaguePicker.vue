@@ -41,7 +41,7 @@ onBeforeUnmount(() => document.removeEventListener('click', onDocClick))
     </button>
     <div
       v-if="open"
-      class="absolute left-0 top-full z-50 mt-1 w-40 rounded-md border border-slate-700 bg-slate-800 shadow-lg"
+      class="absolute left-0 top-full z-50 mt-1 w-56 rounded-md border border-slate-700 bg-slate-800 shadow-lg"
     >
       <button
         v-for="slug in LEAGUE_SLUGS"

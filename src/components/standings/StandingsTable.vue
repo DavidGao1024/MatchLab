@@ -37,17 +37,30 @@ const th = 'px-1 py-2 text-center font-cond text-[10px] font-medium uppercase tr
 
   <!-- 表尾小图例（规格 §四） -->
   <div class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-[10px] text-slate-500">
-    <span class="inline-flex items-center gap-1.5">
-      <i class="inline-block h-2 w-2 rounded-sm" style="background: var(--league-color)"></i>{{ t('legend.ucl', app.lang) }}
-    </span>
-    <span class="inline-flex items-center gap-1.5">
-      <i class="inline-block h-2 w-2 rounded-sm bg-amber-500"></i>{{ t('legend.uel', app.lang) }}
-    </span>
-    <span v-if="league === 'ger.1'" class="inline-flex items-center gap-1.5">
-      <i class="inline-block h-2 w-2 rounded-sm bg-orange-400"></i>{{ t('legend.playoff', app.lang) }}
-    </span>
-    <span class="inline-flex items-center gap-1.5">
-      <i class="inline-block h-2 w-2 rounded-sm bg-red-500"></i>{{ t('legend.rel', app.lang) }}
-    </span>
+    <template v-if="league === 'uefa.champions'">
+      <span class="inline-flex items-center gap-1.5">
+        <i class="inline-block h-2 w-2 rounded-sm" style="background: var(--league-color)"></i>{{ t('legend.uclTop8', app.lang) }}
+      </span>
+      <span class="inline-flex items-center gap-1.5">
+        <i class="inline-block h-2 w-2 rounded-sm bg-amber-500"></i>{{ t('legend.uclPlayoff', app.lang) }}
+      </span>
+      <span class="inline-flex items-center gap-1.5">
+        <i class="inline-block h-2 w-2 rounded-sm bg-red-500"></i>{{ t('legend.uclOut', app.lang) }}
+      </span>
+    </template>
+    <template v-else>
+      <span class="inline-flex items-center gap-1.5">
+        <i class="inline-block h-2 w-2 rounded-sm" style="background: var(--league-color)"></i>{{ t('legend.ucl', app.lang) }}
+      </span>
+      <span class="inline-flex items-center gap-1.5">
+        <i class="inline-block h-2 w-2 rounded-sm bg-amber-500"></i>{{ t('legend.uel', app.lang) }}
+      </span>
+      <span v-if="league === 'ger.1'" class="inline-flex items-center gap-1.5">
+        <i class="inline-block h-2 w-2 rounded-sm bg-orange-400"></i>{{ t('legend.playoff', app.lang) }}
+      </span>
+      <span class="inline-flex items-center gap-1.5">
+        <i class="inline-block h-2 w-2 rounded-sm bg-red-500"></i>{{ t('legend.rel', app.lang) }}
+      </span>
+    </template>
   </div>
 </template>
