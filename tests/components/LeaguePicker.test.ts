@@ -7,7 +7,7 @@ import LeaguePicker from '../../src/components/layout/LeaguePicker.vue'
 import { useAppStore } from '../../src/stores/app'
 import { LEAGUE_SLUGS } from '../../src/utils/constants'
 
-const ZH: Record<string, string> = { 'eng.1': '英超', 'esp.1': '西甲', 'ita.1': '意甲', 'ger.1': '德甲', 'fra.1': '法甲', 'chn.1': '中超' }
+const ZH: Record<string, string> = { 'eng.1': '英超', 'esp.1': '西甲', 'ita.1': '意甲', 'ger.1': '德甲', 'fra.1': '法甲', 'chn.1': '中超', 'uefa.champions': '欧冠' }
 
 function makeRouter() {
   return createRouter({
@@ -44,13 +44,14 @@ describe('LeaguePicker', () => {
     expect(w.find('button').text()).toContain('英超')
   })
 
-  it('默认收起，点击展开列出 6 联赛并高亮当前', async () => {
+  it('默认收起，点击展开列出 7 联赛并高亮当前', async () => {
     const { w } = await setup('/eng.1/standings')
     expect(w.findAll('button').length).toBe(1) // 仅触发按钮
     await w.find('button').trigger('click')
     const btns = w.findAll('button')
-    expect(btns.length).toBe(1 + 6)
+    expect(btns.length).toBe(1 + 7)
     expect(w.text()).toContain('中超')
+    expect(w.text()).toContain('欧冠')
     expect(btns[1].classes()).toContain('bg-white/10') // 英超高亮
   })
 
@@ -66,7 +67,7 @@ describe('LeaguePicker', () => {
   it('点击组件外部关闭面板', async () => {
     const { w } = await setup('/eng.1/standings')
     await w.find('button').trigger('click')
-    expect(w.findAll('button').length).toBe(7)
+    expect(w.findAll('button').length).toBe(8)
     const outside = document.createElement('div')
     document.body.appendChild(outside)
     outside.dispatchEvent(new MouseEvent('click', { bubbles: true }))

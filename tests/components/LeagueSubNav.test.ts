@@ -7,7 +7,7 @@ import LeagueSubNav from '../../src/components/layout/LeagueSubNav.vue'
 import { useAppStore } from '../../src/stores/app'
 import { LEAGUE_SLUGS } from '../../src/utils/constants'
 
-const ZH: Record<string, string> = { 'eng.1': '英超', 'esp.1': '西甲', 'ita.1': '意甲', 'ger.1': '德甲', 'fra.1': '法甲', 'chn.1': '中超' }
+const ZH: Record<string, string> = { 'eng.1': '英超', 'esp.1': '西甲', 'ita.1': '意甲', 'ger.1': '德甲', 'fra.1': '法甲', 'chn.1': '中超', 'uefa.champions': '欧冠' }
 
 function makeRouter() {
   return createRouter({

@@ -1,4 +1,4 @@
-export const LEAGUE_SLUGS = ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1', 'chn.1'] as const
+export const LEAGUE_SLUGS = ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1', 'chn.1', 'uefa.champions'] as const
 export type LeagueSlug = (typeof LEAGUE_SLUGS)[number]
 
 export function isLeagueSlug(v: string): v is LeagueSlug {
@@ -30,7 +30,12 @@ export const ZONE_CONFIG: Record<LeagueSlug, ZoneConfig> = {
   'ger.1': { ucl: 4, uel: 1, playoff: 16, rel: 2 },
   'fra.1': { ucl: 4, uel: 1, rel: 2 },
   'chn.1': { ucl: 2, uel: 0, rel: 2 },
+  // 欧冠联赛阶段前 8 直接晋级 16 强（瑞士制），无欧联/降级区带
+  'uefa.champions': { ucl: 8, uel: 0, rel: 0 },
 }
+
+/** 分阶段联赛的积分榜过滤阶段（欧冠只计联赛阶段，淘汰赛只进赛程） */
+export const STANDINGS_STAGE: Partial<Record<LeagueSlug, string>> = { 'uefa.champions': 'league-phase' }
 
 export type Zone = 'ucl' | 'uel' | 'playoff' | 'rel'
 
@@ -44,8 +49,9 @@ export function zoneOf(rank: number, total: number, league: LeagueSlug): Zone | 
   return null
 }
 
-/** 赛季号 → 月份清单。欧洲制 '2025' → ['2025-08', …, '2026-05']；自然年制 → ['2026-01', …, '2026-12'] */
-export function seasonMonths(season: string, seasonType: 'european' | 'calendar' = 'european'): string[] {
+/** 赛季号 → 月份清单。欧洲制 '2025' → ['2025-08', …, '2026-05']；自然年制 → ['2026-01', …, '2026-12']
+ *  欧冠决赛可能落在 6 月（脚本月窗口覆盖至 6 月），传入 league 时补足决赛月（11 个月），其余联赛保持 10 个月 */
+export function seasonMonths(season: string, seasonType: 'european' | 'calendar' = 'european', league?: LeagueSlug): string[] {
   const start = Number(season)
   if (seasonType === 'calendar') {
     return Array.from({ length: 12 }, (_, i) => `${start}-${String(i + 1).padStart(2, '0')}`)
@@ -56,6 +62,7 @@ export function seasonMonths(season: string, seasonType: 'european' | 'calendar'
     const m = i < 5 ? 8 + i : i - 4
     months.push(`${y}-${String(m).padStart(2, '0')}`)
   }
+  if (league === 'uefa.champions') months.push(`${start + 1}-06`)
   return months
 }
 
@@ -65,8 +72,8 @@ export function currentMonth(now: Date = new Date()): string {
 }
 
 /** 默认月份：赛季内当月，休赛期落末月（规格规则 3） */
-export function defaultMonth(season: string, seasonType: 'european' | 'calendar' = 'european', now: Date = new Date()): string {
+export function defaultMonth(season: string, seasonType: 'european' | 'calendar' = 'european', now: Date = new Date(), league?: LeagueSlug): string {
   const cur = currentMonth(now)
-  const months = seasonMonths(season, seasonType)
+  const months = seasonMonths(season, seasonType, league)
   return months.includes(cur) ? cur : months[months.length - 1]
 }

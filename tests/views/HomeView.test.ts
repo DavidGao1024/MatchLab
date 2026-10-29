@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-// 首页队徽预载回归：load 后六联赛 teams 档案全部就位（不只焦点英超）。
+// 首页队徽预载回归：load 后七联赛 teams 档案全部就位（不只焦点英超）。
 // 背景：MiniStandings 用 teams.teamById 取队徽，非焦点联赛 bundle 未载入 → 队徽空白，
 // 点进积分榜页 ensure 后才补上（bug）。首页应并行预热全部联赛 teams。
 import { describe, it, expect, beforeEach, vi } from 'vitest'
@@ -80,8 +80,8 @@ beforeEach(() => {
   mockData()
 })
 
-describe('首页 load — 六联赛 teams 档案预热', () => {
-  it('load 后六个联赛的 teams bundle 全部就位（不只焦点英超）', async () => {
+describe('首页 load — 七联赛 teams 档案预热', () => {
+  it('load 后七个联赛的 teams bundle 全部就位（不只焦点英超）', async () => {
     const router = makeRouter()
     router.push('/')
     await router.isReady()
@@ -90,7 +90,7 @@ describe('首页 load — 六联赛 teams 档案预热', () => {
 
     const teams = useTeamsStore()
     expect(Object.keys(teams.bundles).sort()).toEqual(
-      ['chn.1', 'eng.1', 'esp.1', 'fra.1', 'ger.1', 'ita.1'],
+      ['chn.1', 'eng.1', 'esp.1', 'fra.1', 'ger.1', 'ita.1', 'uefa.champions'],
     )
   })
 
@@ -107,7 +107,7 @@ describe('首页 load — 六联赛 teams 档案预热', () => {
   })
 })
 
-describe('首页昨日战报带（v2：六联赛混合·实时区间取数）', () => {
+describe('首页昨日战报带（v2：七联赛混合·实时区间取数）', () => {
   it('昨日有完赛 → 战报带渲染且卡片带联赛徽标', async () => {
     const router = makeRouter()
     router.push('/')

@@ -1,6 +1,6 @@
 import type { Match, StandingRow, XgRow } from '../types/models'
 import type { RawStanding, RawXgStanding } from '../types/static'
-import { zoneOf, type LeagueSlug } from './constants'
+import { STANDINGS_STAGE, zoneOf, type LeagueSlug } from './constants'
 import { computeForm } from './matches'
 import matchFixesJson from './match-fixes.json'
 
@@ -86,6 +86,15 @@ export function applyMatchFixes(matches: Match[]): Match[] {
     })
   }
   return out
+}
+
+/**
+ * 积分榜阶段过滤：配置了 STANDINGS_STAGE 的联赛（欧冠）只取该阶段比赛，
+ * 其余联赛原样返回同一数组（零开销、行为不变）。
+ */
+export function standingsMatches(league: LeagueSlug, matches: Match[]): Match[] {
+  const stage = STANDINGS_STAGE[league]
+  return stage ? matches.filter((m) => m.stage === stage) : matches
 }
 
 /** 同分先比相互战绩的联赛（中超官方规则；其余走净胜球） */

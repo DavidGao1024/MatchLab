@@ -16,6 +16,8 @@ export interface EspnCompetitor {
 export interface EspnEvent {
   id: string
   date: string
+  /** 赛事阶段（欧冠 season.slug，如 league-phase / round-of-16） */
+  season?: { slug?: string }
   status: {
     clock?: number
     displayClock?: string

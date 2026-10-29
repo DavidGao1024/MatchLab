@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { applyForm, applyMatchFixes, computeStandings, ESPN_MATCH_FIXES, HEAD_TO_HEAD_TIEBREAK, mergeStandings } from '../../src/utils/standings'
+import { applyForm, applyMatchFixes, computeStandings, ESPN_MATCH_FIXES, HEAD_TO_HEAD_TIEBREAK, mergeStandings, standingsMatches } from '../../src/utils/standings'
 import type { RawStanding, RawXgStanding } from '../../src/types/static'
 import type { Match } from '../../src/types/models'
 
@@ -141,6 +141,18 @@ describe('computeStandings', () => {
     expect(rows).toHaveLength(2)
     expect(rows.find((r) => r.teamId === 5)).toMatchObject({ played: 0, points: 0 })
     expect(rows.find((r) => r.teamId === 6)).toMatchObject({ played: 0, points: 0 })
+  })
+})
+
+describe('standingsMatches', () => {
+  it('欧冠只保留联赛阶段', () => {
+    const lp = makeMatch({ eventId: 'lp', stage: 'league-phase' })
+    const ko = makeMatch({ eventId: 'ko', stage: 'round-of-16' })
+    expect(standingsMatches('uefa.champions', [lp, ko])).toEqual([lp])
+  })
+  it('六联赛不过滤（返回同一数组）', () => {
+    const ms = [makeMatch({ stage: 'x' }), makeMatch()]
+    expect(standingsMatches('eng.1', ms)).toBe(ms)
   })
 })
 

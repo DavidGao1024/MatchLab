@@ -238,6 +238,16 @@ export const TEAM_ZH: Record<string, string> = {
   'Preston North End': '普雷斯顿',
   // 亚洲/其他
   'Kawasaki Frontale': '川崎前锋',
+  // ===== 欧冠 2026-27 参赛队补录（2026-10-29，键 = ESPN displayName）=====
+  'Shakhtar Donetsk': '顿涅茨克矿工',
+  'Galatasaray': '加拉塔萨雷',
+  'LASK Linz': '林茨',
+  'Sabah FK': '萨巴赫',
+  'Bodo/Glimt': '博多格林特',
+  'AEK Athens': 'AEK雅典',
+  'Slavia Prague': '布拉格斯拉维亚',
+  'Viking FK': '维京',
+  'Slovan Bratislava': '布拉迪斯拉发斯拉夫人',
 }
 
 const UI: Record<string, { zh: string; en: string }> = {

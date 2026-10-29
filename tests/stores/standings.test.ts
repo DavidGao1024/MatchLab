@@ -132,4 +132,20 @@ describe('standings.load 实时算榜', () => {
     const ars = store.rows['eng.1']!.find((r) => r.teamId === 359)!
     expect(ars.form).toEqual([])
   })
+
+  it('欧冠积分榜只算联赛阶段，淘汰赛不污染', async () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2026-10-29T00:00:00Z'))
+    const lp = { ...staticMatch(1, 2), eventId: 'lp', stage: 'league-phase' }
+    const ko = { ...staticMatch(3, 4), eventId: 'ko', stage: 'round-of-16' }
+    mockFetch.mockImplementation((input) => {
+      const url = String(input)
+      if (url.includes('site.api.espn.com')) return ok({ events: [] })
+      if (url.includes('uefa.champions/matches/2026-09.json')) return ok({ matches: [lp, ko] })
+      return Promise.resolve({ ok: false, status: 404 })
+    })
+    const store = useStandingsStore()
+    await store.load('uefa.champions', '2026', { seasonType: 'european', forceFresh: true })
+    expect(store.rows['uefa.champions']!.map((r) => r.teamId).sort()).toEqual([1, 2])
+  })
 })

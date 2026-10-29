@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { fetchLiveScores, fetchScoresRange, clearScoreCache, fetchTeamInjuries, clearInjuryCache } from '../../src/composables/useEspanFetch'
+import { fetchLiveScores, fetchScoresRange, clearScoreCache, fetchTeamInjuries, clearInjuryCache, normalizeEvent } from '../../src/composables/useEspanFetch'
 
 const mockFetch = vi.fn()
 globalThis.fetch = mockFetch as any
@@ -7,6 +7,22 @@ globalThis.fetch = mockFetch as any
 function mockResponse(events: any[]) {
   return { ok: true, json: async () => ({ events }) } as Response
 }
+
+describe('normalizeEvent', () => {
+  it('season.slug 映射为 stage（欧冠阶段过滤依赖）', () => {
+    const m = normalizeEvent({
+      id: 'e1', date: '2026-09-15T19:00Z', season: { slug: 'league-phase' },
+      status: { type: { state: 'post', completed: true } },
+      competitions: [{
+        competitors: [
+          { homeAway: 'home', team: { id: '1', displayName: 'A' }, score: '2' },
+          { homeAway: 'away', team: { id: '2', displayName: 'B' }, score: '0' },
+        ],
+      }],
+    } as any)
+    expect(m?.stage).toBe('league-phase')
+  })
+})
 
 describe('fetchLiveScores 缓存层', () => {
   beforeEach(() => {

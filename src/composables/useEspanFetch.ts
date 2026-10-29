@@ -78,6 +78,8 @@ export function normalizeEvent(e: EspnEvent): Match | null {
     venue: comp.venue?.fullName ?? '',
     home: toTeam(homeC),
     away: toTeam(awayC),
+    // 赛事阶段（欧冠赛季 slug），未返回时为 undefined，不影响六联赛
+    stage: e.season?.slug,
   }
 }
 

@@ -75,7 +75,7 @@ export const useMatchesStore = defineStore('matches', {
     async loadTeamSchedule(league: LeagueSlug, teamId: number, season: string, seasonType: 'european' | 'calendar' = 'european') {
       const gen = ++teamLoadGen
       const k = `${league}/${teamId}`
-      const months = seasonMonths(season, seasonType)
+      const months = seasonMonths(season, seasonType, league)
       const results = await Promise.all(months.map(async (m) => {
         if (m === currentMonth()) {
           try { return await fetchLiveScores(league, m) }

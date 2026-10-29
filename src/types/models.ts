@@ -80,6 +80,8 @@ export interface Match {
   venue: string
   home: MatchTeam
   away: MatchTeam
+  /** 赛事阶段（欧冠用 ESPN season.slug，如 league-phase / round-of-16）；仅欧冠写入，其余联赛无此字段 */
+  stage?: string
 }
 
 export interface XgRow {

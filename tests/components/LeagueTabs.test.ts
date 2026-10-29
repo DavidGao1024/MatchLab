@@ -22,7 +22,7 @@ async function setup(path: string) {
   setActivePinia(pinia)
   const app = useAppStore()
   app.leagues = LEAGUE_SLUGS.map((slug) => ({
-    slug, name: slug, nameZh: { 'eng.1': '英超', 'esp.1': '西甲', 'ita.1': '意甲', 'ger.1': '德甲', 'fra.1': '法甲', 'chn.1': '中超' }[slug] ?? slug,
+    slug, name: slug, nameZh: { 'eng.1': '英超', 'esp.1': '西甲', 'ita.1': '意甲', 'ger.1': '德甲', 'fra.1': '法甲', 'chn.1': '中超', 'uefa.champions': '欧冠' }[slug] ?? slug,
     country: '', color: '#000', understatSlug: null, season: '2025', teams: 20, players: 500,
   }))
   const router = makeRouter()
@@ -37,11 +37,12 @@ beforeEach(() => {
 })
 
 describe('LeagueTabs', () => {
-  it('渲染 6 个联赛按钮（中文模式）', async () => {
+  it('渲染 7 个联赛按钮（中文模式）', async () => {
     const { w } = await setup('/eng.1/standings')
-    expect(w.findAll('button').length).toBe(6)
+    expect(w.findAll('button').length).toBe(7)
     expect(w.text()).toContain('英超')
     expect(w.text()).toContain('中超')
+    expect(w.text()).toContain('欧冠')
   })
 
   it('当前联赛按钮高亮（含 bg-white/10 类）', async () => {

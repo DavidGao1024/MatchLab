@@ -22,9 +22,9 @@ describe('teamName()', () => {
   })
 })
 
-describe('TEAM_ZH 覆盖 212 队', () => {
-  it('六联赛 112 队 + 升班马 14 队 + 转会履历知名球队 86 队', () => {
-    expect(Object.keys(TEAM_ZH)).toHaveLength(212)
+describe('TEAM_ZH 覆盖 221 队', () => {
+  it('六联赛 112 队 + 升班马 14 队 + 转会履历知名球队 86 队 + 欧冠 9 队', () => {
+    expect(Object.keys(TEAM_ZH)).toHaveLength(221)
   })
   it('升班马译名命中', () => {
     expect(teamName('Coventry City', 'zh')).toBe('考文垂')
@@ -35,6 +35,11 @@ describe('TEAM_ZH 覆盖 212 队', () => {
     expect(teamName('RB Salzburg', 'zh')).toBe('萨尔茨堡红牛')
     expect(teamName('Ajax Amsterdam', 'zh')).toBe('阿贾克斯')
     expect(teamName('FC Porto', 'zh')).toBe('波尔图')
+  })
+  it('欧冠球队译名命中', () => {
+    expect(teamName('Shakhtar Donetsk', 'zh')).toBe('顿涅茨克矿工')
+    expect(teamName('Galatasaray', 'zh')).toBe('加拉塔萨雷')
+    expect(teamName('Slavia Prague', 'zh')).toBe('布拉格斯拉维亚')
   })
 })
 

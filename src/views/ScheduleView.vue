@@ -20,7 +20,7 @@ const store = useMatchesStore()
 const league = computed(() => route.params.league as LeagueSlug)
 const season = computed(() => app.leagueInfo(league.value)?.season ?? '2025')
 const seasonType = computed(() => app.leagueInfo(league.value)?.seasonType ?? 'european')
-const months = computed(() => seasonMonths(season.value, seasonType.value))
+const months = computed(() => seasonMonths(season.value, seasonType.value, league.value))
 
 // 月份参数校验：YYYY-MM 且在赛季清单内，否则回落默认月份（规格规则 6）
 const MONTH_RE = /^\d{4}-\d{2}$/
@@ -28,7 +28,7 @@ const month = computed(() => {
   const p = route.params.month
   return typeof p === 'string' && MONTH_RE.test(p) && months.value.includes(p)
     ? p
-    : defaultMonth(season.value, seasonType.value)
+    : defaultMonth(season.value, seasonType.value, new Date(), league.value)
 })
 
 const seq = ref(0) // 过期响应防护（规格 v1.5）
