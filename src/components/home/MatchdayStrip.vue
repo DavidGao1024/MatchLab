@@ -6,7 +6,7 @@ import { useTimezone } from '../../composables/useTimezone'
 import { t } from '../../utils/i18n'
 import MatchCard from '../matches/MatchCard.vue'
 
-// 战报带 v2：六联赛混合，条目自带所属联赛（规格 v2.0）
+// 战报带 v2：七联赛混合，条目自带所属联赛（规格 v2.0）
 defineProps<{ day: string; picks: StripPick[] }>()
 const app = useAppStore()
 const tz = useTimezone()

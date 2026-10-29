@@ -5,7 +5,7 @@ import LeagueLogo from '../../src/components/common/LeagueLogo.vue'
 import { LEAGUE_SLUGS } from '../../src/utils/constants'
 
 describe('LeagueLogo', () => {
-  it('六大联赛都有本地徽标，src 指向 leagues/<slug>.png', () => {
+  it('七联赛都有本地徽标，src 指向 leagues/<slug>.png', () => {
     for (const slug of LEAGUE_SLUGS) {
       const w = mount(LeagueLogo, { props: { league: slug } })
       const img = w.find('img')

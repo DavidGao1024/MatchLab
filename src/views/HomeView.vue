@@ -60,7 +60,7 @@ async function load() {
         return standings.load(l, ls, { withForm: false, seasonType: lt, forceFresh: true }).catch(() => null)
       }),
     ])
-    // 战报带 v2：六联赛并行拉近 9 天实时比分（±时区富余），纯前端判「昨日优先→回看 7 天」
+    // 战报带 v2：七联赛并行拉近 9 天实时比分（±时区富余），纯前端判「昨日优先→回看 7 天」
     const today = beijingDay(new Date().toISOString())
     const perLeague = await Promise.all(LEAGUE_SLUGS.map(async (l): Promise<StripEntry[]> => {
       try {
@@ -82,7 +82,7 @@ async function load() {
 
 onMounted(load)
 
-// 战报带选场：六联赛轮转封顶 4（规格 v2.0）
+// 战报带选场：七联赛轮转封顶 4（规格 v2.0）
 const stripPicks = computed(() =>
   strip.value
     ? pickCrossLeagueStrip(
@@ -118,7 +118,7 @@ const stripPicks = computed(() =>
       <!-- ② 昨日战报转播带（回看窗内查不到完赛则不出，规格 v2.0） -->
       <MatchdayStrip v-if="strip && stripPicks.length" :day="strip.day" :picks="stripPicks" />
 
-      <!-- ② 联赛板块：六联赛等宽卡（3 列） -->
+      <!-- ② 联赛板块：七联赛等宽卡（3 列） -->
       <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 flex-1">
         <LeagueCard v-for="l in LEAGUE_SLUGS" :key="l" :league="l" />
       </div>

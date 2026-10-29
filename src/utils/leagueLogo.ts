@@ -5,7 +5,7 @@ const BASE = import.meta.env.BASE_URL
 /**
  * 联赛徽标本地资源（源：FM2024 图标库 Normal/@2x 512×512，
  * 对应 FM 赛事 ID：英超 11 / 西甲 67 / 意甲 32 / 德甲 22 / 法甲 16 / 中超 130931，
- * 见 docs/fm2024-logos-inventory.md §五；欧冠徽标取 ESPN 赛事徽标（league id 2））。
+ * 见 docs/fm2024-logos-inventory.md §五；欧冠徽标取 ESPN 赛事徽标（league id 2）。
  */
 const SOURCES: Record<LeagueSlug, string> = {
   'eng.1': `${BASE}leagues/eng.1.png`,
