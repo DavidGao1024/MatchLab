@@ -176,6 +176,33 @@
 
 > 按日期倒序记录每次调研进展，格式：`### YYYY-MM-DD`
 
+### 2026-10-29 — 欧冠（uefa.champions）接入调研
+
+**背景**：拟把欧冠作为第七个联赛接入（与六联赛同规则：页签/积分榜/赛程/球员/排行榜/对比/详情/订阅收藏/首页），先实测 ESPN 端点覆盖与赛季阶段结构。
+
+**实测**（ESPN `uefa.champions`，2026-10-29）：
+
+| 项 | 结论 |
+|---|---|
+| site.api 月令牌 | `202609` 18 场、`202610` 36 场、`202611` 36 场，均正常 |
+| 赛事阶段 | 每场带 `season.slug`：`league-phase` / `round-of-16` / `semifinals` / `final` |
+| 开幕月 | **7 月、8 月均 0 场，联赛阶段 9 月开打** |
+| core 球队 | `seasons/2026/teams` = 36 队 |
+| core 战绩 | `seasons/2026/types/1/teams/{id}/record` 可用（联赛阶段） |
+| core 排行榜 | `seasons/2026/types/1/leaders` 12 项、每项 25 条 |
+| core 球员统计 | `seasons/2026/types/1/athletes/{id}/statistics/0` 4 分类可用 |
+| 单季聚合端点 | 去掉 `types/1` 的统计/排行榜均 404 → 球员与排行榜按联赛阶段统计 |
+| 联赛徽标 | ESPN `https://a.espncdn.com/i/leaguelogos/soccer/500/2.png` 可用 |
+| 中文队名 | 36 队中 9 队未收录（Shakhtar Donetsk / Galatasaray / LASK Linz / Sabah FK / Bodo/Glimt / AEK Athens / Slavia Prague / Viking FK / Slovan Bratislava） |
+
+**结论**：
+
+- **7/8 月无赛事、9 月开幕**——赛季探测不能沿用欧洲制默认 8 月：`LEAGUES` 欧冠条目带 `openMonth: 9`，新增 `openMonthOf()` 以其覆盖 `seasonOpenMonth()`（六联赛行为不变）。
+- **积分榜只算联赛阶段**：配置 `hasStages: true`（月文件写 `stage`）与 `standingsStage: 'league-phase'`，淘汰赛只进赛程；点球平局等淘汰赛怪态不得进榜。
+- **球员/排行榜为联赛阶段口径**（ESPN 无跨阶段聚合），属数据源限制。
+
+**落地**（Task 1）：`scripts/lib/espn-endpoints.js` 新增 `openMonthOf()` 并由 `resolveSeasonsInPlace` 使用，`LEAGUES` 追加欧冠配置。
+
 ### 2026-09-23 — ESPN 废弃 scoreboard 日期区间语法：整月令牌替代（逐场等价已验证）
 
 **背景**：查岗发现 Fetch Data 自 09-17 起连红 4 次（09-17/19/20/21），静态数据冻结在 09-14（部署工作流正常，09-10 解耦生效未被连坐）。失败步「Fetch ESPN scores + compute standings」；Actions 日志需鉴权取不到，改本地复现定位。

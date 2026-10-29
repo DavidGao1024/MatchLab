@@ -30,6 +30,9 @@ const LEAGUES = [
     // 2026 赛季"假赌黑"专项整治扣分（赛季前固定扣除，不计入比赛结果）
     pointDeductions: { 977: 10, 8239: 10, 21910: 7, 7521: 6, 8240: 6, 21506: 5, 18203: 5, 15515: 5, 2052: 5 },
   },
+  // 欧冠（2026-10-29 接入）：联赛阶段 9 月开打（7/8 月无赛事），故 openMonth 覆盖默认 8 月；
+  // hasStages 控制月文件写入 stage 字段，standingsStage 限定积分榜只计联赛阶段
+  { slug: 'uefa.champions', name: 'UEFA Champions League', nameZh: '欧冠', understatSlug: null, country: 'Europe', teams: 36, color: '#0B1E5C', season: '2026', seasonType: 'european', openMonth: 9, hasStages: true, standingsStage: 'league-phase' },
 ];
 
 /** ESPN core API 端点构造器（sports.core.api.espn.com） */
@@ -124,6 +127,11 @@ function seasonOpenMonth(seasonType) {
   return seasonType === 'calendar' ? 3 : 8;
 }
 
+/** 联赛实际开幕月：配置了 openMonth 的联赛以其为准（如欧冠 9 月），否则回落 seasonOpenMonth */
+function openMonthOf(league) {
+  return league.openMonth ?? seasonOpenMonth(league.seasonType || 'european');
+}
+
 /** 候选赛季（日期驱动）：欧洲制 8–12 月=当年、1–7 月=上一年；自然年制=当年 */
 function candidateSeason(seasonType, now) {
   const y = now.getUTCFullYear();
@@ -142,7 +150,7 @@ async function resolveSeasonsInPlace(leagues, now = new Date()) {
   for (const league of leagues) {
     const type = league.seasonType || 'european';
     const cand = candidateSeason(type, now);
-    const m = seasonOpenMonth(type);
+    const m = openMonthOf(league);
     const mm = String(m).padStart(2, '0');
     try {
       // site.api 服务端抓取必须用 curl UA（浏览器 UA + 服务器 IP 会被 Akamai 403）
@@ -159,4 +167,4 @@ async function resolveSeasonsInPlace(leagues, now = new Date()) {
   return leagues;
 }
 
-module.exports = { CORE_BASE, SITE_BASE, SEASON, LEAGUES, core, site, monthToken, TEAM_OVERRIDES, resolveSeasonsInPlace };
+module.exports = { CORE_BASE, SITE_BASE, SEASON, LEAGUES, core, site, monthToken, TEAM_OVERRIDES, openMonthOf, resolveSeasonsInPlace };
