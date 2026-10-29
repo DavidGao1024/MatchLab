@@ -78,4 +78,16 @@ function filterKnownFixes(entries, fixes) {
   return { kept, skipped };
 }
 
-module.exports = { findWinnerConflicts, findPostNotCompleted, isGhostSummary, filterKnownFixes };
+/**
+ * 欧冠淘汰赛判定（2026-10-29）：淘汰赛点球大战的 ESPN 记录为「比分平 + winner=true」，
+ * 与 tied-but-winner 指纹天然撞车，会永久红灯。凡匹配联赛配置了 standingsStage（欧冠=league-phase）
+ * 且场次 stage 非该阶段（round-of-16/quarterfinals/final…），即淘汰赛 → 体检跳过。
+ * 无 standingsStage 的六联赛、无 stage 的场次一律 false（行为不变）。
+ * @param {{standingsStage?: string}} league
+ * @param {{stage?: string}} match
+ */
+function isKnockoutMatch(league, match) {
+  return Boolean(league && league.standingsStage && match && match.stage && match.stage !== league.standingsStage);
+}
+
+module.exports = { findWinnerConflicts, findPostNotCompleted, isGhostSummary, filterKnownFixes, isKnockoutMatch };

@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest'
 import { createRequire } from 'node:module'
 
 const req = createRequire(import.meta.url)
-const { findWinnerConflicts, findPostNotCompleted, isGhostSummary, filterKnownFixes } = req('../../scripts/lib/suspicious-checks.js')
+const { findWinnerConflicts, findPostNotCompleted, isGhostSummary, filterKnownFixes, isKnockoutMatch } = req('../../scripts/lib/suspicious-checks.js')
 
 const match = (over: Record<string, unknown> = {}) => ({
   eventId: 'e1',
@@ -109,5 +109,18 @@ describe('filterKnownFixes（勘误在案跳过）', () => {
     const raw = match({ eventId: '401861543', home: { id: 1, name: 'H', score: 0, winner: true }, away: { id: 2, name: 'A', score: 0, winner: null } })
     const { kept } = filterKnownFixes([entry(raw)], fixes)
     expect(findWinnerConflicts(kept)).toEqual([])
+  })
+})
+
+describe('isKnockoutMatch（欧冠淘汰赛跳过体检）', () => {
+  const ucl = { standingsStage: 'league-phase' }
+  it('非联赛阶段 → true', () => {
+    expect(isKnockoutMatch(ucl, { stage: 'round-of-16' })).toBe(true)
+    expect(isKnockoutMatch(ucl, { stage: 'final' })).toBe(true)
+  })
+  it('联赛阶段/无 stage/非欧冠 → false', () => {
+    expect(isKnockoutMatch(ucl, { stage: 'league-phase' })).toBe(false)
+    expect(isKnockoutMatch(ucl, {})).toBe(false)
+    expect(isKnockoutMatch({}, { stage: 'round-of-16' })).toBe(false)
   })
 })

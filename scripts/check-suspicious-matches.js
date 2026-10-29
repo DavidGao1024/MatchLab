@@ -20,7 +20,7 @@ const fs = require('fs');
 const path = require('path');
 const { sleep, fetchJson, UA_CURL } = require('./lib/http');
 const { LEAGUES, site } = require('./lib/espn-endpoints');
-const { findWinnerConflicts, findPostNotCompleted, isGhostSummary, filterKnownFixes } = require('./lib/suspicious-checks');
+const { findWinnerConflicts, findPostNotCompleted, isGhostSummary, filterKnownFixes, isKnockoutMatch } = require('./lib/suspicious-checks');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 const FIXES = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'src', 'utils', 'match-fixes.json'), 'utf8'));
@@ -55,14 +55,15 @@ async function main() {
   const issues = [];
   let summaryChecked = 0;
 
-  for (const { slug } of targets) {
-    const entries = collectEntries(slug);
+  for (const league of targets) {
+    // 欧冠淘汰赛先剔除：点球大战记录为「平局 + winner=true」，会在 tied-but-winner 指纹上永久误报
+    const entries = collectEntries(league.slug).filter((e) => !isKnockoutMatch(league, e.match));
     const { kept, skipped } = filterKnownFixes(entries, FIXES);
     if (skipped.length) console.log(`  · 勘误在案跳过 ${skipped.length} 场：${skipped.map((e) => e.match.eventId).join(',')}`);
     const conflicts = findWinnerConflicts(kept);
     const postNotDone = findPostNotCompleted(kept);
     issues.push(...conflicts, ...postNotDone);
-    console.log(`[${slug}] 场次 ${kept.length}（在案 ${skipped.length}），平局标胜者 ${conflicts.length}，post未完成 ${postNotDone.length}`);
+    console.log(`[${league.slug}] 场次 ${kept.length}（在案 ${skipped.length}），平局标胜者 ${conflicts.length}，post未完成 ${postNotDone.length}`);
 
     // 0-0 完赛场逐场拉 summary 核验幽灵场（真平局必有换人/牌类事件或阵容，空壳即幽灵）
     const zeroZero = kept.filter(
@@ -77,13 +78,13 @@ async function main() {
     for (const e of zeroZero) {
       await sleep(DELAY_MS);
       try {
-        const s = await fetchJson(site.summary(slug, e.match.eventId), { ua: UA_CURL });
+        const s = await fetchJson(site.summary(league.slug, e.match.eventId), { ua: UA_CURL });
         summaryChecked += 1;
         if (isGhostSummary(s)) {
           issues.push({ ...e, reason: 'ghost-0-0', eventId: e.match.eventId, date: e.match.date, home: e.match.home.name, away: e.match.away.name });
         }
       } catch (err) {
-        console.warn(`  ! ${slug} ${e.match.eventId} summary 抓取失败（不计入可疑）: ${err.message}`);
+        console.warn(`  ! ${league.slug} ${e.match.eventId} summary 抓取失败（不计入可疑）: ${err.message}`);
       }
     }
   }
