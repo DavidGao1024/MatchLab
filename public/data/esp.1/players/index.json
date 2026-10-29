@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-26T01:04:13.998Z",
+  "updateTime": "2026-10-29T02:11:14.671Z",
   "league": "esp.1",
   "season": "2026",
-  "count": 612,
+  "count": 613,
   "players": [
     {
       "id": 231050,
@@ -11,7 +11,7 @@
       "teamId": 83,
       "position": "F",
       "age": 29,
-      "goals": 12,
+      "goals": 13,
       "assists": 3,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
@@ -24,7 +24,7 @@
       "teamId": 86,
       "position": "F",
       "age": 27,
-      "goals": 9,
+      "goals": 11,
       "assists": 2,
       "citizenship": "France",
       "flag": "flags/fr.png",
@@ -214,11 +214,24 @@
       "team": "Atlético Madrid"
     },
     {
+      "id": 209579,
+      "name": "Álex Berenguer",
+      "teamId": 93,
+      "position": "F",
+      "age": 31,
+      "goals": 3,
+      "assists": 4,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 7,
+      "team": "Athletic Club"
+    },
+    {
       "id": 125200,
       "name": "Álvaro García",
       "teamId": 101,
       "position": "M",
-      "age": 33,
+      "age": 34,
       "goals": 3,
       "assists": 2,
       "citizenship": "Spain",
@@ -251,6 +264,19 @@
       "flag": "flags/ge.png",
       "jersey": 9,
       "team": "Villarreal"
+    },
+    {
+      "id": 365821,
+      "name": "Isaac Romero",
+      "teamId": 243,
+      "position": "F",
+      "age": 26,
+      "goals": 3,
+      "assists": 1,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 16,
+      "team": "Sevilla"
     },
     {
       "id": 311054,
@@ -318,6 +344,19 @@
       "team": "Alavés"
     },
     {
+      "id": 341367,
+      "name": "Orri Óskarsson",
+      "teamId": 89,
+      "position": "F",
+      "age": 22,
+      "goals": 3,
+      "assists": 0,
+      "citizenship": "Iceland",
+      "flag": "flags/is.png",
+      "jersey": 9,
+      "team": "Real Sociedad"
+    },
+    {
       "id": 255889,
       "name": "Pape Gueye",
       "teamId": 102,
@@ -344,6 +383,19 @@
       "team": "Levante"
     },
     {
+      "id": 308254,
+      "name": "Aitor Paredes",
+      "teamId": 93,
+      "position": "D",
+      "age": 26,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 4,
+      "team": "Athletic Club"
+    },
+    {
       "id": 307390,
       "name": "Alberto Moleiro",
       "teamId": 102,
@@ -355,19 +407,6 @@
       "flag": "flags/es.png",
       "jersey": 10,
       "team": "Villarreal"
-    },
-    {
-      "id": 209579,
-      "name": "Álex Berenguer",
-      "teamId": 93,
-      "position": "F",
-      "age": 31,
-      "goals": 2,
-      "assists": 1,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 7,
-      "team": "Athletic Club"
     },
     {
       "id": 283941,
@@ -420,6 +459,19 @@
       "flag": "flags/co.png",
       "jersey": 9,
       "team": "Real Betis"
+    },
+    {
+      "id": 288900,
+      "name": "Felix Correia",
+      "teamId": 243,
+      "position": "F",
+      "age": 25,
+      "goals": 2,
+      "assists": 1,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "jersey": 20,
+      "team": "Sevilla"
     },
     {
       "id": 279904,
@@ -480,24 +532,24 @@
       "position": "F",
       "age": 29,
       "goals": 2,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
       "jersey": 11,
       "team": "Real Sociedad"
     },
     {
-      "id": 365821,
-      "name": "Isaac Romero",
-      "teamId": 243,
+      "id": 214412,
+      "name": "Iñaki Williams",
+      "teamId": 93,
       "position": "F",
-      "age": 26,
+      "age": 32,
       "goals": 2,
-      "assists": 1,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 16,
-      "team": "Sevilla"
+      "assists": 2,
+      "citizenship": "Ghana",
+      "flag": "flags/gh.png",
+      "jersey": 9,
+      "team": "Athletic Club"
     },
     {
       "id": 143564,
@@ -589,19 +641,6 @@
       "flag": "flags/ci.png",
       "jersey": 19,
       "team": "Villarreal"
-    },
-    {
-      "id": 341367,
-      "name": "Orri Óskarsson",
-      "teamId": 89,
-      "position": "F",
-      "age": 22,
-      "goals": 2,
-      "assists": 0,
-      "citizenship": "Iceland",
-      "flag": "flags/is.png",
-      "jersey": 9,
-      "team": "Real Sociedad"
     },
     {
       "id": 138448,
@@ -721,19 +760,6 @@
       "team": "Alavés"
     },
     {
-      "id": 308254,
-      "name": "Aitor Paredes",
-      "teamId": 93,
-      "position": "D",
-      "age": 26,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 4,
-      "team": "Athletic Club"
-    },
-    {
       "id": 248276,
       "name": "Alex Freeman",
       "teamId": 102,
@@ -849,6 +875,19 @@
       "flag": "flags/es.png",
       "jersey": 22,
       "team": "Villarreal"
+    },
+    {
+      "id": 297371,
+      "name": "Beñat Turrientes",
+      "teamId": 89,
+      "position": "M",
+      "age": 24,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 8,
+      "team": "Real Sociedad"
     },
     {
       "id": 414299,
@@ -1150,19 +1189,6 @@
       "team": "Elche"
     },
     {
-      "id": 288900,
-      "name": "Felix Correia",
-      "teamId": 243,
-      "position": "F",
-      "age": 25,
-      "goals": 1,
-      "assists": 1,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "jersey": 20,
-      "team": "Sevilla"
-    },
-    {
       "id": 324811,
       "name": "Hugo Gonzalez",
       "teamId": 85,
@@ -1226,19 +1252,6 @@
       "flag": "flags/gn.png",
       "jersey": 6,
       "team": "Celta Vigo"
-    },
-    {
-      "id": 214412,
-      "name": "Iñaki Williams",
-      "teamId": 93,
-      "position": "F",
-      "age": 32,
-      "goals": 1,
-      "assists": 2,
-      "citizenship": "Ghana",
-      "flag": "flags/gh.png",
-      "jersey": 9,
-      "team": "Athletic Club"
     },
     {
       "id": 310259,
@@ -1566,6 +1579,19 @@
       "team": "Alavés"
     },
     {
+      "id": 409383,
+      "name": "Nacho Pérez",
+      "teamId": 1538,
+      "position": "D",
+      "age": 18,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 29,
+      "team": "Levante"
+    },
+    {
       "id": 262491,
       "name": "Nahuel Tenaglia",
       "teamId": 96,
@@ -1663,7 +1689,7 @@
       "position": "M",
       "age": 23,
       "goals": 1,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "jersey": 8,
@@ -1923,11 +1949,24 @@
       "position": "M",
       "age": 27,
       "goals": 1,
-      "assists": 1,
+      "assists": 3,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 24,
       "team": "Sevilla"
+    },
+    {
+      "id": 133768,
+      "name": "Yuri Berchiche",
+      "teamId": 93,
+      "position": "D",
+      "age": 36,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 17,
+      "team": "Athletic Club"
     },
     {
       "id": 286769,
@@ -2151,6 +2190,19 @@
       "team": "Osasuna"
     },
     {
+      "id": 268601,
+      "name": "Aitor Ruibal",
+      "teamId": 244,
+      "position": "F",
+      "age": 30,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 24,
+      "team": "Real Betis"
+    },
+    {
       "id": 396751,
       "name": "Alassane Diatta",
       "teamId": 102,
@@ -2220,7 +2272,7 @@
       "name": "Alejandro Catena",
       "teamId": 97,
       "position": "D",
-      "age": 31,
+      "age": 32,
       "goals": 0,
       "assists": 1,
       "citizenship": "Spain",
@@ -2266,6 +2318,19 @@
       "flag": "flags/es.png",
       "jersey": 20,
       "team": "Athletic Club"
+    },
+    {
+      "id": 94947,
+      "name": "Álex Campos",
+      "teamId": 83,
+      "position": "D",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 41,
+      "team": "Barcelona"
     },
     {
       "id": 366886,
@@ -2996,19 +3061,6 @@
       "team": "Athletic Club"
     },
     {
-      "id": 297371,
-      "name": "Beñat Turrientes",
-      "teamId": 89,
-      "position": "M",
-      "age": 24,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 8,
-      "team": "Real Sociedad"
-    },
-    {
       "id": 199833,
       "name": "Bernardo Silva",
       "teamId": 86,
@@ -3468,7 +3520,7 @@
       "name": "Diego Conde",
       "teamId": 244,
       "position": "G",
-      "age": 27,
+      "age": 28,
       "goals": 0,
       "assists": 0,
       "citizenship": "Spain",
@@ -3600,7 +3652,7 @@
       "position": "M",
       "age": 23,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 6,
@@ -4413,6 +4465,19 @@
       "team": "Villarreal"
     },
     {
+      "id": 405490,
+      "name": "Illia Voloshyn",
+      "teamId": 86,
+      "position": "G",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Ukraine",
+      "flag": "flags/ua.png",
+      "jersey": 39,
+      "team": "Real Madrid"
+    },
+    {
       "id": 380918,
       "name": "Iñigo Arguibide",
       "teamId": 97,
@@ -4582,6 +4647,19 @@
       "team": "Celta Vigo"
     },
     {
+      "id": 16340,
+      "name": "Javi Guerra",
+      "teamId": 94,
+      "position": "M",
+      "age": 23,
+      "goals": 0,
+      "assists": 2,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 8,
+      "team": "Valencia"
+    },
+    {
       "id": 367946,
       "name": "Javi Hernandez",
       "teamId": 88,
@@ -4619,19 +4697,6 @@
       "flag": "flags/es.png",
       "jersey": 45,
       "team": "Atlético Madrid"
-    },
-    {
-      "id": 16340,
-      "name": "Javier Guerra",
-      "teamId": 94,
-      "position": "D",
-      "age": 22,
-      "goals": 0,
-      "assists": 2,
-      "citizenship": "Bolivia",
-      "flag": "flags/bo.png",
-      "jersey": 8,
-      "team": "Valencia"
     },
     {
       "id": 421310,
@@ -4762,6 +4827,19 @@
       "flag": "flags/es.png",
       "jersey": 21,
       "team": "Valencia"
+    },
+    {
+      "id": 3106512,
+      "name": "Jesús Vizcay Hurtado",
+      "teamId": 93,
+      "position": "F",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 34,
+      "team": "Athletic Club"
     },
     {
       "id": 344245,
@@ -5586,7 +5664,7 @@
       "id": 355433,
       "name": "Mamadou Sarr",
       "teamId": 89,
-      "position": "F",
+      "position": "D",
       "age": 21,
       "goals": 0,
       "assists": 0,
@@ -6116,19 +6194,6 @@
       "team": "Rayo Vallecano"
     },
     {
-      "id": 409383,
-      "name": "Nacho Pérez",
-      "teamId": 1538,
-      "position": "D",
-      "age": 18,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 29,
-      "team": "Levante"
-    },
-    {
       "id": 311163,
       "name": "Nathan Saliba",
       "teamId": 102,
@@ -6283,6 +6348,19 @@
       "flag": "flags/be.png",
       "jersey": 23,
       "team": "Getafe"
+    },
+    {
+      "id": 416496,
+      "name": "Orian Goren",
+      "teamId": 83,
+      "position": "M",
+      "age": 17,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Israel",
+      "flag": "flags/il.png",
+      "jersey": 32,
+      "team": "Barcelona"
     },
     {
       "id": 269339,
@@ -7183,14 +7261,14 @@
     },
     {
       "id": 339195,
-      "name": "Thiago Fernandez",
+      "name": "Thiago Fernández",
       "teamId": 1538,
-      "position": "D",
-      "age": 19,
+      "position": "F",
+      "age": 22,
       "goals": 0,
-      "assists": 0,
-      "citizenship": "Paraguay",
-      "flag": "flags/py.png",
+      "assists": 1,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
       "jersey": 24,
       "team": "Levante"
     },
@@ -7507,19 +7585,6 @@
       "team": "Alavés"
     },
     {
-      "id": 133768,
-      "name": "Yuri Berchiche",
-      "teamId": 93,
-      "position": "D",
-      "age": 36,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 17,
-      "team": "Athletic Club"
-    },
-    {
       "id": 300111,
       "name": "Zaid Romero",
       "teamId": 2922,
@@ -7572,32 +7637,6 @@
       "team": "Real Sociedad"
     },
     {
-      "id": 268601,
-      "name": "Aitor Ruibal",
-      "teamId": 244,
-      "position": "F",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 24,
-      "team": "Real Betis"
-    },
-    {
-      "id": 94947,
-      "name": "Álex Campos",
-      "teamId": 83,
-      "position": "D",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 41,
-      "team": "Barcelona"
-    },
-    {
       "id": 236156,
       "name": "Álvaro Odriozola",
       "teamId": 89,
@@ -7624,17 +7663,17 @@
       "team": "Atlético Madrid"
     },
     {
-      "id": 414464,
-      "name": "Asier Hierro",
-      "teamId": 93,
-      "position": "F",
-      "age": 21,
+      "id": 3101339,
+      "name": "César Bonafé Ceita",
+      "teamId": 102,
+      "position": "D",
+      "age": null,
       "goals": null,
       "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 29,
-      "team": "Athletic Club"
+      "citizenship": null,
+      "flag": null,
+      "jersey": null,
+      "team": "Villarreal"
     },
     {
       "id": 386256,
@@ -7754,19 +7793,6 @@
       "team": "Celta Vigo"
     },
     {
-      "id": 405490,
-      "name": "Illia Voloshyn",
-      "teamId": 86,
-      "position": "G",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Ukraine",
-      "flag": "flags/ua.png",
-      "jersey": 39,
-      "team": "Real Madrid"
-    },
-    {
       "id": 379457,
       "name": "Iñaki Rupérez",
       "teamId": 89,
@@ -7806,19 +7832,6 @@
       "team": "Real Madrid"
     },
     {
-      "id": 3106512,
-      "name": "Jesús Vizcay Hurtado",
-      "teamId": 93,
-      "position": "F",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "jersey": 34,
-      "team": "Athletic Club"
-    },
-    {
       "id": 388339,
       "name": "Joan Martínez",
       "teamId": 86,
@@ -7845,30 +7858,17 @@
       "team": "Getafe"
     },
     {
-      "id": 287410,
-      "name": "Mikel Santos",
-      "teamId": 93,
-      "position": "G",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 26,
-      "team": "Athletic Club"
-    },
-    {
-      "id": 416496,
-      "name": "Orian Goren",
-      "teamId": 83,
+      "id": 5326689,
+      "name": "Mauro Roca Martínez",
+      "teamId": 102,
       "position": "M",
-      "age": 17,
+      "age": null,
       "goals": null,
       "assists": null,
-      "citizenship": "Israel",
-      "flag": "flags/il.png",
-      "jersey": 32,
-      "team": "Barcelona"
+      "citizenship": null,
+      "flag": null,
+      "jersey": 37,
+      "team": "Villarreal"
     },
     {
       "id": 174971,
@@ -7921,6 +7921,19 @@
       "flag": "flags/es.png",
       "jersey": null,
       "team": "Valencia"
+    },
+    {
+      "id": 5326690,
+      "name": "Sergio Barrera Martín",
+      "teamId": 102,
+      "position": "M",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 38,
+      "team": "Villarreal"
     },
     {
       "id": 368331,
