@@ -19,7 +19,7 @@
 
 const path = require('path');
 const { sleep, fetchJson, writeJsonIfChanged, UA_CURL } = require('./lib/http');
-const { SEASON, LEAGUES, site, monthToken, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
+const { SEASON, LEAGUES, site, monthToken, matchesForStandings, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 const DELAY_MS = 200;
@@ -68,7 +68,7 @@ function mapCompetitor(c) {
   };
 }
 
-function mapEvent(ev) {
+function mapEvent(ev, league) {
   const comp = (ev.competitions || [])[0] || {};
   const competitors = comp.competitors || [];
   const home = competitors.find((c) => c.homeAway === 'home') || competitors[0];
@@ -85,6 +85,8 @@ function mapEvent(ev) {
     venue: (comp.venue && comp.venue.fullName) || (ev.venue && ev.venue.fullName) || null,
     home: mapCompetitor(home),
     away: mapCompetitor(away),
+    // 分阶段联赛（欧冠）才写 stage，其余联赛字段零变化；淘汰赛不计入联赛阶段积分榜
+    ...(league && league.hasStages ? { stage: ev.season?.slug ?? null } : {}),
   };
 }
 
@@ -167,7 +169,7 @@ async function processLeague(league) {
         console.log(`  · ${key}: 无比赛`);
         continue;
       }
-      const matches = events.map(mapEvent);
+      const matches = events.map((ev) => mapEvent(ev, league));
       allMatches.push(...matches);
       const changed = writeJsonIfChanged(path.join(leagueDir, 'matches', `${key}.json`), {
         source: 'site.api.espn.com',
@@ -191,13 +193,15 @@ async function processLeague(league) {
     throw new Error(`[${league.slug}] ${months.length} 个月 scoreboard 全部抓取失败，拒绝以空榜覆写 standings.json`);
   }
 
-  const standings = computeStandings(allMatches, league.pointDeductions || {});
+  // 分阶段联赛（欧冠）积分榜只计联赛阶段（standingsStage），其余联赛 matchesForStandings 原样返回
+  const counted = matchesForStandings(allMatches, league);
+  const standings = computeStandings(counted, league.pointDeductions || {});
   writeJsonIfChanged(path.join(leagueDir, 'standings.json'), {
     source: '本地从 ESPN site.api 比分计算（computeStandings）',
     updateTime: new Date().toISOString(),
     league: league.slug,
     season: leagueSeason,
-    matchesCounted: allMatches.filter((m) => m.completed).length,
+    matchesCounted: counted.filter((m) => m.completed).length,
     count: standings.length,
     standings,
   });

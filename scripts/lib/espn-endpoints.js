@@ -132,6 +132,15 @@ function openMonthOf(league) {
   return league.openMonth ?? seasonOpenMonth(league.seasonType || 'european');
 }
 
+/**
+ * 积分榜阶段过滤：配置了 standingsStage 的联赛（欧冠）只取该阶段比赛，
+ * 其余联赛原样返回同一数组（零开销、行为不变）。
+ */
+function matchesForStandings(matches, league) {
+  const stage = league && league.standingsStage;
+  return stage ? matches.filter((m) => m.stage === stage) : matches;
+}
+
 /** 候选赛季（日期驱动）：欧洲制 8–12 月=当年、1–7 月=上一年；自然年制=当年 */
 function candidateSeason(seasonType, now) {
   const y = now.getUTCFullYear();
@@ -167,4 +176,4 @@ async function resolveSeasonsInPlace(leagues, now = new Date()) {
   return leagues;
 }
 
-module.exports = { CORE_BASE, SITE_BASE, SEASON, LEAGUES, core, site, monthToken, TEAM_OVERRIDES, openMonthOf, resolveSeasonsInPlace };
+module.exports = { CORE_BASE, SITE_BASE, SEASON, LEAGUES, core, site, monthToken, TEAM_OVERRIDES, openMonthOf, matchesForStandings, resolveSeasonsInPlace };

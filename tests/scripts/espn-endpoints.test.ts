@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest'
 import { createRequire } from 'node:module'
 
 const req = createRequire(import.meta.url)
-const { LEAGUES, monthToken, openMonthOf } = req('../../scripts/lib/espn-endpoints.js')
+const { LEAGUES, monthToken, openMonthOf, matchesForStandings } = req('../../scripts/lib/espn-endpoints.js')
 
 describe('monthToken（ESPN dates 月令牌）', () => {
   it('YYYY-MM → YYYYMM', () => {
@@ -33,5 +33,16 @@ describe('欧冠联赛配置', () => {
     expect(ucl).toMatchObject({
       nameZh: '欧冠', teams: 36, openMonth: 9, hasStages: true, standingsStage: 'league-phase',
     })
+  })
+})
+
+describe('matchesForStandings（积分榜阶段过滤）', () => {
+  it('欧冠只保留 league-phase', () => {
+    const ms = [{ stage: 'league-phase' }, { stage: 'round-of-16' }, { stage: 'final' }]
+    expect(matchesForStandings(ms, { standingsStage: 'league-phase' })).toEqual([{ stage: 'league-phase' }])
+  })
+  it('没有 standingsStage 的联赛原样返回同一数组', () => {
+    const ms = [{ stage: 'x' }]
+    expect(matchesForStandings(ms, {})).toBe(ms)
   })
 })
