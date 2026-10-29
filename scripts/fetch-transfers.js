@@ -66,7 +66,7 @@ async function resolveTeam(ref, teamNames, teamCache) {
 async function main() {
   const teamNames = loadTeamNames();
   const teamCache = new Map();
-  const leagues = process.env.LEAGUE ? [process.env.LEAGUE] : ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1', 'chn.1'];
+  const leagues = process.env.LEAGUE ? [process.env.LEAGUE] : ['eng.1', 'esp.1', 'ita.1', 'ger.1', 'fra.1', 'chn.1', 'uefa.champions'];
 
   for (const lg of leagues) {
     const pdir = path.join(DATA_ROOT, lg, 'players');
