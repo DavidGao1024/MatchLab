@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-10-12T02:38:12.074Z",
+  "updateTime": "2026-10-29T02:39:26.699Z",
   "league": "ita.1",
-  "playersScanned": 619,
-  "count": 518,
+  "playersScanned": 640,
+  "count": 519,
   "transfers": [
     {
       "playerId": 108482,
@@ -120,7 +120,7 @@
       "fromTeamId": 104,
       "fromTeam": "AS Roma",
       "toTeamId": 977,
-      "toTeam": "Shanghai Shenhua",
+      "toTeam": "Shanghai Shenhua FC",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -5898,6 +5898,18 @@
       "displayAmount": "Free"
     },
     {
+      "playerId": 335207,
+      "playerName": "Silvano Vos",
+      "date": "2024-08-30T07:00Z",
+      "fromTeamId": 139,
+      "fromTeam": "Ajax Amsterdam",
+      "toTeamId": 103,
+      "toTeam": "AC Milan",
+      "type": "Undisclosed",
+      "amount": 0,
+      "displayAmount": "Undisclosed"
+    },
+    {
       "playerId": 336394,
       "playerName": "Cesare Casadei",
       "date": "2022-08-19T07:00Z",
@@ -6216,7 +6228,7 @@
       "fromTeamId": null,
       "fromTeam": null,
       "toTeamId": 5326,
-      "toTeam": "Brisbane Roar",
+      "toTeam": "Brisbane Roar FC",
       "type": "Free",
       "amount": 0,
       "displayAmount": "Free"

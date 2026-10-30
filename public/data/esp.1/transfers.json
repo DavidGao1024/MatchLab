@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-10-12T02:35:15.429Z",
+  "updateTime": "2026-10-29T02:36:43.937Z",
   "league": "esp.1",
-  "playersScanned": 602,
-  "count": 454,
+  "playersScanned": 614,
+  "count": 455,
   "transfers": [
     {
       "playerId": 119620,
@@ -1087,7 +1087,7 @@
     },
     {
       "playerId": 16340,
-      "playerName": "Javier Guerra",
+      "playerName": "Javi Guerra",
       "date": "2015-01-15T08:00Z",
       "fromTeamId": 347,
       "fromTeam": "Cardiff City",
@@ -1108,6 +1108,18 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
+    },
+    {
+      "playerId": 168531,
+      "playerName": "Dani Carvajal",
+      "date": "2013-07-01T07:00Z",
+      "fromTeamId": 131,
+      "fromTeam": "Bayer Leverkusen",
+      "toTeamId": 86,
+      "toTeam": "Real Madrid",
+      "type": "Fee",
+      "amount": 6500000,
+      "displayAmount": "6500000"
     },
     {
       "playerId": 169438,

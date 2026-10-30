@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-08-18T06:48:37.434Z",
+  "updateTime": "2026-10-15T01:35:55.789Z",
   "league": "chn.1",
   "season": "2026",
   "id": 3101214,
@@ -28,6 +28,7 @@
       "tacklePct": 0,
       "totalClearance": 1,
       "totalTackles": 0,
+      "tacklesLost": 0,
       "recoveries": 1
     },
     "general": {
@@ -59,6 +60,9 @@
       "wonCorners": 0,
       "yellowCards": 0,
       "duelsLost": 4,
+      "duelsWon": 0,
+      "duels": 4,
+      "secondYellow": 0,
       "touches": 18
     },
     "goalKeeping": {
@@ -77,7 +81,8 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
@@ -85,6 +90,7 @@
       "accuratePasses": 12,
       "accurateThroughBalls": 0,
       "attemptsInBox": 11,
+      "attemptsOutBox": 0,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -121,7 +127,11 @@
       "totalLongBalls": 0,
       "totalPasses": 13,
       "totalShots": 1,
-      "totalThroughBalls": 0
+      "totalThroughBalls": 0,
+      "bigChanceCreated": 0,
+      "bigChanceMissed": 0,
+      "progressiveCarries": 0,
+      "touchesInOppBox": 0
     }
   }
 }
