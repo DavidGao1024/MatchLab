@@ -9,7 +9,7 @@
  *   public/data/{league}/standings.json           本地从已完赛比分计算（ESPN standings 端点返回空的已知坑）
  *
  * 用法：
- *   node scripts/fetch-espn-scores.js                # 全 5 联赛（月窗口 2025-07 → 2026-06）
+ *   node scripts/fetch-espn-scores.js                # 六联赛 + 欧冠（月窗口 2025-07 → 2026-06）
  *   node scripts/fetch-espn-scores.js eng.1 esp.1    # 指定联赛
  *   SEASON_START=2026 node scripts/fetch-espn-scores.js  # 下赛季窗口（2026-07 → 2027-06）
  *
@@ -19,7 +19,7 @@
 
 const path = require('path');
 const { sleep, fetchJson, writeJsonIfChanged, UA_CURL } = require('./lib/http');
-const { SEASON, LEAGUES, site, monthToken, matchesForStandings, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
+const { SEASON, LEAGUES, site, monthToken, matchesForStandings, stageFilterEmptied, resolveSeasonsInPlace } = require('./lib/espn-endpoints');
 
 const DATA_ROOT = path.join(__dirname, '..', 'public', 'data');
 const DELAY_MS = 200;
@@ -86,7 +86,7 @@ function mapEvent(ev, league) {
     home: mapCompetitor(home),
     away: mapCompetitor(away),
     // 分阶段联赛（欧冠）才写 stage，其余联赛字段零变化；淘汰赛不计入联赛阶段积分榜
-    ...(league && league.hasStages ? { stage: ev.season?.slug ?? null } : {}),
+    ...(league && league.hasStages ? { stage: ev.season?.slug || null } : {}),
   };
 }
 
@@ -195,6 +195,11 @@ async function processLeague(league) {
 
   // 分阶段联赛（欧冠）积分榜只计联赛阶段（standingsStage），其余联赛 matchesForStandings 原样返回
   const counted = matchesForStandings(allMatches, league);
+  // 阶段过滤空榜防线：窗口内有比赛但过滤后 0 场，多为 ESPN season.slug 变更/缺失/空串。
+  // 与 2026-08-05 空榜事故同类——抛错让工作流红灯，拒绝以空榜覆写上一份正确数据。
+  if (stageFilterEmptied(allMatches, counted, league)) {
+    throw new Error(`[${league.slug}] 阶段过滤 ${league.standingsStage} 后 0 场，但窗口内共 ${allMatches.length} 场——疑 ESPN season.slug 变更/缺失，拒绝以空榜覆写 standings.json（请核对 matches/*.json 的 stage 值）`);
+  }
   const standings = computeStandings(counted, league.pointDeductions || {});
   writeJsonIfChanged(path.join(leagueDir, 'standings.json'), {
     source: '本地从 ESPN site.api 比分计算（computeStandings）',

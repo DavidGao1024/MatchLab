@@ -42,10 +42,10 @@ const th = 'px-1 py-2 text-center font-cond text-[10px] font-medium uppercase tr
         <i class="inline-block h-2 w-2 rounded-sm" style="background: var(--league-color)"></i>{{ t('legend.uclTop8', app.lang) }}
       </span>
       <span class="inline-flex items-center gap-1.5">
-        <i class="inline-block h-2 w-2 rounded-sm bg-amber-500"></i>{{ t('legend.uclPlayoff', app.lang) }}
+        <i class="inline-block h-2 w-2 rounded-sm bg-slate-600"></i>{{ t('legend.uclPlayoff', app.lang) }}
       </span>
       <span class="inline-flex items-center gap-1.5">
-        <i class="inline-block h-2 w-2 rounded-sm bg-red-500"></i>{{ t('legend.uclOut', app.lang) }}
+        <i class="inline-block h-2 w-2 rounded-sm bg-slate-600"></i>{{ t('legend.uclOut', app.lang) }}
       </span>
     </template>
     <template v-else>

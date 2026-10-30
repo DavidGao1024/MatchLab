@@ -7,7 +7,7 @@
  *
  * 输出：public/data/{league}/transfers.json（该联赛球员的转会汇总）
  *
- * 用法：node scripts/fetch-transfers.js              # 全量（~4500 球员，约 40 分钟）
+ * 用法：node scripts/fetch-transfers.js              # 全量（~4500 球员）
  *       PLAYERS_LIMIT=5 node scripts/fetch-transfers.js  # 冒烟：每联赛前 5 球员
  */
 'use strict';

@@ -41,6 +41,30 @@ describe('ExportCalendarButton', () => {
     expect(w.text()).toContain('导出赛程到日历')
     expect(URL.createObjectURL).toHaveBeenCalled()
   })
+  it('欧冠导出包含次年 6 月决赛月（11 个月窗口）', async () => {
+    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
+    const w = mount(ExportCalendarButton, {
+      props: { league: 'uefa.champions', teamId: 359, teamName: 'Arsenal', teamSlug: 'arsenal', seasonStart: 2026 },
+    })
+    await w.find('button').trigger('click')
+    await flushPromises()
+    const urls = mockFetch.mock.calls.map((c) => String(c[0]))
+    expect(urls).toHaveLength(11)
+    expect(urls.some((u) => u.includes('dates=202706'))).toBe(true)
+  })
+  it('中超自然年赛季导出 12 个月（含 1 月）', async () => {
+    const { useAppStore } = await import('../../src/stores/app')
+    useAppStore().leagues = [{ slug: 'chn.1', seasonType: 'calendar' } as any]
+    mockFetch.mockResolvedValue({ ok: true, json: async () => ({ events: [] }) })
+    const w = mount(ExportCalendarButton, {
+      props: { league: 'chn.1', teamId: 1, teamName: '海港', teamSlug: 'shanghai', seasonStart: 2026 },
+    })
+    await w.find('button').trigger('click')
+    await flushPromises()
+    const urls = mockFetch.mock.calls.map((c) => String(c[0]))
+    expect(urls).toHaveLength(12)
+    expect(urls.some((u) => u.includes('dates=202601'))).toBe(true)
+  })
   it('fetch 失败 → loading 复位 + 不生成 blob', async () => {
     mockFetch.mockRejectedValue(new Error('network'))
     const w = mount(ExportCalendarButton, {

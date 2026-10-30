@@ -56,14 +56,16 @@ async function main() {
   let summaryChecked = 0;
 
   for (const league of targets) {
-    // 欧冠淘汰赛先剔除：点球大战记录为「平局 + winner=true」，会在 tied-but-winner 指纹上永久误报
-    const entries = collectEntries(league.slug).filter((e) => !isKnockoutMatch(league, e.match));
+    const entries = collectEntries(league.slug);
     const { kept, skipped } = filterKnownFixes(entries, FIXES);
     if (skipped.length) console.log(`  · 勘误在案跳过 ${skipped.length} 场：${skipped.map((e) => e.match.eventId).join(',')}`);
-    const conflicts = findWinnerConflicts(kept);
+    // 欧冠淘汰赛仅从「平局标胜者」检查中剔除：点球大战记录为「平局 + winner=true」，会永久误报；
+    // post 未完成与 0-0 幽灵场检查对淘汰赛照常生效（延期/中断同样会污染数据）。
+    const knockoutSkipped = kept.filter((e) => isKnockoutMatch(league, e.match)).length;
+    const conflicts = findWinnerConflicts(kept.filter((e) => !isKnockoutMatch(league, e.match)));
     const postNotDone = findPostNotCompleted(kept);
     issues.push(...conflicts, ...postNotDone);
-    console.log(`[${league.slug}] 场次 ${kept.length}（在案 ${skipped.length}），平局标胜者 ${conflicts.length}，post未完成 ${postNotDone.length}`);
+    console.log(`[${league.slug}] 场次 ${kept.length}（在案 ${skipped.length}），淘汰赛跳过 ${knockoutSkipped} 场（仅跳过平局标胜者检查），平局标胜者 ${conflicts.length}，post未完成 ${postNotDone.length}`);
 
     // 0-0 完赛场逐场拉 summary 核验幽灵场（真平局必有换人/牌类事件或阵容，空壳即幽灵）
     const zeroZero = kept.filter(

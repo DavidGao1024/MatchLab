@@ -141,6 +141,15 @@ function matchesForStandings(matches, league) {
   return stage ? matches.filter((m) => m.stage === stage) : matches;
 }
 
+/**
+ * 阶段过滤空榜防线：窗口内有比赛、但过滤后为 0 场，多为 ESPN season.slug 变更/缺失/空串。
+ * 与 2026-08-05 空榜事故同类——拒绝以空榜覆写上一份正确数据，让工作流红灯。
+ * 窗口本身为空（赛季初未开赛）不触发。
+ */
+function stageFilterEmptied(allMatches, counted, league) {
+  return Boolean(league && league.standingsStage && allMatches.length > 0 && counted.length === 0);
+}
+
 /** 候选赛季（日期驱动）：欧洲制 8–12 月=当年、1–7 月=上一年；自然年制=当年 */
 function candidateSeason(seasonType, now) {
   const y = now.getUTCFullYear();
@@ -176,4 +185,4 @@ async function resolveSeasonsInPlace(leagues, now = new Date()) {
   return leagues;
 }
 
-module.exports = { CORE_BASE, SITE_BASE, SEASON, LEAGUES, core, site, monthToken, TEAM_OVERRIDES, openMonthOf, matchesForStandings, resolveSeasonsInPlace };
+module.exports = { CORE_BASE, SITE_BASE, SEASON, LEAGUES, core, site, monthToken, TEAM_OVERRIDES, openMonthOf, matchesForStandings, stageFilterEmptied, resolveSeasonsInPlace };

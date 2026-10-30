@@ -7,6 +7,7 @@ import { useToast } from '../../composables/useToast'
 import { useUserDataStore } from '../../stores/userData'
 import { useAppStore } from '../../stores/app'
 import { t } from '../../utils/i18n'
+import { seasonMonths } from '../../utils/constants'
 import type { Match } from '../../types/models'
 import type { LeagueSlug } from '../../utils/constants'
 
@@ -29,13 +30,10 @@ async function onExport() {
   if (loading.value || store.readOnly) return
   loading.value = true
   try {
-    const months = ['08', '09', '10', '11', '12', '01', '02', '03', '04', '05']
-    const all = await Promise.all(
-      months.map((m) => {
-        const year = Number(m) >= 8 ? props.seasonStart : props.seasonStart + 1
-        return fetchLiveScores(props.league, `${year}-${m}`)
-      }),
-    )
+    // 月份窗口跟随联赛赛季制：欧冠含次年 6 月决赛，中超自然年 12 个月（不再写死 8–5 月）
+    const seasonType = app.leagueInfo(props.league)?.seasonType ?? 'european'
+    const months = seasonMonths(String(props.seasonStart), seasonType, props.league)
+    const all = await Promise.all(months.map((key) => fetchLiveScores(props.league, key)))
     const teamMatches = all.flat().filter((m) => {
       return m.home.id === props.teamId || m.away.id === props.teamId
     }) as Match[]

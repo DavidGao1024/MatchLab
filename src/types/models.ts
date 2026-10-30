@@ -80,8 +80,8 @@ export interface Match {
   venue: string
   home: MatchTeam
   away: MatchTeam
-  /** 赛事阶段（取 ESPN season.slug，如欧冠 league-phase / round-of-16）；所有联赛的实时归一化均会写该字段，六联赛通常为 undefined */
-  stage?: string
+  /** 赛事阶段（取 ESPN season.slug）：实时归一化对每个联赛都会写入（六联赛为其赛季 slug，如 2026-27-english-premier-league；欧冠为 league-phase / round-of-16）；静态月文件中仅欧冠写入，六联赛静态文件不带此字段 */
+  stage?: string | null
 }
 
 export interface XgRow {
