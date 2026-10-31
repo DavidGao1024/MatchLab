@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-29T02:29:26.311Z",
+  "updateTime": "2026-10-31T02:37:47.973Z",
   "league": "ger.1",
   "month": "2026-11",
   "count": 29,
@@ -656,31 +656,6 @@
       }
     },
     {
-      "eventId": "401884725",
-      "date": "2026-11-28T20:00Z",
-      "name": "FC Augsburg at TSG Hoffenheim",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
-      "venue": "PreZero Arena",
-      "home": {
-        "id": 7911,
-        "name": "TSG Hoffenheim",
-        "abbreviation": "TSG",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
-        "score": 0,
-        "winner": null
-      },
-      "away": {
-        "id": 3841,
-        "name": "FC Augsburg",
-        "abbreviation": "FCA",
-        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
-        "score": 0,
-        "winner": null
-      }
-    },
-    {
       "eventId": "401884724",
       "date": "2026-11-29T14:30Z",
       "name": "RB Leipzig at SC Freiburg",
@@ -701,6 +676,31 @@
         "name": "RB Leipzig",
         "abbreviation": "RBL",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+        "score": 0,
+        "winner": null
+      }
+    },
+    {
+      "eventId": "401884725",
+      "date": "2026-11-29T16:30Z",
+      "name": "FC Augsburg at TSG Hoffenheim",
+      "status": "pre",
+      "completed": false,
+      "clock": "0'",
+      "venue": "PreZero Arena",
+      "home": {
+        "id": 7911,
+        "name": "TSG Hoffenheim",
+        "abbreviation": "TSG",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+        "score": 0,
+        "winner": null
+      },
+      "away": {
+        "id": 3841,
+        "name": "FC Augsburg",
+        "abbreviation": "FCA",
+        "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
         "score": 0,
         "winner": null
       }

@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-29T02:29:21.071Z",
+  "updateTime": "2026-10-31T02:37:42.592Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 99,
+  "matchesCounted": 100,
   "count": 20,
   "standings": [
     {
@@ -127,13 +127,13 @@
       "rank": 10,
       "teamId": 102,
       "team": "Villarreal",
-      "played": 10,
+      "played": 11,
       "won": 3,
       "drawn": 3,
-      "lost": 4,
+      "lost": 5,
       "goalsFor": 15,
-      "goalsAgainst": 14,
-      "goalDiff": 1,
+      "goalsAgainst": 15,
+      "goalDiff": 0,
       "points": 12
     },
     {
@@ -151,6 +151,19 @@
     },
     {
       "rank": 12,
+      "teamId": 88,
+      "team": "Espanyol",
+      "played": 11,
+      "won": 3,
+      "drawn": 2,
+      "lost": 6,
+      "goalsFor": 13,
+      "goalsAgainst": 14,
+      "goalDiff": -1,
+      "points": 11
+    },
+    {
+      "rank": 13,
       "teamId": 97,
       "team": "Osasuna",
       "played": 10,
@@ -163,7 +176,7 @@
       "points": 11
     },
     {
-      "rank": 13,
+      "rank": 14,
       "teamId": 87,
       "team": "Racing Santander",
       "played": 10,
@@ -176,7 +189,7 @@
       "points": 11
     },
     {
-      "rank": 14,
+      "rank": 15,
       "teamId": 1538,
       "team": "Levante",
       "played": 10,
@@ -189,7 +202,7 @@
       "points": 10
     },
     {
-      "rank": 15,
+      "rank": 16,
       "teamId": 3751,
       "team": "Elche",
       "played": 10,
@@ -202,7 +215,7 @@
       "points": 10
     },
     {
-      "rank": 16,
+      "rank": 17,
       "teamId": 101,
       "team": "Rayo Vallecano",
       "played": 9,
@@ -215,7 +228,7 @@
       "points": 9
     },
     {
-      "rank": 17,
+      "rank": 18,
       "teamId": 2922,
       "team": "Getafe",
       "played": 10,
@@ -226,19 +239,6 @@
       "goalsAgainst": 15,
       "goalDiff": -10,
       "points": 9
-    },
-    {
-      "rank": 18,
-      "teamId": 88,
-      "team": "Espanyol",
-      "played": 10,
-      "won": 2,
-      "drawn": 2,
-      "lost": 6,
-      "goalsFor": 12,
-      "goalsAgainst": 14,
-      "goalDiff": -2,
-      "points": 8
     },
     {
       "rank": 19,

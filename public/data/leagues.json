@@ -1,6 +1,6 @@
 {
-  "updateTime": "2026-10-29T02:29:12.209Z",
-  "count": 6,
+  "updateTime": "2026-10-31T02:37:30.120Z",
+  "count": 7,
   "leagues": [
     {
       "slug": "eng.1",
@@ -24,7 +24,7 @@
       "season": "2026",
       "seasonType": "european",
       "teams": 20,
-      "players": 613
+      "players": 625
     },
     {
       "slug": "ita.1",
@@ -36,7 +36,7 @@
       "season": "2026",
       "seasonType": "european",
       "teams": 20,
-      "players": 639
+      "players": 640
     },
     {
       "slug": "ger.1",
@@ -72,7 +72,19 @@
       "season": "2026",
       "seasonType": "calendar",
       "teams": 16,
-      "players": 501
+      "players": 503
+    },
+    {
+      "slug": "uefa.champions",
+      "name": "UEFA Champions League",
+      "nameZh": "欧冠",
+      "country": "Europe",
+      "color": "#0B1E5C",
+      "understatSlug": null,
+      "season": "2026",
+      "seasonType": "european",
+      "teams": 36,
+      "players": 1163
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-29T02:29:24.811Z",
+  "updateTime": "2026-10-31T02:37:46.449Z",
   "league": "ita.1",
   "season": "2026",
-  "matchesCounted": 88,
+  "matchesCounted": 90,
   "count": 20,
   "standings": [
     {
@@ -73,6 +73,19 @@
     },
     {
       "rank": 6,
+      "teamId": 4057,
+      "team": "Frosinone",
+      "played": 9,
+      "won": 5,
+      "drawn": 2,
+      "lost": 2,
+      "goalsFor": 22,
+      "goalsAgainst": 14,
+      "goalDiff": 8,
+      "points": 17
+    },
+    {
+      "rank": 7,
       "teamId": 114,
       "team": "Napoli",
       "played": 9,
@@ -82,19 +95,6 @@
       "goalsFor": 17,
       "goalsAgainst": 11,
       "goalDiff": 6,
-      "points": 14
-    },
-    {
-      "rank": 7,
-      "teamId": 4057,
-      "team": "Frosinone",
-      "played": 8,
-      "won": 4,
-      "drawn": 2,
-      "lost": 2,
-      "goalsFor": 17,
-      "goalsAgainst": 13,
-      "goalDiff": 4,
       "points": 14
     },
     {
@@ -153,14 +153,14 @@
       "rank": 12,
       "teamId": 105,
       "team": "Atalanta",
-      "played": 8,
+      "played": 9,
       "won": 3,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 4,
-      "goalsFor": 14,
-      "goalsAgainst": 15,
+      "goalsFor": 16,
+      "goalsAgainst": 17,
       "goalDiff": -1,
-      "points": 10
+      "points": 11
     },
     {
       "rank": 13,
@@ -179,13 +179,13 @@
       "rank": 14,
       "teamId": 113,
       "team": "Lecce",
-      "played": 8,
+      "played": 9,
       "won": 3,
       "drawn": 0,
-      "lost": 5,
-      "goalsFor": 9,
-      "goalsAgainst": 14,
-      "goalDiff": -5,
+      "lost": 6,
+      "goalsFor": 10,
+      "goalsAgainst": 19,
+      "goalDiff": -9,
       "points": 9
     },
     {
@@ -229,6 +229,19 @@
     },
     {
       "rank": 18,
+      "teamId": 109,
+      "team": "Fiorentina",
+      "played": 9,
+      "won": 1,
+      "drawn": 2,
+      "lost": 6,
+      "goalsFor": 11,
+      "goalsAgainst": 21,
+      "goalDiff": -10,
+      "points": 5
+    },
+    {
+      "rank": 19,
       "teamId": 115,
       "team": "Parma",
       "played": 9,
@@ -239,19 +252,6 @@
       "goalsAgainst": 15,
       "goalDiff": -10,
       "points": 5
-    },
-    {
-      "rank": 19,
-      "teamId": 109,
-      "team": "Fiorentina",
-      "played": 8,
-      "won": 1,
-      "drawn": 1,
-      "lost": 6,
-      "goalsFor": 9,
-      "goalsAgainst": 19,
-      "goalDiff": -10,
-      "points": 4
     },
     {
       "rank": 20,

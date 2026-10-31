@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-29T02:29:22.323Z",
+  "updateTime": "2026-10-31T02:37:44.165Z",
   "league": "ita.1",
   "month": "2026-10",
   "count": 43,
@@ -997,24 +997,25 @@
       "eventId": "401874976",
       "date": "2026-10-29T17:30Z",
       "name": "Lecce at Frosinone",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Stadio Benito Stirpe",
       "home": {
         "id": 4057,
         "name": "Frosinone",
         "abbreviation": "FRO",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
-        "score": 0,
-        "winner": null
+        "score": 5,
+        "winner": true
       },
       "away": {
         "id": 113,
         "name": "Lecce",
         "abbreviation": "LEC",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/113.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -1022,16 +1023,17 @@
       "eventId": "401874969",
       "date": "2026-10-29T19:45Z",
       "name": "Atalanta at Fiorentina",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Stadio Artemio Franchi",
       "home": {
         "id": 109,
         "name": "Fiorentina",
         "abbreviation": "FIO",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       },
       "away": {
@@ -1039,7 +1041,7 @@
         "name": "Atalanta",
         "abbreviation": "ATA",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
-        "score": 0,
+        "score": 2,
         "winner": null
       }
     },

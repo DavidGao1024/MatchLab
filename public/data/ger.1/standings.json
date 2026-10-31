@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-29T02:29:28.582Z",
+  "updateTime": "2026-10-31T02:37:49.951Z",
   "league": "ger.1",
   "season": "2026",
-  "matchesCounted": 63,
+  "matchesCounted": 64,
   "count": 18,
   "standings": [
     {
@@ -60,6 +60,19 @@
     },
     {
       "rank": 5,
+      "teamId": 10388,
+      "team": "SV Elversberg",
+      "played": 8,
+      "won": 4,
+      "drawn": 1,
+      "lost": 3,
+      "goalsFor": 16,
+      "goalsAgainst": 16,
+      "goalDiff": 0,
+      "points": 13
+    },
+    {
+      "rank": 6,
       "teamId": 11420,
       "team": "RB Leipzig",
       "played": 7,
@@ -72,7 +85,7 @@
       "points": 12
     },
     {
-      "rank": 6,
+      "rank": 7,
       "teamId": 137,
       "team": "Werder Bremen",
       "played": 7,
@@ -85,29 +98,16 @@
       "points": 12
     },
     {
-      "rank": 7,
+      "rank": 8,
       "teamId": 2950,
       "team": "Mainz",
-      "played": 7,
+      "played": 8,
       "won": 3,
       "drawn": 1,
-      "lost": 3,
-      "goalsFor": 16,
-      "goalsAgainst": 13,
-      "goalDiff": 3,
-      "points": 10
-    },
-    {
-      "rank": 8,
-      "teamId": 10388,
-      "team": "SV Elversberg",
-      "played": 7,
-      "won": 3,
-      "drawn": 1,
-      "lost": 3,
-      "goalsFor": 12,
-      "goalsAgainst": 15,
-      "goalDiff": -3,
+      "lost": 4,
+      "goalsFor": 17,
+      "goalsAgainst": 17,
+      "goalDiff": 0,
       "points": 10
     },
     {

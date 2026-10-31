@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-12T02:09:27.864Z",
+  "updateTime": "2026-10-31T02:09:07.748Z",
   "league": "ita.1",
   "season": "2026",
   "id": 267711,
@@ -21,18 +21,18 @@
   "stats": {
     "defensive": {
       "blockedShots": 0,
-      "effectiveClearance": 0,
+      "effectiveClearance": 1,
       "effectiveTackles": 0,
       "inneffectiveTackles": 1,
       "interceptions": 0,
       "tacklePct": 0,
-      "totalClearance": 0,
+      "totalClearance": 1,
       "totalTackles": 1,
       "tacklesLost": 1,
       "recoveries": 2
     },
     "general": {
-      "appearances": 1,
+      "appearances": 2,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -45,12 +45,12 @@
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 17,
+      "minutes": 21,
       "ownGoals": 0,
-      "passPct": 0.667,
+      "passPct": 0.733,
       "redCards": 0,
       "starts": 0,
-      "subIns": 1,
+      "subIns": 2,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -60,10 +60,10 @@
       "wonCorners": 0,
       "yellowCards": 0,
       "duelsLost": 2,
-      "duelsWon": 1,
-      "duels": 3,
+      "duelsWon": 2,
+      "duels": 4,
       "secondYellow": 0,
-      "touches": 22
+      "touches": 27
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -87,10 +87,10 @@
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 0,
-      "accuratePasses": 8,
+      "accuratePasses": 11,
       "accurateThroughBalls": 0,
       "attemptsInBox": 3,
-      "attemptsOutBox": 0,
+      "attemptsOutBox": 1,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -122,15 +122,15 @@
       "shotsOnPost": 0,
       "shotsOnTarget": 0,
       "throughBallPct": 0,
-      "totalCrosses": 1,
+      "totalCrosses": 2,
       "totalGoals": 0,
       "totalLongBalls": 0,
-      "totalPasses": 12,
+      "totalPasses": 15,
       "totalShots": 0,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 0,
-      "progressiveCarries": 2,
+      "progressiveCarries": 4,
       "touchesInOppBox": 2
     }
   }
