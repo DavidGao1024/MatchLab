@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-31T02:37:53.341Z",
+  "updateTime": "2026-11-01T02:20:07.189Z",
   "league": "fra.1",
   "season": "2026",
-  "matchesCounted": 75,
+  "matchesCounted": 76,
   "count": 18,
   "standings": [
     {
@@ -190,16 +190,16 @@
     },
     {
       "rank": 15,
-      "teamId": 2697,
-      "team": "Le Mans",
-      "played": 8,
-      "won": 1,
-      "drawn": 4,
-      "lost": 3,
-      "goalsFor": 11,
+      "teamId": 170,
+      "team": "Troyes",
+      "played": 9,
+      "won": 2,
+      "drawn": 2,
+      "lost": 5,
+      "goalsFor": 7,
       "goalsAgainst": 16,
-      "goalDiff": -5,
-      "points": 7
+      "goalDiff": -9,
+      "points": 8
     },
     {
       "rank": 16,
@@ -216,16 +216,16 @@
     },
     {
       "rank": 17,
-      "teamId": 170,
-      "team": "Troyes",
-      "played": 8,
+      "teamId": 2697,
+      "team": "Le Mans",
+      "played": 9,
       "won": 1,
-      "drawn": 2,
-      "lost": 5,
-      "goalsFor": 5,
-      "goalsAgainst": 16,
-      "goalDiff": -11,
-      "points": 5
+      "drawn": 4,
+      "lost": 4,
+      "goalsFor": 11,
+      "goalsAgainst": 18,
+      "goalDiff": -7,
+      "points": 7
     },
     {
       "rank": 18,

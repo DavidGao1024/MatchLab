@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-10-31T02:37:51.001Z",
+  "updateTime": "2026-11-01T02:20:04.800Z",
   "league": "fra.1",
   "month": "2026-10",
   "count": 31,
@@ -789,17 +789,18 @@
       "eventId": "401876413",
       "date": "2026-10-31T19:45Z",
       "name": "Le Mans at Troyes",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Stade de l'Aube",
       "home": {
         "id": 170,
         "name": "Troyes",
         "abbreviation": "TRY",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/170.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 2697,

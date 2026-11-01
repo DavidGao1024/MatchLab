@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-29T02:11:14.999Z",
+  "updateTime": "2026-11-01T01:53:22.896Z",
   "league": "esp.1",
   "season": "2026",
   "categories": [
@@ -66,7 +66,7 @@
         {
           "rank": 7,
           "value": 6,
-          "displayValue": "Matches: 10, Goals: 6",
+          "displayValue": "Matches: 11, Goals: 6",
           "athleteId": 318773,
           "athleteName": "Roberto Fernández",
           "teamId": 88,
@@ -138,6 +138,15 @@
         {
           "rank": 15,
           "value": 3,
+          "displayValue": "Matches: 11, Goals: 3",
+          "athleteId": 300002,
+          "athleteName": "Georges Mikautadze",
+          "teamId": 102,
+          "teamName": "Villarreal"
+        },
+        {
+          "rank": 16,
+          "value": 3,
           "displayValue": "Matches: 10, Goals: 3",
           "athleteId": 291281,
           "athleteName": "Jude Bellingham",
@@ -145,7 +154,7 @@
           "teamName": "Real Madrid"
         },
         {
-          "rank": 16,
+          "rank": 17,
           "value": 3,
           "displayValue": "Matches: 10, Goals: 3",
           "athleteId": 125200,
@@ -154,7 +163,7 @@
           "teamName": "Rayo Vallecano"
         },
         {
-          "rank": 17,
+          "rank": 18,
           "value": 3,
           "displayValue": "Matches: 10, Goals: 3",
           "athleteId": 255889,
@@ -163,7 +172,7 @@
           "teamName": "Villarreal"
         },
         {
-          "rank": 18,
+          "rank": 19,
           "value": 3,
           "displayValue": "Matches: 10, Goals: 3",
           "athleteId": 311054,
@@ -172,22 +181,13 @@
           "teamName": "Levante"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "value": 3,
           "displayValue": "Matches: 10, Goals: 3",
           "athleteId": 209579,
           "athleteName": "Álex Berenguer",
           "teamId": 93,
           "teamName": "Athletic Club"
-        },
-        {
-          "rank": 20,
-          "value": 3,
-          "displayValue": "Matches: 10, Goals: 3",
-          "athleteId": 300002,
-          "athleteName": "Georges Mikautadze",
-          "teamId": 102,
-          "teamName": "Villarreal"
         },
         {
           "rank": 21,
@@ -244,6 +244,15 @@
         {
           "rank": 1,
           "value": 6,
+          "displayValue": "Matches: 11, Assists: 6",
+          "athleteId": 367946,
+          "athleteName": "Javi Hernandez",
+          "teamId": 88,
+          "teamName": "Espanyol"
+        },
+        {
+          "rank": 2,
+          "value": 6,
           "displayValue": "Matches: 10, Assists: 6",
           "athleteId": 362150,
           "athleteName": "Lamine Yamal",
@@ -251,18 +260,9 @@
           "teamName": "Barcelona"
         },
         {
-          "rank": 2,
-          "value": 6,
-          "displayValue": "Matches: 10, Assists: 6",
-          "athleteId": 367946,
-          "athleteName": "Javi Hernandez",
-          "teamId": 88,
-          "teamName": "Espanyol"
-        },
-        {
           "rank": 3,
           "value": 4,
-          "displayValue": "Matches: 10, Assists: 4",
+          "displayValue": "Matches: 11, Assists: 4",
           "athleteId": 307390,
           "athleteName": "Alberto Moleiro",
           "teamId": 102,
@@ -406,6 +406,15 @@
         {
           "rank": 19,
           "value": 2,
+          "displayValue": "Matches: 11, Assists: 2",
+          "athleteId": 192133,
+          "athleteName": "Ayoze Pérez",
+          "teamId": 102,
+          "teamName": "Villarreal"
+        },
+        {
+          "rank": 20,
+          "value": 2,
           "displayValue": "Matches: 10, Assists: 2",
           "athleteId": 231388,
           "athleteName": "Kylian Mbappé",
@@ -413,7 +422,7 @@
           "teamName": "Real Madrid"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 2,
           "displayValue": "Matches: 10, Assists: 2",
           "athleteId": 16340,
@@ -422,7 +431,7 @@
           "teamName": "Valencia"
         },
         {
-          "rank": 21,
+          "rank": 22,
           "value": 2,
           "displayValue": "Matches: 10, Assists: 2",
           "athleteId": 235818,
@@ -431,7 +440,7 @@
           "teamName": "Real Madrid"
         },
         {
-          "rank": 22,
+          "rank": 23,
           "value": 2,
           "displayValue": "Matches: 10, Assists: 2",
           "athleteId": 297353,
@@ -440,7 +449,7 @@
           "teamName": "Deportivo"
         },
         {
-          "rank": 23,
+          "rank": 24,
           "value": 2,
           "displayValue": "Matches: 10, Assists: 2",
           "athleteId": 257786,
@@ -449,22 +458,13 @@
           "teamName": "Atlético Madrid"
         },
         {
-          "rank": 24,
+          "rank": 25,
           "value": 2,
           "displayValue": "Matches: 10, Assists: 2",
           "athleteId": 125200,
           "athleteName": "Álvaro García",
           "teamId": 101,
           "teamName": "Rayo Vallecano"
-        },
-        {
-          "rank": 25,
-          "value": 2,
-          "displayValue": "Matches: 10, Assists: 2",
-          "athleteId": 250465,
-          "athleteName": "Pedri",
-          "teamId": 83,
-          "teamName": "Barcelona"
         }
       ]
     },
@@ -603,13 +603,22 @@
           "rank": 15,
           "value": 3,
           "displayValue": "3",
+          "athleteId": 300002,
+          "athleteName": "Georges Mikautadze",
+          "teamId": 102,
+          "teamName": "Villarreal"
+        },
+        {
+          "rank": 16,
+          "value": 3,
+          "displayValue": "3",
           "athleteId": 291281,
           "athleteName": "Jude Bellingham",
           "teamId": 86,
           "teamName": "Real Madrid"
         },
         {
-          "rank": 16,
+          "rank": 17,
           "value": 3,
           "displayValue": "3",
           "athleteId": 125200,
@@ -618,7 +627,7 @@
           "teamName": "Rayo Vallecano"
         },
         {
-          "rank": 17,
+          "rank": 18,
           "value": 3,
           "displayValue": "3",
           "athleteId": 255889,
@@ -627,7 +636,7 @@
           "teamName": "Villarreal"
         },
         {
-          "rank": 18,
+          "rank": 19,
           "value": 3,
           "displayValue": "3",
           "athleteId": 311054,
@@ -636,22 +645,13 @@
           "teamName": "Levante"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "value": 3,
           "displayValue": "3",
           "athleteId": 209579,
           "athleteName": "Álex Berenguer",
           "teamId": 93,
           "teamName": "Athletic Club"
-        },
-        {
-          "rank": 20,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 300002,
-          "athleteName": "Georges Mikautadze",
-          "teamId": 102,
-          "teamName": "Villarreal"
         },
         {
           "rank": 21,
@@ -709,19 +709,19 @@
           "rank": 1,
           "value": 6,
           "displayValue": "6",
-          "athleteId": 362150,
-          "athleteName": "Lamine Yamal",
-          "teamId": 83,
-          "teamName": "Barcelona"
+          "athleteId": 367946,
+          "athleteName": "Javi Hernandez",
+          "teamId": 88,
+          "teamName": "Espanyol"
         },
         {
           "rank": 2,
           "value": 6,
           "displayValue": "6",
-          "athleteId": 367946,
-          "athleteName": "Javi Hernandez",
-          "teamId": 88,
-          "teamName": "Espanyol"
+          "athleteId": 362150,
+          "athleteName": "Lamine Yamal",
+          "teamId": 83,
+          "teamName": "Barcelona"
         },
         {
           "rank": 3,
@@ -871,13 +871,22 @@
           "rank": 19,
           "value": 2,
           "displayValue": "2",
+          "athleteId": 192133,
+          "athleteName": "Ayoze Pérez",
+          "teamId": 102,
+          "teamName": "Villarreal"
+        },
+        {
+          "rank": 20,
+          "value": 2,
+          "displayValue": "2",
           "athleteId": 231388,
           "athleteName": "Kylian Mbappé",
           "teamId": 86,
           "teamName": "Real Madrid"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 2,
           "displayValue": "2",
           "athleteId": 16340,
@@ -886,7 +895,7 @@
           "teamName": "Valencia"
         },
         {
-          "rank": 21,
+          "rank": 22,
           "value": 2,
           "displayValue": "2",
           "athleteId": 235818,
@@ -895,7 +904,7 @@
           "teamName": "Real Madrid"
         },
         {
-          "rank": 22,
+          "rank": 23,
           "value": 2,
           "displayValue": "2",
           "athleteId": 297353,
@@ -904,7 +913,7 @@
           "teamName": "Deportivo"
         },
         {
-          "rank": 23,
+          "rank": 24,
           "value": 2,
           "displayValue": "2",
           "athleteId": 257786,
@@ -913,22 +922,13 @@
           "teamName": "Atlético Madrid"
         },
         {
-          "rank": 24,
+          "rank": 25,
           "value": 2,
           "displayValue": "2",
           "athleteId": 125200,
           "athleteName": "Álvaro García",
           "teamId": 101,
           "teamName": "Rayo Vallecano"
-        },
-        {
-          "rank": 25,
-          "value": 2,
-          "displayValue": "2",
-          "athleteId": 250465,
-          "athleteName": "Pedri",
-          "teamId": 83,
-          "teamName": "Barcelona"
         }
       ]
     },
@@ -977,13 +977,22 @@
           "rank": 5,
           "value": 14,
           "displayValue": "14",
+          "athleteId": 300002,
+          "athleteName": "Georges Mikautadze",
+          "teamId": 102,
+          "teamName": "Villarreal"
+        },
+        {
+          "rank": 6,
+          "value": 14,
+          "displayValue": "14",
           "athleteId": 281558,
           "athleteName": "Antony",
           "teamId": 244,
           "teamName": "Real Betis"
         },
         {
-          "rank": 6,
+          "rank": 7,
           "value": 13,
           "displayValue": "13",
           "athleteId": 390389,
@@ -992,22 +1001,13 @@
           "teamName": "Racing Santander"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "value": 12,
           "displayValue": "12",
           "athleteId": 276652,
           "athleteName": "Sergio Camello",
           "teamId": 101,
           "teamName": "Rayo Vallecano"
-        },
-        {
-          "rank": 8,
-          "value": 12,
-          "displayValue": "12",
-          "athleteId": 300002,
-          "athleteName": "Georges Mikautadze",
-          "teamId": 102,
-          "teamName": "Villarreal"
         },
         {
           "rank": 9,
@@ -1112,17 +1112,17 @@
           "rank": 20,
           "value": 8,
           "displayValue": "8",
-          "athleteId": 125383,
-          "athleteName": "Sergio Canales",
-          "teamId": 87,
-          "teamName": "Racing Santander"
+          "athleteId": 307390,
+          "athleteName": "Alberto Moleiro",
+          "teamId": 102,
+          "teamName": "Villarreal"
         },
         {
           "rank": 21,
           "value": 8,
           "displayValue": "8",
-          "athleteId": 307390,
-          "athleteName": "Alberto Moleiro",
+          "athleteId": 192133,
+          "athleteName": "Ayoze Pérez",
           "teamId": 102,
           "teamName": "Villarreal"
         },
@@ -1130,19 +1130,19 @@
           "rank": 22,
           "value": 8,
           "displayValue": "8",
-          "athleteId": 310452,
-          "athleteName": "Arda Güler",
-          "teamId": 86,
-          "teamName": "Real Madrid"
+          "athleteId": 125383,
+          "athleteName": "Sergio Canales",
+          "teamId": 87,
+          "teamName": "Racing Santander"
         },
         {
           "rank": 23,
           "value": 8,
           "displayValue": "8",
-          "athleteId": 192133,
-          "athleteName": "Ayoze Pérez",
-          "teamId": 102,
-          "teamName": "Villarreal"
+          "athleteId": 310452,
+          "athleteName": "Arda Güler",
+          "teamId": 86,
+          "teamName": "Real Madrid"
         },
         {
           "rank": 24,
@@ -1191,13 +1191,22 @@
           "rank": 3,
           "value": 5,
           "displayValue": "5",
+          "athleteId": 401377,
+          "athleteName": "Roger Hinojo",
+          "teamId": 88,
+          "teamName": "Espanyol"
+        },
+        {
+          "rank": 4,
+          "value": 5,
+          "displayValue": "5",
           "athleteId": 173247,
           "athleteName": "Johan Mojica",
           "teamId": 2922,
           "teamName": "Getafe"
         },
         {
-          "rank": 4,
+          "rank": 5,
           "value": 5,
           "displayValue": "5",
           "athleteId": 365821,
@@ -1206,43 +1215,7 @@
           "teamName": "Sevilla"
         },
         {
-          "rank": 5,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 384643,
-          "athleteName": "Yoel Lago",
-          "teamId": 85,
-          "teamName": "Celta Vigo"
-        },
-        {
           "rank": 6,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 273424,
-          "athleteName": "Gonzalo Villar",
-          "teamId": 3751,
-          "teamName": "Elche"
-        },
-        {
-          "rank": 7,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 286176,
-          "athleteName": "Jon Moncayola",
-          "teamId": 97,
-          "teamName": "Osasuna"
-        },
-        {
-          "rank": 8,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 390389,
-          "athleteName": "Yassir Zabiri",
-          "teamId": 87,
-          "teamName": "Racing Santander"
-        },
-        {
-          "rank": 9,
           "value": 4,
           "displayValue": "4",
           "athleteId": 337011,
@@ -1251,7 +1224,43 @@
           "teamName": "Villarreal"
         },
         {
+          "rank": 7,
+          "value": 4,
+          "displayValue": "4",
+          "athleteId": 384643,
+          "athleteName": "Yoel Lago",
+          "teamId": 85,
+          "teamName": "Celta Vigo"
+        },
+        {
+          "rank": 8,
+          "value": 4,
+          "displayValue": "4",
+          "athleteId": 273424,
+          "athleteName": "Gonzalo Villar",
+          "teamId": 3751,
+          "teamName": "Elche"
+        },
+        {
+          "rank": 9,
+          "value": 4,
+          "displayValue": "4",
+          "athleteId": 286176,
+          "athleteName": "Jon Moncayola",
+          "teamId": 97,
+          "teamName": "Osasuna"
+        },
+        {
           "rank": 10,
+          "value": 4,
+          "displayValue": "4",
+          "athleteId": 390389,
+          "athleteName": "Yassir Zabiri",
+          "teamId": 87,
+          "teamName": "Racing Santander"
+        },
+        {
+          "rank": 11,
           "value": 4,
           "displayValue": "4",
           "athleteId": 251634,
@@ -1260,22 +1269,13 @@
           "teamName": "Real Madrid"
         },
         {
-          "rank": 11,
+          "rank": 12,
           "value": 4,
           "displayValue": "4",
           "athleteId": 309838,
           "athleteName": "Ramón Terrats",
           "teamId": 2922,
           "teamName": "Getafe"
-        },
-        {
-          "rank": 12,
-          "value": 4,
-          "displayValue": "4",
-          "athleteId": 401377,
-          "athleteName": "Roger Hinojo",
-          "teamId": 88,
-          "teamName": "Espanyol"
         },
         {
           "rank": 13,
@@ -1317,13 +1317,22 @@
           "rank": 17,
           "value": 3,
           "displayValue": "3",
+          "athleteId": 255272,
+          "athleteName": "Edu Expósito",
+          "teamId": 88,
+          "teamName": "Espanyol"
+        },
+        {
+          "rank": 18,
+          "value": 3,
+          "displayValue": "3",
           "athleteId": 279738,
           "athleteName": "Juan Iglesias",
           "teamId": 243,
           "teamName": "Sevilla"
         },
         {
-          "rank": 18,
+          "rank": 19,
           "value": 3,
           "displayValue": "3",
           "athleteId": 262491,
@@ -1332,7 +1341,7 @@
           "teamName": "Alavés"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "value": 3,
           "displayValue": "3",
           "athleteId": 297828,
@@ -1341,22 +1350,13 @@
           "teamName": "Málaga"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 3,
           "displayValue": "3",
           "athleteId": 284699,
           "athleteName": "Iñigo Vicente",
           "teamId": 87,
           "teamName": "Racing Santander"
-        },
-        {
-          "rank": 21,
-          "value": 3,
-          "displayValue": "3",
-          "athleteId": 255272,
-          "athleteName": "Edu Expósito",
-          "teamId": 88,
-          "teamName": "Espanyol"
         },
         {
           "rank": 22,
@@ -1414,19 +1414,19 @@
           "rank": 2,
           "value": 1,
           "displayValue": "1",
-          "athleteId": 255889,
-          "athleteName": "Pape Gueye",
-          "teamId": 102,
-          "teamName": "Villarreal"
+          "athleteId": 310682,
+          "athleteName": "Omar El Hilali",
+          "teamId": 88,
+          "teamName": "Espanyol"
         },
         {
           "rank": 3,
           "value": 1,
           "displayValue": "1",
-          "athleteId": 310682,
-          "athleteName": "Omar El Hilali",
-          "teamId": 88,
-          "teamName": "Espanyol"
+          "athleteId": 255889,
+          "athleteName": "Pape Gueye",
+          "teamId": 102,
+          "teamName": "Villarreal"
         },
         {
           "rank": 4,
@@ -1655,13 +1655,22 @@
           "rank": 3,
           "value": 21,
           "displayValue": "21",
+          "athleteId": 318773,
+          "athleteName": "Roberto Fernández",
+          "teamId": 88,
+          "teamName": "Espanyol"
+        },
+        {
+          "rank": 4,
+          "value": 21,
+          "displayValue": "21",
           "athleteId": 310682,
           "athleteName": "Omar El Hilali",
           "teamId": 88,
           "teamName": "Espanyol"
         },
         {
-          "rank": 4,
+          "rank": 5,
           "value": 20,
           "displayValue": "20",
           "athleteId": 367946,
@@ -1670,7 +1679,7 @@
           "teamName": "Espanyol"
         },
         {
-          "rank": 5,
+          "rank": 6,
           "value": 19,
           "displayValue": "19",
           "athleteId": 282289,
@@ -1679,22 +1688,13 @@
           "teamName": "Sevilla"
         },
         {
-          "rank": 6,
+          "rank": 7,
           "value": 18,
           "displayValue": "18",
           "athleteId": 222037,
           "athleteName": "Gabriel Suazo",
           "teamId": 243,
           "teamName": "Sevilla"
-        },
-        {
-          "rank": 7,
-          "value": 17,
-          "displayValue": "17",
-          "athleteId": 318773,
-          "athleteName": "Roberto Fernández",
-          "teamId": 88,
-          "teamName": "Espanyol"
         },
         {
           "rank": 8,
@@ -1718,13 +1718,22 @@
           "rank": 10,
           "value": 17,
           "displayValue": "17",
+          "athleteId": 240623,
+          "athleteName": "Santi Comesaña",
+          "teamId": 102,
+          "teamName": "Villarreal"
+        },
+        {
+          "rank": 11,
+          "value": 17,
+          "displayValue": "17",
           "athleteId": 259916,
           "athleteName": "José Antonio Morente",
           "teamId": 3751,
           "teamName": "Elche"
         },
         {
-          "rank": 11,
+          "rank": 12,
           "value": 17,
           "displayValue": "17",
           "athleteId": 357147,
@@ -1733,7 +1742,7 @@
           "teamName": "Getafe"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "value": 16,
           "displayValue": "16",
           "athleteId": 384643,
@@ -1742,7 +1751,7 @@
           "teamName": "Celta Vigo"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "value": 15,
           "displayValue": "15",
           "athleteId": 265997,
@@ -1751,7 +1760,7 @@
           "teamName": "Alavés"
         },
         {
-          "rank": 14,
+          "rank": 15,
           "value": 15,
           "displayValue": "15",
           "athleteId": 284854,
@@ -1760,7 +1769,7 @@
           "teamName": "Getafe"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "value": 15,
           "displayValue": "15",
           "athleteId": 297373,
@@ -1769,7 +1778,7 @@
           "teamName": "Atlético Madrid"
         },
         {
-          "rank": 16,
+          "rank": 17,
           "value": 15,
           "displayValue": "15",
           "athleteId": 324166,
@@ -1778,7 +1787,7 @@
           "teamName": "Deportivo"
         },
         {
-          "rank": 17,
+          "rank": 18,
           "value": 15,
           "displayValue": "15",
           "athleteId": 356639,
@@ -1787,7 +1796,7 @@
           "teamName": "Deportivo"
         },
         {
-          "rank": 18,
+          "rank": 19,
           "value": 14,
           "displayValue": "14",
           "athleteId": 140754,
@@ -1796,7 +1805,7 @@
           "teamName": "Rayo Vallecano"
         },
         {
-          "rank": 19,
+          "rank": 20,
           "value": 14,
           "displayValue": "14",
           "athleteId": 207288,
@@ -1805,22 +1814,13 @@
           "teamName": "Osasuna"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 14,
           "displayValue": "14",
           "athleteId": 390389,
           "athleteName": "Yassir Zabiri",
           "teamId": 87,
           "teamName": "Racing Santander"
-        },
-        {
-          "rank": 21,
-          "value": 14,
-          "displayValue": "14",
-          "athleteId": 240623,
-          "athleteName": "Santi Comesaña",
-          "teamId": 102,
-          "teamName": "Villarreal"
         },
         {
           "rank": 22,
@@ -2031,13 +2031,22 @@
           "rank": 19,
           "value": 15,
           "displayValue": "15",
+          "athleteId": 367946,
+          "athleteName": "Javi Hernandez",
+          "teamId": 88,
+          "teamName": "Espanyol"
+        },
+        {
+          "rank": 20,
+          "value": 15,
+          "displayValue": "15",
           "athleteId": 231388,
           "athleteName": "Kylian Mbappé",
           "teamId": 86,
           "teamName": "Real Madrid"
         },
         {
-          "rank": 20,
+          "rank": 21,
           "value": 15,
           "displayValue": "15",
           "athleteId": 279738,
@@ -2046,7 +2055,7 @@
           "teamName": "Sevilla"
         },
         {
-          "rank": 21,
+          "rank": 22,
           "value": 15,
           "displayValue": "15",
           "athleteId": 262491,
@@ -2055,7 +2064,7 @@
           "teamName": "Alavés"
         },
         {
-          "rank": 22,
+          "rank": 23,
           "value": 15,
           "displayValue": "15",
           "athleteId": 178237,
@@ -2064,7 +2073,7 @@
           "teamName": "Racing Santander"
         },
         {
-          "rank": 23,
+          "rank": 24,
           "value": 15,
           "displayValue": "15",
           "athleteId": 310452,
@@ -2073,22 +2082,13 @@
           "teamName": "Real Madrid"
         },
         {
-          "rank": 24,
+          "rank": 25,
           "value": 15,
           "displayValue": "15",
           "athleteId": 173247,
           "athleteName": "Johan Mojica",
           "teamId": 2922,
           "teamName": "Getafe"
-        },
-        {
-          "rank": 25,
-          "value": 14,
-          "displayValue": "14",
-          "athleteId": 192133,
-          "athleteName": "Ayoze Pérez",
-          "teamId": 102,
-          "teamName": "Villarreal"
         }
       ]
     },
@@ -2146,13 +2146,22 @@
           "rank": 6,
           "value": 25,
           "displayValue": "25",
+          "athleteId": 300002,
+          "athleteName": "Georges Mikautadze",
+          "teamId": 102,
+          "teamName": "Villarreal"
+        },
+        {
+          "rank": 7,
+          "value": 25,
+          "displayValue": "25",
           "athleteId": 274197,
           "athleteName": "Lee Kang-In",
           "teamId": 1068,
           "teamName": "Atlético Madrid"
         },
         {
-          "rank": 7,
+          "rank": 8,
           "value": 24,
           "displayValue": "24",
           "athleteId": 414299,
@@ -2161,7 +2170,7 @@
           "teamName": "Deportivo"
         },
         {
-          "rank": 8,
+          "rank": 9,
           "value": 23,
           "displayValue": "23",
           "athleteId": 276652,
@@ -2170,7 +2179,7 @@
           "teamName": "Rayo Vallecano"
         },
         {
-          "rank": 9,
+          "rank": 10,
           "value": 23,
           "displayValue": "23",
           "athleteId": 207236,
@@ -2179,7 +2188,7 @@
           "teamName": "Alavés"
         },
         {
-          "rank": 10,
+          "rank": 11,
           "value": 23,
           "displayValue": "23",
           "athleteId": 252107,
@@ -2188,7 +2197,7 @@
           "teamName": "Real Madrid"
         },
         {
-          "rank": 11,
+          "rank": 12,
           "value": 22,
           "displayValue": "22",
           "athleteId": 318773,
@@ -2197,7 +2206,7 @@
           "teamName": "Espanyol"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "value": 22,
           "displayValue": "22",
           "athleteId": 388602,
@@ -2206,7 +2215,7 @@
           "teamName": "Málaga"
         },
         {
-          "rank": 13,
+          "rank": 14,
           "value": 22,
           "displayValue": "22",
           "athleteId": 125383,
@@ -2215,7 +2224,7 @@
           "teamName": "Racing Santander"
         },
         {
-          "rank": 14,
+          "rank": 15,
           "value": 22,
           "displayValue": "22",
           "athleteId": 390389,
@@ -2224,22 +2233,13 @@
           "teamName": "Racing Santander"
         },
         {
-          "rank": 15,
+          "rank": 16,
           "value": 22,
           "displayValue": "22",
           "athleteId": 297373,
           "athleteName": "Álex Baena",
           "teamId": 1068,
           "teamName": "Atlético Madrid"
-        },
-        {
-          "rank": 16,
-          "value": 22,
-          "displayValue": "22",
-          "athleteId": 300002,
-          "athleteName": "Georges Mikautadze",
-          "teamId": 102,
-          "teamName": "Villarreal"
         },
         {
           "rank": 17,
@@ -2308,19 +2308,19 @@
           "rank": 24,
           "value": 19,
           "displayValue": "19",
-          "athleteId": 291281,
-          "athleteName": "Jude Bellingham",
-          "teamId": 86,
-          "teamName": "Real Madrid"
+          "athleteId": 192133,
+          "athleteName": "Ayoze Pérez",
+          "teamId": 102,
+          "teamName": "Villarreal"
         },
         {
           "rank": 25,
           "value": 19,
           "displayValue": "19",
-          "athleteId": 214412,
-          "athleteName": "Iñaki Williams",
-          "teamId": 93,
-          "teamName": "Athletic Club"
+          "athleteId": 291281,
+          "athleteName": "Jude Bellingham",
+          "teamId": 86,
+          "teamName": "Real Madrid"
         }
       ]
     },
@@ -2331,21 +2331,21 @@
       "entries": [
         {
           "rank": 1,
+          "value": 779,
+          "displayValue": "779",
+          "athleteId": 337011,
+          "athleteName": "Renato Veiga",
+          "teamId": 102,
+          "teamName": "Villarreal"
+        },
+        {
+          "rank": 2,
           "value": 696,
           "displayValue": "696",
           "athleteId": 231828,
           "athleteName": "Rodri",
           "teamId": 83,
           "teamName": "Barcelona"
-        },
-        {
-          "rank": 2,
-          "value": 686,
-          "displayValue": "686",
-          "athleteId": 337011,
-          "athleteName": "Renato Veiga",
-          "teamId": 102,
-          "teamName": "Villarreal"
         },
         {
           "rank": 3,
@@ -2547,12 +2547,12 @@
         },
         {
           "rank": 25,
-          "value": 425,
-          "displayValue": "425",
-          "athleteId": 301526,
-          "athleteName": "Natan",
-          "teamId": 244,
-          "teamName": "Real Betis"
+          "value": 434,
+          "displayValue": "434",
+          "athleteId": 248276,
+          "athleteName": "Alex Freeman",
+          "teamId": 102,
+          "teamName": "Villarreal"
         }
       ]
     },
@@ -2698,6 +2698,15 @@
         },
         {
           "rank": 16,
+          "value": 23,
+          "displayValue": "23",
+          "athleteId": 307419,
+          "athleteName": "Ángel Fortuño",
+          "teamId": 88,
+          "teamName": "Espanyol"
+        },
+        {
+          "rank": 17,
           "value": 22,
           "displayValue": "22",
           "athleteId": 179211,
@@ -2706,7 +2715,7 @@
           "teamName": "Espanyol"
         },
         {
-          "rank": 17,
+          "rank": 18,
           "value": 21,
           "displayValue": "21",
           "athleteId": 207834,
@@ -2715,18 +2724,9 @@
           "teamName": "Rayo Vallecano"
         },
         {
-          "rank": 18,
-          "value": 18,
-          "displayValue": "18",
-          "athleteId": 297362,
-          "athleteName": "Joan García",
-          "teamId": 83,
-          "teamName": "Barcelona"
-        },
-        {
           "rank": 19,
-          "value": 18,
-          "displayValue": "18",
+          "value": 20,
+          "displayValue": "20",
           "athleteId": 119620,
           "athleteName": "Péter Gulácsi",
           "teamId": 102,
@@ -2736,10 +2736,10 @@
           "rank": 20,
           "value": 18,
           "displayValue": "18",
-          "athleteId": 307419,
-          "athleteName": "Ángel Fortuño",
-          "teamId": 88,
-          "teamName": "Espanyol"
+          "athleteId": 297362,
+          "athleteName": "Joan García",
+          "teamId": 83,
+          "teamName": "Barcelona"
         },
         {
           "rank": 21,

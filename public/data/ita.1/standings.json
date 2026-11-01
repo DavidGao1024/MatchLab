@@ -1,26 +1,13 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-10-31T02:37:46.449Z",
+  "updateTime": "2026-11-01T02:20:00.203Z",
   "league": "ita.1",
   "season": "2026",
-  "matchesCounted": 90,
+  "matchesCounted": 93,
   "count": 20,
   "standings": [
     {
       "rank": 1,
-      "teamId": 110,
-      "team": "Internazionale",
-      "played": 9,
-      "won": 8,
-      "drawn": 1,
-      "lost": 0,
-      "goalsFor": 25,
-      "goalsAgainst": 10,
-      "goalDiff": 15,
-      "points": 25
-    },
-    {
-      "rank": 2,
       "teamId": 112,
       "team": "Lazio",
       "played": 9,
@@ -33,20 +20,46 @@
       "points": 25
     },
     {
+      "rank": 2,
+      "teamId": 110,
+      "team": "Internazionale",
+      "played": 10,
+      "won": 8,
+      "drawn": 1,
+      "lost": 1,
+      "goalsFor": 26,
+      "goalsAgainst": 13,
+      "goalDiff": 13,
+      "points": 25
+    },
+    {
       "rank": 3,
       "teamId": 104,
       "team": "AS Roma",
-      "played": 9,
-      "won": 6,
+      "played": 10,
+      "won": 7,
       "drawn": 3,
       "lost": 0,
-      "goalsFor": 23,
-      "goalsAgainst": 8,
-      "goalDiff": 15,
-      "points": 21
+      "goalsFor": 28,
+      "goalsAgainst": 10,
+      "goalDiff": 18,
+      "points": 24
     },
     {
       "rank": 4,
+      "teamId": 103,
+      "team": "AC Milan",
+      "played": 10,
+      "won": 6,
+      "drawn": 3,
+      "lost": 1,
+      "goalsFor": 21,
+      "goalsAgainst": 12,
+      "goalDiff": 9,
+      "points": 21
+    },
+    {
+      "rank": 5,
       "teamId": 2572,
       "team": "Como",
       "played": 9,
@@ -57,19 +70,6 @@
       "goalsAgainst": 8,
       "goalDiff": 9,
       "points": 20
-    },
-    {
-      "rank": 5,
-      "teamId": 103,
-      "team": "AC Milan",
-      "played": 9,
-      "won": 5,
-      "drawn": 3,
-      "lost": 1,
-      "goalsFor": 18,
-      "goalsAgainst": 11,
-      "goalDiff": 7,
-      "points": 18
     },
     {
       "rank": 6,
@@ -99,6 +99,19 @@
     },
     {
       "rank": 8,
+      "teamId": 107,
+      "team": "Bologna",
+      "played": 10,
+      "won": 4,
+      "drawn": 2,
+      "lost": 4,
+      "goalsFor": 14,
+      "goalsAgainst": 13,
+      "goalDiff": 1,
+      "points": 14
+    },
+    {
+      "rank": 9,
       "teamId": 111,
       "team": "Juventus",
       "played": 9,
@@ -111,7 +124,7 @@
       "points": 14
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 239,
       "team": "Torino",
       "played": 9,
@@ -124,7 +137,7 @@
       "points": 13
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 2925,
       "team": "Cagliari",
       "played": 9,
@@ -135,19 +148,6 @@
       "goalsAgainst": 13,
       "goalDiff": -5,
       "points": 13
-    },
-    {
-      "rank": 11,
-      "teamId": 107,
-      "team": "Bologna",
-      "played": 9,
-      "won": 3,
-      "drawn": 2,
-      "lost": 4,
-      "goalsFor": 12,
-      "goalsAgainst": 12,
-      "goalDiff": 0,
-      "points": 11
     },
     {
       "rank": 12,
@@ -205,30 +205,17 @@
       "rank": 16,
       "teamId": 4007,
       "team": "Monza",
-      "played": 9,
+      "played": 10,
       "won": 2,
       "drawn": 1,
-      "lost": 6,
-      "goalsFor": 16,
-      "goalsAgainst": 22,
-      "goalDiff": -6,
+      "lost": 7,
+      "goalsFor": 17,
+      "goalsAgainst": 24,
+      "goalDiff": -7,
       "points": 7
     },
     {
       "rank": 17,
-      "teamId": 118,
-      "team": "Udinese",
-      "played": 9,
-      "won": 1,
-      "drawn": 2,
-      "lost": 6,
-      "goalsFor": 9,
-      "goalsAgainst": 18,
-      "goalDiff": -9,
-      "points": 5
-    },
-    {
-      "rank": 18,
       "teamId": 109,
       "team": "Fiorentina",
       "played": 9,
@@ -241,7 +228,7 @@
       "points": 5
     },
     {
-      "rank": 19,
+      "rank": 18,
       "teamId": 115,
       "team": "Parma",
       "played": 9,
@@ -251,6 +238,19 @@
       "goalsFor": 5,
       "goalsAgainst": 15,
       "goalDiff": -10,
+      "points": 5
+    },
+    {
+      "rank": 19,
+      "teamId": 118,
+      "team": "Udinese",
+      "played": 10,
+      "won": 1,
+      "drawn": 2,
+      "lost": 7,
+      "goalsFor": 11,
+      "goalsAgainst": 23,
+      "goalDiff": -12,
       "points": 5
     },
     {
