@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-11-01T02:20:05.118Z",
+  "updateTime": "2026-11-02T02:38:47.979Z",
   "league": "fra.1",
   "month": "2026-11",
   "count": 32,
@@ -9,24 +9,25 @@
       "eventId": "401876414",
       "date": "2026-11-01T14:00Z",
       "name": "AJ Auxerre at Strasbourg",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+8'",
+      "period": 2,
       "venue": "Stade de la Meinau",
       "home": {
         "id": 180,
         "name": "Strasbourg",
         "abbreviation": "STR",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/180.png",
-        "score": 0,
-        "winner": null
+        "score": 5,
+        "winner": true
       },
       "away": {
         "id": 172,
         "name": "AJ Auxerre",
         "abbreviation": "AUX",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -34,17 +35,18 @@
       "eventId": "401876418",
       "date": "2026-11-01T16:15Z",
       "name": "Angers at Lyon",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+3'",
+      "period": 2,
       "venue": "Groupama Stadium",
       "home": {
         "id": 167,
         "name": "Lyon",
         "abbreviation": "LYON",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 7868,
@@ -59,24 +61,25 @@
       "eventId": "401876415",
       "date": "2026-11-01T16:15Z",
       "name": "AS Monaco at Paris FC",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Stade Jean Bouin",
       "home": {
         "id": 6851,
         "name": "Paris FC",
         "abbreviation": "PAR",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       },
       "away": {
         "id": 174,
         "name": "AS Monaco",
         "abbreviation": "MON",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -84,17 +87,18 @@
       "eventId": "401876417",
       "date": "2026-11-01T19:45Z",
       "name": "Toulouse at Marseille",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Stade Vélodrome",
       "home": {
         "id": 176,
         "name": "Marseille",
         "abbreviation": "OLM",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 179,

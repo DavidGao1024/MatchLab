@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-09T08:27:47.330Z",
+  "updateTime": "2026-11-02T02:18:13.259Z",
   "league": "ger.1",
   "season": "2026",
   "id": 340639,
@@ -62,6 +62,7 @@
       "duelsLost": 1,
       "duelsWon": 5,
       "duels": 6,
+      "secondYellow": 0,
       "touches": 23
     },
     "goalKeeping": {
@@ -80,7 +81,8 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 1,
@@ -126,6 +128,8 @@
       "totalPasses": 12,
       "totalShots": 1,
       "totalThroughBalls": 0,
+      "bigChanceCreated": 0,
+      "bigChanceMissed": 0,
       "progressiveCarries": 4,
       "touchesInOppBox": 1
     }

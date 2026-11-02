@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-11-01T02:19:56.710Z",
+  "updateTime": "2026-11-02T02:38:39.838Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 104,
+  "matchesCounted": 108,
   "count": 20,
   "standings": [
     {
@@ -36,14 +36,14 @@
       "rank": 3,
       "teamId": 86,
       "team": "Real Madrid",
-      "played": 10,
-      "won": 8,
+      "played": 11,
+      "won": 9,
       "drawn": 0,
       "lost": 2,
-      "goalsFor": 25,
+      "goalsFor": 28,
       "goalsAgainst": 10,
-      "goalDiff": 15,
-      "points": 24
+      "goalDiff": 18,
+      "points": 27
     },
     {
       "rank": 4,
@@ -62,40 +62,40 @@
       "rank": 5,
       "teamId": 89,
       "team": "Real Sociedad",
-      "played": 10,
+      "played": 11,
       "won": 6,
       "drawn": 1,
-      "lost": 3,
-      "goalsFor": 19,
-      "goalsAgainst": 18,
-      "goalDiff": 1,
+      "lost": 4,
+      "goalsFor": 20,
+      "goalsAgainst": 20,
+      "goalDiff": 0,
       "points": 19
     },
     {
       "rank": 6,
       "teamId": 243,
       "team": "Sevilla",
-      "played": 10,
+      "played": 11,
       "won": 5,
       "drawn": 2,
-      "lost": 3,
-      "goalsFor": 16,
-      "goalsAgainst": 16,
-      "goalDiff": 0,
+      "lost": 4,
+      "goalsFor": 17,
+      "goalsAgainst": 19,
+      "goalDiff": -2,
       "points": 17
     },
     {
       "rank": 7,
       "teamId": 93,
       "team": "Athletic Club",
-      "played": 9,
-      "won": 3,
+      "played": 10,
+      "won": 4,
       "drawn": 3,
       "lost": 3,
-      "goalsFor": 12,
-      "goalsAgainst": 9,
-      "goalDiff": 3,
-      "points": 12
+      "goalsFor": 14,
+      "goalsAgainst": 10,
+      "goalDiff": 4,
+      "points": 15
     },
     {
       "rank": 8,
@@ -151,6 +151,19 @@
     },
     {
       "rank": 12,
+      "teamId": 2922,
+      "team": "Getafe",
+      "played": 11,
+      "won": 3,
+      "drawn": 3,
+      "lost": 5,
+      "goalsFor": 8,
+      "goalsAgainst": 16,
+      "goalDiff": -8,
+      "points": 12
+    },
+    {
+      "rank": 13,
       "teamId": 90,
       "team": "Deportivo",
       "played": 10,
@@ -163,7 +176,7 @@
       "points": 11
     },
     {
-      "rank": 13,
+      "rank": 14,
       "teamId": 88,
       "team": "Espanyol",
       "played": 11,
@@ -176,7 +189,7 @@
       "points": 11
     },
     {
-      "rank": 14,
+      "rank": 15,
       "teamId": 97,
       "team": "Osasuna",
       "played": 10,
@@ -189,33 +202,33 @@
       "points": 11
     },
     {
-      "rank": 15,
+      "rank": 16,
       "teamId": 87,
       "team": "Racing Santander",
-      "played": 10,
+      "played": 11,
       "won": 3,
       "drawn": 2,
-      "lost": 5,
+      "lost": 6,
       "goalsFor": 15,
-      "goalsAgainst": 26,
-      "goalDiff": -11,
+      "goalsAgainst": 29,
+      "goalDiff": -14,
       "points": 11
     },
     {
-      "rank": 16,
+      "rank": 17,
       "teamId": 3751,
       "team": "Elche",
-      "played": 10,
+      "played": 11,
       "won": 2,
       "drawn": 4,
-      "lost": 4,
+      "lost": 5,
       "goalsFor": 14,
-      "goalsAgainst": 17,
-      "goalDiff": -3,
+      "goalsAgainst": 18,
+      "goalDiff": -4,
       "points": 10
     },
     {
-      "rank": 17,
+      "rank": 18,
       "teamId": 1538,
       "team": "Levante",
       "played": 11,
@@ -228,30 +241,17 @@
       "points": 10
     },
     {
-      "rank": 18,
-      "teamId": 2922,
-      "team": "Getafe",
-      "played": 10,
-      "won": 2,
-      "drawn": 3,
-      "lost": 5,
-      "goalsFor": 5,
-      "goalsAgainst": 15,
-      "goalDiff": -10,
-      "points": 9
-    },
-    {
       "rank": 19,
       "teamId": 94,
       "team": "Valencia",
-      "played": 10,
-      "won": 1,
+      "played": 11,
+      "won": 2,
       "drawn": 3,
       "lost": 6,
-      "goalsFor": 7,
+      "goalsFor": 8,
       "goalsAgainst": 17,
-      "goalDiff": -10,
-      "points": 6
+      "goalDiff": -9,
+      "points": 9
     },
     {
       "rank": 20,

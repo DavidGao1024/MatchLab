@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-11-01T02:19:54.687Z",
+  "updateTime": "2026-11-02T02:38:37.734Z",
   "league": "esp.1",
   "month": "2026-11",
   "count": 35,
@@ -9,24 +9,25 @@
       "eventId": "401882821",
       "date": "2026-11-01T13:00Z",
       "name": "Sevilla at Getafe",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "Estadio Coliseum",
       "home": {
         "id": 2922,
         "name": "Getafe",
         "abbreviation": "GET",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       },
       "away": {
         "id": 243,
         "name": "Sevilla",
         "abbreviation": "SEV",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -34,9 +35,10 @@
       "eventId": "401882819",
       "date": "2026-11-01T15:15Z",
       "name": "Real Madrid at Racing Santander",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "El Sardineros",
       "home": {
         "id": 87,
@@ -51,17 +53,18 @@
         "name": "Real Madrid",
         "abbreviation": "RMA",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       }
     },
     {
       "eventId": "401882823",
       "date": "2026-11-01T17:30Z",
       "name": "Valencia at Elche",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Estadio Martínez Valero",
       "home": {
         "id": 3751,
@@ -76,32 +79,33 @@
         "name": "Valencia",
         "abbreviation": "VAL",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
-        "score": 0,
-        "winner": null
+        "score": 1,
+        "winner": true
       }
     },
     {
       "eventId": "401882826",
       "date": "2026-11-01T20:00Z",
       "name": "Real Sociedad at Athletic Club",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "San Mamés",
       "home": {
         "id": 93,
         "name": "Athletic Club",
         "abbreviation": "ATH",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/93.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 89,
         "name": "Real Sociedad",
         "abbreviation": "RSO",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },

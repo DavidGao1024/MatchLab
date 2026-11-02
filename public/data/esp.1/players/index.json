@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-01T01:53:22.678Z",
+  "updateTime": "2026-11-02T02:10:06.132Z",
   "league": "esp.1",
   "season": "2026",
   "count": 627,
@@ -11,7 +11,7 @@
       "teamId": 83,
       "position": "F",
       "age": 29,
-      "goals": 13,
+      "goals": 15,
       "assists": 3,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
@@ -37,8 +37,8 @@
       "teamId": 83,
       "position": "F",
       "age": 19,
-      "goals": 8,
-      "assists": 6,
+      "goals": 10,
+      "assists": 7,
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "jersey": 10,
@@ -77,7 +77,7 @@
       "position": "F",
       "age": 25,
       "goals": 7,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "jersey": 10,
@@ -110,17 +110,43 @@
       "team": "Espanyol"
     },
     {
+      "id": 373542,
+      "name": "Adrián Niño",
+      "teamId": 99,
+      "position": "F",
+      "age": 22,
+      "goals": 5,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 21,
+      "team": "Málaga"
+    },
+    {
       "id": 297373,
       "name": "Álex Baena",
       "teamId": 1068,
       "position": "M",
       "age": 25,
       "goals": 5,
-      "assists": 2,
+      "assists": 3,
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "jersey": 10,
       "team": "Atlético Madrid"
+    },
+    {
+      "id": 354334,
+      "name": "Fermín López",
+      "teamId": 83,
+      "position": "M",
+      "age": 23,
+      "goals": 5,
+      "assists": 5,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 7,
+      "team": "Barcelona"
     },
     {
       "id": 207236,
@@ -162,30 +188,30 @@
       "team": "Levante"
     },
     {
-      "id": 373542,
-      "name": "Adrián Niño",
-      "teamId": 99,
-      "position": "F",
-      "age": 22,
+      "id": 166396,
+      "name": "Alejandro Grimaldo",
+      "teamId": 1068,
+      "position": "D",
+      "age": 31,
       "goals": 4,
-      "assists": 0,
+      "assists": 2,
       "citizenship": "Spain",
       "flag": "flags/es.png",
-      "jersey": 21,
-      "team": "Málaga"
+      "jersey": 22,
+      "team": "Atlético Madrid"
     },
     {
-      "id": 354334,
-      "name": "Fermín López",
-      "teamId": 83,
-      "position": "M",
-      "age": 23,
+      "id": 198832,
+      "name": "Mariano Díaz",
+      "teamId": 96,
+      "position": "F",
+      "age": 33,
       "goals": 4,
-      "assists": 3,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 7,
-      "team": "Barcelona"
+      "assists": 4,
+      "citizenship": "Dominican Republic",
+      "flag": "flags/do.png",
+      "jersey": 9,
+      "team": "Alavés"
     },
     {
       "id": 300912,
@@ -199,19 +225,6 @@
       "flag": "flags/ma.png",
       "jersey": 10,
       "team": "Real Betis"
-    },
-    {
-      "id": 166396,
-      "name": "Alejandro Grimaldo",
-      "teamId": 1068,
-      "position": "D",
-      "age": 31,
-      "goals": 3,
-      "assists": 2,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 22,
-      "team": "Atlético Madrid"
     },
     {
       "id": 209579,
@@ -246,7 +259,7 @@
       "position": "F",
       "age": 29,
       "goals": 3,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
       "jersey": 9,
@@ -264,6 +277,19 @@
       "flag": "flags/ge.png",
       "jersey": 9,
       "team": "Villarreal"
+    },
+    {
+      "id": 323838,
+      "name": "Giuliano Simeone",
+      "teamId": 1068,
+      "position": "F",
+      "age": 23,
+      "goals": 3,
+      "assists": 2,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "jersey": 20,
+      "team": "Atlético Madrid"
     },
     {
       "id": 365821,
@@ -329,19 +355,6 @@
       "flag": "flags/hr.png",
       "jersey": 24,
       "team": "Real Sociedad"
-    },
-    {
-      "id": 198832,
-      "name": "Mariano Díaz",
-      "teamId": 96,
-      "position": "F",
-      "age": 33,
-      "goals": 3,
-      "assists": 4,
-      "citizenship": "Dominican Republic",
-      "flag": "flags/do.png",
-      "jersey": 9,
-      "team": "Alavés"
     },
     {
       "id": 341367,
@@ -420,6 +433,19 @@
       "flag": "flags/es.png",
       "jersey": 7,
       "team": "Real Sociedad"
+    },
+    {
+      "id": 268782,
+      "name": "Anthony Gordon",
+      "teamId": 83,
+      "position": "F",
+      "age": 25,
+      "goals": 2,
+      "assists": 4,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 17,
+      "team": "Barcelona"
     },
     {
       "id": 310452,
@@ -513,19 +539,6 @@
       "team": "Elche"
     },
     {
-      "id": 323838,
-      "name": "Giuliano Simeone",
-      "teamId": 1068,
-      "position": "F",
-      "age": 23,
-      "goals": 2,
-      "assists": 2,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "jersey": 20,
-      "team": "Atlético Madrid"
-    },
-    {
       "id": 213141,
       "name": "Gonçalo Guedes",
       "teamId": 89,
@@ -558,11 +571,24 @@
       "position": "M",
       "age": 34,
       "goals": 2,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "jersey": 22,
       "team": "Real Betis"
+    },
+    {
+      "id": 260740,
+      "name": "Jorge de Frutos",
+      "teamId": 101,
+      "position": "F",
+      "age": 29,
+      "goals": 2,
+      "assists": 2,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 19,
+      "team": "Rayo Vallecano"
     },
     {
       "id": 274913,
@@ -589,6 +615,19 @@
       "flag": "flags/kr.png",
       "jersey": 7,
       "team": "Atlético Madrid"
+    },
+    {
+      "id": 145078,
+      "name": "Marc Bartra",
+      "teamId": 244,
+      "position": "D",
+      "age": 35,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 5,
+      "team": "Real Betis"
     },
     {
       "id": 284854,
@@ -792,7 +831,7 @@
       "position": "D",
       "age": 28,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Romania",
       "flag": "flags/ro.png",
       "jersey": 2,
@@ -810,19 +849,6 @@
       "flag": "flags/es.png",
       "jersey": 11,
       "team": "Racing Santander"
-    },
-    {
-      "id": 268782,
-      "name": "Anthony Gordon",
-      "teamId": 83,
-      "position": "F",
-      "age": 25,
-      "goals": 1,
-      "assists": 4,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 17,
-      "team": "Barcelona"
     },
     {
       "id": 169438,
@@ -1312,7 +1338,7 @@
       "position": "D",
       "age": 32,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
       "jersey": 2,
@@ -1514,19 +1540,6 @@
       "team": "Elche"
     },
     {
-      "id": 145078,
-      "name": "Marc Bartra",
-      "teamId": 244,
-      "position": "D",
-      "age": 35,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 5,
-      "team": "Real Betis"
-    },
-    {
       "id": 332613,
       "name": "Marc Pubill",
       "teamId": 1068,
@@ -1655,6 +1668,19 @@
       "flag": "flags/es.png",
       "jersey": 8,
       "team": "Athletic Club"
+    },
+    {
+      "id": 227714,
+      "name": "Pablo Fornals",
+      "teamId": 244,
+      "position": "M",
+      "age": 30,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 8,
+      "team": "Real Betis"
     },
     {
       "id": 399278,
@@ -1793,7 +1819,7 @@
       "position": "M",
       "age": 30,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "jersey": 16,
@@ -1876,6 +1902,19 @@
       "flag": "flags/ng.png",
       "jersey": 6,
       "team": "Valencia"
+    },
+    {
+      "id": 203711,
+      "name": "Unai López",
+      "teamId": 101,
+      "position": "M",
+      "age": 31,
+      "goals": 1,
+      "assists": 3,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 8,
+      "team": "Rayo Vallecano"
     },
     {
       "id": 336480,
@@ -3620,6 +3659,19 @@
       "team": "Barcelona"
     },
     {
+      "id": 416502,
+      "name": "Ebrima Tunkara",
+      "teamId": 83,
+      "position": "M",
+      "age": 16,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 30,
+      "team": "Barcelona"
+    },
+    {
       "id": 403587,
       "name": "Eder Aller",
       "teamId": 83,
@@ -4068,7 +4120,7 @@
       "position": "M",
       "age": null,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": null,
       "flag": null,
       "jersey": 36,
@@ -4151,6 +4203,19 @@
       "flag": "flags/ar.png",
       "jersey": 2,
       "team": "Valencia"
+    },
+    {
+      "id": 403583,
+      "name": "Guillem Víctor",
+      "teamId": 83,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 40,
+      "team": "Barcelona"
     },
     {
       "id": 312338,
@@ -5128,19 +5193,6 @@
       "team": "Real Madrid"
     },
     {
-      "id": 260740,
-      "name": "Jorge de Frutos",
-      "teamId": 101,
-      "position": "F",
-      "age": 29,
-      "goals": 0,
-      "assists": 2,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 19,
-      "team": "Rayo Vallecano"
-    },
-    {
       "id": 354378,
       "name": "Jorge Domínguez",
       "teamId": 1068,
@@ -5677,7 +5729,7 @@
       "id": 355433,
       "name": "Mamadou Sarr",
       "teamId": 89,
-      "position": "F",
+      "position": "D",
       "age": 21,
       "goals": 0,
       "assists": 0,
@@ -6452,19 +6504,6 @@
       "flag": "flags/es.png",
       "jersey": 1,
       "team": "Levante"
-    },
-    {
-      "id": 227714,
-      "name": "Pablo Fornals",
-      "teamId": 244,
-      "position": "M",
-      "age": 30,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 8,
-      "team": "Real Betis"
     },
     {
       "id": 222661,
@@ -7277,11 +7316,11 @@
       "name": "Thiago Fernández",
       "teamId": 1538,
       "position": "F",
-      "age": 22,
+      "age": 19,
       "goals": 0,
       "assists": 1,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
+      "citizenship": "Uruguay",
+      "flag": "flags/uy.png",
       "jersey": 24,
       "team": "Levante"
     },
@@ -7336,19 +7375,6 @@
       "flag": "flags/gb-eng.png",
       "jersey": 12,
       "team": "Real Madrid"
-    },
-    {
-      "id": 203711,
-      "name": "Unai López",
-      "teamId": 101,
-      "position": "M",
-      "age": 31,
-      "goals": 0,
-      "assists": 3,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 8,
-      "team": "Rayo Vallecano"
     },
     {
       "id": 312011,
@@ -7793,19 +7819,6 @@
       "team": "Málaga"
     },
     {
-      "id": 416502,
-      "name": "Ebrima Tunkara",
-      "teamId": 83,
-      "position": "M",
-      "age": 16,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 30,
-      "team": "Barcelona"
-    },
-    {
       "id": 135422,
       "name": "Enrique García",
       "teamId": 88,
@@ -7869,19 +7882,6 @@
       "flag": null,
       "jersey": 39,
       "team": "Racing Santander"
-    },
-    {
-      "id": 403583,
-      "name": "Guillem Víctor",
-      "teamId": 83,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 40,
-      "team": "Barcelona"
     },
     {
       "id": 112492,

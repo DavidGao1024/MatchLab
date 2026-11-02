@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-11-01T02:20:01.650Z",
+  "updateTime": "2026-11-02T02:38:44.763Z",
   "league": "ger.1",
   "month": "2026-11",
   "count": 29,
@@ -9,16 +9,17 @@
       "eventId": "401884750",
       "date": "2026-11-01T14:30Z",
       "name": "FC Cologne at 1. FC Union Berlin",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+2'",
+      "period": 2,
       "venue": "Stadion An der Alten Försterei",
       "home": {
         "id": 598,
         "name": "1. FC Union Berlin",
         "abbreviation": "FCU",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -26,7 +27,7 @@
         "name": "FC Cologne",
         "abbreviation": "KOE",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -34,24 +35,25 @@
       "eventId": "401884752",
       "date": "2026-11-01T16:30Z",
       "name": "Hamburg SV at Eintracht Frankfurt",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+9'",
+      "period": 2,
       "venue": "Deutsche Bank Park",
       "home": {
         "id": 125,
         "name": "Eintracht Frankfurt",
         "abbreviation": "SGE",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       },
       "away": {
         "id": 127,
         "name": "Hamburg SV",
         "abbreviation": "HSV",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
