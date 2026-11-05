@@ -1,10 +1,36 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-02T02:38:31.590Z",
+  "updateTime": "2026-11-05T03:40:08.410Z",
   "league": "uefa.champions",
   "season": "2026",
-  "count": 1172,
+  "count": 1176,
   "players": [
+    {
+      "id": 355113,
+      "name": "Alexey Batrakov",
+      "teamId": 432,
+      "position": "M",
+      "age": 21,
+      "goals": 4,
+      "assists": 0,
+      "citizenship": "Russia",
+      "flag": "flags/ru.png",
+      "jersey": 83,
+      "team": "Galatasaray"
+    },
+    {
+      "id": 259481,
+      "name": "Donyell Malen",
+      "teamId": 104,
+      "position": "F",
+      "age": 27,
+      "goals": 4,
+      "assists": 2,
+      "citizenship": "Netherlands",
+      "flag": "flags/nl.png",
+      "jersey": 14,
+      "team": "AS Roma"
+    },
     {
       "id": 253989,
       "name": "Erling Haaland",
@@ -32,13 +58,26 @@
       "team": "VfB Stuttgart"
     },
     {
+      "id": 214596,
+      "name": "Fabián Ruiz",
+      "teamId": 160,
+      "position": "M",
+      "age": 30,
+      "goals": 4,
+      "assists": 1,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 8,
+      "team": "Paris Saint-Germain"
+    },
+    {
       "id": 142200,
       "name": "Harry Kane",
       "teamId": 132,
       "position": "F",
       "age": 33,
       "goals": 4,
-      "assists": 2,
+      "assists": 3,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "jersey": 9,
@@ -71,6 +110,19 @@
       "team": "Club Brugge"
     },
     {
+      "id": 231050,
+      "name": "Raphinha",
+      "teamId": 83,
+      "position": "F",
+      "age": 29,
+      "goals": 4,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 11,
+      "team": "Barcelona"
+    },
+    {
       "id": 186381,
       "name": "Serhou Guirassy",
       "teamId": 124,
@@ -97,19 +149,6 @@
       "team": "Liverpool"
     },
     {
-      "id": 262071,
-      "name": "Anastasios Douvikas",
-      "teamId": 2572,
-      "position": "F",
-      "age": 27,
-      "goals": 3,
-      "assists": 0,
-      "citizenship": "Greece",
-      "flag": "flags/gr.png",
-      "jersey": 9,
-      "team": "Como"
-    },
-    {
       "id": 328238,
       "name": "Bradley Barcola",
       "teamId": 364,
@@ -123,17 +162,17 @@
       "team": "Liverpool"
     },
     {
-      "id": 259481,
-      "name": "Donyell Malen",
-      "teamId": 104,
+      "id": 336388,
+      "name": "Désiré Doué",
+      "teamId": 160,
       "position": "F",
-      "age": 27,
+      "age": 21,
       "goals": 3,
       "assists": 2,
-      "citizenship": "Netherlands",
-      "flag": "flags/nl.png",
+      "citizenship": "France",
+      "flag": "flags/fr.png",
       "jersey": 14,
-      "team": "AS Roma"
+      "team": "Paris Saint-Germain"
     },
     {
       "id": 265869,
@@ -160,6 +199,32 @@
       "flag": "flags/fr.png",
       "jersey": 10,
       "team": "Real Madrid"
+    },
+    {
+      "id": 362150,
+      "name": "Lamine Yamal",
+      "teamId": 83,
+      "position": "F",
+      "age": 19,
+      "goals": 3,
+      "assists": 4,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 10,
+      "team": "Barcelona"
+    },
+    {
+      "id": 259902,
+      "name": "Matheus Cunha",
+      "teamId": 360,
+      "position": "F",
+      "age": 27,
+      "goals": 3,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 10,
+      "team": "Manchester United"
     },
     {
       "id": 308524,
@@ -214,24 +279,24 @@
       "team": "Aston Villa"
     },
     {
-      "id": 355113,
-      "name": "Alexey Batrakov",
-      "teamId": 432,
-      "position": "M",
-      "age": 21,
-      "goals": 2,
+      "id": 262071,
+      "name": "Tasos Douvikas",
+      "teamId": 2572,
+      "position": "F",
+      "age": 27,
+      "goals": 3,
       "assists": 0,
-      "citizenship": "Russia",
-      "flag": "flags/ru.png",
-      "jersey": 83,
-      "team": "Galatasaray"
+      "citizenship": "Greece",
+      "flag": "flags/gr.png",
+      "jersey": 9,
+      "team": "Como"
     },
     {
       "id": 236721,
       "name": "Alphonso Davies",
       "teamId": 132,
       "position": "D",
-      "age": 25,
+      "age": 26,
       "goals": 2,
       "assists": 0,
       "citizenship": "Canada",
@@ -251,6 +316,19 @@
       "flag": "flags/sn.png",
       "jersey": 11,
       "team": "Como"
+    },
+    {
+      "id": 124091,
+      "name": "Bruno Fernandes",
+      "teamId": 360,
+      "position": "M",
+      "age": 32,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "jersey": 8,
+      "team": "Manchester United"
     },
     {
       "id": 271769,
@@ -279,19 +357,6 @@
       "team": "Slavia Prague"
     },
     {
-      "id": 336388,
-      "name": "Désiré Doué",
-      "teamId": 160,
-      "position": "F",
-      "age": 21,
-      "goals": 2,
-      "assists": 2,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 14,
-      "team": "Paris Saint-Germain"
-    },
-    {
       "id": 251400,
       "name": "Eberechi Eze",
       "teamId": 359,
@@ -316,19 +381,6 @@
       "flag": "flags/ar.png",
       "jersey": 10,
       "team": "Aston Villa"
-    },
-    {
-      "id": 214596,
-      "name": "Fabián Ruiz",
-      "teamId": 160,
-      "position": "M",
-      "age": 30,
-      "goals": 2,
-      "assists": 1,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 8,
-      "team": "Paris Saint-Germain"
     },
     {
       "id": 258894,
@@ -383,6 +435,19 @@
       "team": "Real Betis"
     },
     {
+      "id": 386592,
+      "name": "Issa Doumbia",
+      "teamId": 2250,
+      "position": "M",
+      "age": 23,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 77,
+      "team": "Sporting CP"
+    },
+    {
       "id": 274913,
       "name": "Karim Adeyemi",
       "teamId": 83,
@@ -396,17 +461,17 @@
       "team": "Barcelona"
     },
     {
-      "id": 362150,
-      "name": "Lamine Yamal",
-      "teamId": 83,
-      "position": "F",
-      "age": 19,
+      "id": 286853,
+      "name": "Kasper Jørgensen",
+      "teamId": 4411,
+      "position": "D",
+      "age": 26,
       "goals": 2,
-      "assists": 4,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 10,
-      "team": "Barcelona"
+      "assists": 1,
+      "citizenship": "Denmark",
+      "flag": "flags/dk.png",
+      "jersey": 20,
+      "team": "LASK Linz"
     },
     {
       "id": 219713,
@@ -474,17 +539,17 @@
       "team": "Viking FK"
     },
     {
-      "id": 231050,
-      "name": "Raphinha",
-      "teamId": 83,
-      "position": "F",
-      "age": 29,
+      "id": 273480,
+      "name": "Robert Ljubicic",
+      "teamId": 4411,
+      "position": "M",
+      "age": 27,
       "goals": 2,
-      "assists": 0,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 11,
-      "team": "Barcelona"
+      "assists": 1,
+      "citizenship": "Austria",
+      "flag": "flags/at.png",
+      "jersey": 10,
+      "team": "LASK Linz"
     },
     {
       "id": 270821,
@@ -558,7 +623,7 @@
       "position": "M",
       "age": 26,
       "goals": 2,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
       "jersey": 17,
@@ -799,19 +864,6 @@
       "team": "RB Leipzig"
     },
     {
-      "id": 124091,
-      "name": "Bruno Fernandes",
-      "teamId": 360,
-      "position": "M",
-      "age": 32,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "jersey": 8,
-      "team": "Manchester United"
-    },
-    {
       "id": 169213,
       "name": "Bryan Cristante",
       "teamId": 104,
@@ -888,6 +940,19 @@
       "flag": "flags/co.png",
       "jersey": 9,
       "team": "Real Betis"
+    },
+    {
+      "id": 403981,
+      "name": "David Boly",
+      "teamId": 160,
+      "position": "D",
+      "age": 17,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 42,
+      "team": "Paris Saint-Germain"
     },
     {
       "id": 238262,
@@ -974,7 +1039,7 @@
       "position": "M",
       "age": 23,
       "goals": 1,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Spain",
       "flag": "flags/es.png",
       "jersey": 7,
@@ -1137,19 +1202,6 @@
       "team": "Club Brugge"
     },
     {
-      "id": 386592,
-      "name": "Issa Doumbia",
-      "teamId": 2250,
-      "position": "M",
-      "age": 23,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 77,
-      "team": "Sporting CP"
-    },
-    {
       "id": 380318,
       "name": "Jacobo Ramón",
       "teamId": 2572,
@@ -1221,11 +1273,24 @@
       "position": "D",
       "age": 32,
       "goals": 1,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
       "jersey": 2,
       "team": "Barcelona"
+    },
+    {
+      "id": 355061,
+      "name": "João Neves",
+      "teamId": 160,
+      "position": "M",
+      "age": 22,
+      "goals": 1,
+      "assists": 2,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "jersey": 87,
+      "team": "Paris Saint-Germain"
     },
     {
       "id": 363068,
@@ -1332,6 +1397,19 @@
       "team": "Sabah FK"
     },
     {
+      "id": 169189,
+      "name": "Konrad Laimer",
+      "teamId": 132,
+      "position": "M",
+      "age": 29,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "Austria",
+      "flag": "flags/at.png",
+      "jersey": 27,
+      "team": "Bayern Munich"
+    },
+    {
       "id": 306899,
       "name": "Krystof Danek",
       "teamId": 4411,
@@ -1343,6 +1421,19 @@
       "flag": "flags/cz.png",
       "jersey": 9,
       "team": "LASK Linz"
+    },
+    {
+      "id": 402841,
+      "name": "Lennart Karl",
+      "teamId": 132,
+      "position": "M",
+      "age": 18,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 42,
+      "team": "Bayern Munich"
     },
     {
       "id": 350661,
@@ -1429,7 +1520,7 @@
       "position": "M",
       "age": 24,
       "goals": 1,
-      "assists": 1,
+      "assists": 3,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 11,
@@ -1514,17 +1605,17 @@
       "team": "Fenerbahce"
     },
     {
-      "id": 259902,
-      "name": "Matheus Cunha",
-      "teamId": 360,
+      "id": 323974,
+      "name": "Matìas Soulè",
+      "teamId": 104,
       "position": "F",
-      "age": 27,
+      "age": 23,
       "goals": 1,
-      "assists": 0,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 10,
-      "team": "Manchester United"
+      "assists": 2,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "jersey": 18,
+      "team": "AS Roma"
     },
     {
       "id": 188306,
@@ -1631,6 +1722,32 @@
       "team": "Shakhtar Donetsk"
     },
     {
+      "id": 362674,
+      "name": "Pio Esposito",
+      "teamId": 110,
+      "position": "F",
+      "age": 21,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 94,
+      "team": "Internazionale"
+    },
+    {
+      "id": 177782,
+      "name": "Piotr Zielinski",
+      "teamId": 110,
+      "position": "M",
+      "age": 32,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Poland",
+      "flag": "flags/pl.png",
+      "jersey": 7,
+      "team": "Internazionale"
+    },
+    {
       "id": 298008,
       "name": "Rayan Cherki",
       "teamId": 382,
@@ -1655,19 +1772,6 @@
       "flag": "flags/ro.png",
       "jersey": 18,
       "team": "AEK Athens"
-    },
-    {
-      "id": 273480,
-      "name": "Robert Ljubicic",
-      "teamId": 4411,
-      "position": "M",
-      "age": 27,
-      "goals": 1,
-      "assists": 1,
-      "citizenship": "Austria",
-      "flag": "flags/at.png",
-      "jersey": 10,
-      "team": "LASK Linz"
     },
     {
       "id": 287494,
@@ -1722,6 +1826,19 @@
       "team": "FC Porto"
     },
     {
+      "id": 318956,
+      "name": "Samuel Adeniran",
+      "teamId": 4411,
+      "position": "F",
+      "age": 28,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "USA",
+      "flag": "flags/us.png",
+      "jersey": 7,
+      "team": "LASK Linz"
+    },
+    {
       "id": 259131,
       "name": "Sasa Kalajdzic",
       "teamId": 4411,
@@ -1748,6 +1865,19 @@
       "team": "Feyenoord Rotterdam"
     },
     {
+      "id": 379088,
+      "name": "Senny Mayulu",
+      "teamId": 160,
+      "position": "M",
+      "age": 20,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 24,
+      "team": "Paris Saint-Germain"
+    },
+    {
       "id": 289072,
       "name": "Sergi Cardona",
       "teamId": 102,
@@ -1765,7 +1895,7 @@
       "name": "Sergiño Dest",
       "teamId": 148,
       "position": "D",
-      "age": 25,
+      "age": 26,
       "goals": 1,
       "assists": 0,
       "citizenship": "USA",
@@ -1904,6 +2034,19 @@
       "team": "Real Madrid"
     },
     {
+      "id": 266660,
+      "name": "Yann Bisseck",
+      "teamId": 110,
+      "position": "D",
+      "age": 25,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 31,
+      "team": "Internazionale"
+    },
+    {
       "id": 266575,
       "name": "Yunus Akgün",
       "teamId": 432,
@@ -2012,7 +2155,7 @@
       "name": "Achraf Hakimi",
       "teamId": 160,
       "position": "D",
-      "age": 27,
+      "age": 28,
       "goals": 0,
       "assists": 1,
       "citizenship": "Morocco",
@@ -2232,8 +2375,8 @@
       "id": 240109,
       "name": "Aleksandar Stankovic",
       "teamId": 110,
-      "position": "G",
-      "age": 28,
+      "position": "M",
+      "age": 21,
       "goals": 0,
       "assists": 1,
       "citizenship": "Serbia",
@@ -2890,6 +3033,19 @@
       "flag": "flags/es.png",
       "jersey": 16,
       "team": "Atlético Madrid"
+    },
+    {
+      "id": 5328183,
+      "name": "Arthur Bar",
+      "teamId": 160,
+      "position": "G",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 90,
+      "team": "Paris Saint-Germain"
     },
     {
       "id": 340723,
@@ -3672,6 +3828,19 @@
       "team": "Barcelona"
     },
     {
+      "id": 3145423,
+      "name": "Dani Slory",
+      "teamId": 142,
+      "position": "D",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 65,
+      "team": "Feyenoord Rotterdam"
+    },
+    {
       "id": 381055,
       "name": "Daniel Armer",
       "teamId": 360,
@@ -3761,6 +3930,19 @@
       "flag": "flags/cz.png",
       "jersey": 47,
       "team": "Slavia Prague"
+    },
+    {
+      "id": 405585,
+      "name": "David Daiber",
+      "teamId": 132,
+      "position": "M",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "jersey": 47,
+      "team": "Bayern Munich"
     },
     {
       "id": 257786,
@@ -3873,7 +4055,7 @@
       "position": "D",
       "age": 30,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Colombia",
       "flag": "flags/co.png",
       "jersey": 6,
@@ -4068,7 +4250,7 @@
       "position": "D",
       "age": 26,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "jersey": 99,
@@ -5128,6 +5310,19 @@
       "team": "VfB Stuttgart"
     },
     {
+      "id": 403583,
+      "name": "Guillem Víctor",
+      "teamId": 83,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 40,
+      "team": "Barcelona"
+    },
+    {
       "id": 217267,
       "name": "Günay Güvenc",
       "teamId": 432,
@@ -5245,6 +5440,19 @@
       "team": "Real Betis"
     },
     {
+      "id": 186172,
+      "name": "Henrik Bjørdal",
+      "teamId": 510,
+      "position": "M",
+      "age": 29,
+      "goals": 0,
+      "assists": 1,
+      "citizenship": "Norway",
+      "flag": "flags/no.png",
+      "jersey": 16,
+      "team": "Viking FK"
+    },
+    {
       "id": 303281,
       "name": "Henrik Falchener",
       "teamId": 510,
@@ -5268,19 +5476,6 @@
       "citizenship": "Norway",
       "flag": "flags/no.png",
       "jersey": 5,
-      "team": "Viking FK"
-    },
-    {
-      "id": 186172,
-      "name": "Henrik Rorvik Bjordal",
-      "teamId": 510,
-      "position": "M",
-      "age": 29,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "Norway",
-      "flag": "flags/no.png",
-      "jersey": 16,
       "team": "Viking FK"
     },
     {
@@ -6025,19 +6220,6 @@
       "team": "AEK Athens"
     },
     {
-      "id": 355061,
-      "name": "João Neves",
-      "teamId": 160,
-      "position": "M",
-      "age": 22,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "jersey": 87,
-      "team": "Paris Saint-Germain"
-    },
-    {
       "id": 392622,
       "name": "João Simões",
       "teamId": 2250,
@@ -6623,19 +6805,6 @@
       "team": "Bodo/Glimt"
     },
     {
-      "id": 286853,
-      "name": "Kasper Jørgensen",
-      "teamId": 4411,
-      "position": "D",
-      "age": 26,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "Denmark",
-      "flag": "flags/dk.png",
-      "jersey": 20,
-      "team": "LASK Linz"
-    },
-    {
       "id": 361432,
       "name": "Kauã Elias",
       "teamId": 493,
@@ -6844,19 +7013,6 @@
       "team": "Atlético Madrid"
     },
     {
-      "id": 169189,
-      "name": "Konrad Laimer",
-      "teamId": 132,
-      "position": "M",
-      "age": 29,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "Austria",
-      "flag": "flags/at.png",
-      "jersey": 27,
-      "team": "Bayern Munich"
-    },
-    {
       "id": 357801,
       "name": "Konstantinos Karetsas",
       "teamId": 124,
@@ -7024,19 +7180,6 @@
       "flag": "flags/kr.png",
       "jersey": 7,
       "team": "Atlético Madrid"
-    },
-    {
-      "id": 402841,
-      "name": "Lennart Karl",
-      "teamId": 132,
-      "position": "M",
-      "age": 18,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 42,
-      "team": "Bayern Munich"
     },
     {
       "id": 340206,
@@ -7559,6 +7702,19 @@
       "team": "RB Leipzig"
     },
     {
+      "id": 319066,
+      "name": "Magnus Riisnaes",
+      "teamId": 2980,
+      "position": "M",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Norway",
+      "flag": "flags/no.png",
+      "jersey": 23,
+      "team": "Bodo/Glimt"
+    },
+    {
       "id": 362875,
       "name": "Mamadou Diakhon",
       "teamId": 570,
@@ -8014,19 +8170,6 @@
       "team": "Borussia Dortmund"
     },
     {
-      "id": 323974,
-      "name": "Matìas Soulè",
-      "teamId": 104,
-      "position": "F",
-      "age": 23,
-      "goals": 0,
-      "assists": 2,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "jersey": 18,
-      "team": "AS Roma"
-    },
-    {
       "id": 218529,
       "name": "Mats Deijl",
       "teamId": 142,
@@ -8064,6 +8207,19 @@
       "flag": "flags/fr.png",
       "jersey": 6,
       "team": "Fenerbahce"
+    },
+    {
+      "id": 402778,
+      "name": "Matteo Lavelli",
+      "teamId": 110,
+      "position": "F",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 53,
+      "team": "Internazionale"
     },
     {
       "id": 297229,
@@ -8142,6 +8298,19 @@
       "flag": "flags/pl.png",
       "jersey": 2,
       "team": "Aston Villa"
+    },
+    {
+      "id": 258736,
+      "name": "Matus Macik",
+      "teamId": 521,
+      "position": "G",
+      "age": 33,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Slovakia",
+      "flag": "flags/sk.png",
+      "jersey": 44,
+      "team": "Slovan Bratislava"
     },
     {
       "id": 248699,
@@ -8605,7 +8774,7 @@
       "position": "F",
       "age": 24,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Nigeria",
       "flag": "flags/ng.png",
       "jersey": 8,
@@ -8902,7 +9071,7 @@
       "name": "Ngal'ayel Mukau",
       "teamId": 166,
       "position": "M",
-      "age": 21,
+      "age": 22,
       "goals": 0,
       "assists": 0,
       "citizenship": "Congo DR",
@@ -8982,7 +9151,7 @@
       "position": "M",
       "age": 29,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "jersey": 23,
@@ -9288,6 +9457,19 @@
       "team": "Lille"
     },
     {
+      "id": 416496,
+      "name": "Orian Goren",
+      "teamId": 83,
+      "position": "M",
+      "age": 17,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Israel",
+      "flag": "flags/il.png",
+      "jersey": 32,
+      "team": "Barcelona"
+    },
+    {
       "id": 193610,
       "name": "Ørjan Nyland",
       "teamId": 11420,
@@ -9312,6 +9494,19 @@
       "flag": "flags/py.png",
       "jersey": 12,
       "team": "Lille"
+    },
+    {
+      "id": 308907,
+      "name": "Orphé Mbina",
+      "teamId": 21922,
+      "position": "F",
+      "age": 26,
+      "goals": 0,
+      "assists": 1,
+      "citizenship": "Gabon",
+      "flag": "flags/ga.png",
+      "jersey": 99,
+      "team": "Sabah FK"
     },
     {
       "id": 283626,
@@ -9442,19 +9637,6 @@
       "flag": "flags/de.png",
       "jersey": 30,
       "team": "Borussia Dortmund"
-    },
-    {
-      "id": 308907,
-      "name": "Patrick Orphe M'Bina",
-      "teamId": 21922,
-      "position": "F",
-      "age": 25,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "Gabon",
-      "flag": "flags/ga.png",
-      "jersey": 99,
-      "team": "Sabah FK"
     },
     {
       "id": 368992,
@@ -9678,30 +9860,17 @@
       "team": "Lens"
     },
     {
-      "id": 362674,
-      "name": "Pio Esposito",
-      "teamId": 110,
-      "position": "F",
-      "age": 21,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 94,
-      "team": "Internazionale"
-    },
-    {
-      "id": 177782,
-      "name": "Piotr Zielinski",
-      "teamId": 110,
+      "id": 365817,
+      "name": "Prosper Obah",
+      "teamId": 493,
       "position": "M",
-      "age": 32,
+      "age": 22,
       "goals": 0,
       "assists": 0,
-      "citizenship": "Poland",
-      "flag": "flags/pl.png",
-      "jersey": 7,
-      "team": "Internazionale"
+      "citizenship": "Nigeria",
+      "flag": "flags/ng.png",
+      "jersey": 68,
+      "team": "Shakhtar Donetsk"
     },
     {
       "id": 403419,
@@ -9884,6 +10053,19 @@
       "flag": "flags/fr.png",
       "jersey": 1,
       "team": "Lens"
+    },
+    {
+      "id": 227794,
+      "name": "Reiss Nelson",
+      "teamId": 142,
+      "position": "F",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 17,
+      "team": "Feyenoord Rotterdam"
     },
     {
       "id": 402986,
@@ -10100,7 +10282,7 @@
       "position": "M",
       "age": 19,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
       "jersey": 86,
@@ -10183,6 +10365,19 @@
       "flag": "flags/be.png",
       "jersey": 9,
       "team": "Fenerbahce"
+    },
+    {
+      "id": 3117200,
+      "name": "Romeo Hueso Moya",
+      "teamId": 1068,
+      "position": "D",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 26,
+      "team": "Atlético Madrid"
     },
     {
       "id": 324766,
@@ -10315,6 +10510,19 @@
       "team": "Slovan Bratislava"
     },
     {
+      "id": 414124,
+      "name": "Salvador Blopa",
+      "teamId": 2250,
+      "position": "D",
+      "age": 19,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "jersey": 70,
+      "team": "Sporting CP"
+    },
+    {
       "id": 261594,
       "name": "Sam Beukema",
       "teamId": 114,
@@ -10352,19 +10560,6 @@
       "flag": "flags/at.png",
       "jersey": 6,
       "team": "Lens"
-    },
-    {
-      "id": 318956,
-      "name": "Samuel Adeniran",
-      "teamId": 4411,
-      "position": "F",
-      "age": 28,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "USA",
-      "flag": "flags/us.png",
-      "jersey": 7,
-      "team": "LASK Linz"
     },
     {
       "id": 417931,
@@ -10477,7 +10672,7 @@
       "position": "M",
       "age": 30,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Austria",
       "flag": "flags/at.png",
       "jersey": 30,
@@ -10521,19 +10716,6 @@
       "flag": "flags/be.png",
       "jersey": 1,
       "team": "Manchester United"
-    },
-    {
-      "id": 379088,
-      "name": "Senny Mayulu",
-      "teamId": 160,
-      "position": "M",
-      "age": 20,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 24,
-      "team": "Paris Saint-Germain"
     },
     {
       "id": 178980,
@@ -10594,7 +10776,7 @@
       "position": "F",
       "age": 19,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "jersey": 31,
@@ -10924,6 +11106,19 @@
       "flag": "flags/pt.png",
       "jersey": 58,
       "team": "FC Porto"
+    },
+    {
+      "id": 304019,
+      "name": "Tiago Tomás",
+      "teamId": 134,
+      "position": "F",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "jersey": 8,
+      "team": "VfB Stuttgart"
     },
     {
       "id": 417829,
@@ -11554,7 +11749,7 @@
       "name": "Willi Orbán",
       "teamId": 11420,
       "position": "D",
-      "age": 33,
+      "age": 34,
       "goals": 0,
       "assists": 0,
       "citizenship": "Hungary",
@@ -11667,19 +11862,6 @@
       "team": "VfB Stuttgart"
     },
     {
-      "id": 266660,
-      "name": "Yann Bisseck",
-      "teamId": 110,
-      "position": "D",
-      "age": 25,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 31,
-      "team": "Internazionale"
-    },
-    {
       "id": 93197,
       "name": "Yann Sommer",
       "teamId": 570,
@@ -11732,8 +11914,21 @@
       "team": "Shakhtar Donetsk"
     },
     {
+      "id": 5328215,
+      "name": "Yéli Traoré",
+      "teamId": 166,
+      "position": "F",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 43,
+      "team": "Lille"
+    },
+    {
       "id": 340186,
-      "name": "Yigit Demir",
+      "name": "Yiğit Demir",
       "teamId": 436,
       "position": "D",
       "age": 22,
@@ -11769,6 +11964,19 @@
       "flag": "flags/cm.png",
       "jersey": 25,
       "team": "LASK Linz"
+    },
+    {
+      "id": 415421,
+      "name": "Zadig Lanssade",
+      "teamId": 166,
+      "position": "G",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 40,
+      "team": "Lille"
     },
     {
       "id": 289513,
@@ -12447,19 +12655,6 @@
       "team": "VfB Stuttgart"
     },
     {
-      "id": 3145423,
-      "name": "Dani Slory",
-      "teamId": 142,
-      "position": "D",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "jersey": 65,
-      "team": "Feyenoord Rotterdam"
-    },
-    {
       "id": 376422,
       "name": "Daniel Yañez",
       "teamId": 86,
@@ -12484,32 +12679,6 @@
       "flag": "flags/sk.png",
       "jersey": 32,
       "team": "Slovan Bratislava"
-    },
-    {
-      "id": 403981,
-      "name": "David Boly",
-      "teamId": 160,
-      "position": "D",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 42,
-      "team": "Paris Saint-Germain"
-    },
-    {
-      "id": 405585,
-      "name": "David Daiber",
-      "teamId": 132,
-      "position": "M",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "jersey": 47,
-      "team": "Bayern Munich"
     },
     {
       "id": 386438,
@@ -12685,7 +12854,7 @@
       "name": "Edoardo Goldaniga",
       "teamId": 2572,
       "position": "D",
-      "age": 32,
+      "age": 33,
       "goals": null,
       "assists": null,
       "citizenship": "Italy",
@@ -12835,6 +13004,19 @@
       "flag": "flags/it.png",
       "jersey": 14,
       "team": "Liverpool"
+    },
+    {
+      "id": 5330604,
+      "name": "Federico Grilli",
+      "teamId": 2572,
+      "position": "D",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 52,
+      "team": "Como"
     },
     {
       "id": 217475,
@@ -12993,19 +13175,6 @@
       "team": "Sabah FK"
     },
     {
-      "id": 403583,
-      "name": "Guillem Víctor",
-      "teamId": 83,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 40,
-      "team": "Barcelona"
-    },
-    {
       "id": 360869,
       "name": "Hakim Sahabo",
       "teamId": 887,
@@ -13036,7 +13205,7 @@
       "name": "Hamza Igmane",
       "teamId": 166,
       "position": "F",
-      "age": 23,
+      "age": 24,
       "goals": null,
       "assists": null,
       "citizenship": "Morocco",
@@ -13864,19 +14033,6 @@
       "team": "Manchester United"
     },
     {
-      "id": 319066,
-      "name": "Magnus Riisnaes",
-      "teamId": 2980,
-      "position": "M",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Norway",
-      "flag": "flags/no.png",
-      "jersey": 23,
-      "team": "Bodo/Glimt"
-    },
-    {
       "id": 288487,
       "name": "Maik Nawrocki",
       "teamId": 175,
@@ -13907,7 +14063,7 @@
       "name": "Mandjou Camara",
       "teamId": 104,
       "position": "F",
-      "age": 20,
+      "age": 21,
       "goals": null,
       "assists": null,
       "citizenship": "Guinea",
@@ -14062,13 +14218,13 @@
       "id": 403762,
       "name": "Mateus Mide",
       "teamId": 437,
-      "position": "F",
+      "position": "M",
       "age": 18,
       "goals": null,
       "assists": null,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
-      "jersey": null,
+      "jersey": 89,
       "team": "FC Porto"
     },
     {
@@ -14111,19 +14267,6 @@
       "team": "Viking FK"
     },
     {
-      "id": 402778,
-      "name": "Matteo Lavelli",
-      "teamId": 110,
-      "position": "F",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 53,
-      "team": "Internazionale"
-    },
-    {
       "id": 411276,
       "name": "Matteo Papaccioli",
       "teamId": 2572,
@@ -14148,19 +14291,6 @@
       "flag": "flags/it.png",
       "jersey": 54,
       "team": "Internazionale"
-    },
-    {
-      "id": 258736,
-      "name": "Matus Macik",
-      "teamId": 521,
-      "position": "G",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Slovakia",
-      "flag": "flags/sk.png",
-      "jersey": 44,
-      "team": "Slovan Bratislava"
     },
     {
       "id": 405608,
@@ -14501,19 +14631,6 @@
       "team": "Slavia Prague"
     },
     {
-      "id": 416496,
-      "name": "Orian Goren",
-      "teamId": 83,
-      "position": "M",
-      "age": 17,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Israel",
-      "flag": "flags/il.png",
-      "jersey": 32,
-      "team": "Barcelona"
-    },
-    {
       "id": 409310,
       "name": "Owen Asemota",
       "teamId": 362,
@@ -14530,7 +14647,7 @@
       "id": 3124013,
       "name": "Paulo Yanick Moreno Vieira Sanches Cardoso",
       "teamId": 2250,
-      "position": "M",
+      "position": "F",
       "age": null,
       "goals": null,
       "assists": null,
@@ -14564,19 +14681,6 @@
       "flag": "flags/de.png",
       "jersey": null,
       "team": "VfB Stuttgart"
-    },
-    {
-      "id": 365817,
-      "name": "Prosper Obah",
-      "teamId": 493,
-      "position": "M",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Nigeria",
-      "flag": "flags/ng.png",
-      "jersey": 68,
-      "team": "Shakhtar Donetsk"
     },
     {
       "id": 378037,
@@ -14629,19 +14733,6 @@
       "flag": "flags/es.png",
       "jersey": 2,
       "team": "Real Madrid"
-    },
-    {
-      "id": 227794,
-      "name": "Reiss Nelson",
-      "teamId": 142,
-      "position": "F",
-      "age": 26,
-      "goals": null,
-      "assists": null,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 17,
-      "team": "Feyenoord Rotterdam"
     },
     {
       "id": 403524,
@@ -14720,19 +14811,6 @@
       "flag": null,
       "jersey": 95,
       "team": "Sabah FK"
-    },
-    {
-      "id": 414124,
-      "name": "Salvador Blopa",
-      "teamId": 2250,
-      "position": "D",
-      "age": 19,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "jersey": null,
-      "team": "Sporting CP"
     },
     {
       "id": 405502,
@@ -14982,19 +15060,6 @@
       "team": "AEK Athens"
     },
     {
-      "id": 304019,
-      "name": "Tiago Tomás",
-      "teamId": 134,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "jersey": 8,
-      "team": "VfB Stuttgart"
-    },
-    {
       "id": 371671,
       "name": "Tim Köhler",
       "teamId": 134,
@@ -15188,19 +15253,6 @@
       "flag": "flags/fr.png",
       "jersey": 23,
       "team": "Sabah FK"
-    },
-    {
-      "id": 415421,
-      "name": "Zadig Lanssade",
-      "teamId": 166,
-      "position": "G",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 40,
-      "team": "Lille"
     },
     {
       "id": 419210,

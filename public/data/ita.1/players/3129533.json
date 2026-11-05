@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-09-09T08:24:15.360Z",
+  "updateTime": "2026-11-05T03:14:47.729Z",
   "league": "ita.1",
   "season": "2026",
   "id": 3129533,
@@ -27,10 +27,12 @@
       "interceptions": 0,
       "tacklePct": 0,
       "totalClearance": 0,
-      "totalTackles": 0
+      "totalTackles": 0,
+      "tacklesLost": 0,
+      "recoveries": 1
     },
     "general": {
-      "appearances": 1,
+      "appearances": 2,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -38,17 +40,17 @@
       "dnp": 0,
       "draws": 0,
       "foulsCommitted": 0,
-      "foulsSuffered": 0,
-      "goalDifference": 0,
+      "foulsSuffered": 1,
+      "goalDifference": -1,
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 2,
+      "minutes": 3,
       "ownGoals": 0,
       "passPct": 1,
       "redCards": 0,
       "starts": 0,
-      "subIns": 1,
+      "subIns": 2,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -56,14 +58,17 @@
       "winPct": 0,
       "wins": 0,
       "wonCorners": 0,
-      "yellowCards": 0,
+      "yellowCards": 1,
       "duelsLost": 1,
-      "touches": 1
+      "duelsWon": 2,
+      "duels": 3,
+      "secondYellow": 0,
+      "touches": 3
     },
     "goalKeeping": {
       "cleanSheet": 0,
       "crossesCaught": 0,
-      "goalsConceded": 0,
+      "goalsConceded": 1,
       "partialCleenSheet": 0,
       "penaltyKickConceded": 0,
       "penaltyKickSavePct": 0,
@@ -76,14 +81,15 @@
       "shootOutSavePct": 0,
       "shotsFaced": 0,
       "smothers": 0,
-      "unclaimedCrosses": 0
+      "unclaimedCrosses": 0,
+      "bigChanceSaves": 0
     },
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 1,
-      "accuratePasses": 1,
+      "accuratePasses": 2,
       "accurateThroughBalls": 0,
-      "attemptsInBox": 1,
+      "attemptsInBox": 3,
       "attemptsOutBox": 1,
       "crossPct": 0,
       "freeKickGoals": 0,
@@ -119,9 +125,13 @@
       "totalCrosses": 0,
       "totalGoals": 0,
       "totalLongBalls": 1,
-      "totalPasses": 1,
+      "totalPasses": 2,
       "totalShots": 0,
-      "totalThroughBalls": 0
+      "totalThroughBalls": 0,
+      "bigChanceCreated": 0,
+      "bigChanceMissed": 0,
+      "progressiveCarries": 0,
+      "touchesInOppBox": 0
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-11-02T02:38:34.013Z",
+  "updateTime": "2026-11-05T03:40:11.270Z",
   "league": "eng.1",
   "month": "2026-11",
   "count": 32,
@@ -35,9 +35,10 @@
       "eventId": "401878762",
       "date": "2026-11-02T20:00Z",
       "name": "Everton at Newcastle United",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+10'",
+      "period": 2,
       "venue": "St. James' Park",
       "home": {
         "id": 361,
@@ -52,8 +53,8 @@
         "name": "Everton",
         "abbreviation": "EVE",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
-        "score": 0,
-        "winner": null
+        "score": 1,
+        "winner": true
       }
     },
     {

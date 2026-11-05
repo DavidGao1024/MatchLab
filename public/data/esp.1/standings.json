@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-11-02T02:38:39.838Z",
+  "updateTime": "2026-11-05T03:40:17.133Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 108,
+  "matchesCounted": 109,
   "count": 20,
   "standings": [
     {
@@ -99,6 +99,19 @@
     },
     {
       "rank": 8,
+      "teamId": 90,
+      "team": "Deportivo",
+      "played": 11,
+      "won": 3,
+      "drawn": 5,
+      "lost": 3,
+      "goalsFor": 15,
+      "goalsAgainst": 14,
+      "goalDiff": 1,
+      "points": 14
+    },
+    {
+      "rank": 9,
       "teamId": 102,
       "team": "Villarreal",
       "played": 11,
@@ -111,7 +124,7 @@
       "points": 12
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 85,
       "team": "Celta Vigo",
       "played": 11,
@@ -124,7 +137,7 @@
       "points": 12
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 96,
       "team": "Alavés",
       "played": 11,
@@ -137,7 +150,7 @@
       "points": 12
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 101,
       "team": "Rayo Vallecano",
       "played": 10,
@@ -150,7 +163,7 @@
       "points": 12
     },
     {
-      "rank": 12,
+      "rank": 13,
       "teamId": 2922,
       "team": "Getafe",
       "played": 11,
@@ -161,19 +174,6 @@
       "goalsAgainst": 16,
       "goalDiff": -8,
       "points": 12
-    },
-    {
-      "rank": 13,
-      "teamId": 90,
-      "team": "Deportivo",
-      "played": 10,
-      "won": 2,
-      "drawn": 5,
-      "lost": 3,
-      "goalsFor": 13,
-      "goalsAgainst": 13,
-      "goalDiff": 0,
-      "points": 11
     },
     {
       "rank": 14,
@@ -192,13 +192,13 @@
       "rank": 15,
       "teamId": 97,
       "team": "Osasuna",
-      "played": 10,
+      "played": 11,
       "won": 3,
       "drawn": 2,
-      "lost": 5,
-      "goalsFor": 10,
-      "goalsAgainst": 20,
-      "goalDiff": -10,
+      "lost": 6,
+      "goalsFor": 11,
+      "goalsAgainst": 22,
+      "goalDiff": -11,
       "points": 11
     },
     {

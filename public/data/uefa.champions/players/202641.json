@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-10-31T02:33:17.414Z",
+  "updateTime": "2026-11-05T03:35:54.306Z",
   "league": "uefa.champions",
   "season": "2026",
   "id": 202641,
@@ -32,7 +32,7 @@
       "recoveries": 6
     },
     "general": {
-      "appearances": 3,
+      "appearances": 4,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -40,17 +40,17 @@
       "dnp": 0,
       "draws": 0,
       "foulsCommitted": 2,
-      "foulsSuffered": 0,
+      "foulsSuffered": 1,
       "goalDifference": -3,
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 104,
+      "minutes": 117,
       "ownGoals": 0,
-      "passPct": 0.838,
+      "passPct": 0.833,
       "redCards": 0,
       "starts": 1,
-      "subIns": 2,
+      "subIns": 3,
       "subOuts": 1,
       "suspensions": 0,
       "timeEnded": 0,
@@ -60,10 +60,10 @@
       "wonCorners": 0,
       "yellowCards": 0,
       "duelsLost": 11,
-      "duelsWon": 4,
-      "duels": 15,
+      "duelsWon": 5,
+      "duels": 16,
       "secondYellow": 0,
-      "touches": 64
+      "touches": 74
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -87,10 +87,10 @@
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 0,
-      "accuratePasses": 31,
+      "accuratePasses": 35,
       "accurateThroughBalls": 0,
-      "attemptsInBox": 12,
-      "attemptsOutBox": 3,
+      "attemptsInBox": 15,
+      "attemptsOutBox": 4,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -101,7 +101,7 @@
       "headedGoals": 0,
       "inaccurateCrosses": 0,
       "inaccurateLongBalls": 0,
-      "inaccuratePasses": 6,
+      "inaccuratePasses": 7,
       "inaccurateThroughBalls": 0,
       "leftFootedShots": 2,
       "longballPct": 0,
@@ -125,13 +125,13 @@
       "totalCrosses": 1,
       "totalGoals": 0,
       "totalLongBalls": 1,
-      "totalPasses": 37,
+      "totalPasses": 42,
       "totalShots": 2,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 1,
-      "progressiveCarries": 7,
-      "touchesInOppBox": 2
+      "progressiveCarries": 9,
+      "touchesInOppBox": 4
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-02T02:20:05.576Z",
+  "updateTime": "2026-11-05T03:20:28.538Z",
   "league": "ger.1",
   "season": "2026",
   "count": 539,
@@ -45,6 +45,19 @@
       "team": "Bayern Munich"
     },
     {
+      "id": 359793,
+      "name": "Younes Ebnoutalib",
+      "teamId": 125,
+      "position": "F",
+      "age": 23,
+      "goals": 6,
+      "assists": 1,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 11,
+      "team": "Eintracht Frankfurt"
+    },
+    {
       "id": 269136,
       "name": "Ermedin Demirovic",
       "teamId": 134,
@@ -82,19 +95,6 @@
       "flag": "flags/de.png",
       "jersey": 9,
       "team": "Mainz"
-    },
-    {
-      "id": 359793,
-      "name": "Younes Ebnoutalib",
-      "teamId": 125,
-      "position": "F",
-      "age": 23,
-      "goals": 5,
-      "assists": 1,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 11,
-      "team": "Eintracht Frankfurt"
     },
     {
       "id": 319368,
@@ -428,7 +428,7 @@
       "position": "M",
       "age": 20,
       "goals": 2,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Türkiye",
       "flag": "flags/tr.png",
       "jersey": 42,
@@ -563,6 +563,19 @@
       "flag": "flags/ma.png",
       "jersey": 34,
       "team": "Bayern Munich"
+    },
+    {
+      "id": 170604,
+      "name": "Janik Haberer",
+      "teamId": 598,
+      "position": "M",
+      "age": 32,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 19,
+      "team": "1. FC Union Berlin"
     },
     {
       "id": 266839,
@@ -734,6 +747,19 @@
       "team": "SC Paderborn 07"
     },
     {
+      "id": 289769,
+      "name": "Terem Moffi",
+      "teamId": 127,
+      "position": "F",
+      "age": 27,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Nigeria",
+      "flag": "flags/ng.png",
+      "jersey": 9,
+      "team": "Hamburg SV"
+    },
+    {
       "id": 266280,
       "name": "Thijs Dallinga",
       "teamId": 122,
@@ -753,7 +779,7 @@
       "position": "M",
       "age": 30,
       "goals": 2,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 21,
@@ -1137,19 +1163,6 @@
       "team": "VfB Stuttgart"
     },
     {
-      "id": 170604,
-      "name": "Janik Haberer",
-      "teamId": 598,
-      "position": "M",
-      "age": 32,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 19,
-      "team": "1. FC Union Berlin"
-    },
-    {
       "id": 298524,
       "name": "Jarell Quansah",
       "teamId": 131,
@@ -1304,6 +1317,19 @@
       "flag": "flags/tr.png",
       "jersey": 9,
       "team": "1. FC Union Berlin"
+    },
+    {
+      "id": 384155,
+      "name": "Malek El Mala",
+      "teamId": 122,
+      "position": "F",
+      "age": 21,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 19,
+      "team": "FC Cologne"
     },
     {
       "id": 275797,
@@ -1514,6 +1540,19 @@
       "team": "Mainz"
     },
     {
+      "id": 320882,
+      "name": "Raphael Onyedika",
+      "teamId": 125,
+      "position": "M",
+      "age": 25,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Nigeria",
+      "flag": "flags/ng.png",
+      "jersey": 25,
+      "team": "Eintracht Frankfurt"
+    },
+    {
       "id": 291849,
       "name": "Rayan Philippe",
       "teamId": 3307,
@@ -1592,19 +1631,6 @@
       "team": "Bayern Munich"
     },
     {
-      "id": 289769,
-      "name": "Terem Moffi",
-      "teamId": 127,
-      "position": "F",
-      "age": 27,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Nigeria",
-      "flag": "flags/ng.png",
-      "jersey": 9,
-      "team": "Hamburg SV"
-    },
-    {
       "id": 303792,
       "name": "Tim Lemperle",
       "teamId": 7911,
@@ -1622,7 +1648,7 @@
       "name": "Willi Orbán",
       "teamId": 11420,
       "position": "D",
-      "age": 33,
+      "age": 34,
       "goals": 1,
       "assists": 0,
       "citizenship": "Hungary",
@@ -1676,7 +1702,7 @@
       "position": "M",
       "age": 25,
       "goals": 0,
-      "assists": 2,
+      "assists": 3,
       "citizenship": "Denmark",
       "flag": "flags/dk.png",
       "jersey": 11,
@@ -1728,7 +1754,7 @@
       "position": "M",
       "age": 29,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Belgium",
       "flag": "flags/be.png",
       "jersey": 17,
@@ -1804,7 +1830,7 @@
       "name": "Alphonso Davies",
       "teamId": 132,
       "position": "D",
-      "age": 25,
+      "age": 26,
       "goals": 0,
       "assists": 2,
       "citizenship": "Canada",
@@ -1895,7 +1921,7 @@
       "name": "Anthony Jung",
       "teamId": 126,
       "position": "D",
-      "age": 34,
+      "age": 35,
       "goals": 0,
       "assists": 0,
       "citizenship": "Germany",
@@ -2961,7 +2987,7 @@
       "name": "Jahmai Simpson-Pusey",
       "teamId": 122,
       "position": "D",
-      "age": 20,
+      "age": 21,
       "goals": 0,
       "assists": 0,
       "citizenship": "England",
@@ -3260,7 +3286,7 @@
       "name": "Jonas Hofmann",
       "teamId": 131,
       "position": "M",
-      "age": 34,
+      "age": 29,
       "goals": 0,
       "assists": 0,
       "citizenship": "Germany",
@@ -3806,7 +3832,7 @@
       "name": "Lilian Brassier",
       "teamId": 125,
       "position": "D",
-      "age": 26,
+      "age": 27,
       "goals": 0,
       "assists": 0,
       "citizenship": "France",
@@ -4140,19 +4166,6 @@
       "team": "RB Leipzig"
     },
     {
-      "id": 384155,
-      "name": "Malek El Mala",
-      "teamId": 122,
-      "position": "F",
-      "age": 21,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 19,
-      "team": "FC Cologne"
-    },
-    {
       "id": 418030,
       "name": "Malik Pimpong",
       "teamId": 125,
@@ -4333,6 +4346,19 @@
       "flag": "flags/fr.png",
       "jersey": 11,
       "team": "Bayer Leverkusen"
+    },
+    {
+      "id": 202642,
+      "name": "Marvin Friedrich",
+      "teamId": 598,
+      "position": "D",
+      "age": 30,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 5,
+      "team": "1. FC Union Berlin"
     },
     {
       "id": 312389,
@@ -4842,6 +4868,19 @@
       "team": "Werder Bremen"
     },
     {
+      "id": 3109554,
+      "name": "Niko Iličević",
+      "teamId": 125,
+      "position": "M",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 23,
+      "team": "Eintracht Frankfurt"
+    },
+    {
       "id": 220538,
       "name": "Nikola Katic",
       "teamId": 133,
@@ -5282,19 +5321,6 @@
       "flag": null,
       "jersey": 23,
       "team": "SC Paderborn 07"
-    },
-    {
-      "id": 320882,
-      "name": "Raphael Onyedika",
-      "teamId": 125,
-      "position": "M",
-      "age": 25,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Nigeria",
-      "flag": "flags/ng.png",
-      "jersey": 25,
-      "team": "Eintracht Frankfurt"
     },
     {
       "id": 306161,
@@ -6636,19 +6662,6 @@
       "team": "FC Cologne"
     },
     {
-      "id": 202642,
-      "name": "Marvin Friedrich",
-      "teamId": 598,
-      "position": "D",
-      "age": 30,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 5,
-      "team": "1. FC Union Berlin"
-    },
-    {
       "id": 3114681,
       "name": "Mateo Zelic",
       "teamId": 126,
@@ -6738,19 +6751,6 @@
       "flag": "flags/de.png",
       "jersey": 36,
       "team": "Bayer Leverkusen"
-    },
-    {
-      "id": 3109554,
-      "name": "Niko Iličević",
-      "teamId": 125,
-      "position": "M",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "jersey": 23,
-      "team": "Eintracht Frankfurt"
     },
     {
       "id": 367058,
