@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-11-05T03:40:17.133Z",
+  "updateTime": "2026-11-07T03:06:28.320Z",
   "league": "esp.1",
   "season": "2026",
-  "matchesCounted": 109,
+  "matchesCounted": 110,
   "count": 20,
   "standings": [
     {
@@ -75,14 +75,14 @@
       "rank": 6,
       "teamId": 243,
       "team": "Sevilla",
-      "played": 11,
+      "played": 12,
       "won": 5,
-      "drawn": 2,
+      "drawn": 3,
       "lost": 4,
       "goalsFor": 17,
       "goalsAgainst": 19,
       "goalDiff": -2,
-      "points": 17
+      "points": 18
     },
     {
       "rank": 7,
@@ -112,6 +112,19 @@
     },
     {
       "rank": 9,
+      "teamId": 96,
+      "team": "Alavés",
+      "played": 12,
+      "won": 3,
+      "drawn": 4,
+      "lost": 5,
+      "goalsFor": 15,
+      "goalsAgainst": 17,
+      "goalDiff": -2,
+      "points": 13
+    },
+    {
+      "rank": 10,
       "teamId": 102,
       "team": "Villarreal",
       "played": 11,
@@ -124,7 +137,7 @@
       "points": 12
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 85,
       "team": "Celta Vigo",
       "played": 11,
@@ -134,19 +147,6 @@
       "goalsFor": 10,
       "goalsAgainst": 10,
       "goalDiff": 0,
-      "points": 12
-    },
-    {
-      "rank": 11,
-      "teamId": 96,
-      "team": "Alavés",
-      "played": 11,
-      "won": 3,
-      "drawn": 3,
-      "lost": 5,
-      "goalsFor": 15,
-      "goalsAgainst": 17,
-      "goalDiff": -2,
       "points": 12
     },
     {

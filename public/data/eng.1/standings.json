@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-11-05T03:40:13.364Z",
+  "updateTime": "2026-11-07T03:06:24.761Z",
   "league": "eng.1",
   "season": "2026",
-  "matchesCounted": 90,
+  "matchesCounted": 91,
   "count": 20,
   "standings": [
     {
@@ -60,6 +60,19 @@
     },
     {
       "rank": 5,
+      "teamId": 368,
+      "team": "Everton",
+      "played": 10,
+      "won": 4,
+      "drawn": 4,
+      "lost": 2,
+      "goalsFor": 12,
+      "goalsAgainst": 10,
+      "goalDiff": 2,
+      "points": 16
+    },
+    {
+      "rank": 6,
       "teamId": 364,
       "team": "Liverpool",
       "played": 9,
@@ -72,7 +85,7 @@
       "points": 15
     },
     {
-      "rank": 6,
+      "rank": 7,
       "teamId": 337,
       "team": "Brentford",
       "played": 9,
@@ -83,19 +96,6 @@
       "goalsAgainst": 9,
       "goalDiff": 7,
       "points": 14
-    },
-    {
-      "rank": 7,
-      "teamId": 368,
-      "team": "Everton",
-      "played": 9,
-      "won": 3,
-      "drawn": 4,
-      "lost": 2,
-      "goalsFor": 9,
-      "goalsAgainst": 9,
-      "goalDiff": 0,
-      "points": 13
     },
     {
       "rank": 8,
@@ -205,13 +205,13 @@
       "rank": 16,
       "teamId": 388,
       "team": "Coventry City",
-      "played": 9,
+      "played": 10,
       "won": 3,
       "drawn": 0,
-      "lost": 6,
-      "goalsFor": 9,
-      "goalsAgainst": 16,
-      "goalDiff": -7,
+      "lost": 7,
+      "goalsFor": 10,
+      "goalsAgainst": 19,
+      "goalDiff": -9,
       "points": 9
     },
     {

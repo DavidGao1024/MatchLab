@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-11-05T03:40:24.224Z",
+  "updateTime": "2026-11-07T03:06:34.861Z",
   "league": "ger.1",
   "season": "2026",
-  "matchesCounted": 72,
+  "matchesCounted": 73,
   "count": 18,
   "standings": [
     {
@@ -99,6 +99,19 @@
     },
     {
       "rank": 8,
+      "teamId": 127,
+      "team": "Hamburg SV",
+      "played": 9,
+      "won": 4,
+      "drawn": 0,
+      "lost": 5,
+      "goalsFor": 10,
+      "goalsAgainst": 20,
+      "goalDiff": -10,
+      "points": 12
+    },
+    {
+      "rank": 9,
       "teamId": 125,
       "team": "Eintracht Frankfurt",
       "played": 8,
@@ -111,7 +124,7 @@
       "points": 11
     },
     {
-      "rank": 9,
+      "rank": 10,
       "teamId": 2950,
       "team": "Mainz",
       "played": 8,
@@ -124,7 +137,7 @@
       "points": 10
     },
     {
-      "rank": 10,
+      "rank": 11,
       "teamId": 3841,
       "team": "FC Augsburg",
       "played": 8,
@@ -137,7 +150,7 @@
       "points": 9
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 134,
       "team": "VfB Stuttgart",
       "played": 8,
@@ -150,7 +163,7 @@
       "points": 9
     },
     {
-      "rank": 12,
+      "rank": 13,
       "teamId": 7911,
       "team": "TSG Hoffenheim",
       "played": 8,
@@ -163,7 +176,7 @@
       "points": 9
     },
     {
-      "rank": 13,
+      "rank": 14,
       "teamId": 122,
       "team": "FC Cologne",
       "played": 8,
@@ -176,7 +189,7 @@
       "points": 9
     },
     {
-      "rank": 14,
+      "rank": 15,
       "teamId": 3307,
       "team": "SC Paderborn 07",
       "played": 8,
@@ -186,19 +199,6 @@
       "goalsFor": 6,
       "goalsAgainst": 9,
       "goalDiff": -3,
-      "points": 9
-    },
-    {
-      "rank": 15,
-      "teamId": 127,
-      "team": "Hamburg SV",
-      "played": 8,
-      "won": 3,
-      "drawn": 0,
-      "lost": 5,
-      "goalsFor": 7,
-      "goalsAgainst": 19,
-      "goalDiff": -12,
       "points": 9
     },
     {
@@ -231,13 +231,13 @@
       "rank": 18,
       "teamId": 268,
       "team": "Borussia Mönchengladbach",
-      "played": 8,
+      "played": 9,
       "won": 1,
       "drawn": 1,
-      "lost": 6,
-      "goalsFor": 11,
-      "goalsAgainst": 22,
-      "goalDiff": -11,
+      "lost": 7,
+      "goalsFor": 12,
+      "goalsAgainst": 25,
+      "goalDiff": -13,
       "points": 4
     }
   ]

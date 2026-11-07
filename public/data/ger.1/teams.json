@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-05T03:15:56.958Z",
+  "updateTime": "2026-11-07T02:44:45.029Z",
   "league": "ger.1",
   "season": "2026",
   "count": 18,
@@ -78,9 +78,9 @@
       "logo": "logos/132.png",
       "logoDark": "logos/132-dark.png",
       "venue": {
-        "name": "Kai Tak Sports Park",
-        "city": "Mongkok, Kowloon",
-        "country": "Hong Kong"
+        "name": "Allianz Arena",
+        "city": "München",
+        "country": "Germany"
       },
       "isActive": true,
       "record": {
@@ -146,13 +146,13 @@
       "record": {
         "wins": 1,
         "draws": 1,
-        "losses": 6,
-        "played": 8,
+        "losses": 7,
+        "played": 9,
         "points": 4,
-        "goalDiff": -11,
-        "goalsFor": 11,
-        "goalsAgainst": 22,
-        "summary": "1-1-6"
+        "goalDiff": -13,
+        "goalsFor": 12,
+        "goalsAgainst": 25,
+        "summary": "1-1-7"
       }
     },
     {
@@ -167,7 +167,11 @@
       "alternateColor": "#272726",
       "logo": "logos/125.png",
       "logoDark": "logos/125-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Deutsche Bank Park",
+        "city": "Frankfurt",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 3,
@@ -193,7 +197,11 @@
       "alternateColor": "#03915c",
       "logo": "logos/3841.png",
       "logoDark": "logos/3841-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "WWK Arena",
+        "city": "Augsburg",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 2,
@@ -256,15 +264,15 @@
       },
       "isActive": true,
       "record": {
-        "wins": 3,
+        "wins": 4,
         "draws": 0,
         "losses": 5,
-        "played": 8,
-        "points": 9,
-        "goalDiff": -12,
-        "goalsFor": 7,
-        "goalsAgainst": 19,
-        "summary": "3-0-5"
+        "played": 9,
+        "points": 12,
+        "goalDiff": -10,
+        "goalsFor": 10,
+        "goalsAgainst": 20,
+        "summary": "4-0-5"
       }
     },
     {
@@ -279,7 +287,11 @@
       "alternateColor": "#000055",
       "logo": "logos/2950.png",
       "logoDark": "logos/2950-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "MEWA ARENA",
+        "city": "Mainz",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 3,
@@ -305,11 +317,7 @@
       "alternateColor": "#740c14",
       "logo": "logos/11420.png",
       "logoDark": "logos/11420-dark.png",
-      "venue": {
-        "name": "Red Bull Arena",
-        "city": "Leipzig",
-        "country": "Germany"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 5,
@@ -455,7 +463,11 @@
       "alternateColor": "#000055",
       "logo": "logos/7911.png",
       "logoDark": "logos/7911-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "PreZero Arena",
+        "city": "Sinsheim",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 3,
@@ -511,7 +523,11 @@
       "alternateColor": "#ffffff",
       "logo": "logos/137.png",
       "logoDark": "logos/137-dark.png",
-      "venue": null,
+      "venue": {
+        "name": "Weserstadion",
+        "city": "Bremen",
+        "country": "Germany"
+      },
       "isActive": true,
       "record": {
         "wins": 4,

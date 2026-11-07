@@ -1,9 +1,9 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-11-05T03:40:27.878Z",
+  "updateTime": "2026-11-07T03:06:38.191Z",
   "league": "fra.1",
   "season": "2026",
-  "matchesCounted": 81,
+  "matchesCounted": 82,
   "count": 18,
   "standings": [
     {
@@ -125,6 +125,19 @@
     },
     {
       "rank": 10,
+      "teamId": 179,
+      "team": "Toulouse",
+      "played": 10,
+      "won": 3,
+      "drawn": 4,
+      "lost": 3,
+      "goalsFor": 15,
+      "goalsAgainst": 14,
+      "goalDiff": 1,
+      "points": 13
+    },
+    {
+      "rank": 11,
       "teamId": 6997,
       "team": "Brest",
       "played": 9,
@@ -137,7 +150,7 @@
       "points": 12
     },
     {
-      "rank": 11,
+      "rank": 12,
       "teamId": 273,
       "team": "Lorient",
       "played": 9,
@@ -150,29 +163,16 @@
       "points": 12
     },
     {
-      "rank": 12,
-      "teamId": 179,
-      "team": "Toulouse",
-      "played": 9,
-      "won": 2,
-      "drawn": 4,
-      "lost": 3,
-      "goalsFor": 12,
-      "goalsAgainst": 13,
-      "goalDiff": -1,
-      "points": 10
-    },
-    {
       "rank": 13,
       "teamId": 180,
       "team": "Strasbourg",
-      "played": 9,
+      "played": 10,
       "won": 3,
       "drawn": 1,
-      "lost": 5,
-      "goalsFor": 17,
-      "goalsAgainst": 19,
-      "goalDiff": -2,
+      "lost": 6,
+      "goalsFor": 18,
+      "goalsAgainst": 22,
+      "goalDiff": -4,
       "points": 10
     },
     {

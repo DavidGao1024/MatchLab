@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-05T03:30:16.798Z",
+  "updateTime": "2026-11-07T02:57:31.995Z",
   "league": "uefa.champions",
   "season": "2026",
   "count": 36,
@@ -201,9 +201,9 @@
       "logo": "logos/132.png",
       "logoDark": "logos/132-dark.png",
       "venue": {
-        "name": "Kai Tak Sports Park",
-        "city": "Mongkok, Kowloon",
-        "country": "Hong Kong"
+        "name": "Allianz Arena",
+        "city": "München",
+        "country": "Germany"
       },
       "isActive": true,
       "record": {
@@ -380,7 +380,11 @@
       "alternateColor": "#ffffff",
       "logo": "logos/436.png",
       "logoDark": null,
-      "venue": null,
+      "venue": {
+        "name": "Şükrü Saracoğlu Stadium",
+        "city": "Istanbul",
+        "country": "Türkiye"
+      },
       "isActive": true,
       "record": {
         "wins": 1,
@@ -769,11 +773,7 @@
       "alternateColor": "#740c14",
       "logo": "logos/11420.png",
       "logoDark": "logos/11420-dark.png",
-      "venue": {
-        "name": "Red Bull Arena",
-        "city": "Leipzig",
-        "country": "Germany"
-      },
+      "venue": null,
       "isActive": true,
       "record": {
         "wins": 1,
