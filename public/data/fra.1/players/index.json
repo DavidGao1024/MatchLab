@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-07T02:53:03.075Z",
+  "updateTime": "2026-11-08T02:24:11.661Z",
   "league": "fra.1",
   "season": "2026",
-  "count": 527,
+  "count": 528,
   "players": [
     {
       "id": 271137,
@@ -279,6 +279,19 @@
       "team": "AJ Auxerre"
     },
     {
+      "id": 290230,
+      "name": "Giovanni Reyna",
+      "teamId": 180,
+      "position": "M",
+      "age": 23,
+      "goals": 3,
+      "assists": 0,
+      "citizenship": "USA",
+      "flag": "flags/us.png",
+      "jersey": 10,
+      "team": "Strasbourg"
+    },
+    {
       "id": 277525,
       "name": "Himad Abdelli",
       "teamId": 176,
@@ -316,6 +329,19 @@
       "flag": "flags/fr.png",
       "jersey": 9,
       "team": "Lille"
+    },
+    {
+      "id": 362777,
+      "name": "Thomas Jørgensen",
+      "teamId": 179,
+      "position": "M",
+      "age": 21,
+      "goals": 3,
+      "assists": 1,
+      "citizenship": "Denmark",
+      "flag": "flags/dk.png",
+      "jersey": 8,
+      "team": "Toulouse"
     },
     {
       "id": 173266,
@@ -446,19 +472,6 @@
       "flag": "flags/hr.png",
       "jersey": 29,
       "team": "Lens"
-    },
-    {
-      "id": 290230,
-      "name": "Giovanni Reyna",
-      "teamId": 180,
-      "position": "M",
-      "age": 23,
-      "goals": 2,
-      "assists": 0,
-      "citizenship": "USA",
-      "flag": "flags/us.png",
-      "jersey": 10,
-      "team": "Strasbourg"
     },
     {
       "id": 289114,
@@ -654,19 +667,6 @@
       "flag": "flags/fr.png",
       "jersey": 24,
       "team": "Paris Saint-Germain"
-    },
-    {
-      "id": 362777,
-      "name": "Thomas Jørgensen",
-      "teamId": 179,
-      "position": "M",
-      "age": 21,
-      "goals": 2,
-      "assists": 1,
-      "citizenship": "Denmark",
-      "flag": "flags/dk.png",
-      "jersey": 8,
-      "team": "Toulouse"
     },
     {
       "id": 346844,
@@ -1254,6 +1254,19 @@
       "team": "Lorient"
     },
     {
+      "id": 77072,
+      "name": "Mark McKenzie",
+      "teamId": 179,
+      "position": "D",
+      "age": 27,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "USA",
+      "flag": "flags/us.png",
+      "jersey": 3,
+      "team": "Toulouse"
+    },
+    {
       "id": 348301,
       "name": "Martial Godo",
       "teamId": 180,
@@ -1527,6 +1540,19 @@
       "team": "Paris FC"
     },
     {
+      "id": 338873,
+      "name": "Santiago Hidalgo",
+      "teamId": 179,
+      "position": "F",
+      "age": 21,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "jersey": 9,
+      "team": "Toulouse"
+    },
+    {
       "id": 286011,
       "name": "Saud Abdulhamid",
       "teamId": 175,
@@ -1546,7 +1572,7 @@
       "position": "F",
       "age": 19,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Sweden",
       "flag": "flags/se.png",
       "jersey": 11,
@@ -2441,7 +2467,7 @@
       "name": "Clinton Mata",
       "teamId": 167,
       "position": "D",
-      "age": 33,
+      "age": 34,
       "goals": 0,
       "assists": 0,
       "citizenship": "Angola",
@@ -2469,7 +2495,7 @@
       "position": "M",
       "age": 26,
       "goals": 0,
-      "assists": 5,
+      "assists": 6,
       "citizenship": "Venezuela",
       "flag": "flags/ve.png",
       "jersey": 23,
@@ -2968,6 +2994,19 @@
       "flag": "flags/no.png",
       "jersey": 22,
       "team": "AJ Auxerre"
+    },
+    {
+      "id": 408255,
+      "name": "Gaetan Bakhouche",
+      "teamId": 179,
+      "position": "D",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 44,
+      "team": "Toulouse"
     },
     {
       "id": 231778,
@@ -4153,19 +4192,6 @@
       "team": "Angers"
     },
     {
-      "id": 77072,
-      "name": "Mark McKenzie",
-      "teamId": 179,
-      "position": "D",
-      "age": 27,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "USA",
-      "flag": "flags/us.png",
-      "jersey": 3,
-      "team": "Toulouse"
-    },
-    {
       "id": 309638,
       "name": "Marvin Senaya",
       "teamId": 172,
@@ -5108,7 +5134,7 @@
       "position": "D",
       "age": 29,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Denmark",
       "flag": "flags/dk.png",
       "jersey": 2,
@@ -5347,19 +5373,6 @@
       "flag": "flags/fr.png",
       "jersey": 17,
       "team": "Le Mans"
-    },
-    {
-      "id": 338873,
-      "name": "Santiago Hidalgo",
-      "teamId": 179,
-      "position": "F",
-      "age": 21,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "jersey": 9,
-      "team": "Toulouse"
     },
     {
       "id": 303787,
@@ -6029,7 +6042,7 @@
       "name": "Alvin Petit Dol",
       "teamId": 172,
       "position": "D",
-      "age": 19,
+      "age": 20,
       "goals": null,
       "assists": null,
       "citizenship": "France",
@@ -6244,19 +6257,6 @@
       "flag": "flags/fr.png",
       "jersey": 60,
       "team": "Strasbourg"
-    },
-    {
-      "id": 408255,
-      "name": "Gaetan Bakhouche",
-      "teamId": 179,
-      "position": "D",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 44,
-      "team": "Toulouse"
     },
     {
       "id": 358999,
@@ -6536,7 +6536,7 @@
       "name": "Maximillian Oyedele",
       "teamId": 180,
       "position": "M",
-      "age": 21,
+      "age": 22,
       "goals": null,
       "assists": null,
       "citizenship": "Poland",
@@ -6816,6 +6816,19 @@
       "flag": null,
       "jersey": 43,
       "team": "Lille"
+    },
+    {
+      "id": 3121652,
+      "name": "Younes Idder",
+      "teamId": 160,
+      "position": "M",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 46,
+      "team": "Paris Saint-Germain"
     },
     {
       "id": 414184,

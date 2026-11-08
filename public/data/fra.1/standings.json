@@ -1,26 +1,39 @@
 {
   "source": "本地从 ESPN site.api 比分计算（computeStandings）",
-  "updateTime": "2026-11-07T03:06:38.191Z",
+  "updateTime": "2026-11-08T02:39:24.049Z",
   "league": "fra.1",
   "season": "2026",
-  "matchesCounted": 82,
+  "matchesCounted": 84,
   "count": 18,
   "standings": [
     {
       "rank": 1,
       "teamId": 160,
       "team": "Paris Saint-Germain",
-      "played": 9,
-      "won": 6,
+      "played": 10,
+      "won": 7,
       "drawn": 2,
       "lost": 1,
-      "goalsFor": 21,
+      "goalsFor": 22,
       "goalsAgainst": 10,
-      "goalDiff": 11,
-      "points": 20
+      "goalDiff": 12,
+      "points": 23
     },
     {
       "rank": 2,
+      "teamId": 6851,
+      "team": "Paris FC",
+      "played": 10,
+      "won": 6,
+      "drawn": 2,
+      "lost": 2,
+      "goalsFor": 17,
+      "goalsAgainst": 10,
+      "goalDiff": 7,
+      "points": 20
+    },
+    {
+      "rank": 3,
       "teamId": 166,
       "team": "Lille",
       "played": 9,
@@ -33,7 +46,7 @@
       "points": 18
     },
     {
-      "rank": 3,
+      "rank": 4,
       "teamId": 167,
       "team": "Lyon",
       "played": 9,
@@ -43,19 +56,6 @@
       "goalsFor": 15,
       "goalsAgainst": 7,
       "goalDiff": 8,
-      "points": 17
-    },
-    {
-      "rank": 4,
-      "teamId": 6851,
-      "team": "Paris FC",
-      "played": 9,
-      "won": 5,
-      "drawn": 2,
-      "lost": 2,
-      "goalsFor": 16,
-      "goalsAgainst": 10,
-      "goalDiff": 6,
       "points": 17
     },
     {
@@ -179,13 +179,13 @@
       "rank": 14,
       "teamId": 172,
       "team": "AJ Auxerre",
-      "played": 9,
+      "played": 10,
       "won": 3,
       "drawn": 1,
-      "lost": 5,
+      "lost": 6,
       "goalsFor": 13,
-      "goalsAgainst": 23,
-      "goalDiff": -10,
+      "goalsAgainst": 24,
+      "goalDiff": -11,
       "points": 10
     },
     {
@@ -205,13 +205,13 @@
       "rank": 16,
       "teamId": 170,
       "team": "Troyes",
-      "played": 9,
+      "played": 10,
       "won": 2,
       "drawn": 2,
-      "lost": 5,
+      "lost": 6,
       "goalsFor": 7,
-      "goalsAgainst": 16,
-      "goalDiff": -9,
+      "goalsAgainst": 17,
+      "goalDiff": -10,
       "points": 8
     },
     {

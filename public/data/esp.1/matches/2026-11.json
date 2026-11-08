@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-11-07T03:06:26.317Z",
+  "updateTime": "2026-11-08T02:39:11.243Z",
   "league": "esp.1",
   "month": "2026-11",
   "count": 35,
@@ -165,16 +165,17 @@
       "eventId": "401882812",
       "date": "2026-11-07T13:00Z",
       "name": "Racing Santander at Málaga",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+7'",
+      "period": 2,
       "venue": "La Rosaleda",
       "home": {
         "id": 99,
         "name": "Málaga",
         "abbreviation": "MCF",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -182,17 +183,18 @@
         "name": "Racing Santander",
         "abbreviation": "RAC",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/87.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       }
     },
     {
       "eventId": "401882813",
       "date": "2026-11-07T15:15Z",
       "name": "Deportivo at Espanyol",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "RCDE Stadium",
       "home": {
         "id": 88,
@@ -215,16 +217,17 @@
       "eventId": "401882811",
       "date": "2026-11-07T17:30Z",
       "name": "Athletic Club at Osasuna",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+5'",
+      "period": 2,
       "venue": "El Sadar",
       "home": {
         "id": 97,
         "name": "Osasuna",
         "abbreviation": "OSA",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -232,7 +235,7 @@
         "name": "Athletic Club",
         "abbreviation": "ATH",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/93.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },
@@ -240,9 +243,10 @@
       "eventId": "401882808",
       "date": "2026-11-07T20:00Z",
       "name": "Real Madrid at Valencia",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+4'",
+      "period": 2,
       "venue": "Mestalla Stadium",
       "home": {
         "id": 94,
@@ -257,8 +261,8 @@
         "name": "Real Madrid",
         "abbreviation": "RMA",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
-        "score": 0,
-        "winner": null
+        "score": 3,
+        "winner": true
       }
     },
     {

@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-07T02:44:27.045Z",
+  "updateTime": "2026-11-08T02:14:43.282Z",
   "league": "ita.1",
   "season": "2026",
-  "count": 651,
+  "count": 654,
   "players": [
     {
       "id": 384482,
@@ -519,7 +519,7 @@
       "position": "D",
       "age": 24,
       "goals": 2,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 18,
@@ -1161,6 +1161,19 @@
       "flag": "flags/mk.png",
       "jersey": 99,
       "team": "Atalanta"
+    },
+    {
+      "id": 276636,
+      "name": "Enrique Perez",
+      "teamId": 17530,
+      "position": "M",
+      "age": 29,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 71,
+      "team": "Venezia"
     },
     {
       "id": 242593,
@@ -2086,6 +2099,19 @@
       "team": "Juventus"
     },
     {
+      "id": 221057,
+      "name": "Toma Basic",
+      "teamId": 17530,
+      "position": "M",
+      "age": 29,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Croatia",
+      "flag": "flags/hr.png",
+      "jersey": 26,
+      "team": "Venezia"
+    },
+    {
       "id": 309518,
       "name": "Tommaso Baldanzi",
       "teamId": 3263,
@@ -2779,7 +2805,7 @@
       "name": "Arijanet Muric",
       "teamId": 3997,
       "position": "G",
-      "age": 27,
+      "age": 28,
       "goals": 0,
       "assists": 0,
       "citizenship": "Kosovo",
@@ -3338,7 +3364,7 @@
       "name": "David de Gea",
       "teamId": 109,
       "position": "G",
-      "age": 35,
+      "age": 36,
       "goals": 0,
       "assists": 0,
       "citizenship": "Spain",
@@ -3826,19 +3852,6 @@
       "flag": "flags/it.png",
       "jersey": 15,
       "team": "Parma"
-    },
-    {
-      "id": 276636,
-      "name": "Enrique Perez",
-      "teamId": 17530,
-      "position": "M",
-      "age": 29,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 71,
-      "team": "Venezia"
     },
     {
       "id": 242601,
@@ -6562,11 +6575,11 @@
       "name": "Ousmane Diallo",
       "teamId": 115,
       "position": "D",
-      "age": 27,
+      "age": 33,
       "goals": 0,
       "assists": 0,
-      "citizenship": "Mali",
-      "flag": "flags/ml.png",
+      "citizenship": "France",
+      "flag": "flags/fr.png",
       "jersey": 7,
       "team": "Parma"
     },
@@ -6603,7 +6616,7 @@
       "position": "D",
       "age": 31,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "jersey": 70,
@@ -7442,19 +7455,6 @@
       "team": "Venezia"
     },
     {
-      "id": 221057,
-      "name": "Toma Basic",
-      "teamId": 17530,
-      "position": "M",
-      "age": 29,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Croatia",
-      "flag": "flags/hr.png",
-      "jersey": 26,
-      "team": "Venezia"
-    },
-    {
       "id": 306390,
       "name": "Tomas Bobcek",
       "teamId": 4057,
@@ -8261,6 +8261,19 @@
       "team": "Monza"
     },
     {
+      "id": 5331648,
+      "name": "Levente Kilvinger",
+      "teamId": 104,
+      "position": "G",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 12,
+      "team": "AS Roma"
+    },
+    {
       "id": 3140451,
       "name": "Lorenzo Luigi Ginelli",
       "teamId": 2572,
@@ -8311,6 +8324,19 @@
       "flag": null,
       "jersey": 36,
       "team": "Lecce"
+    },
+    {
+      "id": 5331494,
+      "name": "Márton Prettenhoffer",
+      "teamId": 2925,
+      "position": "D",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 37,
+      "team": "Cagliari"
     },
     {
       "id": 224455,
@@ -8441,6 +8467,19 @@
       "flag": "flags/it.png",
       "jersey": 50,
       "team": "Atalanta"
+    },
+    {
+      "id": 5331647,
+      "name": "Valerio Maccaroni",
+      "teamId": 104,
+      "position": "M",
+      "age": null,
+      "goals": null,
+      "assists": null,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 64,
+      "team": "AS Roma"
     },
     {
       "id": 333924,
