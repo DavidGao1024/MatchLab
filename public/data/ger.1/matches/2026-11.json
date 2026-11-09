@@ -1,6 +1,6 @@
 {
   "source": "site.api.espn.com",
-  "updateTime": "2026-11-08T02:39:18.301Z",
+  "updateTime": "2026-11-09T02:54:06.276Z",
   "league": "ger.1",
   "month": "2026-11",
   "count": 29,
@@ -217,16 +217,17 @@
       "eventId": "401884738",
       "date": "2026-11-08T14:30Z",
       "name": "Bayer Leverkusen at FC Cologne",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "RheinEnergieStadion",
       "home": {
         "id": 122,
         "name": "FC Cologne",
         "abbreviation": "KOE",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       },
       "away": {
@@ -234,25 +235,26 @@
         "name": "Bayer Leverkusen",
         "abbreviation": "B04",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       }
     },
     {
       "eventId": "401884741",
       "date": "2026-11-08T16:30Z",
       "name": "1. FC Union Berlin at SC Freiburg",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+6'",
+      "period": 2,
       "venue": "Europa-Park Stadion",
       "home": {
         "id": 126,
         "name": "SC Freiburg",
         "abbreviation": "SCF",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 598,
@@ -267,24 +269,25 @@
       "eventId": "401884742",
       "date": "2026-11-08T18:30Z",
       "name": "Schalke 04 at TSG Hoffenheim",
-      "status": "pre",
-      "completed": false,
-      "clock": "0'",
+      "status": "post",
+      "completed": true,
+      "clock": "90'+10'",
+      "period": 2,
       "venue": "PreZero Arena",
       "home": {
         "id": 7911,
         "name": "TSG Hoffenheim",
         "abbreviation": "TSG",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
-        "score": 0,
-        "winner": null
+        "score": 2,
+        "winner": true
       },
       "away": {
         "id": 133,
         "name": "Schalke 04",
         "abbreviation": "S04",
         "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
-        "score": 0,
+        "score": 1,
         "winner": null
       }
     },

@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-08T02:14:43.282Z",
+  "updateTime": "2026-11-09T02:31:18.851Z",
   "league": "ita.1",
   "season": "2026",
-  "count": 654,
+  "count": 655,
   "players": [
     {
       "id": 384482,
@@ -38,7 +38,7 @@
       "position": "F",
       "age": 27,
       "goals": 8,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Netherlands",
       "flag": "flags/nl.png",
       "jersey": 14,
@@ -227,6 +227,19 @@
       "team": "Genoa"
     },
     {
+      "id": 387204,
+      "name": "Rodrigo Mora",
+      "teamId": 104,
+      "position": "M",
+      "age": 19,
+      "goals": 4,
+      "assists": 0,
+      "citizenship": "Portugal",
+      "flag": "flags/pt.png",
+      "jersey": 86,
+      "team": "AS Roma"
+    },
+    {
       "id": 323113,
       "name": "Tijjani Noslin",
       "teamId": 112,
@@ -394,19 +407,6 @@
       "flag": "flags/dk.png",
       "jersey": 19,
       "team": "Napoli"
-    },
-    {
-      "id": 387204,
-      "name": "Rodrigo Mora",
-      "teamId": 104,
-      "position": "M",
-      "age": 19,
-      "goals": 3,
-      "assists": 0,
-      "citizenship": "Portugal",
-      "flag": "flags/pt.png",
-      "jersey": 86,
-      "team": "AS Roma"
     },
     {
       "id": 355997,
@@ -812,6 +812,19 @@
       "team": "AS Roma"
     },
     {
+      "id": 222529,
+      "name": "Mario Hermoso",
+      "teamId": 104,
+      "position": "D",
+      "age": 31,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Spain",
+      "flag": "flags/es.png",
+      "jersey": 22,
+      "team": "AS Roma"
+    },
+    {
       "id": 188306,
       "name": "Matteo Politano",
       "teamId": 114,
@@ -862,6 +875,19 @@
       "flag": "flags/pl.png",
       "jersey": 7,
       "team": "Internazionale"
+    },
+    {
+      "id": 234426,
+      "name": "Riccardo Orsolini",
+      "teamId": 107,
+      "position": "F",
+      "age": 29,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 7,
+      "team": "Bologna"
     },
     {
       "id": 238296,
@@ -1043,6 +1069,19 @@
       "citizenship": "Ukraine",
       "flag": "flags/ua.png",
       "jersey": 9,
+      "team": "Bologna"
+    },
+    {
+      "id": 304222,
+      "name": "Arthur Theate",
+      "teamId": 107,
+      "position": "D",
+      "age": 26,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Belgium",
+      "flag": "flags/be.png",
+      "jersey": 3,
       "team": "Bologna"
     },
     {
@@ -1657,19 +1696,6 @@
       "team": "AC Milan"
     },
     {
-      "id": 222529,
-      "name": "Mario Hermoso",
-      "teamId": 104,
-      "position": "D",
-      "age": 31,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Spain",
-      "flag": "flags/es.png",
-      "jersey": 22,
-      "team": "AS Roma"
-    },
-    {
       "id": 308944,
       "name": "Matteo Cancellieri",
       "teamId": 112,
@@ -1720,6 +1746,19 @@
       "flag": "flags/it.png",
       "jersey": 30,
       "team": "Como"
+    },
+    {
+      "id": 272745,
+      "name": "Michel Adopo",
+      "teamId": 2925,
+      "position": "M",
+      "age": 26,
+      "goals": 1,
+      "assists": 2,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 8,
+      "team": "Cagliari"
     },
     {
       "id": 324256,
@@ -1884,7 +1923,7 @@
       "position": "F",
       "age": 19,
       "goals": 1,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Senegal",
       "flag": "flags/sn.png",
       "jersey": 31,
@@ -1980,19 +2019,6 @@
       "flag": "flags/pt.png",
       "jersey": 7,
       "team": "Monza"
-    },
-    {
-      "id": 234426,
-      "name": "Riccardo Orsolini",
-      "teamId": 107,
-      "position": "F",
-      "age": 29,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 7,
-      "team": "Bologna"
     },
     {
       "id": 345713,
@@ -2136,6 +2162,19 @@
       "flag": "flags/es.png",
       "jersey": 21,
       "team": "Fiorentina"
+    },
+    {
+      "id": 218857,
+      "name": "Vincent Sierro",
+      "teamId": 115,
+      "position": "M",
+      "age": 31,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "Switzerland",
+      "flag": "flags/ch.png",
+      "jersey": 4,
+      "team": "Parma"
     },
     {
       "id": 256715,
@@ -2877,19 +2916,6 @@
       "flag": "flags/fr.png",
       "jersey": 14,
       "team": "Fiorentina"
-    },
-    {
-      "id": 304222,
-      "name": "Arthur Theate",
-      "teamId": 107,
-      "position": "D",
-      "age": 26,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Belgium",
-      "flag": "flags/be.png",
-      "jersey": 3,
-      "team": "Bologna"
     },
     {
       "id": 397258,
@@ -5141,6 +5167,19 @@
       "team": "Napoli"
     },
     {
+      "id": 5331648,
+      "name": "Levente Kilvinger",
+      "teamId": 104,
+      "position": "G",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 12,
+      "team": "AS Roma"
+    },
+    {
       "id": 202429,
       "name": "Lewis Ferguson",
       "teamId": 107,
@@ -5804,6 +5843,19 @@
       "team": "Bologna"
     },
     {
+      "id": 5331494,
+      "name": "Márton Prettenhoffer",
+      "teamId": 2925,
+      "position": "D",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 37,
+      "team": "Cagliari"
+    },
+    {
       "id": 388880,
       "name": "Massimo Pessina",
       "teamId": 107,
@@ -6103,19 +6155,6 @@
       "team": "Monza"
     },
     {
-      "id": 272745,
-      "name": "Michel Adopo",
-      "teamId": 2925,
-      "position": "M",
-      "age": 26,
-      "goals": 0,
-      "assists": 2,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 8,
-      "team": "Cagliari"
-    },
-    {
       "id": 189026,
       "name": "Mike Maignan",
       "teamId": 103,
@@ -6356,7 +6395,7 @@
       "position": "F",
       "age": 25,
       "goals": 0,
-      "assists": 2,
+      "assists": 3,
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "jersey": 28,
@@ -7572,6 +7611,19 @@
       "team": "Lazio"
     },
     {
+      "id": 5331647,
+      "name": "Valerio Maccaroni",
+      "teamId": 104,
+      "position": "M",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 64,
+      "team": "AS Roma"
+    },
+    {
       "id": 219531,
       "name": "Vanja Milinkovic-Savic",
       "teamId": 114,
@@ -7596,19 +7648,6 @@
       "flag": "flags/br.png",
       "jersey": 33,
       "team": "Fiorentina"
-    },
-    {
-      "id": 218857,
-      "name": "Vincent Sierro",
-      "teamId": 115,
-      "position": "M",
-      "age": 31,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "Switzerland",
-      "flag": "flags/ch.png",
-      "jersey": 4,
-      "team": "Parma"
     },
     {
       "id": 403234,
@@ -8001,6 +8040,19 @@
       "team": "Lecce"
     },
     {
+      "id": 404030,
+      "name": "Cristiano De Paoli",
+      "teamId": 2572,
+      "position": "D",
+      "age": 18,
+      "goals": null,
+      "assists": null,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 55,
+      "team": "Como"
+    },
+    {
       "id": 307061,
       "name": "Daniel Boloca",
       "teamId": 3997,
@@ -8261,19 +8313,6 @@
       "team": "Monza"
     },
     {
-      "id": 5331648,
-      "name": "Levente Kilvinger",
-      "teamId": 104,
-      "position": "G",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "jersey": 12,
-      "team": "AS Roma"
-    },
-    {
       "id": 3140451,
       "name": "Lorenzo Luigi Ginelli",
       "teamId": 2572,
@@ -8324,19 +8363,6 @@
       "flag": null,
       "jersey": 36,
       "team": "Lecce"
-    },
-    {
-      "id": 5331494,
-      "name": "Márton Prettenhoffer",
-      "teamId": 2925,
-      "position": "D",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "jersey": 37,
-      "team": "Cagliari"
     },
     {
       "id": 224455,
@@ -8467,19 +8493,6 @@
       "flag": "flags/it.png",
       "jersey": 50,
       "team": "Atalanta"
-    },
-    {
-      "id": 5331647,
-      "name": "Valerio Maccaroni",
-      "teamId": 104,
-      "position": "M",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "jersey": 64,
-      "team": "AS Roma"
     },
     {
       "id": 333924,

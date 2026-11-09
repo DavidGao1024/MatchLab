@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com athletes/{id}/transactions",
-  "updateTime": "2026-11-08T03:01:35.730Z",
+  "updateTime": "2026-11-09T03:12:20.585Z",
   "league": "uefa.champions",
-  "playersScanned": 1180,
-  "count": 1045,
+  "playersScanned": 1182,
+  "count": 900,
   "transfers": [
     {
       "playerId": 102053,
@@ -438,18 +438,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 131424,
-      "playerName": "Ilkay Gündogan",
-      "date": "2025-09-02T07:00Z",
-      "fromTeamId": 382,
-      "fromTeam": "Manchester City",
-      "toTeamId": 432,
-      "toTeam": "Galatasaray",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 131634,
       "playerName": "Wojciech Szczesny",
       "date": "2009-11-20T08:00Z",
@@ -498,18 +486,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 131634,
-      "playerName": "Wojciech Szczesny",
-      "date": "2024-10-02T07:00Z",
-      "fromTeamId": null,
-      "fromTeam": null,
-      "toTeamId": 83,
-      "toTeam": "Barcelona",
-      "type": "Free",
-      "amount": 0,
-      "displayAmount": "Free"
-    },
-    {
       "playerId": 131742,
       "playerName": "Mathieu Gorgelin",
       "date": "2016-07-01T07:00Z",
@@ -520,18 +496,6 @@
       "type": "Fee",
       "amount": 800000,
       "displayAmount": "800000"
-    },
-    {
-      "playerId": 132233,
-      "playerName": "Marco Bizot",
-      "date": "2025-07-15T07:00Z",
-      "fromTeamId": 6997,
-      "fromTeam": "Brest",
-      "toTeamId": 362,
-      "toTeam": "Aston Villa",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 134283,
@@ -652,18 +616,6 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 134947,
-      "playerName": "Kevin De Bruyne",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 382,
-      "fromTeam": "Manchester City",
-      "toTeamId": 114,
-      "toTeam": "Napoli",
-      "type": "Free",
-      "amount": 0,
-      "displayAmount": "Free"
     },
     {
       "playerId": 139437,
@@ -2082,18 +2034,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 169532,
-      "playerName": "Kepa Arrizabalaga",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 363,
-      "fromTeam": "Chelsea",
-      "toTeamId": 359,
-      "toTeam": "Arsenal",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 170785,
       "playerName": "Hakan Çalhanoglu",
       "date": "2014-07-04T07:00Z",
@@ -2274,18 +2214,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 174521,
-      "playerName": "Patrick Drewes",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 121,
-      "fromTeam": "VfL Bochum",
-      "toTeamId": 124,
-      "toTeam": "Borussia Dortmund",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 174526,
       "playerName": "Kevin Wimmer",
       "date": "2015-07-01T07:00Z",
@@ -2392,30 +2320,6 @@
       "type": "Free",
       "amount": 0,
       "displayAmount": "Free"
-    },
-    {
-      "playerId": 175195,
-      "playerName": "Milan Skriniar",
-      "date": "2025-01-30T08:00Z",
-      "fromTeamId": 160,
-      "fromTeam": "Paris Saint-Germain",
-      "toTeamId": 436,
-      "toTeam": "Fenerbahce",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 175195,
-      "playerName": "Milan Skriniar",
-      "date": "2025-07-30T07:00Z",
-      "fromTeamId": 160,
-      "fromTeam": "Paris Saint-Germain",
-      "toTeamId": 436,
-      "toTeam": "Fenerbahce",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 175264,
@@ -2586,18 +2490,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 176948,
-      "playerName": "Ederson",
-      "date": "2025-09-02T07:00Z",
-      "fromTeamId": 382,
-      "fromTeam": "Manchester City",
-      "toTeamId": 432,
-      "toTeam": "Galatasaray",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 177545,
       "playerName": "Marcus Bettinelli",
       "date": "2014-01-03T08:00Z",
@@ -2644,18 +2536,6 @@
       "type": "Free",
       "amount": 0,
       "displayAmount": "Free"
-    },
-    {
-      "playerId": 177545,
-      "playerName": "Marcus Bettinelli",
-      "date": "2025-06-10T07:00Z",
-      "fromTeamId": 363,
-      "fromTeam": "Chelsea",
-      "toTeamId": 382,
-      "toTeam": "Manchester City",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 177782,
@@ -3078,18 +2958,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 181729,
-      "playerName": "Mario Lemina",
-      "date": "2025-02-05T08:00Z",
-      "fromTeamId": 380,
-      "fromTeam": "Wolverhampton Wanderers",
-      "toTeamId": 432,
-      "toTeam": "Galatasaray",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 181946,
       "playerName": "Ruben Aguilar",
       "date": "2017-07-01T07:00Z",
@@ -3253,18 +3121,6 @@
       "fromTeam": "Hamburg SV",
       "toTeamId": 131,
       "toTeam": "Bayer Leverkusen",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 188052,
-      "playerName": "Jonathan Tah",
-      "date": "2025-06-09T07:00Z",
-      "fromTeamId": 131,
-      "fromTeam": "Bayer Leverkusen",
-      "toTeamId": 132,
-      "toTeam": "Bayern Munich",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -3534,30 +3390,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 192146,
-      "playerName": "Álex Valle",
-      "date": "2025-01-31T08:00Z",
-      "fromTeamId": 83,
-      "fromTeam": "Barcelona",
-      "toTeamId": 2572,
-      "toTeam": "Como",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 192146,
-      "playerName": "Álex Valle",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 83,
-      "fromTeam": "Barcelona",
-      "toTeamId": 2572,
-      "toTeam": "Como",
-      "type": "Fee",
-      "amount": 6000000,
-      "displayAmount": "6000000"
-    },
-    {
       "playerId": 193297,
       "playerName": "Youri Tielemans",
       "date": "2017-07-01T07:00Z",
@@ -3714,18 +3546,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 194121,
-      "playerName": "Freddie Woodman",
-      "date": "2025-06-27T07:00Z",
-      "fromTeamId": 394,
-      "fromTeam": "Preston North End",
-      "toTeamId": 364,
-      "toTeam": "Liverpool",
-      "type": "Free",
-      "amount": 0,
-      "displayAmount": "Free"
-    },
-    {
       "playerId": 194748,
       "playerName": "Federico Dimarco",
       "date": "2017-07-01T07:00Z",
@@ -3808,30 +3628,6 @@
       "type": "Free",
       "amount": 0,
       "displayAmount": "Free"
-    },
-    {
-      "playerId": 195821,
-      "playerName": "Marco Asensio",
-      "date": "2025-02-03T08:00Z",
-      "fromTeamId": 160,
-      "fromTeam": "Paris Saint-Germain",
-      "toTeamId": 362,
-      "toTeam": "Aston Villa",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 195821,
-      "playerName": "Marco Asensio",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 160,
-      "fromTeam": "Paris Saint-Germain",
-      "toTeamId": 436,
-      "toTeam": "Fenerbahce",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 196176,
@@ -4086,18 +3882,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 202641,
-      "playerName": "Leroy Sané",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 132,
-      "fromTeam": "Bayern Munich",
-      "toTeamId": 432,
-      "toTeam": "Galatasaray",
-      "type": "Free",
-      "amount": 0,
-      "displayAmount": "Free"
-    },
-    {
       "playerId": 202717,
       "playerName": "Dani Ceballos",
       "date": "2017-07-14T07:00Z",
@@ -4276,18 +4060,6 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 204679,
-      "playerName": "Victor Lindelöf",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": null,
-      "fromTeam": null,
-      "toTeamId": 362,
-      "toTeam": "Aston Villa",
-      "type": "Free",
-      "amount": 0,
-      "displayAmount": "Free"
     },
     {
       "playerId": 205576,
@@ -4794,18 +4566,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 214375,
-      "playerName": "Emiliano Buendía",
-      "date": "2025-01-29T08:00Z",
-      "fromTeamId": 362,
-      "fromTeam": "Aston Villa",
-      "toTeamId": 131,
-      "toTeam": "Bayer Leverkusen",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
       "playerId": 214562,
       "playerName": "Manuel Akanji",
       "date": "2018-01-15T08:00Z",
@@ -4828,18 +4588,6 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 214562,
-      "playerName": "Manuel Akanji",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 382,
-      "fromTeam": "Manchester City",
-      "toTeamId": 110,
-      "toTeam": "Internazionale",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
     },
     {
       "playerId": 214596,
@@ -4926,18 +4674,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 215378,
-      "playerName": "Benjamin Pavard",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 110,
-      "fromTeam": "Internazionale",
-      "toTeamId": 176,
-      "toTeam": "Marseille",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
       "playerId": 215524,
       "playerName": "Jerry St. Juste",
       "date": "2017-07-18T07:00Z",
@@ -4996,18 +4732,6 @@
       "type": "Free",
       "amount": 0,
       "displayAmount": "Free"
-    },
-    {
-      "playerId": 217092,
-      "playerName": "Gianluigi Donnarumma",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 160,
-      "fromTeam": "Paris Saint-Germain",
-      "toTeamId": 382,
-      "toTeam": "Manchester City",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 217096,
@@ -5152,18 +4876,6 @@
       "type": "Fee",
       "amount": 2500000,
       "displayAmount": "2500000"
-    },
-    {
-      "playerId": 219531,
-      "playerName": "Vanja Milinkovic-Savic",
-      "date": "2025-07-26T07:00Z",
-      "fromTeamId": 239,
-      "fromTeam": "Torino",
-      "toTeamId": 114,
-      "toTeam": "Napoli",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
     },
     {
       "playerId": 219713,
@@ -5334,18 +5046,6 @@
       "displayAmount": "Free"
     },
     {
-      "playerId": 221332,
-      "playerName": "Luka Jovic",
-      "date": "2025-08-05T07:00Z",
-      "fromTeamId": 103,
-      "fromTeam": "AC Milan",
-      "toTeamId": 887,
-      "toTeam": "AEK Athens",
-      "type": "Free",
-      "amount": 0,
-      "displayAmount": "Free"
-    },
-    {
       "playerId": 221788,
       "playerName": "Jan Bednarek",
       "date": "2017-07-01T07:00Z",
@@ -5389,18 +5089,6 @@
       "fromTeam": "RB Leipzig",
       "toTeamId": 363,
       "toTeam": "Chelsea",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 222176,
-      "playerName": "Christopher Nkunku",
-      "date": "2025-08-30T07:00Z",
-      "fromTeamId": 363,
-      "fromTeam": "Chelsea",
-      "toTeamId": 103,
-      "toTeam": "AC Milan",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -5466,18 +5154,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 222180,
-      "playerName": "Odsonne Édouard",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 384,
-      "fromTeam": "Crystal Palace",
-      "toTeamId": 175,
-      "toTeam": "Lens",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 222529,
       "playerName": "Mario Hermoso",
       "date": "2017-07-12T07:00Z",
@@ -5500,18 +5176,6 @@
       "type": "Fee",
       "amount": 25000000,
       "displayAmount": "25000000"
-    },
-    {
-      "playerId": 222529,
-      "playerName": "Mario Hermoso",
-      "date": "2025-01-31T08:00Z",
-      "fromTeamId": 104,
-      "fromTeam": "AS Roma",
-      "toTeamId": 131,
-      "toTeam": "Bayer Leverkusen",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
     },
     {
       "playerId": 222670,
@@ -5574,18 +5238,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 223532,
-      "playerName": "Trent Alexander-Arnold",
-      "date": "2025-06-01T07:00Z",
-      "fromTeamId": 364,
-      "fromTeam": "Liverpool",
-      "toTeamId": 86,
-      "toTeam": "Real Madrid",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 226177,
       "playerName": "Kostas Tsimikas",
       "date": "2020-08-10T07:00Z",
@@ -5596,18 +5248,6 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 226177,
-      "playerName": "Kostas Tsimikas",
-      "date": "2025-08-31T07:00Z",
-      "fromTeamId": 364,
-      "fromTeam": "Liverpool",
-      "toTeamId": 104,
-      "toTeam": "AS Roma",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
     },
     {
       "playerId": 227714,
@@ -5742,18 +5382,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 227794,
-      "playerName": "Reiss Nelson",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 359,
-      "fromTeam": "Arsenal",
-      "toTeamId": 337,
-      "toTeam": "Brentford",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
       "playerId": 228296,
       "playerName": "Victor Osimhen",
       "date": "2017-01-09T08:00Z",
@@ -5812,18 +5440,6 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
-    },
-    {
-      "playerId": 228296,
-      "playerName": "Victor Osimhen",
-      "date": "2025-07-31T07:00Z",
-      "fromTeamId": 114,
-      "fromTeam": "Napoli",
-      "toTeamId": 432,
-      "toTeam": "Galatasaray",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 228402,
@@ -5956,30 +5572,6 @@
       "type": "Fee",
       "amount": 50400000,
       "displayAmount": "50400000"
-    },
-    {
-      "playerId": 230945,
-      "playerName": "Marcus Rashford",
-      "date": "2025-02-02T08:00Z",
-      "fromTeamId": 360,
-      "fromTeam": "Manchester United",
-      "toTeamId": 362,
-      "toTeam": "Aston Villa",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 230945,
-      "playerName": "Marcus Rashford",
-      "date": "2025-07-23T07:00Z",
-      "fromTeamId": 360,
-      "fromTeam": "Manchester United",
-      "toTeamId": 83,
-      "toTeam": "Barcelona",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
     },
     {
       "playerId": 231050,
@@ -6210,18 +5802,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 234300,
-      "playerName": "Devis Vásquez",
-      "date": "2025-07-28T07:00Z",
-      "fromTeamId": 103,
-      "fromTeam": "AC Milan",
-      "toTeamId": 104,
-      "toTeam": "AS Roma",
-      "type": "Free",
-      "amount": 0,
-      "displayAmount": "Free"
-    },
-    {
       "playerId": 234306,
       "playerName": "Federico Chiesa",
       "date": "2020-10-05T07:00Z",
@@ -6354,18 +5934,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 235662,
-      "playerName": "Alexander Isak",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 361,
-      "fromTeam": "Newcastle United",
-      "toTeamId": 364,
-      "toTeam": "Liverpool",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 235789,
       "playerName": "Jens Petter Hauge",
       "date": "2020-10-01T07:00Z",
@@ -6469,18 +6037,6 @@
       "fromTeam": "AS Roma",
       "toTeamId": 103,
       "toTeam": "AC Milan",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 236209,
-      "playerName": "Tammy Abraham",
-      "date": "2025-07-03T07:00Z",
-      "fromTeamId": 104,
-      "fromTeam": "AS Roma",
-      "toTeamId": 1895,
-      "toTeam": "Besiktas",
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
@@ -6709,18 +6265,6 @@
       "fromTeam": "Ajax Amsterdam",
       "toTeamId": 2925,
       "toTeam": "Cagliari",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 240109,
-      "playerName": "Aleksandar Stankovic",
-      "date": "2025-07-24T07:00Z",
-      "fromTeamId": 110,
-      "fromTeam": "Internazionale",
-      "toTeamId": 570,
-      "toTeam": "Club Brugge",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -7338,18 +6882,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 251400,
-      "playerName": "Eberechi Eze",
-      "date": "2025-08-23T07:00Z",
-      "fromTeamId": 384,
-      "fromTeam": "Crystal Palace",
-      "toTeamId": 359,
-      "toTeam": "Arsenal",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 251634,
       "playerName": "Ibrahima Konaté",
       "date": "2017-07-01T07:00Z",
@@ -7410,18 +6942,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 255311,
-      "playerName": "Ola Brynhildsen",
-      "date": "2025-02-15T08:00Z",
-      "fromTeamId": 572,
-      "fromTeam": "FC Midtjylland",
-      "toTeamId": 7318,
-      "toTeam": "Toronto FC",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
       "playerId": 255344,
       "playerName": "Noa Lang",
       "date": "2020-01-18T08:00Z",
@@ -7453,18 +6973,6 @@
       "fromTeam": "Ajax Amsterdam",
       "toTeamId": 570,
       "toTeam": "Club Brugge",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 255344,
-      "playerName": "Noa Lang",
-      "date": "2025-07-17T07:00Z",
-      "fromTeamId": 148,
-      "fromTeam": "PSV Eindhoven",
-      "toTeamId": 114,
-      "toTeam": "Napoli",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -7602,30 +7110,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 257390,
-      "playerName": "Luis Díaz",
-      "date": "2025-07-30T07:00Z",
-      "fromTeamId": 364,
-      "fromTeam": "Liverpool",
-      "toTeamId": 132,
-      "toTeam": "Bayern Munich",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 257786,
-      "playerName": "Dávid Hancko",
-      "date": "2025-07-24T07:00Z",
-      "fromTeamId": 142,
-      "fromTeam": "Feyenoord Rotterdam",
-      "toTeamId": 1068,
-      "toTeam": "Atlético Madrid",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 258871,
       "playerName": "Michaël Cuisance",
       "date": "2017-07-01T07:00Z",
@@ -7734,18 +7218,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 258906,
-      "playerName": "Viktor Gyökeres",
-      "date": "2025-07-26T07:00Z",
-      "fromTeamId": 2250,
-      "fromTeam": "Sporting CP",
-      "toTeamId": 359,
-      "toTeam": "Arsenal",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 258917,
       "playerName": "Rafael Leão",
       "date": "2018-08-08T07:00Z",
@@ -7765,18 +7237,6 @@
       "fromTeam": "Lille",
       "toTeamId": 103,
       "toTeam": "AC Milan",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 258963,
-      "playerName": "Ridle Baku",
-      "date": "2025-01-10T08:00Z",
-      "fromTeamId": 138,
-      "fromTeam": "VfL Wolfsburg",
-      "toTeamId": 11420,
-      "toTeam": "RB Leipzig",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -7806,18 +7266,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 259131,
-      "playerName": "Sasa Kalajdzic",
-      "date": "2025-09-05T07:00Z",
-      "fromTeamId": 380,
-      "fromTeam": "Wolverhampton Wanderers",
-      "toTeamId": 4411,
-      "toTeam": "LASK Linz",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
       "playerId": 259481,
       "playerName": "Donyell Malen",
       "date": "2017-08-31T07:00Z",
@@ -7837,18 +7285,6 @@
       "fromTeam": "PSV Eindhoven",
       "toTeamId": 124,
       "toTeam": "Borussia Dortmund",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 259481,
-      "playerName": "Donyell Malen",
-      "date": "2025-01-14T08:00Z",
-      "fromTeamId": 124,
-      "fromTeam": "Borussia Dortmund",
-      "toTeamId": 362,
-      "toTeam": "Aston Villa",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -7900,18 +7336,6 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
-    },
-    {
-      "playerId": 259902,
-      "playerName": "Matheus Cunha",
-      "date": "2025-06-16T07:00Z",
-      "fromTeamId": 380,
-      "fromTeam": "Wolverhampton Wanderers",
-      "toTeamId": 360,
-      "toTeam": "Manchester United",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 259910,
@@ -7998,30 +7422,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 260775,
-      "playerName": "Santiago Gimenez",
-      "date": "2025-02-03T08:00Z",
-      "fromTeamId": 142,
-      "fromTeam": "Feyenoord Rotterdam",
-      "toTeamId": 103,
-      "toTeam": "AC Milan",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 261594,
-      "playerName": "Sam Beukema",
-      "date": "2025-07-20T07:00Z",
-      "fromTeamId": 107,
-      "fromTeam": "Bologna",
-      "toTeamId": 114,
-      "toTeam": "Napoli",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 264828,
       "playerName": "Lutsharel Geertruida",
       "date": "2024-08-30T07:00Z",
@@ -8032,18 +7432,6 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 264828,
-      "playerName": "Lutsharel Geertruida",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 11420,
-      "fromTeam": "RB Leipzig",
-      "toTeamId": 366,
-      "toTeam": "Sunderland",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
     },
     {
       "playerId": 265869,
@@ -8104,18 +7492,6 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 265912,
-      "playerName": "Maxence Caqueret",
-      "date": "2025-01-12T08:00Z",
-      "fromTeamId": 167,
-      "fromTeam": "Lyon",
-      "toTeamId": 2572,
-      "toTeam": "Como",
-      "type": "Fee",
-      "amount": 15000000,
-      "displayAmount": "15000000"
     },
     {
       "playerId": 265919,
@@ -8478,18 +7854,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 271170,
-      "playerName": "Bryan Mbeumo",
-      "date": "2025-07-21T07:00Z",
-      "fromTeamId": 337,
-      "fromTeam": "Brentford",
-      "toTeamId": 360,
-      "toTeam": "Manchester United",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 271555,
       "playerName": "Leonardo Balerdi",
       "date": "2019-01-14T08:00Z",
@@ -8574,18 +7938,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 272722,
-      "playerName": "Luis Suárez",
-      "date": "2025-07-28T07:00Z",
-      "fromTeamId": 6832,
-      "fromTeam": "Almería",
-      "toTeamId": 2250,
-      "toTeam": "Sporting CP",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 273292,
       "playerName": "Antoine Semenyo",
       "date": "2023-01-27T08:00Z",
@@ -8644,18 +7996,6 @@
       "type": "Fee",
       "amount": 30000000,
       "displayAmount": "30000000"
-    },
-    {
-      "playerId": 273499,
-      "playerName": "Jonathan David",
-      "date": "2025-07-04T07:00Z",
-      "fromTeamId": 166,
-      "fromTeam": "Lille",
-      "toTeamId": 111,
-      "toTeam": "Juventus",
-      "type": "Free",
-      "amount": 0,
-      "displayAmount": "Free"
     },
     {
       "playerId": 274197,
@@ -8725,30 +8065,6 @@
       "fromTeam": "Bayern Munich",
       "toTeamId": 364,
       "toTeam": "Liverpool",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 274742,
-      "playerName": "Giorgi Mamardashvili",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 94,
-      "fromTeam": "Valencia",
-      "toTeamId": 364,
-      "toTeam": "Liverpool",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 274745,
-      "playerName": "Khvicha Kvaratskhelia",
-      "date": "2025-01-17T08:00Z",
-      "fromTeamId": 114,
-      "fromTeam": "Napoli",
-      "toTeamId": 160,
-      "toTeam": "Paris Saint-Germain",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -8862,18 +8178,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 276822,
-      "playerName": "Samuele Ricci",
-      "date": "2025-07-04T07:00Z",
-      "fromTeamId": 239,
-      "fromTeam": "Torino",
-      "toTeamId": 103,
-      "toTeam": "AC Milan",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 277206,
       "playerName": "Julián Álvarez",
       "date": "2022-01-31T08:00Z",
@@ -8946,18 +8250,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 277313,
-      "playerName": "Matej Kovár",
-      "date": "2025-07-15T07:00Z",
-      "fromTeamId": 131,
-      "fromTeam": "Bayer Leverkusen",
-      "toTeamId": 148,
-      "toTeam": "PSV Eindhoven",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
       "playerId": 277327,
       "playerName": "Jean-Clair Todibo",
       "date": "2019-01-31T08:00Z",
@@ -9028,18 +8320,6 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
-    },
-    {
-      "playerId": 277327,
-      "playerName": "Jean-Clair Todibo",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 2502,
-      "fromTeam": "Nice",
-      "toTeamId": 371,
-      "toTeam": "West Ham United",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 277377,
@@ -9222,18 +8502,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 281119,
-      "playerName": "Jeremie Frimpong",
-      "date": "2025-06-01T07:00Z",
-      "fromTeamId": 131,
-      "fromTeam": "Bayer Leverkusen",
-      "toTeamId": 364,
-      "toTeam": "Liverpool",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 281121,
       "playerName": "Taylor Harwood-Bellis",
       "date": "2021-02-01T08:00Z",
@@ -9402,30 +8670,6 @@
       "displayAmount": "95000000"
     },
     {
-      "playerId": 281558,
-      "playerName": "Antony",
-      "date": "2025-01-25T08:00Z",
-      "fromTeamId": 360,
-      "fromTeam": "Manchester United",
-      "toTeamId": 244,
-      "toTeam": "Real Betis",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 281558,
-      "playerName": "Antony",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 360,
-      "fromTeam": "Manchester United",
-      "toTeamId": 244,
-      "toTeam": "Real Betis",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 282564,
       "playerName": "Lorenzo Lucca",
       "date": "2022-08-04T07:00Z",
@@ -9433,18 +8677,6 @@
       "fromTeam": "Pisa",
       "toTeamId": 139,
       "toTeam": "Ajax Amsterdam",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 282564,
-      "playerName": "Lorenzo Lucca",
-      "date": "2025-07-18T07:00Z",
-      "fromTeamId": 118,
-      "fromTeam": "Udinese",
-      "toTeamId": 114,
-      "toTeam": "Napoli",
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
@@ -9534,30 +8766,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 284769,
-      "playerName": "Tajon Buchanan",
-      "date": "2025-02-01T08:00Z",
-      "fromTeamId": 110,
-      "fromTeam": "Internazionale",
-      "toTeamId": 102,
-      "toTeam": "Villarreal",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 284769,
-      "playerName": "Tajon Buchanan",
-      "date": "2025-07-29T07:00Z",
-      "fromTeamId": 110,
-      "fromTeam": "Internazionale",
-      "toTeamId": 102,
-      "toTeam": "Villarreal",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 285150,
       "playerName": "Eduardo Camavinga",
       "date": "2021-08-31T07:00Z",
@@ -9589,18 +8797,6 @@
       "fromTeam": "Botafogo",
       "toTeamId": 176,
       "toTeam": "Marseille",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 286369,
-      "playerName": "Luis Henrique",
-      "date": "2025-06-07T07:00Z",
-      "fromTeamId": 176,
-      "fromTeam": "Marseille",
-      "toTeamId": 110,
-      "toTeam": "Internazionale",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -9678,18 +8874,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 287266,
-      "playerName": "Martín Zubimendi",
-      "date": "2025-07-06T07:00Z",
-      "fromTeamId": 89,
-      "fromTeam": "Real Sociedad",
-      "toTeamId": 359,
-      "toTeam": "Arsenal",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 287461,
       "playerName": "Jakub Moder",
       "date": "2020-10-05T07:00Z",
@@ -9700,18 +8884,6 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
-    },
-    {
-      "playerId": 287461,
-      "playerName": "Jakub Moder",
-      "date": "2025-01-20T08:00Z",
-      "fromTeamId": 331,
-      "fromTeam": "Brighton & Hove Albion",
-      "toTeamId": 142,
-      "toTeam": "Feyenoord Rotterdam",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 288897,
@@ -9731,18 +8903,6 @@
       "date": "2022-07-01T07:00Z",
       "fromTeamId": 437,
       "fromTeam": "FC Porto",
-      "toTeamId": 160,
-      "toTeam": "Paris Saint-Germain",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 288925,
-      "playerName": "Lucas Chevalier",
-      "date": "2025-08-09T07:00Z",
-      "fromTeamId": 166,
-      "fromTeam": "Lille",
       "toTeamId": 160,
       "toTeam": "Paris Saint-Germain",
       "type": "Undisclosed",
@@ -9798,18 +8958,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 289155,
-      "playerName": "Benjamin Sesko",
-      "date": "2025-08-09T07:00Z",
-      "fromTeamId": 11420,
-      "fromTeam": "RB Leipzig",
-      "toTeamId": 360,
-      "toTeam": "Manchester United",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 289840,
       "playerName": "Vitezslav Jaros",
       "date": "2022-07-04T07:00Z",
@@ -9817,18 +8965,6 @@
       "fromTeam": "Liverpool",
       "toTeamId": 400,
       "toTeam": "Stockport County",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 289840,
-      "playerName": "Vitezslav Jaros",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 364,
-      "fromTeam": "Liverpool",
-      "toTeamId": 139,
-      "toTeam": "Ajax Amsterdam",
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
@@ -9877,18 +9013,6 @@
       "fromTeam": "TSG Hoffenheim",
       "toTeamId": 124,
       "toTeam": "Borussia Dortmund",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 290802,
-      "playerName": "Johnny Cardoso",
-      "date": "2025-07-16T07:00Z",
-      "fromTeamId": 244,
-      "fromTeam": "Real Betis",
-      "toTeamId": 1068,
-      "toTeam": "Atlético Madrid",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -9978,18 +9102,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 291629,
-      "playerName": "Fábio Silva",
-      "date": "2025-08-29T07:00Z",
-      "fromTeamId": 380,
-      "fromTeam": "Wolverhampton Wanderers",
-      "toTeamId": 124,
-      "toTeam": "Borussia Dortmund",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 291630,
       "playerName": "Amad Diallo",
       "date": "2021-01-07T08:00Z",
@@ -10026,18 +9138,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 292062,
-      "playerName": "Piero Hincapié",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 131,
-      "fromTeam": "Bayer Leverkusen",
-      "toTeamId": 359,
-      "toTeam": "Arsenal",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
       "playerId": 293236,
       "playerName": "Noni Madueke",
       "date": "2023-01-21T08:00Z",
@@ -10050,30 +9150,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 293236,
-      "playerName": "Noni Madueke",
-      "date": "2025-07-18T07:00Z",
-      "fromTeamId": 363,
-      "fromTeam": "Chelsea",
-      "toTeamId": 359,
-      "toTeam": "Arsenal",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 294039,
-      "playerName": "Tani Oluwaseyi",
-      "date": "2025-08-29T07:00Z",
-      "fromTeamId": 17362,
-      "fromTeam": "Minnesota United FC",
-      "toTeamId": 102,
-      "toTeam": "Villarreal",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 294317,
       "playerName": "Carney Chukwuemeka",
       "date": "2022-08-04T07:00Z",
@@ -10081,30 +9157,6 @@
       "fromTeam": "Aston Villa",
       "toTeamId": 363,
       "toTeam": "Chelsea",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 294317,
-      "playerName": "Carney Chukwuemeka",
-      "date": "2025-02-03T08:00Z",
-      "fromTeamId": 363,
-      "fromTeam": "Chelsea",
-      "toTeamId": 124,
-      "toTeam": "Borussia Dortmund",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 294317,
-      "playerName": "Carney Chukwuemeka",
-      "date": "2025-08-26T07:00Z",
-      "fromTeamId": 363,
-      "fromTeam": "Chelsea",
-      "toTeamId": 124,
-      "toTeam": "Borussia Dortmund",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -10170,54 +9222,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 297084,
-      "playerName": "Yan Couto",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 382,
-      "fromTeam": "Manchester City",
-      "toTeamId": 124,
-      "toTeam": "Borussia Dortmund",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 297157,
-      "playerName": "Dilane Bakwa",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 180,
-      "fromTeam": "Strasbourg",
-      "toTeamId": 393,
-      "toTeam": "Nottingham Forest",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 297229,
-      "playerName": "Matteo Ruggeri",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 105,
-      "fromTeam": "Atalanta",
-      "toTeamId": 1068,
-      "toTeam": "Atlético Madrid",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 297300,
-      "playerName": "Devyne Rensch",
-      "date": "2025-01-23T08:00Z",
-      "fromTeamId": 139,
-      "fromTeam": "Ajax Amsterdam",
-      "toTeamId": 104,
-      "toTeam": "AS Roma",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 297360,
       "playerName": "Rafa Marín",
       "date": "2024-07-10T07:00Z",
@@ -10228,54 +9232,6 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 297360,
-      "playerName": "Rafa Marín",
-      "date": "2025-07-03T07:00Z",
-      "fromTeamId": 114,
-      "fromTeam": "Napoli",
-      "toTeamId": 102,
-      "toTeam": "Villarreal",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 297362,
-      "playerName": "Joan García",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 88,
-      "fromTeam": "Espanyol",
-      "toTeamId": 83,
-      "toTeam": "Barcelona",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 297373,
-      "playerName": "Álex Baena",
-      "date": "2025-07-02T07:00Z",
-      "fromTeamId": 102,
-      "fromTeam": "Villarreal",
-      "toTeamId": 1068,
-      "toTeam": "Atlético Madrid",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 298008,
-      "playerName": "Rayan Cherki",
-      "date": "2025-06-10T07:00Z",
-      "fromTeamId": 167,
-      "fromTeam": "Lyon",
-      "toTeamId": 382,
-      "toTeam": "Manchester City",
-      "type": "Fee",
-      "amount": 36500000,
-      "displayAmount": "36500000"
     },
     {
       "playerId": 298329,
@@ -10374,18 +9330,6 @@
       "displayAmount": "18500000"
     },
     {
-      "playerId": 300002,
-      "playerName": "Georges Mikautadze",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 167,
-      "fromTeam": "Lyon",
-      "toTeamId": 102,
-      "toTeam": "Villarreal",
-      "type": "Fee",
-      "amount": 31000000,
-      "displayAmount": "31000000"
-    },
-    {
       "playerId": 300514,
       "playerName": "Georgios Vagiannidis",
       "date": "2020-10-01T07:00Z",
@@ -10446,18 +9390,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 301425,
-      "playerName": "Senne Lammens",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 17544,
-      "fromTeam": "Antwerp",
-      "toTeamId": 360,
-      "toTeam": "Manchester United",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 301524,
       "playerName": "João Gomes",
       "date": "2023-01-30T08:00Z",
@@ -10477,30 +9409,6 @@
       "fromTeam": "Red Bull Bragantino",
       "toTeamId": 114,
       "toTeam": "Napoli",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 301526,
-      "playerName": "Natan",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 114,
-      "fromTeam": "Napoli",
-      "toTeamId": 244,
-      "toTeam": "Real Betis",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 303748,
-      "playerName": "Florian Wirtz",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 131,
-      "fromTeam": "Bayer Leverkusen",
-      "toTeamId": 364,
-      "toTeam": "Liverpool",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -10549,18 +9457,6 @@
       "fromTeam": null,
       "toTeamId": 349,
       "toTeam": "AFC Bournemouth",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 304503,
-      "playerName": "Illia Zabarnyi",
-      "date": "2025-08-12T07:00Z",
-      "fromTeamId": 349,
-      "fromTeam": "AFC Bournemouth",
-      "toTeamId": 160,
-      "toTeam": "Paris Saint-Germain",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -10650,18 +9546,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 304901,
-      "playerName": "Hugo Ekitike",
-      "date": "2025-07-23T07:00Z",
-      "fromTeamId": 125,
-      "fromTeam": "Eintracht Frankfurt",
-      "toTeamId": 364,
-      "toTeam": "Liverpool",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 304965,
       "playerName": "Jakub Kiwior",
       "date": "2023-01-23T08:00Z",
@@ -10672,18 +9556,6 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 304965,
-      "playerName": "Jakub Kiwior",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 359,
-      "fromTeam": "Arsenal",
-      "toTeamId": 437,
-      "toTeam": "FC Porto",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
     },
     {
       "playerId": 305956,
@@ -10770,18 +9642,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 308246,
-      "playerName": "Abdallah Sima",
-      "date": "2025-08-29T07:00Z",
-      "fromTeamId": 331,
-      "fromTeam": "Brighton & Hove Albion",
-      "toTeamId": 175,
-      "toTeam": "Lens",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 308461,
       "playerName": "Lorenz Assignon",
       "date": "2024-02-01T08:00Z",
@@ -10801,30 +9661,6 @@
       "fromTeam": "Villarreal",
       "toTeamId": 363,
       "toTeam": "Chelsea",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 308524,
-      "playerName": "Nicolas Jackson",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 363,
-      "fromTeam": "Chelsea",
-      "toTeamId": 132,
-      "toTeam": "Bayern Munich",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 309185,
-      "playerName": "Ange-Yoan Bonny",
-      "date": "2025-07-05T07:00Z",
-      "fromTeamId": 115,
-      "fromTeam": "Parma",
-      "toTeamId": 110,
-      "toTeam": "Internazionale",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -10866,18 +9702,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 309241,
-      "playerName": "Máximo Perrone",
-      "date": "2025-07-18T07:00Z",
-      "fromTeamId": 382,
-      "fromTeam": "Manchester City",
-      "toTeamId": 2572,
-      "toTeam": "Como",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 309273,
       "playerName": "Rasmus Højlund",
       "date": "2023-08-05T07:00Z",
@@ -10888,18 +9712,6 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 309273,
-      "playerName": "Rasmus Højlund",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 360,
-      "fromTeam": "Manchester United",
-      "toTeamId": 114,
-      "toTeam": "Napoli",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
     },
     {
       "playerId": 309563,
@@ -10924,18 +9736,6 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
-    },
-    {
-      "playerId": 309563,
-      "playerName": "Lesley Ugochukwu",
-      "date": "2025-08-06T07:00Z",
-      "fromTeamId": 363,
-      "fromTeam": "Chelsea",
-      "toTeamId": 379,
-      "toTeam": "Burnley",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 310325,
@@ -11034,54 +9834,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 310637,
-      "playerName": "Álvaro Carreras",
-      "date": "2025-07-14T07:00Z",
-      "fromTeamId": 1929,
-      "fromTeam": "Benfica",
-      "toTeamId": 86,
-      "toTeam": "Real Madrid",
-      "type": "Fee",
-      "amount": 50000000,
-      "displayAmount": "50000000"
-    },
-    {
-      "playerId": 310709,
-      "playerName": "Daniel Svensson",
-      "date": "2025-02-03T08:00Z",
-      "fromTeamId": 3101,
-      "fromTeam": "FC Nordsjælland",
-      "toTeamId": 124,
-      "toTeam": "Borussia Dortmund",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 310709,
-      "playerName": "Daniel Svensson",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 3101,
-      "fromTeam": "FC Nordsjælland",
-      "toTeamId": 124,
-      "toTeam": "Borussia Dortmund",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 311163,
-      "playerName": "Nathan Saliba",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 9720,
-      "fromTeam": "CF Montréal",
-      "toTeamId": 441,
-      "toTeam": "Anderlecht",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 314858,
       "playerName": "Andrey Santos",
       "date": "2023-01-07T08:00Z",
@@ -11154,18 +9906,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 315879,
-      "playerName": "Harvey Davies",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 364,
-      "fromTeam": "Liverpool",
-      "toTeamId": 2594,
-      "toTeam": "Crawley Town",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
       "playerId": 316128,
       "playerName": "Lucas Beraldo",
       "date": "2024-01-01T08:00Z",
@@ -11197,30 +9937,6 @@
       "fromTeam": "Atlético Madrid",
       "toTeamId": 96,
       "toTeam": "Alavés",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 318098,
-      "playerName": "Santiago Mouriño",
-      "date": "2025-08-01T07:00Z",
-      "fromTeamId": 1068,
-      "fromTeam": "Atlético Madrid",
-      "toTeamId": 102,
-      "toTeam": "Villarreal",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 318098,
-      "playerName": "Santiago Mouriño",
-      "date": "2025-07-31T07:00Z",
-      "fromTeamId": 96,
-      "fromTeam": "Alavés",
-      "toTeamId": 1068,
-      "toTeam": "Atlético Madrid",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -11286,18 +10002,6 @@
       "displayAmount": "34000000"
     },
     {
-      "playerId": 319167,
-      "playerName": "Andy Diouf",
-      "date": "2025-08-22T07:00Z",
-      "fromTeamId": 175,
-      "fromTeam": "Lens",
-      "toTeamId": 110,
-      "toTeam": "Internazionale",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 319368,
       "playerName": "Antonio Nusa",
       "date": "2024-08-13T07:00Z",
@@ -11329,30 +10033,6 @@
       "fromTeam": "AZ Alkmaar",
       "toTeamId": 349,
       "toTeam": "AFC Bournemouth",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 323110,
-      "playerName": "Milos Kerkez",
-      "date": "2025-06-26T07:00Z",
-      "fromTeamId": 349,
-      "fromTeam": "AFC Bournemouth",
-      "toTeamId": 364,
-      "toTeam": "Liverpool",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 323790,
-      "playerName": "Jonas Urbig",
-      "date": "2025-01-27T08:00Z",
-      "fromTeamId": 122,
-      "fromTeam": "FC Cologne",
-      "toTeamId": 132,
-      "toTeam": "Bayern Munich",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -11430,42 +10110,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 324660,
-      "playerName": "Tom Bischof",
-      "date": "2025-06-09T07:00Z",
-      "fromTeamId": 7911,
-      "fromTeam": "TSG Hoffenheim",
-      "toTeamId": 132,
-      "toTeam": "Bayern Munich",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 324820,
-      "playerName": "Jobe Bellingham",
-      "date": "2025-06-10T07:00Z",
-      "fromTeamId": 366,
-      "fromTeam": "Sunderland",
-      "toTeamId": 124,
-      "toTeam": "Borussia Dortmund",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 325410,
-      "playerName": "Esmir Bajraktarevic",
-      "date": "2025-01-02T08:00Z",
-      "fromTeamId": 189,
-      "fromTeam": "New England Revolution",
-      "toTeamId": 148,
-      "toTeam": "PSV Eindhoven",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 325553,
       "playerName": "Willy Kambwala",
       "date": "2024-07-15T07:00Z",
@@ -11473,18 +10117,6 @@
       "fromTeam": "Manchester United",
       "toTeamId": 102,
       "toTeam": "Villarreal",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 325555,
-      "playerName": "Alejandro Garnacho",
-      "date": "2025-08-30T07:00Z",
-      "fromTeamId": 360,
-      "fromTeam": "Manchester United",
-      "toTeamId": 363,
-      "toTeam": "Chelsea",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -11538,18 +10170,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 326230,
-      "playerName": "James McConnell",
-      "date": "2025-08-29T07:00Z",
-      "fromTeamId": 364,
-      "fromTeam": "Liverpool",
-      "toTeamId": 139,
-      "toTeam": "Ajax Amsterdam",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
       "playerId": 328238,
       "playerName": "Bradley Barcola",
       "date": "2023-08-31T07:00Z",
@@ -11562,18 +10182,6 @@
       "displayAmount": "45000000"
     },
     {
-      "playerId": 328497,
-      "playerName": "Cristhian Mosquera",
-      "date": "2025-07-24T07:00Z",
-      "fromTeamId": 94,
-      "fromTeam": "Valencia",
-      "toTeamId": 359,
-      "toTeam": "Arsenal",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 328535,
       "playerName": "Nestory Irankunda",
       "date": "2024-07-01T07:00Z",
@@ -11581,54 +10189,6 @@
       "fromTeam": "Adelaide United FC",
       "toTeamId": 131,
       "toTeam": "Bayer Leverkusen",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 328535,
-      "playerName": "Nestory Irankunda",
-      "date": "2025-07-18T07:00Z",
-      "fromTeamId": 132,
-      "fromTeam": "Bayern Munich",
-      "toTeamId": 395,
-      "toTeam": "Watford",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 331152,
-      "playerName": "Roony Bardghji",
-      "date": "2025-07-14T07:00Z",
-      "fromTeamId": 909,
-      "fromTeam": "F.C. København",
-      "toTeamId": 83,
-      "toTeam": "Barcelona",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 332354,
-      "playerName": "Wesley",
-      "date": "2025-07-28T07:00Z",
-      "fromTeamId": 819,
-      "fromTeam": "Flamengo",
-      "toTeamId": 104,
-      "toTeam": "AS Roma",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 332613,
-      "playerName": "Marc Pubill",
-      "date": "2025-07-23T07:00Z",
-      "fromTeamId": 6832,
-      "fromTeam": "Almería",
-      "toTeamId": 1068,
-      "toTeam": "Atlético Madrid",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -11656,18 +10216,6 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
-    },
-    {
-      "playerId": 333399,
-      "playerName": "Paul Wanner",
-      "date": "2025-08-22T07:00Z",
-      "fromTeamId": 132,
-      "fromTeam": "Bayern Munich",
-      "toTeamId": 148,
-      "toTeam": "PSV Eindhoven",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 336388,
@@ -11778,18 +10326,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 3368,
-      "playerName": "André Silva",
-      "date": "2025-02-03T08:00Z",
-      "fromTeamId": 11420,
-      "fromTeam": "RB Leipzig",
-      "toTeamId": 137,
-      "toTeam": "Werder Bremen",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
       "playerId": 336809,
       "playerName": "Cucho Hernández",
       "date": "2022-07-07T07:00Z",
@@ -11802,18 +10338,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 336809,
-      "playerName": "Cucho Hernández",
-      "date": "2025-02-03T08:00Z",
-      "fromTeamId": 183,
-      "fromTeam": "Columbus Crew",
-      "toTeamId": 244,
-      "toTeam": "Real Betis",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 337011,
       "playerName": "Renato Veiga",
       "date": "2024-07-12T07:00Z",
@@ -11821,30 +10345,6 @@
       "fromTeam": "FC Basel",
       "toTeamId": 363,
       "toTeam": "Chelsea",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 337011,
-      "playerName": "Renato Veiga",
-      "date": "2025-01-27T08:00Z",
-      "fromTeamId": 363,
-      "fromTeam": "Chelsea",
-      "toTeamId": 111,
-      "toTeam": "Juventus",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 337011,
-      "playerName": "Renato Veiga",
-      "date": "2025-08-22T07:00Z",
-      "fromTeamId": 363,
-      "fromTeam": "Chelsea",
-      "toTeamId": 102,
-      "toTeam": "Villarreal",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -11886,42 +10386,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 341494,
-      "playerName": "Petar Sucic",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": null,
-      "fromTeam": null,
-      "toTeamId": 110,
-      "toTeam": "Internazionale",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 346111,
-      "playerName": "Alberto Costa",
-      "date": "2025-01-15T08:00Z",
-      "fromTeamId": 5309,
-      "fromTeam": "Vitória de Guimaraes",
-      "toTeamId": 111,
-      "toTeam": "Juventus",
-      "type": "Fee",
-      "amount": 12500000,
-      "displayAmount": "12500000"
-    },
-    {
-      "playerId": 346111,
-      "playerName": "Alberto Costa",
-      "date": "2025-07-24T07:00Z",
-      "fromTeamId": 111,
-      "fromTeam": "Juventus",
-      "toTeamId": 437,
-      "toTeam": "FC Porto",
-      "type": "Fee",
-      "amount": 15000000,
-      "displayAmount": "15000000"
-    },
-    {
       "playerId": 346612,
       "playerName": "Endrick",
       "date": "2024-07-27T07:00Z",
@@ -11941,30 +10405,6 @@
       "fromTeam": "Liverpool",
       "toTeamId": 336,
       "toTeam": "Stoke City",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 350661,
-      "playerName": "Lewis Koumas",
-      "date": "2025-08-22T07:00Z",
-      "fromTeamId": 364,
-      "fromTeam": "Liverpool",
-      "toTeamId": 392,
-      "toTeam": "Birmingham City",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 354737,
-      "playerName": "Jayden Danns",
-      "date": "2025-01-03T08:00Z",
-      "fromTeamId": 364,
-      "fromTeam": "Liverpool",
-      "toTeamId": 366,
-      "toTeam": "Sunderland",
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
@@ -12006,42 +10446,6 @@
       "displayAmount": "15200000"
     },
     {
-      "playerId": 356000,
-      "playerName": "Dean Huijsen",
-      "date": "2025-06-01T07:00Z",
-      "fromTeamId": 349,
-      "fromTeam": "AFC Bournemouth",
-      "toTeamId": 86,
-      "toTeam": "Real Madrid",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 356044,
-      "playerName": "Ayden Heaven",
-      "date": "2025-02-01T08:00Z",
-      "fromTeamId": 359,
-      "fromTeam": "Arsenal",
-      "toTeamId": 360,
-      "toTeam": "Manchester United",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 356940,
-      "playerName": "Harry Amass",
-      "date": "2025-09-01T07:00Z",
-      "fromTeamId": 360,
-      "fromTeam": "Manchester United",
-      "toTeamId": 399,
-      "toTeam": "Sheffield Wednesday",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
       "playerId": 357683,
       "playerName": "Brajan Gruda",
       "date": "2024-08-14T07:00Z",
@@ -12066,42 +10470,6 @@
       "displayAmount": "Undisclosed"
     },
     {
-      "playerId": 361434,
-      "playerName": "Vitor Reis",
-      "date": "2025-01-21T08:00Z",
-      "fromTeamId": 2029,
-      "fromTeam": "Palmeiras",
-      "toTeamId": 382,
-      "toTeam": "Manchester City",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 361434,
-      "playerName": "Vitor Reis",
-      "date": "2025-08-08T07:00Z",
-      "fromTeamId": 382,
-      "fromTeam": "Manchester City",
-      "toTeamId": 9812,
-      "toTeam": "Girona",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
-    },
-    {
-      "playerId": 362211,
-      "playerName": "Abdukodir Khusanov",
-      "date": "2025-01-20T08:00Z",
-      "fromTeamId": 175,
-      "fromTeam": "Lens",
-      "toTeamId": 382,
-      "toTeam": "Manchester City",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 363038,
       "playerName": "Marc Guiu",
       "date": "2024-07-01T07:00Z",
@@ -12112,18 +10480,6 @@
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 363038,
-      "playerName": "Marc Guiu",
-      "date": "2025-08-06T07:00Z",
-      "fromTeamId": 363,
-      "fromTeam": "Chelsea",
-      "toTeamId": 366,
-      "toTeam": "Sunderland",
-      "type": "Loan",
-      "amount": 0,
-      "displayAmount": "Loan"
     },
     {
       "playerId": 364815,
@@ -12145,66 +10501,6 @@
       "fromTeam": "Schalke 04",
       "toTeamId": 11420,
       "toTeam": "RB Leipzig",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 366781,
-      "playerName": "Patrick Dorgu",
-      "date": "2025-02-02T08:00Z",
-      "fromTeamId": 113,
-      "fromTeam": "Lecce",
-      "toTeamId": 360,
-      "toTeam": "Manchester United",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 366911,
-      "playerName": "Tidiam Gomis",
-      "date": "2025-02-03T08:00Z",
-      "fromTeamId": 2927,
-      "fromTeam": "Caen",
-      "toTeamId": 11420,
-      "toTeam": "RB Leipzig",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 367690,
-      "playerName": "Luca Marianucci",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": null,
-      "fromTeam": null,
-      "toTeamId": 114,
-      "toTeam": "Napoli",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 380082,
-      "playerName": "Giovanni Leoni",
-      "date": "2025-08-15T07:00Z",
-      "fromTeamId": 115,
-      "fromTeam": "Parma",
-      "toTeamId": 364,
-      "toTeam": "Liverpool",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
-      "playerId": 403592,
-      "playerName": "Jan Virgili",
-      "date": "2025-08-28T07:00Z",
-      "fromTeamId": 83,
-      "fromTeam": "Barcelona",
-      "toTeamId": 84,
-      "toTeam": "Mallorca",
       "type": "Undisclosed",
       "amount": 0,
       "displayAmount": "Undisclosed"
@@ -12330,18 +10626,6 @@
       "displayAmount": "Loan"
     },
     {
-      "playerId": 70224,
-      "playerName": "Rodrigo Riquelme",
-      "date": "2025-07-04T07:00Z",
-      "fromTeamId": 1068,
-      "fromTeam": "Atlético Madrid",
-      "toTeamId": 244,
-      "toTeam": "Real Betis",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
-    },
-    {
       "playerId": 78836,
       "playerName": "Carlos Forbs",
       "date": "2023-08-03T07:00Z",
@@ -12364,18 +10648,6 @@
       "type": "Loan",
       "amount": 0,
       "displayAmount": "Loan"
-    },
-    {
-      "playerId": 78836,
-      "playerName": "Carlos Forbs",
-      "date": "2025-07-17T07:00Z",
-      "fromTeamId": 139,
-      "fromTeam": "Ajax Amsterdam",
-      "toTeamId": 570,
-      "toTeam": "Club Brugge",
-      "type": "Undisclosed",
-      "amount": 0,
-      "displayAmount": "Undisclosed"
     },
     {
       "playerId": 88965,
@@ -12421,18 +10693,6 @@
       "fromTeam": "AC Milan",
       "toTeamId": 18966,
       "toTeam": "LAFC",
-      "type": "Free",
-      "amount": 0,
-      "displayAmount": "Free"
-    },
-    {
-      "playerId": 88965,
-      "playerName": "Olivier Giroud",
-      "date": "2025-07-01T07:00Z",
-      "fromTeamId": 18966,
-      "fromTeam": "LAFC",
-      "toTeamId": 166,
-      "toTeam": "Lille",
       "type": "Free",
       "amount": 0,
       "displayAmount": "Free"

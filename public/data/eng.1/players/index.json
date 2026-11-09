@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-08T02:03:24.472Z",
+  "updateTime": "2026-11-09T02:20:59.569Z",
   "league": "eng.1",
   "season": "2026",
   "count": 603,
@@ -97,6 +97,19 @@
       "team": "Aston Villa"
     },
     {
+      "id": 298008,
+      "name": "Rayan Cherki",
+      "teamId": 382,
+      "position": "M",
+      "age": 23,
+      "goals": 5,
+      "assists": 2,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 10,
+      "team": "Manchester City"
+    },
+    {
       "id": 271170,
       "name": "Bryan Mbeumo",
       "teamId": 360,
@@ -121,19 +134,6 @@
       "flag": "flags/br.png",
       "jersey": 9,
       "team": "AFC Bournemouth"
-    },
-    {
-      "id": 298008,
-      "name": "Rayan Cherki",
-      "teamId": 382,
-      "position": "M",
-      "age": 23,
-      "goals": 4,
-      "assists": 2,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 10,
-      "team": "Manchester City"
     },
     {
       "id": 282229,
@@ -277,6 +277,32 @@
       "flag": "flags/gb-eng.png",
       "jersey": 8,
       "team": "Everton"
+    },
+    {
+      "id": 307114,
+      "name": "Liam Delap",
+      "teamId": 393,
+      "position": "F",
+      "age": 23,
+      "goals": 3,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 19,
+      "team": "Nottingham Forest"
+    },
+    {
+      "id": 203669,
+      "name": "Martin Ødegaard",
+      "teamId": 359,
+      "position": "M",
+      "age": 27,
+      "goals": 3,
+      "assists": 0,
+      "citizenship": "Norway",
+      "flag": "flags/no.png",
+      "jersey": 8,
+      "team": "Arsenal"
     },
     {
       "id": 320417,
@@ -565,19 +591,6 @@
       "team": "Brighton & Hove Albion"
     },
     {
-      "id": 203669,
-      "name": "Martin Ødegaard",
-      "teamId": 359,
-      "position": "M",
-      "age": 27,
-      "goals": 2,
-      "assists": 0,
-      "citizenship": "Norway",
-      "flag": "flags/no.png",
-      "jersey": 8,
-      "team": "Arsenal"
-    },
-    {
       "id": 301327,
       "name": "Maxim De Cuyper",
       "teamId": 331,
@@ -589,6 +602,19 @@
       "flag": "flags/be.png",
       "jersey": 29,
       "team": "Brighton & Hove Albion"
+    },
+    {
+      "id": 270641,
+      "name": "Noah Okafor",
+      "teamId": 357,
+      "position": "F",
+      "age": 26,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "Switzerland",
+      "flag": "flags/ch.png",
+      "jersey": 19,
+      "team": "Leeds United"
     },
     {
       "id": 193010,
@@ -1111,6 +1137,19 @@
       "team": "Ipswich Town"
     },
     {
+      "id": 172836,
+      "name": "Jacob Murphy",
+      "teamId": 361,
+      "position": "M",
+      "age": 31,
+      "goals": 1,
+      "assists": 1,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 23,
+      "team": "Newcastle United"
+    },
+    {
       "id": 286090,
       "name": "Jacob Ramsey",
       "teamId": 361,
@@ -1135,6 +1174,19 @@
       "flag": "flags/gb-eng.png",
       "jersey": 19,
       "team": "Brentford"
+    },
+    {
+      "id": 338876,
+      "name": "Jair Cunha",
+      "teamId": 393,
+      "position": "D",
+      "age": 21,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 23,
+      "team": "Nottingham Forest"
     },
     {
       "id": 231863,
@@ -1332,19 +1384,6 @@
       "team": "Newcastle United"
     },
     {
-      "id": 307114,
-      "name": "Liam Delap",
-      "teamId": 393,
-      "position": "F",
-      "age": 23,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 19,
-      "team": "Nottingham Forest"
-    },
-    {
       "id": 364962,
       "name": "Luka Vuskovic",
       "teamId": 331,
@@ -1429,7 +1468,7 @@
       "position": "M",
       "age": 26,
       "goals": 1,
-      "assists": 2,
+      "assists": 3,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "jersey": 10,
@@ -1460,19 +1499,6 @@
       "flag": "flags/ec.png",
       "jersey": 10,
       "team": "Sunderland"
-    },
-    {
-      "id": 270641,
-      "name": "Noah Okafor",
-      "teamId": 357,
-      "position": "F",
-      "age": 26,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "Switzerland",
-      "flag": "flags/ch.png",
-      "jersey": 19,
-      "team": "Leeds United"
     },
     {
       "id": 356212,
@@ -1564,6 +1590,19 @@
       "flag": "flags/it.png",
       "jersey": 33,
       "team": "Arsenal"
+    },
+    {
+      "id": 301525,
+      "name": "Rodrigo Muniz",
+      "teamId": 370,
+      "position": "F",
+      "age": 25,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 9,
+      "team": "Fulham"
     },
     {
       "id": 308217,
@@ -2908,8 +2947,8 @@
       "id": 289824,
       "name": "Djordje Petrovic",
       "teamId": 349,
-      "position": "D",
-      "age": 20,
+      "position": "G",
+      "age": 27,
       "goals": 0,
       "assists": 0,
       "citizenship": "Serbia",
@@ -3620,6 +3659,19 @@
       "team": "Ipswich Town"
     },
     {
+      "id": 157933,
+      "name": "Jack Butland",
+      "teamId": 306,
+      "position": "G",
+      "age": 33,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 1,
+      "team": "Hull City"
+    },
+    {
       "id": 172850,
       "name": "Jack Grealish",
       "teamId": 368,
@@ -3646,19 +3698,6 @@
       "team": "Ipswich Town"
     },
     {
-      "id": 172836,
-      "name": "Jacob Murphy",
-      "teamId": 361,
-      "position": "M",
-      "age": 31,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 23,
-      "team": "Newcastle United"
-    },
-    {
       "id": 295370,
       "name": "Jaden Philogene",
       "teamId": 373,
@@ -3670,19 +3709,6 @@
       "flag": "flags/gb-eng.png",
       "jersey": 11,
       "team": "Ipswich Town"
-    },
-    {
-      "id": 338876,
-      "name": "Jair Cunha",
-      "teamId": 393,
-      "position": "D",
-      "age": 21,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 23,
-      "team": "Nottingham Forest"
     },
     {
       "id": 274649,
@@ -4352,7 +4378,7 @@
       "name": "Konstantinos Tzolakis",
       "teamId": 306,
       "position": "G",
-      "age": 23,
+      "age": 24,
       "goals": 0,
       "assists": 0,
       "citizenship": "Greece",
@@ -4517,6 +4543,19 @@
       "team": "Coventry City"
     },
     {
+      "id": 359158,
+      "name": "Luca Gunter",
+      "teamId": 367,
+      "position": "G",
+      "age": 21,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "England",
+      "flag": "flags/gb-eng.png",
+      "jersey": 46,
+      "team": "Tottenham Hotspur"
+    },
+    {
       "id": 303765,
       "name": "Luca Netz",
       "teamId": 393,
@@ -4624,8 +4663,8 @@
       "id": 167127,
       "name": "Luke Shaw",
       "teamId": 360,
-      "position": "D",
-      "age": 31,
+      "position": "M",
+      "age": 30,
       "goals": 0,
       "assists": 1,
       "citizenship": "England",
@@ -5817,19 +5856,6 @@
       "team": "Tottenham Hotspur"
     },
     {
-      "id": 301525,
-      "name": "Rodrigo Muniz",
-      "teamId": 370,
-      "position": "F",
-      "age": 25,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 9,
-      "team": "Fulham"
-    },
-    {
       "id": 323084,
       "name": "Romaine Mundle",
       "teamId": 366,
@@ -6499,7 +6525,7 @@
       "position": "M",
       "age": 29,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Austria",
       "flag": "flags/at.png",
       "jersey": 21,
@@ -7095,25 +7121,12 @@
       "name": "Ilyas Ansah",
       "teamId": 306,
       "position": "F",
-      "age": 21,
+      "age": 22,
       "goals": null,
       "assists": null,
       "citizenship": "Germany",
       "flag": "flags/de.png",
       "jersey": 28,
-      "team": "Hull City"
-    },
-    {
-      "id": 157933,
-      "name": "Jack Butland",
-      "teamId": 306,
-      "position": "G",
-      "age": 33,
-      "goals": null,
-      "assists": null,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 1,
       "team": "Hull City"
     },
     {
@@ -7297,19 +7310,6 @@
       "flag": "flags/kr.png",
       "jersey": 36,
       "team": "Brentford"
-    },
-    {
-      "id": 359158,
-      "name": "Luca Gunter",
-      "teamId": 367,
-      "position": "G",
-      "age": 21,
-      "goals": null,
-      "assists": null,
-      "citizenship": "England",
-      "flag": "flags/gb-eng.png",
-      "jersey": 46,
-      "team": "Tottenham Hotspur"
     },
     {
       "id": 3114844,
