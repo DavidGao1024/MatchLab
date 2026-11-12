@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-09T02:31:18.851Z",
+  "updateTime": "2026-11-12T03:45:19.379Z",
   "league": "ita.1",
   "season": "2026",
   "count": 655,
@@ -50,12 +50,25 @@
       "teamId": 105,
       "position": "F",
       "age": 26,
-      "goals": 6,
+      "goals": 7,
       "assists": 2,
       "citizenship": "Montenegro",
       "flag": "flags/me.png",
       "jersey": 90,
       "team": "Atalanta"
+    },
+    {
+      "id": 217331,
+      "name": "Marcus Thuram",
+      "teamId": 110,
+      "position": "F",
+      "age": 29,
+      "goals": 6,
+      "assists": 2,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 9,
+      "team": "Internazionale"
     },
     {
       "id": 176203,
@@ -64,10 +77,23 @@
       "position": "M",
       "age": 31,
       "goals": 5,
-      "assists": 3,
+      "assists": 4,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 12,
+      "team": "AC Milan"
+    },
+    {
+      "id": 359754,
+      "name": "Alphadjo Cissè",
+      "teamId": 103,
+      "position": "M",
+      "age": 20,
+      "goals": 5,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 70,
       "team": "AC Milan"
     },
     {
@@ -97,19 +123,6 @@
       "team": "Frosinone"
     },
     {
-      "id": 217331,
-      "name": "Marcus Thuram",
-      "teamId": 110,
-      "position": "F",
-      "age": 29,
-      "goals": 5,
-      "assists": 2,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 9,
-      "team": "Internazionale"
-    },
-    {
       "id": 262071,
       "name": "Tasos Douvikas",
       "teamId": 2572,
@@ -123,19 +136,6 @@
       "team": "Como"
     },
     {
-      "id": 359754,
-      "name": "Alphadjo Cissè",
-      "teamId": 103,
-      "position": "M",
-      "age": 20,
-      "goals": 4,
-      "assists": 0,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 70,
-      "team": "AC Milan"
-    },
-    {
       "id": 213725,
       "name": "Ché Adams",
       "teamId": 239,
@@ -147,6 +147,32 @@
       "flag": "flags/gb-sct.png",
       "jersey": 19,
       "team": "Torino"
+    },
+    {
+      "id": 225607,
+      "name": "Christian Pulisic",
+      "teamId": 103,
+      "position": "M",
+      "age": 28,
+      "goals": 4,
+      "assists": 1,
+      "citizenship": "USA",
+      "flag": "flags/us.png",
+      "jersey": 11,
+      "team": "AC Milan"
+    },
+    {
+      "id": 250850,
+      "name": "Davide Frattesi",
+      "teamId": 112,
+      "position": "M",
+      "age": 27,
+      "goals": 4,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 16,
+      "team": "Lazio"
     },
     {
       "id": 340678,
@@ -214,6 +240,19 @@
       "team": "Internazionale"
     },
     {
+      "id": 312757,
+      "name": "Mateo Pellegrino",
+      "teamId": 109,
+      "position": "F",
+      "age": 25,
+      "goals": 4,
+      "assists": 0,
+      "citizenship": "Argentina",
+      "flag": "flags/ar.png",
+      "jersey": 32,
+      "team": "Fiorentina"
+    },
+    {
       "id": 275444,
       "name": "Milutin Osmajic",
       "teamId": 3263,
@@ -246,37 +285,37 @@
       "position": "F",
       "age": 27,
       "goals": 4,
-      "assists": 3,
+      "assists": 4,
       "citizenship": "Netherlands",
       "flag": "flags/nl.png",
       "jersey": 14,
       "team": "Lazio"
     },
     {
-      "id": 225607,
-      "name": "Christian Pulisic",
-      "teamId": 103,
-      "position": "M",
-      "age": 28,
+      "id": 367743,
+      "name": "Alieu Njie",
+      "teamId": 109,
+      "position": "F",
+      "age": 21,
       "goals": 3,
-      "assists": 1,
-      "citizenship": "USA",
-      "flag": "flags/us.png",
-      "jersey": 11,
-      "team": "AC Milan"
+      "assists": 2,
+      "citizenship": "Sweden",
+      "flag": "flags/se.png",
+      "jersey": 25,
+      "team": "Fiorentina"
     },
     {
-      "id": 250850,
-      "name": "Davide Frattesi",
-      "teamId": 112,
-      "position": "M",
-      "age": 27,
+      "id": 258307,
+      "name": "Bremer",
+      "teamId": 111,
+      "position": "D",
+      "age": 29,
       "goals": 3,
       "assists": 0,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 16,
-      "team": "Lazio"
+      "citizenship": "Brazil",
+      "flag": "flags/br.png",
+      "jersey": 3,
+      "team": "Juventus"
     },
     {
       "id": 180956,
@@ -344,19 +383,6 @@
       "team": "Como"
     },
     {
-      "id": 312757,
-      "name": "Mateo Pellegrino",
-      "teamId": 109,
-      "position": "F",
-      "age": 25,
-      "goals": 3,
-      "assists": 0,
-      "citizenship": "Argentina",
-      "flag": "flags/ar.png",
-      "jersey": 32,
-      "team": "Fiorentina"
-    },
-    {
       "id": 323974,
       "name": "Matìas Soulè",
       "teamId": 104,
@@ -394,6 +420,19 @@
       "flag": "flags/ar.png",
       "jersey": 10,
       "team": "Como"
+    },
+    {
+      "id": 362674,
+      "name": "Pio Esposito",
+      "teamId": 110,
+      "position": "F",
+      "age": 21,
+      "goals": 3,
+      "assists": 1,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 94,
+      "team": "Internazionale"
     },
     {
       "id": 309273,
@@ -474,19 +513,6 @@
       "team": "Fiorentina"
     },
     {
-      "id": 367743,
-      "name": "Alieu Njie",
-      "teamId": 109,
-      "position": "F",
-      "age": 21,
-      "goals": 2,
-      "assists": 2,
-      "citizenship": "Sweden",
-      "flag": "flags/se.png",
-      "jersey": 25,
-      "team": "Fiorentina"
-    },
-    {
       "id": 239086,
       "name": "Andrea Pinamonti",
       "teamId": 112,
@@ -550,19 +576,6 @@
       "flag": "flags/sn.png",
       "jersey": 11,
       "team": "Como"
-    },
-    {
-      "id": 258307,
-      "name": "Bremer",
-      "teamId": 111,
-      "position": "D",
-      "age": 29,
-      "goals": 2,
-      "assists": 0,
-      "citizenship": "Brazil",
-      "flag": "flags/br.png",
-      "jersey": 3,
-      "team": "Juventus"
     },
     {
       "id": 271769,
@@ -675,7 +688,7 @@
       "position": "F",
       "age": 25,
       "goals": 2,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
       "jersey": 9,
@@ -851,17 +864,17 @@
       "team": "Lazio"
     },
     {
-      "id": 362674,
-      "name": "Pio Esposito",
-      "teamId": 110,
-      "position": "F",
-      "age": 21,
+      "id": 324256,
+      "name": "Mikael Ellertsson",
+      "teamId": 3263,
+      "position": "M",
+      "age": 24,
       "goals": 2,
       "assists": 1,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 94,
-      "team": "Internazionale"
+      "citizenship": "Iceland",
+      "flag": "flags/is.png",
+      "jersey": 77,
+      "team": "Genoa"
     },
     {
       "id": 177782,
@@ -1169,7 +1182,7 @@
       "position": "M",
       "age": 28,
       "goals": 1,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Brazil",
       "flag": "flags/br.png",
       "jersey": 12,
@@ -1761,17 +1774,17 @@
       "team": "Cagliari"
     },
     {
-      "id": 324256,
-      "name": "Mikael Ellertsson",
-      "teamId": 3263,
-      "position": "M",
+      "id": 298349,
+      "name": "Nick Woltemade",
+      "teamId": 111,
+      "position": "F",
       "age": 24,
       "goals": 1,
-      "assists": 1,
-      "citizenship": "Iceland",
-      "flag": "flags/is.png",
-      "jersey": 77,
-      "team": "Genoa"
+      "assists": 0,
+      "citizenship": "Germany",
+      "flag": "flags/de.png",
+      "jersey": 27,
+      "team": "Juventus"
     },
     {
       "id": 76017,
@@ -2001,7 +2014,7 @@
       "position": "F",
       "age": 27,
       "goals": 1,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 9,
@@ -2144,7 +2157,7 @@
       "position": "M",
       "age": 23,
       "goals": 1,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Italy",
       "flag": "flags/it.png",
       "jersey": 8,
@@ -3243,6 +3256,19 @@
       "team": "Torino"
     },
     {
+      "id": 404030,
+      "name": "Cristiano De Paoli",
+      "teamId": 2572,
+      "position": "D",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 55,
+      "team": "Como"
+    },
+    {
       "id": 190257,
       "name": "Curtis Jones",
       "teamId": 110,
@@ -3480,12 +3506,12 @@
       "id": 250460,
       "name": "Demba Thiam",
       "teamId": 4007,
-      "position": "D",
-      "age": 36,
+      "position": "G",
+      "age": 28,
       "goals": 0,
       "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
+      "citizenship": "Senegal",
+      "flag": "flags/sn.png",
       "jersey": 20,
       "team": "Monza"
     },
@@ -3600,7 +3626,7 @@
       "position": "D",
       "age": 26,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
       "jersey": 99,
@@ -3871,7 +3897,7 @@
       "name": "Enrico Del Prato",
       "teamId": 115,
       "position": "D",
-      "age": 26,
+      "age": 27,
       "goals": 0,
       "assists": 0,
       "citizenship": "Italy",
@@ -3975,7 +4001,7 @@
       "name": "Federico Dimarco",
       "teamId": 110,
       "position": "D",
-      "age": 28,
+      "age": 29,
       "goals": 0,
       "assists": 1,
       "citizenship": "Italy",
@@ -4664,7 +4690,7 @@
       "name": "Jeff Ekhator",
       "teamId": 111,
       "position": "F",
-      "age": 19,
+      "age": 20,
       "goals": 0,
       "assists": 0,
       "citizenship": "Italy",
@@ -5388,6 +5414,19 @@
       "team": "AC Milan"
     },
     {
+      "id": 389431,
+      "name": "Lorenzo Venturino",
+      "teamId": 3263,
+      "position": "F",
+      "age": 20,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 76,
+      "team": "Genoa"
+    },
+    {
       "id": 164581,
       "name": "Luca Lezzerini",
       "teamId": 109,
@@ -6012,6 +6051,19 @@
       "team": "Como"
     },
     {
+      "id": 224455,
+      "name": "Matteo Pessina",
+      "teamId": 4007,
+      "position": "M",
+      "age": 29,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Italy",
+      "flag": "flags/it.png",
+      "jersey": 32,
+      "team": "Monza"
+    },
+    {
       "id": 198150,
       "name": "Matteo Pisseri",
       "teamId": 4057,
@@ -6348,19 +6400,6 @@
       "flag": "flags/it.png",
       "jersey": 77,
       "team": "Sassuolo"
-    },
-    {
-      "id": 298349,
-      "name": "Nick Woltemade",
-      "teamId": 111,
-      "position": "F",
-      "age": 24,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Germany",
-      "flag": "flags/de.png",
-      "jersey": 27,
-      "team": "Juventus"
     },
     {
       "id": 411232,
@@ -6720,7 +6759,7 @@
       "position": "M",
       "age": 28,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Portugal",
       "flag": "flags/pt.png",
       "jersey": 28,
@@ -7576,7 +7615,7 @@
       "name": "Valentin Antov",
       "teamId": 4007,
       "position": "D",
-      "age": 25,
+      "age": 26,
       "goals": 0,
       "assists": 0,
       "citizenship": "Bulgaria",
@@ -7893,7 +7932,7 @@
       "assists": null,
       "citizenship": "Spain",
       "flag": "flags/es.png",
-      "jersey": null,
+      "jersey": 56,
       "team": "Atalanta"
     },
     {
@@ -8040,19 +8079,6 @@
       "team": "Lecce"
     },
     {
-      "id": 404030,
-      "name": "Cristiano De Paoli",
-      "teamId": 2572,
-      "position": "D",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 55,
-      "team": "Como"
-    },
-    {
       "id": 307061,
       "name": "Daniel Boloca",
       "teamId": 3997,
@@ -8096,7 +8122,7 @@
       "name": "Fabiano Parisi",
       "teamId": 109,
       "position": "D",
-      "age": 25,
+      "age": 26,
       "goals": null,
       "assists": null,
       "citizenship": "Italy",
@@ -8127,7 +8153,7 @@
       "assists": null,
       "citizenship": "Italy",
       "flag": "flags/it.png",
-      "jersey": null,
+      "jersey": 44,
       "team": "Atalanta"
     },
     {
@@ -8326,19 +8352,6 @@
       "team": "Como"
     },
     {
-      "id": 389431,
-      "name": "Lorenzo Venturino",
-      "teamId": 3263,
-      "position": "F",
-      "age": 20,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 76,
-      "team": "Genoa"
-    },
-    {
       "id": 228328,
       "name": "Marin Sverko",
       "teamId": 17530,
@@ -8363,19 +8376,6 @@
       "flag": null,
       "jersey": 36,
       "team": "Lecce"
-    },
-    {
-      "id": 224455,
-      "name": "Matteo Pessina",
-      "teamId": 4007,
-      "position": "M",
-      "age": 29,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Italy",
-      "flag": "flags/it.png",
-      "jersey": 32,
-      "team": "Monza"
     },
     {
       "id": 407906,

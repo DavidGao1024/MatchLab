@@ -1,6 +1,6 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-05T03:12:01.587Z",
+  "updateTime": "2026-11-12T03:42:09.344Z",
   "league": "ita.1",
   "season": "2026",
   "id": 388606,
@@ -8,7 +8,7 @@
   "lastName": "Ekhator",
   "displayName": "Jeff Ekhator",
   "shortName": "J. Ekhator",
-  "age": 19,
+  "age": 20,
   "height": 191,
   "weight": 82,
   "dateOfBirth": "2006-11-11T08:00Z",
@@ -29,10 +29,10 @@
       "totalClearance": 0,
       "totalTackles": 0,
       "tacklesLost": 0,
-      "recoveries": 0
+      "recoveries": 1
     },
     "general": {
-      "appearances": 0,
+      "appearances": 1,
       "avgRatingFromCorrespondent": 0,
       "avgRatingFromDataFeed": 0,
       "avgRatingFromEditor": 0,
@@ -45,12 +45,12 @@
       "handBalls": 0,
       "losses": 0,
       "lostCorners": 0,
-      "minutes": 0,
+      "minutes": 12,
       "ownGoals": 0,
-      "passPct": 0,
+      "passPct": 1,
       "redCards": 0,
       "starts": 0,
-      "subIns": 0,
+      "subIns": 1,
       "subOuts": 0,
       "suspensions": 0,
       "timeEnded": 0,
@@ -59,11 +59,11 @@
       "wins": 0,
       "wonCorners": 0,
       "yellowCards": 0,
-      "duelsLost": 0,
-      "duelsWon": 0,
-      "duels": 0,
+      "duelsLost": 1,
+      "duelsWon": 2,
+      "duels": 3,
       "secondYellow": 0,
-      "touches": 0
+      "touches": 5
     },
     "goalKeeping": {
       "cleanSheet": 0,
@@ -87,10 +87,10 @@
     "offensive": {
       "accurateCrosses": 0,
       "accurateLongBalls": 0,
-      "accuratePasses": 0,
+      "accuratePasses": 2,
       "accurateThroughBalls": 0,
-      "attemptsInBox": 0,
-      "attemptsOutBox": 0,
+      "attemptsInBox": 2,
+      "attemptsOutBox": 2,
       "crossPct": 0,
       "freeKickGoals": 0,
       "freeKickPct": 0,
@@ -118,20 +118,20 @@
       "shotAssists": 0,
       "shotPct": 0,
       "shotsHeaded": 0,
-      "shotsOffTarget": 0,
+      "shotsOffTarget": 1,
       "shotsOnPost": 0,
       "shotsOnTarget": 0,
       "throughBallPct": 0,
       "totalCrosses": 0,
       "totalGoals": 0,
       "totalLongBalls": 0,
-      "totalPasses": 0,
-      "totalShots": 0,
+      "totalPasses": 2,
+      "totalShots": 1,
       "totalThroughBalls": 0,
       "bigChanceCreated": 0,
       "bigChanceMissed": 0,
       "progressiveCarries": 0,
-      "touchesInOppBox": 0
+      "touchesInOppBox": 1
     }
   }
 }

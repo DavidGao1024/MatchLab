@@ -1,9 +1,9 @@
 {
   "source": "sports.core.api.espn.com",
-  "updateTime": "2026-11-09T02:40:11.312Z",
+  "updateTime": "2026-11-12T03:53:46.583Z",
   "league": "fra.1",
   "season": "2026",
-  "count": 530,
+  "count": 529,
   "players": [
     {
       "id": 271137,
@@ -19,6 +19,19 @@
       "team": "Paris FC"
     },
     {
+      "id": 259743,
+      "name": "Amine Gouiri",
+      "teamId": 176,
+      "position": "F",
+      "age": 26,
+      "goals": 7,
+      "assists": 3,
+      "citizenship": "Algeria",
+      "flag": "flags/dz.png",
+      "jersey": 9,
+      "team": "Marseille"
+    },
+    {
       "id": 323850,
       "name": "Esteban Lepaul",
       "teamId": 169,
@@ -30,19 +43,6 @@
       "flag": "flags/fr.png",
       "jersey": 9,
       "team": "Stade Rennais"
-    },
-    {
-      "id": 259743,
-      "name": "Amine Gouiri",
-      "teamId": 176,
-      "position": "F",
-      "age": 26,
-      "goals": 6,
-      "assists": 3,
-      "citizenship": "Algeria",
-      "flag": "flags/dz.png",
-      "jersey": 9,
-      "team": "Marseille"
     },
     {
       "id": 293347,
@@ -71,6 +71,19 @@
       "team": "Nice"
     },
     {
+      "id": 282381,
+      "name": "Boulaye Dia",
+      "teamId": 169,
+      "position": "F",
+      "age": 29,
+      "goals": 5,
+      "assists": 0,
+      "citizenship": "Senegal",
+      "flag": "flags/sn.png",
+      "jersey": 22,
+      "team": "Stade Rennais"
+    },
+    {
       "id": 306664,
       "name": "Casper Tengstedt",
       "teamId": 179,
@@ -84,17 +97,30 @@
       "team": "Toulouse"
     },
     {
-      "id": 282381,
-      "name": "Boulaye Dia",
-      "teamId": 169,
+      "id": 156898,
+      "name": "Florian Thauvin",
+      "teamId": 175,
       "position": "F",
-      "age": 29,
-      "goals": 4,
-      "assists": 0,
-      "citizenship": "Senegal",
-      "flag": "flags/sn.png",
-      "jersey": 22,
-      "team": "Stade Rennais"
+      "age": 33,
+      "goals": 5,
+      "assists": 7,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 10,
+      "team": "Lens"
+    },
+    {
+      "id": 192015,
+      "name": "Ludovic Ajorque",
+      "teamId": 6997,
+      "position": "F",
+      "age": 32,
+      "goals": 5,
+      "assists": 1,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 19,
+      "team": "Brest"
     },
     {
       "id": 333310,
@@ -121,19 +147,6 @@
       "flag": "flags/es.png",
       "jersey": 9,
       "team": "Paris Saint-Germain"
-    },
-    {
-      "id": 156898,
-      "name": "Florian Thauvin",
-      "teamId": 175,
-      "position": "F",
-      "age": 33,
-      "goals": 4,
-      "assists": 7,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 10,
-      "team": "Lens"
     },
     {
       "id": 379012,
@@ -168,7 +181,7 @@
       "position": "M",
       "age": 23,
       "goals": 4,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Mali",
       "flag": "flags/ml.png",
       "jersey": 23,
@@ -186,19 +199,6 @@
       "flag": "flags/cf.png",
       "jersey": 14,
       "team": "Le Mans"
-    },
-    {
-      "id": 192015,
-      "name": "Ludovic Ajorque",
-      "teamId": 6997,
-      "position": "F",
-      "age": 32,
-      "goals": 4,
-      "assists": 1,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 19,
-      "team": "Brest"
     },
     {
       "id": 365789,
@@ -303,6 +303,19 @@
       "flag": "flags/dz.png",
       "jersey": 8,
       "team": "Marseille"
+    },
+    {
+      "id": 232089,
+      "name": "Jonathan Clauss",
+      "teamId": 2502,
+      "position": "D",
+      "age": 34,
+      "goals": 3,
+      "assists": 1,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 92,
+      "team": "Nice"
     },
     {
       "id": 159047,
@@ -513,17 +526,30 @@
       "team": "Toulouse"
     },
     {
-      "id": 232089,
-      "name": "Jonathan Clauss",
-      "teamId": 2502,
-      "position": "D",
-      "age": 34,
+      "id": 225557,
+      "name": "Jean-Victor Makengo",
+      "teamId": 273,
+      "position": "M",
+      "age": 28,
       "goals": 2,
       "assists": 1,
       "citizenship": "France",
       "flag": "flags/fr.png",
-      "jersey": 92,
-      "team": "Nice"
+      "jersey": 17,
+      "team": "Lorient"
+    },
+    {
+      "id": 384005,
+      "name": "Keyliane Abdallah",
+      "teamId": 176,
+      "position": "F",
+      "age": 20,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 48,
+      "team": "Marseille"
     },
     {
       "id": 259960,
@@ -597,11 +623,24 @@
       "position": "F",
       "age": 26,
       "goals": 2,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Algeria",
       "flag": "flags/dz.png",
       "jersey": 9,
       "team": "Nice"
+    },
+    {
+      "id": 367360,
+      "name": "Noah Edjouma",
+      "teamId": 6997,
+      "position": "F",
+      "age": 21,
+      "goals": 2,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 11,
+      "team": "Brest"
     },
     {
       "id": 334359,
@@ -680,6 +719,19 @@
       "flag": "flags/fr.png",
       "jersey": 24,
       "team": "Paris Saint-Germain"
+    },
+    {
+      "id": 276995,
+      "name": "Sofiane Diop",
+      "teamId": 2502,
+      "position": "M",
+      "age": 26,
+      "goals": 2,
+      "assists": 3,
+      "citizenship": "Morocco",
+      "flag": "flags/ma.png",
+      "jersey": 10,
+      "team": "Nice"
     },
     {
       "id": 346844,
@@ -873,8 +925,21 @@
       "assists": 1,
       "citizenship": "England",
       "flag": "flags/gb-eng.png",
-      "jersey": 3,
+      "jersey": 15,
       "team": "AS Monaco"
+    },
+    {
+      "id": 357006,
+      "name": "Erwan Colas",
+      "teamId": 2697,
+      "position": "F",
+      "age": 29,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 28,
+      "team": "Le Mans"
     },
     {
       "id": 320945,
@@ -896,7 +961,7 @@
       "position": "F",
       "age": 36,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 7,
@@ -994,6 +1059,19 @@
       "team": "Paris FC"
     },
     {
+      "id": 306535,
+      "name": "Isaak Touré",
+      "teamId": 273,
+      "position": "D",
+      "age": 23,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 95,
+      "team": "Lorient"
+    },
+    {
       "id": 309651,
       "name": "Isak Jensen",
       "teamId": 273,
@@ -1033,19 +1111,6 @@
       "team": "Strasbourg"
     },
     {
-      "id": 225557,
-      "name": "Jean-Victor Makengo",
-      "teamId": 273,
-      "position": "M",
-      "age": 28,
-      "goals": 1,
-      "assists": 1,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 17,
-      "team": "Lorient"
-    },
-    {
       "id": 305693,
       "name": "Jeremy Le Douaron",
       "teamId": 170,
@@ -1070,19 +1135,6 @@
       "flag": "flags/fr.png",
       "jersey": 70,
       "team": "Brest"
-    },
-    {
-      "id": 384005,
-      "name": "Keyliane Abdallah",
-      "teamId": 176,
-      "position": "F",
-      "age": 20,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 48,
-      "team": "Marseille"
     },
     {
       "id": 408345,
@@ -1241,13 +1293,26 @@
       "team": "Paris Saint-Germain"
     },
     {
+      "id": 208518,
+      "name": "Mamadou Coulibaly",
+      "teamId": 174,
+      "position": "M",
+      "age": 22,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 28,
+      "team": "AS Monaco"
+    },
+    {
       "id": 416429,
       "name": "Mamadou Koné",
       "teamId": 273,
       "position": "F",
       "age": 19,
       "goals": 1,
-      "assists": 0,
+      "assists": 1,
       "citizenship": null,
       "flag": null,
       "jersey": 42,
@@ -1319,6 +1384,19 @@
       "team": "Le Havre AC"
     },
     {
+      "id": 318577,
+      "name": "Nathan Ngoy",
+      "teamId": 166,
+      "position": "D",
+      "age": 23,
+      "goals": 1,
+      "assists": 0,
+      "citizenship": "Belgium",
+      "flag": "flags/be.png",
+      "jersey": 3,
+      "team": "Lille"
+    },
+    {
       "id": 316559,
       "name": "Názinho",
       "teamId": 174,
@@ -1343,19 +1421,6 @@
       "flag": "flags/gp.png",
       "jersey": 8,
       "team": "Lorient"
-    },
-    {
-      "id": 367360,
-      "name": "Noah Edjouma",
-      "teamId": 6997,
-      "position": "F",
-      "age": 21,
-      "goals": 1,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 11,
-      "team": "Brest"
     },
     {
       "id": 315454,
@@ -1579,17 +1644,17 @@
       "team": "Toulouse"
     },
     {
-      "id": 276995,
-      "name": "Sofiane Diop",
-      "teamId": 2502,
-      "position": "M",
-      "age": 26,
+      "id": 400352,
+      "name": "Soriba Diaoune",
+      "teamId": 166,
+      "position": "F",
+      "age": 19,
       "goals": 1,
-      "assists": 3,
-      "citizenship": "Morocco",
-      "flag": "flags/ma.png",
-      "jersey": 10,
-      "team": "Nice"
+      "assists": 2,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 35,
+      "team": "Lille"
     },
     {
       "id": 356925,
@@ -1702,7 +1767,7 @@
       "position": "D",
       "age": 20,
       "goals": 0,
-      "assists": 0,
+      "assists": 1,
       "citizenship": "Morocco",
       "flag": "flags/ma.png",
       "jersey": 48,
@@ -1759,6 +1824,19 @@
       "flag": "flags/fr.png",
       "jersey": 44,
       "team": "Lyon"
+    },
+    {
+      "id": 5331888,
+      "name": "Adnane Hamza Kharroubi",
+      "teamId": 2697,
+      "position": "F",
+      "age": null,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": null,
+      "flag": null,
+      "jersey": 37,
+      "team": "Le Mans"
     },
     {
       "id": 181582,
@@ -2131,7 +2209,7 @@
       "position": "D",
       "age": 22,
       "goals": 0,
-      "assists": 1,
+      "assists": 2,
       "citizenship": "Burkina Faso",
       "flag": "flags/bf.png",
       "jersey": 43,
@@ -2320,19 +2398,6 @@
       "team": "Lille"
     },
     {
-      "id": 279137,
-      "name": "Bilal Brahimi",
-      "teamId": 2697,
-      "position": "F",
-      "age": 26,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Algeria",
-      "flag": "flags/dz.png",
-      "jersey": 7,
-      "team": "Le Mans"
-    },
-    {
       "id": 207369,
       "name": "Bingourou Kamara",
       "teamId": 273,
@@ -2357,6 +2422,19 @@
       "flag": "flags/fr.png",
       "jersey": 2,
       "team": "Brest"
+    },
+    {
+      "id": 279137,
+      "name": "Brahimi Bilal",
+      "teamId": 2697,
+      "position": "M",
+      "age": 26,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 7,
+      "team": "Le Mans"
     },
     {
       "id": 164126,
@@ -2571,7 +2649,7 @@
       "name": "Dembo Sylla",
       "teamId": 273,
       "position": "D",
-      "age": 23,
+      "age": 24,
       "goals": 0,
       "assists": 0,
       "citizenship": "Guinea",
@@ -2879,19 +2957,6 @@
       "team": "Brest"
     },
     {
-      "id": 357006,
-      "name": "Erwan Colas",
-      "teamId": 2697,
-      "position": "F",
-      "age": 29,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 28,
-      "team": "Le Mans"
-    },
-    {
       "id": 3131925,
       "name": "Evan Mailly",
       "teamId": 6997,
@@ -3041,7 +3106,7 @@
       "position": "M",
       "age": 30,
       "goals": 0,
-      "assists": 2,
+      "assists": 3,
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 7,
@@ -3351,7 +3416,7 @@
       "name": "Iron Gomis",
       "teamId": 170,
       "position": "M",
-      "age": 26,
+      "age": 27,
       "goals": 0,
       "assists": 0,
       "citizenship": "France",
@@ -3371,19 +3436,6 @@
       "flag": "flags/fr.png",
       "jersey": 26,
       "team": "Lille"
-    },
-    {
-      "id": 306535,
-      "name": "Isaak Touré",
-      "teamId": 273,
-      "position": "D",
-      "age": 23,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 95,
-      "team": "Lorient"
     },
     {
       "id": 282597,
@@ -3876,7 +3928,7 @@
       "assists": 1,
       "citizenship": "Senegal",
       "flag": "flags/sn.png",
-      "jersey": 15,
+      "jersey": 8,
       "team": "AS Monaco"
     },
     {
@@ -4114,19 +4166,6 @@
       "team": "Lens"
     },
     {
-      "id": 208518,
-      "name": "Mamadou Coulibaly",
-      "teamId": 174,
-      "position": "F",
-      "age": 29,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 28,
-      "team": "AS Monaco"
-    },
-    {
       "id": 345926,
       "name": "Mamadou Diop",
       "teamId": 172,
@@ -4157,7 +4196,7 @@
       "name": "Mamady Diambou",
       "teamId": 6997,
       "position": "M",
-      "age": 23,
+      "age": 24,
       "goals": 0,
       "assists": 1,
       "citizenship": "Mali",
@@ -4229,6 +4268,19 @@
       "flag": "flags/ar.png",
       "jersey": 15,
       "team": "Strasbourg"
+    },
+    {
+      "id": 319286,
+      "name": "Mathéo Bodmer",
+      "teamId": 3236,
+      "position": "M",
+      "age": 22,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 21,
+      "team": "Le Havre AC"
     },
     {
       "id": 131742,
@@ -4543,6 +4595,19 @@
       "team": "Stade Rennais"
     },
     {
+      "id": 213535,
+      "name": "Moussa Diarra",
+      "teamId": 175,
+      "position": "D",
+      "age": 24,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "Mali",
+      "flag": "flags/ml.png",
+      "jersey": 37,
+      "team": "Lens"
+    },
+    {
       "id": 213181,
       "name": "Moussa Niakhaté",
       "teamId": 167,
@@ -4606,19 +4671,6 @@
       "flag": "flags/cm.png",
       "jersey": 29,
       "team": "Nice"
-    },
-    {
-      "id": 318577,
-      "name": "Nathan Ngoy",
-      "teamId": 166,
-      "position": "D",
-      "age": 23,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Belgium",
-      "flag": "flags/be.png",
-      "jersey": 3,
-      "team": "Lille"
     },
     {
       "id": 345563,
@@ -4918,19 +4970,6 @@
       "flag": "flags/br.png",
       "jersey": 6,
       "team": "Paris FC"
-    },
-    {
-      "id": 299566,
-      "name": "Oumar Konaté",
-      "teamId": 174,
-      "position": "F",
-      "age": 19,
-      "goals": 0,
-      "assists": 0,
-      "citizenship": "Mali",
-      "flag": "flags/ml.png",
-      "jersey": 42,
-      "team": "AS Monaco"
     },
     {
       "id": 378976,
@@ -5453,19 +5492,6 @@
       "team": "AJ Auxerre"
     },
     {
-      "id": 400352,
-      "name": "Soriba Diaoune",
-      "teamId": 166,
-      "position": "F",
-      "age": 19,
-      "goals": 0,
-      "assists": 1,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 35,
-      "team": "Lille"
-    },
-    {
       "id": 399434,
       "name": "Sota Nakamura",
       "teamId": 3236,
@@ -5646,6 +5672,19 @@
       "flag": "flags/be.png",
       "jersey": 28,
       "team": "Paris FC"
+    },
+    {
+      "id": 417261,
+      "name": "Thomas Rousseau",
+      "teamId": 3236,
+      "position": "M",
+      "age": 18,
+      "goals": 0,
+      "assists": 0,
+      "citizenship": "France",
+      "flag": "flags/fr.png",
+      "jersey": 34,
+      "team": "Le Havre AC"
     },
     {
       "id": 409262,
@@ -6051,19 +6090,6 @@
       "team": "Paris Saint-Germain"
     },
     {
-      "id": 5331888,
-      "name": "Adnane Hamza Kharroubi",
-      "teamId": 2697,
-      "position": "F",
-      "age": null,
-      "goals": null,
-      "assists": null,
-      "citizenship": null,
-      "flag": null,
-      "jersey": 37,
-      "team": "Le Mans"
-    },
-    {
       "id": 410797,
       "name": "Alvin Petit Dol",
       "teamId": 172,
@@ -6445,7 +6471,7 @@
       "name": "Lassine Diarra",
       "teamId": 167,
       "position": "G",
-      "age": 23,
+      "age": 24,
       "goals": null,
       "assists": null,
       "citizenship": "Mali",
@@ -6517,19 +6543,6 @@
       "flag": "flags/fr.png",
       "jersey": 27,
       "team": "Le Mans"
-    },
-    {
-      "id": 319286,
-      "name": "Mathéo Bodmer",
-      "teamId": 3236,
-      "position": "M",
-      "age": 22,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 21,
-      "team": "Le Havre AC"
     },
     {
       "id": 414465,
@@ -6608,19 +6621,6 @@
       "flag": "flags/ca.png",
       "jersey": 64,
       "team": "Nice"
-    },
-    {
-      "id": 213535,
-      "name": "Moussa Diarra",
-      "teamId": 175,
-      "position": "F",
-      "age": 24,
-      "goals": null,
-      "assists": null,
-      "citizenship": "Mali",
-      "flag": "flags/ml.png",
-      "jersey": 37,
-      "team": "Lens"
     },
     {
       "id": 396620,
@@ -6776,19 +6776,6 @@
       "citizenship": "France",
       "flag": "flags/fr.png",
       "jersey": 29,
-      "team": "Le Havre AC"
-    },
-    {
-      "id": 417261,
-      "name": "Thomas Rousseau",
-      "teamId": 3236,
-      "position": "M",
-      "age": 18,
-      "goals": null,
-      "assists": null,
-      "citizenship": "France",
-      "flag": "flags/fr.png",
-      "jersey": 34,
       "team": "Le Havre AC"
     },
     {
